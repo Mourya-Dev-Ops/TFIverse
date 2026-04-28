@@ -1,0 +1,13 @@
+{
+  "name": "tfiverse",
+  "version": "1.0.0",
+  "description": "Telugu Film Industry Database Platform",
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "seed": "cd backend && npm run seed",
+    "start:backend": "cd backend && npm start",
+    "build:frontend": "cd frontend && npm run build",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install"
+  }
+}
