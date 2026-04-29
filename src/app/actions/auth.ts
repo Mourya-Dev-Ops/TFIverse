@@ -1,7 +1,7 @@
 "use server";
 
 import { db } from "@/lib/db";
-import { users, verificationTokens } from "@/lib/schema";
+import { users, verificationTokens, userProfiles } from "@/lib/schema";
 import { eq } from "drizzle-orm";
 import bcrypt from "bcryptjs";
 import { v4 as uuidv4 } from "uuid";
@@ -21,10 +21,8 @@ export async function loginUser(formData: FormData) {
     await signIn("credentials", {
       email,
       password,
-      redirect: false,
+      redirectTo: "/",
     });
-
-    return { success: true };
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {
@@ -34,10 +32,7 @@ export async function loginUser(formData: FormData) {
           return { error: "Something went wrong." };
       }
     }
-    // Next.js throws an error for redirects, so we must re-throw it if redirecting, but since redirect: false, we just return error.
-    // Wait, redirect: false doesn't throw, it returns error from signIn in pages router, but in app router with Auth.js v5 it might throw AuthError or return object.
-    // Let's catch AuthError.
-    throw error;
+    throw error; // Next.js requires this for redirect to work
   }
 }
 
@@ -72,6 +67,13 @@ export async function registerUser(formData: FormData) {
       email,
       password: hashedPassword,
     }).returning();
+
+    // Auto-create a user profile
+    const randomUsername = name.replace(/[^a-zA-Z0-9]/g, "").toLowerCase() + Math.floor(Math.random() * 10000);
+    await db.insert(userProfiles).values({
+      userId: newUser.id,
+      username: randomUsername,
+    });
 
     const token = uuidv4();
     const expires = new Date(new Date().getTime() + 1000 * 60 * 60 * 24);

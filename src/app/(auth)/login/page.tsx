@@ -5,12 +5,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { loginUser } from "@/app/actions/auth";
 import { Loader2 } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
   const [error, setError] = useState<string>("");
   const [loading, setLoading] = useState(false);
-  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,16 +23,10 @@ export default function LoginPage() {
       if (result?.error) {
         setError(result.error);
         setLoading(false);
-      } else {
-        // Since we used redirect: false in Auth.js, we must manually redirect
-        router.push("/");
-        router.refresh();
       }
     } catch (err) {
       console.error(err);
-      // Next.js redirect might be thrown here
-      router.push("/");
-      router.refresh();
+      setLoading(false);
     }
   };
 

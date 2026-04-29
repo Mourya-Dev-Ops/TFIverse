@@ -1,15 +1,18 @@
 import Link from "next/link";
 import Navbar from "@/components/layout/navbar";
+import { auth } from "@/auth";
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth();
+
   return (
     <main className="min-h-screen bg-black text-white selection:bg-white selection:text-black flex flex-col relative overflow-hidden">
       
       {/* Background Ambient Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#111] via-black to-black opacity-60 z-0"></div>
 
-      {/* Navigation Component - assuming it exists or we build it */}
-      <Navbar />
+      {/* Navigation Component */}
+      <Navbar user={session?.user} />
 
       <div className="flex-1 flex flex-col items-center justify-center relative z-10 px-6 text-center">
         
