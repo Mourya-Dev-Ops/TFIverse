@@ -1,16 +1,28 @@
 "use client"
 
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { loginUser } from "@/app/actions/auth";
-import { Loader2, Volume2, VolumeX } from "lucide-react";
+import { Loader2, Volume2, VolumeX, CheckCircle2 } from "lucide-react";
 
-export default function LoginPage() {
+function LoginForm() {
+  const searchParams = useSearchParams();
   const [error, setError] = useState<string>("");
+  const [success, setSuccess] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const [muted, setMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (searchParams.get("verified")) {
+      setSuccess("Account verified successfully! You can now log in.");
+    }
+    if (searchParams.get("reset")) {
+      setSuccess("Password reset successfully! Please log in with your new password.");
+    }
+  }, [searchParams]);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -89,6 +101,13 @@ export default function LoginPage() {
           </motion.div>
         )}
 
+        {success && (
+          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="mb-6 p-4 rounded-xl bg-green-500/10 backdrop-blur-sm border border-green-500/20 text-green-200 text-sm text-center font-light flex items-center justify-center gap-2">
+            <CheckCircle2 size={16} />
+            {success}
+          </motion.div>
+        )}
+
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-2">
             <label className="text-[10px] font-semibold text-white/40 tracking-[0.2em] uppercase">Email</label>
@@ -104,7 +123,7 @@ export default function LoginPage() {
           <div className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
               <label className="text-[10px] font-semibold text-white/40 tracking-[0.2em] uppercase">Password</label>
-              <Link href="#" className="text-[10px] text-white/30 hover:text-white/70 transition-colors tracking-widest uppercase">Forgot?</Link>
+              <Link href="/forgot-password" className="text-[10px] text-white/30 hover:text-white/70 transition-colors tracking-widest uppercase">Forgot?</Link>
             </div>
             <input 
               name="password"
@@ -150,3 +169,16 @@ export default function LoginPage() {
     </main>
   );
 }
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <Loader2 className="w-10 h-10 animate-spin text-white/20" />
+      </div>
+    }>
+      <LoginForm />
+    </Suspense>
+  );
+}
+

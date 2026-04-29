@@ -1,11 +1,11 @@
 "use server";
 
 import { db } from "@/lib/db";
-import { users, verificationTokens, userProfiles } from "@/lib/schema";
+import { users, verificationTokens, userProfiles, passwordResetTokens } from "@/lib/schema";
 import { eq } from "drizzle-orm";
 import bcrypt from "bcryptjs";
 import { v4 as uuidv4 } from "uuid";
-import { sendVerificationEmail } from "@/lib/email";
+import { sendVerificationEmail, sendPasswordResetEmail } from "@/lib/email";
 import { signIn } from "@/auth";
 import { AuthError } from "next-auth";
 
@@ -100,3 +100,101 @@ export async function registerUser(formData: FormData) {
     return { error: "Something went wrong during registration" };
   }
 }
+
+// ─── FORGOT PASSWORD ─────────────────────────────────────────────
+export async function forgotPassword(formData: FormData) {
+  try {
+    const email = formData.get("email") as string;
+
+    if (!email) {
+      return { error: "Email is required" };
+    }
+
+    const [existingUser] = await db.select().from(users).where(eq(users.email, email));
+
+    // Always return success to prevent email enumeration attacks
+    if (!existingUser) {
+      return { success: true };
+    }
+
+    // Delete any existing reset tokens for this email
+    await db.delete(passwordResetTokens).where(eq(passwordResetTokens.email, email));
+
+    // Create new token (expires in 1 hour)
+    const token = uuidv4();
+    const expires = new Date(new Date().getTime() + 1000 * 60 * 60);
+
+    await db.insert(passwordResetTokens).values({
+      email,
+      token,
+      expires,
+    });
+
+    await sendPasswordResetEmail({
+      email,
+      name: existingUser.name || "User",
+      token,
+    });
+
+    return { success: true };
+  } catch (error: any) {
+    console.error("Forgot password error:", error);
+    return { error: "Something went wrong" };
+  }
+}
+
+// ─── RESET PASSWORD ──────────────────────────────────────────────
+export async function resetPassword(formData: FormData) {
+  try {
+    const token = formData.get("token") as string;
+    const password = formData.get("password") as string;
+    const confirmPassword = formData.get("confirmPassword") as string;
+
+    if (!token || !password) {
+      return { error: "Missing required fields" };
+    }
+
+    if (password !== confirmPassword) {
+      return { error: "Passwords do not match" };
+    }
+
+    if (password.length < 8) {
+      return { error: "Password must be at least 8 characters" };
+    }
+
+    // Find token
+    const [resetToken] = await db
+      .select()
+      .from(passwordResetTokens)
+      .where(eq(passwordResetTokens.token, token));
+
+    if (!resetToken) {
+      return { error: "Invalid or expired reset link" };
+    }
+
+    if (new Date(resetToken.expires) < new Date()) {
+      // Clean up expired token
+      await db.delete(passwordResetTokens).where(eq(passwordResetTokens.token, token));
+      return { error: "Reset link has expired. Please request a new one." };
+    }
+
+    // Find user
+    const [user] = await db.select().from(users).where(eq(users.email, resetToken.email));
+    if (!user) {
+      return { error: "User not found" };
+    }
+
+    // Update password
+    const hashedPassword = await bcrypt.hash(password, 10);
+    await db.update(users).set({ password: hashedPassword }).where(eq(users.id, user.id));
+
+    // Delete used token
+    await db.delete(passwordResetTokens).where(eq(passwordResetTokens.token, token));
+
+    return { success: true };
+  } catch (error: any) {
+    console.error("Reset password error:", error);
+    return { error: "Something went wrong" };
+  }
+}
+
