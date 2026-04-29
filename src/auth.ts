@@ -5,6 +5,7 @@ import { db } from "@/lib/db"
 import { accounts, sessions, users, verificationTokens } from "@/lib/schema"
 import Credentials from "next-auth/providers/credentials"
 import { eq } from "drizzle-orm"
+import { userProfiles } from "@/lib/schema"
 import bcrypt from "bcryptjs"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -16,9 +17,21 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   }),
   session: { strategy: "jwt" },
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user, trigger, session }) {
       if (user) {
-        token.id = user.id
+        token.id = user.id;
+        // Fetch avatar from userProfiles since it might not be in the users table yet
+        const [profile] = await db.select({ avatarUrl: userProfiles.avatarUrl })
+          .from(userProfiles)
+          .where(eq(userProfiles.userId, user.id as string));
+        if (profile?.avatarUrl) {
+          token.picture = profile.avatarUrl;
+        } else if (user.image) {
+          token.picture = user.image;
+        }
+      }
+      if (trigger === "update" && session?.image) {
+        token.picture = session.image;
       }
       return token
     },

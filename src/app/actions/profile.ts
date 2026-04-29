@@ -219,6 +219,7 @@ export async function uploadProfileImage(formData: FormData) {
     
     if (type === "avatar") {
       await db.update(userProfiles).set({ avatarUrl: url }).where(eq(userProfiles.userId, session.user.id));
+      await db.update(users).set({ image: url }).where(eq(users.id, session.user.id));
     } else {
       await db.update(userProfiles).set({ bannerUrl: url }).where(eq(userProfiles.userId, session.user.id));
     }

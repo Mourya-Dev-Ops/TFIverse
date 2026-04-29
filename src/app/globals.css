@@ -3,10 +3,8 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  
   --muted: #171717;
   --muted-foreground: #a3a3a3;
-  
   --border: #262626;
   --input: #262626;
   --ring: #d4d4d4;
@@ -24,25 +22,70 @@
   --font-mono: var(--font-geist-mono);
 }
 
+* { -webkit-tap-highlight-color: transparent; }
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  background: #000;
+  color: #fff;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-/* Custom Scrollbar for Cinematic Feel */
-::-webkit-scrollbar {
-  width: 8px;
+html { scroll-behavior: smooth; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius: 99px; }
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Cinematic section dividers */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 50%, transparent 100%);
+  margin: 0 auto;
+  max-width: 1280px;
 }
-::-webkit-scrollbar-track {
-  background: #000000;
+
+/* Glass card base */
+.glass {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
-::-webkit-scrollbar-thumb {
-  background: #333333;
-  border-radius: 4px;
+.glass:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.12);
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #555555;
+
+/* Ambient glow on cards */
+.glow-card {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.glow-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent 40%, transparent 60%, rgba(255,255,255,0.04));
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: -1;
+}
+.glow-card:hover::before { opacity: 1; }
+.glow-card:hover { transform: translateY(-4px); }
+
+@keyframes shimmer {
+  0% { transform: translateX(-200%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.01); }
 }

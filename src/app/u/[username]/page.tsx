@@ -1,31 +1,66 @@
 import { notFound } from "next/navigation";
+import { db } from "@/lib/db";
+import { users, userProfiles, userFollows } from "@/lib/schema";
+import { eq, sql } from "drizzle-orm";
+import PublicProfileView from "./public-profile-view";
 import { auth } from "@/auth";
-import { getPublicProfile, isFollowing } from "@/app/actions/profile";
-import PublicProfileClient from "./public-profile-client";
 
-export default async function PublicProfilePage(props: { params: Promise<{ username: string }> }) {
-  const params = await props.params;
+export async function generateMetadata({ params }: { params: { username: string } }) {
+  return {
+    title: `${params.username} | TFIverse`,
+    description: `Check out ${params.username}'s profile on TFIverse.`,
+  };
+}
+
+export default async function PublicProfilePage({ params }: { params: { username: string } }) {
   const session = await auth();
+  
+  // Find profile by username
+  const [profileRecord] = await db
+    .select({
+      profile: userProfiles,
+      user: {
+        id: users.id,
+        createdAt: users.createdAt,
+      }
+    })
+    .from(userProfiles)
+    .innerJoin(users, eq(userProfiles.userId, users.id))
+    .where(eq(sql`lower(${userProfiles.username})`, params.username.toLowerCase()));
 
-  const data = await getPublicProfile(params.username);
-  if (!data) notFound();
-
-  let followingStatus = false;
-  if (session?.user?.id) {
-    followingStatus = await isFollowing(session.user.id, data.profile.userId);
+  if (!profileRecord) {
+    notFound();
   }
 
-  const isOwnProfile = session?.user?.id === data.profile.userId;
+  // Get follower/following counts
+  const [{ count: followersCount }] = await db
+    .select({ count: sql<number>`count(*)` })
+    .from(userFollows)
+    .where(eq(userFollows.followingId, profileRecord.user.id));
+
+  const [{ count: followingCount }] = await db
+    .select({ count: sql<number>`count(*)` })
+    .from(userFollows)
+    .where(eq(userFollows.followerId, profileRecord.user.id));
+
+  // Check if current user is following
+  let isFollowing = false;
+  if (session?.user?.id) {
+    const [followRecord] = await db
+      .select()
+      .from(userFollows)
+      .where(sql`${userFollows.followerId} = ${session.user.id} AND ${userFollows.followingId} = ${profileRecord.user.id}`);
+    isFollowing = !!followRecord;
+  }
 
   return (
-    <PublicProfileClient
-      user={data.user}
-      profile={data.profile}
-      followersCount={data.followersCount}
-      followingCount={data.followingCount}
-      isFollowingInitial={followingStatus}
-      isOwnProfile={isOwnProfile}
-      isLoggedIn={!!session?.user}
+    <PublicProfileView 
+      profile={profileRecord.profile} 
+      user={profileRecord.user}
+      followersCount={Number(followersCount)} 
+      followingCount={Number(followingCount)}
+      initialIsFollowing={isFollowing}
+      currentUserId={session?.user?.id}
     />
   );
 }

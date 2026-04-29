@@ -15,8 +15,15 @@ export default function RegisterPage() {
 
   const toggleMute = () => {
     if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setMuted(videoRef.current.muted);
+      const isMuted = !videoRef.current.muted;
+      videoRef.current.muted = isMuted;
+      videoRef.current.volume = isMuted ? 0 : 1;
+      setMuted(isMuted);
+      
+      // Ensure video is playing if unmuting
+      if (!isMuted) {
+        videoRef.current.play().catch(console.error);
+      }
     }
   };
 
@@ -62,18 +69,18 @@ export default function RegisterPage() {
         onClick={toggleMute}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-black/40 backdrop-blur-xl border border-white/20 text-white/70 hover:text-white hover:border-white/40 transition-all"
+        className="fixed bottom-8 right-8 z-50 p-4 rounded-full bg-white/10 backdrop-blur-2xl border border-white/20 text-white shadow-2xl transition-all"
         style={{ pointerEvents: "auto" }}
       >
-        {muted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+        {muted ? <VolumeX size={24} /> : <Volume2 size={24} />}
       </motion.button>
 
       {/* Glassy Register Card */}
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, scale: 0.98, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-20 w-full max-w-md px-8 py-12 rounded-2xl backdrop-blur-2xl bg-white/[0.03] border border-white/[0.1] shadow-[0_8px_32px_rgba(0,0,0,0.3)]"
+        className="relative z-20 w-[92%] max-w-md px-6 sm:px-8 py-10 sm:py-12 rounded-3xl backdrop-blur-3xl bg-white/[0.03] border border-white/[0.1] shadow-[0_20px_80px_rgba(0,0,0,0.5)]"
       >
         <div className="text-center mb-10">
           <Link href="/" className="inline-block text-3xl font-bold tracking-tighter mb-2 hover:opacity-80 transition-opacity">

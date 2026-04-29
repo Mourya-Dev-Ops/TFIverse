@@ -20,77 +20,77 @@ export default function Navbar({ user }: NavbarProps) {
   const initials = displayName.charAt(0).toUpperCase();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/[0.06]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
           {/* LEFT: Logo */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2 group">
-              <h1 className="text-2xl font-black text-white tracking-tight">
-                TFIverse
+              <h1 className="text-xl sm:text-2xl font-black text-white tracking-tighter">
+                TFIVERSE
               </h1>
             </Link>
           </div>
 
           {/* RIGHT: Auth & Profile */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             {user ? (
               <div className="relative">
                 <motion.button
                   onClick={() => setShowDropdown(!showDropdown)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center space-x-2 px-3 py-2 rounded-lg border border-white/[0.06] hover:border-white/[0.12] bg-white/[0.02] hover:bg-white/[0.05] transition-all duration-200 group"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="flex items-center space-x-2 px-2 sm:px-3 py-1.5 rounded-full border border-white/[0.08] bg-white/[0.03] hover:bg-white/[0.08] transition-all duration-200 group"
                 >
                   {user.image ? (
-                    <img src={user.image} alt={displayName} className="w-8 h-8 rounded-full object-cover border border-white/20" />
+                    <img src={user.image} alt={displayName} className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-white/20" />
                   ) : (
-                    <div className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center font-bold text-sm">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white text-black flex items-center justify-center font-bold text-xs sm:text-sm">
                       {initials}
                     </div>
                   )}
-                  <span className="hidden md:block text-white/80 group-hover:text-white font-medium text-sm transition-colors">
-                    Profile
+                  <span className="hidden sm:block text-white/80 group-hover:text-white font-medium text-xs sm:text-sm transition-colors">
+                    Account
                   </span>
                 </motion.button>
 
                 <AnimatePresence>
                   {showDropdown && (
                     <motion.div
-                      initial={{ opacity: 0, y: -12, scale: 0.95 }}
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: -12, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute right-0 mt-3 w-56 bg-black border border-white/[0.06] rounded-lg shadow-2xl overflow-hidden"
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      className="absolute right-0 mt-3 w-56 bg-black border border-white/[0.1] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden backdrop-blur-2xl"
                     >
-                      <div className="px-4 py-3 border-b border-white/[0.06] bg-white/[0.02]">
-                        <p className="text-sm font-semibold text-white">{displayName}</p>
-                        <p className="text-xs text-white/50 truncate">{user.email}</p>
+                      <div className="px-5 py-4 border-b border-white/[0.06] bg-white/[0.02]">
+                        <p className="text-sm font-bold text-white mb-0.5">{displayName}</p>
+                        <p className="text-[10px] text-white/40 truncate uppercase tracking-widest">{user.email}</p>
                       </div>
 
-                      <DropdownLink href="/profile" label="My Profile" icon={<User size={18} />} onClick={() => setShowDropdown(false)} />
-                      <DropdownLink href="/tier-list/my-lists" label="My Tier Lists" icon={<Crown size={18} />} onClick={() => setShowDropdown(false)} />
-                      <DropdownLink href="/memes" label="My Memes" icon={<Sparkles size={18} />} onClick={() => setShowDropdown(false)} />
+                      <div className="py-1">
+                        <DropdownLink href="/profile" label="My Profile" icon={<User size={16} />} onClick={() => setShowDropdown(false)} />
+                        <DropdownLink href="/tier-list/my-lists" label="My Tier Lists" icon={<Crown size={16} />} onClick={() => setShowDropdown(false)} />
+                        <DropdownLink href="/memes" label="My Memes" icon={<Sparkles size={16} />} onClick={() => setShowDropdown(false)} />
+                      </div>
 
-                      <Link href="/api/auth/signout">
-                        <motion.button
-                          whileHover={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
-                          className="w-full text-left px-4 py-3 text-sm text-white/70 hover:text-white border-t border-white/[0.06] transition-colors duration-200 flex items-center gap-3 font-medium"
-                        >
-                          <LogOut size={18} /> Sign Out
-                        </motion.button>
-                      </Link>
+                      <div className="p-2 border-t border-white/[0.06]">
+                        <Link href="/api/auth/signout" className="block w-full">
+                          <button className="w-full text-left px-3 py-2 text-xs text-white/50 hover:text-white hover:bg-white/[0.05] rounded-xl transition-all flex items-center gap-3 font-bold uppercase tracking-widest">
+                            <LogOut size={16} /> Sign Out
+                          </button>
+                        </Link>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
             ) : (
-              <div className="flex items-center space-x-3">
-                <Link href="/login" className="text-white/70 hover:text-white font-medium text-sm transition-colors duration-200 px-3 py-2">
+              <div className="flex items-center gap-2 sm:gap-4">
+                <Link href="/login" className="text-white/60 hover:text-white font-bold text-[10px] sm:text-xs uppercase tracking-widest transition-all px-2 sm:px-4 py-2">
                   Sign In
                 </Link>
-                <Link href="/register" className="bg-white text-black hover:bg-white/90 text-sm font-bold px-5 py-2 rounded-lg transition-all duration-200">
+                <Link href="/register" className="bg-white text-black hover:bg-white/90 text-[10px] sm:text-xs font-black uppercase tracking-[0.15em] px-3 sm:px-6 py-2 sm:py-2.5 rounded-full transition-all shadow-xl hover:scale-105 active:scale-95">
                   Sign Up
                 </Link>
               </div>
