@@ -452,6 +452,15 @@ export const tierListLikes = pgTable('tier_list_like', {
   createdAt: timestamp('createdAt', { mode: 'date' }).defaultNow(),
 });
 
+export const tierListComments = pgTable('tier_list_comment', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  tierListId: uuid('tierListId').notNull().references(() => tierLists.id, { onDelete: 'cascade' }),
+  userId: uuid('userId').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  parentId: uuid('parentId'), // null = top-level comment, uuid = reply to that comment
+  content: text('content').notNull(),
+  createdAt: timestamp('createdAt', { mode: 'date' }).defaultNow(),
+});
+
 // ============================================================================
 // MEMES SYSTEM (UUID-BASED)
 // ============================================================================

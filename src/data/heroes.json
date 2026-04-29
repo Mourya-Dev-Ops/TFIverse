@@ -3,7 +3,11 @@
     "id": 1,
     "name": "Prabhas",
     "slug": "prabhas",
-    "alternateNames": ["Uppalapati Venkata Suryanarayana Prabhas Raju", "Darling Prabhas", "Rebel Star"],
+    "alternateNames": [
+      "Uppalapati Venkata Suryanarayana Prabhas Raju",
+      "Darling Prabhas",
+      "Rebel Star"
+    ],
     "title": "Rebel Star",
     "category": "Superstar",
     "subcategory": "Male Lead Actor",
@@ -23,8 +27,17 @@
     "active": true,
     "status": "Active",
     "generation": "4th Generation",
-    "knownFor": ["Baahubali Series", "Kalki 2898 AD", "Salaar", "Mirchi"],
-    "nicknames": ["Darling", "Rebel Star", "Pan-India Star"],
+    "knownFor": [
+      "Baahubali Series",
+      "Kalki 2898 AD",
+      "Salaar",
+      "Mirchi"
+    ],
+    "nicknames": [
+      "Darling",
+      "Rebel Star",
+      "Pan-India Star"
+    ],
     "awards": 18,
     "nominations": 25,
     "totalMovies": 24,
@@ -32,13 +45,48 @@
     "blockbusters": 6,
     "followers": 2500000,
     "movies": [
-      { "slug": "baahubali", "title": "Baahubali: The Beginning", "year": 2015 },
-      { "slug": "baahubali-2", "title": "Baahubali: The Conclusion", "year": 2017 },
-      { "slug": "saaho", "title": "Saaho", "year": 2019 },
-      { "slug": "radhe-shyam", "title": "Radhe Shyam", "year": 2022 },
-      { "slug": "adipurush", "title": "Adipurush", "year": 2023 },
-      { "slug": "salaar", "title": "Salaar", "year": 2023 },
-      { "slug": "kalki-2898-ad", "title": "Kalki 2898 AD", "year": 2024 }
+      {
+        "slug": "baahubali",
+        "title": "Baahubali: The Beginning",
+        "year": 2015,
+        "poster": "https://image.tmdb.org/t/p/w342/9BAjt8nSSms62uOVYn1t3C3dVto.jpg"
+      },
+      {
+        "slug": "baahubali-2",
+        "title": "Baahubali: The Conclusion",
+        "year": 2017,
+        "poster": "https://image.tmdb.org/t/p/w342/21sC2assImQIYCEDA84Qh9d1RsK.jpg"
+      },
+      {
+        "slug": "saaho",
+        "title": "Saaho",
+        "year": 2019,
+        "poster": "https://image.tmdb.org/t/p/w342/abjWQwUakmBUecf73jiZDx5iex0.jpg"
+      },
+      {
+        "slug": "radhe-shyam",
+        "title": "Radhe Shyam",
+        "year": 2022,
+        "poster": "https://image.tmdb.org/t/p/w342/szAa23SWNIgJHsvSRyQrvyFT8ef.jpg"
+      },
+      {
+        "slug": "adipurush",
+        "title": "Adipurush",
+        "year": 2023,
+        "poster": "https://image.tmdb.org/t/p/w342/1H2xEZOixs0z0JKwyjANZiKNNVJ.jpg"
+      },
+      {
+        "slug": "salaar",
+        "title": "Salaar",
+        "year": 2023,
+        "poster": "https://image.tmdb.org/t/p/w342/nlu9WbcetNFRGXXPWITr30ob7W6.jpg"
+      },
+      {
+        "slug": "kalki-2898-ad",
+        "title": "Kalki 2898 AD",
+        "year": 2024,
+        "poster": "https://image.tmdb.org/t/p/w342/rstcAnBeCkxNQjNp3YXrF6IP1tW.jpg"
+      }
     ],
     "socialMedia": {
       "instagram": "https://instagram.com/actorprabhas",
@@ -53,14 +101,24 @@
     "verified": true,
     "featured": true,
     "trending": true,
-    "searchKeywords": ["prabhas", "rebel star", "baahubali", "darling", "kalki 2898 ad"],
+    "searchKeywords": [
+      "prabhas",
+      "rebel star",
+      "baahubali",
+      "darling",
+      "kalki 2898 ad"
+    ],
     "metadata": {
       "lastUpdated": "2025-10-14",
       "dataQuality": "Complete",
-      "sources": ["IMDB", "Wikipedia", "Official Sources"]
+      "sources": [
+        "IMDB",
+        "Wikipedia",
+        "Official Sources"
+      ]
     }
   },
-   {
+  {
     "id": 2,
     "slug": "mahesh-babu",
     "name": "Mahesh Babu",
@@ -68,11 +126,21 @@
     "portraitUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=600&fit=crop",
     "bannerUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1200&h=600&fit=crop",
     "debutYear": 1999,
-    "rating": 9.0,
+    "rating": 9,
     "followers": 0,
     "movies": [
-      { "slug": "pokiri", "title": "Pokiri", "year": 2006 },
-      { "slug": "dookudu", "title": "Dookudu", "year": 2011 }
+      {
+        "slug": "pokiri",
+        "title": "Pokiri",
+        "year": 2006,
+        "poster": "https://image.tmdb.org/t/p/w342/rQ8NH5f3CxRrmqZWMZNYPwLmjDS.jpg"
+      },
+      {
+        "slug": "dookudu",
+        "title": "Dookudu",
+        "year": 2011,
+        "poster": "https://image.tmdb.org/t/p/w342/e9uffrN9z22uuiBF9B0bTDDvbjz.jpg"
+      }
     ]
   },
   {
@@ -86,8 +154,18 @@
     "rating": 9.1,
     "followers": 0,
     "movies": [
-      { "slug": "pushpa", "title": "Pushpa", "year": 2021 },
-      { "slug": "ala-vaikunthapurramuloo", "title": "Ala Vaikunthapurramuloo", "year": 2020 }
+      {
+        "slug": "pushpa",
+        "title": "Pushpa",
+        "year": 2021,
+        "poster": "https://image.tmdb.org/t/p/w342/oaRk2HgOirEeNuDCwwScmq7rKvS.jpg"
+      },
+      {
+        "slug": "ala-vaikunthapurramuloo",
+        "title": "Ala Vaikunthapurramuloo",
+        "year": 2020,
+        "poster": "https://image.tmdb.org/t/p/w342/2rzORJaegE2bbKNVkQXbZCeV0BP.jpg"
+      }
     ]
   },
   {
@@ -98,14 +176,39 @@
     "portraitUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop",
     "bannerUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=1200&h=600&fit=crop",
     "debutYear": 2001,
-    "rating": 9.0,
+    "rating": 9,
     "followers": 2200000,
     "movies": [
-      { "slug": "simhadri", "title": "Simhadri", "year": 2003 },
-      { "slug": "yamadonga", "title": "Yamadonga", "year": 2007 },
-      { "slug": "temper", "title": "Temper", "year": 2015 },
-      { "slug": "aravinda-sametha", "title": "Aravinda Sametha", "year": 2018 },
-      { "slug": "rrr", "title": "RRR", "year": 2022 }
+      {
+        "slug": "simhadri",
+        "title": "Simhadri",
+        "year": 2003,
+        "poster": "https://image.tmdb.org/t/p/w342/pTzdNOtWSXB32OGPCI5ayE4NgiX.jpg"
+      },
+      {
+        "slug": "yamadonga",
+        "title": "Yamadonga",
+        "year": 2007,
+        "poster": "https://image.tmdb.org/t/p/w342/3CcAZYYkG0dralHCyOmouS6dNPh.jpg"
+      },
+      {
+        "slug": "temper",
+        "title": "Temper",
+        "year": 2015,
+        "poster": "https://image.tmdb.org/t/p/w342/hA793thpccdoAHSOZ5GNbtdSQlC.jpg"
+      },
+      {
+        "slug": "aravinda-sametha",
+        "title": "Aravinda Sametha",
+        "year": 2018,
+        "poster": "https://image.tmdb.org/t/p/w342/if8A96hBdeMfeduQqtuccvi6gYF.jpg"
+      },
+      {
+        "slug": "rrr",
+        "title": "RRR",
+        "year": 2022,
+        "poster": "https://image.tmdb.org/t/p/w342/u0XUBNQWlOvrh0Gd97ARGpIkL0.jpg"
+      }
     ]
   },
   {
@@ -119,11 +222,36 @@
     "rating": 8.9,
     "followers": 2100000,
     "movies": [
-      { "slug": "magadheera", "title": "Magadheera", "year": 2009 },
-      { "slug": "racha", "title": "Racha", "year": 2012 },
-      { "slug": "yevadu", "title": "Yevadu", "year": 2014 },
-      { "slug": "rangasthalam", "title": "Rangasthalam", "year": 2018 },
-      { "slug": "rrr", "title": "RRR", "year": 2022 }
+      {
+        "slug": "magadheera",
+        "title": "Magadheera",
+        "year": 2009,
+        "poster": "https://image.tmdb.org/t/p/w342/xK7MEV56GF291VG0U5XnVJuvNv3.jpg"
+      },
+      {
+        "slug": "racha",
+        "title": "Racha",
+        "year": 2012,
+        "poster": "https://image.tmdb.org/t/p/w342/e5Za4th9WI9Grl5fkuEQzBhs63u.jpg"
+      },
+      {
+        "slug": "yevadu",
+        "title": "Yevadu",
+        "year": 2014,
+        "poster": "https://image.tmdb.org/t/p/w342/6uU5jvqmPI5aURjznE5WEJsjNSz.jpg"
+      },
+      {
+        "slug": "rangasthalam",
+        "title": "Rangasthalam",
+        "year": 2018,
+        "poster": "https://image.tmdb.org/t/p/w342/yiEzDgBBFC25Zd6z0r7sMngn5vr.jpg"
+      },
+      {
+        "slug": "rrr",
+        "title": "RRR",
+        "year": 2022,
+        "poster": "https://image.tmdb.org/t/p/w342/u0XUBNQWlOvrh0Gd97ARGpIkL0.jpg"
+      }
     ]
   },
   {
@@ -137,10 +265,30 @@
     "rating": 8.7,
     "followers": 1800000,
     "movies": [
-      { "slug": "pelli-choopulu", "title": "Pelli Choopulu", "year": 2016 },
-      { "slug": "arjun-reddy", "title": "Arjun Reddy", "year": 2017 },
-      { "slug": "geetha-govindam", "title": "Geetha Govindam", "year": 2018 },
-      { "slug": "dear-comrade", "title": "Dear Comrade", "year": 2019 }
+      {
+        "slug": "pelli-choopulu",
+        "title": "Pelli Choopulu",
+        "year": 2016,
+        "poster": "https://image.tmdb.org/t/p/w342/um5GCXgYAVwP46yzt9vD83MAXKd.jpg"
+      },
+      {
+        "slug": "arjun-reddy",
+        "title": "Arjun Reddy",
+        "year": 2017,
+        "poster": "https://image.tmdb.org/t/p/w342/kHubDgL59I5hCn7ccBYvU7bKY1r.jpg"
+      },
+      {
+        "slug": "geetha-govindam",
+        "title": "Geetha Govindam",
+        "year": 2018,
+        "poster": "https://image.tmdb.org/t/p/w342/sTreb0ajewXqeIqAyZ0IWtafoB5.jpg"
+      },
+      {
+        "slug": "dear-comrade",
+        "title": "Dear Comrade",
+        "year": 2019,
+        "poster": "https://image.tmdb.org/t/p/w342/wEDh02aLl2fkCXi25V4MOOuEuWF.jpg"
+      }
     ]
   },
   {
@@ -154,10 +302,30 @@
     "rating": 8.8,
     "followers": 1500000,
     "movies": [
-      { "slug": "eega", "title": "Eega", "year": 2012 },
-      { "slug": "bhale-bhale-magadivoy", "title": "Bhale Bhale Magadivoy", "year": 2015 },
-      { "slug": "jersey", "title": "Jersey", "year": 2019 },
-      { "slug": "shyam-singha-roy", "title": "Shyam Singha Roy", "year": 2021 }
+      {
+        "slug": "eega",
+        "title": "Eega",
+        "year": 2012,
+        "poster": "https://image.tmdb.org/t/p/w342/pX7fn4EZrg2YFlV4GNMIfHDOQZ6.jpg"
+      },
+      {
+        "slug": "bhale-bhale-magadivoy",
+        "title": "Bhale Bhale Magadivoy",
+        "year": 2015,
+        "poster": "https://image.tmdb.org/t/p/w342/fa2Nv68gcmgZJbKCJV5T45fwA8P.jpg"
+      },
+      {
+        "slug": "jersey",
+        "title": "Jersey",
+        "year": 2019,
+        "poster": "https://image.tmdb.org/t/p/w342/nMmMWoSooR6QmCjdT0AvZardof1.jpg"
+      },
+      {
+        "slug": "shyam-singha-roy",
+        "title": "Shyam Singha Roy",
+        "year": 2021,
+        "poster": "https://image.tmdb.org/t/p/w342/5C2wGMdwTQDUMIltYnn9qGrOs8w.jpg"
+      }
     ]
   },
   {
@@ -171,9 +339,24 @@
     "rating": 9.3,
     "followers": 2700000,
     "movies": [
-      { "slug": "gabbar-singh", "title": "Gabbar Singh", "year": 2012 },
-      { "slug": "attarintiki-daredi", "title": "Attarintiki Daredi", "year": 2013 },
-      { "slug": "jalsa", "title": "Jalsa", "year": 2008 }
+      {
+        "slug": "gabbar-singh",
+        "title": "Gabbar Singh",
+        "year": 2012,
+        "poster": "https://image.tmdb.org/t/p/w342/tFDhzLPhWnjDNda7YHcbeB4gcGi.jpg"
+      },
+      {
+        "slug": "attarintiki-daredi",
+        "title": "Attarintiki Daredi",
+        "year": 2013,
+        "poster": "https://image.tmdb.org/t/p/w342/htv7AcIhJc94dPmbkhVdZ5tFET7.jpg"
+      },
+      {
+        "slug": "jalsa",
+        "title": "Jalsa",
+        "year": 2008,
+        "poster": "https://image.tmdb.org/t/p/w342/h7lazOfbemCtX7ZZYnqmZx4IHxD.jpg"
+      }
     ]
   },
   {
@@ -187,9 +370,24 @@
     "rating": 9.5,
     "followers": 3000000,
     "movies": [
-      { "slug": "khaidi-no-150", "title": "Khaidi No. 150", "year": 2017 },
-      { "slug": "sye-raa", "title": "Sye Raa Narasimha Reddy", "year": 2019 },
-      { "slug": "godfather", "title": "GodFather", "year": 2022 }
+      {
+        "slug": "khaidi-no-150",
+        "title": "Khaidi No. 150",
+        "year": 2017,
+        "poster": "https://image.tmdb.org/t/p/w342/3Ry340WkEjlkglTnqLbvEGwMBmK.jpg"
+      },
+      {
+        "slug": "sye-raa",
+        "title": "Sye Raa Narasimha Reddy",
+        "year": 2019,
+        "poster": "https://image.tmdb.org/t/p/w342/uEheujJysophwGaqHWPu1UCPthl.jpg"
+      },
+      {
+        "slug": "godfather",
+        "title": "GodFather",
+        "year": 2022,
+        "poster": "https://image.tmdb.org/t/p/w342/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"
+      }
     ]
   },
   {
@@ -203,9 +401,24 @@
     "rating": 8.6,
     "followers": 1400000,
     "movies": [
-      { "slug": "kick", "title": "Kick", "year": 2009 },
-      { "slug": "power", "title": "Power", "year": 2014 },
-      { "slug": "krack", "title": "Krack", "year": 2021 }
+      {
+        "slug": "kick",
+        "title": "Kick",
+        "year": 2009,
+        "poster": "https://image.tmdb.org/t/p/w342/iHMbrTHJwocsNvo5murCBw0CwTo.jpg"
+      },
+      {
+        "slug": "power",
+        "title": "Power",
+        "year": 2014,
+        "poster": "https://image.tmdb.org/t/p/w342/bKYKyyIv5YnisxjZtDreWtYA386.jpg"
+      },
+      {
+        "slug": "krack",
+        "title": "Krack",
+        "year": 2021,
+        "poster": "https://image.tmdb.org/t/p/w342/fMHGXVgtU9Vfb9Xg6S9SWShmRDz.jpg"
+      }
     ]
   }
 ]

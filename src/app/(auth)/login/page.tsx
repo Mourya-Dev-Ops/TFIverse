@@ -59,7 +59,7 @@ function LoginForm() {
   };
 
   return (
-    <main className="min-h-[100dvh] bg-black text-white flex flex-col items-center justify-center relative overflow-x-hidden selection:bg-white selection:text-black py-12">
+    <main className="min-h-[100dvh] bg-black text-white flex flex-col items-center justify-center relative overflow-x-hidden overflow-y-auto selection:bg-white selection:text-black py-12 px-4">
       
       {/* Background Cinematic Video */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -77,15 +77,15 @@ function LoginForm() {
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.5) 100%)" }} />
       </div>
 
-      {/* Volume Toggle */}
+      {/* Volume Toggle — top-right on mobile, bottom-right on desktop */}
       <motion.button
         onClick={toggleMute}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-8 right-8 z-50 p-4 rounded-full bg-white/10 backdrop-blur-2xl border border-white/20 text-white shadow-2xl transition-all"
+        className="fixed top-6 right-6 md:top-auto md:bottom-8 md:right-8 z-[60] p-3 md:p-4 rounded-full bg-black/60 backdrop-blur-2xl border border-white/20 text-white shadow-2xl transition-all"
         style={{ pointerEvents: "auto" }}
       >
-        {muted ? <VolumeX size={24} /> : <Volume2 size={24} />}
+        {muted ? <VolumeX size={20} /> : <Volume2 size={20} />}
       </motion.button>
 
       {/* Glassy Login Card */}
