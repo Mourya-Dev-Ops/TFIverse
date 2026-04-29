@@ -216,6 +216,14 @@ export async function uploadProfileImage(formData: FormData) {
 
   try {
     const url = await uploadToB2(file, `profiles/${session.user.id}/${type}`);
+    
+    if (type === "avatar") {
+      await db.update(userProfiles).set({ avatarUrl: url }).where(eq(userProfiles.userId, session.user.id));
+    } else {
+      await db.update(userProfiles).set({ bannerUrl: url }).where(eq(userProfiles.userId, session.user.id));
+    }
+
+    revalidatePath("/profile");
     return { url };
   } catch (error) {
     console.error("Upload error:", error);

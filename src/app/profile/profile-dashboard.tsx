@@ -1,20 +1,26 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   FaEdit, FaCamera, FaSignOutAlt, FaShareAlt, FaDownload, FaLink,
   FaTwitter, FaInstagram, FaYoutube, FaTiktok, FaImdb, FaGlobe,
-  FaCheckCircle, FaUserFriends, FaBirthdayCake
+  FaUserFriends
 } from "react-icons/fa";
 import { SiLetterboxd } from "react-icons/si";
-import { MdVerified, MdLocationOn, MdDateRange } from "react-icons/md";
+import { MdLocationOn, MdDateRange } from "react-icons/md";
 import { uploadProfileImage } from "@/app/actions/profile";
 import EditProfileModal from "./edit-profile-modal";
 import DeleteAccountModal from "./delete-account-modal";
 import toast, { Toaster } from "react-hot-toast";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+import profileCompleteAnim from "../../../public/images/badges/profile-complete.json";
+import verifiedAnim from "../../../public/images/badges/verified-gold.json";
 
 interface ProfileDashboardProps {
   user: any;
@@ -29,6 +35,12 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [copied, setCopied] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [activeTab, setActiveTab] = useState<"activity" | "tierlists" | "memes">("tierlists");
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const joinDate = user.createdAt ? new Date(user.createdAt).toLocaleDateString("en-US", { month: "long", year: "numeric" }) : "";
   const dob = profile.dateOfBirth ? new Date(profile.dateOfBirth).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) : "";
@@ -86,8 +98,8 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
     const file = e.target.files?.[0];
     if (!file) return;
 
-    if (file.size > 5 * 1024 * 1024) {
-      toast.error("File size must be less than 5MB");
+    if (file.size > 10 * 1024 * 1024) {
+      toast.error("File size must be less than 10MB");
       return;
     }
 
@@ -110,180 +122,269 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
   };
 
   const stats = { ratings: 0, watched: 0, watchlist: 0, likes: 0, reviews: 0, tierLists: 0, memes: 0 };
+  const customColor = profile.themeColor && profile.themeColor !== "#ffffff" ? profile.themeColor : "#3b82f6";
 
   return (
-    <main className="bg-black min-h-screen text-white font-sans selection:bg-neutral-800 selection:text-white pt-16">
+    <main className="bg-black min-h-screen text-white font-sans selection:bg-neutral-800 selection:text-white pb-20">
       <Toaster position="top-center" reverseOrder={false} />
       
-      {/* ─── BANNER ─── */}
-      <div className="relative h-[250px] md:h-[350px] w-full bg-neutral-900 group">
-        <img src={bannerUrl} alt="Banner" className={`w-full h-full object-cover transition-opacity ${uploading ? 'opacity-50' : 'opacity-100'}`} />
-        <label className="absolute top-4 right-4 bg-black/80 hover:bg-black px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-semibold border border-neutral-800 transition-colors cursor-pointer opacity-0 group-hover:opacity-100">
-          <FaCamera /> {uploading ? "Uploading..." : "Change Banner"}
-          <input type="file" className="hidden" accept="image/*" disabled={uploading} onChange={(e) => handleFileUpload(e, "banner")} />
+      {/* ─── CINEMATIC HEADER ─── */}
+      <div className="relative h-[400px] w-full group overflow-hidden">
+        {/* The Banner Image */}
+        <img 
+          src={bannerUrl} 
+          alt="Banner" 
+          className={`w-full h-full object-cover transition-all duration-700 ease-in-out ${uploading ? 'opacity-30 blur-sm scale-105' : 'opacity-80 scale-100 hover:scale-[1.02]'}`} 
+        />
+        
+        {/* Soft Bottom Fade to Pure Black */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black pointer-events-none" />
+
+        <label className="absolute top-24 right-6 bg-white/10 hover:bg-white/20 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2 text-sm font-semibold border border-white/10 transition-all cursor-pointer opacity-0 group-hover:opacity-100 shadow-xl z-20">
+          <FaCamera /> {uploading ? "Uploading..." : "Update Banner"}
+          <input type="file" className="hidden" accept="image/*,image/gif" disabled={uploading} onChange={(e) => handleFileUpload(e, "banner")} />
         </label>
       </div>
 
-      {/* ─── PROFILE INFO ─── */}
-      <div className="max-w-6xl mx-auto px-6 relative pb-12">
+      {/* ─── BENTO GRID CONTAINER ─── */}
+      <div className="max-w-6xl mx-auto px-4 md:px-8 relative -mt-32 z-10">
         
-        {/* Avatar */}
-        <div className="absolute -top-20 left-6 z-10">
-          {/* Pinned Movie Badge (Legacy Feature) */}
-          {profile.favoriteMovieSlug && (
-            <div className="absolute -top-12 left-4 bg-black/90 border border-neutral-800 rounded-full px-4 py-1.5 flex items-center gap-2 shadow-2xl z-30 group/badge animate-in fade-in slide-in-from-bottom-2 duration-500">
-              <span className="text-neutral-500"><FaCamera size={12} /></span>
-              <span className="text-[11px] font-black uppercase tracking-widest text-white">{profile.favoriteMovieSlug}</span>
-            </div>
-          )}
-
-          <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full border-4 border-black bg-neutral-900 group">
-            <img src={avatarUrl} alt={profile.username} className={`w-full h-full rounded-full object-cover transition-opacity ${uploading ? 'opacity-50' : 'opacity-100'}`} />
-            <label className="absolute bottom-1 right-1 w-10 h-10 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center text-white border-4 border-black cursor-pointer transition-colors shadow-lg z-20">
-              <FaEdit size={16} />
-              <input type="file" className="hidden" accept="image/*" disabled={uploading} onChange={(e) => handleFileUpload(e, "avatar")} />
-            </label>
-          </div>
-          {profile.statusMessage && (
-             <div className="absolute -top-8 left-12 bg-[#1a1a1a] border border-neutral-800 rounded-2xl px-4 py-2 text-sm flex items-center gap-2 shadow-lg whitespace-nowrap">
-                <span>{profile.statusEmoji || "🍕"}</span>
-                <span className="text-neutral-300">{profile.statusMessage}</span>
-             </div>
-          )}
-        </div>
-
-        {/* Content */}
-        <div className="pt-28 border-b border-neutral-900 pb-8">
+        {/* TOP BENTO ROW */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
           
-          <div className="flex items-center gap-2 mb-2">
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight">TFIverse</h1>
-            <span className="text-neutral-600 px-3">/</span>
-            <h2 className="text-4xl md:text-2xl font-bold tracking-tight text-neutral-400">{profile.username}</h2>
-            {completeness === 100 && (
-              <MdVerified className="text-blue-500 text-2xl drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
-            )}
-          </div>
+          {/* LEFT CARD: IDENTITY (Spans 8 columns) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="lg:col-span-8 bg-[#0a0a0a] border border-white/5 backdrop-blur-xl rounded-[2rem] p-8 flex flex-col md:flex-row gap-8 relative overflow-hidden"
+          >
+            {/* The Avatar */}
+            <div className="relative w-32 h-32 md:w-40 md:h-40 shrink-0 group/avatar">
+              <img 
+                src={avatarUrl} 
+                alt={profile.username} 
+                className={`w-full h-full rounded-full object-cover border-[6px] border-[#0a0a0a] shadow-2xl transition-all duration-500 ${uploading ? 'opacity-50' : 'opacity-100'}`} 
+              />
+              <label className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 rounded-full cursor-pointer opacity-0 group-hover/avatar:opacity-100 transition-opacity backdrop-blur-sm border-[6px] border-transparent">
+                <FaCamera className="text-white text-2xl mb-1" />
+                <span className="text-[10px] font-bold uppercase tracking-widest text-white/90">Update</span>
+                <input type="file" className="hidden" accept="image/*,image/gif" disabled={uploading} onChange={(e) => handleFileUpload(e, "avatar")} />
+              </label>
+              
+              {/* Lottie Animated Badge (Overlapping Bottom Right of Avatar) */}
+              {isClient && completeness === 100 && (
+                <div className="absolute -bottom-2 -right-2 w-14 h-14 bg-[#0a0a0a] rounded-full flex items-center justify-center p-1 shadow-xl z-30" title="Verified - 100% Complete">
+                  <Lottie animationData={verifiedAnim} loop={false} />
+                </div>
+              )}
+            </div>
 
-          <div className="flex flex-wrap items-center gap-3 text-neutral-400 text-sm font-medium mb-4">
-            <span>@{(profile.username || "").toLowerCase().replace(/\s+/g, "")}</span>
-            {profile.pronouns && <><span>•</span><span>{profile.pronouns}</span></>}
-            {profile.location && <><span>•</span><span className="flex items-center gap-1"><MdLocationOn size={16}/> {profile.location}</span></>}
-            {dob && <><span>•</span><span className="flex items-center gap-1"><FaBirthdayCake size={14}/> {dob}</span></>}
-            {joinDate && <><span>•</span><span className="flex items-center gap-1"><MdDateRange size={16}/> Joined {joinDate}</span></>}
-          </div>
+            {/* Profile Text Content */}
+            <div className="flex-1 flex flex-col justify-center">
+              <div className="flex flex-wrap items-center gap-3 mb-2">
+                <h1 className="text-4xl font-black tracking-tight">{profile.username}</h1>
+                {profile.statusMessage && (
+                  <div className="flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/5 rounded-full text-sm font-medium">
+                    <span>{profile.statusEmoji || "🍿"}</span>
+                    <span className="text-neutral-300">{profile.statusMessage}</span>
+                  </div>
+                )}
+              </div>
 
-          {profile.bio && (
-            <p className="text-neutral-300 italic mb-5 max-w-2xl text-base">"{profile.bio}"</p>
-          )}
+              <div className="flex flex-wrap items-center gap-3 text-neutral-400 text-sm font-medium mb-4">
+                <span className="text-white">@{(profile.username || "").toLowerCase().replace(/\s+/g, "")}</span>
+                {profile.pronouns && <><span>•</span><span>{profile.pronouns}</span></>}
+                {profile.location && <><span>•</span><span className="flex items-center gap-1"><MdLocationOn size={16}/> {profile.location}</span></>}
+                {joinDate && <><span>•</span><span className="flex items-center gap-1"><MdDateRange size={16}/> Joined {joinDate}</span></>}
+              </div>
 
-          <div className="flex items-center gap-4 mb-6">
-             <div className="flex items-center gap-2 px-4 py-2 bg-[#111] rounded-xl border border-neutral-800 text-sm font-semibold">
-                <FaUserFriends className="text-neutral-500" />
-                <span className="text-white">{followersCount}</span>
-                <span className="text-neutral-400">Followers</span>
-             </div>
-             <div className="flex items-center gap-2 px-4 py-2 bg-[#111] rounded-xl border border-neutral-800 text-sm font-semibold">
-                <FaUserFriends className="text-neutral-500" />
-                <span className="text-white">{followingCount}</span>
-                <span className="text-neutral-400">Following</span>
-             </div>
-          </div>
+              {profile.bio && (
+                <p className="text-neutral-300 text-base leading-relaxed mb-6 max-w-xl">
+                  {profile.bio}
+                </p>
+              )}
 
-          <div className="flex gap-4 mb-8">
-            {profile.twitterUrl && <a href={profile.twitterUrl} target="_blank" rel="noreferrer" className="text-[#1DA1F2] hover:opacity-80 transition-opacity"><FaTwitter size={20} /></a>}
-            {profile.instagramUrl && <a href={profile.instagramUrl} target="_blank" rel="noreferrer" className="text-[#E1306C] hover:opacity-80 transition-opacity"><FaInstagram size={20} /></a>}
-            {profile.youtubeUrl && <a href={profile.youtubeUrl} target="_blank" rel="noreferrer" className="text-[#FF0000] hover:opacity-80 transition-opacity"><FaYoutube size={20} /></a>}
-            {profile.tiktokUrl && <a href={profile.tiktokUrl} target="_blank" rel="noreferrer" className="text-white hover:opacity-80 transition-opacity"><FaTiktok size={20} /></a>}
-            {profile.letterboxdUrl && <a href={profile.letterboxdUrl} target="_blank" rel="noreferrer" className="text-[#00e53a] hover:opacity-80 transition-opacity"><SiLetterboxd size={20} /></a>}
-            {profile.imdbUrl && <a href={profile.imdbUrl} target="_blank" rel="noreferrer" className="text-[#f5c518] hover:opacity-80 transition-opacity"><FaImdb size={20} /></a>}
-            {profile.website && <a href={profile.website} target="_blank" rel="noreferrer" className="text-neutral-400 hover:text-white transition-colors"><FaGlobe size={20} /></a>}
-          </div>
-
-          <div className="flex flex-col xl:flex-row xl:items-center gap-8 justify-between">
-            <div className="flex items-center gap-4">
+              {/* Minimal Social Links */}
+              <div className="flex items-center gap-3 flex-wrap">
+                {profile.twitterUrl && <a href={profile.twitterUrl} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 flex items-center justify-center text-white/80 hover:text-white transition-all"><FaTwitter size={16} /></a>}
+                {profile.instagramUrl && <a href={profile.instagramUrl} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 flex items-center justify-center text-white/80 hover:text-white transition-all"><FaInstagram size={16} /></a>}
+                {profile.youtubeUrl && <a href={profile.youtubeUrl} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 flex items-center justify-center text-white/80 hover:text-white transition-all"><FaYoutube size={16} /></a>}
+                {profile.tiktokUrl && <a href={profile.tiktokUrl} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 flex items-center justify-center text-white/80 hover:text-white transition-all"><FaTiktok size={16} /></a>}
+                {profile.letterboxdUrl && <a href={profile.letterboxdUrl} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 flex items-center justify-center text-[#00e53a] transition-all"><SiLetterboxd size={16} /></a>}
+                {profile.imdbUrl && <a href={profile.imdbUrl} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 flex items-center justify-center text-[#f5c518] transition-all"><FaImdb size={16} /></a>}
+                {profile.website && <a href={profile.website} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 flex items-center justify-center text-white/80 hover:text-white transition-all"><FaGlobe size={16} /></a>}
+              </div>
+            </div>
+            
+            {/* Top Right Action - Edit Button */}
+            <div className="absolute top-6 right-6">
               <button 
                 onClick={() => setShowEditModal(true)} 
-                style={{ backgroundColor: profile.themeColor || "white", color: (profile.themeColor && profile.themeColor !== "white") ? "white" : "black" }}
-                className="px-6 py-2.5 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity flex items-center gap-2"
+                className="w-10 h-10 rounded-full bg-white text-black hover:scale-105 flex items-center justify-center transition-transform shadow-lg"
+                title="Edit Profile"
               >
-                <FaEdit /> Edit Profile
+                <FaEdit size={16} />
               </button>
-              <Link 
-                href={`/u/${encodeURIComponent(profile.username)}`} 
-                className="bg-[#111] text-white border border-neutral-800 px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-neutral-900 transition-colors"
-              >
-                View Public Profile
-              </Link>
+            </div>
+          </motion.div>
+
+          {/* RIGHT CARD: THE NUMBERS & FAVORITES (Spans 4 columns) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="lg:col-span-4 flex flex-col gap-6"
+          >
+            {/* Stats Bento */}
+            <div className="bg-[#0a0a0a] border border-white/5 backdrop-blur-xl rounded-[2rem] p-6 flex-1 flex flex-col justify-center">
+              <div className="grid grid-cols-2 gap-y-6 gap-x-4">
+                <div className="flex flex-col">
+                  <span className="text-3xl font-black">{stats.watched}</span>
+                  <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Watched</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-3xl font-black">{stats.watchlist}</span>
+                  <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Watchlist</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-3xl font-black">{stats.reviews}</span>
+                  <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Reviews</span>
+                </div>
+                <div className="flex flex-col">
+                  <div className="flex items-center gap-2">
+                    <span className="text-3xl font-black">{followersCount}</span>
+                    <span className="text-neutral-600">/</span>
+                    <span className="text-xl font-bold text-neutral-400">{followingCount}</span>
+                  </div>
+                  <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Followers / Following</span>
+                </div>
+              </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-6 md:gap-8">
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-black">{stats.ratings}</span>
-                <span className="text-neutral-500 text-xs font-semibold flex items-center gap-1 mt-1"><span className="text-yellow-500 text-sm">⭐</span> Ratings</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-black">{stats.watched}</span>
-                <span className="text-neutral-500 text-xs font-semibold flex items-center gap-1 mt-1"><span className="text-green-500 text-sm">👁️</span> Watched</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-black">{stats.watchlist}</span>
-                <span className="text-neutral-500 text-xs font-semibold flex items-center gap-1 mt-1"><span className="text-blue-500 text-sm">🔖</span> Watchlist</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-black">{stats.likes}</span>
-                <span className="text-neutral-500 text-xs font-semibold flex items-center gap-1 mt-1"><span className="text-red-500 text-sm">❤️</span> Likes</span>
-              </div>
+            {/* Pinned Movie / Favorite Hero */}
+            <div className="bg-[#0a0a0a] border border-white/5 backdrop-blur-xl rounded-[2rem] p-6">
+               <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500 mb-4">Favorites</h3>
+               <div className="flex flex-col gap-3">
+                 {profile.favoriteMovieSlug ? (
+                   <div className="flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/5 rounded-xl">
+                     <span className="text-xl">🎬</span>
+                     <div className="flex flex-col">
+                       <span className="text-sm font-bold text-white capitalize">{profile.favoriteMovieSlug.replace(/-/g, ' ')}</span>
+                       <span className="text-[10px] text-neutral-500 uppercase tracking-widest">Pinned Movie</span>
+                     </div>
+                   </div>
+                 ) : (
+                   <div className="text-xs text-neutral-600 italic">No pinned movie yet.</div>
+                 )}
+                 {profile.favoriteHeroSlug && (
+                   <div className="flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/5 rounded-xl">
+                     <span className="text-xl">🦸‍♂️</span>
+                     <div className="flex flex-col">
+                       <span className="text-sm font-bold text-white capitalize">{profile.favoriteHeroSlug.replace(/-/g, ' ')}</span>
+                       <span className="text-[10px] text-neutral-500 uppercase tracking-widest">Favorite Hero</span>
+                     </div>
+                   </div>
+                 )}
+               </div>
+               
+               {/* TMDB Notice */}
+               {(!profile.favoriteMovieSlug || !profile.favoriteHeroSlug) && (
+                 <div className="mt-4 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-xl">
+                   <p className="text-[10px] text-yellow-500/80 uppercase tracking-widest font-bold leading-relaxed">
+                     ⚠️ Note: Visual search dropdowns for heroes and movies will be unlocked once TMDB integration is complete.
+                   </p>
+                 </div>
+               )}
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        {/* ─── QUICK ACTIONS (Moved Down) ─── */}
-        <div className="mt-12 p-8 bg-neutral-950 border border-neutral-900 rounded-2xl flex flex-wrap items-center justify-between gap-6">
-          <div className="flex items-center gap-6 text-sm font-bold text-neutral-400">
-            <button onClick={handleShare} className="flex items-center gap-2 hover:text-white transition-colors"><FaShareAlt /> Share</button>
-            <button onClick={handleExportData} className="flex items-center gap-2 hover:text-white transition-colors"><FaDownload /> Export</button>
-            <button onClick={handleCopyLink} className="flex items-center gap-2 hover:text-white transition-colors"><FaLink /> {copied ? "Copied Link" : "Copy Link"}</button>
+        {/* ─── QUICK ACTIONS STRIP ─── */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="flex flex-wrap items-center justify-between gap-4 mb-12 px-2"
+        >
+          <div className="flex items-center gap-6">
+            <button onClick={handleShare} className="text-sm font-bold text-neutral-400 hover:text-white transition-colors flex items-center gap-2">
+              <FaShareAlt /> Share
+            </button>
+            <button onClick={handleCopyLink} className="text-sm font-bold text-neutral-400 hover:text-white transition-colors flex items-center gap-2">
+              <FaLink /> {copied ? "Copied" : "Copy Link"}
+            </button>
+            <button onClick={handleExportData} className="text-sm font-bold text-neutral-400 hover:text-white transition-colors flex items-center gap-2">
+              <FaDownload /> Export Data
+            </button>
           </div>
-          <div className="flex items-center gap-4">
-            {completeness === 100 ? (
-              <div className="px-4 py-2 bg-green-950/50 border border-green-900 rounded-full text-green-500 text-sm font-bold flex items-center gap-2">
-                <FaCheckCircle /> Profile complete
-              </div>
-            ) : (
-              <div className="px-4 py-2 bg-neutral-900 border border-neutral-800 rounded-full text-neutral-400 text-sm font-bold">
-                Profile {completeness}% complete
-              </div>
-            )}
-            <button onClick={() => signOut({ callbackUrl: "/" })} className="px-6 py-2 bg-red-600/10 border border-red-600/20 text-red-500 hover:bg-red-600/20 rounded-lg text-sm font-bold transition-all flex items-center gap-2">
+          <div>
+            <button onClick={() => signOut({ callbackUrl: "/" })} className="text-sm font-bold text-red-500 hover:text-red-400 transition-colors flex items-center gap-2 px-4 py-2 bg-red-500/10 rounded-full">
               <FaSignOutAlt /> Sign Out
             </button>
           </div>
+        </motion.div>
+
+        {/* ─── CONTENT TABS ─── */}
+        <div className="mb-6 flex gap-2 overflow-x-auto pb-2 no-scrollbar">
+          {(["tierlists", "memes", "activity"] as const).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-6 py-3 rounded-full text-sm font-bold capitalize transition-all whitespace-nowrap ${
+                activeTab === tab 
+                  ? "bg-white text-black shadow-lg" 
+                  : "bg-[#0a0a0a] text-neutral-400 border border-white/5 hover:bg-white/5 hover:text-white"
+              }`}
+            >
+              {tab === "tierlists" ? "🏆 Tier Lists" : tab === "memes" ? "😂 Memes" : "📊 Activity"}
+            </button>
+          ))}
         </div>
 
-        {/* ─── TIER LISTS & MEMES (Empty States for now) ─── */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-8 bg-[#0a0a0a] border border-neutral-900 rounded-2xl">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-sm font-black uppercase tracking-[0.2em] text-neutral-400">Tier Lists</h3>
-              <Link href="/tier-list/create" className="text-xs font-bold text-neutral-500 hover:text-white transition-colors">Create New +</Link>
-            </div>
-            <div className="flex flex-col items-center justify-center py-12 text-center">
-              <span className="text-4xl mb-4 opacity-20">🏆</span>
-              <p className="text-neutral-600 text-sm italic">"No tier lists created yet. Rank your favorites and share them with the universe."</p>
-            </div>
-          </div>
+        {/* ─── TAB CONTENT (BENTO STYLE EMPTY STATES) ─── */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="bg-[#0a0a0a] border border-white/5 backdrop-blur-xl rounded-[2rem] p-12 min-h-[400px] flex flex-col items-center justify-center text-center"
+          >
+            {activeTab === "tierlists" && (
+              <>
+                <span className="text-6xl mb-6 opacity-20">🏆</span>
+                <h3 className="text-xl font-bold text-white mb-2">No Tier Lists Yet</h3>
+                <p className="text-neutral-500 max-w-sm mb-8">Rank your favorite movies, heroes, and villains. Share your definitive opinions with the universe.</p>
+                <Link href="/tier-list/create" className="px-6 py-3 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform shadow-xl">
+                  Create Tier List +
+                </Link>
+              </>
+            )}
 
-          <div className="p-8 bg-[#0a0a0a] border border-neutral-900 rounded-2xl">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-sm font-black uppercase tracking-[0.2em] text-neutral-400">Memes</h3>
-              <Link href="/memes/upload" className="text-xs font-bold text-neutral-500 hover:text-white transition-colors">Upload +</Link>
-            </div>
-            <div className="flex flex-col items-center justify-center py-12 text-center">
-              <span className="text-4xl mb-4 opacity-20">😂</span>
-              <p className="text-neutral-600 text-sm italic">"Your meme sanctuary is empty. Upload your best creations to start the streak."</p>
-            </div>
-          </div>
-        </div>
+            {activeTab === "memes" && (
+              <>
+                <span className="text-6xl mb-6 opacity-20">😂</span>
+                <h3 className="text-xl font-bold text-white mb-2">Your Meme Sanctuary is Empty</h3>
+                <p className="text-neutral-500 max-w-sm mb-8">Upload your best creations, start a streak, and make the TFIverse laugh.</p>
+                <Link href="/memes/upload" className="px-6 py-3 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform shadow-xl">
+                  Upload Meme +
+                </Link>
+              </>
+            )}
+
+            {activeTab === "activity" && (
+              <>
+                <span className="text-6xl mb-6 opacity-20">📊</span>
+                <h3 className="text-xl font-bold text-white mb-2">No Recent Activity</h3>
+                <p className="text-neutral-500 max-w-sm mb-8">Your activity feed will populate as you watch movies, add to your watchlist, and write reviews.</p>
+                <Link href="/movies" className="px-6 py-3 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform shadow-xl">
+                  Explore Movies
+                </Link>
+              </>
+            )}
+          </motion.div>
+        </AnimatePresence>
 
       </div>
 
