@@ -473,11 +473,14 @@ export const memes = pgTable('memes', {
   imageUrl: text('image_url').notNull(),
   tags: jsonb('tags').$type<string[]>().default([]),
   heroTags: jsonb('hero_tags').$type<string[]>().default([]),
+  movieTags: jsonb('movie_tags').$type<string[]>().default([]),
   likes: integer('likes').default(0),
   views: integer('views').default(0),
   shares: integer('shares').default(0),
   downloads: integer('downloads').default(0),
   status: text('status').default('pending').notNull(),
+  isFeatured: boolean('is_featured').default(false),
+  featuredAt: timestamp('featured_at'),
   allowComments: boolean('allow_comments').default(true),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
@@ -537,6 +540,44 @@ export const memeShares = pgTable('meme_shares', {
   platform: text('platform'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
+
+// ============================================================================
+// MEME RELATIONS
+// ============================================================================
+
+export const memesRelations = relations(memes, ({ one, many }) => ({
+  user: one(users, {
+    fields: [memes.userId],
+    references: [users.id],
+  }),
+  likes: many(memeLikes),
+  views: many(memeViews),
+  comments: many(memeComments),
+  bookmarks: many(memeBookmarks),
+}));
+
+export const memeLikesRelations = relations(memeLikes, ({ one }) => ({
+  meme: one(memes, {
+    fields: [memeLikes.memeId],
+    references: [memes.id],
+  }),
+  user: one(users, {
+    fields: [memeLikes.userId],
+    references: [users.id],
+  }),
+}));
+
+export const memeCommentsRelations = relations(memeComments, ({ one }) => ({
+  meme: one(memes, {
+    fields: [memeComments.memeId],
+    references: [memes.id],
+  }),
+  user: one(users, {
+    fields: [memeComments.userId],
+    references: [users.id],
+  }),
+}));
+
 
 // ============================================================================
 // NOTIFICATIONS SYSTEM (UUID-BASED)
