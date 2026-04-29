@@ -23,12 +23,12 @@ export default function Navbar({ user }: NavbarProps) {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          
+
           {/* LEFT: Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2 group">
               <h1 className="text-xl sm:text-2xl font-black text-white tracking-tighter">
-                TFIVERSE
+                TFIverse
               </h1>
             </Link>
           </div>

@@ -38,8 +38,8 @@ export default function ForgotPasswordPage() {
         <video ref={videoRef} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
           <source src="/videos/auth-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.65)' }} />
-        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.8) 100%)" }} />
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.40)' }} />
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.7) 100%)" }} />
       </div>
 
       <div className="absolute inset-0 z-0 pointer-events-none md:hidden">
@@ -58,8 +58,8 @@ export default function ForgotPasswordPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative z-20 w-full max-w-md px-6 sm:px-8 py-10 sm:py-12 rounded-3xl border border-white/[0.08]"
-        style={{ backgroundColor: 'rgba(10,10,10,0.95)', boxShadow: '0 20px 80px rgba(0,0,0,0.9)' }}
+        className="relative z-20 w-full max-w-md px-6 sm:px-8 py-10 sm:py-12 rounded-3xl border border-white/[0.12]"
+        style={{ backgroundColor: 'rgba(18,18,18,0.98)', boxShadow: '0 0 0 1px rgba(255,255,255,0.06), 0 20px 80px rgba(0,0,0,0.9)' }}
       >
         <Link href="/login" className="inline-flex items-center gap-2 text-white/40 hover:text-white/70 transition-colors text-xs tracking-widest uppercase mb-8">
           <ArrowLeft size={14} /> Back to Login
