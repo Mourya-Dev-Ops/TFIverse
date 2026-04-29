@@ -26,23 +26,12 @@ interface HomeClientProps {
 
 export default function HomeClient({ heroesData, rumorsData, upcomingData, isAuthenticated, userId }: HomeClientProps) {
   const [query, setQuery] = useState("");
-  const [ready, setReady] = useState(false);
-  useEffect(() => { setReady(true); }, []);
 
   const results = useMemo(() => {
     if (!query.trim()) return [];
     const t = query.toLowerCase();
     return heroesData.filter(h => h.name.toLowerCase().includes(t)).slice(0, 4).map(h => ({ label: h.name, sub: h.title || "Hero", href: `/hero/${h.slug}` }));
   }, [query, heroesData]);
-
-  const birthdayHero = useMemo(() => {
-    const d = new Date();
-    return heroesData.find(h => { if (!h.birthDate) return false; const p = h.birthDate.split('-').map(Number); return p[1] === d.getMonth() + 1 && p[2] === d.getDate(); });
-  }, [heroesData]);
-
-  const spotlight = birthdayHero || heroesData.find(h => h.featured) || heroesData[0];
-
-  if (!ready) return null;
 
   return (
     <div className="relative">

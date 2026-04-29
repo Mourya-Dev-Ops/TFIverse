@@ -47,6 +47,10 @@ export async function registerUser(formData: FormData) {
       return { error: "All fields are required" };
     }
 
+    if (name.length > 25) {
+      return { error: "Display name cannot exceed 25 characters" };
+    }
+
     if (password !== confirmPassword) {
       return { error: "Passwords do not match" };
     }

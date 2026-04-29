@@ -1,6 +1,5 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-import Navbar from "@/components/layout/navbar";
 import { getFullProfile } from "@/app/actions/profile";
 import ProfileDashboard from "./profile-dashboard";
 
@@ -23,7 +22,6 @@ export default async function ProfilePage() {
 
   return (
     <main className="min-h-screen bg-black text-white">
-      <Navbar user={session.user} />
       <div className="pt-16">
         <ProfileDashboard
           user={data.user}
