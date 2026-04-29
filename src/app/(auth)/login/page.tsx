@@ -16,10 +16,10 @@ export default function LoginPage() {
     setError("");
 
     const formData = new FormData(e.currentTarget);
-    
+
     try {
       const result = await loginUser(formData);
-      
+
       if (result?.error) {
         setError(result.error);
         setLoading(false);
@@ -32,13 +32,22 @@ export default function LoginPage() {
 
   return (
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center relative overflow-hidden selection:bg-white selection:text-black">
-      
-      {/* Background Cinematic Texture */}
+
+      {/* Background Cinematic Video */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.02] blur-[100px] rounded-full"></div>
+        <video
+          autoPlay
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
+        >
+          <source src="/videos/auth-bg.mp4" type="video/mp4" />
+        </video>
+        {/* Corner vignettes only — no full black overlay */}
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.7) 100%)" }} />
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -60,9 +69,9 @@ export default function LoginPage() {
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-2">
             <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase">Email</label>
-            <input 
+            <input
               name="email"
-              type="email" 
+              type="email"
               className="w-full bg-transparent border-b border-neutral-800 text-white px-0 py-3 focus:outline-none focus:border-white transition-colors placeholder:text-neutral-700"
               placeholder="agent@tfiverse.com"
               required
@@ -74,16 +83,16 @@ export default function LoginPage() {
               <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase">Password</label>
               <Link href="#" className="text-[10px] text-neutral-500 hover:text-white transition-colors tracking-widest uppercase">Forgot?</Link>
             </div>
-            <input 
+            <input
               name="password"
-              type="password" 
+              type="password"
               className="w-full bg-transparent border-b border-neutral-800 text-white px-0 py-3 focus:outline-none focus:border-white transition-colors placeholder:text-neutral-700 tracking-widest"
               placeholder="••••••••"
               required
             />
           </div>
 
-          <button 
+          <button
             type="submit"
             disabled={loading}
             className="group relative w-full bg-white text-black font-bold py-4 mt-6 hover:bg-neutral-200 transition-all tracking-[0.2em] uppercase text-xs overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
