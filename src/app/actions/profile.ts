@@ -24,6 +24,8 @@ export async function updateProfile(formData: FormData) {
   const tiktokUrl = formData.get("tiktokUrl") as string;
   const letterboxdUrl = formData.get("letterboxdUrl") as string;
   const imdbUrl = formData.get("imdbUrl") as string;
+  const avatarUrl = formData.get("avatarUrl") as string;
+  const bannerUrl = formData.get("bannerUrl") as string;
 
   if (!username || username.length < 3) {
     return { error: "Username must be at least 3 characters" };
@@ -60,6 +62,8 @@ export async function updateProfile(formData: FormData) {
       tiktokUrl: tiktokUrl?.trim() || null,
       letterboxdUrl: letterboxdUrl?.trim() || null,
       imdbUrl: imdbUrl?.trim() || null,
+      avatarUrl: avatarUrl?.trim() || null,
+      bannerUrl: bannerUrl?.trim() || null,
       updatedAt: new Date(),
     })
     .where(eq(userProfiles.userId, session.user.id));

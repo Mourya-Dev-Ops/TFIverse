@@ -37,6 +37,8 @@ export default function EditProfileModal({ profile, userId, isOpen, onClose }: E
     tiktokUrl: profile.tiktokUrl || "",
     letterboxdUrl: profile.letterboxdUrl || "",
     imdbUrl: profile.imdbUrl || "",
+    avatarUrl: profile.avatarUrl || "",
+    bannerUrl: profile.bannerUrl || "",
   });
 
   // Username validation with debounce
@@ -131,6 +133,28 @@ export default function EditProfileModal({ profile, userId, isOpen, onClose }: E
               />
               {checkingUsername && <p className="text-neutral-500 text-[10px] mt-1">Checking...</p>}
               {usernameError && <p className="text-red-400 text-[10px] mt-1">{usernameError}</p>}
+            </div>
+
+            {/* Images */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase mb-2 block">Avatar Image URL</label>
+                <input
+                  value={formData.avatarUrl}
+                  onChange={e => update("avatarUrl", e.target.value)}
+                  placeholder="https://imgur.com/..."
+                  className="w-full bg-transparent border-b border-neutral-800 text-white px-0 py-2 focus:outline-none focus:border-white transition-colors"
+                />
+              </div>
+              <div>
+                <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase mb-2 block">Banner Image URL</label>
+                <input
+                  value={formData.bannerUrl}
+                  onChange={e => update("bannerUrl", e.target.value)}
+                  placeholder="https://unsplash.com/..."
+                  className="w-full bg-transparent border-b border-neutral-800 text-white px-0 py-2 focus:outline-none focus:border-white transition-colors"
+                />
+              </div>
             </div>
 
             {/* Bio */}
