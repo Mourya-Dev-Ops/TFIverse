@@ -602,3 +602,20 @@ export type MovieCredit = typeof movieCredits.$inferSelect;
 export type NewMovieCredit = typeof movieCredits.$inferInsert;
 export type MovieOttLink = typeof movieOttLinks.$inferSelect;
 export type NewMovieOttLink = typeof movieOttLinks.$inferInsert;
+
+// ============================================================================
+// RUMORS SYSTEM
+// ============================================================================
+
+export const rumors = pgTable('rumors', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  title: text('title').notNull(),
+  summary: text('summary').notNull(),
+  status: text('status').notNull(), // 'confirmed', 'trade', 'discussion'
+  source: text('source'),
+  url: text('url'),
+  createdAt: timestamp('created_at').defaultNow(),
+});
+
+export type Rumor = typeof rumors.$inferSelect;
+export type NewRumor = typeof rumors.$inferInsert;

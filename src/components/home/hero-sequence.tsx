@@ -37,24 +37,16 @@ export default function HeroSequence({ isAuthenticated }: HeroSequenceProps) {
 
     const preloadBatch = (start: number, end: number) => {
       for (let i = start; i <= end; i++) {
-        const img = new Image();
-        img.src = currentFrame(i);
-        images[i] = img;
+        if (!images[i]) {
+          const img = new Image();
+          img.src = currentFrame(i);
+          images[i] = img;
+        }
       }
     };
 
-    // Preload first batch immediately so first frame is ready
-    preloadBatch(1, 100);
-
-    // Idle load the rest to avoid blocking
-    if (typeof window !== 'undefined') {
-      const loadMore = () => preloadBatch(101, frameCount);
-      if ('requestIdleCallback' in window) {
-        (window as any).requestIdleCallback(loadMore);
-      } else {
-        setTimeout(loadMore, 1000);
-      }
-    }
+    // Preload first batch immediately so first frames are ready
+    preloadBatch(1, 50);
 
     let targetFrame = 0;
 
@@ -113,6 +105,9 @@ export default function HeroSequence({ isAuthenticated }: HeroSequenceProps) {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
       const frame = Math.max(1, Math.min(frameCount, Math.floor(latest * (frameCount - 1)) + 1));
       renderFrame(frame);
+      
+      // Dynamic memory optimization: Only preload the next 40 frames based on scroll
+      preloadBatch(frame, Math.min(frameCount, frame + 40));
     });
 
     return () => {
