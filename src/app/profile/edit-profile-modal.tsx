@@ -39,6 +39,10 @@ export default function EditProfileModal({ profile, userId, isOpen, onClose }: E
     imdbUrl: profile.imdbUrl || "",
     avatarUrl: profile.avatarUrl || "",
     bannerUrl: profile.bannerUrl || "",
+    dateOfBirth: profile.dateOfBirth ? new Date(profile.dateOfBirth).toISOString().split('T')[0] : "",
+    favoriteHeroSlug: profile.favoriteHeroSlug || "",
+    favoriteMovieSlug: profile.favoriteMovieSlug || "",
+    themeColor: profile.themeColor || "#3b82f6",
   });
 
   // Username validation with debounce
@@ -211,6 +215,57 @@ export default function EditProfileModal({ profile, userId, isOpen, onClose }: E
                   onChange={e => update("pronouns", e.target.value)}
                   placeholder="he/him, she/her, they/them"
                   className="w-full bg-transparent border-b border-neutral-800 text-white px-0 py-2 focus:outline-none focus:border-white transition-colors"
+                />
+              </div>
+            </div>
+
+            {/* DOB */}
+            <div>
+              <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase mb-2 block">Date of Birth</label>
+              <input
+                type="date"
+                value={formData.dateOfBirth}
+                onChange={e => update("dateOfBirth", e.target.value)}
+                className="w-full bg-transparent border-b border-neutral-800 text-white px-0 py-2 focus:outline-none focus:border-white transition-colors"
+              />
+            </div>
+
+            {/* Favorites */}
+            <div className="grid grid-cols-2 gap-6">
+              <div>
+                <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase mb-2 block">Favorite Hero (Slug)</label>
+                <input
+                  value={formData.favoriteHeroSlug}
+                  onChange={e => update("favoriteHeroSlug", e.target.value)}
+                  placeholder="e.g. prabhas"
+                  className="w-full bg-transparent border-b border-neutral-800 text-white px-0 py-2 focus:outline-none focus:border-white transition-colors"
+                />
+              </div>
+              <div>
+                <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase mb-2 block">Favorite Movie (Slug)</label>
+                <input
+                  value={formData.favoriteMovieSlug}
+                  onChange={e => update("favoriteMovieSlug", e.target.value)}
+                  placeholder="e.g. salaar"
+                  className="w-full bg-transparent border-b border-neutral-800 text-white px-0 py-2 focus:outline-none focus:border-white transition-colors"
+                />
+              </div>
+            </div>
+
+            {/* Theme Color */}
+            <div>
+              <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase mb-2 block">Theme Color</label>
+              <div className="flex items-center gap-4">
+                <input
+                  type="color"
+                  value={formData.themeColor}
+                  onChange={e => update("themeColor", e.target.value)}
+                  className="w-12 h-10 bg-transparent border-none cursor-pointer"
+                />
+                <input
+                  value={formData.themeColor}
+                  onChange={e => update("themeColor", e.target.value)}
+                  className="flex-1 bg-transparent border-b border-neutral-800 text-white px-0 py-2 focus:outline-none focus:border-white transition-colors text-sm font-mono"
                 />
               </div>
             </div>

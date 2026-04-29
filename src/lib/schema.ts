@@ -122,6 +122,7 @@ export const userProfiles = pgTable('user_profile', {
   showMemes: boolean('showMemes').default(true),
   isOnline: boolean('isOnline').default(false),
   lastSeen: timestamp('lastSeen', { mode: 'date' }),
+  dateOfBirth: timestamp('dateOfBirth', { mode: 'date' }),
 });
 
 export const userFollows = pgTable('user_follows', {

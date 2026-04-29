@@ -5,6 +5,7 @@ import { userProfiles, users, userFollows } from "@/lib/schema";
 import { eq, and, count } from "drizzle-orm";
 import { auth } from "@/auth";
 import { revalidatePath } from "next/cache";
+import { uploadToB2 } from "@/lib/storage";
 
 // ─── UPDATE PROFILE ──────────────────────────────────────────────
 export async function updateProfile(formData: FormData) {
@@ -26,6 +27,10 @@ export async function updateProfile(formData: FormData) {
   const imdbUrl = formData.get("imdbUrl") as string;
   const avatarUrl = formData.get("avatarUrl") as string;
   const bannerUrl = formData.get("bannerUrl") as string;
+  const dateOfBirth = formData.get("dateOfBirth") as string;
+  const favoriteHeroSlug = formData.get("favoriteHeroSlug") as string;
+  const favoriteMovieSlug = formData.get("favoriteMovieSlug") as string;
+  const themeColor = formData.get("themeColor") as string;
 
   if (!username || username.length < 3) {
     return { error: "Username must be at least 3 characters" };
@@ -64,6 +69,10 @@ export async function updateProfile(formData: FormData) {
       imdbUrl: imdbUrl?.trim() || null,
       avatarUrl: avatarUrl?.trim() || null,
       bannerUrl: bannerUrl?.trim() || null,
+      dateOfBirth: dateOfBirth ? new Date(dateOfBirth) : null,
+      favoriteHeroSlug: favoriteHeroSlug?.trim() || null,
+      favoriteMovieSlug: favoriteMovieSlug?.trim() || null,
+      themeColor: themeColor?.trim() || "#3b82f6",
       updatedAt: new Date(),
     })
     .where(eq(userProfiles.userId, session.user.id));
@@ -194,3 +203,23 @@ export async function isFollowing(currentUserId: string, targetUserId: string) {
     );
   return !!result;
 }
+
+// ─── UPLOAD IMAGE (B2) ───────────────────────────────────────────
+export async function uploadProfileImage(formData: FormData) {
+  const session = await auth();
+  if (!session?.user?.id) return { error: "Unauthorized" };
+
+  const file = formData.get("file") as File;
+  const type = formData.get("type") as "avatar" | "banner";
+
+  if (!file || !type) return { error: "Missing file or type" };
+
+  try {
+    const url = await uploadToB2(file, `profiles/${session.user.id}/${type}`);
+    return { url };
+  } catch (error) {
+    console.error("Upload error:", error);
+    return { error: "Failed to upload to cloud" };
+  }
+}
+
