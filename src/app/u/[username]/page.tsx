@@ -5,14 +5,16 @@ import { eq, sql } from "drizzle-orm";
 import PublicProfileView from "./public-profile-view";
 import { auth } from "@/auth";
 
-export async function generateMetadata({ params }: { params: { username: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ username: string }> }) {
+  const { username } = await params;
   return {
-    title: `${params.username} | TFIverse`,
-    description: `Check out ${params.username}'s profile on TFIverse.`,
+    title: `${username} | TFIverse`,
+    description: `Check out ${username}'s profile on TFIverse.`,
   };
 }
 
-export default async function PublicProfilePage({ params }: { params: { username: string } }) {
+export default async function PublicProfilePage({ params }: { params: Promise<{ username: string }> }) {
+  const { username } = await params;
   const session = await auth();
   
   // Find profile by username
@@ -26,7 +28,7 @@ export default async function PublicProfilePage({ params }: { params: { username
     })
     .from(userProfiles)
     .innerJoin(users, eq(userProfiles.userId, users.id))
-    .where(eq(sql`lower(${userProfiles.username})`, params.username.toLowerCase()));
+    .where(eq(sql`lower(${userProfiles.username})`, username.toLowerCase()));
 
   if (!profileRecord) {
     notFound();

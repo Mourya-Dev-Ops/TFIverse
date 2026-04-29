@@ -31,19 +31,20 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <main className="min-h-[100dvh] bg-black text-white flex flex-col items-center justify-center relative overflow-x-hidden overflow-y-auto selection:bg-white selection:text-black py-16 px-4">
+    <main className="min-h-[100dvh] bg-[#050505] text-white flex flex-col items-center justify-center relative overflow-x-hidden overflow-y-auto selection:bg-white selection:text-black pt-24 pb-12 px-4">
       
       {/* Background Video — DESKTOP ONLY */}
       <div className="absolute inset-0 z-0 pointer-events-none hidden md:block">
         <video ref={videoRef} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
           <source src="/videos/auth-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.40)' }} />
-        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.7) 100%)" }} />
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.30)' }} />
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.6) 100%)" }} />
       </div>
 
       <div className="absolute inset-0 z-0 pointer-events-none md:hidden">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full opacity-[0.04]" style={{ background: 'radial-gradient(circle, white 0%, transparent 70%)' }} />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#0a0a0a] to-black" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full opacity-[0.06] blur-[100px]" style={{ background: 'white' }} />
       </div>
 
       {/* Volume Toggle — DESKTOP ONLY */}
@@ -55,13 +56,16 @@ export default function ForgotPasswordPage() {
 
       {/* Card */}
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
+        initial={false}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative z-20 w-full max-w-md px-6 sm:px-8 py-10 sm:py-12 rounded-3xl border border-white/[0.12]"
-        style={{ backgroundColor: 'rgba(18,18,18,0.98)', boxShadow: '0 0 0 1px rgba(255,255,255,0.06), 0 20px 80px rgba(0,0,0,0.9)' }}
+        className="relative z-20 w-full max-w-md px-6 sm:px-8 py-10 sm:py-12 rounded-3xl border border-white/[0.15]"
+        style={{ 
+          backgroundColor: 'rgb(20, 20, 20)', 
+          boxShadow: '0 0 0 1px rgba(255,255,255,0.08), 0 25px 100px rgba(0,0,0,0.8)',
+          backdropFilter: 'blur(20px)'
+        }}
       >
-        <Link href="/login" className="inline-flex items-center gap-2 text-white/40 hover:text-white/70 transition-colors text-xs tracking-widest uppercase mb-8">
+        <Link href="/login" className="inline-flex items-center gap-2 text-white/40 hover:text-white/70 transition-colors text-xs tracking-widest uppercase mb-8 relative z-30">
           <ArrowLeft size={14} /> Back to Login
         </Link>
 
@@ -89,9 +93,9 @@ export default function ForgotPasswordPage() {
             <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
               <div className="flex flex-col gap-2">
                 <label className="text-[10px] font-semibold text-white/40 tracking-[0.2em] uppercase">Email Address</label>
-                <input name="email" type="email" className="w-full bg-white/[0.06] border border-white/[0.1] rounded-xl text-white px-4 py-3 focus:outline-none focus:border-white/30 focus:bg-white/[0.08] transition-all placeholder:text-white/20" placeholder="agent@tfiverse.com" required autoFocus />
+                <input name="email" type="email" className="w-full bg-white/[0.08] border border-white/[0.12] rounded-xl text-white px-4 py-3 focus:outline-none focus:border-white/30 focus:bg-white/[0.1] transition-all placeholder:text-white/20" placeholder="agent@tfiverse.com" required autoFocus />
               </div>
-              <button type="submit" disabled={loading} className="w-full bg-white/90 text-black font-bold py-4 mt-2 rounded-xl hover:bg-white transition-all tracking-[0.2em] uppercase text-xs disabled:opacity-70 disabled:cursor-not-allowed shadow-lg">
+              <button type="submit" disabled={loading} className="w-full bg-white/95 text-black font-bold py-4 mt-2 rounded-xl hover:bg-white transition-all tracking-[0.2em] uppercase text-xs disabled:opacity-70 disabled:cursor-not-allowed shadow-lg">
                 <span className="flex items-center justify-center gap-2">
                   {loading && <Loader2 className="w-4 h-4 animate-spin" />}
                   {loading ? "Sending..." : "Send Reset Link"}

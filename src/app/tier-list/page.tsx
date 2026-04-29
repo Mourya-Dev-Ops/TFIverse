@@ -167,18 +167,20 @@ export default function TierListHubPage() {
               const tierCount = Object.keys(tiers || {}).filter(k => (tiers[k]?.length || 0) > 0).length;
 
               return (
-                <Link key={list.id} href={`/tier-list/${list.id}`} className="group">
+                <div key={list.id} className="group relative">
                   <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300 h-full flex flex-col">
-                    <h3 className="text-lg font-bold text-white/90 mb-3 line-clamp-2 group-hover:text-white transition-colors">
+                    <Link href={`/tier-list/${list.id}`} className="absolute inset-0 z-10" aria-label={`View ${list.title}`} />
+                    
+                    <h3 className="text-lg font-bold text-white/90 mb-3 line-clamp-2 group-hover:text-white transition-colors relative z-0">
                       {list.title}
                     </h3>
 
                     {list.description && (
-                      <p className="text-white/30 text-sm mb-4 line-clamp-2">{list.description}</p>
+                      <p className="text-white/30 text-sm mb-4 line-clamp-2 relative z-0">{list.description}</p>
                     )}
 
                     {/* Tier Preview Dots */}
-                    <div className="flex gap-1 mb-4">
+                    <div className="flex gap-1 mb-4 relative z-0">
                       {Object.keys(tiers || {}).slice(0, 6).map(tier => (
                         <div key={tier} className="flex items-center gap-0.5">
                           <span className="text-[10px] font-black text-white/30">{tier}</span>
@@ -187,8 +189,8 @@ export default function TierListHubPage() {
                       ))}
                     </div>
 
-                    <div className="mt-auto flex items-center justify-between">
-                      <Link href={list.username ? `/u/${list.username}` : '#'} className="flex items-center gap-2 hover:opacity-80 transition-opacity" onClick={(e) => e.stopPropagation()}>
+                    <div className="mt-auto flex items-center justify-between relative z-20">
+                      <Link href={list.username ? `/u/${list.username}` : '#'} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                         {list.avatar ? (
                           <img src={list.avatar} alt="" className="w-6 h-6 rounded-full object-cover border border-white/10" />
                         ) : (
@@ -208,7 +210,7 @@ export default function TierListHubPage() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>
