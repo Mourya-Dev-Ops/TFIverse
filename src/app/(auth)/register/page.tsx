@@ -46,7 +46,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center relative overflow-hidden selection:bg-white selection:text-black">
+    <main className="min-h-[100dvh] bg-black text-white flex flex-col items-center justify-center relative overflow-x-hidden selection:bg-white selection:text-black py-12">
       
       {/* Background Cinematic Video */}
       <div className="absolute inset-0 z-0 pointer-events-none">

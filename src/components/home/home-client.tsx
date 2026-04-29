@@ -83,53 +83,7 @@ export default function HomeClient({ heroesData, rumorsData, upcomingData, isAut
         </motion.div>
       </section>
 
-      {/* ══════ TRENDING ══════ */}
-      <section className="px-6 md:px-10 lg:px-16 py-12 md:py-16 relative">
-        <motion.div {...fade} className="max-w-7xl mx-auto relative z-10">
-          <SectionHead label="Trending Now" href="/universe" />
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
-            {heroesData.slice(0, 4).map((h, i) => (
-              <motion.div key={h.id} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.6 }}>
-                <Link href={`/hero/${h.slug}`} className="group block relative rounded-2xl overflow-hidden aspect-[3/4] shadow-[0_8px_40px_rgba(0,0,0,0.5)] ring-1 ring-white/[0.06] hover:ring-white/[0.15] transition-all duration-500">
-                  <img src={h.portraitUrl || IMG_FALLBACK} alt={h.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-[1.08]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-                  {/* Subtle warm glow on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-amber-500/[0.08] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7 translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
-                    <h3 className="text-lg md:text-2xl font-black text-white leading-tight tracking-tight">{h.name}</h3>
-                    <p className="text-[10px] text-white/40 mt-1.5 font-semibold tracking-[0.2em] uppercase">{h.title || "Star"}</p>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
 
-      {/* ══════ SPOTLIGHT ══════ */}
-      {spotlight && (
-        <section className="px-6 md:px-10 lg:px-16 py-12 md:py-16">
-          <motion.div {...fade} className="max-w-7xl mx-auto">
-            <div className="relative rounded-3xl overflow-hidden min-h-[420px] md:min-h-[500px] flex items-end md:items-center bg-[#080808] shadow-[0_20px_80px_rgba(0,0,0,0.6)] ring-1 ring-white/[0.06]">
-              <div className="absolute inset-0 md:left-auto md:w-[55%]">
-                <img src={spotlight.portraitUrl || IMG_FALLBACK} alt={spotlight.name} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent" />
-              </div>
-              <div className="relative z-10 p-8 md:p-16 md:w-[50%]">
-                <div className="flex items-center gap-2.5 mb-6">
-                  {birthdayHero ? <Cake className="w-4 h-4 text-amber-400" /> : <Flame className="w-4 h-4 text-white/40" />}
-                  <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-white/40">{birthdayHero ? "Birthday Today" : "Spotlight"}</span>
-                </div>
-                <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-[0.95] mb-4">{spotlight.name}</h2>
-                <p className="text-white/35 text-sm mb-10 font-light">{spotlight.title || "Telugu Cinema Legend"}</p>
-                <Link href={`/hero/${spotlight.slug}`} className="inline-flex items-center gap-2 px-7 py-3 bg-white text-black text-[12px] font-bold uppercase tracking-[0.15em] rounded-full hover:bg-white/90 transition-all">
-                  View Profile <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        </section>
-      )}
 
       {/* ══════ EXPLORE GRID ══════ */}
       <section className="px-6 md:px-10 lg:px-16 py-12 md:py-16">
