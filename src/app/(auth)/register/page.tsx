@@ -73,7 +73,7 @@ export default function RegisterPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-20 w-full max-w-md px-8 py-12 rounded-2xl backdrop-blur-xl bg-white/[0.08] border border-white/[0.15] shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+        className="relative z-20 w-full max-w-md px-8 py-12 rounded-2xl backdrop-blur-2xl bg-white/[0.03] border border-white/[0.1] shadow-[0_8px_32px_rgba(0,0,0,0.3)]"
       >
         <div className="text-center mb-10">
           <Link href="/" className="inline-block text-3xl font-bold tracking-tighter mb-2 hover:opacity-80 transition-opacity">
