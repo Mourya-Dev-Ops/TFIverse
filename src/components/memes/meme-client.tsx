@@ -8,8 +8,7 @@ import {
   ChevronRight, Sparkles, TrendingUp, Info
 } from "lucide-react";
 import Link from "next/link";
-import { getMemes, toggleLikeMeme, trackMemeView, getMemeOfTheWeek } from "@/app/actions/memes";
-import { getPresignedUploadUrl, getPublicUrl } from "@/lib/s3";
+import { getMemes, toggleLikeMeme, trackMemeView, getMemeOfTheWeek, getUploadUrl } from "@/app/actions/memes";
 import toast from "react-hot-toast";
 
 type Meme = {
@@ -336,12 +335,11 @@ function MemeUploadModal({ onClose }: { onClose: () => void }) {
     setLoading(true);
     try {
       const fileName = `meme-${Date.now()}-${file.name.replace(/\s+/g, '-')}`;
-      const signedUrl = await getPresignedUploadUrl(fileName, file.type);
+      const { signedUrl, publicUrl } = await getUploadUrl(fileName, file.type);
       
       const res = await fetch(signedUrl, { method: "PUT", body: file, headers: { "Content-Type": file.type } });
       if (!res.ok) throw new Error("Link failed");
 
-      const publicUrl = getPublicUrl(fileName);
       const { createMeme } = await import("@/app/actions/memes");
       await createMeme({ title, description, imageUrl: publicUrl });
 

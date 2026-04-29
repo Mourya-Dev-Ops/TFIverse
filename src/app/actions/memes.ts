@@ -139,3 +139,14 @@ export async function getMemeOfTheWeek() {
     orderBy: [desc(memes.featuredAt)],
   });
 }
+
+export async function getUploadUrl(fileName: string, fileType: string) {
+  const session = await auth();
+  if (!session?.user?.id) throw new Error("Unauthorized");
+  
+  const { getPresignedUploadUrl, getPublicUrl } = await import("@/lib/s3");
+  const signedUrl = await getPresignedUploadUrl(fileName, fileType);
+  const publicUrl = getPublicUrl(fileName);
+  
+  return { signedUrl, publicUrl };
+}
