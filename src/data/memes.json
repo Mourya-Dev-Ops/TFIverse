@@ -1,0 +1,62 @@
+[
+  {
+    "id": "dummy-meme-1",
+    "title": "When the BGM hits just right",
+    "description": "That moment when Thaman cooks absolute fire for the climax.",
+    "imageUrl": "/images/bb2newwebp/frame_050_delay-0.071s.webp",
+    "likes": 894,
+    "views": 3200,
+    "heroTags": ["Prabhas", "Action"],
+    "movieTags": ["Bahubali"],
+    "createdAt": "2025-01-10T10:00:00Z",
+    "userId": "system",
+    "status": "approved",
+    "isFeatured": true,
+    "featuredAt": "2025-01-10T10:00:00Z"
+  },
+  {
+    "id": "dummy-meme-2",
+    "title": "Me waiting for the next update",
+    "description": "Production houses testing our patience level over 9000.",
+    "imageUrl": "/images/bb2newwebp/frame_100_delay-0.071s.webp",
+    "likes": 420,
+    "views": 1500,
+    "heroTags": ["Relatable"],
+    "movieTags": ["Updates"],
+    "createdAt": "2025-01-11T10:00:00Z",
+    "userId": "system",
+    "status": "approved",
+    "isFeatured": false,
+    "featuredAt": null
+  },
+  {
+    "id": "dummy-meme-3",
+    "title": "Box office records right now",
+    "description": "TFI dominating the pan-India collections like it's nothing.",
+    "imageUrl": "/images/bb2newwebp/frame_150_delay-0.071s.webp",
+    "likes": 1250,
+    "views": 5600,
+    "heroTags": ["TFI", "Records"],
+    "movieTags": ["BoxOffice"],
+    "createdAt": "2025-01-12T10:00:00Z",
+    "userId": "system",
+    "status": "approved",
+    "isFeatured": false,
+    "featuredAt": null
+  },
+  {
+    "id": "dummy-meme-4",
+    "title": "The villain's POV",
+    "description": "When the hero gives that one look and you know it's over.",
+    "imageUrl": "/images/bb2newwebp/frame_200_delay-0.071s.webp",
+    "likes": 670,
+    "views": 2100,
+    "heroTags": ["Prabhas", "Intensity"],
+    "movieTags": ["Climax"],
+    "createdAt": "2025-01-13T10:00:00Z",
+    "userId": "system",
+    "status": "approved",
+    "isFeatured": false,
+    "featuredAt": null
+  }
+]

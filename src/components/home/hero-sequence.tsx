@@ -67,9 +67,9 @@ function StaticHero({ isAuthenticated, onEnableSequence }: { isAuthenticated: bo
       {/* Static Background Image */}
       <div className="absolute inset-0 pointer-events-none">
         <img
-          src="/images/bahubali seq/00001.jpg"
+          src="/images/bb2newwebp/frame_001_delay-0.071s.webp"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
+          className="absolute inset-0 w-full h-full object-cover opacity-20 scale-[1.35]"
           loading="eager"
         />
         <div className="absolute inset-0 bg-black/60" />
@@ -150,9 +150,9 @@ function ScrollSequence({ isAuthenticated, onSkip }: { isAuthenticated: boolean;
   const canvas1Ref = useRef<HTMLCanvasElement>(null);
   const canvas2Ref = useRef<HTMLCanvasElement>(null);
 
-  const frameCount = 1034;
+  const frameCount = 222;
   const currentFrame = (index: number) =>
-    `/images/bahubali seq/${index.toString().padStart(5, '0')}.jpg`;
+    `/images/bb2newwebp/frame_${index.toString().padStart(3, '0')}_delay-0.071s.webp`;
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -168,6 +168,12 @@ function ScrollSequence({ isAuthenticated, onSkip }: { isAuthenticated: boolean;
     const ctx1 = canvas1.getContext("2d", { alpha: false });
     const ctx2 = canvas2.getContext("2d", { alpha: false });
     if (!ctx1 || !ctx2) return;
+
+    // Set smoothing for better quality
+    ctx1.imageSmoothingEnabled = true;
+    ctx1.imageSmoothingQuality = "high";
+    ctx2.imageSmoothingEnabled = true;
+    ctx2.imageSmoothingQuality = "high";
 
     const images: HTMLImageElement[] = [];
 
@@ -202,8 +208,11 @@ function ScrollSequence({ isAuthenticated, onSkip }: { isAuthenticated: boolean;
         const w = currentCanvas.width;
         const h = currentCanvas.height;
         const ratio = Math.max(w / imageToDraw.width, h / imageToDraw.height);
-        const cw = imageToDraw.width * ratio;
-        const ch = imageToDraw.height * ratio;
+        
+        // Zoom factor to crop out baked-in letterboxing (black bars)
+        const ZOOM_FACTOR = 1.35; 
+        const cw = Math.ceil(imageToDraw.width * ratio * ZOOM_FACTOR);
+        const ch = Math.ceil(imageToDraw.height * ratio * ZOOM_FACTOR);
         const cx = (w - cw) / 2;
         const cy = (h - ch) / 2;
 
@@ -222,10 +231,21 @@ function ScrollSequence({ isAuthenticated, onSkip }: { isAuthenticated: boolean;
     };
 
     const resize = () => {
-      canvas1.width = canvas1.clientWidth || window.innerWidth;
-      canvas1.height = canvas1.clientHeight || window.innerHeight;
-      canvas2.width = canvas2.clientWidth || window.innerWidth;
-      canvas2.height = canvas2.clientHeight || window.innerHeight;
+      const dpr = window.devicePixelRatio || 1;
+      const w = canvas1.clientWidth || window.innerWidth;
+      const h = canvas1.clientHeight || window.innerHeight;
+
+      canvas1.width = w * dpr;
+      canvas1.height = h * dpr;
+      canvas2.width = w * dpr;
+      canvas2.height = h * dpr;
+
+      // Ensure smoothing is kept after resize
+      ctx1.imageSmoothingEnabled = true;
+      ctx1.imageSmoothingQuality = "high";
+      ctx2.imageSmoothingEnabled = true;
+      ctx2.imageSmoothingQuality = "high";
+
       renderFrame(Math.floor(scrollYProgress.get() * (frameCount - 1)) + 1, true);
     };
 
@@ -246,10 +266,10 @@ function ScrollSequence({ isAuthenticated, onSkip }: { isAuthenticated: boolean;
 
   return (
     <div ref={containerRef} className="h-[600vh] w-full relative bg-black z-0">
-      <div className="sticky top-0 w-full h-screen overflow-hidden">
+      <div className="sticky top-0 w-full h-[100dvh] overflow-hidden">
 
-        <canvas ref={canvas1Ref} className="absolute inset-0 w-full h-full transition-opacity duration-0" style={{ opacity: 1 }} />
-        <canvas ref={canvas2Ref} className="absolute inset-0 w-full h-full transition-opacity duration-0" style={{ opacity: 0 }} />
+        <canvas ref={canvas1Ref} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[101%] h-[101%] transition-opacity duration-0 object-cover" style={{ opacity: 1 }} />
+        <canvas ref={canvas2Ref} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[101%] h-[101%] transition-opacity duration-0 object-cover" style={{ opacity: 0 }} />
 
         <motion.div
           className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"

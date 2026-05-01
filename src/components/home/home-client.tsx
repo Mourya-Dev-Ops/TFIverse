@@ -42,7 +42,7 @@ export default function HomeClient({ heroesData, rumorsData, upcomingData, isAut
       <div className="absolute top-[3500px] right-1/4 w-[500px] h-[500px] rounded-full bg-purple-500/[0.01] blur-[160px] pointer-events-none" />
 
       {/* ══════ SEARCH ══════ */}
-      <section className="px-6 md:px-10 lg:px-16 py-12 relative">
+      <section className="px-6 md:px-10 lg:px-16 pt-24 pb-12 relative">
         <motion.div {...fade} className="max-w-2xl mx-auto">
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-white/[0.06] via-white/[0.02] to-white/[0.06] rounded-3xl blur-sm opacity-0 group-focus-within:opacity-100 transition-opacity duration-700" />
@@ -75,11 +75,11 @@ export default function HomeClient({ heroesData, rumorsData, upcomingData, isAut
 
 
       {/* ══════ EXPLORE GRID ══════ */}
-      <section className="px-6 md:px-10 lg:px-16 py-12 md:py-16">
+      <section className="px-6 md:px-10 lg:px-16 py-8">
         <motion.div {...fade} className="max-w-7xl mx-auto">
           <SectionHead label="Explore" />
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-            <NavCard href="/universe" icon={Globe} title="TFI Universe" sub="The connected world" />
+            <NavCard href="/icons" icon={Globe} title="The Icons" sub="The cinematic universe" />
             <NavCard href="/box-office" icon={DollarSign} title="Box Office" sub="Collections & records" />
             <NavCard href="/re-releases" icon={RotateCcw} title="Re-releases" sub="Classics return" />
             <NavCard href="/movies" icon={Clapperboard} title="Movies" sub="Browse the database" />
@@ -94,7 +94,7 @@ export default function HomeClient({ heroesData, rumorsData, upcomingData, isAut
       <OTTReleases />
 
       {/* ══════ UPCOMING + RUMORS ══════ */}
-      <section className="px-6 md:px-10 lg:px-16 py-12 md:py-16">
+      <section className="px-6 md:px-10 lg:px-16 py-8">
         <motion.div {...fade} className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
           <UpcomingPanel items={upcomingData} />
           <RumorsPanel items={rumorsData} />
@@ -102,7 +102,7 @@ export default function HomeClient({ heroesData, rumorsData, upcomingData, isAut
       </section>
 
       {/* ══════ COMMUNITY ══════ */}
-      <section className="px-6 md:px-10 lg:px-16 py-12 md:py-16">
+      <section className="px-6 md:px-10 lg:px-16 py-8">
         <motion.div {...fade} className="max-w-7xl mx-auto">
           <SectionHead label="Community" />
           <div className="grid md:grid-cols-3 gap-4">
@@ -114,7 +114,7 @@ export default function HomeClient({ heroesData, rumorsData, upcomingData, isAut
       </section>
 
       {/* ══════ CULTURE — Memes + Gallery ══════ */}
-      <section className="px-6 md:px-10 lg:px-16 py-12 md:py-16">
+      <section className="px-6 md:px-10 lg:px-16 py-8">
         <motion.div {...fade} className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
           <GalleryCard icon={Laugh} title="Meme Portal" href="/memes" cta="Browse Memes" />
           <GalleryCard icon={Images} title="Fan Gallery" href="/fan-gallery" cta="View Gallery" />
@@ -122,7 +122,7 @@ export default function HomeClient({ heroesData, rumorsData, upcomingData, isAut
       </section>
 
       {/* ══════ FAN ZONE + DIARY ══════ */}
-      <section className="px-6 md:px-10 lg:px-16 py-12 md:py-16">
+      <section className="px-6 md:px-10 lg:px-16 py-8">
         <motion.div {...fade} className="max-w-7xl mx-auto grid md:grid-cols-[1.5fr_1fr] gap-6">
           <FanZone />
           <DiaryCard isAuth={isAuthenticated} />
@@ -168,7 +168,7 @@ function SectionHead({ label, href }: { label: string; href?: string }) {
 
 function NavCard({ href, icon: Icon, title, sub, tall }: { href: string; icon: any; title: string; sub?: string; tall?: boolean }) {
   return (
-    <Link href={href} className={`glow-card group flex flex-col justify-between rounded-2xl p-7 ${tall ? 'min-h-[200px]' : 'min-h-[160px]'} glass relative overflow-hidden`}>
+    <Link href={href} className={`glow-card group flex flex-col justify-between rounded-2xl p-7 ${tall ? 'min-h-[200px]' : 'min-h-[160px]'} glass-premium relative overflow-hidden`}>
       <div className="absolute -top-10 -right-10 w-24 h-24 rounded-full bg-white/[0.03] blur-2xl group-hover:bg-white/[0.06] transition-colors duration-700" />
       <Icon className="w-6 h-6 text-white/30 group-hover:text-white/60 transition-colors duration-500 relative z-10" />
       <div className="mt-auto relative z-10">
@@ -181,7 +181,7 @@ function NavCard({ href, icon: Icon, title, sub, tall }: { href: string; icon: a
 
 function GalleryCard({ icon: Icon, title, href, cta }: { icon: any; title: string; href: string; cta: string }) {
   return (
-    <div className="rounded-2xl p-8 glass">
+    <div className="rounded-2xl p-8 glass-premium">
       <div className="flex items-center gap-3 mb-8">
         <Icon className="w-5 h-5 text-white/40" />
         <h3 className="text-xl font-bold text-white tracking-tight">{title}</h3>
@@ -207,7 +207,7 @@ function FanZone() {
     { name: "Kiran", quote: "TFI domination incoming 💪" },
   ];
   return (
-    <div className="rounded-2xl p-8 glass">
+    <div className="rounded-2xl p-8 glass-premium">
       <div className="flex items-center gap-3 mb-8">
         <Heart className="w-5 h-5 text-white/40" />
         <h3 className="text-xl font-bold text-white tracking-tight">Fan Zone</h3>
@@ -229,7 +229,7 @@ function FanZone() {
 
 function DiaryCard({ isAuth }: { isAuth: boolean }) {
   return (
-    <div className="rounded-2xl p-8 glass flex flex-col items-center justify-center text-center">
+    <div className="rounded-2xl p-8 glass-premium flex flex-col items-center justify-center text-center">
       <PenLine className="w-8 h-8 text-white/20 mb-6" />
       <h3 className="text-xl font-bold text-white tracking-tight mb-3">Movie Diary</h3>
       <p className="text-white/30 text-sm mb-8 max-w-[220px] leading-relaxed">Log watches, rate films, and build your profile.</p>
@@ -274,7 +274,7 @@ function UpcomingPanel({ items }: { items: Upcoming[] }) {
 
 function RumorsPanel({ items }: { items: Rumor[] }) {
   return (
-    <div className="rounded-2xl p-8 glass flex flex-col">
+    <div className="rounded-2xl p-8 glass-premium flex flex-col">
       <h3 className="text-xl font-bold text-white tracking-tight mb-8">Rumors & Trades</h3>
       <div className="flex-1 space-y-3 max-h-[380px] overflow-y-auto scrollbar-hide pr-1">
         {items.map(r => (
@@ -302,12 +302,12 @@ function LatestUpdates() {
   ];
 
   return (
-    <section className="px-6 md:px-10 lg:px-16 py-12 md:py-16">
+    <section className="px-6 md:px-10 lg:px-16 py-8">
       <motion.div {...fade} className="max-w-7xl mx-auto">
         <SectionHead label="Latest Updates" />
         <div className="grid md:grid-cols-3 gap-5">
           {news.map(n => (
-            <div key={n.id} className="glow-card group rounded-2xl overflow-hidden glass">
+            <div key={n.id} className="glow-card group rounded-2xl overflow-hidden glass-premium">
               <div className="relative h-44 overflow-hidden">
                 <img src={n.thumb} alt={n.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onError={e => ((e.target as HTMLImageElement).src = IMG_FALLBACK)} />
                 <span className="absolute top-3 left-3 text-[9px] font-bold uppercase tracking-widest text-white/80 bg-black/50 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/[0.08]">
@@ -337,7 +337,7 @@ function OTTReleases() {
   const scroll = (d: "l" | "r") => ref.current?.scrollBy({ left: d === "l" ? -280 : 280, behavior: "smooth" });
 
   return (
-    <section className="px-6 md:px-10 lg:px-16 py-12 md:py-16">
+    <section className="px-6 md:px-10 lg:px-16 py-8">
       <motion.div {...fade} className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-10">
           <div className="flex items-center gap-3">

@@ -98,7 +98,7 @@ export default function MemeClient({ initialMemes, featuredMeme, isAuthenticated
                 <motion.div 
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-4 flex items-center gap-4 group cursor-pointer hover:border-white/20 transition-all"
+                  className="glass-premium rounded-2xl p-4 flex items-center gap-4 group cursor-pointer hover:border-white/30 transition-all"
                   onClick={() => setSelectedMeme(featuredMeme)}
                 >
                   <div className="w-12 h-12 rounded-xl overflow-hidden border border-white/10">
@@ -216,7 +216,7 @@ function MemeCard({ meme, isAuthenticated, onClick }: { meme: Meme; isAuthentica
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       onClick={onClick}
-      className="break-inside-avoid relative group rounded-2xl overflow-hidden border border-white/[0.08] cursor-zoom-in bg-white/[0.02]"
+      className="break-inside-avoid relative group rounded-2xl overflow-hidden cursor-zoom-in glass-premium"
     >
       <img 
         src={meme.imageUrl} 
@@ -231,12 +231,13 @@ function MemeCard({ meme, isAuthenticated, onClick }: { meme: Meme; isAuthentica
         
         <div className="flex items-center justify-between pointer-events-auto mt-4">
           <div className="flex items-center gap-4">
-            <button 
+            <motion.button 
+              whileTap={{ scale: 0.8 }}
               onClick={handleLike}
               className={`flex items-center gap-1.5 text-[10px] font-bold transition-all ${liked ? 'text-red-500' : 'text-white'}`}
             >
               <Heart size={14} className={liked ? "fill-current" : ""} /> {likes}
-            </button>
+            </motion.button>
             <div className="flex items-center gap-1.5 text-[10px] font-bold text-white/50">
               <MessageCircle size={14} /> 0
             </div>
@@ -261,7 +262,7 @@ function MemeDetailsModal({ meme, onClose, isAuthenticated }: { meme: Meme; onCl
         initial={{ scale: 0.9, opacity: 0 }} 
         animate={{ scale: 1, opacity: 1 }} 
         exit={{ scale: 0.9, opacity: 0 }}
-        className="relative w-full max-w-6xl h-full max-h-[85vh] bg-[#080808] border border-white/10 rounded-[32px] overflow-hidden flex flex-col md:flex-row"
+        className="relative w-full max-w-6xl h-full max-h-[85vh] glass-premium rounded-[32px] overflow-hidden flex flex-col md:flex-row"
       >
         <button onClick={onClose} className="absolute top-6 right-6 z-10 p-2 bg-black/50 hover:bg-white/10 rounded-full text-white/40 hover:text-white transition-all"><X size={24} /></button>
 
@@ -306,7 +307,19 @@ function MemeDetailsModal({ meme, onClose, isAuthenticated }: { meme: Meme; onCl
 
             <div className="flex gap-3">
               <button className="flex-1 py-4 bg-white text-black rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-white/90 transition-all active:scale-95">Upvote Artifact</button>
-              <button className="px-6 py-4 bg-white/[0.03] border border-white/[0.08] hover:border-white/20 rounded-2xl transition-all text-white/60"><Share2 size={18} /></button>
+              <button 
+                onClick={() => {
+                  if (navigator.share) {
+                    navigator.share({ title: meme.title, text: meme.description || "", url: window.location.href });
+                  } else {
+                    navigator.clipboard.writeText(window.location.href);
+                    toast.success("Link copied to clipboard");
+                  }
+                }}
+                className="px-6 py-4 glass-premium hover:bg-white/10 rounded-2xl transition-all text-white/60"
+              >
+                <Share2 size={18} />
+              </button>
             </div>
           </div>
         </div>
@@ -359,7 +372,7 @@ function MemeUploadModal({ onClose }: { onClose: () => void }) {
       
       <motion.div 
         initial={{ scale: 0.95, opacity: 0, y: 20 }} animate={{ scale: 1, opacity: 1, y: 0 }} exit={{ scale: 0.95, opacity: 0, y: 20 }}
-        className="relative w-full max-w-xl bg-[#0a0a0a] border border-white/10 rounded-[32px] p-8 md:p-10 shadow-2xl"
+        className="relative w-full max-w-xl glass-premium rounded-[32px] p-8 md:p-10 shadow-2xl"
       >
         <div className="flex items-center justify-between mb-10">
           <div>

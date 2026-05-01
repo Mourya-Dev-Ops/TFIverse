@@ -42,3 +42,7 @@ next-env.d.ts
 
 # legacy
 /old_legacy/
+
+# temp/dev
+/scratch/
+*.log

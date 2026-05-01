@@ -8,7 +8,11 @@ export default auth
 
 export const config = {
   matcher: [
-    // Match all routes except static files, images, and API auth
-    "/((?!api/auth|_next/static|_next/image|favicon.ico).*)",
+    // Match all routes EXCEPT:
+    // - API auth routes
+    // - Next.js internals (_next/static, _next/image)
+    // - Static public assets (favicon, images, videos, fonts, etc.)
+    "/((?!api/auth|_next/static|_next/image|favicon.ico|videos/.*|images/.*|frames/.*|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|mp4|mov|webm|woff|woff2|ttf|eot)).*)",
   ],
 }
+

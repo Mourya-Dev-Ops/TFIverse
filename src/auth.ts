@@ -37,8 +37,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       return token
     },
     async session({ session, token }) {
-      if (token?.id) {
-        session.user.id = token.id as string
+      // In JWT strategy, token.sub is the default user ID. Fallback to token.id if set manually.
+      const userId = (token?.sub || token?.id) as string;
+      if (userId && session.user) {
+        session.user.id = userId;
       }
       return session
     },

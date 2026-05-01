@@ -5,6 +5,7 @@ import { memes, memeLikes, memeViews, memeShares, memeDownloads, memeComments, u
 import { eq, and, desc, sql, asc, inArray, ilike, or } from "drizzle-orm";
 import { auth } from "@/auth";
 import { revalidatePath } from "next/cache";
+import memesData from "@/data/memes.json";
 
 export async function getMemes(options: {
   sort?: "new" | "trending" | "top" | "featured";
@@ -58,6 +59,16 @@ export async function getMemes(options: {
       // We'll add relations if needed
     }
   });
+
+  if (items.length === 0) {
+    let filtered = [...memesData];
+    if (search) {
+      filtered = filtered.filter(m => m.title.toLowerCase().includes(search.toLowerCase()) || m.description.toLowerCase().includes(search.toLowerCase()));
+    }
+    if (sort === "trending") filtered = filtered.sort((a, b) => b.views - a.views);
+    if (sort === "top") filtered = filtered.sort((a, b) => b.likes - a.likes);
+    return filtered as any;
+  }
 
   return items;
 }
@@ -134,10 +145,16 @@ export async function trackMemeView(memeId: string) {
 }
 
 export async function getMemeOfTheWeek() {
-  return await db.query.memes.findFirst({
+  const item = await db.query.memes.findFirst({
     where: and(eq(memes.status, "approved"), eq(memes.isFeatured, true)),
     orderBy: [desc(memes.featuredAt)],
   });
+
+  if (!item) {
+    return memesData.find(m => m.isFeatured) as any;
+  }
+
+  return item;
 }
 
 export async function getUploadUrl(fileName: string, fileType: string) {
@@ -149,4 +166,29 @@ export async function getUploadUrl(fileName: string, fileType: string) {
   const publicUrl = getPublicUrl(fileName);
   
   return { signedUrl, publicUrl };
+}
+
+export async function deleteMeme(memeId: string) {
+  const session = await auth();
+  if (!session?.user?.id) throw new Error("Unauthorized");
+
+  const [meme] = await db.select().from(memes).where(eq(memes.id, memeId));
+  if (!meme) throw new Error("Meme not found");
+  if (meme.userId !== session.user.id) throw new Error("You can only delete your own memes");
+
+  // Delete from B2
+  const { deleteFromB2 } = await import("@/lib/storage");
+  if (meme.imageUrl) await deleteFromB2(meme.imageUrl);
+
+  // Delete from DB (cascade will handle likes/views)
+  await db.delete(memes).where(eq(memes.id, memeId));
+
+  // Decrement totalMemes count
+  await db.update(userProfiles)
+    .set({ totalMemes: sql`${userProfiles.totalMemes} - 1` })
+    .where(eq(userProfiles.userId, session.user.id));
+
+  revalidatePath("/memes");
+  revalidatePath("/profile");
+  return { success: true };
 }

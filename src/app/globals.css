@@ -89,3 +89,20 @@ html { scroll-behavior: smooth; }
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-15px) scale(1.01); }
 }
+
+/* Premium Typography */
+.text-balance {
+  text-wrap: balance;
+}
+
+.tracking-cinematic {
+  letter-spacing: -0.02em;
+}
+
+/* Refined Glass */
+.glass-premium {
+  background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}

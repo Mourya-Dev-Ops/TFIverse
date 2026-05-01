@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { auth } from "@/auth";
-import Navbar from "@/components/layout/navbar";
 import { Providers } from "@/components/providers";
 
 const geistSans = Geist({
@@ -20,24 +18,22 @@ export const metadata: Metadata = {
   description: "A premium database for heroes, movies, and cinematic tier lists.",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await auth();
-
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col relative">
         <Providers>
-          <Navbar user={session?.user} />
           {children}
         </Providers>
       </body>
     </html>
   );
 }
+

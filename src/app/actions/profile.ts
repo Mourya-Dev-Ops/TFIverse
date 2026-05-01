@@ -215,12 +215,20 @@ export async function uploadProfileImage(formData: FormData) {
   if (!file || !type) return { error: "Missing file or type" };
 
   try {
+    // 1. Get the current profile to find the old image URL
+    const [currentProfile] = await db.select().from(userProfiles).where(eq(userProfiles.userId, session.user.id));
+    
+    // 2. Upload the new image
     const url = await uploadToB2(file, `profiles/${session.user.id}/${type}`);
     
+    // 3. Delete the old image from B2 to prevent orphaned files
+    const { deleteFromB2 } = await import("@/lib/storage");
     if (type === "avatar") {
+      if (currentProfile?.avatarUrl) await deleteFromB2(currentProfile.avatarUrl);
       await db.update(userProfiles).set({ avatarUrl: url }).where(eq(userProfiles.userId, session.user.id));
       await db.update(users).set({ image: url }).where(eq(users.id, session.user.id));
     } else {
+      if (currentProfile?.bannerUrl) await deleteFromB2(currentProfile.bannerUrl);
       await db.update(userProfiles).set({ bannerUrl: url }).where(eq(userProfiles.userId, session.user.id));
     }
 
