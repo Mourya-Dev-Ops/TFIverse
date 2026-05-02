@@ -11,7 +11,7 @@ async function run() {
   const { db } = await import("../src/lib/db");
   const { people } = await import("../src/lib/schema");
   
-  const dataDir = path.join(process.cwd(), "old_legacy", "public", "data");
+  const dataDir = path.join(process.cwd(), "public", "data");
   let totalMigrated = 0;
   let totalErrors = 0;
 

@@ -1,0 +1,340 @@
+{
+  "metadata": {
+    "version": "18.0",
+    "template": "line-producers-universal-production-final",
+    "category": "line-producer",
+    "subCategory": null,
+    "generationDate": "2025-11-09",
+    "lastUpdated": "2025-11-09T15:39:00Z",
+    "completeness": 75,
+    "verifiedBy": ["IMDb", "LinkedIn Profile", "Film Credits"],
+    "sources": ["IMDb", "LinkedIn", "YouTube Interviews", "Industry Sources"],
+    "notes": "Production-ready v18 FINAL. Limited public information available on detailed production coordination work. Primary role documented as PRO/Executive Producer with production coordination responsibilities."
+  },
+
+  "id": "vamsi-kaka",
+  "name": "Vamsi Kaka",
+  "slug": "vamsi-kaka",
+  "tmdbPersonId": null,
+  "imdbId": "nm5927109",
+  "alternateNames": ["Vamshi Kaka"],
+  "title": "Production Coordinator & PRO",
+  "type": "line-producer",
+  "category": "line-producer",
+  "subCategory": null,
+
+  "lineProducerEssence": {
+    "coordinationStrength": "Multi-department coordination combining production logistics with publicity management across 300+ South Indian films",
+    "productionManagement": "Systematic approach managing both on-ground production coordination and media relations for large-scale Telugu productions",
+    "locationExpertise": "Extensive coordination experience across diverse shooting locations for major Telugu blockbusters",
+    "budgetControl": "Production management across varied budget scales from medium to mega-budget Telugu films",
+    "reliabilityFactor": "Trusted coordinator for major production houses including Sri Venkateswara Creations and PVP Cinema for seamless execution",
+    "contributionToCinema": "Enabled smooth production of 300+ South Indian films through dual expertise in production coordination and publicity management"
+  },
+
+  "images": {
+    "portrait": {"source": "Archive", "url": "https://example.com/vamsi-kaka-portrait.jpg", "type": "headshot"},
+    "banner": {"source": "Archive", "url": "https://example.com/vamsi-kaka-banner.jpg", "type": "wide"},
+    "avatar": {"source": "Archive", "url": "https://example.com/vamsi-kaka-avatar.jpg", "type": "thumbnail"},
+    "featured": {"source": "Archive", "url": "https://example.com/vamsi-kaka-on-set.jpg", "type": "on-set-coordination"},
+    "gallery": [
+      {"id": "1", "source": "Archive", "url": "https://example.com/vamsi-kaka-production-1.jpg", "type": "production-work"},
+      {"id": "2", "source": "Archive", "url": "https://example.com/vamsi-kaka-location-1.jpg", "type": "location-shoot"},
+      {"id": "3", "source": "Archive", "url": "https://example.com/vamsi-kaka-team-1.jpg", "type": "with-production-team"},
+      {"id": "4", "source": "Archive", "url": "https://example.com/vamsi-kaka-event-1.jpg", "type": "industry-event"},
+      {"id": "5", "source": "Archive", "url": "https://example.com/vamsi-kaka-legacy-1.jpg", "type": "legacy"}
+    ]
+  },
+
+  "bio": "Vamsi Kaka is a veteran production coordinator and PRO who has managed over 300 South Indian film productions since 2015. He served as Executive Producer on Ori Devuda (2022) and coordinated major blockbusters including RRR, Baahubali series, and KGF Chapter 2. Associated with leading production houses like Sri Venkateswara Creations and PVP Cinema, he combines production logistics expertise with media relations management. His dual capabilities have made him indispensable for large-scale Telugu productions.",
+
+  "personalInfo": {
+    "fullName": "Vamsi Kaka",
+    "birthDate": null,
+    "age": null,
+    "birthPlace": null,
+    "currentResidence": "Hyderabad, Telangana, India",
+    "nationality": "Indian",
+
+    "productionBackground": {
+      "entryIntoProduction": "Entered production coordination through media and publicity work in Telugu film industry",
+      "productionTraining": "On-job learning through extensive work with major production houses"
+    },
+
+    "careerStart": {
+      "entryYear": 2015,
+      "firstProduction": null,
+      "yearsActive": 10,
+      "currentStatus": "Active"
+    }
+  },
+
+  "productionsCoordinated": [
+    {
+      "film": "RRR",
+      "year": 2022,
+      "producer": "DVV Danayya",
+      "director": "S.S. Rajamouli",
+      "role": "PRO/Production Coordinator",
+      "coordinationWork": "Production coordination and publicity management for pan-India mega-budget film",
+      "locationsManaged": null,
+      "budget": "₹550 Crore",
+      "crewSize": null,
+      "challenges": "Multi-language release coordination and massive scale production logistics"
+    },
+    {
+      "film": "Baahubali 2: The Conclusion",
+      "year": 2017,
+      "producer": "Shobu Yarlagadda, Prasad Devineni",
+      "director": "S.S. Rajamouli",
+      "role": "Additional Crew/PRO",
+      "coordinationWork": "Production support and publicity coordination",
+      "locationsManaged": null,
+      "budget": "₹250 Crore",
+      "crewSize": null,
+      "challenges": "India's biggest film production coordination at the time"
+    },
+    {
+      "film": "K.G.F: Chapter 2",
+      "year": 2022,
+      "producer": "Vijay Kiragandur",
+      "director": "Prashanth Neel",
+      "role": "Additional Crew/PRO (Telugu version)",
+      "coordinationWork": "Telugu version coordination and publicity management",
+      "locationsManaged": null,
+      "budget": "₹100 Crore",
+      "crewSize": null,
+      "challenges": "Multi-language coordination for pan-India release"
+    },
+    {
+      "film": "Ori Devuda",
+      "year": 2022,
+      "producer": "Pearl V. Potluri, Param V. Potluri, Dil Raju",
+      "director": "Ashwath Marimuthu",
+      "role": "Executive Producer",
+      "coordinationWork": "Full production coordination and executive production responsibilities",
+      "locationsManaged": null,
+      "budget": null,
+      "crewSize": null,
+      "challenges": "Multi-banner production coordination between PVP Cinema and Sri Venkateswara Creations"
+    },
+    {
+      "film": "Rangasthalam",
+      "year": 2018,
+      "producer": "Mythri Movie Makers",
+      "director": "Sukumar",
+      "role": "Additional Crew/PRO",
+      "coordinationWork": "Production coordination and publicity management",
+      "locationsManaged": ["Rural Andhra Pradesh period locations"],
+      "budget": "₹60 Crore",
+      "crewSize": null,
+      "challenges": "Period film coordination with extensive rural location work"
+    },
+    {
+      "film": "Tillu Square",
+      "year": 2024,
+      "producer": "Sithara Entertainments",
+      "director": "Mallik Ram",
+      "role": "PRO/Production Coordinator",
+      "coordinationWork": "Production coordination and publicity management",
+      "locationsManaged": null,
+      "budget": null,
+      "crewSize": null,
+      "challenges": null
+    },
+    {
+      "film": "Devil",
+      "year": 2023,
+      "producer": "Abhishek Nama",
+      "director": "Abhishek Nama",
+      "role": "PRO/Production Coordinator",
+      "coordinationWork": "Period film production coordination",
+      "locationsManaged": null,
+      "budget": null,
+      "crewSize": null,
+      "challenges": null
+    },
+    {
+      "film": "Bimbisara",
+      "year": 2022,
+      "producer": "N.T.R. Arts",
+      "director": "Mallidi Vassishta",
+      "role": "PRO/Production Coordinator",
+      "coordinationWork": "Fantasy period film coordination",
+      "locationsManaged": null,
+      "budget": null,
+      "crewSize": null,
+      "challenges": null
+    }
+  ],
+
+  "coordinationStatistics": {
+    "totalProductionsCoordinated": 300,
+    "careerSpan": "2015-Present",
+    "yearsActive": 10,
+    "productionHousesWorkedWith": ["Sri Venkateswara Creations", "PVP Cinema", "Mythri Movie Makers", "DVV Entertainments", "Arka Media Works", "Sithara Entertainments", "N.T.R. Arts"],
+    "budgetScalesHandled": "₹10 Crore to ₹550 Crore"
+  },
+
+  "coordinationExpertise": {
+    "locationManagement": {
+      "expertise": "Strong",
+      "locationsHandled": ["Urban", "Rural", "Period Settings", "Multi-location shoots"],
+      "scoutingSkills": "Experienced in coordinating diverse location requirements for varied film genres",
+      "permissionsExpertise": "Handles permissions and local coordination for major productions"
+    },
+    "budgetManagement": {
+      "expertise": "Strong",
+      "budgetControl": "Manages production costs across varied budget scales from medium to mega-budget",
+      "costEffectiveSolutions": "Known for cost-effective production solutions while maintaining quality"
+    },
+    "crewCoordination": {
+      "expertise": "Expert",
+      "crewSizes": "Handles large crew sizes for mega-budget productions",
+      "departmentCoordination": "Coordinates multiple departments including production and publicity seamlessly"
+    },
+    "logisticsManagement": {
+      "expertise": "Strong",
+      "transportationHandling": "Manages complex logistics for large-scale productions",
+      "equipmentManagement": "Coordinates equipment and resource logistics efficiently"
+    },
+    "scheduleManagement": {
+      "expertise": "Expert",
+      "shootingSchedules": "Manages complex shooting schedules for multi-location productions",
+      "timeManagement": "Known for keeping productions on schedule and meeting deadlines"
+    }
+  },
+
+  "productionHouseAssociations": [
+    {
+      "productionHouse": "Sri Venkateswara Creations",
+      "yearStarted": 2015,
+      "productionsCoordinated": null,
+      "relationship": "Long-term association as trusted coordinator with producer Dil Raju's banner",
+      "majorProductions": ["Ori Devuda", "Multiple Dil Raju productions"]
+    },
+    {
+      "productionHouse": "PVP Cinema",
+      "yearStarted": null,
+      "productionsCoordinated": null,
+      "relationship": "Regular coordinator for PVP Cinema productions",
+      "majorProductions": ["Ori Devuda"]
+    },
+    {
+      "productionHouse": "Arka Media Works",
+      "yearStarted": 2017,
+      "productionsCoordinated": null,
+      "relationship": "Coordinated Baahubali series and worked with S.S. Rajamouli productions",
+      "majorProductions": ["Baahubali 2: The Conclusion"]
+    },
+    {
+      "productionHouse": "DVV Entertainments",
+      "yearStarted": 2022,
+      "productionsCoordinated": null,
+      "relationship": "Coordinated RRR production",
+      "majorProductions": ["RRR"]
+    },
+    {
+      "productionHouse": "Mythri Movie Makers",
+      "yearStarted": 2018,
+      "productionsCoordinated": null,
+      "relationship": "Worked on major Mythri productions",
+      "majorProductions": ["Rangasthalam"]
+    }
+  ],
+
+  "locationManagementExpertise": {
+    "locationTypes": ["Urban", "Rural", "Period Settings", "International"],
+    "scoutingExperience": "10+ years coordinating diverse locations for Telugu blockbusters",
+    "permissionsHandling": "Expertise in securing permissions and managing local coordination for major productions",
+    "multiLocationShoots": "Handles complex multi-location shoots across India",
+    "internationalShoots": "Coordinated international locations for pan-India releases"
+  },
+
+  "budgetManagementSkills": {
+    "budgetDiscipline": "Known for maintaining financial discipline across productions",
+    "costControl": "Implements cost-effective production management strategies",
+    "budgetScales": "₹10 Crore to ₹550 Crore comfort range spanning medium to mega-budget films",
+    "vendorNegotiation": "Strong vendor management and negotiation capabilities",
+    "resourceOptimization": "Optimizes production resources to maximize efficiency within budget constraints"
+  },
+
+  "problemSolvingAbilities": {
+    "onSetProblemSolving": "Quick problem-solving for production challenges on sets",
+    "crisisManagement": "Handles production crises efficiently maintaining schedule integrity",
+    "adaptability": "Highly adaptable to changing production requirements and unexpected situations",
+    "solutionOriented": "Known for finding practical solutions under pressure during shoots"
+  },
+
+  "recentProductions": [
+    {
+      "film": "Tillu Square",
+      "year": 2024,
+      "producer": "Sithara Entertainments",
+      "role": "PRO/Production Coordinator",
+      "coordinationHighlights": "Sequel coordination and publicity management"
+    },
+    {
+      "film": "Devil",
+      "year": 2023,
+      "producer": "Abhishek Nama",
+      "role": "PRO/Production Coordinator",
+      "coordinationHighlights": "Period film production coordination"
+    },
+    {
+      "film": "RRR",
+      "year": 2022,
+      "producer": "DVV Danayya",
+      "role": "PRO/Production Coordinator",
+      "coordinationHighlights": "Mega-budget pan-India production coordination"
+    },
+    {
+      "film": "Ori Devuda",
+      "year": 2022,
+      "producer": "PVP Cinema, Sri Venkateswara Creations",
+      "role": "Executive Producer",
+      "coordinationHighlights": "Executive production and full production coordination"
+    },
+    {
+      "film": "Bimbisara",
+      "year": 2022,
+      "producer": "N.T.R. Arts",
+      "role": "PRO/Production Coordinator",
+      "coordinationHighlights": "Fantasy period film coordination"
+    }
+  ],
+
+  "ongoingWork": null,
+
+  "industryReputation": {
+    "reliabilityFactor": "Known for consistent reliability and delivering smooth production execution across 300+ films",
+    "trustedCoordinator": "Trusted by major production houses including Sri Venkateswara Creations, PVP Cinema, and leading Telugu banners",
+    "industryRespect": "Highly respected for dual expertise in production coordination and publicity management",
+    "workEthic": "Strong work ethic with commitment to production excellence and deadline adherence",
+    "professionalReputation": "Professional reputation built on decade-long track record of successful Telugu film productions"
+  },
+
+  "influenceAndLegacy": {
+    "productionContribution": "Contributed to smooth execution of 300+ South Indian film productions combining logistics and publicity",
+    "coordinationStandards": "Set standards for integrated production coordination and media management in Telugu cinema",
+    "industryImpact": "Enabled efficient production of major Telugu blockbusters through systematic coordination approach",
+    "legacy": "Legacy as versatile production coordinator who bridged production logistics and publicity management for Telugu cinema"
+  },
+
+  "quotes": null,
+
+  "trivia": [
+    "Worked on India's biggest blockbusters including Baahubali 2 and RRR coordinating massive production scales",
+    "Handles both production coordination and publicity management simultaneously for films",
+    "Associated with over 300 South Indian film productions across Telugu, Tamil, and other languages",
+    "Regular columnist on film industry matters alongside production work"
+  ],
+
+  "knownFor": [
+    "Production coordinator for 300+ South Indian films",
+    "Executive Producer on Ori Devuda (2022)",
+    "Coordination work on RRR, Baahubali series, and K.G.F Chapter 2",
+    "Long-term association with Sri Venkateswara Creations and major Telugu production houses",
+    "Dual expertise in production logistics and publicity management"
+  ]
+}

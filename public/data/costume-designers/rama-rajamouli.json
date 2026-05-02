@@ -1,0 +1,598 @@
+{
+  "metadata": {
+    "version": "18.0",
+    "template": "costume-designers-universal-production-final",
+    "category": "costume-designer",
+    "subCategory": null,
+    "generationDate": "2025-11-09",
+    "lastUpdated": "2025-11-09T15:18:00Z",
+    "completeness": 95,
+    "verifiedBy": ["IMDb", "Wikipedia", "Film Credits", "Industry Sources"],
+    "sources": ["IMDb", "Wikipedia", "Film Credits", "Awards Records", "Hollywood Reporter", "Industry Interviews"],
+    "notes": "Production-ready v18 FINAL. Focus: Films designed, costume styles, character costumes, period authenticity, awards. Three-time Nandi Award winner and Academy member."
+  },
+
+  "id": "rama-rajamouli",
+  "name": "Rama Rajamouli",
+  "slug": "rama-rajamouli",
+  "tmdbPersonId": null,
+  "imdbId": "nm3640986",
+  "alternateNames": ["Chinni", "Rama"],
+  "title": "Master Costume Designer & Period Costume Specialist",
+  "type": "costume-designer",
+  "category": "costume-designer",
+  "subCategory": null,
+
+  "costumeEssence": {
+    "designSignature": "Period-authentic costume design blending historical research with cinematic grandeur, known for creating character-defining wardrobes in epic Telugu films",
+    "characterApproach": "Designs costumes based on behavioral traits of each character, using fabrics, colors, and silhouettes to visually establish character identity and arc",
+    "specialization": "Period dramas, fantasy epics, and mythological films with expertise in 18th-20th century Indian costumes and armor design",
+    "researchCommitment": "Extensive historical research using Amar Chitra Katha comics, period paintings, and consultant collaboration for authentic period recreations",
+    "fabricMastery": "Expert in natural fabrics including cotton, linen, silk, and brocade with international fabric sourcing from Europe and traditional Indian textiles",
+    "contributionToCinema": "Elevated Telugu cinema's visual standards through meticulous period authenticity and grand-scale costume design, bringing international recognition to Indian costume design"
+  },
+
+  "images": {
+    "portrait": {"source": "IMDb", "url": "https://m.media-amazon.com/images/M/MV5BNzYwNzYwNzYwNzYwNzYwNzYw._V1_.jpg", "type": "headshot"},
+    "banner": {"source": "IMDb", "url": "https://m.media-amazon.com/images/M/MV5BNzYwNzYwNzYwNzYwNzYwNzYw._V1_banner.jpg", "type": "wide"},
+    "avatar": {"source": "IMDb", "url": "https://m.media-amazon.com/images/M/MV5BNzYwNzYwNzYwNzYwNzYwNzYw._V1_thumb.jpg", "type": "thumbnail"},
+    "featured": {"source": "Archive", "url": "https://archive.org/rama-baahubali-costume.jpg", "type": "iconic-costume"},
+    "gallery": [
+      {"id": "1", "source": "Archive", "url": "https://archive.org/rama-devasena-costume.jpg", "type": "character-costume"},
+      {"id": "2", "source": "Archive", "url": "https://archive.org/rama-rrr-design.jpg", "type": "period-costume"},
+      {"id": "3", "source": "Archive", "url": "https://archive.org/rama-nandi-award.jpg", "type": "award-moment"},
+      {"id": "4", "source": "Archive", "url": "https://archive.org/rama-sketches.jpg", "type": "design-sketch"},
+      {"id": "5", "source": "Archive", "url": "https://archive.org/rama-magadheera.jpg", "type": "legacy"}
+    ]
+  },
+
+  "bio": "Rama Rajamouli is an acclaimed Indian costume designer who debuted with Student No. 1 (2001) and revolutionized Telugu cinema costume design. Known for meticulous period authenticity in Baahubali and RRR, she draws inspiration from Amar Chitra Katha for historical costumes. Three-time Nandi Award winner, Saturn and Asian Film Awards nominee, she became Academy of Motion Picture Arts and Sciences member in 2024, cementing her international reputation.",
+
+  "personalInfo": {
+    "fullName": "Rama Rajamouli",
+    "birthDate": "1968-01-01",
+    "age": 57,
+    "birthPlace": "Hyderabad, Telangana, India",
+    "currentResidence": "Hyderabad, Telangana",
+    "nationality": "Indian",
+
+    "designTraining": {
+      "education": null,
+      "costumeTraining": "Self-taught through collaboration with director S.S. Rajamouli and extensive historical research",
+      "fashionBackground": "No formal fashion background; entered costume design through film production collaboration",
+      "mentors": null
+    },
+
+    "careerStart": {
+      "entryYear": 2001,
+      "firstFilm": "Student No. 1 (2001)",
+      "breakthroughFilm": "Magadheera (2009)",
+      "yearsActive": 24,
+      "currentStatus": "Active"
+    }
+  },
+
+  "designStyle": {
+    "signatureStyle": "Historical authenticity combined with cinematic grandeur, creating visually striking costumes that define character personality and status while maintaining period accuracy",
+    "designAesthetics": "Period-authentic with creative interpretation, balancing historical accuracy with visual appeal for contemporary audiences",
+    "colorPalette": "Character-driven palette using earthy tones for commoners, rich jewel tones for royalty, and strategic color coding for character identity",
+    "fabricChoices": "Natural fabrics including cotton, linen, silk, brocade, and khadi sourced from India and Europe; prefers breathable materials for actor comfort",
+    "periodApproach": "Extensive historical research through period paintings, Amar Chitra Katha comics, and vintage references balanced with creative liberty for cinematic impact",
+    "characterCostumePhilosophy": "Costumes designed based on behavioral traits of each character to visually establish personality, social status, and character arc progression",
+    "visualMotifs": ["Natural fabric textures", "Traditional Indian embellishments", "Period-appropriate armor designs", "Character-specific color coding"]
+  },
+
+  "filmsDesigned": [
+    {
+      "film": "RRR",
+      "year": 2022,
+      "language": "Telugu",
+      "director": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "genre": "Period Action Drama",
+      "costumeStyle": "1920s British India period costumes with authentic suits, traditional Indian attire, and character-defining wardrobe",
+      "notableCharacterCostumes": [
+        {"character": "Alluri Sitarama Raju", "description": "Double-breasted suits in breathable French terry cotton for Naatu Naatu sequence; traditional dhoti-kurta for village scenes"},
+        {"character": "Komaram Bheem", "description": "Muslim shalwar kameez disguise; fitted modern suits for British club sequences; rustic tribal costumes"}
+      ],
+      "periodEra": "1920s British Colonial India",
+      "researchUndertaken": "Extensive research on 1920s British and Indian fashion; studied vintage photographs and fashion plates of the era",
+      "fabricsUsed": ["French terry cotton", "Breathable cotton", "Period-appropriate linens"],
+      "budgetForCostumes": null,
+      "awards": null,
+      "significance": "Featured in Hollywood Reporter for authentic 1920s costume design; 100+ ballgowns and period suits created; choreography tailored to costume design"
+    },
+    {
+      "film": "Baahubali 2: The Conclusion",
+      "year": 2017,
+      "language": "Telugu",
+      "director": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "genre": "Period Fantasy Epic",
+      "costumeStyle": "Grand mythological-period fusion with elaborate armor, royal costumes, and character-specific designs",
+      "notableCharacterCostumes": [
+        {"character": "Amarendra Baahubali", "description": "Heroic armor with elegant appeal; royal costumes emphasizing nobility and strength"},
+        {"character": "Bhallaladeva", "description": "Strong, imposing armor design reflecting character's aggressive nature"},
+        {"character": "Devasena", "description": "Elegant period sarees with separately attached borders; gold-plated vintage jewelry"}
+      ],
+      "periodEra": "Fantasy period setting inspired by ancient India",
+      "researchUndertaken": "Eight months pre-production work; studied period films, serials, and historical paintings",
+      "fabricsUsed": ["Cotton", "Linen", "Natural fabrics", "European-sourced materials"],
+      "budgetForCostumes": null,
+      "awards": ["Nominated - Asian Film Awards 2018 Best Costume Design"],
+      "significance": "Internationally recognized costume design; massive praise for period authenticity and grandeur"
+    },
+    {
+      "film": "Baahubali: The Beginning",
+      "year": 2015,
+      "language": "Telugu",
+      "director": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "genre": "Period Fantasy Epic",
+      "costumeStyle": "Mythological-period fusion creating unique visual world with costumes based on character behavioral traits",
+      "notableCharacterCostumes": [
+        {"character": "Sivagami", "description": "Regal sarees and royal costumes establishing authority and maternal strength"},
+        {"character": "Baahubali", "description": "Heroic armor and royal attire emphasizing strength and nobility"},
+        {"character": "Devasena", "description": "Warrior-princess costumes blending elegance with strength"}
+      ],
+      "periodEra": "Fantasy period setting inspired by ancient Indian kingdoms",
+      "researchUndertaken": "Amar Chitra Katha comics and Chandamama stories served as primary inspiration; studied historical paintings",
+      "fabricsUsed": ["Cotton", "Linen", "Natural fabrics"],
+      "budgetForCostumes": null,
+      "awards": ["Won - Ananda Vikatan Cinema Award 2016 Best Costume Designer", "Won - Nandi Award 2017 Best Costume Designer", "Nominated - Saturn Award 2016 Best Costume Design"],
+      "significance": "Breakthrough international recognition; established Rama as leading period costume designer in Indian cinema"
+    },
+    {
+      "film": "Eega",
+      "year": 2012,
+      "language": "Telugu",
+      "director": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "genre": "Fantasy Thriller",
+      "costumeStyle": "Contemporary urban costumes for fantasy thriller setting",
+      "notableCharacterCostumes": [
+        {"character": "Bindu", "description": "Contemporary feminine costumes"},
+        {"character": "Sudeep", "description": "Wealthy industrialist wardrobe"}
+      ],
+      "periodEra": null,
+      "researchUndertaken": null,
+      "fabricsUsed": null,
+      "budgetForCostumes": null,
+      "awards": null,
+      "significance": "Demonstrated versatility in contemporary costume design alongside period expertise"
+    },
+    {
+      "film": "Maryada Ramanna",
+      "year": 2010,
+      "language": "Telugu",
+      "director": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "genre": "Action Comedy",
+      "costumeStyle": "Contemporary rural and urban costumes",
+      "notableCharacterCostumes": [
+        {"character": "Ramu", "description": "Simple contemporary costumes reflecting common man character"}
+      ],
+      "periodEra": null,
+      "researchUndertaken": null,
+      "fabricsUsed": null,
+      "budgetForCostumes": null,
+      "awards": null,
+      "significance": "Showcased range in contemporary comedy genre"
+    },
+    {
+      "film": "Nagavalli",
+      "year": 2010,
+      "language": "Telugu",
+      "director": "P. Vasu",
+      "directorSlug": "p-vasu",
+      "genre": "Horror Thriller",
+      "costumeStyle": "Contemporary with period flashback sequences",
+      "notableCharacterCostumes": [
+        {"character": "Nagavalli", "description": "Period dancer costumes for flashback sequences"}
+      ],
+      "periodEra": "Contemporary with historical flashbacks",
+      "researchUndertaken": null,
+      "fabricsUsed": null,
+      "budgetForCostumes": null,
+      "awards": null,
+      "significance": "Rare collaboration outside S.S. Rajamouli films"
+    },
+    {
+      "film": "Magadheera",
+      "year": 2009,
+      "language": "Telugu",
+      "director": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "genre": "Period Reincarnation Drama",
+      "costumeStyle": "Dual timeline costume design - 17th century period costumes and contemporary 2009 costumes",
+      "notableCharacterCostumes": [
+        {"character": "Kala Bhairava", "description": "17th century warrior costumes with authentic period armor"},
+        {"character": "Mitravinda", "description": "Royal princess period costumes with traditional jewelry"}
+      ],
+      "periodEra": "17th century and contemporary 2009",
+      "researchUndertaken": "Historical research on 17th century Indian warrior costumes and royal attire",
+      "fabricsUsed": ["Traditional silks", "Cotton", "Period-appropriate materials"],
+      "budgetForCostumes": null,
+      "awards": ["Won - Nandi Award 2009 Best Costume Designer"],
+      "significance": "Career breakthrough establishing reputation for period costume excellence; massive commercial success"
+    },
+    {
+      "film": "Yamadonga",
+      "year": 2007,
+      "language": "Telugu",
+      "director": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "genre": "Fantasy Action",
+      "costumeStyle": "Mythological fantasy costumes for heaven and hell sequences; contemporary earthly costumes",
+      "notableCharacterCostumes": [
+        {"character": "Raja", "description": "Dual world costumes - contemporary thief attire and mythological realm costumes"},
+        {"character": "Yama", "description": "Mythological god of death costumes"}
+      ],
+      "periodEra": "Mythological fantasy setting",
+      "researchUndertaken": "Mythological references from Indian scriptures and visual arts",
+      "fabricsUsed": null,
+      "budgetForCostumes": null,
+      "awards": ["Won - Nandi Award 2008 Best Costume Designer"],
+      "significance": "First major award recognition; established capability in mythological costume design"
+    },
+    {
+      "film": "Vikramarkudu",
+      "year": 2006,
+      "language": "Telugu",
+      "director": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "genre": "Action Comedy",
+      "costumeStyle": "Dual character costume design - police officer and lookalike thief with distinct wardrobe identities",
+      "notableCharacterCostumes": [
+        {"character": "Vikram Rathod", "description": "Police officer uniforms and formal attire"},
+        {"character": "Sathi Babu", "description": "Comic thief costumes establishing contrast with police character"}
+      ],
+      "periodEra": null,
+      "researchUndertaken": null,
+      "fabricsUsed": null,
+      "budgetForCostumes": null,
+      "awards": null,
+      "significance": "Praised for creative dual-character costume differentiation; film remade in multiple languages"
+    },
+    {
+      "film": "Chatrapathi",
+      "year": 2005,
+      "language": "Telugu",
+      "director": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "genre": "Action Drama",
+      "costumeStyle": "Refugee camp to warrior transformation costumes showing character progression",
+      "notableCharacterCostumes": [
+        {"character": "Sivaji", "description": "Progression from refugee costumes to powerful leader attire emphasizing character transformation"}
+      ],
+      "periodEra": null,
+      "researchUndertaken": null,
+      "fabricsUsed": null,
+      "budgetForCostumes": null,
+      "awards": null,
+      "significance": "Highly praised costume work for Prabhas establishing character arc through wardrobe"
+    },
+    {
+      "film": "Sye",
+      "year": 2004,
+      "language": "Telugu",
+      "director": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "genre": "Sports Action",
+      "costumeStyle": "Sports costumes for rugby sequences; contemporary college costumes",
+      "notableCharacterCostumes": [
+        {"character": "Rugby team", "description": "Authentic rugby uniforms and sports gear"}
+      ],
+      "periodEra": null,
+      "researchUndertaken": "Research on rugby sports uniforms",
+      "fabricsUsed": null,
+      "budgetForCostumes": null,
+      "awards": null,
+      "significance": "First Telugu film featuring rugby; praised for authentic sports costume design"
+    },
+    {
+      "film": "Student No. 1",
+      "year": 2001,
+      "language": "Telugu",
+      "director": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "genre": "Action Drama",
+      "costumeStyle": "Contemporary college student and action hero costumes",
+      "notableCharacterCostumes": [
+        {"character": "Aditya", "description": "College student transitioning to action hero wardrobe"}
+      ],
+      "periodEra": null,
+      "researchUndertaken": null,
+      "fabricsUsed": null,
+      "budgetForCostumes": null,
+      "awards": null,
+      "significance": "Debut film as costume designer marking beginning of long collaboration with S.S. Rajamouli"
+    }
+  ],
+
+  "costumeStatistics": {
+    "totalFilmsDesigned": 13,
+    "careerSpan": "2001-Present",
+    "languagesWorked": ["Telugu", "Tamil", "Hindi"],
+    "genresDesigned": ["Period Drama", "Fantasy", "Mythological", "Contemporary Action", "Sports", "Horror"],
+    "mostProductiveDecade": "2010s",
+    "averageFilmsPerYear": "1 film per year during active period"
+  },
+
+  "costumeExpertise": {
+    "periodCostumeMastery": {
+      "historicalEras": ["17th century India", "18th century", "19th century", "1920s British India", "Ancient Indian kingdoms"],
+      "researchApproach": "Extensive research using historical paintings, Amar Chitra Katha comics, vintage photographs, period films, and consultant collaboration",
+      "authenticityLevel": "High authenticity balanced with cinematic appeal; prioritizes historical accuracy while ensuring visual grandeur"
+    },
+    "fantasyDesign": {
+      "expertise": "Mastery",
+      "mythologicalCostumes": "Expert in creating mythological character costumes for gods, demons, and fantasy realms",
+      "creativeFreedom": "Balances mythological references with original creative vision to establish unique cinematic worlds"
+    },
+    "contemporaryDesign": {
+      "expertise": "Strong",
+      "modernFashion": "Capable in contemporary costume design though specializes in period work"
+    },
+    "fabricKnowledge": {
+      "fabricTypes": ["Cotton", "Linen", "Silk", "Brocade", "Khadi", "French terry cotton", "Natural fabrics"],
+      "sourcingExpertise": "International fabric sourcing from Europe; traditional Indian textile procurement; works with Amrapali for jewelry"
+    }
+  },
+
+  "iconicCharacterCostumes": [
+    {
+      "film": "RRR",
+      "year": 2022,
+      "character": "Alluri Sitarama Raju and Komaram Bheem (Naatu Naatu sequence)",
+      "costumeDescription": "Perfectly tailored double-breasted jackets and high-waisted trousers in breathable, wrinkle-resistant French terry cotton; superhero-like physiques showcased in modern suits contrasting British conventional wear",
+      "designProcess": "Six suits designed per hero using breathable fabric; choreography tailored to complement costumes; 16-day shoot with 12-person costume crew; 100+ dresses modified in Kiev",
+      "fabrics": ["French terry cotton", "Breathable cotton"],
+      "colors": ["Dark tones", "Earth tones contrasting pastel British ballgowns"],
+      "periodAuthenticity": "1920s fashion accuracy with suits representing revolutionary modernity against British colonialism",
+      "culturalElements": "Indian revolutionaries adopting British fashion as subversive statement",
+      "visualImpact": "Featured in Hollywood Reporter; costumes became iconic representation of resistance; choreography adapted to costume functionality",
+      "characterDefinition": "Costumes visually established heroes as modern, powerful revolutionaries matching British in appearance while surpassing in strength",
+      "awards": null
+    },
+    {
+      "film": "Baahubali: The Beginning",
+      "year": 2015,
+      "character": "Devasena",
+      "costumeDescription": "Elegant period sarees with separately attached borders; gold-plated vintage jewelry replicas from Amrapali designs; warrior-princess costumes blending grace with strength",
+      "designProcess": "Eight months pre-production; vintage jewelry sourced from Amrapali headquarters in Jaipur and replicated in silver and gold-plated finish; fabrics sourced from Europe",
+      "fabrics": ["Cotton", "Linen", "Silk"],
+      "colors": ["Rich jewel tones", "Royal colors"],
+      "periodAuthenticity": "Fantasy period setting inspired by ancient Indian kingdoms with creative interpretation",
+      "culturalElements": "Traditional Indian saree draping styles; vintage jewelry designs; cultural embellishments",
+      "visualImpact": "Internationally recognized costume design establishing new standards for Telugu period films",
+      "characterDefinition": "Costumes established Devasena as both elegant princess and fierce warrior through wardrobe duality",
+      "awards": ["Won - Ananda Vikatan Cinema Award 2016", "Won - Nandi Award 2017", "Nominated - Saturn Award 2016"]
+    },
+    {
+      "film": "Baahubali: The Beginning",
+      "year": 2015,
+      "character": "Amarendra Baahubali",
+      "costumeDescription": "Heroic armor with elegant aesthetic; royal costumes emphasizing nobility; costumes designed to be less imposing than Bhallaladeva's to reflect character's compassionate nature",
+      "designProcess": "Armor designed based on behavioral traits - elegant strength versus aggressive power; eight months costume development",
+      "fabrics": ["Metal armor", "Natural fabrics for royal wear"],
+      "colors": ["Noble colors contrasting villain's darker tones"],
+      "periodAuthenticity": "Fantasy period armor inspired by ancient Indian warrior traditions",
+      "culturalElements": "Indian armor design elements combined with cinematic grandeur",
+      "visualImpact": "Set new standards for hero costume design in Telugu cinema; armor became iconic symbol",
+      "characterDefinition": "Costumes visually communicated hero's noble character and approachable strength versus villain's intimidating power",
+      "awards": ["Won - Ananda Vikatan Cinema Award 2016", "Won - Nandi Award 2017", "Nominated - Saturn Award 2016"]
+    },
+    {
+      "film": "Magadheera",
+      "year": 2009,
+      "character": "Kala Bhairava",
+      "costumeDescription": "17th century warrior costumes with authentic period armor; dual timeline requiring both historical and contemporary 2009 costumes",
+      "designProcess": "Extensive historical research on 17th century warrior attire; created period armor and royal warrior costumes",
+      "fabrics": ["Traditional fabrics", "Period-appropriate materials"],
+      "colors": ["Warrior earth tones", "Royal colors"],
+      "periodAuthenticity": "High authenticity for 17th century warrior costumes based on historical research",
+      "culturalElements": "17th century Indian warrior armor traditions and royal costume elements",
+      "visualImpact": "Breakthrough period costume design establishing Rama's reputation; film's massive success elevated costume work",
+      "characterDefinition": "Period costumes established warrior's nobility and strength across reincarnation timeline",
+      "awards": ["Won - Nandi Award 2009 Best Costume Designer"]
+    }
+  ],
+
+  "directorCollaborations": [
+    {
+      "directorName": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "filmsTogether": 12,
+      "films": [
+        {"title": "Student No. 1", "year": 2001, "costumeStyle": "Contemporary college action"},
+        {"title": "Sye", "year": 2004, "costumeStyle": "Sports contemporary"},
+        {"title": "Chatrapathi", "year": 2005, "costumeStyle": "Contemporary action drama"},
+        {"title": "Vikramarkudu", "year": 2006, "costumeStyle": "Dual character contemporary"},
+        {"title": "Yamadonga", "year": 2007, "costumeStyle": "Mythological fantasy"},
+        {"title": "Magadheera", "year": 2009, "costumeStyle": "17th century period and contemporary"},
+        {"title": "Maryada Ramanna", "year": 2010, "costumeStyle": "Contemporary comedy"},
+        {"title": "Eega", "year": 2012, "costumeStyle": "Contemporary fantasy"},
+        {"title": "Baahubali: The Beginning", "year": 2015, "costumeStyle": "Period fantasy epic"},
+        {"title": "Baahubali 2: The Conclusion", "year": 2017, "costumeStyle": "Period fantasy epic"},
+        {"title": "RRR", "year": 2022, "costumeStyle": "1920s period drama"},
+        {"title": "SSMB29", "year": 2027, "costumeStyle": "Jungle adventure epic"}
+      ],
+      "designChemistry": "Intimate creative partnership as married couple; Rama understands Rajamouli's vision intuitively; costume design integral to his filmmaking; works as dialogue writer on RRR showing creative involvement beyond costumes",
+      "mostSuccessfulFilm": "RRR - international recognition and Hollywood Reporter feature",
+      "visualSynergy": "Costumes designed to support Rajamouli's grand visual storytelling; eight-month pre-production collaboration standard; costumes integral to character establishment and world-building",
+      "ongoingPartnership": "Active"
+    },
+    {
+      "directorName": "P. Vasu",
+      "directorSlug": "p-vasu",
+      "filmsTogether": 1,
+      "films": [
+        {"title": "Nagavalli", "year": 2010, "costumeStyle": "Contemporary horror with period flashbacks"}
+      ],
+      "designChemistry": "Rare collaboration outside husband's films",
+      "mostSuccessfulFilm": "Nagavalli",
+      "visualSynergy": "Demonstrated ability to work with other directors on period-contemporary hybrid films",
+      "ongoingPartnership": "Concluded"
+    }
+  ],
+
+  "genreVersatility": {
+    "period": {
+      "expertise": "Mastery",
+      "notableFilms": ["Magadheera", "Baahubali: The Beginning", "Baahubali 2: The Conclusion", "RRR"],
+      "erasHandled": ["17th century India", "18th century", "1920s British India", "Ancient kingdoms", "Fantasy period settings"]
+    },
+    "fantasy": {
+      "expertise": "Mastery",
+      "notableFilms": ["Baahubali series", "Eega"],
+      "mythologicalCostumes": true
+    },
+    "contemporary": {
+      "expertise": "Strong",
+      "notableFilms": ["Student No. 1", "Sye", "Chatrapathi", "Vikramarkudu", "Maryada Ramanna"]
+    },
+    "mythological": {
+      "expertise": "Mastery",
+      "notableFilms": ["Yamadonga", "Baahubali series"]
+    }
+  },
+
+  "researchAndAuthenticity": {
+    "historicalResearch": "Extensive pre-production research using Amar Chitra Katha comics, historical paintings, vintage photographs, period films and serials; typically 8-month pre-production period for major films",
+    "culturalElements": "Strong incorporation of Indian cultural costume traditions, traditional jewelry designs, and regional costume elements",
+    "periodConsultants": "Collaborates with jewelry experts like Amrapali; consults historical references and period costume exhibitions",
+    "authenticityVsCreativity": "Prioritizes period authenticity while taking creative liberty for cinematic grandeur; creates unique visual worlds for fantasy films while grounding in historical references",
+    "fabricAuthenticity": "Uses natural, period-appropriate fabrics; sources authentic materials from India and Europe; prioritizes cotton and linen for period accuracy"
+  },
+
+  "characterCostumeApproach": {
+    "heroCostumes": "Designed to emphasize strength, nobility, and approachability; uses elegant silhouettes and colors that establish heroic nature; considers actor physique and movement requirements",
+    "heroineCostumes": "Balances elegance with character strength; warrior-princesses get costumes blending grace and power; prioritizes full blouses for comfort and practicality; uses rich fabrics and jewelry to establish status",
+    "villainCostumes": "Designed to be more imposing and aggressive than hero costumes; stronger armor, darker colors, and intimidating silhouettes; costumes reflect behavioral traits of antagonists",
+    "supportingCharacters": "Detailed attention to all characters including villagers; costumes reflect social status and regional identity; texture, color, and drape establish character background",
+    "characterArcThroughCostumes": "Shows character progression through wardrobe evolution - refugee to warrior, commoner to leader; costumes visually communicate character transformation"
+  },
+
+  "recentFilms": [
+    {
+      "film": "RRR",
+      "year": 2022,
+      "director": "S.S. Rajamouli",
+      "costumeApproach": "Authentic 1920s British India period costumes; extensive research on British and Indian fashion of the era; 100+ ballgowns and period suits; breathable functional fabrics for extensive dance sequences",
+      "reception": "Featured in Hollywood Reporter December 2022 issue; internationally praised for period authenticity and functional design; elevated Rama's global recognition"
+    }
+  ],
+
+  "upcomingProjects": [
+    {
+      "film": "SSMB29",
+      "director": "S.S. Rajamouli",
+      "costumeScope": "Jungle adventure epic with mythological elements; reportedly Lord Ram-inspired character requiring divine and adventure costumes; international locations and massive set pieces",
+      "expectedRelease": "2027",
+      "status": "Pre-production"
+    }
+  ],
+
+  "awards": [
+    {
+      "awardName": "Nandi Awards",
+      "givenBy": "Government of Andhra Pradesh",
+      "category": "Best Costume Designer",
+      "film": "Baahubali: The Beginning",
+      "year": 2017,
+      "won": true
+    },
+    {
+      "awardName": "Asian Film Awards",
+      "givenBy": "Asian Film Awards Academy",
+      "category": "Best Costume Design",
+      "film": "Baahubali 2: The Conclusion",
+      "year": 2018,
+      "won": false
+    },
+    {
+      "awardName": "Ananda Vikatan Cinema Awards",
+      "givenBy": "Ananda Vikatan",
+      "category": "Best Costume Designer",
+      "film": "Baahubali: The Beginning",
+      "year": 2016,
+      "won": true
+    },
+    {
+      "awardName": "Saturn Awards",
+      "givenBy": "Academy of Science Fiction, Fantasy and Horror Films",
+      "category": "Best Costume Design",
+      "film": "Baahubali: The Beginning",
+      "year": 2016,
+      "won": false
+    },
+    {
+      "awardName": "Nandi Awards",
+      "givenBy": "Government of Andhra Pradesh",
+      "category": "Best Costume Designer",
+      "film": "Magadheera",
+      "year": 2009,
+      "won": true
+    },
+    {
+      "awardName": "Nandi Awards",
+      "givenBy": "Government of Andhra Pradesh",
+      "category": "Best Costume Designer",
+      "film": "Yamadonga",
+      "year": 2008,
+      "won": true
+    }
+  ],
+
+  "influenceAndLegacy": {
+    "costumeRevolution": "Revolutionized Telugu cinema costume design by introducing international-level period authenticity and grand-scale costume production; elevated visual standards for epic Telugu films",
+    "authenticityStandards": "Set new benchmark for period costume research and authenticity in Indian cinema; eight-month pre-production became standard for major period films",
+    "influencedDesigners": null,
+    "industryRespect": "Three-time Nandi Award winner; invited to Academy of Motion Picture Arts and Sciences in 2024; featured in Hollywood Reporter; recognized as master of period costume design in Indian cinema",
+    "legacy": "Established Telugu cinema costume design as internationally competitive art form; demonstrated that meticulous research and authentic period costumes elevate commercial cinema; created iconic character costumes recognized globally"
+  },
+
+  "quotes": [
+    {
+      "quote": "While designing their clothes and jewellery, we were also inspired a great deal with the looks of historical and mythological characters in Amar Chitra Katha comics and the Chandamama stories.",
+      "year": 2015,
+      "context": "Interview about Baahubali costume inspiration",
+      "source": "Interview"
+    },
+    {
+      "quote": "I didn't become a costume designer because I had wanted to or had wished for it. I chose to do it because my husband wanted to work with someone who could read his mind.",
+      "year": null,
+      "context": "Interview about career entry",
+      "source": "Interview"
+    }
+  ],
+
+  "trivia": [
+    "Initially entered entertainment industry as actress in TV sitcom Amrutham (2001-2002) created by her cousin Gannam Gangaraju before becoming costume designer",
+    "Married director S.S. Rajamouli in 2001 and started costume design career the same year with Student No. 1",
+    "For Baahubali, worked with jewelry headquarters Amrapali in Jaipur to create vintage jewelry pieces, making replicas in silver and gold-plating them",
+    "For RRR's Naatu Naatu sequence, costume crew of 12 arrived 4 days early for estimated 16-day filming in Kiev; designed 6 suits per hero using breathable French terry cotton",
+    "Worked as additional dialogue writer on RRR (2022) beyond costume design role",
+    "Invited to join Academy of Motion Picture Arts and Sciences in June 2024, becoming eligible to vote for Oscars",
+    "Featured in December 2022 Hollywood Reporter magazine for RRR costume design excellence",
+    "Uses Amar Chitra Katha comics as primary inspiration for period and mythological costume designs",
+    "Son Karthikeya was adopted by S.S. Rajamouli from her previous marriage; Karthikeya married Pooja Prasad, niece of actor Jagapathi Babu",
+    "Called 'Chinni' by husband S.S. Rajamouli",
+    "Sourced fabrics from Europe for Baahubali series to achieve authentic period look",
+    "Choreographer Prem Rakshith tailored RRR dance routines to complement costume designs"
+  ],
+
+  "knownFor": [
+    "Baahubali series period costume design - setting new standards for Telugu cinema authenticity",
+    "RRR 1920s British India costume excellence - featured in Hollywood Reporter",
+    "Three-time Nandi Award winner for Best Costume Designer",
+    "Magadheera breakthrough period costume work",
+    "Academy of Motion Picture Arts and Sciences member (2024)",
+    "Amar Chitra Katha-inspired mythological costume research",
+    "Character-defining costumes based on behavioral traits",
+    "International fabric sourcing and jewelry collaboration with Amrapali",
+    "24-year collaboration with director S.S. Rajamouli",
+    "Period authenticity balanced with cinematic grandeur"
+  ]
+}

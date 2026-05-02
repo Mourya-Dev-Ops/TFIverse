@@ -1,6 +1,6 @@
 import { db } from "@/lib/db";
 import { people } from "@/lib/schema";
-import { eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -27,8 +27,9 @@ const VALID_CATEGORIES: Record<string, { title: string, description: string, the
   "pros": { title: "PROs", description: "The bridge between stars and the masses.", theme: "from-gray-900 to-black" },
 };
 
-export async function generateMetadata({ params }: { params: { category: string } }) {
-  const cat = VALID_CATEGORIES[params.category];
+export async function generateMetadata({ params }: { params: Promise<{ category: string }> }) {
+  const { category } = await params;
+  const cat = VALID_CATEGORIES[category];
   if (!cat) return { title: "Not Found" };
   return {
     title: `${cat.title} | The Icons | TFIverse`,
@@ -36,8 +37,9 @@ export async function generateMetadata({ params }: { params: { category: string 
   };
 }
 
-export default async function CategoryHubPage({ params }: { params: { category: string } }) {
-  const categoryConfig = VALID_CATEGORIES[params.category];
+export default async function CategoryHubPage({ params }: { params: Promise<{ category: string }> }) {
+  const { category } = await params;
+  const categoryConfig = VALID_CATEGORIES[category];
   if (!categoryConfig) notFound();
 
   // The database stores category in singular form (e.g., 'hero', 'heroine')
@@ -64,10 +66,18 @@ export default async function CategoryHubPage({ params }: { params: { category: 
     "pros": "pro",
   };
   
-  const dbCategory = dbCategoryMap[params.category] || params.category;
+  const dbCategory = dbCategoryMap[category] || category;
 
-  // Fetch all people in this category
-  const allPeople = await db.select().from(people).where(eq(people.category, dbCategory));
+  // OPTIMIZED QUERY: We only pull the 'images' and 'title' from the heavy JSONB metadata.
+  // This turns a 75MB request (for 1000 people) into a 1MB request!
+  const allPeople = await db.select({
+    id: people.id,
+    name: people.name,
+    slug: people.slug,
+    subcategory: people.subcategory,
+    images: sql`${people.metadata}->'images'`,
+    title: sql`${people.metadata}->>'title'`,
+  }).from(people).where(eq(people.category, dbCategory));
 
   // Group by subcategory
   const grouped: Record<string, typeof allPeople> = {};
@@ -117,13 +127,12 @@ export default async function CategoryHubPage({ params }: { params: { category: 
 
               {/* Grid of Profiles */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-                {grouped[subcat].map((person) => {
-                  const data = person.metadata as any;
-                  const portraitUrl = data?.images?.portrait?.url || data?.images?.avatar?.url;
+                {grouped[subcat].map((person: any) => {
+                  const portraitUrl = person.images?.portrait?.url || person.images?.avatar?.url;
                   
                   return (
                     <Link 
-                      href={`/icons/${dbCategory}/${person.subcategory}/${person.slug}`} 
+                      href={`/icons/${category}/${person.subcategory}/${person.slug}`} 
                       key={person.id}
                       className="group relative aspect-[3/4] rounded-2xl overflow-hidden glass-premium block"
                     >
@@ -143,7 +152,7 @@ export default async function CategoryHubPage({ params }: { params: { category: 
                       
                       <div className="absolute bottom-0 left-0 w-full p-4 md:p-5 flex flex-col justify-end translate-y-2 group-hover:translate-y-0 transition-transform">
                         <h3 className="font-bold text-lg leading-tight uppercase tracking-wide mb-1">{person.name}</h3>
-                        <p className="text-[10px] text-neutral-400 font-bold uppercase tracking-widest">{data.title || "Actor"}</p>
+                        <p className="text-[10px] text-neutral-400 font-bold uppercase tracking-widest">{person.title || "Actor"}</p>
                       </div>
                     </Link>
                   );

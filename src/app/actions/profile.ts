@@ -164,6 +164,12 @@ export async function getFullProfile(userId: string) {
   };
 }
 
+export async function getFullProfileByEmail(email: string) {
+  const [user] = await db.select().from(users).where(eq(users.email, email));
+  if (!user) return null;
+  return getFullProfile(user.id);
+}
+
 // ─── GET PUBLIC PROFILE (by username) ────────────────────────────
 export async function getPublicProfile(username: string) {
   const [profile] = await db.select().from(userProfiles).where(eq(userProfiles.username, username));

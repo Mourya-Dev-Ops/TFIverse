@@ -1,16 +1,16 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-import { getFullProfile } from "@/app/actions/profile";
+import { getFullProfileByEmail } from "@/app/actions/profile";
 import ProfileDashboard from "./profile-dashboard";
 
 export default async function ProfilePage() {
   const session = await auth();
 
-  if (!session?.user?.id) {
+  if (!session?.user?.email) {
     redirect("/login");
   }
 
-  const data = await getFullProfile(session.user.id);
+  const data = await getFullProfileByEmail(session.user.email);
 
   if (!data) {
     return (
