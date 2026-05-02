@@ -141,16 +141,17 @@ export default async function CategoryHubPage({ params }: { params: Promise<{ ca
                 </div>
               </div>
 
-              {/* Grid of Profiles (Premium Bento Style) */}
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
-                {grouped[subcat].map((person: any) => {
+              {/* Grid of Profiles (Premium Editorial Staggered Grid) */}
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 auto-rows-[250px] md:auto-rows-[300px]">
+                {grouped[subcat].map((person: any, index: number) => {
                   const portraitUrl = person.images?.portrait?.url || person.images?.avatar?.url;
+                  const isFeatured = index === 0;
                   
                   return (
                     <Link 
                       href={`/icons/${category}/${person.subcategory}/${person.slug}`} 
                       key={person.id}
-                      className="group relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-neutral-900 border border-white/5 block"
+                      className={`group relative rounded-[2rem] overflow-hidden bg-neutral-900 border border-white/5 block ${isFeatured ? 'col-span-2 md:col-span-2 md:row-span-2' : 'col-span-1 md:col-span-1 md:row-span-1'}`}
                     >
                       {portraitUrl ? (
                         <img 
@@ -160,26 +161,26 @@ export default async function CategoryHubPage({ params }: { params: Promise<{ ca
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center bg-white/5 text-white/20 transition-all duration-500 group-hover:bg-white/10 group-hover:text-white/40">
-                           <span className="font-black text-6xl uppercase opacity-20">{person.name.charAt(0)}</span>
+                           <span className={`${isFeatured ? 'text-9xl' : 'text-6xl'} font-black uppercase opacity-20`}>{person.name.charAt(0)}</span>
                         </div>
                       )}
                       
                       {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
+                      <div className={`absolute inset-0 bg-gradient-to-t from-black ${isFeatured ? 'via-black/20' : 'via-black/40'} to-transparent opacity-90 group-hover:opacity-100 transition-opacity`} />
                       
                       {/* Text Content */}
                       <div className="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                        <h3 className="font-black text-xl md:text-2xl leading-tight uppercase tracking-wide mb-1 text-white">
+                        <h3 className={`font-black uppercase tracking-wide mb-1 text-white ${isFeatured ? 'text-4xl md:text-5xl leading-none' : 'text-xl md:text-2xl leading-tight'}`}>
                           {person.name}
                         </h3>
-                        <p className={`text-[10px] font-bold uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 ${categoryConfig.accent}`}>
+                        <p className={`font-bold uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 ${categoryConfig.accent} ${isFeatured ? 'text-xs md:text-sm mt-2' : 'text-[10px]'}`}>
                           {person.title || "Explore Profile"}
                         </p>
                       </div>
 
                       {/* Top Right Badge */}
-                      <div className="absolute top-4 right-4 w-8 h-8 rounded-full border border-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <FaArrowLeft className="rotate-135 text-xs text-white" style={{ transform: 'rotate(135deg)' }} />
+                      <div className="absolute top-4 right-4 w-10 h-10 rounded-full border border-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <FaArrowLeft className="rotate-135 text-sm text-white" style={{ transform: 'rotate(135deg)' }} />
                       </div>
                     </Link>
                   );

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaArrowRight, FaPenNib } from "react-icons/fa";
+import { FaArrowRight, FaPenNib, FaArrowLeft } from "react-icons/fa";
 
 export const metadata = {
   title: "The Archives | TFIverse",
@@ -36,9 +36,22 @@ const THE_CREW = [
 
 export default function IconsHubPage() {
   return (
-    <main className="min-h-screen bg-[#050505] text-white selection:bg-neutral-800 pb-32">
+    <main className="min-h-screen bg-[#050505] text-white selection:bg-neutral-800 pb-32 relative">
       {/* Noise Texture Overlay */}
       <div className="fixed inset-0 opacity-[0.03] pointer-events-none mix-blend-screen bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]" />
+
+      {/* Sticky Navigation Bar */}
+      <div className="sticky top-0 z-50 px-6 py-4 border-b border-white/5 bg-black/50 backdrop-blur-xl flex items-center justify-between">
+        <Link href="/" className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-neutral-400 hover:text-white transition-colors">
+          <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+            <FaArrowLeft />
+          </div>
+          Back to Home
+        </Link>
+        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 hidden md:block">
+          TFIverse // Central Hub
+        </span>
+      </div>
 
       {/* Cinematic Header */}
       <div className="relative pt-40 pb-24 px-6 md:px-12 max-w-[1400px] mx-auto z-10 flex flex-col md:flex-row md:items-end justify-between gap-8">
