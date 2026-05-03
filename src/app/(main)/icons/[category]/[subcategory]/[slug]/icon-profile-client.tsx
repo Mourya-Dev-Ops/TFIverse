@@ -162,8 +162,17 @@ export default function IconProfileClient({
 
       {/* Sticky Premium Tab Navigation */}
       <div className="sticky top-0 z-50 bg-black/80 backdrop-blur-2xl border-b border-white/5">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-16">
-          <div className="flex gap-8 md:gap-12 overflow-x-auto no-scrollbar relative">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-16 flex items-center">
+          {/* Back Button */}
+          <Link 
+            href={`/icons/${category}`}
+            className="group flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-white/5 border border-white/10 hover:bg-white hover:text-black transition-colors mr-6 md:mr-10"
+            title="Back to Directory"
+          >
+            <span className="transform group-hover:-translate-x-1 transition-transform">←</span>
+          </Link>
+
+          <div className="flex gap-8 md:gap-12 overflow-x-auto no-scrollbar relative flex-1">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -206,9 +215,11 @@ export default function IconProfileClient({
                     <span className={`w-4 h-4 rounded-full ${theme.accentBg} animate-pulse opacity-50`} />
                     The Legend
                   </h3>
-                  <p className="text-xl md:text-3xl leading-[1.6] text-neutral-200 font-light tracking-wide">
-                    {data.bio}
-                  </p>
+                  <div className="text-base md:text-lg lg:text-xl leading-[1.8] text-neutral-300 font-light tracking-wide">
+                    <p className="first-letter:text-6xl md:first-letter:text-8xl first-letter:font-black first-letter:text-white first-letter:mr-3 first-letter:mt-2 first-letter:float-left">
+                      {data.bio}
+                    </p>
+                  </div>
                 </div>
 
                 {/* Hero Aura Bento Grid */}
