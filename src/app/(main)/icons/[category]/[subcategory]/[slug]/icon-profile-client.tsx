@@ -266,9 +266,9 @@ export default function IconProfileClient({
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Beyond Cinema</h3>
                     <div className="flex flex-wrap gap-3">
-                      {hobbies.map((hobby: string, idx: number) => (
+                      {hobbies.map((hobby: any, idx: number) => (
                         <span key={idx} className="px-4 py-2 bg-[#0a0a0a] border border-white/5 rounded-full text-xs font-bold text-neutral-300">
-                          {hobby}
+                          {typeof hobby === 'string' ? hobby : hobby.hobby}
                         </span>
                       ))}
                     </div>
