@@ -15,15 +15,21 @@ export default async function MainLayout({
   
   // Fetch fresh avatar from DB to prevent stale session images
   if (session?.user?.email) {
-    const { users } = await import("@/lib/schema");
-    const [profile] = await db
-      .select({ avatarUrl: userProfiles.avatarUrl })
-      .from(userProfiles)
-      .innerJoin(users, eq(users.id, userProfiles.userId))
-      .where(eq(users.email, session.user.email));
-      
-    if (profile?.avatarUrl) {
-      userImage = profile.avatarUrl;
+    try {
+      const { users } = await import("@/lib/schema");
+      const [profile] = await db
+        .select({ avatarUrl: userProfiles.avatarUrl })
+        .from(userProfiles)
+        .innerJoin(users, eq(users.id, userProfiles.userId))
+        .where(eq(users.email, session.user.email))
+        .limit(1);
+        
+      if (profile?.avatarUrl) {
+        userImage = profile.avatarUrl;
+      }
+    } catch (error) {
+      console.error("Layout: Failed to fetch fresh avatar from DB:", error);
+      // Fallback to session image already handled
     }
   }
 
