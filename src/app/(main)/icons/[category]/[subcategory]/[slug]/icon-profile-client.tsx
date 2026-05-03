@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaInstagram, FaTwitter, FaImdb, FaCar, FaHome, FaStar, FaQuoteLeft, FaDumbbell, FaMoneyBillWave, FaFilm, FaCrown } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaImdb, FaCar, FaHome, FaStar, FaQuoteLeft, FaDumbbell, FaMoneyBillWave, FaFilm, FaCrown, FaChartBar, FaMusic } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -77,37 +77,60 @@ export default function IconProfileClient({
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || [];
   const careerStats = data.careerStats || null;
-  const genreStrength = data.genreStrength || null;
+  const genreStrength = data.genreStrength || data.genreExpertise || null;
   const philanthropy = data.philanthropy || null;
   const awards = data.awards || [];
   const quotes = data.quotes || [];
   const trivia = data.trivia || [];
   const knownFor = data.knownFor || [];
   const alternateNames = data.alternateNames || [];
+  
+  // Legend-specific data
+  const careerRetrospective = data.careerRetrospective || null;
+  const iconicRoles = data.iconicRoles || [];
+  const onScreenPersona = data.onScreenPersona || null;
+  const historicalImpact = data.historicalImpact || null;
+  const industryContribution = data.industryContribution || null;
+  const mentorshipInfluence = data.mentorshipInfluence || null;
+  const internationalRecognition = data.internationalRecognition || null;
+  const criticalAppreciation = data.criticalAppreciation || null;
+  const filmmakerRelationships = data.filmmakerRelationships || null;
+  const politicalCareer = data.politicalCareer || null;
+
+  // Rising Star specific data
+  const debutAnalysis = data.debutAnalysis || null;
+  const breakingMoment = data.breakingMoment || null;
+  const fanbaseAnalysis = data.fanbaseAnalysis || null;
+  const competitorComparison = data.competitorComparison || null;
+  const superstarpotential = data.superstarpotential || null;
 
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
     { id: "overview", label: "Overview" },
   ];
 
-  if (physicalStats || voiceProfile || personalInfo.education) {
+  if (physicalStats || voiceProfile || personalInfo.education || onScreenPersona) {
     tabs.push({ id: "dossier", label: "Dossier" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations) {
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships) {
     tabs.push({ id: "craft", label: "The Craft" });
   }
 
-  if (lifestyle || financial) {
+  if (lifestyle || financial || politicalCareer) {
     tabs.push({ id: "empire", label: "Empire" });
   }
 
-  if (careerStats || genreStrength || awards.length > 0) {
+  if (careerStats || genreStrength || awards.length > 0 || careerRetrospective) {
     tabs.push({ id: "career", label: "Career" });
   }
 
-  if (philanthropy || quotes.length > 0 || trivia.length > 0) {
+  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation) {
     tabs.push({ id: "legacy", label: "Legacy" });
+  }
+
+  if (fanbaseAnalysis || competitorComparison || superstarpotential) {
+    tabs.push({ id: "trajectory", label: "Trajectory" });
   }
 
   tabs.push({ id: "movies", label: "Filmography" });
@@ -252,6 +275,40 @@ export default function IconProfileClient({
                   </div>
                 </div>
 
+                {/* Debut & Breakthrough (Rising Stars) */}
+                {(debutAnalysis || breakingMoment) && (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    {debutAnalysis && (
+                      <div className="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] relative overflow-hidden group">
+                        <div className={`absolute left-0 top-0 w-1 h-full ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>The Origin</h4>
+                        <div className="mb-4">
+                          <span className="text-xl font-black text-white">{debutAnalysis.debutFilm}</span>
+                          <span className="text-xs text-neutral-500 font-bold ml-2">({debutAnalysis.debutYear})</span>
+                        </div>
+                        <p className="text-neutral-400 text-sm leading-relaxed mb-4">{debutAnalysis.debutRole}</p>
+                        <p className="text-neutral-500 text-xs italic">"{debutAnalysis.significance}"</p>
+                      </div>
+                    )}
+                    {breakingMoment && (
+                      <div className="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] relative overflow-hidden group">
+                        <div className={`absolute left-0 top-0 w-1 h-full ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>The Breakthrough</h4>
+                        <div className="mb-4">
+                          <span className="text-xl font-black text-white">{breakingMoment.film}</span>
+                          <span className="text-xs text-neutral-500 font-bold ml-2">({breakingMoment.year})</span>
+                        </div>
+                        <p className="text-neutral-400 text-sm leading-relaxed mb-4">{breakingMoment.impact}</p>
+                        {breakingMoment.collection && (
+                          <span className="inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-bold tracking-widest uppercase text-neutral-300">
+                            Box Office: {breakingMoment.collection}
+                          </span>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
+
                 {/* Hero Aura Bento Grid */}
                 {heroAura && (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -331,7 +388,8 @@ export default function IconProfileClient({
                               <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded ${theme.badgeTheme}`}>{hobby.proficiency}</span>
                             )}
                           </div>
-                          {hobby.description && <p className="text-neutral-500 text-xs leading-relaxed line-clamp-3">{hobby.description}</p>}
+                          {hobby.description && <p className="text-neutral-500 text-xs leading-relaxed">{hobby.description}</p>}
+                          {hobby.impact && <p className="text-neutral-600 text-[10px] leading-relaxed mt-2 italic">{hobby.impact}</p>}
                           {hobby.frequency && <span className="text-[9px] text-neutral-600 uppercase tracking-widest mt-2 block">{hobby.frequency}</span>}
                         </div>
                       ))}
@@ -391,15 +449,15 @@ export default function IconProfileClient({
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                       <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
                         <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Height</span>
-                        <span className={`text-2xl font-black ${theme.accent}`}>{physicalStats.body?.height || "N/A"}</span>
+                        <span className={`text-2xl font-black ${theme.accent}`}>{physicalStats.body?.height || (physicalStats.height?.feet ? `${physicalStats.height.feet} (${physicalStats.height.cm}cm)` : "N/A")}</span>
                       </div>
                       <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
                         <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Weight</span>
-                        <span className={`text-2xl font-black ${theme.accent}`}>{physicalStats.body?.weight?.current || "N/A"}</span>
+                        <span className={`text-2xl font-black ${theme.accent}`}>{physicalStats.body?.weight?.current || (physicalStats.weight?.kg ? `${physicalStats.weight.kg}kg` : "N/A")}</span>
                       </div>
                       <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center col-span-2">
                         <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Body Type</span>
-                        <span className="text-sm font-bold text-neutral-300">{physicalStats.body?.bodyType || "N/A"}</span>
+                        <span className="text-sm font-bold text-neutral-300">{physicalStats.body?.bodyType || physicalStats.build || "N/A"}</span>
                       </div>
                     </div>
 
@@ -416,21 +474,21 @@ export default function IconProfileClient({
                     )}
 
                     {/* Appearance */}
-                    {physicalStats.appearance && (
+                    {(physicalStats.appearance || physicalStats.hairColor || physicalStats.eyeColor) && (
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-                        {physicalStats.appearance.hairColor && (
+                        {(physicalStats.appearance?.hairColor || physicalStats.hairColor) && (
                           <div className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5">
                             <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Hair</span>
-                            <span className="text-xs font-bold text-neutral-300">{physicalStats.appearance.hairColor}</span>
+                            <span className="text-xs font-bold text-neutral-300">{physicalStats.appearance?.hairColor || physicalStats.hairColor}</span>
                           </div>
                         )}
-                        {physicalStats.appearance.eyeColor && (
+                        {(physicalStats.appearance?.eyeColor || physicalStats.eyeColor) && (
                           <div className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5">
                             <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Eyes</span>
-                            <span className="text-xs font-bold text-neutral-300">{physicalStats.appearance.eyeColor}</span>
+                            <span className="text-xs font-bold text-neutral-300">{physicalStats.appearance?.eyeColor || physicalStats.eyeColor}</span>
                           </div>
                         )}
-                        {physicalStats.appearance.skinTone && (
+                        {physicalStats.appearance?.skinTone && (
                           <div className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5">
                             <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Skin Tone</span>
                             <span className="text-xs font-bold text-neutral-300">{physicalStats.appearance.skinTone}</span>
@@ -440,16 +498,38 @@ export default function IconProfileClient({
                     )}
 
                     {/* Distinctive Features */}
-                    {physicalStats.appearance?.distinctiveFeatures && (
+                    {(physicalStats.appearance?.distinctiveFeatures || physicalStats.distinctiveFeatures) && (
                       <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 mb-6">
                         <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Distinctive Features</h4>
                         <ul className="space-y-2">
-                          {physicalStats.appearance.distinctiveFeatures.map((feat: string, i: number) => (
+                          {(Array.isArray(physicalStats.appearance?.distinctiveFeatures || physicalStats.distinctiveFeatures) ? (physicalStats.appearance?.distinctiveFeatures || physicalStats.distinctiveFeatures) : []).map((feat: string, i: number) => (
                             <li key={i} className="text-neutral-400 text-xs leading-relaxed flex gap-2"><span className="text-neutral-600 shrink-0">—</span>{feat}</li>
                           ))}
                         </ul>
                       </div>
                     )}
+
+                    {/* Health History (Legend) */}
+                    {physicalStats.healthHistory && (
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 mb-6">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Health History</h4>
+                        <p className="text-neutral-400 text-sm leading-relaxed">{physicalStats.healthHistory}</p>
+                      </div>
+                    )}
+
+                    {/* Footwear */}
+                    {physicalStats.footwear && (
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+                        {Object.entries(physicalStats.footwear).map(([key, val]: [string, any]) => (
+                          <div key={key} className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5 text-center">
+                            <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Shoe {key}</span>
+                            <span className="text-xs font-bold text-neutral-300">{val}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+
 
                     {/* Fitness & Nutrition Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -493,6 +573,12 @@ export default function IconProfileClient({
                                 <span className="text-xs text-neutral-200">{physicalStats.nutritionProfile.macroFocus}</span>
                               </div>
                             )}
+                            {physicalStats.nutritionProfile.supplementationApproach && (
+                              <div className="bg-black/50 p-3 rounded-lg border border-white/5">
+                                <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Supplements</span>
+                                <span className="text-xs text-neutral-200">{physicalStats.nutritionProfile.supplementationApproach}</span>
+                              </div>
+                            )}
                           </div>
                         </div>
                       )}
@@ -522,6 +608,17 @@ export default function IconProfileClient({
                         "{voiceProfile.signatureVoiceElements || voiceProfile.voiceCharacteristics?.voiceType}"
                       </p>
 
+                      {voiceProfile.notableCharacteristics && voiceProfile.notableCharacteristics.length > 0 && (
+                        <div className="mb-6">
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500">Notable Characteristics</h4>
+                          <ul className="space-y-2">
+                            {voiceProfile.notableCharacteristics.map((char: string, i: number) => (
+                              <li key={i} className="text-neutral-400 text-xs leading-relaxed flex gap-2"><span className={`${theme.accent} shrink-0`}>•</span>{char}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
                       {voiceProfile.languagesFluent && (
                         <div>
                           <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500">Linguistic Arsenal</h4>
@@ -538,6 +635,49 @@ export default function IconProfileClient({
                     </div>
                   </div>
                 )}
+
+                {/* On-Screen Persona (Legend) */}
+                {onScreenPersona && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">The Persona</h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden">
+                      {onScreenPersona.actingStyle && (
+                        <div className="mb-6">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 ${theme.accent}`}>Acting Style</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{onScreenPersona.actingStyle}</p>
+                        </div>
+                      )}
+                      {onScreenPersona.typecastedAs && (
+                        <div className="mb-6">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 ${theme.accent}`}>Archetypes</h4>
+                          <p className="text-neutral-400 text-xs leading-relaxed">{onScreenPersona.typecastedAs}</p>
+                        </div>
+                      )}
+                      {onScreenPersona.strengthAreas && (
+                        <div className="mb-6">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 ${theme.accent}`}>Strength Areas</h4>
+                          <ul className="space-y-2">
+                            {onScreenPersona.strengthAreas.map((area: string, i: number) => (
+                              <li key={i} className="text-neutral-400 text-xs leading-relaxed flex gap-2"><span className="text-neutral-600 shrink-0">—</span>{area}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {onScreenPersona.styleEvolution && (
+                        <div className="mb-6">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 ${theme.accent}`}>Style Evolution</h4>
+                          <p className="text-neutral-400 text-xs leading-relaxed">{onScreenPersona.styleEvolution}</p>
+                        </div>
+                      )}
+                      {onScreenPersona.actingPhilosophy && (
+                        <div>
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 ${theme.accent}`}>Acting Philosophy</h4>
+                          <p className="text-neutral-400 text-xs leading-relaxed italic">"{onScreenPersona.actingPhilosophy}"</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
               </>
             )}
 
@@ -546,6 +686,40 @@ export default function IconProfileClient({
             {/* ========================================== */}
             {activeTab === "craft" && (
               <>
+                {/* Iconic Roles (Legend) */}
+                {iconicRoles.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Cinematic Milestones
+                    </h3>
+                    <div className="space-y-6">
+                      {iconicRoles.map((role: any, idx: number) => (
+                        <div key={idx} className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          
+                          <div className="flex flex-col md:flex-row gap-6 md:items-center justify-between mb-4 pl-4">
+                            <div>
+                              <h4 className="text-2xl font-black tracking-tight text-white mb-1">{role.characterName}</h4>
+                              <span className="text-xs font-bold uppercase tracking-widest text-neutral-500">{role.film} ({role.year})</span>
+                            </div>
+                            <div className="px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shrink-0 text-center">
+                              <span className={`text-[10px] font-black uppercase tracking-[0.2em] ${theme.accent} block`}>Role Type</span>
+                              <span className="text-sm font-bold text-white">{role.roleType}</span>
+                            </div>
+                          </div>
+                          
+                          <div className="pl-4 space-y-3">
+                            <p className="text-neutral-300 text-sm leading-relaxed"><span className="text-neutral-500 font-bold mr-2">Significance:</span>{role.significance}</p>
+                            <p className="text-neutral-400 text-xs leading-relaxed"><span className="text-neutral-500 font-bold mr-2">Impact:</span>{role.culturalImpact}</p>
+                            {role.legendaryQuote && (
+                              <p className="text-neutral-300 text-xs italic bg-black/50 p-3 rounded-lg border border-white/5">"{role.legendaryQuote}"</p>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
                 {/* Physical Transformations Timeline */}
                 {transformations.length > 0 && (
                   <div>
@@ -595,7 +769,7 @@ export default function IconProfileClient({
                           </p>
                           <div className="flex flex-col gap-1">
                             <span className={`text-[10px] font-black uppercase tracking-widest ${theme.accent}`}>{dialogue.movie} ({dialogue.year})</span>
-                            <span className="text-xs text-neutral-500 line-clamp-2">{dialogue.context}</span>
+                            <span className="text-xs text-neutral-500">{dialogue.context}</span>
                           </div>
                         </div>
                       ))}
@@ -604,60 +778,114 @@ export default function IconProfileClient({
                 )}
 
                 {/* Collaborations */}
-                {collaborations?.frequentDirectors && (
+                {(collaborations?.frequentDirectors || filmmakerRelationships?.frequentDirectors) && (
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 mt-12">Visionary Partners (Directors)</h3>
                     <div className="flex overflow-x-auto gap-4 pb-8 no-scrollbar snap-x">
-                      {collaborations.frequentDirectors.map((collab: any, idx: number) => (
-                        <div key={idx} className="min-w-[280px] md:min-w-[320px] p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 snap-start shrink-0 flex flex-col justify-between">
+                      {(collaborations?.frequentDirectors || filmmakerRelationships?.frequentDirectors).map((collab: any, idx: number) => (
+                        <div key={idx} className="w-[300px] md:w-[400px] shrink-0 p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 snap-start flex flex-col justify-between whitespace-normal">
                           <div>
-                            <h4 className="text-xl font-black uppercase tracking-tight text-white mb-1">{collab.name}</h4>
-                            <span className={`text-[10px] font-bold uppercase tracking-widest ${theme.accent} mb-4 block`}>{collab.filmCount} Films Together</span>
-                            <p className="text-xs text-neutral-400 leading-relaxed line-clamp-4">{collab.chemistry}</p>
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center font-black text-white shrink-0">
+                                {collab.name.charAt(0)}
+                              </div>
+                              <div>
+                                <h4 className="text-lg font-black text-white leading-tight">{collab.name}</h4>
+                                <span className={`text-[9px] uppercase tracking-widest ${theme.accent}`}>{collab.filmCount} Films</span>
+                              </div>
+                            </div>
+                            {(collab.partnership || collab.chemistry) && (
+                              <p className="text-sm text-neutral-400 leading-relaxed mb-6 italic">"{collab.partnership || collab.chemistry}"</p>
+                            )}
+                          </div>
+                          <div>
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              {(Array.isArray(collab.films) ? collab.films : []).map((film: any, i: number) => (
+                                <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-neutral-300 border border-white/5">
+                                  {typeof film === 'string' ? film : film.title}
+                                </span>
+                              ))}
+                            </div>
+                            {collab.legacy && (
+                              <p className="text-xs text-neutral-500 mt-2"><strong className="text-neutral-400">Legacy:</strong> {collab.legacy}</p>
+                            )}
                           </div>
                         </div>
                       ))}
                     </div>
                   </div>
                 )}
-                {/* Music Directors */}
-                {collaborations?.musicDirectors && collaborations.musicDirectors.length > 0 && (
+                
+                {(collaborations?.frequentHeroines || filmmakerRelationships?.frequentHeroines) && (
                   <div>
-                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 mt-12">Sonic Architects</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {collaborations.musicDirectors.map((md: any, idx: number) => (
-                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 flex items-center justify-between group">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 mt-12">On-Screen Chemistry</h3>
+                    <div className="flex overflow-x-auto gap-4 pb-8 no-scrollbar snap-x">
+                      {(collaborations?.frequentHeroines || filmmakerRelationships?.frequentHeroines).map((collab: any, idx: number) => (
+                        <div key={idx} className="w-[300px] md:w-[400px] shrink-0 p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 snap-start flex flex-col justify-between whitespace-normal">
                           <div>
-                            <h4 className="text-sm font-black uppercase text-white mb-1 group-hover:text-zinc-300 transition-colors">{md.name}</h4>
-                            <span className="text-xs text-neutral-500">{md.iconicAlbum || md.chemistry}</span>
+                            <div className="flex items-center justify-between mb-4">
+                              <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center font-black text-white shrink-0">
+                                  {collab.name.charAt(0)}
+                                </div>
+                                <div>
+                                  <h4 className="text-lg font-black text-white leading-tight">{collab.name}</h4>
+                                  <span className={`text-[9px] uppercase tracking-widest ${theme.accent}`}>{collab.filmCount} Films</span>
+                                </div>
+                              </div>
+                              {collab.fanFollowing && <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-1 rounded ${theme.badgeTheme}`}>{collab.fanFollowing}</span>}
+                            </div>
+                            {(collab.chemistry || collab.relationship) && (
+                              <p className="text-sm text-neutral-400 leading-relaxed mb-4 italic">"{collab.chemistry || collab.relationship}"</p>
+                            )}
                           </div>
-                          <span className={`text-[10px] font-bold uppercase tracking-widest ${theme.accent}`}>{md.filmCount} Films</span>
+                          {collab.films && (
+                            <div className="flex flex-wrap gap-2">
+                              {(Array.isArray(collab.films) ? collab.films : []).map((film: any, i: number) => (
+                                <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-neutral-300 border border-white/5">
+                                  {typeof film === 'string' ? film : film.title}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {(collaborations?.musicDirectors || filmmakerRelationships?.musicDirectors) && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 mt-4">Musical Synergy</h3>
+                    <div className="flex overflow-x-auto gap-4 pb-8 no-scrollbar snap-x">
+                      {(collaborations?.musicDirectors || filmmakerRelationships?.musicDirectors).map((collab: any, idx: number) => (
+                        <div key={idx} className="w-[300px] md:w-[400px] shrink-0 p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 snap-start whitespace-normal">
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                              <FaMusic className="text-neutral-400" />
+                            </div>
+                            <div>
+                              <h4 className="text-lg font-black text-white leading-tight">{collab.name}</h4>
+                              <span className={`text-[9px] uppercase tracking-widest ${theme.accent}`}>{collab.filmCount} Films</span>
+                            </div>
+                          </div>
+                          {(collab.relationship || collab.chemistry) && (
+                            <p className="text-sm text-neutral-400 leading-relaxed mb-4 italic">"{collab.relationship || collab.chemistry}"</p>
+                          )}
+                          <div className="flex flex-wrap gap-2">
+                            {(collab.legendaryCompositions || collab.films || []).map((comp: any, i: number) => (
+                              <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-neutral-300 border border-white/5">
+                                {typeof comp === 'string' ? comp : comp.title}
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       ))}
                     </div>
                   </div>
                 )}
 
-                {/* Frequent Heroines */}
-                {collaborations?.frequentHeroines && collaborations.frequentHeroines.length > 0 && (
-                  <div>
-                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 mt-12">On-Screen Chemistry</h3>
-                    <div className="flex overflow-x-auto gap-4 pb-8 no-scrollbar snap-x">
-                      {collaborations.frequentHeroines.map((h: any, idx: number) => (
-                        <div key={idx} className="min-w-[280px] md:min-w-[320px] p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 snap-start shrink-0 flex flex-col justify-between">
-                          <div>
-                            <div className="flex items-center justify-between mb-2">
-                              <h4 className="text-lg font-black uppercase tracking-tight text-white">{h.name}</h4>
-                              {h.fanFollowing && <span className={`text-[9px] font-bold uppercase tracking-widest ${theme.accent}`}>{h.fanFollowing}</span>}
-                            </div>
-                            <span className={`text-[10px] font-bold uppercase tracking-widest ${theme.accent} mb-3 block`}>{h.filmCount} Films Together</span>
-                            <p className="text-xs text-neutral-400 leading-relaxed line-clamp-3">{h.chemistry}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
+
 
                 {/* Dubbing Artists */}
                 {voiceProfile?.dubbingArtists && (
@@ -667,7 +895,7 @@ export default function IconProfileClient({
                       {Object.entries(voiceProfile.dubbingArtists).map(([lang, artist]: [string, any]) => (
                         <div key={lang} className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5 flex items-center justify-between">
                           <span className="text-xs font-bold text-white uppercase tracking-wide">{lang}</span>
-                          <span className="text-xs text-neutral-400 text-right max-w-[60%] line-clamp-1">{artist}</span>
+                          <span className="text-xs text-neutral-400 text-right max-w-[60%]">{artist}</span>
                         </div>
                       ))}
                     </div>
@@ -681,6 +909,79 @@ export default function IconProfileClient({
             {/* ========================================== */}
             {activeTab === "empire" && (
               <>
+                {/* Political Career (Legend) */}
+                {politicalCareer && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Political Empire
+                    </h3>
+                    <div className={`p-10 rounded-[2rem] bg-gradient-to-br from-[#0a0a0a] to-[#050505] border border-white/5 relative overflow-hidden ${theme.glowColor}`}>
+                      <div className="absolute -right-10 -bottom-10 opacity-[0.03]">
+                        <FaStar size={250} />
+                      </div>
+                      <div className="relative z-10 flex flex-col md:flex-row gap-8 justify-between">
+                        <div className="flex-1">
+                          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2 block">Party Founded</span>
+                          <h3 className={`text-4xl md:text-5xl font-black tracking-tighter ${theme.accent} mb-2`}>
+                            {politicalCareer.partyFounded}
+                          </h3>
+                          <p className="text-neutral-400 text-sm italic font-bold">"{politicalCareer.foundingPrinciple}"</p>
+                          <span className="text-xs text-neutral-500 block mt-2">Founded: {politicalCareer.foundingDate}</span>
+                        </div>
+                        <div className="flex flex-col justify-center items-start md:items-end">
+                          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-1 block">Electoral Victories</span>
+                          <span className="text-6xl font-black text-white">{politicalCareer.electoralVictories}</span>
+                        </div>
+                      </div>
+
+                      {/* Chief Minister Terms */}
+                      {politicalCareer.chiefMinisterTerms && (
+                        <div className="mt-8">
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500">Chief Minister Terms</h4>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {politicalCareer.chiefMinisterTerms.map((term: any, idx: number) => (
+                              <div key={idx} className="p-4 rounded-xl bg-[#050505] border border-white/5 relative group">
+                                <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-20 group-hover:opacity-100 transition-opacity rounded-l-xl`} />
+                                <div className="pl-4">
+                                  <span className="text-[10px] font-black uppercase tracking-widest text-neutral-400 block mb-1">Term {term.termNumber} ({term.duration})</span>
+                                  <p className="text-sm font-bold text-white mb-2">{term.period}</p>
+                                  <p className="text-xs text-neutral-500">{term.achievement}</p>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Major Policies */}
+                      {politicalCareer.majorPolicies && (
+                        <div className="mt-8">
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500">Major Policies</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {politicalCareer.majorPolicies.map((policy: string, idx: number) => (
+                              <span key={idx} className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-neutral-300 border border-white/5">
+                                {policy}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      
+                      {/* Campaign Innovations */}
+                      {politicalCareer.campaignInnovations && (
+                        <div className="mt-8">
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500">Campaign Innovations</h4>
+                          <ul className="space-y-2">
+                            {politicalCareer.campaignInnovations.map((innovation: string, idx: number) => (
+                              <li key={idx} className="text-neutral-400 text-xs flex gap-2"><span className={`${theme.accent} shrink-0`}>•</span>{innovation}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
                 {/* Net Worth Hero Box */}
                 {financial?.netWorth && (
                   <div className={`p-10 rounded-[2rem] bg-gradient-to-br from-[#0a0a0a] to-[#050505] border border-white/5 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 ${theme.glowColor}`}>
@@ -724,7 +1025,7 @@ export default function IconProfileClient({
                             </div>
                             <span className={`text-xs font-bold ${theme.accent} whitespace-nowrap`}>{car.estimatedValue}</span>
                           </div>
-                          <p className="text-xs text-neutral-400 line-clamp-2">{car.notes}</p>
+                          <p className="text-xs text-neutral-400">{car.notes}</p>
                         </div>
                       ))}
                     </div>
@@ -759,33 +1060,96 @@ export default function IconProfileClient({
                   </div>
                 )}
                 {/* Business Ventures */}
-                {financial?.businessVentures && financial.businessVentures.length > 0 && (
+                {financial?.businessVentures && (typeof financial.businessVentures === 'string' ? financial.businessVentures.length > 0 : true) && (
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Corporate Ventures</h3>
+                    {Array.isArray(financial.businessVentures) ? (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {financial.businessVentures.map((venture: any, idx: number) => (
+                          <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 group hover:border-white/10 transition-colors">
+                            <span className={`text-[9px] uppercase tracking-widest ${theme.accent} font-bold mb-1 block`}>{venture.industry || venture.type}</span>
+                            <h4 className="text-lg font-black text-white mb-1">{venture.name}</h4>
+                            {venture.stake && <span className="text-xs text-neutral-500 block mb-1">{venture.stake}</span>}
+                            {venture.role && <span className="text-xs text-neutral-400 block">{venture.role}</span>}
+                            {venture.status && <span className={`text-[9px] uppercase tracking-widest ${theme.accent} font-bold block mt-2`}>{venture.status}</span>}
+                            {venture.notes && <p className="text-neutral-500 text-[10px] leading-relaxed mt-2">{venture.notes}</p>}
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                        <p className="text-sm text-neutral-400 leading-relaxed">{financial.businessVentures}</p>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Earnings Breakdown (Superstar) */}
+                {financial?.earnings && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Earnings Breakdown</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {financial.businessVentures.map((venture: any, idx: number) => (
-                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
-                          <span className={`text-[9px] uppercase tracking-widest ${theme.accent} font-bold mb-1 block`}>{venture.industry}</span>
-                          <h4 className="text-lg font-black text-white">{venture.name}</h4>
-                          <span className="text-xs text-neutral-400">{venture.role}</span>
+                      {Object.entries(financial.earnings).map(([key, val]: [string, any]) => (
+                        <div key={key} className="p-5 rounded-xl bg-[#0a0a0a] border border-white/5">
+                          <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                          <span className="text-sm font-bold text-neutral-300">{val}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 )}
 
+                {/* Investments (Legend) */}
+                {financial?.investments && Array.isArray(financial.investments) && financial.investments.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Investments</h3>
+                    <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                      <ul className="space-y-2">
+                        {financial.investments.map((inv: string, i: number) => (
+                          <li key={i} className="text-neutral-400 text-xs leading-relaxed flex gap-2"><span className={`${theme.accent} shrink-0`}>•</span>{inv}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )}
+
+                {/* Assets (Legend) */}
+                {financial?.assets && Array.isArray(financial.assets) && financial.assets.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Asset Portfolio</h3>
+                    <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                      <ul className="space-y-2">
+                        {financial.assets.map((asset: string, i: number) => (
+                          <li key={i} className="text-neutral-400 text-xs leading-relaxed flex gap-2"><span className="text-neutral-600 shrink-0">—</span>{asset}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )}
+
                 {/* Endorsements */}
-                {financial?.endorsements && financial.endorsements.length > 0 && (
+                {(financial?.endorsements || financial?.brandEndorsements) && (
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Brand Portfolio</h3>
-                    <div className="flex flex-wrap gap-3">
-                      {financial.endorsements.map((brand: any, idx: number) => (
-                        <div key={idx} className="px-4 py-3 bg-[#0a0a0a] border border-white/5 rounded-xl flex items-center gap-3">
-                          <span className="text-sm font-bold text-white">{brand.brand}</span>
-                          <span className="text-[10px] text-neutral-500 px-2 py-0.5 bg-white/5 rounded">{brand.category}</span>
-                        </div>
-                      ))}
-                    </div>
+                    {Array.isArray(financial.endorsements) ? (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {financial.endorsements.map((brand: any, idx: number) => (
+                          <div key={idx} className="p-5 rounded-xl bg-[#0a0a0a] border border-white/5 group hover:border-white/10 transition-colors">
+                            <div className="flex items-center justify-between mb-2">
+                              <h4 className="text-sm font-bold text-white">{brand.brand}</h4>
+                              {brand.annualDeal && <span className={`text-xs font-bold ${theme.accent}`}>{brand.annualDeal}</span>}
+                            </div>
+                            <span className="text-[10px] text-neutral-500 block mb-1">{brand.category}</span>
+                            {brand.status && <span className={`text-[9px] uppercase tracking-widest font-bold block mb-1 ${brand.status?.includes('Active') ? 'text-green-500' : 'text-neutral-600'}`}>{brand.status}</span>}
+                            {brand.notes && <p className="text-neutral-500 text-[10px] leading-relaxed mt-1">{brand.notes}</p>}
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                        <p className="text-sm text-neutral-400 leading-relaxed">{financial.endorsements || financial.brandEndorsements}</p>
+                      </div>
+                    )}
                   </div>
                 )}
                 {/* Fashion & Watches */}
@@ -828,6 +1192,69 @@ export default function IconProfileClient({
             {/* ========================================== */}
             {activeTab === "career" && (
               <>
+                {/* Career Retrospective (Legend) */}
+                {careerRetrospective && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaChartBar /> Career Retrospective
+                    </h3>
+                    
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
+                        <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Total Films</span>
+                        <span className={`text-3xl font-black text-white`}>{careerRetrospective.totalCareerFilms}</span>
+                      </div>
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
+                        <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Hit Ratio</span>
+                        <span className={`text-3xl font-black ${theme.accent}`}>{careerRetrospective.hitPercentage?.replace(/[^0-9%]/g, '') || "N/A"}</span>
+                      </div>
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center col-span-2">
+                        <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Peak Era</span>
+                        <span className={`text-lg font-black text-white block`}>{careerRetrospective.peakPeriod?.split(' - ')[0] || "N/A"}</span>
+                      </div>
+                    </div>
+
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 mb-8">
+                      <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>The Arc</h4>
+                      <p className="text-neutral-300 text-sm leading-relaxed">{careerRetrospective.careerArc}</p>
+                    </div>
+
+                    {/* Decade by Decade */}
+                    {careerRetrospective.byDecade && (
+                      <div>
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-6 text-neutral-500">Decade Breakdown</h4>
+                        <div className="space-y-4">
+                          {Object.entries(careerRetrospective.byDecade).map(([decade, data]: [string, any]) => {
+                            if (!data || !data.contribution) return null;
+                            return (
+                              <div key={decade} className="p-6 rounded-2xl bg-[#050505] border border-white/5 flex flex-col md:flex-row gap-6 relative group overflow-hidden">
+                                <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-20 group-hover:opacity-100 transition-opacity`} />
+                                <div className="w-24 shrink-0">
+                                  <span className={`text-2xl font-black ${theme.accent}`}>{decade}</span>
+                                  {data.filmCount && <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 block mt-1">{data.filmCount} Films</span>}
+                                </div>
+                                <div className="flex-1">
+                                  {data.peakStatus && <h5 className="text-sm font-bold text-white mb-2">{data.peakStatus}</h5>}
+                                  <p className="text-xs text-neutral-400 leading-relaxed mb-3">{data.contribution}</p>
+                                  {data.majorFilms && data.majorFilms.length > 0 && (
+                                    <div className="flex flex-wrap gap-2">
+                                      {data.majorFilms.map((film: string, i: number) => (
+                                        <span key={i} className="px-2 py-1 bg-white/5 rounded text-[9px] uppercase tracking-widest text-neutral-300 border border-white/5">
+                                          {film}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
                 {/* Career Stats Hero */}
                 {careerStats && (
                   <div>
@@ -894,21 +1321,35 @@ export default function IconProfileClient({
                     <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Genre Mastery</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {Object.entries(genreStrength).map(([genre, data]: [string, any]) => (
-                        <div key={genre} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                        <div key={genre} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 group hover:border-white/10 transition-colors">
                           <div className="flex items-center justify-between mb-3">
-                            <h4 className="text-sm font-black text-white uppercase tracking-tight">{genre}</h4>
-                            <span className={`text-lg font-black ${theme.accent}`}>{data.rating}<span className="text-neutral-600 text-xs">/100</span></span>
+                            <h4 className="text-sm font-black text-white uppercase tracking-tight">{data.genre || genre}</h4>
+                            <span className={`text-lg font-black ${theme.accent}`}>{data.rating || data.score || 0}<span className="text-neutral-600 text-xs">/100</span></span>
                           </div>
                           <div className="w-full h-1.5 bg-white/5 rounded-full mb-3 overflow-hidden">
-                            <div className={`h-full ${theme.accentBg} rounded-full`} style={{ width: `${data.rating}%` }} />
+                            <div className={`h-full ${theme.accentBg} rounded-full`} style={{ width: `${data.rating || data.score || 0}%` }} />
                           </div>
+                          
+                          {data.strength && <p className="text-neutral-500 text-[10px] leading-relaxed mb-3">{data.strength}</p>}
                           {data.strengths && (
-                            <ul className="space-y-1">
-                              {data.strengths.slice(0, 2).map((s: string, i: number) => (
+                            <ul className="space-y-1 mb-3">
+                              {data.strengths.map((s: string, i: number) => (
                                 <li key={i} className="text-neutral-500 text-[10px] leading-relaxed">• {s}</li>
                               ))}
                             </ul>
                           )}
+                          
+                          {(data.iconicFilm || (data.iconicFilms && data.iconicFilms.length > 0)) && (
+                            <div className="flex flex-wrap gap-1.5 mb-2">
+                              {data.iconicFilm && (
+                                <span className="px-2 py-0.5 bg-white/5 rounded text-[8px] uppercase tracking-widest text-neutral-400 border border-white/5">{data.iconicFilm}</span>
+                              )}
+                              {data.iconicFilms?.map((f: string, i: number) => (
+                                <span key={i} className="px-2 py-0.5 bg-white/5 rounded text-[8px] uppercase tracking-widest text-neutral-400 border border-white/5">{f}</span>
+                              ))}
+                            </div>
+                          )}
+                          {data.notes && <p className="text-neutral-600 text-[10px] leading-relaxed mt-2 italic">{data.notes}</p>}
                         </div>
                       ))}
                     </div>
@@ -943,6 +1384,138 @@ export default function IconProfileClient({
             {/* ========================================== */}
             {activeTab === "legacy" && (
               <>
+                {/* Historical Impact (Legend) */}
+                {historicalImpact && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Historical Impact
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 mb-6 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 right-0 h-1 ${theme.accentBg} opacity-50`} />
+                      <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Cinematic Revolution</h4>
+                      <p className="text-neutral-300 text-sm leading-relaxed mb-6">{historicalImpact.cinematicRevolution}</p>
+                      
+                      {historicalImpact.recordsSet && (
+                        <div className="mb-6">
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500">Records Set</h4>
+                          <ul className="space-y-2">
+                            {historicalImpact.recordsSet.map((record: string, i: number) => (
+                              <li key={i} className="text-neutral-400 text-xs leading-relaxed flex gap-2"><span className={`${theme.accent} shrink-0`}>•</span>{record}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      
+                      {historicalImpact.techniquesIntroduced && (
+                        <div>
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500">Techniques Introduced</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {historicalImpact.techniquesIntroduced.map((tech: string, i: number) => (
+                              <span key={i} className="px-3 py-1.5 bg-white/5 rounded border border-white/5 text-[10px] uppercase tracking-widest text-neutral-300">{tech}</span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Mentorship Influence (Legend) */}
+                {mentorshipInfluence && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Mentorship & Influence
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      {mentorshipInfluence.actorsMentored && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Actors Mentored</h4>
+                          <div className="space-y-4">
+                            {mentorshipInfluence.actorsMentored.map((mentee: any, i: number) => (
+                              <div key={i}>
+                                <span className="text-sm font-bold text-white block mb-1">{mentee.name}</span>
+                                <span className="text-xs text-neutral-500">{mentee.significance}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      {mentorshipInfluence.directorsInfluenced && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Directors Influenced</h4>
+                          <div className="space-y-4">
+                            {mentorshipInfluence.directorsInfluenced.map((mentee: any, i: number) => (
+                              <div key={i}>
+                                <span className="text-sm font-bold text-white block mb-1">{mentee.name}</span>
+                                <span className="text-xs text-neutral-500">{mentee.films || mentee.significance}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+                
+                {/* Industry Contribution (Legend) */}
+                {industryContribution && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Industry Contribution
+                    </h3>
+                    {industryContribution.firsts && (
+                      <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 mb-6">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Historic Firsts</h4>
+                        <ul className="space-y-3">
+                          {industryContribution.firsts.map((first: string, i: number) => (
+                            <li key={i} className="text-neutral-300 text-sm leading-relaxed flex gap-3"><span className={`font-black ${theme.accent} shrink-0`}>{i+1}.</span>{first}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* International Recognition (Legend) */}
+                {internationalRecognition && internationalRecognition.filmFestivalRecognitions && internationalRecognition.filmFestivalRecognitions.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Global Footprint
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {internationalRecognition.filmFestivalRecognitions.map((fest: any, i: number) => (
+                        <div key={i} className="p-6 rounded-2xl bg-[#050505] border border-white/5 relative">
+                          <h4 className="text-sm font-bold text-white mb-1">{fest.festival}</h4>
+                          <span className={`text-[10px] uppercase tracking-widest font-black ${theme.accent} block mb-3`}>{fest.year}</span>
+                          <p className="text-xs text-neutral-400">{fest.recognition}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Critical Appreciation (Legend) */}
+                {criticalAppreciation && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Critical Appreciation
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5">
+                      <p className="text-neutral-300 text-sm leading-relaxed mb-6 italic">"{criticalAppreciation.criticalAnalysis}"</p>
+                      {criticalAppreciation.biographicalBooks && criticalAppreciation.biographicalBooks.length > 0 && (
+                        <div>
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Biographical Literature</h4>
+                          <ul className="space-y-2">
+                            {criticalAppreciation.biographicalBooks.map((book: string, i: number) => (
+                              <li key={i} className="text-neutral-400 text-xs leading-relaxed flex gap-2"><span className="text-neutral-600 shrink-0">—</span>{book}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
                 {/* Philanthropy */}
                 {philanthropy && (
                   <div>
@@ -953,8 +1526,42 @@ export default function IconProfileClient({
                         <span className={`text-3xl md:text-5xl font-black ${theme.accent}`}>{philanthropy.totalEstimatedContribution}</span>
                       </div>
                     )}
+
+                    {/* Foundations */}
+                    {philanthropy.foundations && philanthropy.foundations.length > 0 && (
+                      <div className="mb-6">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 px-2 ${theme.accent}`}>Foundations</h4>
+                        <div className="space-y-4">
+                          {philanthropy.foundations.map((f: any, idx: number) => (
+                            <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                              <div className="flex items-center justify-between mb-3">
+                                <h4 className="text-sm font-black text-white">{f.name}</h4>
+                                {f.established && <span className="text-[10px] text-neutral-500 font-bold">Est. {f.established}</span>}
+                              </div>
+                              {f.annualBudget && <span className={`text-xs font-bold ${theme.accent} block mb-3`}>{f.annualBudget} /year</span>}
+                              {f.focus && (
+                                <div className="flex flex-wrap gap-2 mb-3">
+                                  {f.focus.map((area: string, i: number) => (
+                                    <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-neutral-300 border border-white/5">{area}</span>
+                                  ))}
+                                </div>
+                              )}
+                              {f.majorInitiatives && (
+                                <ul className="space-y-1">
+                                  {f.majorInitiatives.map((mi: string, i: number) => (
+                                    <li key={i} className="text-neutral-500 text-[10px] leading-relaxed flex gap-2"><span className="text-neutral-600 shrink-0">—</span>{mi}</li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Initiatives */}
                     {philanthropy.initiatives && philanthropy.initiatives.length > 0 && (
-                      <div className="space-y-4">
+                      <div className="space-y-4 mb-6">
                         {philanthropy.initiatives.map((init: any, idx: number) => (
                           <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
                             <div className="flex items-center justify-between mb-2">
@@ -965,6 +1572,24 @@ export default function IconProfileClient({
                             {init.beneficiaries && <span className="text-[9px] text-neutral-600 uppercase tracking-widest">{init.beneficiaries}</span>}
                           </div>
                         ))}
+                      </div>
+                    )}
+
+                    {/* Recognitions */}
+                    {philanthropy.recognitions && philanthropy.recognitions.length > 0 && (
+                      <div>
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 px-2 ${theme.accent}`}>Recognitions</h4>
+                        <div className="space-y-3">
+                          {philanthropy.recognitions.map((rec: any, idx: number) => (
+                            <div key={idx} className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5 flex items-center justify-between">
+                              <div>
+                                <span className="text-sm font-bold text-white">{rec.award}</span>
+                                <span className="text-[10px] text-neutral-500 block">{rec.givenBy}</span>
+                              </div>
+                              <span className={`text-xs font-bold ${theme.accent}`}>{rec.year}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
@@ -1001,6 +1626,114 @@ export default function IconProfileClient({
                           </div>
                         </div>
                       ))}
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+
+            {/* ========================================== */}
+            {/* TAB: TRAJECTORY (Rising Stars Only) */}
+            {/* ========================================== */}
+            {activeTab === "trajectory" && (
+              <>
+                {/* Superstar Potential Bento */}
+                {superstarpotential && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaChartBar /> Potential Forecast
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                      <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
+                        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2 block">Likelihood</span>
+                        <span className={`text-4xl font-black ${theme.accent}`}>{superstarpotential.likelihood}</span>
+                      </div>
+                      <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] md:col-span-2 ${theme.glowColor}`}>
+                        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2 block">Estimated Timeline</span>
+                        <span className="text-3xl font-black text-white">{superstarpotential.estimatedTimeline}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a]">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-6 ${theme.accent}`}>The Roadmap (Required Factors)</h4>
+                        <ul className="space-y-4">
+                          {superstarpotential.requiredFactors.map((factor: string, i: number) => (
+                            <li key={i} className="text-neutral-300 text-sm leading-relaxed flex gap-3">
+                              <span className={`font-black ${theme.accent} shrink-0`}>→</span>{factor}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a]">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Long-term Forecast</h4>
+                        <p className="text-neutral-400 text-sm leading-relaxed">{superstarpotential.forecast}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Market & Fanbase Analysis */}
+                {fanbaseAnalysis && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Market & Fanbase
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2 block">Primary Demographic</span>
+                        <p className="text-sm text-white leading-relaxed">{fanbaseAnalysis.primaryDemographic}</p>
+                      </div>
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2 block">Social Media Influence</span>
+                        <p className="text-sm text-neutral-400 leading-relaxed">{fanbaseAnalysis.socialMediaInfluence}</p>
+                      </div>
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 flex items-center justify-between">
+                        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 block">Geographic Reach</span>
+                        <span className="text-sm font-bold text-white">{fanbaseAnalysis.geographicReach}</span>
+                      </div>
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 flex items-center justify-between">
+                        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 block">Loyalty Level</span>
+                        <span className={`text-sm font-black ${theme.accent}`}>{fanbaseAnalysis.loyaltyLevel}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Competitor Comparison */}
+                {competitorComparison && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaChartBar /> Competitive Analysis
+                    </h3>
+                    
+                    <div className="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] mb-6">
+                      <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Unique Differentiator</h4>
+                      <p className="text-neutral-300 text-sm leading-relaxed">{competitorComparison.uniqueDifference}</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a]">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Competitive Edge</h4>
+                        <p className="text-neutral-400 text-sm leading-relaxed">{competitorComparison.competitiveEdge}</p>
+                      </div>
+                      
+                      {competitorComparison.peersInSamePhase && (
+                        <div className="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a]">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-6 ${theme.accent}`}>Peers in Same Phase</h4>
+                          <div className="space-y-3">
+                            {competitorComparison.peersInSamePhase.map((peer: string, idx: number) => {
+                              const [name, desc] = peer.split(' (');
+                              return (
+                                <div key={idx} className="p-4 rounded-xl bg-white/5 border border-white/5">
+                                  <span className="text-sm font-bold text-white block mb-1">{name}</span>
+                                  {desc && <span className="text-[10px] text-neutral-500 uppercase tracking-widest">{desc.replace(')', '')}</span>}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
@@ -1049,7 +1782,7 @@ export default function IconProfileClient({
                           <div className="flex items-center gap-2">
                             <span className={`text-[9px] font-bold uppercase tracking-[0.2em] ${theme.accent}`}>{credit.movieYear}</span>
                             <span className="text-neutral-500 text-[9px]">•</span>
-                            <span className="text-[9px] font-bold uppercase tracking-widest text-neutral-400 truncate">{credit.character || credit.job}</span>
+                            <span className="text-[9px] font-bold uppercase tracking-widest text-neutral-400 block mt-1">{credit.character || credit.job}</span>
                           </div>
                         </div>
                       </div>

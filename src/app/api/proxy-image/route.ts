@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 // In-memory cache for proxied images (survives between requests in the same process)
-const imageCache = new Map<string, { buffer: Buffer; contentType: string; cachedAt: number }>();
+const imageCache = new Map<string, { buffer: ArrayBuffer; contentType: string; cachedAt: number }>();
 const CACHE_TTL = 1000 * 60 * 60 * 24; // 24 hours
 const MAX_CACHE_SIZE = 500; // Max cached images to prevent memory leaks
 
@@ -59,7 +59,6 @@ export async function GET(request: NextRequest) {
     }
 
     const arrayBuffer = await response.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
     const contentType = response.headers.get('content-type') || 'image/jpeg';
 
     // Store in cache (evict oldest if full)
@@ -67,9 +66,9 @@ export async function GET(request: NextRequest) {
       const oldestKey = imageCache.keys().next().value;
       if (oldestKey) imageCache.delete(oldestKey);
     }
-    imageCache.set(url, { buffer, contentType, cachedAt: Date.now() });
+    imageCache.set(url, { buffer: arrayBuffer, contentType, cachedAt: Date.now() });
 
-    return new NextResponse(buffer, {
+    return new NextResponse(arrayBuffer, {
       headers: {
         'Content-Type': contentType,
         'Cache-Control': 'public, max-age=31536000, immutable',

@@ -14,7 +14,7 @@ type Rumor = { id: string; title: string; summary: string; status: "discussion" 
 type Upcoming = { slug: string; title: string; status: "pre" | "filming" | "post"; date?: string; poster?: string };
 
 const IMG_FALLBACK = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='600' fill='%23111'%3E%3Crect width='400' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23333' font-family='system-ui' font-size='14'%3ENo Image%3C/text%3E%3C/svg%3E";
-const fade = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, margin: "-80px" }, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } };
+const fade = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, margin: "-80px" }, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } as any };
 
 interface HomeClientProps {
   heroesData: Hero[];

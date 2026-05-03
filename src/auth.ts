@@ -16,6 +16,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     sessionsTable: sessions,
     verificationTokensTable: verificationTokens,
   }),
+  ...authConfig,
   session: { strategy: "jwt" },
   callbacks: {
     async jwt({ token, user, trigger, session }) {
@@ -44,8 +45,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       }
       return session
     },
+    ...authConfig.callbacks, // Merge authorized callback from config
   },
-  ...authConfig,
   // Override providers to add Credentials (which needs Node.js runtime for db + bcrypt)
   providers: [
     ...authConfig.providers,

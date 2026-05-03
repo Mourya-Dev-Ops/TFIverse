@@ -10,6 +10,8 @@ const PUBLIC_ROUTES = [
   "/reset-password",
   "/verify-email",
   "/api/auth",
+  "/icons",        // All celebrity profile pages
+  "/u/",           // Public user profiles
 ];
 
 // This config is Edge-compatible — NO database imports, NO bcrypt.
@@ -28,7 +30,7 @@ export default {
       const pathname = nextUrl.pathname;
 
       // Allow all public/auth routes without login
-      const isPublicRoute = PUBLIC_ROUTES.some(route => pathname.startsWith(route));
+      const isPublicRoute = pathname === "/" || PUBLIC_ROUTES.some(route => pathname.startsWith(route));
 
       // Allow static assets & API auth
       if (pathname.startsWith("/_next") || pathname.startsWith("/favicon")) {

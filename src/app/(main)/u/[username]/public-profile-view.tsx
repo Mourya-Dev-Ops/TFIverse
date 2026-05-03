@@ -13,7 +13,7 @@ import dynamic from "next/dynamic";
 import { followUser, unfollowUser } from "@/app/actions/follow";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-import verifiedAnim from "../../../../public/images/badges/verified-gold.json";
+import verifiedAnim from "../../../../../public/images/badges/verified-gold.json";
 
 interface PublicProfileViewProps {
   user: any;
