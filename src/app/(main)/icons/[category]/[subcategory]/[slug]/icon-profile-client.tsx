@@ -8,13 +8,13 @@ import Link from "next/link";
 // Premium Thematic Engine
 const THEMES: Record<string, any> = {
   heroes: {
-    accent: "text-amber-500",
-    accentBg: "bg-amber-500",
+    accent: "text-zinc-100",
+    accentBg: "bg-zinc-100",
     bgPattern: "bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]",
-    bgGradient: "from-[#050505] via-[#111111] to-black",
-    glowColor: "bg-amber-500/5 border-amber-500/10",
-    badgeTheme: "bg-amber-500/10 text-amber-500 border-amber-500/20",
-    activeTab: "text-amber-500 border-amber-500",
+    bgGradient: "from-[#0a0a0a] via-black to-black",
+    glowColor: "bg-white/5 border-white/10",
+    badgeTheme: "bg-white/10 text-white border-white/20",
+    activeTab: "text-white border-white",
   },
   heroines: {
     accent: "text-rose-500",
@@ -261,6 +261,19 @@ export default function IconProfileClient({
                     </div>
                   </div>
                 )}
+                {/* Hobbies & Interests */}
+                {hobbies && hobbies.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Beyond Cinema</h3>
+                    <div className="flex flex-wrap gap-3">
+                      {hobbies.map((hobby: string, idx: number) => (
+                        <span key={idx} className="px-4 py-2 bg-[#0a0a0a] border border-white/5 rounded-full text-xs font-bold text-neutral-300">
+                          {hobby}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </>
             )}
 
@@ -430,6 +443,23 @@ export default function IconProfileClient({
                     </div>
                   </div>
                 )}
+                {/* Music Directors */}
+                {collaborations?.musicDirectors && collaborations.musicDirectors.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 mt-12">Sonic Architects</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {collaborations.musicDirectors.map((md: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 flex items-center justify-between group">
+                          <div>
+                            <h4 className="text-sm font-black uppercase text-white mb-1 group-hover:text-zinc-300 transition-colors">{md.name}</h4>
+                            <span className="text-xs text-neutral-500">{md.iconicAlbum || md.chemistry}</span>
+                          </div>
+                          <span className={`text-[10px] font-bold uppercase tracking-widest ${theme.accent}`}>{md.filmCount} Films</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </>
             )}
 
@@ -510,6 +540,36 @@ export default function IconProfileClient({
                           <div className="shrink-0 flex items-start md:justify-end">
                             <span className={`text-lg font-black ${theme.accent}`}>{prop.estimatedValue}</span>
                           </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {/* Business Ventures */}
+                {financial?.businessVentures && financial.businessVentures.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Corporate Ventures</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {financial.businessVentures.map((venture: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <span className={`text-[9px] uppercase tracking-widest ${theme.accent} font-bold mb-1 block`}>{venture.industry}</span>
+                          <h4 className="text-lg font-black text-white">{venture.name}</h4>
+                          <span className="text-xs text-neutral-400">{venture.role}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Endorsements */}
+                {financial?.endorsements && financial.endorsements.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Brand Portfolio</h3>
+                    <div className="flex flex-wrap gap-3">
+                      {financial.endorsements.map((brand: any, idx: number) => (
+                        <div key={idx} className="px-4 py-3 bg-[#0a0a0a] border border-white/5 rounded-xl flex items-center gap-3">
+                          <span className="text-sm font-bold text-white">{brand.brand}</span>
+                          <span className="text-[10px] text-neutral-500 px-2 py-0.5 bg-white/5 rounded">{brand.category}</span>
                         </div>
                       ))}
                     </div>
@@ -623,9 +683,27 @@ export default function IconProfileClient({
                     </li>
                   )}
                   {personalInfo.careerStart && (
-                    <li className="flex flex-col gap-1">
+                    <li className="flex flex-col gap-1 border-b border-white/5 pb-4">
                       <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold">Career Genesis</span>
                       <span className="text-sm font-bold text-neutral-200">{personalInfo.careerStart.debutFilm} ({personalInfo.careerStart.debutYear})</span>
+                    </li>
+                  )}
+                  {personalInfo.education && (
+                    <li className="flex flex-col gap-1 border-b border-white/5 pb-4">
+                      <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold">Education</span>
+                      <span className="text-sm font-bold text-neutral-200">{personalInfo.education.degree}</span>
+                      <span className="text-[10px] text-neutral-400">{personalInfo.education.institution}</span>
+                    </li>
+                  )}
+                  {personalInfo.familyInfo && (
+                    <li className="flex flex-col gap-1">
+                      <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold">Family Heritage</span>
+                      <span className="text-sm font-bold text-neutral-200">
+                        {personalInfo.familyInfo.parents?.father ? `Son of ${personalInfo.familyInfo.parents.father}` : "Private"}
+                      </span>
+                      {personalInfo.familyInfo.notableRelatives && personalInfo.familyInfo.notableRelatives.length > 0 && (
+                        <span className="text-[10px] text-neutral-400 mt-1">Relatives: {personalInfo.familyInfo.notableRelatives.map((r:any) => r.name).join(', ')}</span>
+                      )}
                     </li>
                   )}
                 </ul>
