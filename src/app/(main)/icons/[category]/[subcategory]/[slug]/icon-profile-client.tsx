@@ -76,25 +76,38 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || [];
+  const careerStats = data.careerStats || null;
+  const genreStrength = data.genreStrength || null;
+  const philanthropy = data.philanthropy || null;
+  const awards = data.awards || [];
+  const quotes = data.quotes || [];
+  const trivia = data.trivia || [];
+  const knownFor = data.knownFor || [];
+  const alternateNames = data.alternateNames || [];
 
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
     { id: "overview", label: "Overview" },
   ];
 
-  // If we have detailed personal stats, add Dossier
   if (physicalStats || voiceProfile || personalInfo.education) {
     tabs.push({ id: "dossier", label: "Dossier" });
   }
 
-  // If we have transformations, dialogues, or collaborations, add The Craft
   if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations) {
     tabs.push({ id: "craft", label: "The Craft" });
   }
 
-  // If we have lifestyle or financial data, add Empire
   if (lifestyle || financial) {
     tabs.push({ id: "empire", label: "Empire" });
+  }
+
+  if (careerStats || genreStrength || awards.length > 0) {
+    tabs.push({ id: "career", label: "Career" });
+  }
+
+  if (philanthropy || quotes.length > 0 || trivia.length > 0) {
+    tabs.push({ id: "legacy", label: "Legacy" });
   }
 
   tabs.push({ id: "movies", label: "Filmography" });
@@ -143,6 +156,11 @@ export default function IconProfileClient({
                     Age {personalInfo.age}
                   </span>
                 )}
+                {data.generation && (
+                  <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] bg-white/5 border border-white/10 backdrop-blur-md text-neutral-400">
+                    {data.generation}
+                  </span>
+                )}
               </div>
 
               <h1 className="text-6xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] mb-4 drop-shadow-2xl">
@@ -150,11 +168,22 @@ export default function IconProfileClient({
               </h1>
 
               {data.title && (
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 mb-4">
                   <div className={`w-12 h-1 ${theme.accentBg}`} />
                   <h2 className={`text-2xl md:text-4xl font-bold tracking-[0.2em] uppercase ${theme.accent} drop-shadow-lg`}>
                     {data.title}
                   </h2>
+                </div>
+              )}
+
+              {/* Alternate Names / AKA */}
+              {alternateNames.length > 0 && (
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {alternateNames.map((name: string, i: number) => (
+                    <span key={i} className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest">
+                      {name}{i < alternateNames.length - 1 && <span className="ml-2 text-neutral-700">•</span>}
+                    </span>
+                  ))}
                 </div>
               )}
             </div>
@@ -238,12 +267,39 @@ export default function IconProfileClient({
                         <p className="text-neutral-400 leading-relaxed text-sm">{heroAura.screenPresence}</p>
                       </div>
                     )}
+                    {heroAura.signature && (
+                      <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Signature Style</h4>
+                        <p className="text-neutral-400 leading-relaxed text-sm">{heroAura.signature}</p>
+                      </div>
+                    )}
+                    {heroAura.trademarkStyle && (
+                      <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Trademark</h4>
+                        <p className="text-neutral-400 leading-relaxed text-sm">{heroAura.trademarkStyle}</p>
+                      </div>
+                    )}
                     {heroAura.fanbase && (
                       <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] md:col-span-2 ${theme.glowColor}`}>
                         <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>The Fanbase</h4>
                         <p className="text-neutral-400 leading-relaxed text-sm md:text-base">{heroAura.fanbase}</p>
                       </div>
                     )}
+                  </div>
+                )}
+
+                {/* Known For Highlights */}
+                {knownFor.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2">Defining Legacy</h3>
+                    <div className="space-y-3">
+                      {knownFor.map((item: string, idx: number) => (
+                        <div key={idx} className="flex gap-4 items-start p-4 rounded-xl bg-[#0a0a0a] border border-white/5">
+                          <span className={`text-lg font-black ${theme.accent} shrink-0 mt-0.5`}>0{idx + 1}</span>
+                          <p className="text-neutral-400 text-sm leading-relaxed">{item}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
 
@@ -261,15 +317,42 @@ export default function IconProfileClient({
                     </div>
                   </div>
                 )}
-                {/* Hobbies & Interests */}
+
+                {/* Hobbies & Interests - Full Detail */}
                 {hobbies && hobbies.length > 0 && (
                   <div>
-                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Beyond Cinema</h3>
-                    <div className="flex flex-wrap gap-3">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-4">Beyond Cinema</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {hobbies.map((hobby: any, idx: number) => (
-                        <span key={idx} className="px-4 py-2 bg-[#0a0a0a] border border-white/5 rounded-full text-xs font-bold text-neutral-300">
-                          {typeof hobby === 'string' ? hobby : hobby.hobby}
-                        </span>
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 group hover:border-white/10 transition-colors">
+                          <div className="flex items-center justify-between mb-3">
+                            <h4 className="text-sm font-black text-white uppercase tracking-tight">{typeof hobby === 'string' ? hobby : hobby.hobby}</h4>
+                            {hobby.proficiency && (
+                              <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded ${theme.badgeTheme}`}>{hobby.proficiency}</span>
+                            )}
+                          </div>
+                          {hobby.description && <p className="text-neutral-500 text-xs leading-relaxed line-clamp-3">{hobby.description}</p>}
+                          {hobby.frequency && <span className="text-[9px] text-neutral-600 uppercase tracking-widest mt-2 block">{hobby.frequency}</span>}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Quotes */}
+                {quotes.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-4">In Their Words</h3>
+                    <div className="space-y-4">
+                      {quotes.slice(0, 4).map((q: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 relative">
+                          <FaQuoteLeft className="text-xl opacity-10 absolute top-4 right-4" />
+                          <p className="text-neutral-300 text-sm leading-relaxed italic mb-3">"{q.quote}"</p>
+                          <div className="flex items-center gap-2">
+                            <span className={`text-[9px] font-bold uppercase tracking-widest ${theme.accent}`}>{q.year}</span>
+                            {q.source && <span className="text-[9px] text-neutral-600">— {q.source}</span>}
+                          </div>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -282,6 +365,23 @@ export default function IconProfileClient({
             {/* ========================================== */}
             {activeTab === "dossier" && (
               <>
+                {/* Personal Traits */}
+                {personalInfo.personalTraits && (
+                  <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5">
+                    <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-4">Character Profile</h3>
+                    {personalInfo.personalTraits.personalityType && <p className="text-neutral-300 text-sm leading-relaxed mb-4">{personalInfo.personalTraits.personalityType}</p>}
+                    {personalInfo.personalTraits.knownForPersonality && <p className="text-neutral-500 text-xs leading-relaxed">{personalInfo.personalTraits.knownForPersonality}</p>}
+                    <div className="flex gap-3 mt-4 flex-wrap">
+                      {personalInfo.personalTraits.zodiacSign && (
+                        <span className="px-3 py-1 bg-white/5 rounded-full text-[10px] text-neutral-300 font-bold">☉ {personalInfo.personalTraits.zodiacSign}</span>
+                      )}
+                      {personalInfo.personalTraits.bloodGroup && (
+                        <span className="px-3 py-1 bg-white/5 rounded-full text-[10px] text-neutral-300 font-bold">🩸 {personalInfo.personalTraits.bloodGroup}</span>
+                      )}
+                    </div>
+                  </div>
+                )}
+
                 {/* Physical Stats Bento */}
                 {physicalStats && (
                   <div>
@@ -303,18 +403,73 @@ export default function IconProfileClient({
                       </div>
                     </div>
 
-                    {/* Detailed Physicality */}
+                    {/* Measurements */}
+                    {physicalStats.measurements && (
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        {Object.entries(physicalStats.measurements).map(([key, val]: [string, any]) => (
+                          <div key={key} className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5 text-center">
+                            <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">{key}</span>
+                            <span className="text-xs font-bold text-neutral-300">{val}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Appearance */}
+                    {physicalStats.appearance && (
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+                        {physicalStats.appearance.hairColor && (
+                          <div className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5">
+                            <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Hair</span>
+                            <span className="text-xs font-bold text-neutral-300">{physicalStats.appearance.hairColor}</span>
+                          </div>
+                        )}
+                        {physicalStats.appearance.eyeColor && (
+                          <div className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5">
+                            <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Eyes</span>
+                            <span className="text-xs font-bold text-neutral-300">{physicalStats.appearance.eyeColor}</span>
+                          </div>
+                        )}
+                        {physicalStats.appearance.skinTone && (
+                          <div className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5">
+                            <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Skin Tone</span>
+                            <span className="text-xs font-bold text-neutral-300">{physicalStats.appearance.skinTone}</span>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Distinctive Features */}
+                    {physicalStats.appearance?.distinctiveFeatures && (
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 mb-6">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Distinctive Features</h4>
+                        <ul className="space-y-2">
+                          {physicalStats.appearance.distinctiveFeatures.map((feat: string, i: number) => (
+                            <li key={i} className="text-neutral-400 text-xs leading-relaxed flex gap-2"><span className="text-neutral-600 shrink-0">—</span>{feat}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Fitness & Nutrition Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {physicalStats.fitnessProfile && (
                         <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5">
                           <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Fitness Regimen</h4>
-                          <p className="text-neutral-400 text-sm mb-4">{physicalStats.fitnessProfile.fitnessLevel}</p>
+                          <p className="text-neutral-400 text-sm mb-3">{physicalStats.fitnessProfile.fitnessLevel}</p>
+                          {physicalStats.fitnessProfile.mainTrainer && (
+                            <div className="bg-black/50 p-3 rounded-lg border border-white/5 mb-3">
+                              <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Trainer</span>
+                              <span className="text-xs text-neutral-300">{physicalStats.fitnessProfile.mainTrainer}</span>
+                            </div>
+                          )}
+                          {physicalStats.fitnessProfile.dailyTrainingHours && (
+                            <span className="text-[10px] text-neutral-500 block mb-1">Training: {physicalStats.fitnessProfile.dailyTrainingHours}</span>
+                          )}
                           {physicalStats.fitnessProfile.trainingFocus && (
-                            <div className="flex flex-wrap gap-2 mt-4">
+                            <div className="flex flex-wrap gap-2 mt-3">
                               {physicalStats.fitnessProfile.trainingFocus.map((focus: string, i: number) => (
-                                <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-neutral-300">
-                                  {focus}
-                                </span>
+                                <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-neutral-300">{focus}</span>
                               ))}
                             </div>
                           )}
@@ -324,14 +479,36 @@ export default function IconProfileClient({
                       {physicalStats.nutritionProfile && (
                         <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5">
                           <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Nutrition Protocol</h4>
-                          <p className="text-neutral-400 text-sm mb-4">{physicalStats.nutritionProfile.dietaryApproach}</p>
-                          <div className="bg-black/50 p-4 rounded-xl border border-white/5">
-                            <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Caloric Intake</span>
-                            <span className="text-sm text-neutral-200">{physicalStats.nutritionProfile.calorieManagement}</span>
+                          <p className="text-neutral-400 text-sm mb-3">{physicalStats.nutritionProfile.dietaryApproach}</p>
+                          <div className="space-y-2">
+                            {physicalStats.nutritionProfile.calorieManagement && (
+                              <div className="bg-black/50 p-3 rounded-lg border border-white/5">
+                                <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Caloric Intake</span>
+                                <span className="text-xs text-neutral-200">{physicalStats.nutritionProfile.calorieManagement}</span>
+                              </div>
+                            )}
+                            {physicalStats.nutritionProfile.macroFocus && (
+                              <div className="bg-black/50 p-3 rounded-lg border border-white/5">
+                                <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Macros</span>
+                                <span className="text-xs text-neutral-200">{physicalStats.nutritionProfile.macroFocus}</span>
+                              </div>
+                            )}
                           </div>
                         </div>
                       )}
                     </div>
+
+                    {/* Health Metrics */}
+                    {physicalStats.healthMetrics && (
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                        {Object.entries(physicalStats.healthMetrics).map(([key, val]: [string, any]) => (
+                          <div key={key} className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5 text-center">
+                            <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                            <span className="text-xs font-bold text-neutral-300">{val}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 )}
 
@@ -460,6 +637,42 @@ export default function IconProfileClient({
                     </div>
                   </div>
                 )}
+
+                {/* Frequent Heroines */}
+                {collaborations?.frequentHeroines && collaborations.frequentHeroines.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 mt-12">On-Screen Chemistry</h3>
+                    <div className="flex overflow-x-auto gap-4 pb-8 no-scrollbar snap-x">
+                      {collaborations.frequentHeroines.map((h: any, idx: number) => (
+                        <div key={idx} className="min-w-[280px] md:min-w-[320px] p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 snap-start shrink-0 flex flex-col justify-between">
+                          <div>
+                            <div className="flex items-center justify-between mb-2">
+                              <h4 className="text-lg font-black uppercase tracking-tight text-white">{h.name}</h4>
+                              {h.fanFollowing && <span className={`text-[9px] font-bold uppercase tracking-widest ${theme.accent}`}>{h.fanFollowing}</span>}
+                            </div>
+                            <span className={`text-[10px] font-bold uppercase tracking-widest ${theme.accent} mb-3 block`}>{h.filmCount} Films Together</span>
+                            <p className="text-xs text-neutral-400 leading-relaxed line-clamp-3">{h.chemistry}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Dubbing Artists */}
+                {voiceProfile?.dubbingArtists && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Voice Counterparts</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(voiceProfile.dubbingArtists).map(([lang, artist]: [string, any]) => (
+                        <div key={lang} className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5 flex items-center justify-between">
+                          <span className="text-xs font-bold text-white uppercase tracking-wide">{lang}</span>
+                          <span className="text-xs text-neutral-400 text-right max-w-[60%] line-clamp-1">{artist}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </>
             )}
 
@@ -575,11 +788,227 @@ export default function IconProfileClient({
                     </div>
                   </div>
                 )}
+                {/* Fashion & Watches */}
+                {lifestyle?.fashion && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Style & Horlogerie</h3>
+                    {lifestyle.fashion.signatureLook && (
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 mb-4">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 ${theme.accent}`}>Signature Look</h4>
+                        <p className="text-neutral-400 text-xs leading-relaxed">{lifestyle.fashion.signatureLook}</p>
+                      </div>
+                    )}
+                    {lifestyle.fashion.favoriteDesigners && (
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {lifestyle.fashion.favoriteDesigners.map((d: string, i: number) => (
+                          <span key={i} className="px-3 py-1.5 bg-white/5 rounded-full text-[10px] font-bold text-neutral-300 uppercase tracking-widest">{d}</span>
+                        ))}
+                      </div>
+                    )}
+                    {lifestyle.fashion.watches && lifestyle.fashion.watches.length > 0 && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {lifestyle.fashion.watches.map((w: any, idx: number) => (
+                          <div key={idx} className="p-5 rounded-xl bg-[#0a0a0a] border border-white/5 flex items-center justify-between">
+                            <div>
+                              <h4 className="text-sm font-black text-white">{w.brand}</h4>
+                              <span className="text-[10px] text-neutral-500">{w.model} • {w.year}</span>
+                            </div>
+                            <span className={`text-xs font-bold ${theme.accent}`}>{w.estimatedValue}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
               </>
             )}
 
             {/* ========================================== */}
-            {/* TAB 5: FILMOGRAPHY (From Database) */}
+            {/* TAB: CAREER (Stats & Achievements) */}
+            {/* ========================================== */}
+            {activeTab === "career" && (
+              <>
+                {/* Career Stats Hero */}
+                {careerStats && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2">Career Dashboard</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                      {careerStats.totalMovies && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
+                          <span className={`text-3xl font-black ${theme.accent}`}>{careerStats.totalMovies}</span>
+                          <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mt-1">Total Films</span>
+                        </div>
+                      )}
+                      {careerStats.totalBlockbusters && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
+                          <span className={`text-3xl font-black ${theme.accent}`}>{careerStats.totalBlockbusters}</span>
+                          <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mt-1">Blockbusters</span>
+                        </div>
+                      )}
+                      {careerStats.hitPercentage && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
+                          <span className={`text-3xl font-black ${theme.accent}`}>{careerStats.hitPercentage}</span>
+                          <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mt-1">Hit Rate</span>
+                        </div>
+                      )}
+                      {careerStats.yearsActive && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
+                          <span className={`text-3xl font-black ${theme.accent}`}>{careerStats.yearsActive}</span>
+                          <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mt-1">Years Active</span>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Records */}
+                    {careerStats.records && careerStats.records.length > 0 && (
+                      <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 mb-8">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-6 ${theme.accent}`}>Records & Firsts</h4>
+                        <ul className="space-y-3">
+                          {careerStats.records.map((r: string, i: number) => (
+                            <li key={i} className="text-neutral-400 text-xs leading-relaxed flex gap-3"><span className={`${theme.accent} shrink-0 font-black`}>★</span>{r}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Milestones Timeline */}
+                    {careerStats.milestones && careerStats.milestones.length > 0 && (
+                      <div>
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2">Career Timeline</h4>
+                        <div className="space-y-3">
+                          {careerStats.milestones.map((m: string, i: number) => (
+                            <div key={i} className="flex gap-4 items-start p-4 rounded-xl bg-[#0a0a0a] border border-white/5">
+                              <span className={`text-xs font-black ${theme.accent} shrink-0 w-12`}>{m.substring(0, 4)}</span>
+                              <p className="text-neutral-400 text-xs leading-relaxed">{m.substring(6)}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Genre Strength Radar */}
+                {genreStrength && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Genre Mastery</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(genreStrength).map(([genre, data]: [string, any]) => (
+                        <div key={genre} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <div className="flex items-center justify-between mb-3">
+                            <h4 className="text-sm font-black text-white uppercase tracking-tight">{genre}</h4>
+                            <span className={`text-lg font-black ${theme.accent}`}>{data.rating}<span className="text-neutral-600 text-xs">/100</span></span>
+                          </div>
+                          <div className="w-full h-1.5 bg-white/5 rounded-full mb-3 overflow-hidden">
+                            <div className={`h-full ${theme.accentBg} rounded-full`} style={{ width: `${data.rating}%` }} />
+                          </div>
+                          {data.strengths && (
+                            <ul className="space-y-1">
+                              {data.strengths.slice(0, 2).map((s: string, i: number) => (
+                                <li key={i} className="text-neutral-500 text-[10px] leading-relaxed">• {s}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Awards */}
+                {awards.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Awards & Recognition</h3>
+                    <div className="space-y-3">
+                      {awards.map((a: any, idx: number) => (
+                        <div key={idx} className="p-5 rounded-xl bg-[#0a0a0a] border border-white/5 flex items-center justify-between gap-4">
+                          <div className="flex-1">
+                            <h4 className="text-sm font-black text-white">{a.awardName}</h4>
+                            <span className="text-[10px] text-neutral-500">{a.givenBy} • {a.category}</span>
+                          </div>
+                          <div className="text-right shrink-0">
+                            <span className={`text-sm font-black ${theme.accent}`}>{a.year}</span>
+                            {a.won && <span className="text-[9px] text-green-500 block uppercase tracking-widest font-bold">Won</span>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+
+            {/* ========================================== */}
+            {/* TAB: LEGACY (Philanthropy & Trivia) */}
+            {/* ========================================== */}
+            {activeTab === "legacy" && (
+              <>
+                {/* Philanthropy */}
+                {philanthropy && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2">Giving Back</h3>
+                    {philanthropy.totalEstimatedContribution && (
+                      <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] mb-6 ${theme.glowColor}`}>
+                        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 block mb-2">Total Contributions</span>
+                        <span className={`text-3xl md:text-5xl font-black ${theme.accent}`}>{philanthropy.totalEstimatedContribution}</span>
+                      </div>
+                    )}
+                    {philanthropy.initiatives && philanthropy.initiatives.length > 0 && (
+                      <div className="space-y-4">
+                        {philanthropy.initiatives.map((init: any, idx: number) => (
+                          <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                            <div className="flex items-center justify-between mb-2">
+                              <h4 className="text-sm font-black text-white">{init.name}</h4>
+                              <span className={`text-xs font-bold ${theme.accent}`}>{init.amount}</span>
+                            </div>
+                            <p className="text-neutral-500 text-xs leading-relaxed mb-2">{init.description}</p>
+                            {init.beneficiaries && <span className="text-[9px] text-neutral-600 uppercase tracking-widest">{init.beneficiaries}</span>}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Trivia */}
+                {trivia.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Did You Know?</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {trivia.map((t: string, idx: number) => (
+                        <div key={idx} className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5 flex gap-3 items-start">
+                          <span className={`text-xs font-black ${theme.accent} shrink-0`}>#{idx + 1}</span>
+                          <p className="text-neutral-400 text-xs leading-relaxed">{t}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* All Quotes (Full) */}
+                {quotes.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Complete Quotes Archive</h3>
+                    <div className="space-y-4">
+                      {quotes.map((q: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 relative">
+                          <FaQuoteLeft className="text-xl opacity-10 absolute top-4 right-4" />
+                          <p className="text-neutral-300 text-sm leading-relaxed italic mb-3">"{q.quote}"</p>
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className={`text-[9px] font-bold uppercase tracking-widest ${theme.accent}`}>{q.year}</span>
+                            {q.context && <span className="text-[9px] text-neutral-600">• {q.context}</span>}
+                            {q.source && <span className="text-[9px] text-neutral-600">— {q.source}</span>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+
+            {/* ========================================== */}
+            {/* TAB: FILMOGRAPHY (From Database) */}
             {/* ========================================== */}
             {activeTab === "movies" && (
               <div className="flex flex-col gap-8">
@@ -682,25 +1111,54 @@ export default function IconProfileClient({
                       <span className="text-sm font-bold text-neutral-200">{personalInfo.currentResidence}</span>
                     </li>
                   )}
+                  {personalInfo.nationality && (
+                    <li className="flex flex-col gap-1 border-b border-white/5 pb-4">
+                      <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold">Nationality</span>
+                      <span className="text-sm font-bold text-neutral-200">{personalInfo.nationality}</span>
+                      {personalInfo.ethnicity && <span className="text-[10px] text-neutral-400">{personalInfo.ethnicity}</span>}
+                    </li>
+                  )}
+                  {personalInfo.familyInfo?.maritalStatus && (
+                    <li className="flex flex-col gap-1 border-b border-white/5 pb-4">
+                      <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold">Status</span>
+                      <span className="text-sm font-bold text-neutral-200">{personalInfo.familyInfo.maritalStatus}</span>
+                    </li>
+                  )}
                   {personalInfo.careerStart && (
                     <li className="flex flex-col gap-1 border-b border-white/5 pb-4">
                       <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold">Career Genesis</span>
                       <span className="text-sm font-bold text-neutral-200">{personalInfo.careerStart.debutFilm} ({personalInfo.careerStart.debutYear})</span>
+                      {personalInfo.careerStart.yearsActive && <span className="text-[10px] text-neutral-400">{personalInfo.careerStart.yearsActive} years active</span>}
                     </li>
                   )}
                   {personalInfo.education && (
                     <li className="flex flex-col gap-1 border-b border-white/5 pb-4">
                       <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold">Education</span>
-                      <span className="text-sm font-bold text-neutral-200">{personalInfo.education.degree}</span>
-                      <span className="text-[10px] text-neutral-400">{personalInfo.education.institution}</span>
+                      {personalInfo.education.college && <span className="text-sm font-bold text-neutral-200">{personalInfo.education.college}</span>}
+                      {personalInfo.education.degree && <span className="text-sm font-bold text-neutral-200">{personalInfo.education.degree}</span>}
+                      {personalInfo.education.highSchool && <span className="text-[10px] text-neutral-400">{personalInfo.education.highSchool}</span>}
+                      {personalInfo.education.institution && <span className="text-[10px] text-neutral-400">{personalInfo.education.institution}</span>}
                     </li>
                   )}
                   {personalInfo.familyInfo && (
                     <li className="flex flex-col gap-1">
                       <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold">Family Heritage</span>
-                      <span className="text-sm font-bold text-neutral-200">
-                        {personalInfo.familyInfo.parents?.father ? `Son of ${personalInfo.familyInfo.parents.father}` : "Private"}
-                      </span>
+                      {personalInfo.familyInfo.family?.father && (
+                        <span className="text-sm font-bold text-neutral-200">{personalInfo.familyInfo.family.father}</span>
+                      )}
+                      {personalInfo.familyInfo.family?.mother && (
+                        <span className="text-[10px] text-neutral-400">{personalInfo.familyInfo.family.mother}</span>
+                      )}
+                      {personalInfo.familyInfo.family?.siblings && personalInfo.familyInfo.family.siblings.length > 0 && (
+                        <div className="mt-1 space-y-1">
+                          {personalInfo.familyInfo.family.siblings.map((s: any, i: number) => (
+                            <span key={i} className="text-[10px] text-neutral-400 block">{s.name} — {s.relationship}</span>
+                          ))}
+                        </div>
+                      )}
+                      {personalInfo.familyInfo.parents?.father && !personalInfo.familyInfo.family?.father && (
+                        <span className="text-sm font-bold text-neutral-200">Son of {personalInfo.familyInfo.parents.father}</span>
+                      )}
                       {personalInfo.familyInfo.notableRelatives && personalInfo.familyInfo.notableRelatives.length > 0 && (
                         <span className="text-[10px] text-neutral-400 mt-1">Relatives: {personalInfo.familyInfo.notableRelatives.map((r:any) => r.name).join(', ')}</span>
                       )}
