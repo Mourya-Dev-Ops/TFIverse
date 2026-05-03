@@ -4,6 +4,7 @@ import { eq, sql } from "drizzle-orm";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
+import CategoryView from "./category-view";
 
 // Define the valid categories to prevent routing to non-existent sections
 const VALID_CATEGORIES: Record<string, { title: string, description: string, theme: string, accent: string, accentBg: string }> = {
@@ -126,94 +127,12 @@ export default async function CategoryHubPage({ params }: { params: Promise<{ ca
         </p>
       </div>
 
-      {/* Sections */}
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col gap-40 relative z-10">
-        {sortedSubcategories.length === 0 ? (
-           <div className="text-center py-32 border border-white/5 bg-white/[0.01] backdrop-blur-sm rounded-[2rem]">
-             <p className="text-2xl font-black uppercase tracking-widest text-neutral-600">Awaiting Data</p>
-           </div>
-        ) : (
-          sortedSubcategories.map((subcat, index) => {
-            const isEven = index % 2 === 0;
-            
-            return (
-              <section key={subcat} className="relative">
-                {/* Premium Section Header */}
-                <div className="flex flex-col items-center mb-16 relative">
-                  <span className={`text-[10px] font-black uppercase tracking-[0.5em] mb-4 ${categoryConfig.accent}`}>
-                    Section 0{index + 1}
-                  </span>
-                  <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-500">
-                    {subcat.replace(/-/g, ' ')}
-                  </h2>
-                  <div className="mt-8 flex items-center gap-4 w-full max-w-md">
-                    <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-600">
-                      {grouped[subcat].length} Icons
-                    </span>
-                    <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-                  </div>
-                </div>
-
-                {/* Staggered Masonry-ish Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-                  {grouped[subcat].map((person: any, pIndex: number) => {
-                    const portraitUrl = person.images?.portrait?.url || person.images?.avatar?.url;
-                    
-                    // The first item in the grid gets a special double-width layout
-                    const isFeatured = pIndex === 0;
-                    
-                    return (
-                      <Link 
-                        href={`/icons/${category}/${person.subcategory}/${person.slug}`} 
-                        key={person.id}
-                        className={`group relative rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/5 block hover:border-white/20 transition-all duration-500 ${isFeatured ? 'col-span-2 md:col-span-2 lg:col-span-2 aspect-[16/10]' : 'col-span-1 md:col-span-1 lg:col-span-1 aspect-[3/4]'}`}
-                      >
-                        {/* 
-                          We use a clever CSS trick to hide broken images.
-                          'color: transparent' hides the alt text. 
-                          The div underneath acts as a beautiful fallback.
-                        */}
-                        <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-[#111] to-[#050505] z-0">
-                           <span className={`${isFeatured ? 'text-9xl' : 'text-7xl'} font-black uppercase text-white/[0.03]`}>
-                             {person.name.charAt(0)}
-                           </span>
-                        </div>
-
-                        {portraitUrl && (
-                          <img 
-                            src={portraitUrl} 
-                            alt={person.name} 
-                            className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 z-10"
-                            style={{ color: 'transparent' }} // hides alt text if broken
-                          />
-                        )}
-                        
-                        {/* Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity z-20" />
-                        
-                        {/* Text Content */}
-                        <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col justify-end translate-y-4 group-hover:translate-y-0 transition-transform duration-500 z-30">
-                          <h3 className={`font-black uppercase tracking-tight mb-2 text-white ${isFeatured ? 'text-3xl md:text-5xl' : 'text-xl md:text-2xl'}`}>
-                            {person.name}
-                          </h3>
-                          
-                          <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                            <div className={`w-8 h-px ${categoryConfig.accentBg}`} />
-                            <p className={`font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs ${categoryConfig.accent}`}>
-                              {person.title || "View Profile"}
-                            </p>
-                          </div>
-                        </div>
-                      </Link>
-                    );
-                  })}
-                </div>
-              </section>
-            );
-          })
-        )}
-      </div>
+      {/* Client Component for Search and Grid */}
+      <CategoryView 
+        people={allPeople} 
+        categoryConfig={categoryConfig} 
+        categorySlug={category} 
+      />
     </main>
   );
 }
