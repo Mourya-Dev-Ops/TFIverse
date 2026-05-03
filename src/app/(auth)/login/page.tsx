@@ -82,45 +82,48 @@ function LoginForm() {
       </button>
 
       {/* LOGIN CARD */}
-      <div className="relative z-20 w-full max-w-md mx-auto p-8 rounded-3xl bg-black bg-opacity-40 backdrop-blur-2xl border border-white border-opacity-10 shadow-2xl">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-black text-white tracking-tighter mb-1.5">TFIVERSE</h1>
-          <p className="text-white/40 tracking-[0.25em] text-[10px] uppercase font-semibold">Secure Access</p>
+      <div className="relative z-20 w-full max-w-md mx-auto p-10 rounded-[2.5rem] bg-white/[0.02] backdrop-blur-3xl border border-white/10 shadow-[0_0_80px_rgba(245,158,11,0.1)] group transition-all duration-500 hover:bg-white/[0.03]">
+        {/* Ambient glow behind the card */}
+        <div className="absolute -inset-0.5 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 blur-xl -z-10 rounded-[3rem]" />
+        
+        <div className="text-center mb-10">
+          <h1 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-200 tracking-tighter mb-1.5 drop-shadow-lg">TFIVERSE</h1>
+          <p className="text-amber-500/60 tracking-[0.3em] text-[9px] uppercase font-bold">Secure Access</p>
         </div>
 
         {error && (
-          <div className="mb-5 p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 text-red-200 text-sm text-center font-light backdrop-blur-sm">
+          <div className="mb-6 p-4 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-200 text-sm text-center font-light backdrop-blur-sm">
             {error}
           </div>
         )}
 
         {success && (
-          <div className="mb-5 p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-200 text-sm text-center font-light flex items-center justify-center gap-2 backdrop-blur-sm">
+          <div className="mb-6 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-200 text-sm text-center font-light flex items-center justify-center gap-2 backdrop-blur-sm">
             <CheckCircle2 size={16} />
             {success}
           </div>
         )}
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-          <div className="flex flex-col gap-1.5">
-            <label className="text-[10px] font-semibold text-white/40 tracking-[0.2em] uppercase">Email</label>
+          <div className="flex flex-col gap-2">
+            <label className="text-[9px] font-bold text-white/50 tracking-[0.2em] uppercase px-1">Email</label>
             <input name="email" type="email" autoComplete="email" required
-              className="w-full bg-white/[0.06] border border-white/[0.1] rounded-xl text-white px-4 py-3.5 focus:outline-none focus:border-white/30 focus:bg-white/[0.1] transition-all placeholder:text-white/20 text-sm" 
+              className="w-full bg-white/[0.03] border border-white/5 rounded-2xl text-white px-5 py-4 focus:outline-none focus:border-amber-500/50 focus:bg-white/[0.05] transition-all placeholder:text-white/20 text-sm focus:shadow-[0_0_20px_rgba(245,158,11,0.1)]" 
               placeholder="agent@tfiverse.com" />
           </div>
 
-          <div className="flex flex-col gap-1.5">
-            <div className="flex justify-between items-center">
-              <label className="text-[10px] font-semibold text-white/40 tracking-[0.2em] uppercase">Password</label>
-              <Link href="/forgot-password" className="text-[10px] text-white/25 hover:text-white/60 transition-colors tracking-widest uppercase">Forgot?</Link>
+          <div className="flex flex-col gap-2">
+            <div className="flex justify-between items-center px-1">
+              <label className="text-[9px] font-bold text-white/50 tracking-[0.2em] uppercase">Password</label>
+              <Link href="/forgot-password" className="text-[9px] text-amber-500/60 hover:text-amber-400 transition-colors tracking-widest uppercase">Forgot?</Link>
             </div>
             <input name="password" type="password" autoComplete="current-password" required
-              className="w-full bg-white/[0.06] border border-white/[0.1] rounded-xl text-white px-4 py-3.5 focus:outline-none focus:border-white/30 focus:bg-white/[0.1] transition-all placeholder:text-white/20 tracking-widest text-sm" 
+              className="w-full bg-white/[0.03] border border-white/5 rounded-2xl text-white px-5 py-4 focus:outline-none focus:border-amber-500/50 focus:bg-white/[0.05] transition-all placeholder:text-white/20 tracking-widest text-sm focus:shadow-[0_0_20px_rgba(245,158,11,0.1)]" 
               placeholder="••••••••" />
           </div>
 
           <button type="submit" disabled={loading}
-            className="w-full bg-white text-black font-black py-4 mt-2 rounded-xl hover:bg-white/90 active:scale-[0.98] transition-all tracking-[0.2em] uppercase text-xs disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_40px_rgba(255,255,255,0.1)] cursor-pointer">
+            className="w-full bg-gradient-to-r from-amber-500 to-amber-400 text-black font-black py-4 mt-4 rounded-2xl hover:from-amber-400 hover:to-amber-300 active:scale-[0.98] transition-all tracking-[0.2em] uppercase text-xs disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_30px_rgba(245,158,11,0.2)] hover:shadow-[0_0_40px_rgba(245,158,11,0.4)] cursor-pointer">
             <span className="flex items-center justify-center gap-2">
               {loading && <Loader2 className="w-4 h-4 animate-spin" />}
               {loading ? "AUTHENTICATING..." : "LOGIN"}
