@@ -45,20 +45,22 @@ const THEMES: Record<string, any> = {
   }
 };
 
-export default function IconProfileClient({ 
-  person, 
-  data, 
-  category, 
-  subcategory, 
-  filmography 
-}: { 
-  person: any, 
-  data: any, 
-  category: string, 
-  subcategory: string, 
-  filmography: any[] 
+export default function IconProfileClient({
+  person,
+  data,
+  category,
+  subcategory,
+  filmography
+}: {
+  person: any,
+  data: any,
+  category: string,
+  subcategory: string,
+  filmography: any[]
 }) {
-  const theme = THEMES[category] || THEMES.default;
+  // Map singular DB categories to plural UI categories (hero -> heroes, director -> directors)
+  const hubCategory = category === "hero" ? "heroes" : category === "heroine" ? "heroines" : category === "pro" ? "pros" : `${category}s`;
+  const theme = THEMES[hubCategory] || THEMES.default;
   const [activeTab, setActiveTab] = useState("overview");
 
   // Safely extract deeply nested JSONB data
@@ -74,17 +76,17 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || [];
-  
+
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
     { id: "overview", label: "Overview" },
   ];
-  
+
   // If we have detailed personal stats, add Dossier
   if (physicalStats || voiceProfile || personalInfo.education) {
     tabs.push({ id: "dossier", label: "Dossier" });
   }
-  
+
   // If we have transformations, dialogues, or collaborations, add The Craft
   if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations) {
     tabs.push({ id: "craft", label: "The Craft" });
@@ -94,7 +96,7 @@ export default function IconProfileClient({
   if (lifestyle || financial) {
     tabs.push({ id: "empire", label: "Empire" });
   }
-  
+
   tabs.push({ id: "movies", label: "Filmography" });
 
   if (images.gallery?.length > 0) tabs.push({ id: "gallery", label: "Gallery" });
@@ -103,7 +105,7 @@ export default function IconProfileClient({
     <main className={`min-h-screen text-white selection:bg-neutral-800 ${theme.bgGradient} relative pb-32`}>
       {/* Background Pattern */}
       <div className={`absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay ${theme.bgPattern}`} />
-      
+
       {/* Cinematic Banner */}
       <div className="relative h-[65vh] md:h-[85vh] w-full overflow-hidden">
         {images.banner?.url ? (
@@ -114,7 +116,7 @@ export default function IconProfileClient({
         {/* Gradients to blend banner into the page */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-transparent" />
-        
+
         {/* Title Lockup overlaying the banner bottom */}
         <div className="absolute bottom-0 left-0 w-full p-6 md:p-16 z-20 max-w-[1600px] mx-auto">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-end">
@@ -126,7 +128,7 @@ export default function IconProfileClient({
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             )}
-            
+
             {/* The Typography */}
             <div className="flex-1 pb-4">
               <div className="flex items-center gap-3 mb-6 flex-wrap">
@@ -142,11 +144,11 @@ export default function IconProfileClient({
                   </span>
                 )}
               </div>
-              
+
               <h1 className="text-6xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] mb-4 drop-shadow-2xl">
                 {person.name}
               </h1>
-              
+
               {data.title && (
                 <div className="flex items-center gap-4">
                   <div className={`w-12 h-1 ${theme.accentBg}`} />
@@ -164,8 +166,8 @@ export default function IconProfileClient({
       <div className="sticky top-0 z-50 bg-black/80 backdrop-blur-2xl border-b border-white/5">
         <div className="max-w-[1600px] mx-auto px-6 md:px-16 flex items-center">
           {/* Back Button */}
-          <Link 
-            href={`/icons/${category}`}
+          <Link
+            href={`/icons/${hubCategory}`}
             className="group flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-white/5 border border-white/10 hover:bg-white hover:text-black transition-colors mr-6 md:mr-10"
             title="Back to Directory"
           >
@@ -177,11 +179,10 @@ export default function IconProfileClient({
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`py-6 text-xs md:text-sm font-black tracking-[0.2em] uppercase whitespace-nowrap transition-all duration-300 relative ${
-                  activeTab === tab.id
-                    ? `${theme.accent}`
-                    : "text-neutral-500 hover:text-neutral-300"
-                }`}
+                className={`py-6 text-xs md:text-sm font-black tracking-[0.2em] uppercase whitespace-nowrap transition-all duration-300 relative ${activeTab === tab.id
+                  ? `${theme.accent}`
+                  : "text-neutral-500 hover:text-neutral-300"
+                  }`}
               >
                 {tab.label}
                 {/* Animated active indicator */}
@@ -197,10 +198,10 @@ export default function IconProfileClient({
       {/* Main Content Layout */}
       <div className="max-w-[1600px] mx-auto px-6 md:px-16 py-16 relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
-          
+
           {/* LEFT COLUMN: Dynamic Tab Content (8 cols) */}
           <div className="lg:col-span-8 flex flex-col gap-12">
-            
+
             {/* ========================================== */}
             {/* TAB 1: OVERVIEW */}
             {/* ========================================== */}
@@ -210,7 +211,7 @@ export default function IconProfileClient({
                 <div className="relative p-10 md:p-14 rounded-[2rem] bg-[#0a0a0a] border border-white/5 overflow-hidden group hover:border-white/10 transition-colors">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-white/[0.02] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
                   <FaStar className={`absolute top-10 right-10 text-4xl opacity-5 ${theme.accent}`} />
-                  
+
                   <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 flex items-center gap-4">
                     <span className={`w-4 h-4 rounded-full ${theme.accentBg} animate-pulse opacity-50`} />
                     The Legend
@@ -306,7 +307,7 @@ export default function IconProfileClient({
                           )}
                         </div>
                       )}
-                      
+
                       {physicalStats.nutritionProfile && (
                         <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5">
                           <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Nutrition Protocol</h4>
@@ -330,7 +331,7 @@ export default function IconProfileClient({
                       <p className="text-lg text-neutral-300 leading-relaxed mb-8 italic">
                         "{voiceProfile.signatureVoiceElements || voiceProfile.voiceCharacteristics?.voiceType}"
                       </p>
-                      
+
                       {voiceProfile.languagesFluent && (
                         <div>
                           <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500">Linguistic Arsenal</h4>
@@ -366,13 +367,13 @@ export default function IconProfileClient({
                         <div key={idx} className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
                           {/* Animated background line */}
                           <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
-                          
+
                           <div className="flex flex-col md:flex-row gap-6 md:items-center justify-between mb-4 pl-4">
                             <div>
                               <h4 className="text-2xl font-black uppercase tracking-tight text-white mb-1">{trans.film}</h4>
                               <span className="text-xs font-bold uppercase tracking-widest text-neutral-500">{trans.period}</span>
                             </div>
-                            
+
                             {/* Weight Tag */}
                             {(trans.targetWeight || trans.weightGained) && (
                               <div className={`px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shrink-0 text-center`}>
@@ -381,7 +382,7 @@ export default function IconProfileClient({
                               </div>
                             )}
                           </div>
-                          
+
                           <p className="text-neutral-400 text-sm leading-relaxed pl-4">{trans.transformation}</p>
                         </div>
                       ))}
@@ -507,7 +508,7 @@ export default function IconProfileClient({
                             <p className="text-sm text-neutral-400 leading-relaxed">{prop.description}</p>
                           </div>
                           <div className="shrink-0 flex items-start md:justify-end">
-                             <span className={`text-lg font-black ${theme.accent}`}>{prop.estimatedValue}</span>
+                            <span className={`text-lg font-black ${theme.accent}`}>{prop.estimatedValue}</span>
                           </div>
                         </div>
                       ))}
@@ -530,7 +531,7 @@ export default function IconProfileClient({
                     {filmography.length} Films
                   </span>
                 </div>
-                
+
                 {filmography.length === 0 ? (
                   <div className="p-16 rounded-[2rem] border border-white/5 bg-[#0a0a0a] text-center">
                     <FaFilm className="text-4xl text-neutral-600 mx-auto mb-4 opacity-50" />
@@ -542,10 +543,10 @@ export default function IconProfileClient({
                     {filmography.map((credit, idx) => (
                       <div key={idx} className="aspect-[2/3] rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/5 relative group hover:border-white/20 transition-all duration-500">
                         {credit.moviePoster ? (
-                          <img 
-                            src={credit.moviePoster} 
-                            alt={credit.movieTitle} 
-                            className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
+                          <img
+                            src={credit.moviePoster}
+                            alt={credit.movieTitle}
+                            className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                           />
                         ) : (
                           <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-[#111] to-black p-4 text-center">
@@ -589,7 +590,7 @@ export default function IconProfileClient({
           {/* RIGHT COLUMN: Sticky Sidebar Metadata (4 cols) */}
           {/* ========================================== */}
           <div className="lg:col-span-4 flex flex-col gap-6">
-            
+
             <div className="sticky top-32 flex flex-col gap-6">
               {/* Quick Stats Bento */}
               <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5">
@@ -660,17 +661,17 @@ export default function IconProfileClient({
 
               {/* Wikipedia Contribute Button */}
               <div className="border border-white/10 rounded-[2rem] p-8 text-center bg-white/[0.02] backdrop-blur-md relative overflow-hidden group">
-                 <div className={`absolute top-0 left-0 w-full h-1 ${theme.accentBg} opacity-20 group-hover:opacity-100 transition-opacity`} />
-                 <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
-                   <span className="text-xl">✍️</span>
-                 </div>
-                 <h3 className="font-bold text-white mb-2 uppercase tracking-wide">Notice Missing Data?</h3>
-                 <p className="text-xs text-neutral-400 leading-relaxed mb-6">
-                   TFIverse is community-driven. Suggest an edit to add awards, OTT links, or missing movies.
-                 </p>
-                 <button className={`w-full py-4 ${theme.accentBg} text-black font-black hover:opacity-90 rounded-xl text-[10px] uppercase tracking-[0.2em] transition-all`}>
-                   Submit Edit Request
-                 </button>
+                <div className={`absolute top-0 left-0 w-full h-1 ${theme.accentBg} opacity-20 group-hover:opacity-100 transition-opacity`} />
+                <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <span className="text-xl">✍️</span>
+                </div>
+                <h3 className="font-bold text-white mb-2 uppercase tracking-wide">Notice Missing Data?</h3>
+                <p className="text-xs text-neutral-400 leading-relaxed mb-6">
+                  TFIverse is community-driven. Suggest an edit to add awards, OTT links, or missing movies.
+                </p>
+                <button className={`w-full py-4 ${theme.accentBg} text-black font-black hover:opacity-90 rounded-xl text-[10px] uppercase tracking-[0.2em] transition-all`}>
+                  Submit Edit Request
+                </button>
               </div>
             </div>
 
