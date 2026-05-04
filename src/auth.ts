@@ -22,18 +22,27 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     async jwt({ token, user, trigger, session }) {
       if (user) {
         token.id = user.id;
-        // Fetch avatar from userProfiles since it might not be in the users table yet
-        const [profile] = await db.select({ avatarUrl: userProfiles.avatarUrl })
+        // Fetch avatar and DOB from userProfiles
+        const [profile] = await db.select({ 
+          avatarUrl: userProfiles.avatarUrl,
+          dateOfBirth: userProfiles.dateOfBirth
+        })
           .from(userProfiles)
           .where(eq(userProfiles.userId, user.id as string));
+          
         if (profile?.avatarUrl) {
           token.picture = profile.avatarUrl;
         } else if (user.image) {
           token.picture = user.image;
         }
+        token.hasDOB = !!profile?.dateOfBirth;
       }
       if (trigger === "update" && session?.image) {
         token.picture = session.image;
+      }
+      // If profile is updated, we might need to update hasDOB
+      if (trigger === "update" && session?.hasDOB !== undefined) {
+        token.hasDOB = session.hasDOB;
       }
       return token
     },
@@ -42,6 +51,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       const userId = (token?.sub || token?.id) as string;
       if (userId && session.user) {
         session.user.id = userId;
+        (session.user as any).hasDOB = token.hasDOB;
       }
       return session
     },

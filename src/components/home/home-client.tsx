@@ -253,11 +253,11 @@ function UpcomingPanel({ items }: { items: Upcoming[] }) {
           <button onClick={() => scroll("r")} className="w-8 h-8 rounded-full border border-white/[0.08] hover:border-white/20 flex items-center justify-center transition"><ChevronRight className="w-3.5 h-3.5 text-white/50" /></button>
         </div>
       </div>
-      <div ref={ref} className="flex gap-4 overflow-x-auto scrollbar-hide pb-2">
+      <div ref={ref} className="flex gap-4 overflow-x-auto scrollbar-hide pb-2 snap-x snap-mandatory">
         {items.map(m => (
-          <div key={m.slug} className="flex-shrink-0 w-[150px] group cursor-pointer">
+          <div key={m.slug} className="flex-shrink-0 w-[150px] group cursor-pointer snap-start">
             <div className="relative rounded-xl overflow-hidden h-[225px] mb-3">
-              <img src={m.poster || IMG_FALLBACK} alt={m.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src={m.poster || IMG_FALLBACK} alt={m.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               <span className="absolute top-2.5 left-2.5 text-[9px] font-bold uppercase tracking-widest text-white/70 bg-black/50 backdrop-blur-md px-2 py-0.5 rounded-full border border-white/[0.08]">
                 {m.status === "filming" ? "Filming" : m.status === "pre" ? "Pre-Prod" : "Post"}
@@ -309,7 +309,7 @@ function LatestUpdates() {
           {news.map(n => (
             <div key={n.id} className="glow-card group rounded-2xl overflow-hidden glass-premium">
               <div className="relative h-44 overflow-hidden">
-                <img src={n.thumb} alt={n.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onError={e => ((e.target as HTMLImageElement).src = IMG_FALLBACK)} />
+                <img src={n.thumb} alt={n.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onError={e => ((e.target as HTMLImageElement).src = IMG_FALLBACK)} />
                 <span className="absolute top-3 left-3 text-[9px] font-bold uppercase tracking-widest text-white/80 bg-black/50 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/[0.08]">
                   {n.type}
                 </span>
@@ -349,11 +349,11 @@ function OTTReleases() {
             <button onClick={() => scroll("r")} className="w-8 h-8 rounded-full border border-white/[0.08] hover:border-white/20 flex items-center justify-center transition"><ChevronRight className="w-3.5 h-3.5 text-white/50" /></button>
           </div>
         </div>
-        <div ref={ref} className="flex gap-5 overflow-x-auto scrollbar-hide pb-2">
+        <div ref={ref} className="flex gap-5 overflow-x-auto scrollbar-hide pb-2 snap-x snap-mandatory">
           {items.map(m => (
-            <Link key={m.id} href={`/movie/${m.slug}`} className="flex-shrink-0 w-[170px] group block">
+            <Link key={m.id} href={`/movie/${m.slug}`} className="flex-shrink-0 w-[170px] group block snap-start">
               <div className="relative rounded-2xl overflow-hidden h-[255px] mb-3">
-                <img src={m.poster || IMG_FALLBACK} alt={m.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onError={e => ((e.target as HTMLImageElement).src = IMG_FALLBACK)} />
+                <img src={m.poster || IMG_FALLBACK} alt={m.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onError={e => ((e.target as HTMLImageElement).src = IMG_FALLBACK)} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                 <span className="absolute top-2.5 left-2.5 text-[9px] font-bold uppercase tracking-widest text-white/70 bg-black/50 backdrop-blur-md px-2 py-0.5 rounded-full border border-white/[0.08]">{m.platform}</span>
               </div>

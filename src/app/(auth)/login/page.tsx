@@ -7,7 +7,6 @@ import { loginUser } from "@/app/actions/auth";
 import { signIn } from "next-auth/react";
 import { Loader2, Volume2, VolumeX, CheckCircle2 } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
 
 function LoginForm() {
   const searchParams = useSearchParams();
@@ -68,8 +67,8 @@ function LoginForm() {
   return (
     <main className="min-h-screen w-full flex items-center justify-center relative overflow-hidden bg-[#050505]">
       
-      {/* CINEMATIC VIDEO BACKGROUND */}
-      <div className="absolute inset-0 z-0">
+      {/* CINEMATIC VIDEO BACKGROUND (Desktop Only) */}
+      <div className="absolute inset-0 z-0 hidden md:block">
         <video ref={videoRef} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover scale-105 opacity-40">
           <source src="/videos/auth-bg.mp4" type="video/mp4" />
         </video>
@@ -78,10 +77,16 @@ function LoginForm() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
       </div>
 
-      {/* Audio Toggle */}
+      {/* MODERN GLASSMORPHISM BACKGROUND (Mobile Only) */}
+      <div className="absolute inset-0 z-0 md:hidden bg-gradient-to-br from-black via-purple-950/20 to-black">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3" />
+      </div>
+
+      {/* Audio Toggle (Desktop Only) */}
       <button
         onClick={toggleMute}
-        className="absolute bottom-8 right-8 z-[60] w-12 h-12 rounded-full border border-white/10 text-white/50 hover:text-white bg-white/5 backdrop-blur-xl flex items-center justify-center transition-all hover:bg-white/10 hover:scale-110 active:scale-95 group"
+        className="hidden md:flex absolute bottom-8 right-8 z-[60] w-12 h-12 rounded-full border border-white/10 text-white/50 hover:text-white bg-white/5 backdrop-blur-xl items-center justify-center transition-all hover:bg-white/10 hover:scale-110 active:scale-95 group"
       >
         {muted ? <VolumeX size={18} className="group-hover:scale-110 transition-transform" /> : <Volume2 size={18} className="group-hover:scale-110 transition-transform" />}
       </button>
@@ -155,26 +160,15 @@ function LoginForm() {
           </div>
 
           {/* Glassy OAuth Buttons */}
-          <div className="flex gap-4 relative z-10">
             <button 
               type="button"
               onClick={() => handleOAuth("google")}
               disabled={!!oauthLoading}
-              className="flex-1 py-4 bg-white/[0.04] border border-white/10 rounded-2xl hover:border-white/20 hover:bg-white/[0.08] transition-all text-[10px] font-black text-white/50 hover:text-white active:scale-95 flex items-center justify-center gap-3 disabled:opacity-50 tracking-widest uppercase"
+              className="w-full py-4 bg-white/[0.04] border border-white/10 rounded-2xl hover:border-white/20 hover:bg-white/[0.08] transition-all text-[10px] font-black text-white/50 hover:text-white active:scale-95 flex items-center justify-center gap-3 disabled:opacity-50 tracking-widest uppercase"
             >
               {oauthLoading === "google" ? <Loader2 className="w-3 h-3 animate-spin" /> : <FcGoogle size={18} />}
-              Google
+              Continue with Google
             </button>
-            <button 
-              type="button"
-              onClick={() => handleOAuth("github")}
-              disabled={!!oauthLoading}
-              className="flex-1 py-4 bg-white/[0.04] border border-white/10 rounded-2xl hover:border-white/20 hover:bg-white/[0.08] transition-all text-[10px] font-black text-white/50 hover:text-white active:scale-95 flex items-center justify-center gap-3 disabled:opacity-50 tracking-widest uppercase"
-            >
-              {oauthLoading === "github" ? <Loader2 className="w-3 h-3 animate-spin" /> : <FaGithub size={18} />}
-              GitHub
-            </button>
-          </div>
 
           <p className="mt-12 text-center text-[10px] text-white/20 tracking-widest uppercase font-bold">
             New operative?{" "}

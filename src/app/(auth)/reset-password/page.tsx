@@ -44,8 +44,8 @@ function ResetForm() {
   return (
     <main className="min-h-screen w-full flex items-center justify-center relative overflow-hidden bg-[#050505]">
       
-      {/* CINEMATIC VIDEO BACKGROUND */}
-      <div className="absolute inset-0 z-0">
+      {/* CINEMATIC VIDEO BACKGROUND (Desktop Only) */}
+      <div className="absolute inset-0 z-0 hidden md:block">
         <video ref={videoRef} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover scale-105 opacity-40">
           <source src="/videos/auth-bg.mp4" type="video/mp4" />
         </video>
@@ -53,9 +53,17 @@ function ResetForm() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
       </div>
 
-      {/* Audio Toggle */}
-      <button onClick={toggleMute}
-        className="absolute bottom-8 right-8 z-[60] w-12 h-12 rounded-full border border-white/10 text-white/50 hover:text-white bg-white/5 backdrop-blur-xl flex items-center justify-center transition-all hover:bg-white/10 hover:scale-110 active:scale-95 group">
+      {/* MODERN GLASSMORPHISM BACKGROUND (Mobile Only) */}
+      <div className="absolute inset-0 z-0 md:hidden bg-gradient-to-br from-black via-purple-950/20 to-black">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3" />
+      </div>
+
+      {/* Audio Toggle (Desktop Only) */}
+      <button
+        onClick={toggleMute}
+        className="hidden md:flex absolute bottom-8 right-8 z-[60] w-12 h-12 rounded-full border border-white/10 text-white/50 hover:text-white bg-white/5 backdrop-blur-xl items-center justify-center transition-all hover:bg-white/10 hover:scale-110 active:scale-95 group"
+      >
         {muted ? <VolumeX size={18} className="group-hover:scale-110 transition-transform" /> : <Volume2 size={18} className="group-hover:scale-110 transition-transform" />}
       </button>
 

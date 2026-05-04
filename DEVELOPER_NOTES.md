@@ -1,58 +1,37 @@
-# 🎬 TFIverse - Developer Architecture Notes
-**Date:** May 2026
-**Status:** Phase 0 (Bug Fixes & Pipeline Hardening) Completed. Ready for Phase 1 (Universal Profile UI).
+# TFIverse Platform - Consolidated Developer Notes
 
-## 🧠 The "Spiderweb" Architecture
-TFIverse operates on a highly normalized, relational database model. We do **NOT** store duplicate data.
-- **Rule 1:** Movies are never stored inside a person's JSON file.
-- **Rule 2:** People JSONs contain only biography, personal stats, lifestyle, and *personal* awards.
-- **Rule 3:** All movie data (posters, release dates, movie-level awards) lives in the `movies` table.
-- **Rule 4:** People and Movies are linked via the `movie_credits` bridge table. 
+This document serves as the master record for the "scorched earth" rebuild and production-hardening of the TFIverse platform (Next.js 15, Turbopack, Drizzle ORM, PostgreSQL). 
 
-This means updating a movie poster once updates it on every actor and director's page instantly.
+## 1. Architecture & Foundation (Phase 1)
+- **Tech Stack:** Migrated from a legacy React/JSON setup to a robust Next.js 15 App Router architecture.
+- **Database:** Implemented Drizzle ORM with local PostgreSQL. Shifted all static JSON data (heroes, movies, memes) into a relational database to ensure infinite scalability and eliminate JSON bloat.
+- **File Storage:** Configured Backblaze B2 (S3-compatible) with server-side pre-signed URLs to securely handle media uploads without exposing secret keys to the client.
 
----
+## 2. Authentication & Security (Phase 2)
+- **Provider Cleanup:** Removed legacy GitHub OAuth. Standardized to Google OAuth and standard Email/Password credentials for a streamlined UX.
+- **Mandatory Onboarding:** Engineered a secure session callback using NextAuth JWTs. Users missing a Date of Birth (`hasDOB: false`) are forcefully redirected to `/onboarding` via Next.js Middleware before accessing the platform.
+- **Password Recovery:** Developed a secure, token-based Forgot/Reset password flow with a 15-minute expiration window.
+- **Rate Limiting:** Added custom in-memory rate limiting to all authentication endpoints (`/api/auth/*` equivalents via server actions) to prevent brute-force attacks.
+- **CSRF Protection:** Hardened NextAuth with strict `AUTH_TRUST_HOST` configurations.
 
-## 🔧 The 4-Script Data Pipeline
+## 3. UI/UX Refinement (Phase 3)
+- **Homepage:** 
+  - Transformed into a high-end, cinematic Awwwards-grade experience.
+  - Implemented responsive horizontal scroll panels with `snap-x snap-mandatory` for the Upcoming and OTT sections, drastically improving mobile UX.
+  - Deployed lazy loading (`loading="lazy"`) across all heavy visual assets to optimize Initial Page Load (LCP).
+- **Authentication Screens:**
+  - Desktop: Retained the immersive cinematic background video.
+  - Mobile: Implemented a highly optimized, glassmorphism dark-gradient fallback to save bandwidth and ensure native-like performance.
+- **Bento Box Profiles:** Finalized the "Apple-style" premium user profile dashboard.
 
-### 1. TMDB Movie Fetcher (`old_legacy/scripts/fetch_movies_data.py`)
-- **Purpose:** Downloads bulk movie data (5,500+ Telugu movies) from the TMDB API.
-- **Usage:** Used initially to seed the database with core filmographies.
+## 4. Meme Portal (Phase 4)
+- **Integrity Constraints:** Added strict composite unique constraints (`user_id`, `meme_id`) at the PostgreSQL schema level for `meme_views` and `meme_likes`. This guarantees 100% accurate engagement tracking and prevents duplicate abuse.
+- **Features:** 
+  - Implemented secure meme deletion and editing (strictly locked to the meme's original author).
+  - Integrated public user profiles into meme cards (displays avatar, username, and links to `/u/[username]`).
+  - Added native Web Share API functionality.
 
-### 2. AI Person Generator (Perplexity Workflow)
-- **Purpose:** We run `fetch_filmography.py` to get an actor's accurate TMDB filmography, then feed it to an AI (Perplexity) using our 28-category templates (e.g., `scripts/prompts/02-superstars-prompt.md`).
-- **Output:** A rich JSON file containing the actor's bio, cars, aura, etc. (e.g., `public/data/heroes/superstars/prabhas.json`).
-
-### 3. Database Migration & Deduplication
-- **Scripts:** `import-movies.ts` (bulk movie import) & `migration-engine.ts` (person JSON import).
-- **How it works:** When movies are imported, "stubs" (placeholders) are created for actors in the `people` table. When `migration-engine.ts` runs, it uses `ON CONFLICT DO UPDATE` to overwrite the stub with the rich JSON data, preventing duplicates.
-
-### 4. OTT Streaming Links (`old_legacy/scripts/fetch-ott-links-justwatch.py`)
-- **Purpose:** Scrapes JustWatch for direct streaming URLs (Netflix, Prime, Aha) bypassing TMDB redirects.
-- **Output:** Populates the `movie_ott_links` table with 4K/HD streaming links.
-
----
-
-## 🚀 The Execution Roadmap (What's Next)
-
-### Phase 1: Universal Profile Page (Current Focus)
-- We are building ONE `IconProfileClient.tsx` that handles ALL 28 categories.
-- Instead of 28 different pages, the component uses `if (data.heroAura)` to conditionally render sections.
-- Different categories get different theme colors (e.g., Heroes = dark/gritty, Heroines = elegant/rose), but share the same bulletproof code.
-
-### Phase 2: Movie Database Sync
-- We will fetch and import movies based on the people we are adding, using the TMDB fetchers.
-
-### Phase 3: Automated Cron Jobs
-- We will set up automated scripts to check for new movie announcements daily, and new OTT link drops (using a `--recent` flag so we don't scan all 6,000 movies).
-
-### Phase 4: Wikipedia-Style Contributions
-- A UI where fans can submit missing awards or OTT links, which go to an Admin Dashboard for approval.
-
----
-
-## 🛠️ Recent Bug Fixes Applied
-1. **Next.js 15 Params:** Added `await params` in `[slug]/page.tsx` to prevent Turbopack crash.
-2. **Category URLs:** Fixed `[category]/page.tsx` to link to plural routes consistently.
-3. **Promotion Safety:** Added slug-first lookup in `[slug]/page.tsx` so if a "rising-star" becomes a "superstar", their old URL auto-redirects instead of hitting a 404.
-4. **PostgreSQL JSONB Optimization:** Category listing page now uses `sql\`${people.metadata}->'images'\`` to fetch 1MB of data instead of 75MB.
+## Next Steps
+- Continue populating the PostgreSQL database with the remaining "Rising Stars" and "Legends" data.
+- Monitor production logs for any unhandled edge cases in the NextAuth middleware.
+- Scale rate limiting from in-memory to Redis (Upstash) when deploying to a distributed edge environment.

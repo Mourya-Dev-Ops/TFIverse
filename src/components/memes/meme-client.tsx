@@ -176,7 +176,7 @@ export default function MemeClient({ initialMemes, featuredMeme, isAuthenticated
       {/* ══════ MODALS ══════ */}
       <AnimatePresence>
         {showUpload && <MemeUploadModal onClose={() => setShowUpload(false)} />}
-        {selectedMeme && <MemeDetailsModal meme={selectedMeme} onClose={() => setSelectedMeme(null)} isAuthenticated={isAuthenticated} />}
+        {selectedMeme && <MemeDetailsModal meme={selectedMeme} onClose={() => setSelectedMeme(null)} isAuthenticated={isAuthenticated} currentUser={user} />}
       </AnimatePresence>
     </div>
   );
@@ -249,10 +249,43 @@ function MemeCard({ meme, isAuthenticated, onClick }: { meme: Meme; isAuthentica
   );
 }
 
-function MemeDetailsModal({ meme, onClose, isAuthenticated }: { meme: Meme; onClose: () => void; isAuthenticated: boolean }) {
+function MemeDetailsModal({ meme, onClose, isAuthenticated, currentUser }: { meme: Meme & any; onClose: () => void; isAuthenticated: boolean; currentUser: any }) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [editTitle, setEditTitle] = useState(meme.title);
+  const [editDesc, setEditDesc] = useState(meme.description || "");
+
   useEffect(() => {
     trackMemeView(meme.id);
   }, [meme.id]);
+
+  const handleDelete = async () => {
+    if (!confirm("Delete this artifact?")) return;
+    try {
+      const { deleteMeme } = await import("@/app/actions/memes");
+      await deleteMeme(meme.id);
+      toast.success("Artifact deleted");
+      onClose();
+      // Optionally trigger a refresh of the memes list
+      window.location.reload();
+    } catch (e: any) {
+      toast.error(e.message || "Delete failed");
+    }
+  };
+
+  const handleEdit = async () => {
+    try {
+      const { editMeme } = await import("@/app/actions/memes");
+      await editMeme(meme.id, { title: editTitle, description: editDesc });
+      toast.success("Artifact updated");
+      meme.title = editTitle;
+      meme.description = editDesc;
+      setIsEditing(false);
+    } catch (e: any) {
+      toast.error(e.message || "Update failed");
+    }
+  };
+
+  const isOwner = currentUser?.id === meme.userId;
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10">
@@ -272,21 +305,44 @@ function MemeDetailsModal({ meme, onClose, isAuthenticated }: { meme: Meme; onCl
         </div>
 
         {/* Interaction Side */}
-        <div className="flex-1 p-8 md:p-12 flex flex-col justify-between">
+        <div className="flex-1 p-8 md:p-12 flex flex-col justify-between overflow-y-auto scrollbar-hide">
           <div>
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center"><User size={20} className="text-white/20" /></div>
-              <div>
-                <p className="text-xs font-black uppercase tracking-widest text-white/40">Intel Source</p>
-                <p className="text-sm font-bold text-white/80">Agent Alpha</p>
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-3">
+                <Link href={`/u/${meme.user?.profile?.username || ''}`} className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden">
+                  {meme.user?.profile?.avatarUrl ? <img src={meme.user.profile.avatarUrl} className="w-full h-full object-cover" /> : <User size={20} className="text-white/20" />}
+                </Link>
+                <div>
+                  <p className="text-xs font-black uppercase tracking-widest text-white/40">Intel Source</p>
+                  <Link href={`/u/${meme.user?.profile?.username || ''}`} className="text-sm font-bold text-white/80 hover:text-white transition">
+                    {meme.user?.profile?.username || 'Agent Alpha'}
+                  </Link>
+                </div>
               </div>
+              
+              {isOwner && (
+                <div className="flex gap-2">
+                  <button onClick={() => setIsEditing(!isEditing)} className="text-[10px] font-bold uppercase text-white/50 hover:text-white border border-white/10 px-3 py-1.5 rounded-lg">Edit</button>
+                  <button onClick={handleDelete} className="text-[10px] font-bold uppercase text-red-500/50 hover:text-red-500 border border-red-500/10 px-3 py-1.5 rounded-lg">Delete</button>
+                </div>
+              )}
             </div>
 
-            <h2 className="text-3xl font-black tracking-tight mb-4 leading-tight">{meme.title}</h2>
-            <p className="text-white/40 text-sm leading-relaxed mb-8 tracking-wide">{meme.description || "The timeline provides no further context for this artifact."}</p>
+            {isEditing ? (
+              <div className="space-y-4 mb-8">
+                <input value={editTitle} onChange={e => setEditTitle(e.target.value)} className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white outline-none" />
+                <textarea value={editDesc} onChange={e => setEditDesc(e.target.value)} rows={3} className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white outline-none" />
+                <button onClick={handleEdit} className="w-full py-3 bg-white text-black font-bold uppercase text-xs rounded-lg">Save Changes</button>
+              </div>
+            ) : (
+              <>
+                <h2 className="text-3xl font-black tracking-tight mb-4 leading-tight">{meme.title}</h2>
+                <p className="text-white/40 text-sm leading-relaxed mb-8 tracking-wide">{meme.description || "The timeline provides no further context for this artifact."}</p>
+              </>
+            )}
 
             <div className="flex flex-wrap gap-2 mb-12">
-              {meme.heroTags.map(tag => <span key={tag} className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-[9px] font-black uppercase tracking-widest text-white/40">#{tag}</span>)}
+              {meme.heroTags?.map((tag: string) => <span key={tag} className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-[9px] font-black uppercase tracking-widest text-white/40">#{tag}</span>)}
             </div>
           </div>
 

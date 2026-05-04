@@ -8,9 +8,19 @@ import { v4 as uuidv4 } from "uuid";
 import { sendVerificationEmail, sendPasswordResetEmail } from "@/lib/email";
 import { signIn } from "@/auth";
 import { AuthError } from "next-auth";
+import { headers } from "next/headers";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 export async function loginUser(formData: FormData) {
   try {
+    const headersList = await headers();
+    const ip = headersList.get('x-forwarded-for') || headersList.get('x-real-ip') || 'unknown';
+    const rateLimit = checkRateLimit(ip, 'login', 5, 15 * 60 * 1000); // 5 attempts per 15 minutes
+    
+    if (!rateLimit.success) {
+      return { error: "Too many login attempts. Please try again later." };
+    }
+
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
 
@@ -38,6 +48,14 @@ export async function loginUser(formData: FormData) {
 
 export async function registerUser(formData: FormData) {
   try {
+    const headersList = await headers();
+    const ip = headersList.get('x-forwarded-for') || headersList.get('x-real-ip') || 'unknown';
+    const rateLimit = checkRateLimit(ip, 'register', 3, 60 * 60 * 1000); // 3 registrations per hour
+    
+    if (!rateLimit.success) {
+      return { error: "Too many registration attempts. Please try again later." };
+    }
+
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
@@ -108,6 +126,14 @@ export async function registerUser(formData: FormData) {
 // ─── FORGOT PASSWORD ─────────────────────────────────────────────
 export async function forgotPassword(formData: FormData) {
   try {
+    const headersList = await headers();
+    const ip = headersList.get('x-forwarded-for') || headersList.get('x-real-ip') || 'unknown';
+    const rateLimit = checkRateLimit(ip, 'forgot-password', 3, 15 * 60 * 1000); // 3 attempts per 15 minutes
+    
+    if (!rateLimit.success) {
+      return { error: "Too many password reset requests. Please try again later." };
+    }
+
     const email = formData.get("email") as string;
 
     if (!email) {
@@ -124,9 +150,9 @@ export async function forgotPassword(formData: FormData) {
     // Delete any existing reset tokens for this email
     await db.delete(passwordResetTokens).where(eq(passwordResetTokens.email, email));
 
-    // Create new token (expires in 1 hour)
+    // Create new token (expires in 15 minutes)
     const token = uuidv4();
-    const expires = new Date(new Date().getTime() + 1000 * 60 * 60);
+    const expires = new Date(new Date().getTime() + 1000 * 60 * 15);
 
     await db.insert(passwordResetTokens).values({
       email,

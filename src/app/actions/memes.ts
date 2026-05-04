@@ -56,7 +56,11 @@ export async function getMemes(options: {
     limit,
     offset,
     with: {
-      // We'll add relations if needed
+      user: {
+        with: {
+          profile: true
+        }
+      }
     }
   });
 
@@ -133,15 +137,39 @@ export async function toggleLikeMeme(memeId: string) {
 
 export async function trackMemeView(memeId: string) {
   const session = await auth();
-  // We can track guest views by IP if we wanted, but let's keep it simple
-  await db.insert(memeViews).values({
-    memeId,
-    userId: session?.user?.id,
-  });
-  
+  if (!session?.user?.id) return;
+
+  try {
+    await db.insert(memeViews).values({
+      memeId,
+      userId: session.user.id,
+    });
+    
+    await db.update(memes)
+      .set({ views: sql`${memes.views} + 1` })
+      .where(eq(memes.id, memeId));
+  } catch (error: any) {
+    if (error.code !== '23505') { // ignore duplicate unique constraint
+      console.error("trackMemeView error:", error);
+    }
+  }
+}
+
+export async function editMeme(memeId: string, data: { title: string; description?: string }) {
+  const session = await auth();
+  if (!session?.user?.id) throw new Error("Unauthorized");
+
+  const [meme] = await db.select().from(memes).where(eq(memes.id, memeId));
+  if (!meme) throw new Error("Meme not found");
+  if (meme.userId !== session.user.id) throw new Error("You can only edit your own memes");
+
   await db.update(memes)
-    .set({ views: sql`${memes.views} + 1` })
+    .set({ title: data.title, description: data.description, updatedAt: new Date() })
     .where(eq(memes.id, memeId));
+
+  revalidatePath("/memes");
+  revalidatePath("/profile");
+  return { success: true };
 }
 
 export async function getMemeOfTheWeek() {

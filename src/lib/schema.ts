@@ -492,14 +492,18 @@ export const memeViews = pgTable('meme_views', {
   userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   ipAddress: text('ip_address'),
-});
+}, (table) => ({
+  userMemeViewIdx: unique('user_meme_view_unique').on(table.userId, table.memeId),
+}));
 
 export const memeLikes = pgTable('meme_likes', {
   id: uuid('id').primaryKey().defaultRandom(),
   memeId: uuid('meme_id').notNull().references(() => memes.id, { onDelete: 'cascade' }),
   userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
   createdAt: timestamp('created_at').defaultNow(),
-});
+}, (table) => ({
+  userMemeLikeIdx: unique('user_meme_like_unique').on(table.userId, table.memeId),
+}));
 
 export const memeDownloads = pgTable('meme_downloads', {
   id: uuid('id').primaryKey().defaultRandom(),
