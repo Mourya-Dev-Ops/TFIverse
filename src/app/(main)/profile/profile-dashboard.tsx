@@ -121,7 +121,7 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
       <Toaster position="top-center" reverseOrder={false} />
       
       {/* ─── CINEMATIC HEADER ─── */}
-      <div className="relative h-[600px] w-full group overflow-hidden">
+      <div className="relative h-[600px] w-full group overflow-hidden -mt-16">
         {/* The Banner Image */}
         <img 
           src={bannerUrl} 
@@ -144,12 +144,12 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
         {/* TOP BENTO ROW */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
           
-          {/* LEFT CARD: THE NUMBERS & FAVORITES (Spans 4 columns) */}
+          {/* RIGHT CARD: THE NUMBERS & FAVORITES (Spans 4 columns) */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="lg:col-span-4 flex flex-col gap-6 order-2 lg:order-1"
+            className="lg:col-span-4 flex flex-col gap-6 order-2 lg:order-2"
           >
             {/* Stats Bento */}
             <div className="glass-premium rounded-[2rem] p-6 flex-1 flex flex-col justify-center">
@@ -218,11 +218,11 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
             </div>
           </motion.div>
 
-          {/* RIGHT CARD: IDENTITY (Spans 8 columns) */}
+          {/* LEFT CARD: IDENTITY (Spans 8 columns) */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="lg:col-span-8 glass-premium rounded-[2rem] p-8 flex flex-col md:flex-row gap-8 relative overflow-hidden order-1 lg:order-2"
+            className="lg:col-span-8 glass-premium rounded-[2rem] p-8 flex flex-col md:flex-row gap-8 relative overflow-hidden order-1 lg:order-1"
           >
             {/* The Avatar */}
             <div className="relative w-32 h-32 md:w-40 md:h-40 shrink-0 group/avatar">
@@ -395,9 +395,9 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
                     <Link key={meme.id} href={`/memes?id=${meme.id}`} className="block break-inside-avoid">
                       <div className="rounded-xl overflow-hidden relative group">
                         {meme.type === 'video' ? (
-                          <video src={meme.mediaUrl} className="w-full object-cover" />
+                          <video src={meme.imageUrl} className="w-full object-cover" />
                         ) : (
-                          <img src={meme.mediaUrl} alt={meme.title} className="w-full object-cover" />
+                          <img src={meme.imageUrl} alt={meme.title} className="w-full object-cover" />
                         )}
                         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                           <h4 className="text-white font-bold p-4 text-center line-clamp-2">{meme.title}</h4>
