@@ -362,7 +362,7 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
                         <h4 className="text-xl font-bold text-white mb-2 line-clamp-1">{list.title}</h4>
                         {list.description && <p className="text-sm text-neutral-400 mb-4 line-clamp-2">{list.description}</p>}
                         <div className="mt-auto flex items-center justify-between w-full pt-4 border-t border-white/5">
-                          <span className="text-xs text-neutral-500 font-bold uppercase tracking-widest">{new Date(list.createdAt).toLocaleDateString()}</span>
+                          <span className="text-xs text-neutral-500 font-bold uppercase tracking-widest">{new Date(list.createdAt).toLocaleDateString("en-US")}</span>
                           <span className="text-xs text-white bg-white/10 px-2 py-1 rounded font-bold">{Object.keys(list.tiers || {}).length} Tiers</span>
                         </div>
                       </div>

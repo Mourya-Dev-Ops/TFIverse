@@ -132,6 +132,13 @@ export const userFollows = pgTable('user_follows', {
   createdAt: timestamp('createdAt', { mode: 'date' }).defaultNow(),
 });
 
+export const userProfilesRelations = relations(userProfiles, ({ one }) => ({
+  user: one(users, {
+    fields: [userProfiles.userId],
+    references: [users.id],
+  }),
+}));
+
 export const profileViews = pgTable('profile_views', {
   id: uuid('id').primaryKey().defaultRandom(),
   viewerId: uuid('viewer_id').references(() => users.id),
@@ -605,7 +612,10 @@ export const notifications = pgTable('notifications', {
 export const usersRelations = relations(users, ({ one, many }) => ({
   accounts: many(accounts),
   sessions: many(sessions),
-  profile: one(userProfiles),
+  profile: one(userProfiles, {
+    fields: [users.id],
+    references: [userProfiles.userId],
+  }),
   reviews: many(reviews),
   watchedMovies: many(watchedMovies),
   watchlist: many(watchlist),
