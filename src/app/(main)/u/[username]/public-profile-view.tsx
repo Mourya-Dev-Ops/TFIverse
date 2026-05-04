@@ -22,13 +22,15 @@ interface PublicProfileViewProps {
   followingCount: number;
   initialIsFollowing: boolean;
   currentUserId?: string;
+  memes: any[];
+  tierLists: any[];
 }
 
 export default function PublicProfileView({ 
-  user, profile, followersCount: initialFollowers, followingCount, initialIsFollowing, currentUserId 
+  user, profile, followersCount: initialFollowers, followingCount, initialIsFollowing, currentUserId, memes, tierLists 
 }: PublicProfileViewProps) {
   const [copied, setCopied] = useState(false);
-  const [activeTab, setActiveTab] = useState<"activity" | "tierlists" | "memes">("tierlists");
+  const [activeTab, setActiveTab] = useState<"tierlists" | "memes">("tierlists");
   const [isClient, setIsClient] = useState(false);
   
   const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
@@ -250,24 +252,24 @@ export default function PublicProfileView({
                <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500 mb-4">Favorites</h3>
                <div className="flex flex-col gap-3">
                  {profile.favoriteMovieSlug ? (
-                   <div className="flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/5 rounded-xl">
+                   <Link href={`/movies/${profile.favoriteMovieSlug}`} className="group flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/5 rounded-xl hover:bg-white/10 transition-colors">
                      <span className="text-xl">🎬</span>
                      <div className="flex flex-col">
-                       <span className="text-sm font-bold text-white capitalize">{profile.favoriteMovieSlug.replace(/-/g, ' ')}</span>
+                       <span className="text-sm font-bold text-white capitalize group-hover:text-blue-400 transition-colors">{profile.favoriteMovieSlug.replace(/-/g, ' ')}</span>
                        <span className="text-[10px] text-neutral-500 uppercase tracking-widest">Pinned Movie</span>
                      </div>
-                   </div>
+                   </Link>
                  ) : (
                    <div className="text-xs text-neutral-600 italic">No pinned movie yet.</div>
                  )}
                  {profile.favoriteHeroSlug && (
-                   <div className="flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/5 rounded-xl">
+                   <Link href={`/icons/${profile.favoriteHeroSlug}`} className="group flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/5 rounded-xl hover:bg-white/10 transition-colors">
                      <span className="text-xl">🦸‍♂️</span>
                      <div className="flex flex-col">
-                       <span className="text-sm font-bold text-white capitalize">{profile.favoriteHeroSlug.replace(/-/g, ' ')}</span>
+                       <span className="text-sm font-bold text-white capitalize group-hover:text-blue-400 transition-colors">{profile.favoriteHeroSlug.replace(/-/g, ' ')}</span>
                        <span className="text-[10px] text-neutral-500 uppercase tracking-widest">Favorite Hero</span>
                      </div>
-                   </div>
+                   </Link>
                  )}
                </div>
             </div>
@@ -291,7 +293,7 @@ export default function PublicProfileView({
 
         {/* ─── CONTENT TABS ─── */}
         <div className="mb-6 flex gap-2 overflow-x-auto pb-2 no-scrollbar">
-          {(["tierlists", "memes", "activity"] as const).map((tab) => (
+          {(["tierlists", "memes"] as const).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -301,7 +303,7 @@ export default function PublicProfileView({
                   : "bg-[#0a0a0a] text-neutral-400 border border-white/5 hover:bg-white/5 hover:text-white"
               }`}
             >
-              {tab === "tierlists" ? "🏆 Tier Lists" : tab === "memes" ? "😂 Memes" : "📊 Activity"}
+              {tab === "tierlists" ? "🏆 Tier Lists" : "😂 Memes"}
             </button>
           ))}
         </div>
@@ -317,27 +319,55 @@ export default function PublicProfileView({
             className="bg-[#0a0a0a] border border-white/5 backdrop-blur-xl rounded-[2rem] p-12 min-h-[400px] flex flex-col items-center justify-center text-center"
           >
             {activeTab === "tierlists" && (
-              <>
-                <span className="text-6xl mb-6 opacity-20">🏆</span>
-                <h3 className="text-xl font-bold text-white mb-2">No Tier Lists</h3>
-                <p className="text-neutral-500 max-w-sm">{profile.username} hasn't created any tier lists yet.</p>
-              </>
+              tierLists && tierLists.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                  {tierLists.map(list => (
+                    <Link key={list.id} href={`/tier-list/${list.id}`} className="group block h-full">
+                      <div className="glass-premium rounded-2xl p-6 h-full flex flex-col items-start text-left hover:scale-[1.02] transition-transform">
+                        <h4 className="text-xl font-bold text-white mb-2 line-clamp-1">{list.title}</h4>
+                        {list.description && <p className="text-sm text-neutral-400 mb-4 line-clamp-2">{list.description}</p>}
+                        <div className="mt-auto flex items-center justify-between w-full pt-4 border-t border-white/5">
+                          <span className="text-xs text-neutral-500 font-bold uppercase tracking-widest">{new Date(list.createdAt).toLocaleDateString()}</span>
+                          <span className="text-xs text-white bg-white/10 px-2 py-1 rounded font-bold">{Object.keys(list.tiers || {}).length} Tiers</span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <>
+                  <span className="text-6xl mb-6 opacity-20">🏆</span>
+                  <h3 className="text-xl font-bold text-white mb-2">No Tier Lists Yet</h3>
+                  <p className="text-neutral-500 max-w-sm mb-8">{profile.username} hasn't created any tier lists yet.</p>
+                </>
+              )
             )}
 
             {activeTab === "memes" && (
-              <>
-                <span className="text-6xl mb-6 opacity-20">😂</span>
-                <h3 className="text-xl font-bold text-white mb-2">No Memes</h3>
-                <p className="text-neutral-500 max-w-sm">{profile.username} hasn't uploaded any memes yet.</p>
-              </>
-            )}
-
-            {activeTab === "activity" && (
-              <>
-                <span className="text-6xl mb-6 opacity-20">📊</span>
-                <h3 className="text-xl font-bold text-white mb-2">No Recent Activity</h3>
-                <p className="text-neutral-500 max-w-sm">{profile.username}'s timeline is quiet.</p>
-              </>
+              memes && memes.length > 0 ? (
+                <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 w-full">
+                  {memes.map(meme => (
+                    <Link key={meme.id} href={`/memes?id=${meme.id}`} className="block break-inside-avoid">
+                      <div className="rounded-xl overflow-hidden relative group">
+                        {meme.type === 'video' ? (
+                          <video src={meme.mediaUrl} className="w-full object-cover" />
+                        ) : (
+                          <img src={meme.mediaUrl} alt={meme.title} className="w-full object-cover" />
+                        )}
+                        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                          <h4 className="text-white font-bold p-4 text-center line-clamp-2">{meme.title}</h4>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <>
+                  <span className="text-6xl mb-6 opacity-20">😂</span>
+                  <h3 className="text-xl font-bold text-white mb-2">No Memes Yet</h3>
+                  <p className="text-neutral-500 max-w-sm mb-8">{profile.username} hasn't uploaded any memes yet.</p>
+                </>
+              )
             )}
           </motion.div>
         </AnimatePresence>

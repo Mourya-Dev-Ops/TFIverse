@@ -45,6 +45,20 @@ export async function updateProfile(formData: FormData) {
     return { error: "Bio must be less than 500 characters" };
   }
 
+  if (dateOfBirth) {
+    const dobDate = new Date(dateOfBirth);
+    const today = new Date();
+    if (isNaN(dobDate.getTime())) {
+      return { error: "Invalid date format for Date of Birth" };
+    }
+    if (dobDate >= today) {
+      return { error: "Date of Birth can't be in the future" };
+    }
+    if (today.getFullYear() - dobDate.getFullYear() < 5) {
+      return { error: "You must be at least 5 years old" };
+    }
+  }
+
   // Check if username is taken by someone else
   const existing = await db.select().from(userProfiles).where(eq(userProfiles.username, username));
   if (existing.length > 0 && existing[0].userId !== session.user.id) {

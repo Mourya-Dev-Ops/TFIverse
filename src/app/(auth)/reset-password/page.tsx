@@ -141,10 +141,7 @@ function ResetForm() {
     </main>
   );
 }
-      </div>
-    </main>
-  );
-}
+
 
 export default function ResetPasswordPage() {
   return (

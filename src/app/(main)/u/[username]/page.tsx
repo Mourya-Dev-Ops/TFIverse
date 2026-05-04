@@ -4,6 +4,8 @@ import { users, userProfiles, userFollows } from "@/lib/schema";
 import { eq, sql } from "drizzle-orm";
 import PublicProfileView from "./public-profile-view";
 import { auth } from "@/auth";
+import { getMemes } from "@/app/actions/memes";
+import { getTierLists } from "@/app/actions/tierlist";
 
 export async function generateMetadata({ params }: { params: Promise<{ username: string }> }) {
   const { username } = await params;
@@ -55,6 +57,12 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
     isFollowing = !!followRecord;
   }
 
+  // Fetch memes and tier lists
+  const [memes, tierLists] = await Promise.all([
+    getMemes({ userId: profileRecord.user.id }),
+    getTierLists({ userId: profileRecord.user.id }),
+  ]);
+
   return (
     <PublicProfileView 
       profile={profileRecord.profile} 
@@ -63,6 +71,8 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
       followingCount={Number(followingCount)}
       initialIsFollowing={isFollowing}
       currentUserId={session?.user?.id}
+      memes={memes}
+      tierLists={tierLists}
     />
   );
 }

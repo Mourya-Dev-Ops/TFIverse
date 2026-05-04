@@ -19,13 +19,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   ...authConfig,
   session: { strategy: "jwt" },
   callbacks: {
+    ...authConfig.callbacks,
     async jwt({ token, user, trigger, session }) {
       if (user) {
         token.id = user.id;
-        // Fetch avatar and DOB from userProfiles
+        // Fetch avatar from userProfiles
         const [profile] = await db.select({ 
           avatarUrl: userProfiles.avatarUrl,
-          dateOfBirth: userProfiles.dateOfBirth
         })
           .from(userProfiles)
           .where(eq(userProfiles.userId, user.id as string));
@@ -35,29 +35,20 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         } else if (user.image) {
           token.picture = user.image;
         }
-        token.hasDOB = !!profile?.dateOfBirth;
       }
       if (trigger === "update" && session?.image) {
         token.picture = session.image;
       }
-      // If profile is updated, we might need to update hasDOB
-      if (trigger === "update" && session?.hasDOB !== undefined) {
-        token.hasDOB = session.hasDOB;
-      }
       return token
     },
     async session({ session, token }) {
-      // In JWT strategy, token.sub is the default user ID. Fallback to token.id if set manually.
       const userId = (token?.sub || token?.id) as string;
       if (userId && session.user) {
         session.user.id = userId;
-        (session.user as any).hasDOB = token.hasDOB;
       }
       return session
     },
-    ...authConfig.callbacks, // Merge authorized callback from config
   },
-  // Override providers to add Credentials (which needs Node.js runtime for db + bcrypt)
   providers: [
     ...authConfig.providers,
     Credentials({

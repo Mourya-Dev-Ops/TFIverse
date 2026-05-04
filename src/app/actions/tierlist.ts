@@ -42,8 +42,10 @@ export async function createTierList(data: {
 // GET ALL PUBLIC TIER LISTS (Community Hub)
 // ============================================================================
 
-export async function getTierLists() {
-  const lists = await db
+export async function getTierLists(options: { userId?: string } = {}) {
+  const { userId } = options;
+
+  let query = db
     .select({
       id: tierLists.id,
       title: tierLists.title,
@@ -56,8 +58,15 @@ export async function getTierLists() {
       avatar: userProfiles.avatarUrl,
     })
     .from(tierLists)
-    .leftJoin(userProfiles, eq(tierLists.userId, userProfiles.userId))
-    .where(eq(tierLists.isPublic, true))
+    .leftJoin(userProfiles, eq(tierLists.userId, userProfiles.userId));
+
+  if (userId) {
+    query = query.where(eq(tierLists.userId, userId)) as any;
+  } else {
+    query = query.where(eq(tierLists.isPublic, true)) as any;
+  }
+
+  const lists = await query
     .orderBy(desc(tierLists.createdAt))
     .limit(50);
 

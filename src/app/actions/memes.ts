@@ -14,8 +14,9 @@ export async function getMemes(options: {
   search?: string;
   limit?: number;
   offset?: number;
+  userId?: string;
 } = {}) {
-  const { sort = "new", hero, movie, search, limit = 20, offset = 0 } = options;
+  const { sort = "new", hero, movie, search, limit = 20, offset = 0, userId } = options;
 
   let whereClause = eq(memes.status, "approved");
 
@@ -32,6 +33,10 @@ export async function getMemes(options: {
       ilike(memes.title, `%${search}%`),
       ilike(memes.description, `%${search}%`)
     )) as any;
+  }
+
+  if (userId) {
+    whereClause = and(whereClause, eq(memes.userId, userId)) as any;
   }
 
   let orderBy;

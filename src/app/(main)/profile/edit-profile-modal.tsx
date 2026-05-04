@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { updateProfile, checkUsername } from "@/app/actions/profile";
+import { searchTmdbMovies } from "@/app/actions/tmdb";
+import heroesData from "@/data/heroes.json";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { X, Search } from "lucide-react";
 
 const STATUS_EMOJIS = ["🎬", "😊", "🎮", "🎨", "🔥", "⚡", "✨", "🎉", "😴", "🍕", "☕", "🌟"];
 const USERNAME_MAX = 20;
@@ -45,6 +47,30 @@ export default function EditProfileModal({ profile, userId, isOpen, onClose }: E
     themeColor: profile.themeColor || "#3b82f6",
   });
 
+  const [heroSearch, setHeroSearch] = useState("");
+  const [showHeroDropdown, setShowHeroDropdown] = useState(false);
+
+  const [movieSearch, setMovieSearch] = useState("");
+  const [movieResults, setMovieResults] = useState<any[]>([]);
+  const [showMovieDropdown, setShowMovieDropdown] = useState(false);
+
+  const filteredHeroes = useMemo(() => {
+    if (!heroSearch) return [];
+    return heroesData.filter(h => h.name.toLowerCase().includes(heroSearch.toLowerCase())).slice(0, 5);
+  }, [heroSearch]);
+
+  useEffect(() => {
+    if (!movieSearch) {
+      setMovieResults([]);
+      return;
+    }
+    const timer = setTimeout(async () => {
+      const data = await searchTmdbMovies(movieSearch);
+      setMovieResults(data.results.slice(0, 5));
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [movieSearch]);
+
   // Username validation with debounce
   useEffect(() => {
     if (!formData.username || formData.username === profile.username) {
@@ -79,6 +105,26 @@ export default function EditProfileModal({ profile, userId, isOpen, onClose }: E
 
     const fd = new FormData();
     Object.entries(formData).forEach(([key, value]) => fd.append(key, value));
+
+    if (formData.dateOfBirth) {
+      const dobDate = new Date(formData.dateOfBirth);
+      const today = new Date();
+      if (isNaN(dobDate.getTime())) {
+        setError("Invalid date format.");
+        setLoading(false);
+        return;
+      }
+      if (dobDate >= today) {
+        setError("Date of Birth can't be in the future.");
+        setLoading(false);
+        return;
+      }
+      if (today.getFullYear() - dobDate.getFullYear() < 5) {
+        setError("You must be at least 5 years old.");
+        setLoading(false);
+        return;
+      }
+    }
 
     const result = await updateProfile(fd);
     if (result.error) {
@@ -231,24 +277,86 @@ export default function EditProfileModal({ profile, userId, isOpen, onClose }: E
             </div>
 
             {/* Favorites */}
-            <div className="grid grid-cols-2 gap-6">
-              <div>
-                <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase mb-2 block">Favorite Hero (Slug)</label>
-                <input
-                  value={formData.favoriteHeroSlug}
-                  onChange={e => update("favoriteHeroSlug", e.target.value)}
-                  placeholder="e.g. prabhas"
-                  className="w-full bg-transparent border-b border-neutral-800 text-white px-0 py-2 focus:outline-none focus:border-white transition-colors"
-                />
+            <div className="grid grid-cols-2 gap-6 relative">
+              <div className="relative">
+                <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase mb-2 block">Favorite Hero</label>
+                {formData.favoriteHeroSlug ? (
+                  <div className="flex items-center justify-between bg-white/5 border border-white/10 rounded-xl px-3 py-2">
+                    <span className="text-sm text-white capitalize">{formData.favoriteHeroSlug.replace(/-/g, ' ')}</span>
+                    <button type="button" onClick={() => update("favoriteHeroSlug", "")} className="text-neutral-500 hover:text-white"><X size={14}/></button>
+                  </div>
+                ) : (
+                  <div className="relative">
+                    <Search className="absolute left-2 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
+                    <input
+                      value={heroSearch}
+                      onChange={e => { setHeroSearch(e.target.value); setShowHeroDropdown(true); }}
+                      onFocus={() => setShowHeroDropdown(true)}
+                      onBlur={() => setTimeout(() => setShowHeroDropdown(false), 200)}
+                      placeholder="Search actor..."
+                      className="w-full bg-transparent border-b border-neutral-800 text-white pl-8 pr-2 py-2 focus:outline-none focus:border-white transition-colors"
+                    />
+                    {showHeroDropdown && filteredHeroes.length > 0 && (
+                      <div className="absolute top-full left-0 right-0 mt-1 bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden z-50 max-h-48 overflow-y-auto">
+                        {filteredHeroes.map(hero => (
+                          <div 
+                            key={hero.id} 
+                            onClick={() => { update("favoriteHeroSlug", hero.slug); setHeroSearch(""); setShowHeroDropdown(false); }}
+                            className="px-3 py-2 hover:bg-white/10 cursor-pointer flex items-center gap-3"
+                          >
+                            <img src={hero.portraitUrl} alt={hero.name} className="w-8 h-8 rounded-full object-cover border border-white/10" />
+                            <div className="flex flex-col">
+                              <span className="text-sm text-white">{hero.name}</span>
+                              <span className="text-[10px] text-neutral-500 uppercase tracking-widest">{hero.title}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
-              <div>
-                <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase mb-2 block">Favorite Movie (Slug)</label>
-                <input
-                  value={formData.favoriteMovieSlug}
-                  onChange={e => update("favoriteMovieSlug", e.target.value)}
-                  placeholder="e.g. salaar"
-                  className="w-full bg-transparent border-b border-neutral-800 text-white px-0 py-2 focus:outline-none focus:border-white transition-colors"
-                />
+              <div className="relative">
+                <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase mb-2 block">Favorite Movie</label>
+                {formData.favoriteMovieSlug ? (
+                  <div className="flex items-center justify-between bg-white/5 border border-white/10 rounded-xl px-3 py-2">
+                    <span className="text-sm text-white capitalize">{formData.favoriteMovieSlug.replace(/-/g, ' ')}</span>
+                    <button type="button" onClick={() => update("favoriteMovieSlug", "")} className="text-neutral-500 hover:text-white"><X size={14}/></button>
+                  </div>
+                ) : (
+                  <div className="relative">
+                    <Search className="absolute left-2 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
+                    <input
+                      value={movieSearch}
+                      onChange={e => { setMovieSearch(e.target.value); setShowMovieDropdown(true); }}
+                      onFocus={() => setShowMovieDropdown(true)}
+                      onBlur={() => setTimeout(() => setShowMovieDropdown(false), 200)}
+                      placeholder="Search movie..."
+                      className="w-full bg-transparent border-b border-neutral-800 text-white pl-8 pr-2 py-2 focus:outline-none focus:border-white transition-colors"
+                    />
+                    {showMovieDropdown && movieResults.length > 0 && (
+                      <div className="absolute top-full left-0 right-0 mt-1 bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden z-50 max-h-48 overflow-y-auto">
+                        {movieResults.map(movie => (
+                          <div 
+                            key={movie.id} 
+                            onClick={() => { update("favoriteMovieSlug", movie.title.toLowerCase().replace(/\s+/g, '-')); setMovieSearch(""); setShowMovieDropdown(false); }}
+                            className="px-3 py-2 hover:bg-white/10 cursor-pointer flex items-center gap-3"
+                          >
+                            {movie.poster_path ? (
+                              <img src={`https://image.tmdb.org/t/p/w92${movie.poster_path}`} alt={movie.title} className="w-6 h-9 object-cover rounded" />
+                            ) : (
+                              <div className="w-6 h-9 bg-neutral-800 rounded flex items-center justify-center text-[10px]">🎬</div>
+                            )}
+                            <div className="flex flex-col">
+                              <span className="text-sm text-white line-clamp-1">{movie.title}</span>
+                              <span className="text-[10px] text-neutral-500">{movie.release_date?.substring(0, 4)}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
 

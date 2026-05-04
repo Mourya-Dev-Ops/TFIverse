@@ -27,15 +27,17 @@ interface ProfileDashboardProps {
   profile: any;
   followersCount: number;
   followingCount: number;
+  memes: any[];
+  tierLists: any[];
 }
 
-export default function ProfileDashboard({ user, profile, followersCount, followingCount }: ProfileDashboardProps) {
+export default function ProfileDashboard({ user, profile, followersCount, followingCount, memes, tierLists }: ProfileDashboardProps) {
   const router = useRouter();
   const [showEditModal, setShowEditModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [copied, setCopied] = useState(false);
   const [uploading, setUploading] = useState(false);
-  const [activeTab, setActiveTab] = useState<"activity" | "tierlists" | "memes">("tierlists");
+  const [activeTab, setActiveTab] = useState<"tierlists" | "memes">("tierlists");
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -121,7 +123,7 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
     }
   };
 
-  const stats = { ratings: 0, watched: 0, watchlist: 0, likes: 0, reviews: 0, tierLists: 0, memes: 0 };
+  const stats = { watched: 0, watchlist: 0, reviews: 0 };
   const customColor = profile.themeColor && profile.themeColor !== "#ffffff" ? profile.themeColor : "#3b82f6";
 
   return (
@@ -266,24 +268,24 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
                <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500 mb-4">Favorites</h3>
                <div className="flex flex-col gap-3">
                  {profile.favoriteMovieSlug ? (
-                   <div className="flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/5 rounded-xl">
+                   <Link href={`/movies/${profile.favoriteMovieSlug}`} className="group flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/5 rounded-xl hover:bg-white/10 transition-colors">
                      <span className="text-xl">🎬</span>
                      <div className="flex flex-col">
-                       <span className="text-sm font-bold text-white capitalize">{profile.favoriteMovieSlug.replace(/-/g, ' ')}</span>
+                       <span className="text-sm font-bold text-white capitalize group-hover:text-blue-400 transition-colors">{profile.favoriteMovieSlug.replace(/-/g, ' ')}</span>
                        <span className="text-[10px] text-neutral-500 uppercase tracking-widest">Pinned Movie</span>
                      </div>
-                   </div>
+                   </Link>
                  ) : (
                    <div className="text-xs text-neutral-600 italic">No pinned movie yet.</div>
                  )}
                  {profile.favoriteHeroSlug && (
-                   <div className="flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/5 rounded-xl">
+                   <Link href={`/icons/${profile.favoriteHeroSlug}`} className="group flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/5 rounded-xl hover:bg-white/10 transition-colors">
                      <span className="text-xl">🦸‍♂️</span>
                      <div className="flex flex-col">
-                       <span className="text-sm font-bold text-white capitalize">{profile.favoriteHeroSlug.replace(/-/g, ' ')}</span>
+                       <span className="text-sm font-bold text-white capitalize group-hover:text-blue-400 transition-colors">{profile.favoriteHeroSlug.replace(/-/g, ' ')}</span>
                        <span className="text-[10px] text-neutral-500 uppercase tracking-widest">Favorite Hero</span>
                      </div>
-                   </div>
+                   </Link>
                  )}
                </div>
                
@@ -326,7 +328,7 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
 
         {/* ─── CONTENT TABS ─── */}
         <div className="mb-6 flex gap-2 overflow-x-auto pb-2 no-scrollbar">
-          {(["tierlists", "memes", "activity"] as const).map((tab) => (
+          {(["tierlists", "memes"] as const).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -336,7 +338,7 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
                   : "glass-premium text-neutral-400 hover:bg-white/5 hover:text-white"
               }`}
             >
-              {tab === "tierlists" ? "🏆 Tier Lists" : tab === "memes" ? "😂 Memes" : "📊 Activity"}
+              {tab === "tierlists" ? "🏆 Tier Lists" : "😂 Memes"}
             </button>
           ))}
         </div>
@@ -352,36 +354,61 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
             className="glass-premium rounded-[2rem] p-12 min-h-[400px] flex flex-col items-center justify-center text-center"
           >
             {activeTab === "tierlists" && (
-              <>
-                <span className="text-6xl mb-6 opacity-20">🏆</span>
-                <h3 className="text-xl font-bold text-white mb-2">No Tier Lists Yet</h3>
-                <p className="text-neutral-500 max-w-sm mb-8">Rank your favorite movies, heroes, and villains. Share your definitive opinions with the universe.</p>
-                <Link href="/tier-list/create" className="px-6 py-3 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform shadow-xl">
-                  Create Tier List +
-                </Link>
-              </>
+              tierLists && tierLists.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                  {tierLists.map(list => (
+                    <Link key={list.id} href={`/tier-list/${list.id}`} className="group block h-full">
+                      <div className="glass-premium rounded-2xl p-6 h-full flex flex-col items-start text-left hover:scale-[1.02] transition-transform">
+                        <h4 className="text-xl font-bold text-white mb-2 line-clamp-1">{list.title}</h4>
+                        {list.description && <p className="text-sm text-neutral-400 mb-4 line-clamp-2">{list.description}</p>}
+                        <div className="mt-auto flex items-center justify-between w-full pt-4 border-t border-white/5">
+                          <span className="text-xs text-neutral-500 font-bold uppercase tracking-widest">{new Date(list.createdAt).toLocaleDateString()}</span>
+                          <span className="text-xs text-white bg-white/10 px-2 py-1 rounded font-bold">{Object.keys(list.tiers || {}).length} Tiers</span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <>
+                  <span className="text-6xl mb-6 opacity-20">🏆</span>
+                  <h3 className="text-xl font-bold text-white mb-2">No Tier Lists Yet</h3>
+                  <p className="text-neutral-500 max-w-sm mb-8">Rank your favorite movies, heroes, and villains. Share your definitive opinions with the universe.</p>
+                  <Link href="/tier-list/create" className="px-6 py-3 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform shadow-xl">
+                    Create Tier List +
+                  </Link>
+                </>
+              )
             )}
 
             {activeTab === "memes" && (
-              <>
-                <span className="text-6xl mb-6 opacity-20">😂</span>
-                <h3 className="text-xl font-bold text-white mb-2">Your Meme Sanctuary is Empty</h3>
-                <p className="text-neutral-500 max-w-sm mb-8">Upload your best creations, start a streak, and make the TFIverse laugh.</p>
-                <Link href="/memes/upload" className="px-6 py-3 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform shadow-xl">
-                  Upload Meme +
-                </Link>
-              </>
-            )}
-
-            {activeTab === "activity" && (
-              <>
-                <span className="text-6xl mb-6 opacity-20">📊</span>
-                <h3 className="text-xl font-bold text-white mb-2">No Recent Activity</h3>
-                <p className="text-neutral-500 max-w-sm mb-8">Your activity feed will populate as you watch movies, add to your watchlist, and write reviews.</p>
-                <Link href="/movies" className="px-6 py-3 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform shadow-xl">
-                  Explore Movies
-                </Link>
-              </>
+              memes && memes.length > 0 ? (
+                <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 w-full">
+                  {memes.map(meme => (
+                    <Link key={meme.id} href={`/memes?id=${meme.id}`} className="block break-inside-avoid">
+                      <div className="rounded-xl overflow-hidden relative group">
+                        {meme.type === 'video' ? (
+                          <video src={meme.mediaUrl} className="w-full object-cover" />
+                        ) : (
+                          <img src={meme.mediaUrl} alt={meme.title} className="w-full object-cover" />
+                        )}
+                        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                          <h4 className="text-white font-bold p-4 text-center line-clamp-2">{meme.title}</h4>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <>
+                  <span className="text-6xl mb-6 opacity-20">😂</span>
+                  <h3 className="text-xl font-bold text-white mb-2">Your Meme Sanctuary is Empty</h3>
+                  <p className="text-neutral-500 max-w-sm mb-8">Upload your best creations, start a streak, and make the TFIverse laugh.</p>
+                  <Link href="/memes/upload" className="px-6 py-3 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform shadow-xl">
+                    Upload Meme +
+                  </Link>
+                </>
+              )
             )}
           </motion.div>
         </AnimatePresence>

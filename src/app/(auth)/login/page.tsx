@@ -24,6 +24,9 @@ function LoginForm() {
     if (searchParams.get("reset")) {
       setSuccess("Password reset successfully! Please log in with your new password.");
     }
+    if (searchParams.get("onboarded")) {
+      setSuccess("Profile completed! Please sign in to continue.");
+    }
     if (searchParams.get("error")) {
       const errorType = searchParams.get("error");
       if (errorType === "OAuthAccountNotLinked") {
@@ -47,16 +50,15 @@ function LoginForm() {
     setLoading(true);
     setError("");
     const formData = new FormData(e.currentTarget);
-    try {
-      const result = await loginUser(formData);
-      if (result?.error) { 
-        setError(result.error); 
-        setLoading(false); 
-      }
-    } catch (err) { 
-      setError("An unexpected error occurred. Please try again.");
+    
+    const result = await loginUser(formData);
+    
+    if (result?.error) { 
+      setError(result.error); 
       setLoading(false); 
     }
+    // If no error, the server action will handle the redirect.
+    // If it throws a redirect, Next.js will handle it.
   };
 
   const handleOAuth = (provider: string) => {
