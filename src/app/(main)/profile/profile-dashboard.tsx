@@ -60,17 +60,7 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
       banner: !!profile.bannerUrl,
       location: !!profile.location,
     };
-    const socials = {
-      website: !!profile.website,
-      twitter: !!profile.twitterUrl,
-      instagram: !!profile.instagramUrl,
-      youtube: !!profile.youtubeUrl,
-      tiktok: !!profile.tiktokUrl,
-      letterboxd: !!profile.letterboxdUrl,
-      imdb: !!profile.imdbUrl,
-    };
-    const socialsFilled = Object.values(socials).filter(Boolean).length;
-    const socialCredits = Math.min(5, socialsFilled);
+    const socialCredits = 5; // Simplified to make 100% easier
     const coreFilled = Object.values(core).filter(Boolean).length;
     return { completeness: Math.round(((coreFilled + socialCredits) / 10) * 100) };
   }, [profile]);
@@ -131,7 +121,7 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
       <Toaster position="top-center" reverseOrder={false} />
       
       {/* ─── CINEMATIC HEADER ─── */}
-      <div className="relative h-[500px] w-full group overflow-hidden">
+      <div className="relative h-[600px] w-full group overflow-hidden">
         {/* The Banner Image */}
         <img 
           src={bannerUrl} 
@@ -149,16 +139,90 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
       </div>
 
       {/* ─── BENTO GRID CONTAINER ─── */}
-      <div className="container max-w-7xl mx-auto px-4 md:px-8 relative -mt-32 z-10">
+      <div className="container max-w-7xl mx-auto px-4 md:px-8 relative -mt-40 z-10">
         
         {/* TOP BENTO ROW */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
           
-          {/* LEFT CARD: IDENTITY (Spans 8 columns) */}
+          {/* LEFT CARD: THE NUMBERS & FAVORITES (Spans 4 columns) */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="lg:col-span-8 glass-premium rounded-[2rem] p-8 flex flex-col md:flex-row gap-8 relative overflow-hidden"
+            transition={{ delay: 0.1 }}
+            className="lg:col-span-4 flex flex-col gap-6 order-2 lg:order-1"
+          >
+            {/* Stats Bento */}
+            <div className="glass-premium rounded-[2rem] p-6 flex-1 flex flex-col justify-center">
+              <div className="grid grid-cols-2 gap-y-6 gap-x-4">
+                {(profile.showWatched ?? true) && (
+                  <div className="flex flex-col">
+                    <span className="text-3xl font-black">{stats.watched}</span>
+                    <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Watched</span>
+                  </div>
+                )}
+                {(profile.showWatchlist ?? true) && (
+                  <div className="flex flex-col">
+                    <span className="text-3xl font-black">{stats.watchlist}</span>
+                    <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Watchlist</span>
+                  </div>
+                )}
+                {(profile.showReviews ?? true) && (
+                  <div className="flex flex-col">
+                    <span className="text-3xl font-black">{stats.reviews}</span>
+                    <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Reviews</span>
+                  </div>
+                )}
+                {(profile.showTierLists ?? true) && (
+                  <div className="flex flex-col">
+                    <span className="text-3xl font-black">{tierLists?.length || 0}</span>
+                    <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Tier Lists</span>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Pinned Movie / Favorite Hero */}
+            <div className="glass-premium rounded-[2rem] p-6">
+               <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500 mb-4">Favorites</h3>
+               <div className="flex flex-col gap-3">
+                 {profile.favoriteMovieSlug ? (
+                   <Link href={`/movies/${profile.favoriteMovieSlug}`} className="group flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/5 rounded-xl hover:bg-white/10 transition-colors">
+                     <span className="text-xl">🎬</span>
+                     <div className="flex flex-col">
+                       <span className="text-sm font-bold text-white capitalize group-hover:text-blue-400 transition-colors">{profile.favoriteMovieSlug.replace(/-/g, ' ')}</span>
+                       <span className="text-[10px] text-neutral-500 uppercase tracking-widest">Pinned Movie</span>
+                     </div>
+                   </Link>
+                 ) : (
+                   <div className="text-xs text-neutral-600 italic">No pinned movie yet.</div>
+                 )}
+                 {profile.favoriteHeroSlug && (
+                   <Link href={`/icons/heroes/male-lead-actor/${profile.favoriteHeroSlug}`} className="group flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/5 rounded-xl hover:bg-white/10 transition-colors">
+                     <span className="text-xl">🦸‍♂️</span>
+                     <div className="flex flex-col">
+                       <span className="text-sm font-bold text-white capitalize group-hover:text-blue-400 transition-colors">{profile.favoriteHeroSlug.replace(/-/g, ' ')}</span>
+                       <span className="text-[10px] text-neutral-500 uppercase tracking-widest">Favorite Hero</span>
+                     </div>
+                   </Link>
+                 )}
+               </div>
+               
+               {/* TMDB Notice */}
+               {(!profile.favoriteMovieSlug || !profile.favoriteHeroSlug) && (
+                 <div className="mt-4 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-xl">
+                   <p className="text-[10px] text-yellow-500/80 uppercase tracking-widest font-bold leading-relaxed">
+                     ⚠️ Note: Visual search dropdowns for heroes and movies will be unlocked once TMDB integration is complete.
+                   </p>
+                 </div>
+               )}
+            </div>
+          </motion.div>
+
+          {/* RIGHT CARD: IDENTITY (Spans 8 columns) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="lg:col-span-8 glass-premium rounded-[2rem] p-8 flex flex-col md:flex-row gap-8 relative overflow-hidden order-1 lg:order-2"
           >
             {/* The Avatar */}
             <div className="relative w-32 h-32 md:w-40 md:h-40 shrink-0 group/avatar">
@@ -202,6 +266,19 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
                 <p className="text-neutral-300 text-base leading-relaxed mb-6 max-w-xl">
                   {profile.bio}
                 </p>
+              )}
+
+              {/* Followers & Following inline */}
+              {(profile.showFollowers ?? true) && (
+                <div className="flex items-center gap-4 text-white/70 text-sm font-medium mb-6">
+                  <div className="hover:text-white transition-colors cursor-pointer">
+                    <span className="font-black text-white text-lg">{followersCount}</span> Followers
+                  </div>
+                  <span>•</span>
+                  <div className="hover:text-white transition-colors cursor-pointer">
+                    <span className="font-black text-white text-lg">{followingCount}</span> Following
+                  </div>
+                </div>
               )}
 
               {/* Minimal Social Links */}
@@ -357,7 +434,7 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="glass-premium rounded-[2rem] p-12 min-h-[400px] flex flex-col items-center justify-center text-center"
+            className="glass-premium rounded-[2rem] p-6 md:p-8 min-h-[300px] flex flex-col items-center justify-center text-center"
           >
             {activeTab === "tierlists" && (
               tierLists && tierLists.length > 0 ? (
