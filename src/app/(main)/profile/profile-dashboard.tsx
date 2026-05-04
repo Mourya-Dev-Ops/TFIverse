@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   FaEdit, FaCamera, FaSignOutAlt, FaShareAlt, FaDownload, FaLink,
   FaTwitter, FaInstagram, FaYoutube, FaTiktok, FaImdb, FaGlobe,
-  FaUserFriends
+  FaUserFriends, FaTrash
 } from "react-icons/fa";
 import { SiLetterboxd } from "react-icons/si";
 import { MdLocationOn, MdDateRange } from "react-icons/md";
@@ -131,7 +131,7 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
       <Toaster position="top-center" reverseOrder={false} />
       
       {/* ─── CINEMATIC HEADER ─── */}
-      <div className="relative h-[400px] w-full group overflow-hidden">
+      <div className="relative h-[500px] w-full group overflow-hidden">
         {/* The Banner Image */}
         <img 
           src={bannerUrl} 
@@ -149,7 +149,7 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
       </div>
 
       {/* ─── BENTO GRID CONTAINER ─── */}
-      <div className="max-w-6xl mx-auto px-4 md:px-8 relative -mt-32 z-10">
+      <div className="container max-w-7xl mx-auto px-4 md:px-8 relative -mt-32 z-10">
         
         {/* TOP BENTO ROW */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
@@ -172,19 +172,17 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
                 <span className="text-[10px] font-bold uppercase tracking-widest text-white/90">Update</span>
                 <input type="file" className="hidden" accept="image/*,image/gif" disabled={uploading} onChange={(e) => handleFileUpload(e, "avatar")} />
               </label>
-              
-              {/* Lottie Animated Badge (Overlapping Bottom Right of Avatar) */}
-              {isClient && completeness === 100 && (
-                <div className="absolute -bottom-2 -right-2 w-14 h-14 glass-premium rounded-full flex items-center justify-center p-1 shadow-xl z-30" title="Verified - 100% Complete">
-                  <Lottie animationData={verifiedAnim} loop={false} />
-                </div>
-              )}
             </div>
 
             {/* Profile Text Content */}
             <div className="flex-1 flex flex-col justify-center">
               <div className="flex flex-wrap items-center gap-3 mb-2">
                 <h1 className="text-4xl font-black tracking-tight">{profile.username}</h1>
+                {isClient && completeness === 100 && (
+                  <div className="w-10 h-10 flex items-center justify-center" title="Verified - 100% Complete">
+                    <Lottie animationData={verifiedAnim} loop={false} />
+                  </div>
+                )}
                 {profile.statusMessage && (
                   <div className="flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/5 rounded-full text-sm font-medium">
                     <span>{profile.statusEmoji || "🍿"}</span>
@@ -240,26 +238,34 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
             {/* Stats Bento */}
             <div className="glass-premium rounded-[2rem] p-6 flex-1 flex flex-col justify-center">
               <div className="grid grid-cols-2 gap-y-6 gap-x-4">
-                <div className="flex flex-col">
-                  <span className="text-3xl font-black">{stats.watched}</span>
-                  <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Watched</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-3xl font-black">{stats.watchlist}</span>
-                  <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Watchlist</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-3xl font-black">{stats.reviews}</span>
-                  <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Reviews</span>
-                </div>
-                <div className="flex flex-col">
-                  <div className="flex items-center gap-2">
-                    <span className="text-3xl font-black">{followersCount}</span>
-                    <span className="text-neutral-600">/</span>
-                    <span className="text-xl font-bold text-neutral-400">{followingCount}</span>
+                {(profile.showWatched ?? true) && (
+                  <div className="flex flex-col">
+                    <span className="text-3xl font-black">{stats.watched}</span>
+                    <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Watched</span>
                   </div>
-                  <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Followers / Following</span>
-                </div>
+                )}
+                {(profile.showWatchlist ?? true) && (
+                  <div className="flex flex-col">
+                    <span className="text-3xl font-black">{stats.watchlist}</span>
+                    <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Watchlist</span>
+                  </div>
+                )}
+                {(profile.showReviews ?? true) && (
+                  <div className="flex flex-col">
+                    <span className="text-3xl font-black">{stats.reviews}</span>
+                    <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Reviews</span>
+                  </div>
+                )}
+                {(profile.showFollowers ?? true) && (
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-2">
+                      <span className="text-3xl font-black">{followersCount}</span>
+                      <span className="text-neutral-600">/</span>
+                      <span className="text-xl font-bold text-neutral-400">{followingCount}</span>
+                    </div>
+                    <span className="text-neutral-500 text-xs font-bold tracking-wider uppercase mt-1">Followers / Following</span>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -412,6 +418,67 @@ export default function ProfileDashboard({ user, profile, followersCount, follow
             )}
           </motion.div>
         </AnimatePresence>
+
+        {/* ─── ADDITIONAL BENTO SECTIONS ─── */}
+        <div className="mt-12 space-y-8">
+          {/* ACTIVITY */}
+          {(profile.showActivity ?? true) && (
+            <section className="glass-premium rounded-[2rem] p-8 md:p-12">
+              <h2 className="text-xl md:text-2xl font-black text-white mb-6 flex items-center gap-3">
+                 <span className="text-2xl md:text-3xl">📅</span> Activity
+              </h2>
+              <div className="flex flex-col items-center justify-center py-10 text-center border border-dashed border-white/10 rounded-xl">
+                 <span className="text-neutral-500 mb-2 text-2xl">📬</span>
+                 <span className="text-sm text-neutral-400">No recent activity</span>
+              </div>
+            </section>
+          )}
+
+          {/* WATCHLIST */}
+          {(profile.showWatchlist ?? true) && (
+            <section className="glass-premium rounded-[2rem] p-8 md:p-12">
+              <h2 className="text-xl md:text-2xl font-black text-white mb-6 flex items-center gap-3">
+                 <span className="text-2xl md:text-3xl">📚</span> Watchlist <span className="text-sm text-neutral-500 font-normal">0</span>
+              </h2>
+              <div className="flex flex-col items-center justify-center py-10 text-center border border-dashed border-white/10 rounded-xl">
+                 <span className="text-neutral-500 mb-2 text-2xl">🔖</span>
+                 <span className="text-sm text-neutral-400 mb-4">No movies in watchlist yet</span>
+                 <button className="px-4 py-2 bg-white/10 hover:bg-white/20 transition-colors rounded-full text-xs font-bold uppercase tracking-widest text-white">
+                   Browse Movies
+                 </button>
+              </div>
+            </section>
+          )}
+
+          {/* REVIEWS */}
+          {(profile.showReviews ?? true) && (
+            <section className="glass-premium rounded-[2rem] p-8 md:p-12">
+              <h2 className="text-xl md:text-2xl font-black text-white mb-6 flex items-center gap-3">
+                 <span className="text-2xl md:text-3xl">✍️</span> Reviews <span className="text-sm text-neutral-500 font-normal">0</span>
+              </h2>
+              <div className="flex flex-col items-center justify-center py-10 text-center border border-dashed border-white/10 rounded-xl">
+                 <span className="text-neutral-500 mb-2 text-2xl">📝</span>
+                 <span className="text-sm text-neutral-400">No reviews written yet</span>
+              </div>
+            </section>
+          )}
+
+          {/* DANGER ZONE */}
+          <section className="glass-premium rounded-[2rem] p-8 md:p-12 border border-red-500/20 bg-red-500/5">
+            <h2 className="text-xl md:text-2xl font-black text-red-400 mb-2 flex items-center gap-3">
+               <span className="text-2xl md:text-3xl">⚠️</span> Danger Zone
+            </h2>
+            <p className="text-neutral-400 text-sm mb-6">
+              Once you delete your account, there is no going back. All your data will be permanently removed. 🗑️
+            </p>
+            <button 
+              onClick={() => setShowDeleteModal(true)}
+              className="px-6 py-3 bg-red-500/10 hover:bg-red-500 hover:text-white border border-red-500/50 transition-all rounded-lg text-sm font-bold text-red-500 flex items-center gap-2 w-fit"
+            >
+              <FaTrash /> Delete My Account
+            </button>
+          </section>
+        </div>
 
       </div>
 

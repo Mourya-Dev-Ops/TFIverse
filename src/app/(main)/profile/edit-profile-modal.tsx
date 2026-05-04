@@ -45,6 +45,13 @@ export default function EditProfileModal({ profile, userId, isOpen, onClose }: E
     favoriteHeroSlug: profile.favoriteHeroSlug || "",
     favoriteMovieSlug: profile.favoriteMovieSlug || "",
     themeColor: profile.themeColor || "#3b82f6",
+    showWatchlist: profile.showWatchlist ?? true,
+    showWatched: profile.showWatched ?? true,
+    showReviews: profile.showReviews ?? true,
+    showTierLists: profile.showTierLists ?? true,
+    showMemes: profile.showMemes ?? true,
+    showFollowers: profile.showFollowers ?? true,
+    showFollowing: profile.showFollowing ?? true,
   });
 
   const [heroSearch, setHeroSearch] = useState("");
@@ -104,7 +111,7 @@ export default function EditProfileModal({ profile, userId, isOpen, onClose }: E
     setError("");
 
     const fd = new FormData();
-    Object.entries(formData).forEach(([key, value]) => fd.append(key, value));
+    Object.entries(formData).forEach(([key, value]) => fd.append(key, String(value)));
 
     if (formData.dateOfBirth) {
       const dobDate = new Date(formData.dateOfBirth);
@@ -375,6 +382,37 @@ export default function EditProfileModal({ profile, userId, isOpen, onClose }: E
                   onChange={e => update("themeColor", e.target.value)}
                   className="flex-1 bg-transparent border-b border-neutral-800 text-white px-0 py-2 focus:outline-none focus:border-white transition-colors text-sm font-mono"
                 />
+              </div>
+            </div>
+
+            {/* Privacy Settings */}
+            <div>
+              <label className="text-[10px] font-semibold text-neutral-500 tracking-[0.2em] uppercase mb-4 block">Privacy Settings</label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { key: "showWatchlist", label: "Show Watchlist Publicly" },
+                  { key: "showWatched", label: "Show Watched Movies" },
+                  { key: "showReviews", label: "Show My Reviews" },
+                  { key: "showTierLists", label: "Show Tier Lists" },
+                  { key: "showMemes", label: "Show My Memes" },
+                  { key: "showFollowers", label: "Show Followers Count" },
+                  { key: "showFollowing", label: "Show Following Count" },
+                ].map(({ key, label }) => (
+                  <label key={key} className="flex items-center gap-3 cursor-pointer group">
+                    <div className="relative flex items-center">
+                      <input
+                        type="checkbox"
+                        checked={(formData as any)[key]}
+                        onChange={e => update(key, e.target.checked as any)}
+                        className="sr-only"
+                      />
+                      <div className={`w-10 h-5 rounded-full transition-colors ${ (formData as any)[key] ? 'bg-white' : 'bg-neutral-800'}`}>
+                        <div className={`absolute top-0.5 left-0.5 w-4 h-4 bg-black rounded-full transition-transform ${ (formData as any)[key] ? 'translate-x-5' : 'translate-x-0'}`} />
+                      </div>
+                    </div>
+                    <span className="text-sm text-neutral-400 group-hover:text-white transition-colors">{label}</span>
+                  </label>
+                ))}
               </div>
             </div>
 

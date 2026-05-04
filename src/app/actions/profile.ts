@@ -32,6 +32,14 @@ export async function updateProfile(formData: FormData) {
   const favoriteMovieSlug = formData.get("favoriteMovieSlug") as string;
   const themeColor = formData.get("themeColor") as string;
 
+  const showWatchlist = formData.get("showWatchlist") === "true";
+  const showWatched = formData.get("showWatched") === "true";
+  const showReviews = formData.get("showReviews") === "true";
+  const showTierLists = formData.get("showTierLists") === "true";
+  const showMemes = formData.get("showMemes") === "true";
+  const showFollowers = formData.get("showFollowers") === "true";
+  const showFollowing = formData.get("showFollowing") === "true";
+
   if (!username || username.length < 3) {
     return { error: "Username must be at least 3 characters" };
   }
@@ -87,6 +95,13 @@ export async function updateProfile(formData: FormData) {
       favoriteHeroSlug: favoriteHeroSlug?.trim() || null,
       favoriteMovieSlug: favoriteMovieSlug?.trim() || null,
       themeColor: themeColor?.trim() || "#3b82f6",
+      showWatchlist,
+      showWatched,
+      showReviews,
+      showTierLists,
+      showMemes,
+      showFollowers,
+      showFollowing,
       updatedAt: new Date(),
     })
     .where(eq(userProfiles.userId, session.user.id));
