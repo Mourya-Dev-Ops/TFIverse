@@ -17,13 +17,13 @@ const THEMES: Record<string, any> = {
     activeTab: "text-white border-white",
   },
   heroines: {
-    accent: "text-rose-500",
-    accentBg: "bg-rose-500",
+    accent: "text-pink-500",
+    accentBg: "bg-pink-500",
     bgPattern: "bg-[url('https://www.transparenttextures.com/patterns/dust.png')]",
-    bgGradient: "from-[#1a0f14] via-[#0f0a0c] to-black",
-    glowColor: "bg-rose-500/5 border-rose-500/10",
-    badgeTheme: "bg-rose-500/10 text-rose-500 border-rose-500/20",
-    activeTab: "text-rose-500 border-rose-500",
+    bgGradient: "from-[#1a0510] via-[#0f0208] to-black",
+    glowColor: "bg-pink-500/5 border-pink-500/10",
+    badgeTheme: "bg-pink-500/10 text-pink-500 border-pink-500/20",
+    activeTab: "text-pink-500 border-pink-500",
   },
   directors: {
     accent: "text-blue-500",
@@ -66,10 +66,14 @@ export default function IconProfileClient({
   // Safely extract deeply nested JSONB data
   const images = data.images || {};
   const personalInfo = data.personalInfo || {};
-  const social = data.socialMedia || {};
-  const heroAura = data.heroAura || null;
+  const social = data.socialMedia || data.socialMediaInfluence || {};
+  
+  // Aura extraction (Hero vs Heroine vs Diva)
+  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || null;
+  
   const physicalStats = data.physicalStats || null;
-  const transformations = data.physicalTransformations || [];
+  const appearance = data.appearance || null;
+  const transformations = data.physicalTransformations || data.beautyTransformations || [];
   const voiceProfile = data.voiceProfile || null;
   const lifestyle = data.lifestyle || null;
   const financial = data.financialProfile || null;
@@ -79,12 +83,44 @@ export default function IconProfileClient({
   const careerStats = data.careerStats || null;
   const genreStrength = data.genreStrength || data.genreExpertise || null;
   const philanthropy = data.philanthropy || null;
-  const awards = data.awards || [];
+  const awards = data.awards || data.beautyAwards || data.fashionAwards || [];
   const quotes = data.quotes || [];
   const trivia = data.trivia || [];
   const knownFor = data.knownFor || [];
   const alternateNames = data.alternateNames || [];
   
+  // Heroine/Diva specific data
+  const rawBeautyProfile = data.beautyProfile || data.beautyLegacy || null;
+  const rawFashionIcon = data.fashionIcon || data.fashionStyle || data.fashionImpact || null;
+  const screenChemistry = data.screenChemistry || null;
+
+  // Normalize Beauty Profile
+  const beautyProfile = rawBeautyProfile ? {
+    philosophy: rawBeautyProfile.beautyPhilosophy || rawBeautyProfile.beautyStandardsSet || rawBeautyProfile.iconicLook || null,
+    skinCare: rawBeautyProfile.skinCareRoutine || null,
+    makeupObj: typeof rawBeautyProfile.makeupSignature === 'object' ? rawBeautyProfile.makeupSignature : null,
+    makeupStr: typeof rawBeautyProfile.makeupSignature === 'string' ? rawBeautyProfile.makeupSignature : null,
+    makeupInfluence: rawBeautyProfile.makeupInfluence || null,
+    legacyStr: rawBeautyProfile.influenceOnFutureGenerations || rawBeautyProfile.beautyEvolution || null,
+    hairStr: rawBeautyProfile.hairstyleInfluence || null,
+    physicalAttributes: rawBeautyProfile.physicalAttributes || null,
+    internationalAppeal: rawBeautyProfile.internationalAppeal || null,
+    makeupArtistTestimonies: rawBeautyProfile.makeupArtistTestimonies || null
+  } : null;
+
+  // Normalize Fashion Profile
+  const fashionIcon = rawFashionIcon ? {
+    styleDescription: rawFashionIcon.styleDescription || rawFashionIcon.styleSignature || rawFashionIcon.fashionIcon || (typeof rawBeautyProfile?.fashionIcon === 'string' ? rawBeautyProfile.fashionIcon : null) || null,
+    signatureLook: rawFashionIcon.signatureLook || null,
+    everydayStyle: rawFashionIcon.everydayStyle || null,
+    trends: rawFashionIcon.fashionTrends || rawFashionIcon.emergingTrends || rawFashionIcon.iconicOutfits || [],
+    redCarpet: rawFashionIcon.redCarpetMoments || rawFashionIcon.redCarpetLooks || null,
+    evolution: rawFashionIcon.styleEvolution || rawFashionIcon.fashionEvolution || null,
+    trendSetter: rawFashionIcon.trendSetter || null,
+    collaborationWithDesigners: rawFashionIcon.collaborationWithDesigners || [],
+    fashionArchives: rawFashionIcon.fashionArchives || null
+  } : null;
+
   // Legend-specific data
   const careerRetrospective = data.careerRetrospective || null;
   const iconicRoles = data.iconicRoles || [];
@@ -96,24 +132,32 @@ export default function IconProfileClient({
   const criticalAppreciation = data.criticalAppreciation || null;
   const filmmakerRelationships = data.filmmakerRelationships || null;
   const politicalCareer = data.politicalCareer || null;
+  const controversiesOrTriumphs = data.controversiesOrTriumphs || null;
+  const screenChemistryByCostar = data.screenChemistryByCostar || null;
 
   // Rising Star specific data
   const debutAnalysis = data.debutAnalysis || null;
   const breakingMoment = data.breakingMoment || null;
   const fanbaseAnalysis = data.fanbaseAnalysis || null;
-  const competitorComparison = data.competitorComparison || null;
-  const superstarpotential = data.superstarpotential || null;
+  const competitorComparison = data.competitorComparison || data.peerAnalysis || null;
+  const superstarpotential = data.superstarpotential || data.potentialAssessment || null;
+  const careerTrajectory = data.careerTrajectory || null;
+  const uniqueSellingProposition = data.uniqueSellingProposition || null;
 
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
     { id: "overview", label: "Overview" },
   ];
 
-  if (physicalStats || voiceProfile || personalInfo.education || onScreenPersona) {
+  if (physicalStats || appearance || voiceProfile || personalInfo.education || onScreenPersona) {
     tabs.push({ id: "dossier", label: "Dossier" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships) {
+  if (beautyProfile || fashionIcon) {
+    tabs.push({ id: "glamour", label: "Glamour" });
+  }
+
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry) {
     tabs.push({ id: "craft", label: "The Craft" });
   }
 
@@ -125,11 +169,11 @@ export default function IconProfileClient({
     tabs.push({ id: "career", label: "Career" });
   }
 
-  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation) {
+  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs) {
     tabs.push({ id: "legacy", label: "Legacy" });
   }
 
-  if (fanbaseAnalysis || competitorComparison || superstarpotential) {
+  if (fanbaseAnalysis || competitorComparison || superstarpotential || careerTrajectory || uniqueSellingProposition) {
     tabs.push({ id: "trajectory", label: "Trajectory" });
   }
 
@@ -309,37 +353,49 @@ export default function IconProfileClient({
                   </div>
                 )}
 
-                {/* Hero Aura Bento Grid */}
-                {heroAura && (
+                {/* Aura Bento Grid */}
+                {aura && (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {heroAura.boxOfficeAppeal && (
+                    {aura.boxOfficeAppeal && (
                       <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
                         <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Box Office Appeal</h4>
-                        <p className="text-neutral-400 leading-relaxed text-sm">{heroAura.boxOfficeAppeal}</p>
+                        <p className="text-neutral-400 leading-relaxed text-sm">{aura.boxOfficeAppeal}</p>
                       </div>
                     )}
-                    {heroAura.screenPresence && (
+                    {aura.screenPresence && (
                       <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
                         <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Screen Presence</h4>
-                        <p className="text-neutral-400 leading-relaxed text-sm">{heroAura.screenPresence}</p>
+                        <p className="text-neutral-400 leading-relaxed text-sm">{aura.screenPresence}</p>
                       </div>
                     )}
-                    {heroAura.signature && (
+                    {aura.beautyLegacy && (
+                      <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Beauty Legacy</h4>
+                        <p className="text-neutral-400 leading-relaxed text-sm">{aura.beautyLegacy}</p>
+                      </div>
+                    )}
+                    {(aura.signature || aura.signatureStyle) && (
                       <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
                         <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Signature Style</h4>
-                        <p className="text-neutral-400 leading-relaxed text-sm">{heroAura.signature}</p>
+                        <p className="text-neutral-400 leading-relaxed text-sm">{aura.signature || aura.signatureStyle}</p>
                       </div>
                     )}
-                    {heroAura.trademarkStyle && (
+                    {aura.trademarkStyle && (
                       <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
                         <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Trademark</h4>
-                        <p className="text-neutral-400 leading-relaxed text-sm">{heroAura.trademarkStyle}</p>
+                        <p className="text-neutral-400 leading-relaxed text-sm">{aura.trademarkStyle}</p>
                       </div>
                     )}
-                    {heroAura.fanbase && (
+                    {aura.modernAppeal && (
+                      <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Modern Appeal</h4>
+                        <p className="text-neutral-400 leading-relaxed text-sm">{aura.modernAppeal}</p>
+                      </div>
+                    )}
+                    {aura.fanbase && (
                       <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] md:col-span-2 ${theme.glowColor}`}>
                         <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>The Fanbase</h4>
-                        <p className="text-neutral-400 leading-relaxed text-sm md:text-base">{heroAura.fanbase}</p>
+                        <p className="text-neutral-400 leading-relaxed text-sm md:text-base">{aura.fanbase}</p>
                       </div>
                     )}
                   </div>
@@ -682,7 +738,176 @@ export default function IconProfileClient({
             )}
 
             {/* ========================================== */}
-            {/* TAB 3: THE CRAFT (Legend) */}
+            {/* TAB: GLAMOUR (Heroines / Divas) */}
+            {/* ========================================== */}
+            {activeTab === "glamour" && (
+              <>
+                {/* Beauty Profile */}
+                {beautyProfile && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 flex items-center gap-3">
+                      <span className={theme.accent}>✦</span> Beauty & Aesthetics
+                    </h3>
+                    
+                    {beautyProfile.philosophy && (
+                      <div className="p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-[#0a0a0a] to-[#050505] border border-white/5 relative overflow-hidden mb-8">
+                        <div className={`absolute top-0 right-0 w-full h-1 ${theme.accentBg} opacity-20`} />
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500`}>Philosophy & Iconic Look</h4>
+                        <p className="text-lg text-neutral-300 leading-relaxed italic">
+                          "{beautyProfile.philosophy}"
+                        </p>
+                      </div>
+                    )}
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {beautyProfile.skinCare && (
+                        <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Skincare Protocol</h4>
+                          {beautyProfile.skinCare.dailyRoutine && (
+                            <p className="text-neutral-300 text-sm leading-relaxed mb-3">{beautyProfile.skinCare.dailyRoutine}</p>
+                          )}
+                          {beautyProfile.skinCare.productsUsed && (
+                            <div className="flex flex-wrap gap-2 mt-4">
+                              {beautyProfile.skinCare.productsUsed.map((prod: string, i: number) => (
+                                <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-neutral-300 border border-white/10">{prod}</span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {(beautyProfile.makeupObj || beautyProfile.makeupStr || beautyProfile.hairStr) && (
+                        <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Signature Look</h4>
+                          {beautyProfile.makeupStr && (
+                            <p className="text-neutral-300 text-sm leading-relaxed mb-4">{beautyProfile.makeupStr}</p>
+                          )}
+                          {beautyProfile.hairStr && (
+                            <p className="text-neutral-300 text-sm leading-relaxed mb-4"><span className="text-neutral-500 mr-2">Hair:</span>{beautyProfile.hairStr}</p>
+                          )}
+                          {beautyProfile.makeupObj?.dailyMakeup && (
+                            <p className="text-neutral-300 text-sm leading-relaxed mb-3"><span className="text-neutral-500 mr-2">Daily:</span>{beautyProfile.makeupObj.dailyMakeup}</p>
+                          )}
+                          {beautyProfile.makeupObj?.redCarpetMakeup && (
+                            <p className="text-neutral-300 text-sm leading-relaxed"><span className="text-neutral-500 mr-2">Red Carpet:</span>{beautyProfile.makeupObj.redCarpetMakeup}</p>
+                          )}
+                        </div>
+                      )}
+                      
+                      {(beautyProfile.makeupInfluence || beautyProfile.makeupArtistTestimonies) && (
+                        <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Makeup Influence</h4>
+                          {beautyProfile.makeupInfluence && <p className="text-neutral-300 text-sm leading-relaxed mb-4">{beautyProfile.makeupInfluence}</p>}
+                          {beautyProfile.makeupArtistTestimonies && <p className="text-neutral-300 text-sm leading-relaxed italic border-l-2 border-white/20 pl-4">"{beautyProfile.makeupArtistTestimonies}"</p>}
+                        </div>
+                      )}
+
+                      {(beautyProfile.legacyStr || beautyProfile.physicalAttributes || beautyProfile.internationalAppeal) && (
+                        <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] md:col-span-2 ${theme.glowColor}`}>
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>The Legacy</h4>
+                          {beautyProfile.physicalAttributes && (
+                            <div className="mb-4">
+                              <span className="text-neutral-500 text-[10px] uppercase tracking-widest font-bold mb-1 block">Physical Attributes</span>
+                              <p className="text-neutral-300 text-sm leading-relaxed">{beautyProfile.physicalAttributes}</p>
+                            </div>
+                          )}
+                          {beautyProfile.legacyStr && (
+                            <div className="mb-4">
+                              <span className="text-neutral-500 text-[10px] uppercase tracking-widest font-bold mb-1 block">Influence on Generations</span>
+                              <p className="text-neutral-300 text-sm leading-relaxed">{beautyProfile.legacyStr}</p>
+                            </div>
+                          )}
+                          {beautyProfile.internationalAppeal && (
+                            <div>
+                              <span className="text-neutral-500 text-[10px] uppercase tracking-widest font-bold mb-1 block">International Appeal</span>
+                              <p className="text-neutral-300 text-sm leading-relaxed">{beautyProfile.internationalAppeal}</p>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Fashion Icon */}
+                {fashionIcon && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 flex items-center gap-3">
+                      <span className={theme.accent}>✦</span> Sartorial Elegance
+                    </h3>
+                    
+                    {(fashionIcon.styleDescription || fashionIcon.evolution) && (
+                      <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 mb-8">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Style Blueprint</h4>
+                        {fashionIcon.styleDescription && (
+                          <p className="text-neutral-300 text-sm leading-relaxed mb-6">{fashionIcon.styleDescription}</p>
+                        )}
+                        {fashionIcon.evolution && (
+                          <p className="text-neutral-300 text-sm leading-relaxed mb-6"><span className="text-neutral-500 mr-2">Evolution:</span>{fashionIcon.evolution}</p>
+                        )}
+                        {fashionIcon.trendSetter && (
+                          <p className="text-neutral-300 text-sm leading-relaxed mb-6"><span className="text-neutral-500 mr-2">Trendsetter:</span>{fashionIcon.trendSetter}</p>
+                        )}
+                        {fashionIcon.fashionArchives && (
+                          <p className="text-neutral-300 text-sm leading-relaxed mb-6"><span className="text-neutral-500 mr-2">Archives:</span>{fashionIcon.fashionArchives}</p>
+                        )}
+                        {fashionIcon.collaborationWithDesigners && fashionIcon.collaborationWithDesigners.length > 0 && (
+                          <div className="mb-6">
+                            <span className="text-neutral-500 mr-2 text-[10px] uppercase tracking-widest font-bold block mb-2">Designers</span>
+                            <div className="flex flex-wrap gap-2 inline-flex">
+                              {fashionIcon.collaborationWithDesigners.map((d: string, i: number) => (
+                                <span key={i} className="px-2 py-1 bg-white/5 rounded border border-white/5 text-[10px] uppercase tracking-widest text-neutral-300">{d}</span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                        
+                        {(fashionIcon.signatureLook || fashionIcon.everydayStyle) && (
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 border-t border-white/5">
+                            {fashionIcon.signatureLook && (
+                              <div>
+                                <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Signature Look</span>
+                                <span className="text-xs font-bold text-neutral-300">{fashionIcon.signatureLook}</span>
+                              </div>
+                            )}
+                            {fashionIcon.everydayStyle && (
+                              <div>
+                                <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Everyday Style</span>
+                                <span className="text-xs font-bold text-neutral-300">{fashionIcon.everydayStyle}</span>
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {fashionIcon.trends && fashionIcon.trends.length > 0 && (
+                      <div className="space-y-6">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 px-2 ${theme.accent}`}>Trendsetting Moments</h4>
+                        {fashionIcon.trends.map((trend: any, idx: number) => (
+                          <div key={idx} className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                            <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                            <div className="flex justify-between items-start mb-4 pl-4">
+                              <h5 className="text-lg font-black text-white">{trend.trend || trend.outfit}</h5>
+                              {(trend.whenStarted || trend.year) && (
+                                <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded ${theme.badgeTheme}`}>{trend.whenStarted || trend.year}</span>
+                              )}
+                            </div>
+                            <p className="text-neutral-400 text-sm leading-relaxed pl-4 mb-4">{trend.impact || trend.adoption || trend.description}</p>
+                            {trend.film && (
+                                <span className={`text-[10px] ml-4 font-bold uppercase tracking-widest text-neutral-500 border border-white/5 px-2 py-1 rounded-md`}>Film: {trend.film}</span>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </>
+            )}
+
+            {/* ========================================== */}
+            {/* TAB 3: THE CRAFT */}
             {/* ========================================== */}
             {activeTab === "craft" && (
               <>
@@ -815,6 +1040,26 @@ export default function IconProfileClient({
                     </div>
                   </div>
                 )}
+
+                {screenChemistryByCostar && (
+                  <div className="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] mb-8 mt-12">
+                    <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Chemistry Breakdown</h4>
+                    <div className="space-y-4">
+                      {screenChemistryByCostar.bestChemistry && (
+                        <div>
+                          <span className="text-neutral-500 text-[10px] uppercase tracking-widest font-bold mb-1 block">Best Chemistry</span>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{screenChemistryByCostar.bestChemistry}</p>
+                        </div>
+                      )}
+                      {screenChemistryByCostar.chemistryComparisonAcrossActors && (
+                        <div>
+                          <span className="text-neutral-500 text-[10px] uppercase tracking-widest font-bold mb-1 block">Actor Comparison</span>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{screenChemistryByCostar.chemistryComparisonAcrossActors}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
                 
                 {(collaborations?.frequentHeroines || filmmakerRelationships?.frequentHeroines) && (
                   <div>
@@ -846,6 +1091,42 @@ export default function IconProfileClient({
                                   {typeof film === 'string' ? film : film.title}
                                 </span>
                               ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {(screenChemistry?.frequentLeadMen) && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 mt-12">On-Screen Chemistry</h3>
+                    <div className="flex overflow-x-auto gap-4 pb-8 no-scrollbar snap-x">
+                      {screenChemistry.frequentLeadMen.map((collab: any, idx: number) => (
+                        <div key={idx} className="w-[300px] md:w-[400px] shrink-0 p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 snap-start flex flex-col justify-between whitespace-normal">
+                          <div>
+                            <div className="flex items-center justify-between mb-4">
+                              <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center font-black text-white shrink-0">
+                                  {collab.actorName.charAt(0)}
+                                </div>
+                                <div>
+                                  <h4 className="text-lg font-black text-white leading-tight">{collab.actorName}</h4>
+                                  <span className={`text-[9px] uppercase tracking-widest ${theme.accent}`}>{collab.pairingCount} Films</span>
+                                </div>
+                              </div>
+                            </div>
+                            {(collab.chemistry) && (
+                              <p className="text-sm text-neutral-400 leading-relaxed mb-4 italic">"{collab.chemistry}"</p>
+                            )}
+                            {collab.fanFollowing && <p className={`text-[10px] text-neutral-500 leading-relaxed mb-4`}>Fan Following: {collab.fanFollowing}</p>}
+                          </div>
+                          {collab.latestFilm && (
+                            <div className="flex flex-wrap gap-2">
+                              <span className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-neutral-300 border border-white/5">
+                                Latest: {collab.latestFilm}
+                              </span>
                             </div>
                           )}
                         </div>
@@ -1384,6 +1665,73 @@ export default function IconProfileClient({
             {/* ========================================== */}
             {activeTab === "legacy" && (
               <>
+                {/* Controversies & Triumphs */}
+                {controversiesOrTriumphs && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Triumphs & Resilience
+                    </h3>
+                    
+                    {(controversiesOrTriumphs.resilience || controversiesOrTriumphs.personalTriumphs) && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        {controversiesOrTriumphs.resilience && (
+                          <div className="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a]">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Resilience</h4>
+                            <p className="text-neutral-300 text-sm leading-relaxed">{controversiesOrTriumphs.resilience}</p>
+                          </div>
+                        )}
+                        {controversiesOrTriumphs.personalTriumphs && (
+                          <div className="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a]">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Personal Triumphs</h4>
+                            <p className="text-neutral-300 text-sm leading-relaxed">{controversiesOrTriumphs.personalTriumphs}</p>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                    
+                    {controversiesOrTriumphs.majorChallenges && controversiesOrTriumphs.majorChallenges.length > 0 && (
+                      <div className="mb-6">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500`}>Major Challenges</h4>
+                        <div className="space-y-4">
+                          {controversiesOrTriumphs.majorChallenges.map((challenge: any, idx: number) => (
+                            <div key={idx} className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0a] flex flex-col md:flex-row gap-6">
+                              <div className="w-full md:w-1/4 shrink-0">
+                                <span className="text-xs font-bold text-white block mb-1">{challenge.period}</span>
+                                <span className={`text-[10px] uppercase tracking-widest ${theme.accent}`}>{challenge.challenge}</span>
+                              </div>
+                              <div className="flex-1">
+                                <p className="text-neutral-400 text-sm leading-relaxed mb-3">{challenge.description}</p>
+                                <div className="bg-white/5 p-3 rounded-lg border border-white/5">
+                                  <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Outcome</span>
+                                  <span className="text-xs text-neutral-200">{challenge.outcome}</span>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    
+                    {controversiesOrTriumphs.comebackStories && controversiesOrTriumphs.comebackStories.length > 0 && (
+                      <div>
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500`}>Comeback Stories</h4>
+                        <div className="grid grid-cols-1 gap-4">
+                          {controversiesOrTriumphs.comebackStories.map((story: any, idx: number) => (
+                            <div key={idx} className="p-6 rounded-2xl border border-white/5 bg-gradient-to-br from-[#0a0a0a] to-[#050505] relative overflow-hidden group">
+                              <div className={`absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/5 to-transparent`} />
+                              <div className="flex justify-between items-start mb-3 relative z-10">
+                                <h5 className="text-sm font-bold text-white">{story.story}</h5>
+                                <span className={`text-[10px] uppercase tracking-widest px-2 py-1 bg-white/5 rounded ${theme.accent}`}>{story.period}</span>
+                              </div>
+                              <p className="text-neutral-400 text-xs leading-relaxed relative z-10"><span className="font-bold text-neutral-500">Breakthrough:</span> {story.breakthrough}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
                 {/* Historical Impact (Legend) */}
                 {historicalImpact && (
                   <div className="mb-12">
@@ -1637,6 +1985,89 @@ export default function IconProfileClient({
             {/* ========================================== */}
             {activeTab === "trajectory" && (
               <>
+                {/* Career Trajectory */}
+                {careerTrajectory && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaChartBar /> Career Trajectory
+                    </h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
+                        <span className={`text-3xl font-black ${theme.accent}`}>{careerTrajectory.totalFilms}</span>
+                        <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mt-1">Total Films</span>
+                      </div>
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
+                        <span className={`text-3xl font-black text-white`}>{careerTrajectory.hitPercentage}</span>
+                        <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mt-1">Hit Rate</span>
+                      </div>
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center col-span-2">
+                        <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Trend</span>
+                        <span className={`text-lg font-black text-white block`}>{careerTrajectory.careerTrend}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                      {careerTrajectory.boxOfficeGrowth && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Box Office Growth</h4>
+                          <p className="text-neutral-400 text-sm leading-relaxed">{careerTrajectory.boxOfficeGrowth}</p>
+                        </div>
+                      )}
+                      {careerTrajectory.trajectoryAnalysis && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Analysis</h4>
+                          <p className="text-neutral-400 text-sm leading-relaxed">{careerTrajectory.trajectoryAnalysis}</p>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {careerTrajectory.filmography && careerTrajectory.filmography.length > 0 && (
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 overflow-x-auto">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500`}>Key Projects</h4>
+                        <div className="min-w-[600px]">
+                          <div className="grid grid-cols-6 gap-4 text-[9px] uppercase tracking-widest text-neutral-500 font-bold mb-3 px-2">
+                            <span className="col-span-2">Film</span>
+                            <span>Role</span>
+                            <span>Box Office</span>
+                            <span className="col-span-2">Verdict</span>
+                          </div>
+                          {careerTrajectory.filmography.map((film: any, i: number) => (
+                            <div key={i} className="grid grid-cols-6 gap-4 items-center p-3 rounded-xl hover:bg-white/5 border border-transparent transition-colors">
+                              <div className="col-span-2">
+                                <span className="text-sm font-bold text-white block">{film.film}</span>
+                                <span className={`text-[9px] font-black ${theme.accent}`}>{film.year} • {film.language}</span>
+                              </div>
+                              <span className="text-xs text-neutral-400">{film.character}</span>
+                              <span className="text-xs text-neutral-300 font-bold">{film.collection}</span>
+                              <div className="col-span-2">
+                                <span className={`text-[10px] px-2 py-1 rounded font-bold uppercase tracking-widest inline-block mb-1 ${film.verdict?.includes('Hit') || film.verdict?.includes('Success') || film.verdict?.includes('Blockbuster') ? 'bg-green-500/10 text-green-500' : 'bg-red-500/10 text-red-500'}`}>{film.verdict}</span>
+                                <p className="text-[10px] text-neutral-500 line-clamp-2" title={film.criticalResponse}>{film.criticalResponse}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Unique Selling Proposition */}
+                {uniqueSellingProposition && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Unique Selling Proposition
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(uniqueSellingProposition).map(([key, value]: [string, any]) => (
+                        <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
+                          <p className="text-neutral-400 text-sm leading-relaxed">{value}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Superstar Potential Bento */}
                 {superstarpotential && (
                   <div className="mb-12">
@@ -1650,7 +2081,7 @@ export default function IconProfileClient({
                       </div>
                       <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] md:col-span-2 ${theme.glowColor}`}>
                         <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2 block">Estimated Timeline</span>
-                        <span className="text-3xl font-black text-white">{superstarpotential.estimatedTimeline}</span>
+                        <span className="text-3xl font-black text-white">{superstarpotential.estimatedTimeline || superstarpotential.timelineToEstablish}</span>
                       </div>
                     </div>
                     
@@ -1922,8 +2353,36 @@ export default function IconProfileClient({
                 </div>
                 {social.instagram?.followers && (
                   <div className="mt-6 pt-6 border-t border-white/5">
-                    <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Instagram Following</span>
-                    <span className="text-xl font-black text-white">{(social.instagram.followers / 1000000).toFixed(1)}M</span>
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block">Instagram Following</span>
+                      {social.instagram?.influencerLevel && <span className={`text-[8px] uppercase tracking-widest ${theme.badgeTheme} px-2 py-0.5 rounded font-bold`}>{social.instagram.influencerLevel}</span>}
+                    </div>
+                    <span className="text-xl font-black text-white block mb-4">{(social.instagram.followers / 1000000).toFixed(1)}M</span>
+                    
+                    {social.instagram?.contentType && (
+                      <div className="mb-4">
+                        <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Content Pillars</span>
+                        <div className="flex flex-wrap gap-1.5">
+                          {social.instagram.contentType.map((type: string, i: number) => (
+                            <span key={i} className="px-2 py-0.5 bg-white/5 rounded text-[8px] uppercase tracking-widest text-neutral-300 border border-white/10">{type}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    
+                    {social.instagram?.viralMoments && (
+                      <div className="mb-4">
+                        <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Viral Impact</span>
+                        <p className="text-[10px] text-neutral-400 leading-relaxed">{social.instagram.viralMoments}</p>
+                      </div>
+                    )}
+                  </div>
+                )}
+                
+                {social.socialMediaStrategy && (
+                  <div className="mt-2 pt-4 border-t border-white/5">
+                    <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Digital Strategy</span>
+                    <p className="text-[10px] text-neutral-400 leading-relaxed">{social.socialMediaStrategy}</p>
                   </div>
                 )}
               </div>

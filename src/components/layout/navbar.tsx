@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { User, LogOut, Crown, Sparkles } from 'lucide-react';
+import { signOut } from 'next-auth/react';
 
 interface NavbarProps {
   user?: {
@@ -15,12 +16,26 @@ interface NavbarProps {
 
 export default function Navbar({ user }: NavbarProps) {
   const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown on click outside
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setShowDropdown(false);
+      }
+    }
+    if (showDropdown) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showDropdown]);
 
   const displayName = user?.name || 'User';
   const initials = displayName.charAt(0).toUpperCase();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/[0.06]">
+    <nav className="fixed top-0 left-0 right-0 z-[100] bg-black/80 backdrop-blur-xl border-b border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
 
@@ -36,7 +51,7 @@ export default function Navbar({ user }: NavbarProps) {
           {/* RIGHT: Auth & Profile */}
           <div className="flex items-center space-x-2 sm:space-x-4">
             {user ? (
-              <div className="relative">
+              <div className="relative" ref={dropdownRef}>
                 <motion.button
                   onClick={() => setShowDropdown(!showDropdown)}
                   whileHover={{ scale: 1.02 }}
@@ -75,11 +90,12 @@ export default function Navbar({ user }: NavbarProps) {
                       </div>
 
                       <div className="p-2 border-t border-white/[0.06]">
-                        <Link href="/api/auth/signout" className="block w-full">
-                          <button className="w-full text-left px-3 py-2 text-xs text-white/50 hover:text-white hover:bg-white/[0.05] rounded-xl transition-all flex items-center gap-3 font-bold uppercase tracking-widest">
-                            <LogOut size={16} /> Sign Out
-                          </button>
-                        </Link>
+                        <button 
+                          onClick={() => signOut({ callbackUrl: '/' })}
+                          className="w-full text-left px-3 py-2 text-xs text-white/50 hover:text-white hover:bg-white/[0.05] rounded-xl transition-all flex items-center gap-3 font-bold uppercase tracking-widest"
+                        >
+                          <LogOut size={16} /> Sign Out
+                        </button>
                       </div>
                     </motion.div>
                   )}

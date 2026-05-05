@@ -98,12 +98,35 @@ export default function CategoryView({
 function ProfileCard({ person, categoryConfig, categorySlug }: { person: any, categoryConfig: any, categorySlug: string }) {
   const [imgError, setImgError] = useState(false);
   const portraitUrl = person.images?.portrait?.url || person.images?.avatar?.url;
+  
+  const isHeroines = categorySlug === "heroines";
+
+  // HEROINES: Elegant Vogue-style arch, taller aspect ratio, glowing shadow
+  // OTHERS: Gritty, sharp-edged rectangles
+  const cardClasses = isHeroines
+    ? "group relative rounded-t-[1000px] rounded-b-3xl overflow-hidden bg-[#0f0208] border border-pink-500/10 block hover:border-pink-500/40 hover:shadow-[0_0_50px_-10px_rgba(236,72,153,0.25)] transition-all duration-700 aspect-[2/3.2]"
+    : "group relative rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/5 block hover:border-white/20 transition-all duration-500 aspect-[3/4]";
+
+  // HEROINES: Full color, slight desaturation to hyper-saturation on hover (letting beauty shine)
+  // OTHERS: Full grayscale to color on hover
+  const imgClasses = isHeroines
+    ? "absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-110 opacity-85 group-hover:opacity-100 z-10 saturate-[0.8] group-hover:saturate-125"
+    : "absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 z-10";
+
+  // HEROINES: Darker pinkish gradient at bottom
+  // OTHERS: Standard black gradient
+  const overlayClasses = isHeroines
+    ? "absolute inset-0 bg-gradient-to-t from-[#1a0510] via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity z-20"
+    : "absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity z-20";
+
+  // HEROINES: Centered, elegant typography
+  // OTHERS: Left-aligned
+  const textContainerClasses = isHeroines
+    ? "absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end translate-y-4 group-hover:translate-y-0 transition-transform duration-700 z-30 items-center text-center"
+    : "absolute bottom-0 left-0 w-full p-4 md:p-5 flex flex-col justify-end translate-y-3 group-hover:translate-y-0 transition-transform duration-500 z-30";
 
   return (
-    <Link 
-      href={`/icons/${categorySlug}/${person.subcategory}/${person.slug}`} 
-      className="group relative rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/5 block hover:border-white/20 transition-all duration-500 aspect-[3/4]"
-    >
+    <Link href={`/icons/${categorySlug}/${person.subcategory}/${person.slug}`} className={cardClasses}>
       {/* Fallback Initial */}
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-[#111] to-[#050505] z-0">
          <span className="text-6xl md:text-8xl font-black uppercase text-white/[0.03] group-hover:scale-110 transition-transform duration-700">
@@ -117,24 +140,25 @@ function ProfileCard({ person, categoryConfig, categorySlug }: { person: any, ca
           src={portraitUrl} 
           alt={person.name} 
           onError={() => setImgError(true)}
-          className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out group-hover:scale-105 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 z-10"
+          className={imgClasses}
         />
       )}
       
       {/* Gradient Overlay for Text Readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity z-20" />
+      <div className={overlayClasses} />
       
       {/* Text Content */}
-      <div className="absolute bottom-0 left-0 w-full p-4 md:p-5 flex flex-col justify-end translate-y-3 group-hover:translate-y-0 transition-transform duration-500 z-30">
-        <h3 className="font-black uppercase tracking-tight leading-none mb-1 text-white text-base md:text-lg lg:text-xl line-clamp-2">
+      <div className={textContainerClasses}>
+        <h3 className={`font-black uppercase leading-none mb-2 text-white ${isHeroines ? 'tracking-[0.1em] text-lg md:text-xl drop-shadow-lg' : 'tracking-tight text-base md:text-lg lg:text-xl'} line-clamp-2`}>
           {person.name}
         </h3>
         
-        <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75">
-          <div className={`w-4 h-px ${categoryConfig.accentBg}`} />
-          <p className={`font-bold uppercase tracking-[0.2em] text-[8px] md:text-[9px] ${categoryConfig.accent} truncate`}>
+        <div className={`flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100 ${isHeroines ? 'justify-center w-full' : ''}`}>
+          {!isHeroines && <div className={`w-4 h-px ${categoryConfig.accentBg}`} />}
+          <p className={`font-bold uppercase tracking-[0.3em] text-[8px] md:text-[9px] ${categoryConfig.accent} truncate`}>
             {person.title || "View Profile"}
           </p>
+          {isHeroines && <div className={`w-4 h-px ${categoryConfig.accentBg}`} />}
         </div>
       </div>
     </Link>

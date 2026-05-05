@@ -176,6 +176,14 @@ export async function forgotPassword(formData: FormData) {
 // ─── RESET PASSWORD ──────────────────────────────────────────────
 export async function resetPassword(formData: FormData) {
   try {
+    const headersList = await headers();
+    const ip = headersList.get('x-forwarded-for') || headersList.get('x-real-ip') || 'unknown';
+    const rateLimit = checkRateLimit(ip, 'reset-password', 5, 15 * 60 * 1000); // 5 attempts per 15 minutes
+    
+    if (!rateLimit.success) {
+      return { error: "Too many attempts. Please try again later." };
+    }
+
     const token = formData.get("token") as string;
     const password = formData.get("password") as string;
     const confirmPassword = formData.get("confirmPassword") as string;

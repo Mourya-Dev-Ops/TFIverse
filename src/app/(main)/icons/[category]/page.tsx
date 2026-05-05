@@ -9,7 +9,7 @@ import CategoryView from "./category-view";
 // Define the valid categories to prevent routing to non-existent sections
 const VALID_CATEGORIES: Record<string, { title: string, description: string, theme: string, accent: string, accentBg: string }> = {
   "heroes": { title: "Heroes", description: "The leading men who define the box office.", theme: "from-neutral-900 to-black", accent: "text-amber-500", accentBg: "bg-amber-500" },
-  "heroines": { title: "Heroines", description: "The leading ladies who captivate the silver screen.", theme: "from-[#1a0f14] to-black", accent: "text-rose-500", accentBg: "bg-rose-500" },
+  "heroines": { title: "Heroines", description: "The Queens of TFI. Beauty, glamour, and unmatched screen presence.", theme: "from-[#1a0510] to-black", accent: "text-pink-500", accentBg: "bg-pink-500" },
   "directors": { title: "Directors", description: "The visionary captains steering the ship of cinema.", theme: "from-[#1a140a] to-black", accent: "text-blue-500", accentBg: "bg-blue-500" },
   "music-directors": { title: "Music Directors", description: "The maestros composing the heartbeat of TFI.", theme: "from-[#0a111a] to-black", accent: "text-purple-500", accentBg: "bg-purple-500" },
   "villains": { title: "Villains", description: "The iconic antagonists we love to hate.", theme: "from-neutral-900 to-black", accent: "text-red-600", accentBg: "bg-red-600" },
