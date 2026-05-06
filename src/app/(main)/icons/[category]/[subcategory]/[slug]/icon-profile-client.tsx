@@ -80,7 +80,7 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || [];
-  const careerStats = data.careerStats || data.careerStatistics || null;
+  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || null;
   const genreStrength = data.genreStrength || data.genreExpertise || null;
   const philanthropy = data.philanthropy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || [];
@@ -133,6 +133,7 @@ export default function IconProfileClient({
   const filmmakerRelationships = data.filmmakerRelationships || null;
   const politicalCareer = data.politicalCareer || null;
   const controversiesOrTriumphs = data.controversiesOrTriumphs || null;
+  const influenceAndLegacy = data.influenceAndLegacy || null;
   const screenChemistryByCostar = data.screenChemistryByCostar || null;
 
   // Rising Star specific data
@@ -145,8 +146,8 @@ export default function IconProfileClient({
   const uniqueSellingProposition = data.uniqueSellingProposition || null;
 
   // Director specific data
-  const visionaryEssence = data.visionaryEssence || data.emergingEssence || null;
-  const filmmakingStyle = data.filmmakingStyle || data.emergingFilmmakingStyle || null;
+  const visionaryEssence = data.visionaryEssence || data.emergingEssence || data.hitmakerEssence || null;
+  const filmmakingStyle = data.filmmakingStyle || data.emergingFilmmakingStyle || data.commercialFilmmakingStyle || null;
   const directorFilms = data.filmsDirected || [];
   const upcomingProjects = data.upcomingProjects || [];
   const futureOutlook = data.futureOutlook || null;
@@ -175,7 +176,7 @@ export default function IconProfileClient({
     tabs.push({ id: "career", label: "Career" });
   }
 
-  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs) {
+  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy) {
     tabs.push({ id: "legacy", label: "Legacy" });
   }
 
@@ -1751,15 +1752,15 @@ export default function IconProfileClient({
                   <div>
                     <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2">Career Dashboard</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                      {careerStats.totalMovies && (
+                      {(careerStats.totalMovies || careerStats.totalFilms || careerStats.totalFilmsDirected) && (
                         <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
-                          <span className={`text-3xl font-black ${theme.accent}`}>{careerStats.totalMovies}</span>
+                          <span className={`text-3xl font-black ${theme.accent}`}>{careerStats.totalMovies || careerStats.totalFilms || careerStats.totalFilmsDirected}</span>
                           <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mt-1">Total Films</span>
                         </div>
                       )}
-                      {careerStats.totalBlockbusters && (
+                      {(careerStats.totalBlockbusters || careerStats.blockbusters) && (
                         <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
-                          <span className={`text-3xl font-black ${theme.accent}`}>{careerStats.totalBlockbusters}</span>
+                          <span className={`text-3xl font-black ${theme.accent}`}>{careerStats.totalBlockbusters || careerStats.blockbusters}</span>
                           <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mt-1">Blockbusters</span>
                         </div>
                       )}
@@ -1769,9 +1770,15 @@ export default function IconProfileClient({
                           <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mt-1">Hit Rate</span>
                         </div>
                       )}
-                      {careerStats.yearsActive && (
+                      {careerStats.nationalAwards && (
                         <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
-                          <span className={`text-3xl font-black ${theme.accent}`}>{careerStats.yearsActive}</span>
+                          <span className={`text-3xl font-black ${theme.accent}`}>{careerStats.nationalAwards}</span>
+                          <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mt-1">National Awards</span>
+                        </div>
+                      )}
+                      {(careerStats.yearsActive || careerStats.careerSpan) && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center">
+                          <span className={`text-3xl font-black ${theme.accent}`}>{careerStats.yearsActive || careerStats.careerSpan}</span>
                           <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mt-1">Years Active</span>
                         </div>
                       )}
@@ -1972,6 +1979,54 @@ export default function IconProfileClient({
                               <span key={i} className="px-3 py-1.5 bg-white/5 rounded border border-white/5 text-[10px] uppercase tracking-widest text-neutral-300">{tech}</span>
                             ))}
                           </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Influence and Legacy (Maestro) */}
+                {influenceAndLegacy && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Influence & Legacy
+                    </h3>
+                    
+                    {influenceAndLegacy.cinemaRevolution && (
+                      <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 mb-6 relative overflow-hidden group">
+                        <div className={`absolute left-0 top-0 right-0 h-1 ${theme.accentBg} opacity-50`} />
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Cinema Revolution</h4>
+                        <p className="text-neutral-300 text-sm leading-relaxed mb-6">{influenceAndLegacy.cinemaRevolution}</p>
+                        
+                        {influenceAndLegacy.timelineSignificance && (
+                          <div>
+                            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500">Timeline Significance</h4>
+                            <p className="text-neutral-400 text-sm leading-relaxed">{influenceAndLegacy.timelineSignificance}</p>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      {influenceAndLegacy.directorsInfluenced && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Directors Influenced</h4>
+                          <ul className="space-y-2">
+                            {influenceAndLegacy.directorsInfluenced.map((director: string, i: number) => (
+                              <li key={i} className="text-neutral-300 text-xs flex gap-2"><span className={`${theme.accent} shrink-0`}>•</span>{director}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      
+                      {influenceAndLegacy.cinematicInnovations && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Cinematic Innovations</h4>
+                          <ul className="space-y-2">
+                            {influenceAndLegacy.cinematicInnovations.map((innovation: string, i: number) => (
+                              <li key={i} className="text-neutral-300 text-xs flex gap-2"><span className={`${theme.accent} shrink-0`}>•</span>{innovation}</li>
+                            ))}
+                          </ul>
                         </div>
                       )}
                     </div>
