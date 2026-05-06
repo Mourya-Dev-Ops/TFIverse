@@ -35,6 +35,9 @@ export async function loginUser(formData: FormData) {
     });
   } catch (error) {
     if (error instanceof AuthError) {
+      if (error.cause?.err?.message?.includes("Email not verified") || error.message?.includes("Email not verified")) {
+        return { error: "Email not verified. Please check your inbox." };
+      }
       switch (error.type) {
         case "CredentialsSignin":
           return { error: "Invalid credentials." };
@@ -73,8 +76,9 @@ export async function registerUser(formData: FormData) {
       return { error: "Passwords do not match" };
     }
 
-    if (password.length < 8) {
-      return { error: "Password must be at least 8 characters" };
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!passwordRegex.test(password)) {
+      return { error: "Password must contain at least 8 chars, 1 uppercase, 1 lowercase, 1 number, and 1 special character (@$!%*?&)" };
     }
 
     const existingUsers = await db.select().from(users).where(eq(users.email, email));
@@ -196,8 +200,9 @@ export async function resetPassword(formData: FormData) {
       return { error: "Passwords do not match" };
     }
 
-    if (password.length < 8) {
-      return { error: "Password must be at least 8 characters" };
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!passwordRegex.test(password)) {
+      return { error: "Password must contain at least 8 chars, 1 uppercase, 1 lowercase, 1 number, and 1 special character (@$!%*?&)" };
     }
 
     // Find token

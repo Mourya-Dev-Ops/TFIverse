@@ -16,8 +16,6 @@ try {
     idle_timeout: 30,
     connect_timeout: 10,
   });
-  
-  console.log('✅ Database client initialized');
 } catch (error) {
   console.error('❌ Failed to initialize database client:', error);
   throw new Error('Database connection failed during initialization');

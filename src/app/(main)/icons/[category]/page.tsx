@@ -88,18 +88,52 @@ export default async function CategoryHubPage({ params }: { params: Promise<{ ca
 
   const sortedSubcategories = Object.keys(grouped).sort();
 
+  const isHeroines = category === "heroines";
+  const isDirectors = ["directors", "producers", "line-producers", "stunt-directors"].includes(category);
+  const isMusic = ["music-directors", "singers", "lyricists"].includes(category);
+  const isVillains = category === "villains";
+  const isCrafters = ["cinematographers", "editors", "art-directors", "costume-designers", "vfx-supervisors", "choreographers"].includes(category);
+
   return (
     <main className="min-h-screen bg-[#030303] text-white selection:bg-neutral-800 pb-32 relative overflow-hidden">
       {/* Background Ambient Glow & Noise */}
       <div className={`absolute top-[-20%] left-1/2 -translate-x-1/2 w-[1000px] h-[800px] ${categoryConfig.accentBg} opacity-10 blur-[150px] rounded-full pointer-events-none`} />
-      <div className="fixed inset-0 opacity-[0.03] pointer-events-none mix-blend-screen bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]" />
+      
+      {/* Archetype Specific Backgrounds */}
+      {isVillains ? (
+        <div className="fixed inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/scratches.png')]" />
+      ) : isCrafters ? (
+        <div className="fixed inset-0 opacity-10 pointer-events-none mix-blend-screen bg-[url('https://www.transparenttextures.com/patterns/graphy.png')]" />
+      ) : (
+        <div className="fixed inset-0 opacity-[0.03] pointer-events-none mix-blend-screen bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]" />
+      )}
 
-      {/* Massive Background Text for Cinematic Feel */}
-      <div className="absolute top-32 left-1/2 -translate-x-1/2 w-full flex justify-center pointer-events-none select-none overflow-hidden opacity-[0.02] z-0">
-        <h1 className="text-[25vw] font-black uppercase tracking-tighter leading-none whitespace-nowrap">
-          {categoryConfig.title}
-        </h1>
-      </div>
+      {/* Massive Background Text / Visuals for Cinematic Feel */}
+      {isMusic ? (
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[800px] border-[1px] border-white/5 rounded-full pointer-events-none opacity-20 flex items-center justify-center animate-[spin_120s_linear_infinite]">
+          <div className="w-[700px] h-[700px] border-[1px] border-white/5 rounded-full flex items-center justify-center">
+            <div className="w-[600px] h-[600px] border-[1px] border-white/5 rounded-full flex items-center justify-center">
+              <div className="w-[500px] h-[500px] border-[1px] border-white/5 rounded-full flex items-center justify-center">
+                <div className="w-32 h-32 bg-[#111] rounded-full border border-white/10" />
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : isDirectors ? (
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[90%] max-w-[1400px] h-[600px] pointer-events-none opacity-10">
+          <div className="absolute top-0 left-0 w-32 h-32 border-t-4 border-l-4 border-white" />
+          <div className="absolute top-0 right-0 w-32 h-32 border-t-4 border-r-4 border-white" />
+          <div className="absolute bottom-0 left-0 w-32 h-32 border-b-4 border-l-4 border-white" />
+          <div className="absolute bottom-0 right-0 w-32 h-32 border-b-4 border-r-4 border-white" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[300px] font-black opacity-5">+</div >
+        </div>
+      ) : (
+        <div className="absolute top-32 left-1/2 -translate-x-1/2 w-full flex justify-center pointer-events-none select-none overflow-hidden opacity-[0.02] z-0">
+          <h1 className="text-[25vw] font-black uppercase tracking-tighter leading-none whitespace-nowrap">
+            {categoryConfig.title}
+          </h1>
+        </div>
+      )}
 
       {/* Sleek Minimalist Navigation */}
       <div className="sticky top-0 z-50 px-6 md:px-12 py-6 flex items-center justify-between pointer-events-none">
@@ -118,11 +152,33 @@ export default async function CategoryHubPage({ params }: { params: Promise<{ ca
 
       {/* Hero Section */}
       <div className="relative pt-20 pb-32 px-6 md:px-12 max-w-[1600px] mx-auto z-10 text-center flex flex-col items-center">
-        <div className={`w-1px h-24 ${categoryConfig.accentBg} mb-8 opacity-50`} style={{ width: '1px' }} />
-        <h1 className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter leading-[0.85] uppercase mb-8 z-10 relative">
+        {isDirectors ? (
+          <div className="mb-8 flex flex-col items-center">
+            <span className={`text-xs font-mono tracking-[0.3em] uppercase ${categoryConfig.accent} mb-4 px-4 py-1 border border-current rounded bg-black/50`}>SCENE 01 - TAKE 1</span>
+            <div className={`w-1px h-16 ${categoryConfig.accentBg} opacity-50`} style={{ width: '1px' }} />
+          </div>
+        ) : isCrafters ? (
+          <div className="mb-8 flex flex-col items-center">
+            <span className={`text-[10px] font-mono tracking-[0.5em] uppercase text-neutral-500 mb-4`}>SYSTEM.ARCHIVE.ACCESS</span>
+            <div className={`w-1px h-16 bg-neutral-600 opacity-50`} style={{ width: '1px' }} />
+          </div>
+        ) : isVillains ? (
+          <div className="mb-8 flex flex-col items-center">
+            <div className={`w-1px h-24 bg-red-600 opacity-80 animate-pulse`} style={{ width: '2px' }} />
+          </div>
+        ) : (
+          <div className={`w-1px h-24 ${categoryConfig.accentBg} mb-8 opacity-50`} style={{ width: '1px' }} />
+        )}
+        
+        <h1 className={`text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter leading-[0.85] uppercase mb-8 z-10 relative
+          ${isVillains ? 'text-transparent bg-clip-text bg-gradient-to-b from-white via-red-100 to-red-900 drop-shadow-[0_0_30px_rgba(220,38,38,0.3)]' : ''}
+          ${isCrafters ? 'font-mono tracking-tight' : ''}
+          ${isMusic ? 'text-transparent bg-clip-text bg-gradient-to-b from-white to-purple-500/20' : ''}
+          ${isHeroines ? 'tracking-[0.02em] font-serif-like' : ''}
+        `}>
           {categoryConfig.title}
         </h1>
-        <p className="text-lg md:text-2xl text-neutral-400 max-w-2xl font-light tracking-wide">
+        <p className={`text-lg md:text-2xl text-neutral-400 max-w-2xl tracking-wide ${isCrafters ? 'font-mono text-sm uppercase' : 'font-light'}`}>
           {categoryConfig.description}
         </p>
       </div>

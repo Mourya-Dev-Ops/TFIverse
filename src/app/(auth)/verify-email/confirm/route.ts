@@ -2,9 +2,19 @@ import { db } from "@/lib/db";
 import { users, verificationTokens } from "@/lib/schema";
 import { eq, and } from "drizzle-orm";
 import { NextResponse } from "next/server";
+import { headers } from "next/headers";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 export async function GET(request: Request) {
   try {
+    const headersList = await headers();
+    const ip = headersList.get('x-forwarded-for') || headersList.get('x-real-ip') || 'unknown';
+    const rateLimit = checkRateLimit(ip, 'verify-email', 10, 15 * 60 * 1000); // 10 attempts per 15 mins
+
+    if (!rateLimit.success) {
+      return NextResponse.json({ error: "Too many attempts" }, { status: 429 });
+    }
+
     const { searchParams } = new URL(request.url);
     const token = searchParams.get("token");
 

@@ -5,6 +5,7 @@ import { tierLists, tierListLikes, tierListComments, userProfiles, users } from 
 import { auth } from '@/auth';
 import { revalidatePath } from 'next/cache';
 import { eq, and, desc, count, sql } from 'drizzle-orm';
+import { sanitizeInput } from '@/lib/sanitize';
 
 // ============================================================================
 // CREATE TIER LIST
@@ -22,12 +23,16 @@ export async function createTierList(data: {
     throw new Error('You must be signed in to save a tier list');
   }
 
+  if (!data.title || data.title.trim().length === 0) throw new Error('Title is required');
+  if (data.title.length > 100) throw new Error('Title must be under 100 characters');
+  if (data.description && data.description.length > 500) throw new Error('Description must be under 500 characters');
+
   const [newTierList] = await db
     .insert(tierLists)
     .values({
       userId: session.user.id,
-      title: data.title,
-      description: data.description || null,
+      title: sanitizeInput(data.title.trim()),
+      description: data.description ? sanitizeInput(data.description.trim()) : null,
       tiers: data.tiers as any,
       isPublic: data.isPublic,
     })
@@ -222,7 +227,7 @@ export async function addTierListComment(tierListId: string, content: string, pa
     tierListId,
     userId: session.user.id,
     parentId: parentId || null,
-    content: content.trim(),
+    content: sanitizeInput(content.trim()),
   }).returning();
 
   revalidatePath(`/tier-list/${tierListId}`);

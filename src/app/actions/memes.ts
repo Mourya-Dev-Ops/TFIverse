@@ -6,6 +6,7 @@ import { eq, and, desc, sql, asc, inArray, ilike, or } from "drizzle-orm";
 import { auth } from "@/auth";
 import { revalidatePath } from "next/cache";
 import memesData from "@/data/memes.json";
+import { sanitizeInput, UPLOAD_LIMITS } from "@/lib/sanitize";
 
 export async function getMemes(options: {
   sort?: "new" | "trending" | "top" | "featured";
@@ -92,14 +93,18 @@ export async function createMeme(data: {
   const session = await auth();
   if (!session?.user?.id) throw new Error("Unauthorized");
 
+  if (!data.title || data.title.trim().length === 0) throw new Error("Title is required");
+  if (data.title.length > 200) throw new Error("Title must be under 200 characters");
+  if (data.description && data.description.length > 1000) throw new Error("Description must be under 1000 characters");
+
   const [newMeme] = await db.insert(memes).values({
     userId: session.user.id,
-    title: data.title,
-    description: data.description,
+    title: sanitizeInput(data.title.trim()),
+    description: data.description ? sanitizeInput(data.description.trim()) : null,
     imageUrl: data.imageUrl,
     heroTags: data.heroTags || [],
     movieTags: data.movieTags || [],
-    status: "approved", // Auto-approve for now as per user request for "production ready all this memes page features no fluffy"
+    status: "pending", // Requires admin moderation before public visibility
   }).returning();
 
   // Increment user meme count
@@ -193,10 +198,19 @@ export async function getMemeOfTheWeek() {
 export async function getUploadUrl(fileName: string, fileType: string) {
   const session = await auth();
   if (!session?.user?.id) throw new Error("Unauthorized");
-  
+
+  // Validate file type
+  if (!UPLOAD_LIMITS.ALLOWED_IMAGE_TYPES.includes(fileType as any)) {
+    throw new Error(`Invalid file type. Allowed: ${UPLOAD_LIMITS.ALLOWED_IMAGE_TYPES.join(', ')}`);
+  }
+
+  // Sanitize fileName to prevent path traversal
+  const safeName = fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
+  const key = `memes/${session.user.id}/${Date.now()}-${safeName}`;
+
   const { getPresignedUploadUrl, getPublicUrl } = await import("@/lib/s3");
-  const signedUrl = await getPresignedUploadUrl(fileName, fileType);
-  const publicUrl = getPublicUrl(fileName);
+  const signedUrl = await getPresignedUploadUrl(key, fileType);
+  const publicUrl = getPublicUrl(key);
   
   return { signedUrl, publicUrl };
 }

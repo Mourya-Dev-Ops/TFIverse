@@ -130,7 +130,9 @@ export const userFollows = pgTable('user_follows', {
   followerId: uuid('followerId').notNull().references(() => users.id, { onDelete: 'cascade' }),
   followingId: uuid('followingId').notNull().references(() => users.id, { onDelete: 'cascade' }),
   createdAt: timestamp('createdAt', { mode: 'date' }).defaultNow(),
-});
+}, (table) => ({
+  uniqueFollow: unique('unique_user_follow').on(table.followerId, table.followingId),
+}));
 
 export const userProfilesRelations = relations(userProfiles, ({ one }) => ({
   user: one(users, {

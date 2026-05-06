@@ -6,6 +6,7 @@ import { eq, and, count } from "drizzle-orm";
 import { auth } from "@/auth";
 import { revalidatePath } from "next/cache";
 import { uploadToB2 } from "@/lib/storage";
+import { sanitizeInput, sanitizeUrl, validateFileUpload, UPLOAD_LIMITS } from "@/lib/sanitize";
 
 // ─── UPDATE PROFILE ──────────────────────────────────────────────
 export async function updateProfile(formData: FormData) {
@@ -77,18 +78,18 @@ export async function updateProfile(formData: FormData) {
     .update(userProfiles)
     .set({
       username: username.trim(),
-      bio: bio?.trim() || null,
+      bio: bio ? sanitizeInput(bio.trim()) : null,
       location: location?.trim() || null,
       pronouns: pronouns?.trim() || null,
-      website: website?.trim() || null,
-      statusMessage: statusMessage?.trim() || null,
+      website: sanitizeUrl(website),
+      statusMessage: statusMessage ? sanitizeInput(statusMessage.trim()) : null,
       statusEmoji: statusEmoji || "🎬",
-      twitterUrl: twitterUrl?.trim() || null,
-      instagramUrl: instagramUrl?.trim() || null,
-      youtubeUrl: youtubeUrl?.trim() || null,
-      tiktokUrl: tiktokUrl?.trim() || null,
-      letterboxdUrl: letterboxdUrl?.trim() || null,
-      imdbUrl: imdbUrl?.trim() || null,
+      twitterUrl: sanitizeUrl(twitterUrl),
+      instagramUrl: sanitizeUrl(instagramUrl),
+      youtubeUrl: sanitizeUrl(youtubeUrl),
+      tiktokUrl: sanitizeUrl(tiktokUrl),
+      letterboxdUrl: sanitizeUrl(letterboxdUrl),
+      imdbUrl: sanitizeUrl(imdbUrl),
       avatarUrl: avatarUrl?.trim() || null,
       bannerUrl: bannerUrl?.trim() || null,
       dateOfBirth: dateOfBirth ? new Date(dateOfBirth) : null,
@@ -248,6 +249,10 @@ export async function uploadProfileImage(formData: FormData) {
   const type = formData.get("type") as "avatar" | "banner";
 
   if (!file || !type) return { error: "Missing file or type" };
+
+  // Validate file size and type
+  const validation = validateFileUpload(file, UPLOAD_LIMITS.MAX_IMAGE_SIZE);
+  if (!validation.valid) return { error: validation.error };
 
   try {
     // 1. Get the current profile to find the old image URL

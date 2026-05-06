@@ -26,7 +26,7 @@ export default async function HomePage() {
   let dbUpcoming: any[] = [];
   
   try {
-    dbHeroes = await db.query.people.findMany({ where: eq(people.category, "Superstar") });
+    dbHeroes = await db.query.people.findMany({ where: eq(people.category, "heroes") });
     dbRumors = await db.query.rumors.findMany();
     dbUpcoming = await db.query.movies.findMany({ where: eq(movies.status, "upcoming") });
   } catch (e) {

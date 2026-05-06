@@ -66,7 +66,7 @@ export default function IconProfileClient({
   // Safely extract deeply nested JSONB data
   const images = data.images || {};
   const personalInfo = data.personalInfo || {};
-  const social = data.socialMedia || data.socialMediaInfluence || {};
+  const social = data.socialMedia || data.socialMediaInfluence || data.socialMediaPresence || {};
   
   // Aura extraction (Hero vs Heroine vs Diva)
   const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || null;
@@ -80,7 +80,7 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || [];
-  const careerStats = data.careerStats || null;
+  const careerStats = data.careerStats || data.careerStatistics || null;
   const genreStrength = data.genreStrength || data.genreExpertise || null;
   const philanthropy = data.philanthropy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || [];
@@ -122,7 +122,7 @@ export default function IconProfileClient({
   } : null;
 
   // Legend-specific data
-  const careerRetrospective = data.careerRetrospective || null;
+  const careerRetrospective = data.careerRetrospective || (data.filmographyByDecade ? { byDecade: data.filmographyByDecade } : null);
   const iconicRoles = data.iconicRoles || [];
   const onScreenPersona = data.onScreenPersona || null;
   const historicalImpact = data.historicalImpact || null;
@@ -137,13 +137,19 @@ export default function IconProfileClient({
 
   // Rising Star specific data
   const debutAnalysis = data.debutAnalysis || null;
-  const breakingMoment = data.breakingMoment || null;
+  const breakingMoment = data.breakingMoment || data.breakThroughMoment || null;
   const fanbaseAnalysis = data.fanbaseAnalysis || null;
   const competitorComparison = data.competitorComparison || data.peerAnalysis || null;
   const superstarpotential = data.superstarpotential || data.potentialAssessment || null;
   const careerTrajectory = data.careerTrajectory || null;
   const uniqueSellingProposition = data.uniqueSellingProposition || null;
 
+  // Director specific data
+  const visionaryEssence = data.visionaryEssence || data.emergingEssence || null;
+  const filmmakingStyle = data.filmmakingStyle || data.emergingFilmmakingStyle || null;
+  const directorFilms = data.filmsDirected || [];
+  const upcomingProjects = data.upcomingProjects || [];
+  const futureOutlook = data.futureOutlook || null;
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
     { id: "overview", label: "Overview" },
@@ -157,8 +163,8 @@ export default function IconProfileClient({
     tabs.push({ id: "glamour", label: "Glamour" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry) {
-    tabs.push({ id: "craft", label: "The Craft" });
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle) {
+    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : "The Craft" });
   }
 
   if (lifestyle || financial || politicalCareer) {
@@ -173,7 +179,7 @@ export default function IconProfileClient({
     tabs.push({ id: "legacy", label: "Legacy" });
   }
 
-  if (fanbaseAnalysis || competitorComparison || superstarpotential || careerTrajectory || uniqueSellingProposition) {
+  if (fanbaseAnalysis || competitorComparison || superstarpotential || careerTrajectory || uniqueSellingProposition || upcomingProjects.length > 0 || futureOutlook) {
     tabs.push({ id: "trajectory", label: "Trajectory" });
   }
 
@@ -907,10 +913,136 @@ export default function IconProfileClient({
             )}
 
             {/* ========================================== */}
-            {/* TAB 3: THE CRAFT */}
+            {/* TAB 3: THE CRAFT / VISION */}
             {/* ========================================== */}
             {activeTab === "craft" && (
               <>
+                {/* Director Visionary Essence */}
+                {visionaryEssence && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaFilm /> The Vision
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      
+                      {visionaryEssence.directorialVision && (
+                        <div className="mb-6 pl-4">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Directorial Vision</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{visionaryEssence.directorialVision}</p>
+                        </div>
+                      )}
+                      
+                      {visionaryEssence.signatureStyle && (
+                        <div className="mb-6 pl-4">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Signature Style</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{visionaryEssence.signatureStyle}</p>
+                        </div>
+                      )}
+
+                      {visionaryEssence.recurringThemes && (
+                        <div className="mb-6 pl-4">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Recurring Themes</h4>
+                          <p className="text-neutral-400 text-sm leading-relaxed">{visionaryEssence.recurringThemes}</p>
+                        </div>
+                      )}
+
+                      {visionaryEssence.culturalImpact && (
+                        <div className="mb-6 pl-4">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Cultural Impact</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed italic border-l-2 border-white/10 pl-4">{visionaryEssence.culturalImpact}</p>
+                        </div>
+                      )}
+                      
+                      {visionaryEssence.cinemaRevolution && (
+                        <div className="pl-4">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Cinema Revolution</h4>
+                          <p className="text-neutral-400 text-sm leading-relaxed">{visionaryEssence.cinemaRevolution}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Director Filmmaking Style */}
+                {filmmakingStyle && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <span className={theme.accent}>✦</span> Filmmaking Style
+                    </h3>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                      {filmmakingStyle.approach && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-neutral-500`}>Approach</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{filmmakingStyle.approach}</p>
+                        </div>
+                      )}
+                      {filmmakingStyle.visualLanguage && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-neutral-500`}>Visual Language</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{filmmakingStyle.visualLanguage}</p>
+                        </div>
+                      )}
+                      {filmmakingStyle.editingStyle && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-neutral-500`}>Editing Style</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{filmmakingStyle.editingStyle}</p>
+                        </div>
+                      )}
+                      {filmmakingStyle.soundDesign && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-neutral-500`}>Sound Design</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{filmmakingStyle.soundDesign}</p>
+                        </div>
+                      )}
+                      {filmmakingStyle.actorDirection && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 md:col-span-2">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-neutral-500`}>Actor Direction</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{filmmakingStyle.actorDirection}</p>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {(filmmakingStyle.technicalInnovations || filmmakingStyle.thematicPreoccupations || filmmakingStyle.styleEvolution) && (
+                      <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5">
+                        {filmmakingStyle.styleEvolution && (
+                          <div className="mb-6">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Style Evolution</h4>
+                            <p className="text-neutral-300 text-sm leading-relaxed italic">{filmmakingStyle.styleEvolution}</p>
+                          </div>
+                        )}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                          {filmmakingStyle.technicalInnovations && (
+                            <div>
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500`}>Technical Innovations</h4>
+                              {Array.isArray(filmmakingStyle.technicalInnovations) ? (
+                                <ul className="space-y-2">
+                                  {filmmakingStyle.technicalInnovations.map((item: string, i: number) => (
+                                    <li key={i} className="text-neutral-400 text-xs flex gap-2"><span className={`${theme.accent} shrink-0`}>•</span>{item}</li>
+                                  ))}
+                                </ul>
+                              ) : (
+                                <p className="text-neutral-400 text-sm leading-relaxed">{filmmakingStyle.technicalInnovations}</p>
+                              )}
+                            </div>
+                          )}
+                          {filmmakingStyle.thematicPreoccupations && filmmakingStyle.thematicPreoccupations.length > 0 && (
+                            <div>
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500`}>Thematic Preoccupations</h4>
+                              <ul className="space-y-2">
+                                {filmmakingStyle.thematicPreoccupations.map((item: string, i: number) => (
+                                  <li key={i} className="text-neutral-400 text-xs flex gap-2"><span className={`${theme.accent} shrink-0`}>•</span>{item}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
                 {/* Iconic Roles (Legend) */}
                 {iconicRoles.length > 0 && (
                   <div>
@@ -1146,8 +1278,8 @@ export default function IconProfileClient({
                               <FaMusic className="text-neutral-400" />
                             </div>
                             <div>
-                              <h4 className="text-lg font-black text-white leading-tight">{collab.name}</h4>
-                              <span className={`text-[9px] uppercase tracking-widest ${theme.accent}`}>{collab.filmCount} Films</span>
+                              <h4 className="text-lg font-black text-white leading-tight">{collab.name || collab.musicDirector}</h4>
+                              {collab.filmCount && <span className={`text-[9px] uppercase tracking-widest ${theme.accent}`}>{collab.filmCount} Films</span>}
                             </div>
                           </div>
                           {(collab.relationship || collab.chemistry) && (
@@ -1163,6 +1295,84 @@ export default function IconProfileClient({
                         </div>
                       ))}
                     </div>
+                  </div>
+                )}
+
+                {/* Director Collaborations */}
+                {(collaborations?.heroCollaborations || collaborations?.heroineCollaborations || collaborations?.cinematographers) && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 mt-8 flex items-center gap-3">
+                      <FaFilm /> Iconic Collaborations
+                    </h3>
+                    
+                    {collaborations.heroCollaborations && (
+                      <div className="mb-8">
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-4 px-2">Hero Collaborations</h4>
+                        <div className="flex overflow-x-auto gap-4 pb-4 no-scrollbar snap-x">
+                          {collaborations.heroCollaborations.map((collab: any, idx: number) => (
+                            <div key={idx} className="w-[300px] md:w-[400px] shrink-0 p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 snap-start whitespace-normal flex flex-col justify-between">
+                              <div>
+                                <h4 className="text-lg font-black text-white mb-2">{collab.actor}</h4>
+                                {collab.legacy && <p className="text-sm text-neutral-400 leading-relaxed mb-4 italic">"{collab.legacy}"</p>}
+                              </div>
+                              <div className="flex flex-wrap gap-2">
+                                {(collab.films || []).map((film: string, i: number) => (
+                                  <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-neutral-300 border border-white/5">
+                                    {film}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    
+                    {collaborations.heroineCollaborations && (
+                      <div className="mb-8">
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-4 px-2">Heroine Collaborations</h4>
+                        <div className="flex overflow-x-auto gap-4 pb-4 no-scrollbar snap-x">
+                          {collaborations.heroineCollaborations.map((collab: any, idx: number) => (
+                            <div key={idx} className="w-[300px] md:w-[400px] shrink-0 p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 snap-start whitespace-normal flex flex-col justify-between">
+                              <div>
+                                <h4 className="text-lg font-black text-white mb-2">{collab.actor}</h4>
+                                {collab.legacy && <p className="text-sm text-neutral-400 leading-relaxed mb-4 italic">"{collab.legacy}"</p>}
+                              </div>
+                              <div className="flex flex-wrap gap-2">
+                                {(collab.films || []).map((film: string, i: number) => (
+                                  <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-neutral-300 border border-white/5">
+                                    {film}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {collaborations.cinematographers && (
+                      <div className="mb-8">
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-4 px-2">Cinematographers</h4>
+                        <div className="flex overflow-x-auto gap-4 pb-4 no-scrollbar snap-x">
+                          {collaborations.cinematographers.map((collab: any, idx: number) => (
+                            <div key={idx} className="w-[300px] md:w-[400px] shrink-0 p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 snap-start whitespace-normal flex flex-col justify-between">
+                              <div>
+                                <h4 className="text-lg font-black text-white mb-2">{collab.name || collab.cinematographer}</h4>
+                                {collab.visualStyle && <p className="text-sm text-neutral-400 leading-relaxed mb-4 italic">"{collab.visualStyle}"</p>}
+                              </div>
+                              <div className="flex flex-wrap gap-2">
+                                {(collab.films || []).map((film: string, i: number) => (
+                                  <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] uppercase tracking-widest text-neutral-300 border border-white/5">
+                                    {film}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
 
@@ -2163,6 +2373,87 @@ export default function IconProfileClient({
                               );
                             })}
                           </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+                {/* Upcoming Projects */}
+                {upcomingProjects && upcomingProjects.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaFilm /> Upcoming Projects
+                    </h3>
+                    <div className="space-y-4">
+                      {upcomingProjects.map((project: any, idx: number) => (
+                        <div key={idx} className="p-6 md:p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          
+                          <div className="flex flex-col md:flex-row gap-4 md:items-center justify-between mb-4 pl-4">
+                            <div>
+                              <h4 className="text-xl font-black text-white mb-1">{project.film}</h4>
+                              <span className="text-xs font-bold uppercase tracking-widest text-neutral-500">{project.genre} • {project.expectedRelease}</span>
+                            </div>
+                            <div className="px-4 py-2 rounded-full border border-white/10 bg-white/5 shrink-0">
+                              <span className={`text-[10px] font-black uppercase tracking-[0.2em] ${theme.accent} block text-center`}>Status</span>
+                              <span className="text-sm font-bold text-white block text-center">{project.status}</span>
+                            </div>
+                          </div>
+
+                          <div className="pl-4 grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                            <div>
+                              <p className="text-neutral-400 text-sm leading-relaxed mb-3"><span className="text-neutral-500 font-bold mr-2 block mb-1">Significance:</span>{project.significance}</p>
+                              <div className="flex gap-4">
+                                {project.hero && (
+                                  <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded text-neutral-300">Hero: {project.hero}</span>
+                                )}
+                                {project.budget && (
+                                  <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded text-neutral-300">Budget: {project.budget}</span>
+                                )}
+                              </div>
+                            </div>
+                            {project.expectations && (
+                              <div className="flex flex-col justify-center items-center p-4 rounded-xl bg-white/5 border border-white/5">
+                                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2 block">Expectations</span>
+                                <span className={`text-xl font-black ${theme.accent}`}>{project.expectations}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Future Outlook */}
+                {futureOutlook && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaChartBar /> Future Outlook
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {futureOutlook.nextPhase && (
+                        <div className={`p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 md:col-span-2 ${theme.glowColor}`}>
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Next Phase</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{futureOutlook.nextPhase}</p>
+                        </div>
+                      )}
+                      {futureOutlook.criticalFilm && (
+                        <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Critical Turning Point</h4>
+                          <p className="text-neutral-400 text-sm leading-relaxed">{futureOutlook.criticalFilm}</p>
+                        </div>
+                      )}
+                      {futureOutlook.marketPosition && (
+                        <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Market Position</h4>
+                          <p className="text-neutral-400 text-sm leading-relaxed">{futureOutlook.marketPosition}</p>
+                        </div>
+                      )}
+                      {futureOutlook.industrySentiment && (
+                        <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 md:col-span-2">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Industry Sentiment</h4>
+                          <p className="text-neutral-400 text-sm leading-relaxed">{futureOutlook.industrySentiment}</p>
                         </div>
                       )}
                     </div>

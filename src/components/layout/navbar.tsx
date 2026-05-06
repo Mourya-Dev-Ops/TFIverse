@@ -48,6 +48,23 @@ export default function Navbar({ user }: NavbarProps) {
             </Link>
           </div>
 
+          {/* CENTER: Navigation Links */}
+          <div className="hidden md:flex items-center space-x-1">
+            {[
+              { href: '/icons', label: 'Icons' },
+              { href: '/memes', label: 'Memes' },
+              { href: '/tier-list', label: 'Tier Lists' },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="px-4 py-2 text-[11px] font-bold uppercase tracking-[0.15em] text-white/50 hover:text-white hover:bg-white/[0.05] rounded-full transition-all duration-200"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
           {/* RIGHT: Auth & Profile */}
           <div className="flex items-center space-x-2 sm:space-x-4">
             {user ? (
