@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaInstagram, FaTwitter, FaImdb, FaCar, FaHome, FaStar, FaQuoteLeft, FaDumbbell, FaMoneyBillWave, FaFilm, FaCrown, FaChartBar, FaMusic } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaImdb, FaCar, FaHome, FaStar, FaQuoteLeft, FaDumbbell, FaMoneyBillWave, FaFilm, FaCrown, FaChartBar, FaMusic, FaFire } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -73,7 +73,7 @@ export default function IconProfileClient({
   
   const physicalStats = data.physicalStats || null;
   const appearance = data.appearance || null;
-  const transformations = data.physicalTransformations || data.beautyTransformations || [];
+  const transformations = data.physicalTransformations || data.beautyTransformations || data.transformations || [];
   const voiceProfile = data.voiceProfile || null;
   const lifestyle = data.lifestyle || null;
   const financial = data.financialProfile || null;
@@ -82,7 +82,7 @@ export default function IconProfileClient({
   const hobbies = data.hobbiesAndInterests || [];
   const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || null;
   const genreStrength = data.genreStrength || data.genreExpertise || null;
-  const philanthropy = data.philanthropy || null;
+  const philanthropy = data.philanthropy || data.philanthrophy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || [];
   const quotes = data.quotes || [];
   const trivia = data.trivia || [];
@@ -125,7 +125,7 @@ export default function IconProfileClient({
   const careerRetrospective = data.careerRetrospective || (data.filmographyByDecade ? { byDecade: data.filmographyByDecade } : null);
   const iconicRoles = data.iconicRoles || [];
   const onScreenPersona = data.onScreenPersona || null;
-  const historicalImpact = data.historicalImpact || null;
+  const historicalImpact = data.historicalImpact || data.culturalImpact || null;
   const industryContribution = data.industryContribution || null;
   const mentorshipInfluence = data.mentorshipInfluence || null;
   const internationalRecognition = data.internationalRecognition || null;
@@ -133,7 +133,7 @@ export default function IconProfileClient({
   const filmmakerRelationships = data.filmmakerRelationships || null;
   const politicalCareer = data.politicalCareer || null;
   const controversiesOrTriumphs = data.controversiesOrTriumphs || null;
-  const influenceAndLegacy = data.influenceAndLegacy || null;
+  const influenceAndLegacy = data.influenceAndLegacy || data.lifeAfterCinema || data.legacyProjects || data.comparisonsAndLegacy || null;
   const screenChemistryByCostar = data.screenChemistryByCostar || null;
 
   // Rising Star specific data
@@ -151,6 +151,17 @@ export default function IconProfileClient({
   const directorFilms = data.filmsDirected || [];
   const upcomingProjects = data.upcomingProjects || [];
   const futureOutlook = data.futureOutlook || null;
+
+  // Music Director specific data
+  const musicalEssence = data.musicalEssence || null;
+  const orchestralProfile = data.orchestralProfile || data.productionSignature || data.productionStyle || null;
+  const discography = data.discography || data.recentAlbums || null;
+  const chartbusterSongs = data.chartbusterSongs || null;
+  const musicalInnovations = data.musicalInnovations || null;
+  const backgroundScoreMastery = data.backgroundScoreMastery || null;
+  const streamingDominance = data.streamingDominance || data.commercialImpact || null;
+  const careersTimeline = data.careersTimeline || null;
+  const viralMoments = data.viralMoments || null;
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
     { id: "overview", label: "Overview" },
@@ -164,15 +175,15 @@ export default function IconProfileClient({
     tabs.push({ id: "glamour", label: "Glamour" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle) {
-    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : "The Craft" });
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile) {
+    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : "The Craft" });
   }
 
   if (lifestyle || financial || politicalCareer) {
     tabs.push({ id: "empire", label: "Empire" });
   }
 
-  if (careerStats || genreStrength || awards.length > 0 || careerRetrospective) {
+  if (careerStats || genreStrength || awards.length > 0 || careerRetrospective || streamingDominance || careersTimeline) {
     tabs.push({ id: "career", label: "Career" });
   }
 
@@ -184,7 +195,10 @@ export default function IconProfileClient({
     tabs.push({ id: "trajectory", label: "Trajectory" });
   }
 
-  tabs.push({ id: "movies", label: "Filmography" });
+  tabs.push({ id: "movies", label: category === "music-director" ? "Filmography" : "Filmography" });
+  if (chartbusterSongs || discography || backgroundScoreMastery) {
+    tabs.push({ id: "discography", label: "Discography" });
+  }
 
   if (images.gallery?.length > 0) tabs.push({ id: "gallery", label: "Gallery" });
 
@@ -918,6 +932,75 @@ export default function IconProfileClient({
             {/* ========================================== */}
             {activeTab === "craft" && (
               <>
+                {/* Music Director Sonic Blueprint */}
+                {musicalEssence && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaMusic /> Musical Essence
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      
+                      {Object.entries(musicalEssence).map(([key, value]) => {
+                        if (typeof value !== 'string') return null;
+                        return (
+                          <div key={key} className="mb-6 pl-4 last:mb-0">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </h4>
+                            <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {orchestralProfile && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaMusic /> Orchestral Profile & Production
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                      {Object.entries(orchestralProfile).map(([key, value]) => {
+                        if (typeof value !== 'string' && !Array.isArray(value)) return null;
+                        return (
+                          <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-neutral-500`}>
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </h4>
+                            {typeof value === 'string' ? (
+                              <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                            ) : (
+                              <ul className="space-y-2">
+                                {value.map((item: string, i: number) => (
+                                  <li key={i} className="text-neutral-300 text-xs flex gap-2"><span className={`${theme.accent} shrink-0`}>•</span>{item}</li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {musicalInnovations && musicalInnovations.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Musical Innovations
+                    </h3>
+                    <div className="grid grid-cols-1 gap-4">
+                      {musicalInnovations.map((innovation: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-xs font-bold text-white mb-2`}>{innovation.innovation || innovation.title}</h4>
+                          <p className="text-neutral-400 text-sm leading-relaxed">{innovation.description || innovation.impact}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Director Visionary Essence */}
                 {visionaryEssence && (
                   <div className="mb-12">
@@ -1874,6 +1957,51 @@ export default function IconProfileClient({
                     </div>
                   </div>
                 )}
+
+                {/* Streaming & Commercial Dominance */}
+                {streamingDominance && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Commercial Dominance</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(streamingDominance).map(([key, value]) => {
+                        if (typeof value !== 'string') return null;
+                        return (
+                          <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
+                            <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Careers Timeline */}
+                {careersTimeline && careersTimeline.length > 0 && (
+                  <div className="mt-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaChartBar /> Career Timeline
+                    </h3>
+                    <div className="space-y-6">
+                      {careersTimeline.map((item: any, idx: number) => (
+                        <div key={idx} className="flex flex-col md:flex-row gap-4 md:gap-6 p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <span className={`text-xl font-black ${theme.accent} shrink-0 w-24`}>{item.period || item.decade}</span>
+                          <div>
+                            <h4 className="text-sm font-bold text-white mb-2">{item.phase || item.title || item.period}</h4>
+                            <p className="text-neutral-400 text-sm leading-relaxed">{item.description}</p>
+                            {item.keyFilms && item.keyFilms.length > 0 && (
+                              <div className="mt-3 flex flex-wrap gap-2">
+                                {item.keyFilms.map((film: string, i: number) => (
+                                  <span key={i} className="px-2 py-1 bg-white/5 border border-white/10 rounded text-[10px] text-neutral-300">{film}</span>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </>
             )}
 
@@ -2518,6 +2646,94 @@ export default function IconProfileClient({
             )}
 
             {/* ========================================== */}
+            {/* TAB: DISCOGRAPHY (Music Directors) */}
+            {/* ========================================== */}
+            {activeTab === "discography" && (
+              <div className="flex flex-col gap-12">
+                
+                {backgroundScoreMastery && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Background Score Mastery
+                    </h3>
+                    <div className="grid grid-cols-1 gap-6">
+                      {backgroundScoreMastery.map((score: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 flex flex-col md:flex-row gap-6">
+                          <div className="md:w-1/3 shrink-0">
+                            <h4 className="text-lg font-black text-white">{score.film}</h4>
+                            <span className={`text-[10px] font-bold uppercase tracking-widest ${theme.accent} block mt-1`}>{score.year}</span>
+                            {score.impact && <p className="text-neutral-500 text-xs italic mt-3 leading-relaxed border-l-2 border-white/10 pl-3">{score.impact}</p>}
+                          </div>
+                          <div className="flex-1">
+                            {score.bgmApproach && (
+                              <div className="mb-4">
+                                <h5 className="text-[9px] font-black uppercase tracking-widest text-neutral-600 mb-2">Approach</h5>
+                                <p className="text-neutral-300 text-sm leading-relaxed">{score.bgmApproach}</p>
+                              </div>
+                            )}
+                            {score.iconicScenes && (
+                              <div className="mb-4">
+                                <h5 className="text-[9px] font-black uppercase tracking-widest text-neutral-600 mb-2">Iconic Scenes Enhanced</h5>
+                                <div className="flex flex-wrap gap-2">
+                                  {score.iconicScenes.map((scene: string, i: number) => (
+                                    <span key={i} className="px-3 py-1 bg-white/5 rounded-full border border-white/5 text-[10px] text-neutral-300">{scene}</span>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+                            {score.technicalAchievements && (
+                              <div>
+                                <h5 className="text-[9px] font-black uppercase tracking-widest text-neutral-600 mb-2">Technical Achievement</h5>
+                                <p className="text-neutral-400 text-xs leading-relaxed">{score.technicalAchievements}</p>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {chartbusterSongs && chartbusterSongs.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaMusic /> Chartbuster Anthems
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {chartbusterSongs.map((song: any, idx: number) => (
+                        <div key={idx} className="p-5 rounded-2xl bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/20 transition-all">
+                          <div className={`absolute top-0 right-0 w-2 h-full ${theme.accentBg} opacity-0 group-hover:opacity-100 transition-opacity`} />
+                          <h4 className="text-sm font-bold text-white mb-1">{song.song || song.trackName}</h4>
+                          <span className={`text-[10px] font-bold uppercase tracking-widest ${theme.accent} block mb-3`}>{song.film} ({song.year})</span>
+                          {song.genre && <span className="text-[9px] uppercase tracking-widest px-2 py-1 bg-white/5 rounded inline-block mb-3 text-neutral-400">{song.genre}</span>}
+                          {song.impact && <p className="text-neutral-400 text-xs leading-relaxed">{song.impact}</p>}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {discography && discography.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaFilm /> Iconic Albums
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                      {discography.map((album: any, idx: number) => (
+                        <div key={idx} className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5 flex flex-col items-center justify-center text-center">
+                          <span className={`text-2xl mb-2 ${theme.accent}`}>🎵</span>
+                          <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 mb-1">{album.year || album.releaseYear}</span>
+                          <h4 className="text-sm font-bold text-neutral-200">{album.album || album.title || album.film}</h4>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+              </div>
+            )}
+
+            {/* ========================================== */}
             {/* TAB: FILMOGRAPHY (From Database) */}
             {/* ========================================== */}
             {activeTab === "movies" && (
@@ -2729,6 +2945,24 @@ export default function IconProfileClient({
                   <div className="mt-2 pt-4 border-t border-white/5">
                     <span className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold block mb-1">Digital Strategy</span>
                     <p className="text-[10px] text-neutral-400 leading-relaxed">{social.socialMediaStrategy}</p>
+                  </div>
+                )}
+
+                {viralMoments && viralMoments.length > 0 && (
+                  <div className="mt-6 pt-6 border-t border-white/5">
+                    <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-4 flex items-center gap-2">
+                      <FaFire /> Viral Phenomenons
+                    </h4>
+                    <div className="space-y-4">
+                      {viralMoments.map((vm: any, i: number) => (
+                        <div key={i} className="bg-white/5 rounded-xl p-4 border border-white/10 relative overflow-hidden">
+                          <h5 className="text-xs font-bold text-white mb-1">{vm.song || vm.track || vm.event}</h5>
+                          <span className={`text-[8px] font-bold uppercase tracking-widest ${theme.accent} block mb-2`}>{vm.film} ({vm.year})</span>
+                          <span className="text-[9px] px-2 py-0.5 bg-black/40 rounded text-neutral-400 inline-block mb-2 uppercase tracking-wider">{vm.viralOn}</span>
+                          <p className="text-[10px] text-neutral-300 leading-relaxed italic border-l border-white/10 pl-2">{vm.trend}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
