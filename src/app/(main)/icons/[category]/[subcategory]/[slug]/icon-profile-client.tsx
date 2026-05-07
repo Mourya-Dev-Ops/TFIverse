@@ -177,15 +177,16 @@ export default function IconProfileClient({
 
   // Music Director specific data
   const musicalEssence = data.musicalEssence || null;
-  const orchestralProfile = data.orchestralProfile || data.productionSignature || data.productionStyle || null;
+  const orchestralProfile = data.orchestralProfile || (data.productionSignature ? { ...data.productionSignature, ...(data.productionStyle || {}) } : null) || data.productionStyle || null;
   const discography = data.discography || data.recentAlbums || null;
   const chartbusterSongs = data.chartbusterSongs || null;
   const musicalInnovations = data.musicalInnovations || null;
   const backgroundScoreMastery = data.backgroundScoreMastery || null;
-  const streamingDominance = data.streamingDominance || data.commercialImpact || null;
+  const streamingDominance = data.streamingDominance || null;
+  const commercialImpact = data.commercialImpact || null;
   const careersTimeline = data.careersTimeline || null;
   const viralMoments = data.viralMoments || null;
-  const recentFilmography = data.recentFilmography || null;
+  const recentFilmography = data.recentFilmography || data.filmography || null;
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
     { id: "overview", label: "Overview" },
@@ -207,7 +208,7 @@ export default function IconProfileClient({
     tabs.push({ id: "empire", label: "Empire" });
   }
 
-  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || careersTimeline) {
+  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline) {
     tabs.push({ id: "career", label: "Career" });
   }
 
@@ -2131,21 +2132,104 @@ export default function IconProfileClient({
                   </div>
                 )}
 
-                {/* Streaming & Commercial Dominance */}
+                {/* Streaming Dominance */}
                 {streamingDominance && (
                   <div>
-                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Commercial Dominance</h3>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8 flex items-center gap-2"><FaChartBar /> Streaming & Digital Dominance</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {Object.entries(streamingDominance).map(([key, value]) => {
-                        if (typeof value !== 'string') return null;
-                        return (
-                          <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
-                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
-                            <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
-                          </div>
-                        );
+                      {streamingDominance.digitalInfluenceScore && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 md:col-span-2 text-center flex flex-col items-center justify-center">
+                          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2 block">Digital Influence Score</span>
+                          <span className={`text-6xl font-black ${theme.accent}`}>{streamingDominance.digitalInfluenceScore}</span>
+                        </div>
+                      )}
+                      
+                      {Object.entries(streamingDominance).map(([key, value]: [string, any]) => {
+                        if (key === 'digitalInfluenceScore') return null;
+                        if (typeof value === 'string') {
+                          return (
+                            <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
+                              <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                            </div>
+                          );
+                        } else if (typeof value === 'object' && value !== null) {
+                          return (
+                            <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-white capitalize flex items-center gap-2`}>
+                                {key} Platform
+                              </h4>
+                              <div className="space-y-3">
+                                {value.followers && (
+                                  <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                    <span className="text-xs text-neutral-400">Followers</span>
+                                    <span className={`text-sm font-black ${theme.accent}`}>{value.followers.toLocaleString()}</span>
+                                  </div>
+                                )}
+                                {value.subscribers && (
+                                  <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                    <span className="text-xs text-neutral-400">Subscribers</span>
+                                    <span className={`text-sm font-black text-red-500`}>{value.subscribers.toLocaleString()}</span>
+                                  </div>
+                                )}
+                                {value.totalListens && (
+                                  <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                    <span className="text-xs text-neutral-400">Total Listens</span>
+                                    <span className="text-sm font-black text-white">{value.totalListens}</span>
+                                  </div>
+                                )}
+                                {value.totalViews && (
+                                  <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                    <span className="text-xs text-neutral-400">Total Views</span>
+                                    <span className="text-sm font-black text-white">{value.totalViews}</span>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          );
+                        }
+                        return null;
                       })}
                     </div>
+                  </div>
+                )}
+
+                {/* Commercial Impact (Music Director) */}
+                {commercialImpact && (
+                  <div className="mt-8">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 flex items-center gap-2"><FaStar /> Commercial Impact</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center flex flex-col items-center justify-center">
+                        <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">100 Crore Club</span>
+                        <span className={`text-4xl font-black ${theme.accent}`}>{commercialImpact['100CroreClub']}</span>
+                      </div>
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center md:col-span-2 flex flex-col items-center justify-center">
+                        <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Average Film Collection</span>
+                        <span className="text-4xl font-black text-white">{commercialImpact.averageFilmCollection}</span>
+                      </div>
+                    </div>
+                    {commercialImpact.commercialReliability && (
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 mb-6">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Commercial Reliability</h4>
+                        <p className="text-neutral-300 text-sm leading-relaxed">{commercialImpact.commercialReliability}</p>
+                      </div>
+                    )}
+                    {commercialImpact.boxOfficeDriven && (
+                      <div>
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-neutral-500 px-2`}>Box Office Driven Soundtracks</h4>
+                        <div className="space-y-3">
+                          {commercialImpact.boxOfficeDriven.map((film: any, i: number) => (
+                            <div key={i} className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center p-4 rounded-xl bg-[#0a0a0a] border border-white/5">
+                              <div>
+                                <span className="text-sm font-bold text-white">{film.film} <span className="text-[10px] font-normal text-neutral-500">({film.year})</span></span>
+                                <p className="text-xs text-neutral-400 mt-1 max-w-lg">{film.musicRole}</p>
+                              </div>
+                              <span className={`text-xs font-black shrink-0 px-3 py-1 rounded bg-green-500/10 text-green-500 border border-green-500/20`}>{film.boxOffice}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
 
