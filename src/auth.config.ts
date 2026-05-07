@@ -12,6 +12,10 @@ const PUBLIC_ROUTES = [
   "/api/auth",
   "/icons",        // All celebrity profile pages
   "/u/",           // Public user profiles
+  "/about",
+  "/privacy",
+  "/terms",
+  "/contact",
 ];
 
 // This config is Edge-compatible — NO database imports, NO bcrypt.
