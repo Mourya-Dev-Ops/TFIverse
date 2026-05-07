@@ -79,7 +79,7 @@ export default function IconProfileClient({
   const financial = data.financialProfile || null;
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
-  const hobbies = data.hobbiesAndInterests || [];
+  const hobbies = data.hobbiesAndInterests || data.hobbies || [];
   const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || null;
   const genreStrength = data.genreStrength || data.genreExpertise || data.genreSpecialization || null;
   const philanthropy = data.philanthropy || data.philanthrophy || null;
@@ -378,10 +378,10 @@ export default function IconProfileClient({
                 {/* Aura Bento Grid */}
                 {aura && (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {aura.boxOfficeAppeal && (
+                    {(aura.boxOfficeAppeal || aura.legendaryAppeal) && (
                       <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor}`}>
-                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Box Office Appeal</h4>
-                        <p className="text-neutral-400 leading-relaxed text-sm">{aura.boxOfficeAppeal}</p>
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>{aura.legendaryAppeal ? 'Legendary Appeal' : 'Box Office Appeal'}</h4>
+                        <p className="text-neutral-400 leading-relaxed text-sm">{aura.boxOfficeAppeal || aura.legendaryAppeal}</p>
                       </div>
                     )}
                     {aura.screenPresence && (
@@ -418,6 +418,12 @@ export default function IconProfileClient({
                       <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] md:col-span-2 ${theme.glowColor}`}>
                         <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>The Fanbase</h4>
                         <p className="text-neutral-400 leading-relaxed text-sm md:text-base">{aura.fanbase}</p>
+                      </div>
+                    )}
+                    {aura.cinematicLegacy && (
+                      <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] md:col-span-2 ${theme.glowColor}`}>
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Cinematic Legacy</h4>
+                        <p className="text-neutral-400 leading-relaxed text-sm md:text-base">{aura.cinematicLegacy}</p>
                       </div>
                     )}
                   </div>
