@@ -68,8 +68,8 @@ export default function IconProfileClient({
   const personalInfo = data.personalInfo || {};
   const social = data.socialMedia || data.socialMediaInfluence || data.socialMediaPresence || {};
   
-  // Aura extraction (Hero vs Heroine vs Diva vs Villain vs Comedian vs Character Artist)
-  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || null;
+  // Aura extraction (Hero vs Heroine vs Diva vs Villain vs Comedian vs Character Artist vs Singer)
+  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || null;
   
   const physicalStats = data.physicalStats || data.appearance || null;
   const appearance = data.appearance || null;
@@ -81,7 +81,7 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || data.hobbies || [];
-  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || null;
+  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || null;
   const genreStrength = data.genreStrength || data.genreExpertise || data.genreSpecialization || null;
   const philanthropy = data.philanthropy || data.philanthrophy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || data.awardsAndRecognition || [];
@@ -169,6 +169,16 @@ export default function IconProfileClient({
   const memorableScenes = data.memorableScenes || null;
   const actingApproach = data.actingApproach || null;
 
+  // Singer specific data
+  const vocalProfile = data.vocalProfile || null;
+  const musicDirectorCollaborations = data.musicDirectorCollaborations || null;
+  const duetPartnerships = data.duetPartnerships || null;
+  const chartbusterSongs = data.chartbusterSongs || null;
+  const genreVersatility = data.genreVersatility || null;
+  const livePerformances = data.livePerformances || null;
+  const musicalFamily = data.musicalFamily || null;
+  const songsSung = data.songsSung || null;
+
   // Director specific data
   const rawVisionaryEssence = data.visionaryEssence || data.emergingEssence || data.hitmakerEssence || null;
   const visionaryEssence = rawVisionaryEssence ? {
@@ -203,11 +213,12 @@ export default function IconProfileClient({
   const chartbusterSongs = data.chartbusterSongs || null;
   const musicalInnovations = data.musicalInnovations || null;
   const backgroundScoreMastery = data.backgroundScoreMastery || null;
-  const streamingDominance = data.streamingDominance || null;
+  const streamingDominance = data.streamingDominance || data.streamingPresence || null;
   const commercialImpact = data.commercialImpact || null;
   const careersTimeline = data.careersTimeline || null;
   const viralMoments = data.viralMoments || null;
-  const recentFilmography = data.recentFilmography || data.filmography || null;
+  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || null;
+  
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
     { id: "overview", label: "Overview" },
@@ -221,19 +232,19 @@ export default function IconProfileClient({
     tabs.push({ id: "glamour", label: "Glamour" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations) {
-    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : "The Craft" });
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility) {
+    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : "The Craft" });
   }
 
   if (lifestyle || financial || politicalCareer || brandValue) {
     tabs.push({ id: "empire", label: "Empire" });
   }
 
-  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline) {
+  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung) {
     tabs.push({ id: "career", label: "Career" });
   }
 
-  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments || legendaryComedyMoments || memorableScenes) {
+  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments || legendaryComedyMoments || memorableScenes || livePerformances || musicalFamily) {
     tabs.push({ id: "legacy", label: "Legacy" });
   }
 
@@ -1466,6 +1477,126 @@ export default function IconProfileClient({
                   </div>
                 )}
 
+                {/* Singer: Vocal Profile */}
+                {vocalProfile && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaMicrophone /> Vocal Profile
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {Object.entries(vocalProfile).map(([key, value]: [string, any]) => (
+                          <div key={key} className="pl-4">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </h4>
+                            {typeof value === 'string' ? (
+                              <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                            ) : Array.isArray(value) ? (
+                              <ul className="space-y-1">
+                                {value.map((item: string, i: number) => (
+                                  <li key={i} className="text-neutral-300 text-sm leading-relaxed flex items-center gap-2">
+                                    <span className={`w-1 h-1 rounded-full ${theme.accentBg}`} /> {item}
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : null}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Singer: Genre Versatility */}
+                {genreVersatility && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaMusic /> Genre Mastery
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(genreVersatility).map(([genre, data]: [string, any]) => (
+                        <div key={genre} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors relative overflow-hidden group">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${data.expertise === 'Mastery' ? theme.accentBg : data.expertise === 'Strong' ? 'bg-neutral-400' : 'bg-neutral-600'} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <div className="flex items-center justify-between mb-3">
+                              <h4 className="text-sm font-black text-white uppercase tracking-tight">{genre.replace(/([A-Z])/g, ' $1').trim()}</h4>
+                              <span className={`text-[10px] font-black uppercase tracking-widest ${data.expertise === 'Mastery' ? theme.accent : 'text-neutral-400'}`}>{data.expertise}</span>
+                            </div>
+                            {data.iconicSongs && Array.isArray(data.iconicSongs) && (
+                              <div className="space-y-1 mt-3">
+                                {data.iconicSongs.map((song: string, i: number) => (
+                                  <p key={i} className="text-neutral-400 text-xs leading-relaxed border-l-2 border-white/10 pl-2">
+                                    "{song}"
+                                  </p>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Singer: Music Director Collaborations */}
+                {musicDirectorCollaborations && Array.isArray(musicDirectorCollaborations) && musicDirectorCollaborations.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaHeadphones /> Maestro Collaborations
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {musicDirectorCollaborations.map((collab: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors">
+                          <div className="flex items-center justify-between mb-3">
+                            <span className="text-lg font-black text-white">{collab.musicDirectorName || collab.musicDirector}</span>
+                            {collab.songsTogether && <span className={`text-sm font-black ${theme.accent}`}>{collab.songsTogether} <span className="text-[10px] text-neutral-500 uppercase">Songs</span></span>}
+                          </div>
+                          <div className="space-y-2">
+                            {collab.partnership && <p className="text-neutral-400 text-xs leading-relaxed mt-2">{collab.partnership}</p>}
+                            {collab.mostIconicSong && (
+                              <div className="flex justify-between items-center border-b border-white/5 pb-2 mt-2">
+                                <span className="text-xs text-neutral-400">Iconic Song</span>
+                                <span className="text-xs font-bold text-white">{collab.mostIconicSong}</span>
+                              </div>
+                            )}
+                            {collab.vocalarrangement && <p className={`text-[10px] leading-relaxed italic text-neutral-500 mt-2`}>{collab.vocalarrangement}</p>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Singer: Duet Partnerships */}
+                {duetPartnerships && Array.isArray(duetPartnerships) && duetPartnerships.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaUserFriends /> Duet Partnerships
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {duetPartnerships.map((partner: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors">
+                          <div className="flex items-center justify-between mb-3">
+                            <span className="text-lg font-black text-white">{partner.partnerName || partner.partner}</span>
+                            {partner.duetsTogether && <span className={`text-sm font-black ${theme.accent}`}>{partner.duetsTogether} <span className="text-[10px] text-neutral-500 uppercase">Duets</span></span>}
+                          </div>
+                          <div className="space-y-2">
+                            {partner.vocalChemistry && <p className="text-neutral-400 text-xs leading-relaxed mt-2">{partner.vocalChemistry}</p>}
+                            {partner.mostMemorableDuet && (
+                              <div className="flex justify-between items-center border-b border-white/5 pb-2 mt-2">
+                                <span className="text-xs text-neutral-400">Iconic Duet</span>
+                                <span className="text-xs font-bold text-white">{partner.mostMemorableDuet}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Music Director Sonic Blueprint */}
                 {musicalEssence && (
                   <div className="mb-12">
@@ -2643,10 +2774,44 @@ export default function IconProfileClient({
                                     <span className="text-sm font-black text-white">{value.totalListens}</span>
                                   </div>
                                 )}
+                                {value.monthlyListeners && (
+                                  <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                    <span className="text-xs text-neutral-400">Monthly Listeners</span>
+                                    <span className={`text-sm font-black ${theme.accent}`}>{value.monthlyListeners.toLocaleString()}</span>
+                                  </div>
+                                )}
+                                {value.totalStreams && (
+                                  <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                    <span className="text-xs text-neutral-400">Total Streams</span>
+                                    <span className="text-sm font-black text-white">{value.totalStreams}</span>
+                                  </div>
+                                )}
+                                {value.subscribersOnChannel && (
+                                  <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                    <span className="text-xs text-neutral-400">Subscribers</span>
+                                    <span className={`text-sm font-black text-red-500`}>{value.subscribersOnChannel.toLocaleString()}</span>
+                                  </div>
+                                )}
+                                {value.mostViewedSong && (
+                                  <div className="flex flex-col gap-1 border-b border-white/5 pb-2">
+                                    <span className="text-xs text-neutral-400">Most Viewed Song</span>
+                                    <span className="text-xs font-black text-white">{value.mostViewedSong}</span>
+                                  </div>
+                                )}
                                 {value.totalViews && (
                                   <div className="flex justify-between items-center border-b border-white/5 pb-2">
                                     <span className="text-xs text-neutral-400">Total Views</span>
                                     <span className="text-sm font-black text-white">{value.totalViews}</span>
+                                  </div>
+                                )}
+                                {value.topSongs && Array.isArray(value.topSongs) && (
+                                  <div className="flex flex-col gap-1 mt-2">
+                                    <span className="text-xs text-neutral-400 mb-1">Top Songs</span>
+                                    <div className="flex flex-wrap gap-1">
+                                      {value.topSongs.map((song: string, i: number) => (
+                                        <span key={i} className="text-[9px] px-2 py-0.5 bg-white/5 border border-white/10 rounded-full text-neutral-300">{song}</span>
+                                      ))}
+                                    </div>
                                   </div>
                                 )}
                               </div>
@@ -2655,6 +2820,63 @@ export default function IconProfileClient({
                         }
                         return null;
                       })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Singer: Chartbuster Songs */}
+                {chartbusterSongs && Array.isArray(chartbusterSongs) && chartbusterSongs.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaCompactDisc /> Chartbuster Songs
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {chartbusterSongs.map((song: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <div className="flex flex-col gap-1 mb-3">
+                              <h4 className="text-lg font-black text-white">{song.song || song.title}</h4>
+                              <span className={`text-[10px] font-black uppercase tracking-widest ${theme.accent}`}>{song.film} ({song.year})</span>
+                            </div>
+                            <div className="flex flex-wrap gap-2 mb-3">
+                              {song.musicDirector && <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] uppercase tracking-widest font-bold text-neutral-300">MD: {song.musicDirector}</span>}
+                              {song.chartPerformance && <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] uppercase tracking-widest font-bold text-neutral-300">📈 {song.chartPerformance}</span>}
+                            </div>
+                            {song.significance && <p className="text-neutral-400 text-xs leading-relaxed mt-2">{song.significance}</p>}
+                            {song.culturalImpact && <p className="text-neutral-500 text-[10px] leading-relaxed mt-2 italic border-l-2 border-white/10 pl-3">{song.culturalImpact}</p>}
+                            {(song.spotifyPlays || song.youtubeViews) && (
+                              <div className="flex gap-4 mt-3 pt-3 border-t border-white/5">
+                                {song.spotifyPlays && <span className="text-[10px] font-black text-neutral-400"><FaSpotify className="inline mr-1" /> {song.spotifyPlays}</span>}
+                                {song.youtubeViews && <span className="text-[10px] font-black text-neutral-400"><FaYoutube className="inline mr-1 text-red-500" /> {song.youtubeViews}</span>}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Singer: Songs Sung */}
+                {songsSung && Array.isArray(songsSung) && songsSung.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaMusic /> Iconic Discography
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {songsSung.map((song: any, idx: number) => (
+                        <div key={idx} className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors flex justify-between items-center group">
+                          <div>
+                            <h4 className="text-sm font-black text-white mb-1 group-hover:text-neutral-200 transition-colors">{song.song || song.title}</h4>
+                            <div className="flex items-center gap-2">
+                              <span className="text-[10px] text-neutral-500">{song.film}</span>
+                              <span className={`text-[8px] font-black uppercase tracking-widest ${theme.accent}`}>{song.language || 'Telugu'}</span>
+                            </div>
+                          </div>
+                          <span className="text-xs font-black text-neutral-600">{song.year}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 )}
@@ -2804,6 +3026,79 @@ export default function IconProfileClient({
                           </div>
                         </div>
                       ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Singer: Live Performances */}
+                {livePerformances && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaGlobe /> Global Stage Presence
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pl-4">
+                        <div>
+                          {livePerformances.concertCareer && (
+                            <div className="mb-4">
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Concert Career</h4>
+                              <p className="text-neutral-300 text-sm leading-relaxed">{livePerformances.concertCareer}</p>
+                            </div>
+                          )}
+                          {livePerformances.stagePresence && (
+                            <div className="mb-4">
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Stage Presence</h4>
+                              <p className="text-neutral-300 text-sm leading-relaxed">{livePerformances.stagePresence}</p>
+                            </div>
+                          )}
+                        </div>
+                        <div>
+                          {livePerformances.notableConcerts && Array.isArray(livePerformances.notableConcerts) && (
+                            <div className="mb-4">
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Notable Concerts</h4>
+                              <ul className="space-y-2">
+                                {livePerformances.notableConcerts.map((concert: any, i: number) => (
+                                  <li key={i} className="text-neutral-300 text-xs flex justify-between items-center border-b border-white/5 pb-1">
+                                    <span>{concert.event} <span className="text-[9px] text-neutral-500 block">{concert.location}</span></span>
+                                    <span className="font-black text-neutral-500">{concert.year}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Singer: Musical Family */}
+                {musicalFamily && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaHeart /> Personal & Legacy
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {musicalFamily.musicalLegacy && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Musical Legacy</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{musicalFamily.musicalLegacy}</p>
+                        </div>
+                      )}
+                      {musicalFamily.childrenSingers && Array.isArray(musicalFamily.childrenSingers) && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>Next Generation</h4>
+                          <ul className="space-y-2">
+                            {musicalFamily.childrenSingers.map((child: any, i: number) => (
+                              <li key={i} className="text-neutral-300 text-sm border-l-2 border-white/10 pl-2">
+                                <span className="font-bold text-white">{child.name}</span>
+                                {child.profession && <span className="text-[10px] block text-neutral-500 mt-1">{child.profession}</span>}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
