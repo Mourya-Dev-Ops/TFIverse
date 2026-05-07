@@ -16,6 +16,12 @@ const PUBLIC_ROUTES = [
   "/privacy",
   "/terms",
   "/contact",
+  "/memes",
+  "/tier-list",
+  "/box-office",
+  "/re-releases",
+  "/calendar",
+  "/movies",
 ];
 
 // This config is Edge-compatible — NO database imports, NO bcrypt.
