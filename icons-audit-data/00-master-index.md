@@ -19,7 +19,7 @@
 | 5 | **Villains** | iconic-antagonists, antagonists | 2 | [05-villains.md](./05-villains.md) | ✅ Audited + Fixed |
 | 6 | **Comedians** | comedy-kings, comedy-titans | 2 | [06-comedians.md](./06-comedians.md) | ✅ Audited + Fixed |
 | 7 | **Character Artists** | _(root)_ | 1 | [07-character-artists.md](./07-character-artists.md) | ✅ Audited + Fixed |
-| 8 | **Singers** | _(root)_ | 1 | [08-singers.md](./08-singers.md) | 🔲 Pending |
+| 8 | **Singers** | _(root)_ | 1 | [08-singers.md](./08-singers.md) | ✅ Audited + Fixed |
 | 9 | **Producers** | _(root)_ | 1 | [09-producers.md](./09-producers.md) | 🔲 Pending |
 | 10 | **Cinematographers** | _(root)_ | 1 | [10-cinematographers.md](./10-cinematographers.md) | 🔲 Pending |
 | 11 | **Editors** | _(root)_ | 1 | [11-editors.md](./11-editors.md) | 🔲 Pending |
