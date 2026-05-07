@@ -68,8 +68,8 @@ export default function IconProfileClient({
   const personalInfo = data.personalInfo || {};
   const social = data.socialMedia || data.socialMediaInfluence || data.socialMediaPresence || {};
   
-  // Aura extraction (Hero vs Heroine vs Diva vs Villain vs Comedian vs Character Artist vs Singer vs Producer vs Cinematographer vs Editor vs Lyricist)
-  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || data.producerEssence || data.cinematographyEssence || data.editingEssence || data.lyricalEssence || null;
+  // Aura extraction (Hero vs Heroine vs Diva vs Villain vs Comedian vs Character Artist vs Singer vs Producer vs Cinematographer vs Editor vs Lyricist vs Choreographer)
+  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || data.producerEssence || data.cinematographyEssence || data.editingEssence || data.lyricalEssence || data.choreographyEssence || null;
   
   const physicalStats = data.physicalStats || data.appearance || null;
   const appearance = data.appearance || null;
@@ -81,7 +81,7 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || data.hobbies || [];
-  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || data.productionStatistics || data.cinematographyStatistics || data.editingStatistics || data.lyricalStatistics || null;
+  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || data.productionStatistics || data.cinematographyStatistics || data.editingStatistics || data.lyricalStatistics || data.choreographyStatistics || null;
   const genreStrength = data.genreStrength || data.genreExpertise || data.genreSpecialization || null;
   const philanthropy = data.philanthropy || data.philanthrophy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || data.awardsAndRecognition || [];
@@ -205,6 +205,14 @@ export default function IconProfileClient({
   const iconicSongsWritten = data.iconicSongsWritten || null;
   const frequentDirectorCollaborations = data.frequentDirectorCollaborations || null;
 
+  // Choreographer specific data
+  const danceStyle = data.danceStyle || null;
+  const danceStyleVersatility = data.danceStyleVersatility || null;
+  const actorCollaborations = data.actorCollaborations || null;
+  const iconicChoreography = data.iconicChoreography || null;
+  const signatureMovesCreated = data.signatureMovesCreated || null;
+  const viralDanceMoments = data.viralDanceMoments || null;
+
   // Director specific data
   const rawVisionaryEssence = data.visionaryEssence || data.emergingEssence || data.hitmakerEssence || null;
   const visionaryEssence = rawVisionaryEssence ? {
@@ -243,7 +251,7 @@ export default function IconProfileClient({
   const commercialImpact = data.commercialImpact || null;
   const careersTimeline = data.careersTimeline || null;
   const viralMoments = data.viralMoments || null;
-  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || data.filmsProduced || data.filmsShot || data.filmsEdited || data.songsWritten || null;
+  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || data.filmsProduced || data.filmsShot || data.filmsEdited || data.songsWritten || data.songsChoreographed || null;
   
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
@@ -258,19 +266,19 @@ export default function IconProfileClient({
     tabs.push({ id: "glamour", label: "Glamour" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility || starCollaborations || productionApproach || visualStyle || technicalExpertise || editingStyle || pacingAndRhythm || lyricalStyle || frequentDirectorCollaborations) {
-    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : category === "producers" ? "Production Blueprint" : category === "cinematographers" ? "Visual Signature" : category === "editors" ? "The Edit Room" : category === "lyricists" ? "The Pen & Paper" : "The Craft" });
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility || starCollaborations || productionApproach || visualStyle || technicalExpertise || editingStyle || pacingAndRhythm || lyricalStyle || frequentDirectorCollaborations || danceStyle || danceStyleVersatility || actorCollaborations) {
+    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : category === "producers" ? "Production Blueprint" : category === "cinematographers" ? "Visual Signature" : category === "editors" ? "The Edit Room" : category === "lyricists" ? "The Pen & Paper" : category === "choreographers" ? "The Dance Floor" : "The Craft" });
   }
 
   if (lifestyle || financial || politicalCareer || brandValue || productionHouse) {
     tabs.push({ id: "empire", label: "Empire" });
   }
 
-  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung || productionByDecade || landmarkProductions || iconicVisuallyStunningFilms || iconicEditedFilms || iconicSongsWritten) {
+  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung || productionByDecade || landmarkProductions || iconicVisuallyStunningFilms || iconicEditedFilms || iconicSongsWritten || iconicChoreography) {
     tabs.push({ id: "career", label: "Career" });
   }
 
-  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments || legendaryComedyMoments || memorableScenes || livePerformances || musicalFamily || talentDiscovery || teluguLanguageContribution || literaryWorks || famousLyricalLines) {
+  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments || legendaryComedyMoments || memorableScenes || livePerformances || musicalFamily || talentDiscovery || teluguLanguageContribution || literaryWorks || famousLyricalLines || viralDanceMoments || signatureMovesCreated) {
     tabs.push({ id: "legacy", label: "Legacy" });
   }
 
@@ -1684,6 +1692,98 @@ export default function IconProfileClient({
                               ))}
                             </ul>
                           ) : null}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Choreographer: Dance Style */}
+                {danceStyle && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaMusic /> Dance Signature
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {Object.entries(danceStyle).map(([key, value]: [string, any]) => (
+                          <div key={key} className="pl-4">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </h4>
+                            {typeof value === 'string' ? (
+                              <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                            ) : Array.isArray(value) ? (
+                              <ul className="space-y-1">
+                                {value.map((item: string, i: number) => (
+                                  <li key={i} className="text-neutral-300 text-sm leading-relaxed flex items-start gap-2">
+                                    <span className={`w-1.5 h-1.5 rounded-full ${theme.accentBg} mt-1.5 flex-shrink-0`} /> <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : null}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Choreographer: Dance Style Versatility */}
+                {danceStyleVersatility && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaMusic /> Style Mastery
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(danceStyleVersatility).map(([style, data]: [string, any]) => (
+                        <div key={style} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors relative overflow-hidden group">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${data.expertise === 'Mastery' ? theme.accentBg : data.expertise === 'Strong' ? 'bg-neutral-400' : 'bg-neutral-600'} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <div className="flex items-center justify-between mb-3">
+                              <h4 className="text-sm font-black text-white uppercase tracking-tight">{style.replace(/([A-Z])/g, ' $1').trim()}</h4>
+                              <span className={`text-[10px] font-black uppercase tracking-widest ${data.expertise === 'Mastery' ? theme.accent : 'text-neutral-400'}`}>{data.expertise}</span>
+                            </div>
+                            {data.notableSongs && Array.isArray(data.notableSongs) && (
+                              <div className="space-y-1 mt-3">
+                                {data.notableSongs.map((song: string, i: number) => (
+                                  <p key={i} className="text-neutral-400 text-xs leading-relaxed border-l-2 border-white/10 pl-2">
+                                    "{song}"
+                                  </p>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Choreographer: Actor Collaborations */}
+                {actorCollaborations && actorCollaborations.heroCollaborations && Array.isArray(actorCollaborations.heroCollaborations) && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaHandshake /> Star Partnerships
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {actorCollaborations.heroCollaborations.map((collab: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <div className="flex items-center justify-between mb-3">
+                              <h5 className="text-lg font-black text-white">{collab.heroName}</h5>
+                              <span className={`text-sm font-black ${theme.accent}`}>{collab.songsChoreographed} <span className="text-[10px] uppercase text-neutral-500">Songs</span></span>
+                            </div>
+                            {collab.danceChemistry && <p className="text-neutral-400 text-xs leading-relaxed mb-3">{collab.danceChemistry}</p>}
+                            {collab.mostIconicSong && (
+                              <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                <span className="text-xs text-neutral-400">Iconic Song</span>
+                                <span className="text-xs font-bold text-white">{collab.mostIconicSong}</span>
+                              </div>
+                            )}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -3288,6 +3388,79 @@ export default function IconProfileClient({
                   </div>
                 )}
 
+                {/* Choreographer: Iconic Choreography */}
+                {iconicChoreography && Array.isArray(iconicChoreography) && iconicChoreography.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaFilm /> Iconic Choreography
+                    </h3>
+                    <div className="space-y-4">
+                      {iconicChoreography.map((item: any, idx: number) => (
+                        <div key={idx} className="p-6 md:p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                              <div>
+                                <h4 className="text-xl font-black text-white">{item.song}</h4>
+                                <span className={`text-xs font-black uppercase tracking-widest ${theme.accent}`}>{item.film} ({item.year}) • {item.hero}</span>
+                              </div>
+                              {item.awards && Array.isArray(item.awards) && (
+                                <div className="flex flex-wrap gap-2 justify-end">
+                                  {item.awards.map((award: string, i: number) => (
+                                    <span key={i} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] uppercase tracking-widest font-bold text-yellow-500">🏆 {award}</span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 pt-4 border-t border-white/5">
+                              <div>
+                                {item.danceStyle && (
+                                  <div className="mb-3">
+                                    <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] uppercase tracking-widest font-bold text-neutral-300">{item.danceStyle}</span>
+                                  </div>
+                                )}
+                                {item.significance && (
+                                  <div className="mb-4">
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Significance</h5>
+                                    <p className="text-neutral-300 text-sm leading-relaxed">{item.significance}</p>
+                                  </div>
+                                )}
+                                {item.culturalImpact && (
+                                  <div>
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Cultural Impact</h5>
+                                    <p className="text-neutral-400 text-xs leading-relaxed italic border-l-2 border-white/10 pl-3">{item.culturalImpact}</p>
+                                  </div>
+                                )}
+                              </div>
+                              <div>
+                                {item.iconicSteps && Array.isArray(item.iconicSteps) && (
+                                  <div className="mb-4">
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Iconic Steps</h5>
+                                    <ul className="space-y-1">
+                                      {item.iconicSteps.map((step: string, i: number) => (
+                                        <li key={i} className="text-neutral-300 text-xs flex items-start gap-2">
+                                          <span className={`w-1 h-1 rounded-full ${theme.accentBg} mt-1.5 flex-shrink-0`} /> <span>{step}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                )}
+                                {item.viralMoment && (
+                                  <div>
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Viral Moment</h5>
+                                    <p className="text-neutral-400 text-xs leading-relaxed">{item.viralMoment}</p>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Lyricist: Iconic Songs Written */}
                 {iconicSongsWritten && Array.isArray(iconicSongsWritten) && iconicSongsWritten.length > 0 && (
                   <div className="mb-12">
@@ -3765,6 +3938,49 @@ export default function IconProfileClient({
                           </div>
                         </div>
                       )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Choreographer: Viral Dance Moments */}
+                {viralDanceMoments && Array.isArray(viralDanceMoments) && viralDanceMoments.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Viral Moments
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {viralDanceMoments.map((moment: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <h4 className="text-lg font-black text-white mb-1">{moment.song}</h4>
+                            <span className={`text-[10px] font-black uppercase tracking-widest ${theme.accent} block mb-3`}>{moment.film} ({moment.year})</span>
+                            {moment.trendName && <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] uppercase tracking-widest font-bold text-neutral-300 inline-block mb-3">{moment.trendName}</span>}
+                            {moment.viralOn && <p className="text-neutral-500 text-[10px] mb-2">Platforms: {moment.viralOn}</p>}
+                            {moment.viewsReach && <p className={`text-sm font-black ${theme.accent} mb-2`}>{moment.viewsReach}</p>}
+                            {moment.culturalImpact && <p className="text-neutral-400 text-xs leading-relaxed">{moment.culturalImpact}</p>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Choreographer: Signature Moves Created */}
+                {signatureMovesCreated && Array.isArray(signatureMovesCreated) && signatureMovesCreated.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Signature Moves
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {signatureMovesCreated.map((move: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors">
+                          <h4 className="text-sm font-black text-white mb-2">{move.moveName}</h4>
+                          <span className={`text-[10px] font-black uppercase tracking-widest ${theme.accent} block mb-2`}>{move.song} • {move.film} ({move.year})</span>
+                          {move.popularity && <p className="text-neutral-400 text-xs leading-relaxed mb-1">{move.popularity}</p>}
+                          {move.trendinStatus && <p className="text-neutral-500 text-[10px] leading-relaxed italic">{move.trendinStatus}</p>}
+                        </div>
+                      ))}
                     </div>
                   </div>
                 )}
