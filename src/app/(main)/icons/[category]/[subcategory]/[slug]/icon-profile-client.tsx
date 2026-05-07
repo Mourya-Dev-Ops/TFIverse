@@ -69,7 +69,7 @@ export default function IconProfileClient({
   const social = data.socialMedia || data.socialMediaInfluence || data.socialMediaPresence || {};
   
   // Aura extraction (all categories)
-  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || data.producerEssence || data.cinematographyEssence || data.editingEssence || data.lyricalEssence || data.choreographyEssence || data.stuntEssence || data.artDirectionEssence || data.costumeEssence || data.vfxEssence || null;
+  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || data.producerEssence || data.cinematographyEssence || data.editingEssence || data.lyricalEssence || data.choreographyEssence || data.stuntEssence || data.artDirectionEssence || data.costumeEssence || data.vfxEssence || data.lineProducerEssence || null;
   
   const physicalStats = data.physicalStats || data.appearance || null;
   const appearance = data.appearance || null;
@@ -81,7 +81,7 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || data.hobbies || [];
-  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || data.productionStatistics || data.cinematographyStatistics || data.editingStatistics || data.lyricalStatistics || data.choreographyStatistics || data.stuntStatistics || data.artDirectionStatistics || data.costumeStatistics || data.vfxStatistics || null;
+  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || data.productionStatistics || data.cinematographyStatistics || data.editingStatistics || data.lyricalStatistics || data.choreographyStatistics || data.stuntStatistics || data.artDirectionStatistics || data.costumeStatistics || data.vfxStatistics || data.coordinationStatistics || null;
   const genreStrength = data.genreStrength || data.genreExpertise || data.genreSpecialization || null;
   const philanthropy = data.philanthropy || data.philanthrophy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || data.awardsAndRecognition || [];
@@ -239,6 +239,13 @@ export default function IconProfileClient({
   const vfxStudioAssociation = data.vfxStudioAssociation || null;
   const innovationInVFX = data.innovationInVFX || null;
 
+  // Line Producer specific data
+  const coordinationExpertise = data.coordinationExpertise || null;
+  const productionsCoordinated = data.productionsCoordinated || null;
+  const productionHouseAssociations = data.productionHouseAssociations || null;
+  const budgetManagementSkills = data.budgetManagementSkills || null;
+  const problemSolvingAbilities = data.problemSolvingAbilities || null;
+
   // Director specific data
   const rawVisionaryEssence = data.visionaryEssence || data.emergingEssence || data.hitmakerEssence || null;
   const visionaryEssence = rawVisionaryEssence ? {
@@ -277,7 +284,7 @@ export default function IconProfileClient({
   const commercialImpact = data.commercialImpact || null;
   const careersTimeline = data.careersTimeline || null;
   const viralMoments = data.viralMoments || null;
-  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || data.filmsProduced || data.filmsShot || data.filmsEdited || data.songsWritten || data.songsChoreographed || data.filmsChoreographed || data.filmsDesigned || data.filmsCostumed || data.filmsWorkedOn || data.filmsSupervised || null;
+  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || data.filmsProduced || data.filmsShot || data.filmsEdited || data.songsWritten || data.songsChoreographed || data.filmsChoreographed || data.filmsDesigned || data.filmsCostumed || data.filmsWorkedOn || data.filmsSupervised || data.recentProductions || null;
   
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
@@ -292,15 +299,15 @@ export default function IconProfileClient({
     tabs.push({ id: "glamour", label: "Glamour" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility || starCollaborations || productionApproach || visualStyle || technicalExpertise || editingStyle || pacingAndRhythm || lyricalStyle || frequentDirectorCollaborations || danceStyle || danceStyleVersatility || actorCollaborations || actionStyle || stuntExpertise || actionVersatility || designStyle || productionDesignExpertise || costumeExpertise || characterCostumeApproach || vfxStyle) {
-    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : category === "producers" ? "Production Blueprint" : category === "cinematographers" ? "Visual Signature" : category === "editors" ? "The Edit Room" : category === "lyricists" ? "The Pen & Paper" : category === "choreographers" ? "The Dance Floor" : category === "stunt-directors" ? "The War Room" : category === "art-directors" ? "The Design Studio" : category === "costume-designers" ? "The Atelier" : category === "vfx-supervisors" ? "The VFX Lab" : "The Craft" });
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility || starCollaborations || productionApproach || visualStyle || technicalExpertise || editingStyle || pacingAndRhythm || lyricalStyle || frequentDirectorCollaborations || danceStyle || danceStyleVersatility || actorCollaborations || actionStyle || stuntExpertise || actionVersatility || designStyle || productionDesignExpertise || costumeExpertise || characterCostumeApproach || vfxStyle || coordinationExpertise) {
+    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : category === "producers" ? "Production Blueprint" : category === "cinematographers" ? "Visual Signature" : category === "editors" ? "The Edit Room" : category === "lyricists" ? "The Pen & Paper" : category === "choreographers" ? "The Dance Floor" : category === "stunt-directors" ? "The War Room" : category === "art-directors" ? "The Design Studio" : category === "costume-designers" ? "The Atelier" : category === "vfx-supervisors" ? "The VFX Lab" : category === "line-producers" ? "Operations Control" : "The Craft" });
   }
 
   if (lifestyle || financial || politicalCareer || brandValue || productionHouse) {
     tabs.push({ id: "empire", label: "Empire" });
   }
 
-  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung || productionByDecade || landmarkProductions || iconicVisuallyStunningFilms || iconicEditedFilms || iconicSongsWritten || iconicChoreography || iconicActionSequences || iconicSetDesigns || iconicCharacterCostumes || iconicVFXSequences) {
+  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung || productionByDecade || landmarkProductions || iconicVisuallyStunningFilms || iconicEditedFilms || iconicSongsWritten || iconicChoreography || iconicActionSequences || iconicSetDesigns || iconicCharacterCostumes || iconicVFXSequences || productionsCoordinated) {
     tabs.push({ id: "career", label: "Career" });
   }
 
@@ -1728,6 +1735,49 @@ export default function IconProfileClient({
                               ))}
                             </ul>
                           ) : null}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Line Producer: Coordination Expertise */}
+                {coordinationExpertise && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaTasks /> Operations Suite
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(coordinationExpertise).map(([key, value]: [string, any]) => (
+                        <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors relative overflow-hidden group">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-neutral-500">
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </h4>
+                            {typeof value === 'string' ? (
+                              <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                            ) : (
+                              <div className="space-y-3">
+                                {value.expertise && <p className={`text-xs font-black uppercase tracking-widest ${theme.accent}`}>{value.expertise}</p>}
+                                {value.locationsHandled && (
+                                  <div className="flex flex-wrap gap-1">
+                                    {value.locationsHandled.map((loc: string, i: number) => (
+                                      <span key={i} className="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[9px] text-neutral-400">{loc}</span>
+                                    ))}
+                                  </div>
+                                )}
+                                {Object.entries(value).map(([k, v]: [string, any]) => (
+                                  !['expertise', 'locationsHandled'].includes(k) && (
+                                    <div key={k}>
+                                      <p className="text-[10px] font-bold text-neutral-500 uppercase tracking-tighter mb-1">{k.replace(/([A-Z])/g, ' $1').trim()}</p>
+                                      <p className="text-neutral-300 text-xs leading-relaxed">{v}</p>
+                                    </div>
+                                  )
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -3704,6 +3754,64 @@ export default function IconProfileClient({
                             </div>
                             {film.significance && <p className="text-neutral-400 text-xs leading-relaxed mt-2">{film.significance}</p>}
                             {film.industryImpact && <p className="text-neutral-500 text-[10px] leading-relaxed mt-2 italic border-l-2 border-white/10 pl-3">{film.industryImpact}</p>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Line Producer: Productions Coordinated */}
+                {productionsCoordinated && Array.isArray(productionsCoordinated) && productionsCoordinated.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaBriefcase /> Logistics Mastercuts
+                    </h3>
+                    <div className="space-y-4">
+                      {productionsCoordinated.map((prod: any, idx: number) => (
+                        <div key={idx} className="p-6 md:p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                              <div>
+                                <h4 className="text-xl font-black text-white">{prod.film} ({prod.year})</h4>
+                                <span className={`text-xs font-black uppercase tracking-widest ${theme.accent}`}>Dir: {prod.director} | Producer: {prod.producer}</span>
+                              </div>
+                              {prod.budget && (
+                                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] uppercase tracking-widest font-bold text-green-500">💰 {prod.budget}</span>
+                              )}
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 pt-4 border-t border-white/5">
+                              <div>
+                                {prod.role && (
+                                  <div className="mb-4">
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Role</h5>
+                                    <p className="text-neutral-300 text-sm leading-relaxed font-bold">{prod.role}</p>
+                                  </div>
+                                )}
+                                {prod.coordinationWork && (
+                                  <div>
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Coordination Work</h5>
+                                    <p className="text-neutral-400 text-xs leading-relaxed italic border-l-2 border-white/10 pl-3">{prod.coordinationWork}</p>
+                                  </div>
+                                )}
+                              </div>
+                              <div>
+                                {prod.challenges && (
+                                  <div className="mb-4">
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Challenges Solved</h5>
+                                    <p className="text-neutral-300 text-xs leading-relaxed">{prod.challenges}</p>
+                                  </div>
+                                )}
+                                {prod.locationsManaged && (
+                                  <div>
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Locations</h5>
+                                    <p className="text-neutral-400 text-xs leading-relaxed border-l-2 border-white/10 pl-3">{prod.locationsManaged}</p>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
                           </div>
                         </div>
                       ))}
