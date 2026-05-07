@@ -149,11 +149,31 @@ export default function IconProfileClient({
   const uniqueSellingProposition = data.uniqueSellingProposition || null;
 
   // Director specific data
-  const visionaryEssence = data.visionaryEssence || data.emergingEssence || data.hitmakerEssence || null;
-  const filmmakingStyle = data.filmmakingStyle || data.emergingFilmmakingStyle || data.commercialFilmmakingStyle || null;
+  const rawVisionaryEssence = data.visionaryEssence || data.emergingEssence || data.hitmakerEssence || null;
+  const visionaryEssence = rawVisionaryEssence ? {
+    directorialVision: rawVisionaryEssence.directorialVision || rawVisionaryEssence.commercialVision || rawVisionaryEssence.uniqueVision || null,
+    signatureStyle: rawVisionaryEssence.signatureStyle || rawVisionaryEssence.signatureElements || rawVisionaryEssence.developingStyle || null,
+    recurringThemes: rawVisionaryEssence.recurringThemes || rawVisionaryEssence.massAppeal || rawVisionaryEssence.breakThroughAppeal || null,
+    culturalImpact: rawVisionaryEssence.culturalImpact || rawVisionaryEssence.boxOfficePower || rawVisionaryEssence.potentialTrajectory || null,
+    cinemaRevolution: rawVisionaryEssence.cinemaRevolution || rawVisionaryEssence.uniqueStrength || rawVisionaryEssence.futureImpact || null
+  } : null;
+
+  const rawFilmmakingStyle = data.filmmakingStyle || data.emergingFilmmakingStyle || data.commercialFilmmakingStyle || null;
+  const filmmakingStyle = rawFilmmakingStyle ? {
+    approach: rawFilmmakingStyle.approach || rawFilmmakingStyle.directorialApproach || null,
+    visualLanguage: rawFilmmakingStyle.visualLanguage || rawFilmmakingStyle.visualSpectacle || null,
+    editingStyle: rawFilmmakingStyle.editingStyle || rawFilmmakingStyle.intervalBangStrategy || rawFilmmakingStyle.influences || null,
+    soundDesign: rawFilmmakingStyle.soundDesign || rawFilmmakingStyle.musicPlacement || rawFilmmakingStyle.uniqueDifference || null,
+    actorDirection: rawFilmmakingStyle.actorDirection || rawFilmmakingStyle.climaxElevation || rawFilmmakingStyle.genrePreference || null,
+    technicalInnovations: rawFilmmakingStyle.technicalInnovations || rawFilmmakingStyle.actionChoreography || null,
+    thematicPreoccupations: rawFilmmakingStyle.thematicPreoccupations || rawFilmmakingStyle.massElements || rawFilmmakingStyle.signatureElements || null,
+    styleEvolution: rawFilmmakingStyle.styleEvolution || rawFilmmakingStyle.comedyIntegration || null
+  } : null;
   const directorFilms = data.filmsDirected || [];
   const upcomingProjects = data.upcomingProjects || [];
   const futureOutlook = data.futureOutlook || null;
+  const brandValue = data.brandValue || null;
+  const industryStanding = data.industryStanding || null;
 
   // Music Director specific data
   const musicalEssence = data.musicalEssence || null;
@@ -183,7 +203,7 @@ export default function IconProfileClient({
     tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : "The Craft" });
   }
 
-  if (lifestyle || financial || politicalCareer) {
+  if (lifestyle || financial || politicalCareer || brandValue) {
     tabs.push({ id: "empire", label: "Empire" });
   }
 
@@ -191,7 +211,7 @@ export default function IconProfileClient({
     tabs.push({ id: "career", label: "Career" });
   }
 
-  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy) {
+  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding) {
     tabs.push({ id: "legacy", label: "Legacy" });
   }
 
@@ -1828,6 +1848,27 @@ export default function IconProfileClient({
                     )}
                   </div>
                 )}
+
+                {/* Brand Value (Director) */}
+                {brandValue && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Brand Value</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {brandValue.estimatedFeePerFilm && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Estimated Fee</span>
+                          <span className={`text-2xl font-black ${theme.accent}`}>{brandValue.estimatedFeePerFilm}</span>
+                        </div>
+                      )}
+                      {brandValue.marketValue && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 md:col-span-2">
+                          <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Market Position</span>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{brandValue.marketValue}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
               </>
             )}
 
@@ -2142,6 +2183,41 @@ export default function IconProfileClient({
             {/* ========================================== */}
             {activeTab === "legacy" && (
               <>
+                {/* Industry Standing (Director) */}
+                {industryStanding && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Industry Standing
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {industryStanding.currentRank && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Current Rank</span>
+                          <span className={`text-xl font-black ${theme.accent}`}>{industryStanding.currentRank}</span>
+                        </div>
+                      )}
+                      {industryStanding.producerConfidence && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Producer Confidence</span>
+                          <p className="text-neutral-300 text-xs leading-relaxed">{industryStanding.producerConfidence}</p>
+                        </div>
+                      )}
+                      {industryStanding.peerRespect && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Peer Respect</span>
+                          <p className="text-neutral-300 text-xs leading-relaxed">{industryStanding.peerRespect}</p>
+                        </div>
+                      )}
+                      {industryStanding.starPreference && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-2">Star Preference</span>
+                          <p className="text-neutral-300 text-xs leading-relaxed">{industryStanding.starPreference}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
                 {/* Controversies & Triumphs */}
                 {controversiesOrTriumphs && (
                   <div className="mb-12">
