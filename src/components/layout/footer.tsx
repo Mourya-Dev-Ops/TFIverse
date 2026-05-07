@@ -6,11 +6,11 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/[0.04] pt-20 pb-10 px-6 md:px-10 lg:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-        
+
         {/* Brand */}
         <div className="md:col-span-2">
           <Link href="/" className="text-xl font-bold tracking-tight mb-5 block text-white">
-            TFIVERSE
+            TFIverse
           </Link>
           <p className="text-white/25 text-sm max-w-xs leading-relaxed mb-6">
             The premium sanctuary for Telugu cinema. Discover heroes, rank movies, join the culture.

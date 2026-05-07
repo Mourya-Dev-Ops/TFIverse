@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Footer from "@/components/layout/footer";
 import { Mail, MessageSquare, MapPin } from "lucide-react";
-import { FaTwitter } from "react-icons/fa";
+import { FaTwitter, FaInstagram } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "Contact Us — TFIverse",
@@ -60,10 +60,14 @@ export default function ContactPage() {
 
             <div className="p-8 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
               <h3 className="text-white font-bold text-lg mb-6">Connect with us</h3>
-              <div className="flex flex-col sm:flex-row gap-6">
-                <a href="https://twitter.com/tfiverse" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/40 hover:text-white transition-colors">
+              <div className="flex flex-col sm:flex-row gap-8">
+                <a href="https://x.com/TFI_verse" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/40 hover:text-white transition-colors">
                   <FaTwitter className="w-4 h-4" />
-                  <span className="text-[13px] font-medium">@tfiverse</span>
+                  <span className="text-[13px] font-medium">@TFI_verse</span>
+                </a>
+                <a href="https://www.instagram.com/tfiverse.in/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/40 hover:text-white transition-colors">
+                  <FaInstagram className="w-4 h-4" />
+                  <span className="text-[13px] font-medium">@tfiverse.in</span>
                 </a>
                 <div className="flex items-center gap-3 text-white/40">
                   <MapPin className="w-4 h-4" />
