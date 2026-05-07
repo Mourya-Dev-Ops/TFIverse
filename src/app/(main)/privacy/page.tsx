@@ -3,8 +3,7 @@ import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — TFIverse",
-  description:
-    "Read the TFIverse privacy policy. Learn how we collect, use, and protect your personal data.",
+  description: "Read the TFIverse privacy policy. Learn how we collect, use, and protect your personal data.",
 };
 
 export default function PrivacyPage() {
@@ -12,26 +11,22 @@ export default function PrivacyPage() {
 
   return (
     <>
-      <div className="min-h-screen bg-black">
-        {/* Hero */}
-        <section className="relative pt-32 pb-16 px-6 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.03)_0%,transparent_60%)]" />
-          <div className="max-w-3xl mx-auto text-center relative z-10">
-            <p className="text-white/30 text-[10px] tracking-[0.5em] uppercase font-bold mb-4">
+      <main className="min-h-[100dvh] bg-black pt-24 pb-20">
+        <div className="max-w-3xl mx-auto px-6">
+          
+          <header className="py-16 md:py-24 border-b border-white/[0.06]">
+            <p className="text-white/30 text-[11px] uppercase tracking-[0.2em] font-semibold mb-4">
               Legal
             </p>
-            <h1 className="text-5xl md:text-6xl font-black text-white tracking-tighter mb-6">
+            <h1 className="text-[36px] md:text-[48px] font-extrabold text-white tracking-[-0.03em] leading-tight mb-6">
               Privacy Policy
             </h1>
-            <p className="text-white/30 text-sm">
+            <p className="text-white/40 text-[13px] font-medium">
               Last updated: {lastUpdated}
             </p>
-          </div>
-        </section>
+          </header>
 
-        {/* Content */}
-        <section className="py-16 px-6">
-          <div className="max-w-3xl mx-auto space-y-12">
+          <article className="py-16 space-y-12">
             {[
               {
                 title: "1. Information We Collect",
@@ -103,14 +98,14 @@ To exercise any of these rights, contact us at **privacy@tfiverse.com** or **adm
 • **Support:** support@tfiverse.com`,
               },
             ].map((section) => (
-              <div key={section.title}>
-                <h2 className="text-xl font-black text-white tracking-tight mb-4">
+              <section key={section.title}>
+                <h2 className="text-[18px] font-bold text-white tracking-tight mb-4">
                   {section.title}
                 </h2>
-                <div className="text-white/35 text-sm leading-relaxed whitespace-pre-line">
+                <div className="text-white/40 text-[14px] leading-relaxed whitespace-pre-line">
                   {section.content.split("**").map((part, i) =>
                     i % 2 === 1 ? (
-                      <strong key={i} className="text-white/60 font-semibold">
+                      <strong key={i} className="text-white/80 font-semibold">
                         {part}
                       </strong>
                     ) : (
@@ -118,11 +113,11 @@ To exercise any of these rights, contact us at **privacy@tfiverse.com** or **adm
                     )
                   )}
                 </div>
-              </div>
+              </section>
             ))}
-          </div>
-        </section>
-      </div>
+          </article>
+        </div>
+      </main>
       <Footer />
     </>
   );

@@ -133,18 +133,6 @@ export default function Navbar({ user }: NavbarProps) {
         </div>
       </div>
     </nav>
-    
-    {/* Secondary Contact Bar */}
-    <div className="fixed top-16 left-0 right-0 z-[90] bg-black/40 backdrop-blur-md border-b border-white/[0.04] hidden md:block">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 flex justify-end space-x-6 text-[9px] font-bold uppercase tracking-widest text-white/40">
-        <a href="mailto:support@tfiverse.com" className="hover:text-white transition-colors flex items-center gap-1.5">
-          <span>Support: support@tfiverse.com</span>
-        </a>
-        <a href="mailto:contact@tfiverse.com" className="hover:text-white transition-colors flex items-center gap-1.5">
-          <span>Contact: contact@tfiverse.com</span>
-        </a>
-      </div>
-    </div>
     </>
   );
 }

@@ -266,9 +266,9 @@ function LoginForm() {
           <div className="mt-10 pt-8 border-t border-white/[0.05]">
             <div className="grid grid-cols-3 gap-3">
               {[
-                { icon: <Sparkles className="w-4 h-4 text-amber-300" />, bg: "bg-amber-500/10", border: "border-amber-500/20", label: "Icons" },
-                { icon: <ImagePlus className="w-4 h-4 text-purple-300" />, bg: "bg-purple-500/10", border: "border-purple-500/20", label: "Memes" },
-                { icon: <Trophy className="w-4 h-4 text-blue-300" />, bg: "bg-blue-500/10", border: "border-blue-500/20", label: "Tier Lists" },
+                { icon: <Sparkles className="w-4 h-4 text-white/60" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", label: "Icons" },
+                { icon: <ImagePlus className="w-4 h-4 text-white/60" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", label: "Memes" },
+                { icon: <Trophy className="w-4 h-4 text-white/60" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", label: "Tier Lists" },
               ].map((item) => (
                 <div
                   key={item.label}

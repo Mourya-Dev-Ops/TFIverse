@@ -3,8 +3,7 @@ import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Terms of Service — TFIverse",
-  description:
-    "Review the TFIverse terms of service. Understand the rules, guidelines, and agreements for using our platform.",
+  description: "Read the TFIverse terms of service and user agreements.",
 };
 
 export default function TermsPage() {
@@ -12,130 +11,90 @@ export default function TermsPage() {
 
   return (
     <>
-      <div className="min-h-screen bg-black">
-        {/* Hero */}
-        <section className="relative pt-32 pb-16 px-6 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.03)_0%,transparent_60%)]" />
-          <div className="max-w-3xl mx-auto text-center relative z-10">
-            <p className="text-white/30 text-[10px] tracking-[0.5em] uppercase font-bold mb-4">
+      <main className="min-h-[100dvh] bg-black pt-24 pb-20">
+        <div className="max-w-3xl mx-auto px-6">
+          
+          <header className="py-16 md:py-24 border-b border-white/[0.06]">
+            <p className="text-white/30 text-[11px] uppercase tracking-[0.2em] font-semibold mb-4">
               Legal
             </p>
-            <h1 className="text-5xl md:text-6xl font-black text-white tracking-tighter mb-6">
+            <h1 className="text-[36px] md:text-[48px] font-extrabold text-white tracking-[-0.03em] leading-tight mb-6">
               Terms of Service
             </h1>
-            <p className="text-white/30 text-sm">
+            <p className="text-white/40 text-[13px] font-medium">
               Last updated: {lastUpdated}
             </p>
-          </div>
-        </section>
+          </header>
 
-        {/* Content */}
-        <section className="py-16 px-6">
-          <div className="max-w-3xl mx-auto space-y-12">
+          <article className="py-16 space-y-12">
             {[
               {
                 title: "1. Acceptance of Terms",
-                content: `By accessing or using TFIverse ("the Platform"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Platform.
-
-TFIverse is operated by TFIverse ("we", "us", "our"). The Platform is a community-driven cinematic database focused on the Telugu Film Industry.`,
+                content: `By accessing or using TFIverse (the "Service"), you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access the Service.`,
               },
               {
-                title: "2. Eligibility",
-                content: `You must be at least 13 years of age to use TFIverse. By using the Platform, you represent that you meet this age requirement. If you are under 18, you confirm that you have the consent of a parent or legal guardian.`,
+                title: "2. User Accounts",
+                content: `When you create an account with us, you must provide information that is accurate, complete, and current. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account.
+
+• You are responsible for safeguarding your password.
+• You must not disclose your password to any third party.
+• You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.`,
               },
               {
-                title: "3. Account Registration",
-                content: `To access certain features, you must create an account. You agree to:
+                title: "3. User Content & Conduct",
+                content: `TFIverse allows users to post memes, create tier lists, and interact with the community. You are solely responsible for the content you post.
 
-• Provide accurate and complete registration information.
-• Maintain the security of your account credentials.
-• Notify us immediately of any unauthorized access to your account.
-• Accept responsibility for all activities that occur under your account.
+You agree **NOT** to post content that:
+• Is unlawful, offensive, threatening, libelous, defamatory, or pornographic.
+• Promotes hate speech, violence, or discrimination.
+• Infringes on any third party's intellectual property rights.
+• Contains malicious code, viruses, or spam.
 
-We reserve the right to suspend or terminate accounts that violate these terms.`,
+We reserve the right to remove any content and terminate accounts that violate these guidelines without prior notice.`,
               },
               {
-                title: "4. Acceptable Use",
-                content: `When using TFIverse, you agree NOT to:
+                title: "4. Intellectual Property",
+                content: `The Service and its original content (excluding User Content), features, and functionality are and will remain the exclusive property of TFIverse and its licensors. 
 
-• Upload or share content that is illegal, harmful, threatening, abusive, harassing, defamatory, or otherwise objectionable.
-• Impersonate any person or entity, or misrepresent your affiliation with any person or entity.
-• Upload content that infringes on any third party's intellectual property rights.
-• Attempt to gain unauthorized access to any part of the Platform.
-• Use automated scripts, bots, or scrapers to access the Platform.
-• Spam, advertise, or promote unrelated products or services.
-• Upload malicious code, viruses, or any harmful software.
-
-Violation of these rules may result in immediate account suspension.`,
+Images of actors, movie posters, and promotional materials belong to their respective copyright holders and are used on TFIverse under fair use for informational and entertainment purposes.`,
               },
               {
-                title: "5. User-Generated Content",
-                content: `TFIverse allows users to create and share content including memes, tier lists, reviews, and profile information ("User Content"). By submitting User Content, you:
-
-• Retain ownership of your original content.
-• Grant TFIverse a non-exclusive, worldwide, royalty-free license to display, distribute, and promote your content within the Platform.
-• Confirm that your content does not violate any third party's rights.
-• Understand that we may remove content that violates these terms at our sole discretion.`,
+                title: "5. Termination",
+                content: `We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the Service will immediately cease.`,
               },
               {
-                title: "6. Intellectual Property",
-                content: `The TFIverse platform, including its design, code, branding, and original content, is protected by intellectual property laws. You may not copy, modify, distribute, or reverse-engineer any part of the Platform without our explicit written consent.
-
-Celebrity images, movie posters, and related media are used under fair use for informational and commentary purposes. All trademarks belong to their respective owners.`,
+                title: "6. Limitation of Liability",
+                content: `In no event shall TFIverse, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.`,
               },
               {
-                title: "7. Privacy",
-                content: `Your privacy is important to us. Our use of your personal information is governed by our Privacy Policy. By using TFIverse, you consent to the practices described in our Privacy Policy.`,
+                title: "7. Changes to Terms",
+                content: `We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will provide notice of any significant changes. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.`,
               },
               {
-                title: "8. Service Availability",
-                content: `We strive to keep TFIverse available 24/7, but we do not guarantee uninterrupted access. We reserve the right to:
-
-• Modify, suspend, or discontinue any feature at any time.
-• Perform maintenance that may temporarily affect availability.
-• Limit access during periods of high demand or security concerns.
-
-We will make reasonable efforts to notify users of significant planned downtime.`,
-              },
-              {
-                title: "9. Limitation of Liability",
-                content: `TFIverse is provided "as is" without warranties of any kind, either express or implied. We are not liable for:
-
-• Any loss of data, revenue, or profits arising from your use of the Platform.
-• Any damages resulting from unauthorized access to your account.
-• Any content posted by other users.
-• Any interruptions or errors in the service.
-
-Our total liability shall not exceed the amount paid by you (if any) in the 12 months preceding the claim.`,
-              },
-              {
-                title: "10. Modifications to Terms",
-                content: `We reserve the right to update these Terms of Service at any time. We will notify you of material changes via email or a prominent notice on the Platform. Your continued use of TFIverse after changes are posted constitutes acceptance of the updated terms.`,
-              },
-              {
-                title: "11. Governing Law",
-                content: `These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts located in India.`,
-              },
-              {
-                title: "12. Contact",
-                content: `If you have any questions about these Terms of Service, please contact us:
-
-• Email: admin@tfiverse.com
-• Support: support@tfiverse.com`,
+                title: "8. Contact Us",
+                content: `If you have any questions about these Terms, please contact us at **support@tfiverse.com**.`,
               },
             ].map((section) => (
-              <div key={section.title}>
-                <h2 className="text-xl font-black text-white tracking-tight mb-4">
+              <section key={section.title}>
+                <h2 className="text-[18px] font-bold text-white tracking-tight mb-4">
                   {section.title}
                 </h2>
-                <p className="text-white/35 text-sm leading-relaxed whitespace-pre-line">
-                  {section.content}
-                </p>
-              </div>
+                <div className="text-white/40 text-[14px] leading-relaxed whitespace-pre-line">
+                  {section.content.split("**").map((part, i) =>
+                    i % 2 === 1 ? (
+                      <strong key={i} className="text-white/80 font-semibold">
+                        {part}
+                      </strong>
+                    ) : (
+                      <span key={i}>{part}</span>
+                    )
+                  )}
+                </div>
+              </section>
             ))}
-          </div>
-        </section>
-      </div>
+          </article>
+        </div>
+      </main>
       <Footer />
     </>
   );

@@ -140,8 +140,8 @@ export default function RegisterPage() {
           {/* Success */}
           {success ? (
             <div className="p-8 rounded-2xl bg-white/[0.03] border border-white/[0.08] text-center">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 bg-emerald-500/10 border border-emerald-500/20 shadow-inner">
-                <MailCheck className="w-8 h-8 text-emerald-400" />
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 bg-white/[0.03] border border-white/[0.08] shadow-inner">
+                <MailCheck className="w-8 h-8 text-white/60" />
               </div>
               <h3 className="text-white text-lg font-bold tracking-tight mb-2">Check your email ✨</h3>
               <p className="text-white/40 text-[13px] font-medium leading-relaxed mb-6">{success}</p>
@@ -263,9 +263,9 @@ export default function RegisterPage() {
           <div className="mt-8 pt-6 border-t border-white/[0.05]">
             <div className="flex flex-col gap-3">
               {[
-                { icon: <Sparkles className="w-4 h-4 text-amber-300" />, bg: "bg-amber-500/10", border: "border-amber-500/20", text: "Browse 500+ Telugu cinema icons" },
-                { icon: <Trophy className="w-4 h-4 text-blue-300" />, bg: "bg-blue-500/10", border: "border-blue-500/20", text: "Create & share tier lists" },
-                { icon: <ImagePlus className="w-4 h-4 text-purple-300" />, bg: "bg-purple-500/10", border: "border-purple-500/20", text: "Upload & discover TFI memes" },
+                { icon: <Sparkles className="w-4 h-4 text-white/60" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", text: "Browse 500+ Telugu cinema icons" },
+                { icon: <Trophy className="w-4 h-4 text-white/60" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", text: "Create & share tier lists" },
+                { icon: <ImagePlus className="w-4 h-4 text-white/60" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", text: "Upload & discover TFI memes" },
               ].map((item) => (
                 <div
                   key={item.text}

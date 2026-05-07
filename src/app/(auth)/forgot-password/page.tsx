@@ -96,8 +96,8 @@ export default function ForgotPasswordPage() {
 
           {/* Brand */}
           <div className="text-center mb-10">
-            <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 shadow-inner flex items-center justify-center mx-auto mb-4">
-              <KeyRound className="w-6 h-6 text-amber-400" />
+            <div className="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/[0.08] shadow-inner flex items-center justify-center mx-auto mb-4">
+              <KeyRound className="w-6 h-6 text-white/60" />
             </div>
             <h1 className="text-[28px] sm:text-[32px] font-extrabold text-white tracking-[-0.03em] mb-1.5">
               Forgot password?
@@ -116,8 +116,8 @@ export default function ForgotPasswordPage() {
 
           {success ? (
             <div className="p-8 rounded-2xl bg-white/[0.03] border border-white/[0.08] text-center">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 bg-emerald-500/10 border border-emerald-500/20 shadow-inner">
-                <MailCheck className="w-8 h-8 text-emerald-400" />
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 bg-white/[0.03] border border-white/[0.08] shadow-inner">
+                <MailCheck className="w-8 h-8 text-white/60" />
               </div>
               <h3 className="text-white text-lg font-bold tracking-tight mb-2">Check your email ✨</h3>
               <p className="text-white/40 text-[13px] font-medium leading-relaxed mb-6">

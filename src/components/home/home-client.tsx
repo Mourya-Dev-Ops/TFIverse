@@ -170,8 +170,8 @@ function NavCard({ href, icon: Icon, title, sub, tall }: { href: string; icon: a
   return (
     <Link href={href} className={`glow-card group flex flex-col justify-between rounded-2xl p-7 ${tall ? 'min-h-[200px]' : 'min-h-[160px]'} glass-premium relative overflow-hidden hover:bg-white/[0.02] transition-colors duration-500`}>
       <div className="absolute -top-10 -right-10 w-24 h-24 rounded-full bg-white/[0.03] blur-2xl group-hover:bg-white/[0.06] transition-colors duration-700" />
-      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-white/[0.08] to-white/[0.01] border border-white/[0.05] shadow-inner flex items-center justify-center mb-4 group-hover:border-white/[0.15] group-hover:scale-105 transition-all duration-500 relative z-10">
-        <Icon className="w-5 h-5 text-white/50 group-hover:text-white transition-colors duration-500" />
+      <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] shadow-inner flex items-center justify-center mb-4 group-hover:border-white/[0.15] group-hover:scale-105 transition-all duration-500 relative z-10">
+        <Icon className="w-5 h-5 text-white/60 group-hover:text-white transition-colors duration-500" />
       </div>
       <div className="mt-auto relative z-10">
         <h3 className="text-white font-bold text-lg tracking-tight group-hover:text-white transition-colors">{title}</h3>
@@ -185,8 +185,8 @@ function GalleryCard({ icon: Icon, title, href, cta }: { icon: any; title: strin
   return (
     <div className="rounded-2xl p-8 glass-premium">
       <div className="flex items-center gap-3 mb-8">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/10 border border-amber-500/20 shadow-inner flex items-center justify-center">
-          <Icon className="w-5 h-5 text-amber-400" />
+        <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] shadow-inner flex items-center justify-center">
+          <Icon className="w-5 h-5 text-white/60" />
         </div>
         <h3 className="text-xl font-bold text-white tracking-tight">{title}</h3>
       </div>
@@ -213,19 +213,15 @@ function FanZone() {
   return (
     <div className="rounded-2xl p-8 glass-premium">
       <div className="flex items-center gap-3 mb-8">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500/20 to-pink-500/10 border border-rose-500/20 shadow-inner flex items-center justify-center">
-          <Heart className="w-5 h-5 text-rose-400" />
+        <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] shadow-inner flex items-center justify-center">
+          <Heart className="w-5 h-5 text-white/60" />
         </div>
         <h3 className="text-xl font-bold text-white tracking-tight">Fan Zone</h3>
       </div>
       <div className="space-y-4">
         {fans.map((f, i) => (
           <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-white/[0.015] border border-white/[0.03] hover:bg-white/[0.03] hover:border-white/[0.06] transition-all">
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center text-[12px] font-bold shadow-inner flex-shrink-0 ${
-              i === 0 ? "bg-gradient-to-br from-rose-500/20 to-pink-500/10 border border-rose-500/30 text-rose-300" :
-              i === 1 ? "bg-gradient-to-br from-blue-500/20 to-cyan-500/10 border border-blue-500/30 text-blue-300" :
-              "bg-gradient-to-br from-emerald-500/20 to-teal-500/10 border border-emerald-500/30 text-emerald-300"
-            }`}>
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center text-[12px] font-bold shadow-inner flex-shrink-0 bg-white/[0.03] border border-white/[0.08] text-white/60`}>
               {f.name[0]}
             </div>
             <div>
@@ -243,8 +239,8 @@ function DiaryCard({ isAuth }: { isAuth: boolean }) {
   return (
     <div className="rounded-2xl p-8 glass-premium flex flex-col items-center justify-center text-center relative overflow-hidden group">
       <div className="absolute inset-0 bg-gradient-to-b from-blue-500/[0.02] to-transparent pointer-events-none" />
-      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 transition-transform duration-500">
-        <PenLine className="w-7 h-7 text-blue-400" />
+      <div className="w-16 h-16 rounded-2xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 transition-transform duration-500">
+        <PenLine className="w-7 h-7 text-white/60" />
       </div>
       <h3 className="text-xl font-bold text-white tracking-tight mb-3">Movie Diary</h3>
       <p className="text-white/30 text-sm mb-8 max-w-[220px] leading-relaxed">Log watches, rate films, and build your profile.</p>
@@ -260,7 +256,7 @@ function UpcomingPanel({ items }: { items: Upcoming[] }) {
   const scroll = (d: "l" | "r") => ref.current?.scrollBy({ left: d === "l" ? -260 : 260, behavior: "smooth" });
 
   return (
-    <div className="rounded-2xl p-8 glass">
+    <div className="rounded-2xl p-6 md:p-8 glass w-full overflow-hidden">
       <div className="flex items-center justify-between mb-8">
         <h3 className="text-xl font-bold text-white tracking-tight">Upcoming</h3>
         <div className="flex gap-1.5">
@@ -289,7 +285,7 @@ function UpcomingPanel({ items }: { items: Upcoming[] }) {
 
 function RumorsPanel({ items }: { items: Rumor[] }) {
   return (
-    <div className="rounded-2xl p-8 glass-premium flex flex-col">
+    <div className="rounded-2xl p-6 md:p-8 glass-premium flex flex-col w-full overflow-hidden">
       <h3 className="text-xl font-bold text-white tracking-tight mb-8">Rumors & Trades</h3>
       <div className="flex-1 space-y-3 max-h-[380px] overflow-y-auto scrollbar-hide pr-1">
         {items.map(r => (
