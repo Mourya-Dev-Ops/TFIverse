@@ -81,9 +81,9 @@ export default function IconProfileClient({
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || [];
   const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || null;
-  const genreStrength = data.genreStrength || data.genreExpertise || null;
+  const genreStrength = data.genreStrength || data.genreExpertise || data.genreSpecialization || null;
   const philanthropy = data.philanthropy || data.philanthrophy || null;
-  const awards = data.awards || data.beautyAwards || data.fashionAwards || [];
+  const awards = data.awards || data.beautyAwards || data.fashionAwards || data.awardsAndRecognition || [];
   const quotes = data.quotes || [];
   const trivia = data.trivia || [];
   const knownFor = data.knownFor || [];
@@ -162,6 +162,7 @@ export default function IconProfileClient({
   const streamingDominance = data.streamingDominance || data.commercialImpact || null;
   const careersTimeline = data.careersTimeline || null;
   const viralMoments = data.viralMoments || null;
+  const recentFilmography = data.recentFilmography || null;
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
     { id: "overview", label: "Overview" },
@@ -196,7 +197,7 @@ export default function IconProfileClient({
   }
 
   tabs.push({ id: "movies", label: category === "music-director" ? "Filmography" : "Filmography" });
-  if (chartbusterSongs || discography || backgroundScoreMastery) {
+  if (chartbusterSongs || discography || backgroundScoreMastery || recentFilmography) {
     tabs.push({ id: "discography", label: "Discography" });
   }
 
@@ -2724,6 +2725,49 @@ export default function IconProfileClient({
                           <span className={`text-2xl mb-2 ${theme.accent}`}>🎵</span>
                           <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 mb-1">{album.year || album.releaseYear}</span>
                           <h4 className="text-sm font-bold text-neutral-200">{album.album || album.title || album.film}</h4>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {recentFilmography && recentFilmography.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaFilm /> Iconic Filmography (Musical Milestones)
+                    </h3>
+                    <div className="space-y-6">
+                      {recentFilmography.map((film: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 flex flex-col md:flex-row gap-6">
+                          <div className="md:w-1/3 shrink-0">
+                            <h4 className="text-lg font-black text-white">{film.film}</h4>
+                            <span className={`text-[10px] font-bold uppercase tracking-widest ${theme.accent} block mt-1`}>{film.year} • {film.language}</span>
+                            {film.director && <span className="text-[10px] uppercase tracking-widest text-neutral-500 block mt-1">Dir: {film.director}</span>}
+                            {film.boxOffice && <span className="text-[10px] uppercase tracking-widest text-green-500 block mt-2 font-bold">Box Office: {film.boxOffice}</span>}
+                          </div>
+                          <div className="flex-1">
+                            {film.chartbusterSongs && (
+                              <div className="mb-4">
+                                <h5 className="text-[9px] font-black uppercase tracking-widest text-neutral-600 mb-2">Chartbusters</h5>
+                                <div className="flex flex-wrap gap-2">
+                                  {film.chartbusterSongs.map((song: string, i: number) => (
+                                    <span key={i} className="px-3 py-1 bg-white/5 rounded-full border border-white/5 text-[10px] text-neutral-300">{song}</span>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+                            {film.musicImpact && (
+                              <div className="mb-4">
+                                <h5 className="text-[9px] font-black uppercase tracking-widest text-neutral-600 mb-2">Musical Impact</h5>
+                                <p className="text-neutral-300 text-sm leading-relaxed">{film.musicImpact}</p>
+                              </div>
+                            )}
+                            {film.significance && (
+                              <div>
+                                <h5 className="text-[9px] font-black uppercase tracking-widest text-neutral-600 mb-2">Significance</h5>
+                                <p className="text-neutral-400 text-xs leading-relaxed italic">{film.significance}</p>
+                              </div>
+                            )}
+                          </div>
                         </div>
                       ))}
                     </div>

@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
+import nodemailer from "nodemailer";
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
@@ -13,16 +14,45 @@ const sesClient = process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS
     })
   : null;
 
+const transporter = process.env.ZOHO_SMTP_USER && process.env.ZOHO_SMTP_PASS
+  ? nodemailer.createTransport({
+      host: "smtppro.zoho.in",
+      port: 465,
+      secure: true, // true for 465
+      auth: {
+        user: process.env.ZOHO_SMTP_USER,
+        pass: process.env.ZOHO_SMTP_PASS,
+      },
+    })
+  : null;
+
 interface SendEmailProps {
   to: string;
   subject: string;
   html: string;
+  fromOverride?: string;
 }
 
-async function sendEmail({ to, subject, html }: SendEmailProps) {
-  const from = process.env.EMAIL_FROM || "onboarding@resend.dev";
+async function sendEmail({ to, subject, html, fromOverride }: SendEmailProps) {
+  const from = fromOverride || process.env.EMAIL_FROM || "noreply@tfiverse.com";
 
-  // Priority 1: AWS SES
+  // Priority 1: Zoho SMTP (Nodemailer)
+  if (transporter) {
+    try {
+      await transporter.sendMail({
+        from: `"TFIverse" <${from}>`,
+        to,
+        subject,
+        html,
+      });
+      return { success: true };
+    } catch (error) {
+      console.error("Zoho SMTP error:", error);
+      // Fallback
+    }
+  }
+
+  // Priority 2: AWS SES
   if (sesClient) {
     try {
       const command = new SendEmailCommand({
