@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useRef } from "react";
 import { forgotPassword } from "@/app/actions/auth";
-import { Loader2, ArrowLeft, Volume2, VolumeX } from "lucide-react";
+import { Loader2, ArrowLeft, Volume2, VolumeX, MailCheck, KeyRound } from "lucide-react";
 
 export default function ForgotPasswordPage() {
   const [error, setError] = useState<string>("");
@@ -96,8 +96,11 @@ export default function ForgotPasswordPage() {
 
           {/* Brand */}
           <div className="text-center mb-10">
+            <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 shadow-inner flex items-center justify-center mx-auto mb-4">
+              <KeyRound className="w-6 h-6 text-amber-400" />
+            </div>
             <h1 className="text-[28px] sm:text-[32px] font-extrabold text-white tracking-[-0.03em] mb-1.5">
-              Forgot password? 🔑
+              Forgot password?
             </h1>
             <p className="text-white/30 text-[13px] font-medium">
               No worries, we&apos;ll send you a reset link
@@ -113,7 +116,9 @@ export default function ForgotPasswordPage() {
 
           {success ? (
             <div className="p-8 rounded-2xl bg-white/[0.03] border border-white/[0.08] text-center">
-              <div className="text-[40px] mb-4">📧</div>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 bg-emerald-500/10 border border-emerald-500/20 shadow-inner">
+                <MailCheck className="w-8 h-8 text-emerald-400" />
+              </div>
               <h3 className="text-white text-lg font-bold tracking-tight mb-2">Check your email ✨</h3>
               <p className="text-white/40 text-[13px] font-medium leading-relaxed mb-6">
                 If an account exists with that email, we&apos;ve sent a password reset link. It expires in 60 minutes.

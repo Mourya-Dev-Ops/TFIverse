@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { resetPassword } from "@/app/actions/auth";
-import { Loader2, Volume2, VolumeX } from "lucide-react";
+import { Loader2, Volume2, VolumeX, LockKeyhole, CheckCircle2 } from "lucide-react";
 
 function ResetForm() {
   const searchParams = useSearchParams();
@@ -91,8 +91,11 @@ function ResetForm() {
 
           {/* Brand */}
           <div className="text-center mb-10">
+            <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 shadow-inner flex items-center justify-center mx-auto mb-4">
+              <LockKeyhole className="w-6 h-6 text-indigo-400" />
+            </div>
             <h1 className="text-[28px] sm:text-[32px] font-extrabold text-white tracking-[-0.03em] mb-1.5">
-              New password 🔐
+              New password
             </h1>
             <p className="text-white/30 text-[13px] font-medium">
               Set a new password
@@ -119,10 +122,8 @@ function ResetForm() {
             </div>
           ) : success ? (
             <div className="p-8 rounded-2xl bg-white/[0.03] border border-white/[0.08] text-center">
-              <div className="w-14 h-14 rounded-full border border-white/15 flex items-center justify-center mx-auto mb-5 text-white/70">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 bg-emerald-500/10 border border-emerald-500/20 shadow-inner">
+                <CheckCircle2 className="w-8 h-8 text-emerald-400" />
               </div>
               <h3 className="text-white text-lg font-bold tracking-tight mb-2">Password Updated</h3>
               <p className="text-white/40 text-[13px] font-medium leading-relaxed mb-6">

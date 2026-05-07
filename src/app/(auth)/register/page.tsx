@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useRef } from "react";
 import { registerUser } from "@/app/actions/auth";
 import { signIn } from "next-auth/react";
-import { Loader2, Volume2, VolumeX } from "lucide-react";
+import { Loader2, Volume2, VolumeX, Sparkles, ImagePlus, Trophy, Film, MailCheck } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 
 export default function RegisterPage() {
@@ -78,8 +78,8 @@ export default function RegisterPage() {
         
         {/* Bottom-left branding on video */}
         <div className="absolute bottom-10 left-10 z-10">
-          <p className="text-white/50 text-[11px] font-medium tracking-wide mb-1">
-            🎬 The home of Telugu cinema
+          <p className="text-white/50 text-[11px] font-medium tracking-wide mb-1 flex items-center gap-1.5">
+            <Film className="w-3.5 h-3.5 text-white/40" /> The home of Telugu cinema
           </p>
           <p className="text-white/25 text-[10px] font-medium">
             Icons · Memes · Tier Lists · Community
@@ -112,8 +112,8 @@ export default function RegisterPage() {
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black" />
           <div className="absolute bottom-4 left-6 z-10">
-            <p className="text-white/60 text-[10px] font-semibold tracking-wide">
-              🎬 The home of Telugu cinema
+            <p className="text-white/60 text-[10px] font-semibold tracking-wide flex items-center gap-1.5">
+              <Film className="w-3 h-3 text-white/50" /> The home of Telugu cinema
             </p>
           </div>
         </div>
@@ -140,7 +140,9 @@ export default function RegisterPage() {
           {/* Success */}
           {success ? (
             <div className="p-8 rounded-2xl bg-white/[0.03] border border-white/[0.08] text-center">
-              <div className="text-[40px] mb-4">📧</div>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 bg-emerald-500/10 border border-emerald-500/20 shadow-inner">
+                <MailCheck className="w-8 h-8 text-emerald-400" />
+              </div>
               <h3 className="text-white text-lg font-bold tracking-tight mb-2">Check your email ✨</h3>
               <p className="text-white/40 text-[13px] font-medium leading-relaxed mb-6">{success}</p>
               <Link
@@ -261,15 +263,17 @@ export default function RegisterPage() {
           <div className="mt-8 pt-6 border-t border-white/[0.05]">
             <div className="flex flex-col gap-3">
               {[
-                { emoji: "🎭", text: "Browse 500+ Telugu cinema icons" },
-                { emoji: "🏆", text: "Create & share tier lists" },
-                { emoji: "😂", text: "Upload & discover TFI memes" },
+                { icon: <Sparkles className="w-4 h-4 text-amber-300" />, bg: "bg-amber-500/10", border: "border-amber-500/20", text: "Browse 500+ Telugu cinema icons" },
+                { icon: <Trophy className="w-4 h-4 text-blue-300" />, bg: "bg-blue-500/10", border: "border-blue-500/20", text: "Create & share tier lists" },
+                { icon: <ImagePlus className="w-4 h-4 text-purple-300" />, bg: "bg-purple-500/10", border: "border-purple-500/20", text: "Upload & discover TFI memes" },
               ].map((item) => (
                 <div
                   key={item.text}
-                  className="flex items-center gap-3 text-white/25 text-[12px] font-medium"
+                  className="flex items-center gap-4 text-white/40 text-[12px] font-medium p-2 rounded-lg hover:bg-white/[0.02] transition-colors"
                 >
-                  <span className="text-[14px]">{item.emoji}</span>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${item.bg} ${item.border} border shadow-inner`}>
+                    {item.icon}
+                  </div>
                   <span>{item.text}</span>
                 </div>
               ))}

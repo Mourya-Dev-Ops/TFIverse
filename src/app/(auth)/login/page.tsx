@@ -5,7 +5,7 @@ import { useState, useRef, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { loginUser, resendVerification } from "@/app/actions/auth";
 import { signIn } from "next-auth/react";
-import { Loader2, CheckCircle2, Volume2, VolumeX } from "lucide-react";
+import { Loader2, CheckCircle2, Volume2, VolumeX, Sparkles, ImagePlus, Trophy, Clapperboard, Film } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 
 function LoginForm() {
@@ -106,8 +106,8 @@ function LoginForm() {
         
         {/* Bottom-left branding on video */}
         <div className="absolute bottom-10 left-10 z-10">
-          <p className="text-white/50 text-[11px] font-medium tracking-wide mb-1">
-            🎬 The home of Telugu cinema
+          <p className="text-white/50 text-[11px] font-medium tracking-wide mb-1 flex items-center gap-1.5">
+            <Film className="w-3.5 h-3.5 text-white/40" /> The home of Telugu cinema
           </p>
           <p className="text-white/25 text-[10px] font-medium">
             Icons · Memes · Tier Lists · Community
@@ -140,8 +140,8 @@ function LoginForm() {
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black" />
           <div className="absolute bottom-4 left-6 z-10">
-            <p className="text-white/60 text-[10px] font-semibold tracking-wide">
-              🎬 The home of Telugu cinema
+            <p className="text-white/60 text-[10px] font-semibold tracking-wide flex items-center gap-1.5">
+              <Film className="w-3 h-3 text-white/50" /> The home of Telugu cinema
             </p>
           </div>
         </div>
@@ -266,16 +266,18 @@ function LoginForm() {
           <div className="mt-10 pt-8 border-t border-white/[0.05]">
             <div className="grid grid-cols-3 gap-3">
               {[
-                { emoji: "🎬", label: "Icons" },
-                { emoji: "😂", label: "Memes" },
-                { emoji: "🏆", label: "Tier Lists" },
+                { icon: <Sparkles className="w-4 h-4 text-amber-300" />, bg: "bg-amber-500/10", border: "border-amber-500/20", label: "Icons" },
+                { icon: <ImagePlus className="w-4 h-4 text-purple-300" />, bg: "bg-purple-500/10", border: "border-purple-500/20", label: "Memes" },
+                { icon: <Trophy className="w-4 h-4 text-blue-300" />, bg: "bg-blue-500/10", border: "border-blue-500/20", label: "Tier Lists" },
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="flex flex-col items-center gap-1.5 py-3 rounded-xl bg-white/[0.02] border border-white/[0.04]"
+                  className="flex flex-col items-center gap-2 py-4 rounded-xl bg-white/[0.02] border border-white/[0.04] hover:bg-white/[0.04] transition-colors cursor-default"
                 >
-                  <span className="text-[18px]">{item.emoji}</span>
-                  <span className="text-[10px] text-white/25 font-semibold tracking-wide">{item.label}</span>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center ${item.bg} ${item.border} border shadow-inner`}>
+                    {item.icon}
+                  </div>
+                  <span className="text-[10px] text-white/40 font-semibold tracking-wide">{item.label}</span>
                 </div>
               ))}
             </div>
