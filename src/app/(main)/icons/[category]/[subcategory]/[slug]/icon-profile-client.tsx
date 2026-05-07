@@ -68,8 +68,8 @@ export default function IconProfileClient({
   const personalInfo = data.personalInfo || {};
   const social = data.socialMedia || data.socialMediaInfluence || data.socialMediaPresence || {};
   
-  // Aura extraction (Hero vs Heroine vs Diva vs Villain vs Comedian vs Character Artist vs Singer vs Producer)
-  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || data.producerEssence || null;
+  // Aura extraction (Hero vs Heroine vs Diva vs Villain vs Comedian vs Character Artist vs Singer vs Producer vs Cinematographer)
+  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || data.producerEssence || data.cinematographyEssence || null;
   
   const physicalStats = data.physicalStats || data.appearance || null;
   const appearance = data.appearance || null;
@@ -81,7 +81,7 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || data.hobbies || [];
-  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || data.productionStatistics || null;
+  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || data.productionStatistics || data.cinematographyStatistics || null;
   const genreStrength = data.genreStrength || data.genreExpertise || data.genreSpecialization || null;
   const philanthropy = data.philanthropy || data.philanthrophy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || data.awardsAndRecognition || [];
@@ -187,6 +187,11 @@ export default function IconProfileClient({
   const landmarkProductions = data.landmarkProductions || null;
   const productionApproach = data.productionApproach || null;
 
+  // Cinematographer specific data
+  const visualStyle = data.visualStyle || null;
+  const technicalExpertise = data.technicalExpertise || null;
+  const iconicVisuallyStunningFilms = data.iconicVisuallyStunningFilms || null;
+
   // Director specific data
   const rawVisionaryEssence = data.visionaryEssence || data.emergingEssence || data.hitmakerEssence || null;
   const visionaryEssence = rawVisionaryEssence ? {
@@ -225,7 +230,7 @@ export default function IconProfileClient({
   const commercialImpact = data.commercialImpact || null;
   const careersTimeline = data.careersTimeline || null;
   const viralMoments = data.viralMoments || null;
-  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || data.filmsProduced || null;
+  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || data.filmsProduced || data.filmsShot || null;
   
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
@@ -240,15 +245,15 @@ export default function IconProfileClient({
     tabs.push({ id: "glamour", label: "Glamour" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility || starCollaborations || productionApproach) {
-    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : category === "producers" ? "Production Blueprint" : "The Craft" });
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility || starCollaborations || productionApproach || visualStyle || technicalExpertise) {
+    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : category === "producers" ? "Production Blueprint" : category === "cinematographers" ? "Visual Signature" : "The Craft" });
   }
 
   if (lifestyle || financial || politicalCareer || brandValue || productionHouse) {
     tabs.push({ id: "empire", label: "Empire" });
   }
 
-  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung || productionByDecade || landmarkProductions) {
+  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung || productionByDecade || landmarkProductions || iconicVisuallyStunningFilms) {
     tabs.push({ id: "career", label: "Career" });
   }
 
@@ -1517,7 +1522,7 @@ export default function IconProfileClient({
                   </div>
                 )}
 
-                {/* Singer: Genre Versatility */}
+                {/* Genre Versatility (Singers & Cinematographers) */}
                 {genreVersatility && (
                   <div className="mb-12">
                     <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
@@ -1532,11 +1537,11 @@ export default function IconProfileClient({
                               <h4 className="text-sm font-black text-white uppercase tracking-tight">{genre.replace(/([A-Z])/g, ' $1').trim()}</h4>
                               <span className={`text-[10px] font-black uppercase tracking-widest ${data.expertise === 'Mastery' ? theme.accent : 'text-neutral-400'}`}>{data.expertise}</span>
                             </div>
-                            {data.iconicSongs && Array.isArray(data.iconicSongs) && (
+                            {(data.iconicSongs || data.notableFilms) && Array.isArray(data.iconicSongs || data.notableFilms) && (
                               <div className="space-y-1 mt-3">
-                                {data.iconicSongs.map((song: string, i: number) => (
+                                {(data.iconicSongs || data.notableFilms).map((item: string, i: number) => (
                                   <p key={i} className="text-neutral-400 text-xs leading-relaxed border-l-2 border-white/10 pl-2">
-                                    "{song}"
+                                    "{item}"
                                   </p>
                                 ))}
                               </div>
@@ -1599,6 +1604,67 @@ export default function IconProfileClient({
                               </div>
                             )}
                           </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Cinematographer: Visual Style */}
+                {visualStyle && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaEye /> Visual Style
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {Object.entries(visualStyle).map(([key, value]: [string, any]) => (
+                          <div key={key} className="pl-4">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </h4>
+                            {typeof value === 'string' ? (
+                              <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                            ) : Array.isArray(value) ? (
+                              <ul className="space-y-1">
+                                {value.map((item: string, i: number) => (
+                                  <li key={i} className="text-neutral-300 text-sm leading-relaxed flex items-start gap-2">
+                                    <span className={`w-1.5 h-1.5 rounded-full ${theme.accentBg} mt-1.5 flex-shrink-0`} /> <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : null}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Cinematographer: Technical Expertise */}
+                {technicalExpertise && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaCamera /> Technical Expertise
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(technicalExpertise).map(([key, value]: [string, any]) => (
+                        <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors">
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-neutral-500">
+                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                          </h4>
+                          {typeof value === 'string' ? (
+                            <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                          ) : Array.isArray(value) ? (
+                            <ul className="space-y-2">
+                              {value.map((item: string, i: number) => (
+                                <li key={i} className="text-neutral-300 text-xs leading-relaxed border-l-2 border-white/10 pl-3">
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          ) : null}
                         </div>
                       ))}
                     </div>
@@ -3071,6 +3137,74 @@ export default function IconProfileClient({
                             </div>
                             {film.significance && <p className="text-neutral-400 text-xs leading-relaxed mt-2">{film.significance}</p>}
                             {film.industryImpact && <p className="text-neutral-500 text-[10px] leading-relaxed mt-2 italic border-l-2 border-white/10 pl-3">{film.industryImpact}</p>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Cinematographer: Iconic Visually Stunning Films */}
+                {iconicVisuallyStunningFilms && Array.isArray(iconicVisuallyStunningFilms) && iconicVisuallyStunningFilms.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaFilm /> Iconic Visual Masterpieces
+                    </h3>
+                    <div className="space-y-4">
+                      {iconicVisuallyStunningFilms.map((film: any, idx: number) => (
+                        <div key={idx} className="p-6 md:p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                              <div>
+                                <h4 className="text-xl font-black text-white">{film.film}</h4>
+                                <span className={`text-xs font-black uppercase tracking-widest ${theme.accent}`}>{film.year} • Dir: {film.director}</span>
+                              </div>
+                              {film.awards && Array.isArray(film.awards) && (
+                                <div className="flex flex-wrap gap-2 justify-end">
+                                  {film.awards.map((award: string, i: number) => (
+                                    <span key={i} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] uppercase tracking-widest font-bold text-yellow-500">🏆 {award}</span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 pt-4 border-t border-white/5">
+                              <div>
+                                {film.visualAchievement && (
+                                  <div className="mb-4">
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Visual Achievement</h5>
+                                    <p className="text-neutral-300 text-sm leading-relaxed">{film.visualAchievement}</p>
+                                  </div>
+                                )}
+                                {film.technicalBreakthrough && (
+                                  <div>
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Technical Breakthrough</h5>
+                                    <p className="text-neutral-400 text-xs leading-relaxed italic border-l-2 border-white/10 pl-3">{film.technicalBreakthrough}</p>
+                                  </div>
+                                )}
+                              </div>
+                              <div>
+                                {film.iconicShots && Array.isArray(film.iconicShots) && (
+                                  <div className="mb-4">
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Iconic Shots</h5>
+                                    <ul className="space-y-1">
+                                      {film.iconicShots.map((shot: string, i: number) => (
+                                        <li key={i} className="text-neutral-300 text-xs flex items-start gap-2">
+                                          <span className={`w-1 h-1 rounded-full ${theme.accentBg} mt-1.5 flex-shrink-0`} /> <span>{shot}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                )}
+                                {film.industryImpact && (
+                                  <div>
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Industry Impact</h5>
+                                    <p className="text-neutral-400 text-xs leading-relaxed">{film.industryImpact}</p>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
                           </div>
                         </div>
                       ))}
