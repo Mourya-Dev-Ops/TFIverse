@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useRef } from "react";
 import { registerUser } from "@/app/actions/auth";
 import { signIn } from "next-auth/react";
-import { Loader2 } from "lucide-react";
+import { Loader2, Volume2, VolumeX } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 
 export default function RegisterPage() {
@@ -12,7 +12,16 @@ export default function RegisterPage() {
   const [success, setSuccess] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const [oauthLoading, setOauthLoading] = useState<string | null>(null);
+  const [muted, setMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setMuted(videoRef.current.muted);
+      if (!videoRef.current.muted) videoRef.current.play().catch(() => {});
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -65,45 +74,74 @@ export default function RegisterPage() {
           <source src="/videos/auth-bg.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black" />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/15" />
+        
+        {/* Bottom-left branding on video */}
+        <div className="absolute bottom-10 left-10 z-10">
+          <p className="text-white/50 text-[11px] font-medium tracking-wide mb-1">
+            🎬 The home of Telugu cinema
+          </p>
+          <p className="text-white/25 text-[10px] font-medium">
+            Icons · Memes · Tier Lists · Community
+          </p>
+        </div>
       </div>
 
+      {/* Volume Toggle */}
+      <button
+        onClick={toggleMute}
+        className="fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full border border-white/10 text-white/40 hover:text-white bg-black/60 backdrop-blur-sm flex items-center justify-center transition-all hover:bg-white/10 hover:border-white/20 active:scale-90"
+        title={muted ? "Unmute" : "Mute"}
+      >
+        {muted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+      </button>
+
       {/* RIGHT — Auth Form */}
-      <div className="w-full lg:w-[45%] flex items-center justify-center px-6 py-12 relative">
+      <div className="w-full lg:w-[45%] flex flex-col items-center justify-center px-6 py-10 relative overflow-y-auto">
         
-        {/* Mobile subtle background */}
-        <div className="absolute inset-0 lg:hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/[0.02] rounded-full blur-[120px]" />
+        {/* Mobile header with video peek */}
+        <div className="lg:hidden w-full mb-6 -mx-6 -mt-10 relative h-[160px] overflow-hidden shrink-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/videos/auth-bg.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black" />
+          <div className="absolute bottom-4 left-6 z-10">
+            <p className="text-white/60 text-[10px] font-semibold tracking-wide">
+              🎬 The home of Telugu cinema
+            </p>
+          </div>
         </div>
 
         <div className="w-full max-w-[380px] relative z-10">
           
           {/* Brand */}
-          <div className="text-center mb-10">
-            <h1 className="text-[32px] font-extrabold text-white tracking-[-0.03em] mb-1">
-              TFIverse
+          <div className="text-center mb-8">
+            <h1 className="text-[28px] sm:text-[32px] font-extrabold text-white tracking-[-0.03em] mb-1.5">
+              Join TFIverse 🚀
             </h1>
             <p className="text-white/30 text-[13px] font-medium">
-              Create your account
+              Create your free account
             </p>
           </div>
 
           {/* Error */}
           {error && (
-            <div className="mb-6 p-4 rounded-xl bg-red-500/8 border border-red-500/15 text-center">
+            <div className="mb-5 p-4 rounded-xl bg-red-500/8 border border-red-500/15 text-center">
               <p className="text-red-300/90 text-[13px] font-medium">{error}</p>
             </div>
           )}
 
           {/* Success */}
           {success ? (
-            <div className="mb-6 p-8 rounded-2xl bg-white/[0.03] border border-white/[0.08] text-center">
-              <div className="w-14 h-14 rounded-full border border-white/15 flex items-center justify-center mx-auto mb-5 text-white/70">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <h3 className="text-white text-lg font-bold tracking-tight mb-2">Account Created</h3>
+            <div className="p-8 rounded-2xl bg-white/[0.03] border border-white/[0.08] text-center">
+              <div className="text-[40px] mb-4">📧</div>
+              <h3 className="text-white text-lg font-bold tracking-tight mb-2">Check your email ✨</h3>
               <p className="text-white/40 text-[13px] font-medium leading-relaxed mb-6">{success}</p>
               <Link
                 href="/login"
@@ -126,17 +164,17 @@ export default function RegisterPage() {
               </button>
 
               {/* Divider */}
-              <div className="my-8 flex items-center gap-4">
+              <div className="my-6 flex items-center gap-4">
                 <div className="flex-1 h-px bg-white/[0.06]" />
                 <span className="text-[11px] text-white/20 uppercase tracking-[0.15em] font-medium">or</span>
                 <div className="flex-1 h-px bg-white/[0.06]" />
               </div>
 
               {/* Form */}
-              <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
-                <div className="flex flex-col gap-2">
+              <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+                <div className="flex flex-col gap-1.5">
                   <div className="flex justify-between items-center">
-                    <label className="text-[12px] font-semibold text-white/40 pl-1">Name</label>
+                    <label className="text-[12px] font-semibold text-white/40 pl-1">Display Name</label>
                     <span className="text-[10px] text-white/15 font-medium pr-1">Max 25</span>
                   </div>
                   <input
@@ -145,25 +183,25 @@ export default function RegisterPage() {
                     maxLength={25}
                     autoComplete="name"
                     required
-                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl text-white px-4 py-3.5 text-[14px] font-medium focus:outline-none focus:border-white/25 focus:bg-white/[0.06] transition-all placeholder:text-white/15"
+                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl text-white px-4 py-3 text-[14px] font-medium focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-white/20 focus:bg-white/[0.06] transition-all placeholder:text-white/15"
                     placeholder="Your name"
                   />
                 </div>
 
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-1.5">
                   <label className="text-[12px] font-semibold text-white/40 pl-1">Email</label>
                   <input
                     name="email"
                     type="email"
                     autoComplete="email"
                     required
-                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl text-white px-4 py-3.5 text-[14px] font-medium focus:outline-none focus:border-white/25 focus:bg-white/[0.06] transition-all placeholder:text-white/15"
+                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl text-white px-4 py-3 text-[14px] font-medium focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-white/20 focus:bg-white/[0.06] transition-all placeholder:text-white/15"
                     placeholder="you@example.com"
                   />
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="flex flex-col gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="flex flex-col gap-1.5">
                     <label className="text-[12px] font-semibold text-white/40 pl-1">Password</label>
                     <input
                       name="password"
@@ -171,12 +209,12 @@ export default function RegisterPage() {
                       autoComplete="new-password"
                       required
                       minLength={8}
-                      className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl text-white px-4 py-3.5 text-[14px] font-medium focus:outline-none focus:border-white/25 focus:bg-white/[0.06] transition-all placeholder:text-white/15"
+                      className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl text-white px-4 py-3 text-[14px] font-medium focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-white/20 focus:bg-white/[0.06] transition-all placeholder:text-white/15"
                       placeholder="••••••••"
                     />
                   </div>
 
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-1.5">
                     <label className="text-[12px] font-semibold text-white/40 pl-1">Confirm</label>
                     <input
                       name="confirmPassword"
@@ -184,7 +222,7 @@ export default function RegisterPage() {
                       autoComplete="new-password"
                       required
                       minLength={8}
-                      className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl text-white px-4 py-3.5 text-[14px] font-medium focus:outline-none focus:border-white/25 focus:bg-white/[0.06] transition-all placeholder:text-white/15"
+                      className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl text-white px-4 py-3 text-[14px] font-medium focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-white/20 focus:bg-white/[0.06] transition-all placeholder:text-white/15"
                       placeholder="••••••••"
                     />
                   </div>
@@ -193,7 +231,7 @@ export default function RegisterPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-white text-black font-semibold py-3.5 mt-2 rounded-xl hover:bg-white/90 active:scale-[0.98] transition-all text-[14px] disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-white text-black font-semibold py-3 mt-1 rounded-xl hover:bg-white/90 active:scale-[0.98] transition-all text-[14px] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <span className="flex items-center justify-center gap-2">
@@ -208,8 +246,8 @@ export default function RegisterPage() {
             </>
           )}
 
-          {/* Footer */}
-          <p className="mt-10 text-center text-[13px] text-white/25 font-medium">
+          {/* Sign in link */}
+          <p className="mt-8 text-center text-[13px] text-white/25 font-medium">
             Already have an account?{" "}
             <Link
               href="/login"
@@ -218,6 +256,25 @@ export default function RegisterPage() {
               Sign in
             </Link>
           </p>
+
+          {/* Feature highlights */}
+          <div className="mt-8 pt-6 border-t border-white/[0.05]">
+            <div className="flex flex-col gap-3">
+              {[
+                { emoji: "🎭", text: "Browse 500+ Telugu cinema icons" },
+                { emoji: "🏆", text: "Create & share tier lists" },
+                { emoji: "😂", text: "Upload & discover TFI memes" },
+              ].map((item) => (
+                <div
+                  key={item.text}
+                  className="flex items-center gap-3 text-white/25 text-[12px] font-medium"
+                >
+                  <span className="text-[14px]">{item.emoji}</span>
+                  <span>{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </main>

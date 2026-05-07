@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { resetPassword } from "@/app/actions/auth";
-import { Loader2 } from "lucide-react";
+import { Loader2, Volume2, VolumeX } from "lucide-react";
 
 function ResetForm() {
   const searchParams = useSearchParams();
@@ -12,7 +12,16 @@ function ResetForm() {
   const [error, setError] = useState<string>("");
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [muted, setMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setMuted(videoRef.current.muted);
+      if (!videoRef.current.muted) videoRef.current.play().catch(() => {});
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -49,23 +58,41 @@ function ResetForm() {
           <source src="/videos/auth-bg.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black" />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/15" />
       </div>
 
+      {/* Volume Toggle */}
+      <button
+        onClick={toggleMute}
+        className="fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full border border-white/10 text-white/40 hover:text-white bg-black/60 backdrop-blur-sm flex items-center justify-center transition-all hover:bg-white/10 hover:border-white/20 active:scale-90"
+        title={muted ? "Unmute" : "Mute"}
+      >
+        {muted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+      </button>
+
       {/* RIGHT — Auth Form */}
-      <div className="w-full lg:w-[45%] flex items-center justify-center px-6 py-12 relative">
+      <div className="w-full lg:w-[45%] flex flex-col items-center justify-center px-6 py-10 relative">
         
-        {/* Mobile subtle background */}
-        <div className="absolute inset-0 lg:hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/[0.02] rounded-full blur-[120px]" />
+        {/* Mobile header with video peek */}
+        <div className="lg:hidden w-full mb-6 -mx-6 -mt-10 relative h-[160px] overflow-hidden shrink-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/videos/auth-bg.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black" />
         </div>
 
         <div className="w-full max-w-[380px] relative z-10">
 
           {/* Brand */}
           <div className="text-center mb-10">
-            <h1 className="text-[32px] font-extrabold text-white tracking-[-0.03em] mb-1">
-              TFIverse
+            <h1 className="text-[28px] sm:text-[32px] font-extrabold text-white tracking-[-0.03em] mb-1.5">
+              New password 🔐
             </h1>
             <p className="text-white/30 text-[13px] font-medium">
               Set a new password
