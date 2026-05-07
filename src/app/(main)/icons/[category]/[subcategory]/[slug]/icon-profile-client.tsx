@@ -68,8 +68,8 @@ export default function IconProfileClient({
   const personalInfo = data.personalInfo || {};
   const social = data.socialMedia || data.socialMediaInfluence || data.socialMediaPresence || {};
   
-  // Aura extraction (Hero vs Heroine vs Diva)
-  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || null;
+  // Aura extraction (Hero vs Heroine vs Diva vs Villain)
+  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || null;
   
   const physicalStats = data.physicalStats || data.appearance || null;
   const appearance = data.appearance || null;
@@ -81,7 +81,7 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || data.hobbies || [];
-  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || null;
+  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || null;
   const genreStrength = data.genreStrength || data.genreExpertise || data.genreSpecialization || null;
   const philanthropy = data.philanthropy || data.philanthrophy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || data.awardsAndRecognition || [];
@@ -136,7 +136,7 @@ export default function IconProfileClient({
   const filmmakerRelationships = data.filmmakerRelationships || null;
   const politicalCareer = data.politicalCareer || null;
   const controversiesOrTriumphs = data.controversiesOrTriumphs || null;
-  const influenceAndLegacy = data.influenceAndLegacy || data.lifeAfterCinema || data.legacyProjects || data.comparisonsAndLegacy || null;
+  const influenceAndLegacy = data.influenceAndLegacy || data.lifeAfterCinema || data.legacyProjects || data.comparisonsAndLegacy || data.influenceOnVillains || data.antagonistLegacy || null;
   const screenChemistryByCostar = data.screenChemistryByCostar || null;
 
   // Rising Star specific data
@@ -147,6 +147,13 @@ export default function IconProfileClient({
   const superstarpotential = data.superstarpotential || data.potentialAssessment || null;
   const careerTrajectory = data.careerTrajectory || null;
   const uniqueSellingProposition = data.uniqueSellingProposition || null;
+
+  // Villain specific data
+  const villainSpecialization = data.villainSpecialization || null;
+  const heroAntagonisms = data.heroAntagonisms || null;
+  const legendaryMoments = data.legendaryMoments || null;
+  const dualCareer = data.dualCareer || null;
+  const iconicAntagonistRoles = data.iconicAntagoonistRoles || data.antagonistRoles || [];
 
   // Director specific data
   const rawVisionaryEssence = data.visionaryEssence || data.emergingEssence || data.hitmakerEssence || null;
@@ -200,8 +207,8 @@ export default function IconProfileClient({
     tabs.push({ id: "glamour", label: "Glamour" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile) {
-    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : "The Craft" });
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0) {
+    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : "The Craft" });
   }
 
   if (lifestyle || financial || politicalCareer || brandValue) {
@@ -212,7 +219,7 @@ export default function IconProfileClient({
     tabs.push({ id: "career", label: "Career" });
   }
 
-  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding) {
+  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments) {
     tabs.push({ id: "legacy", label: "Legacy" });
   }
 
@@ -302,6 +309,16 @@ export default function IconProfileClient({
                 {data.careerPhase && (
                   <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] bg-white/5 border border-white/10 backdrop-blur-md text-neutral-400">
                     {data.careerPhase}
+                  </span>
+                )}
+                {data.careerSpecialization && (
+                  <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] bg-white/5 border border-white/10 backdrop-blur-md text-neutral-400">
+                    {data.careerSpecialization}
+                  </span>
+                )}
+                {data.careerType && (
+                  <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] bg-white/5 border border-white/10 backdrop-blur-md text-neutral-400">
+                    {data.careerType}
                   </span>
                 )}
               </div>
@@ -1001,6 +1018,146 @@ export default function IconProfileClient({
             {/* ========================================== */}
             {activeTab === "craft" && (
               <>
+                {/* Villain Specialization */}
+                {villainSpecialization && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Villain Specialization
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 bg-red-500 opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      {Object.entries(villainSpecialization).map(([key, value]: [string, any]) => {
+                        if (typeof value === 'string') {
+                          return (
+                            <div key={key} className="mb-6 pl-4 last:mb-0">
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 text-red-400`}>
+                                {key.replace(/([A-Z])/g, ' $1').trim()}
+                              </h4>
+                              <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                            </div>
+                          );
+                        } else if (Array.isArray(value)) {
+                          return (
+                            <div key={key} className="mb-6 pl-4 last:mb-0">
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-red-400`}>
+                                {key.replace(/([A-Z])/g, ' $1').trim()}
+                              </h4>
+                              <div className="flex flex-wrap gap-2">
+                                {value.map((item: string, i: number) => (
+                                  <span key={i} className="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-full text-[10px] text-red-300 font-bold">{item}</span>
+                                ))}
+                              </div>
+                            </div>
+                          );
+                        }
+                        return null;
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Iconic Antagonist Roles */}
+                {iconicAntagonistRoles.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaFilm /> Iconic Antagonist Roles
+                    </h3>
+                    <div className="space-y-4">
+                      {iconicAntagonistRoles.map((role: any, idx: number) => (
+                        <div key={idx} className="p-6 md:p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-red-500 opacity-50 group-hover:opacity-100 transition-opacity" />
+                          <div className="pl-4">
+                            <div className="flex flex-col md:flex-row gap-2 md:gap-6 md:items-center mb-3">
+                              <h4 className="text-lg font-black text-white">{role.film || role.movie}</h4>
+                              <span className="text-[10px] font-black uppercase tracking-widest text-red-400">{role.year} {role.language && `• ${role.language}`}</span>
+                            </div>
+                            {role.characterName && (
+                              <div className="mb-2">
+                                <span className="text-xs font-bold text-neutral-200">as </span>
+                                <span className={`text-sm font-black text-red-400`}>{role.characterName}</span>
+                              </div>
+                            )}
+                            {role.characterType && (
+                              <span className="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-full text-[9px] uppercase tracking-widest font-bold text-red-300 inline-block mb-3">{role.characterType}</span>
+                            )}
+                            {role.impact && <p className="text-neutral-400 text-sm leading-relaxed mt-2">{role.impact}</p>}
+                            {role.iconicScene && <p className="text-neutral-500 text-xs leading-relaxed mt-2 italic border-l-2 border-red-500/30 pl-3">{role.iconicScene}</p>}
+                            {role.heroOpposite && (
+                              <div className="mt-3 flex items-center gap-2">
+                                <span className="text-[9px] uppercase tracking-widest text-neutral-600 font-bold">vs</span>
+                                <span className="text-xs font-bold text-white">{role.heroOpposite}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Hero Antagonisms (Villain vs Hero matchups) */}
+                {heroAntagonisms && Array.isArray(heroAntagonisms) && heroAntagonisms.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Hero Antagonisms
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {heroAntagonisms.map((matchup: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-red-500/20 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <span className={`text-lg font-black text-red-400`}>{matchup.hero || matchup.heroName}</span>
+                          </div>
+                          <div className="space-y-2">
+                            {matchup.filmsCount && (
+                              <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                <span className="text-xs text-neutral-400">Films Together</span>
+                                <span className="text-sm font-black text-white">{matchup.filmsCount}</span>
+                              </div>
+                            )}
+                            {matchup.chemistry && <p className="text-neutral-400 text-xs leading-relaxed mt-2">{matchup.chemistry}</p>}
+                            {matchup.bestFilm && (
+                              <div className="flex justify-between items-center border-b border-white/5 pb-2 mt-2">
+                                <span className="text-xs text-neutral-400">Best Film</span>
+                                <span className="text-xs font-bold text-white">{matchup.bestFilm}</span>
+                              </div>
+                            )}
+                            {matchup.dynamicType && <p className="text-[10px] uppercase tracking-widest font-bold text-red-300 mt-2">{matchup.dynamicType}</p>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Dual Career (Jagapathi Babu) */}
+                {dualCareer && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaChartBar /> Dual Career Analysis
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {dualCareer.leadRoles && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 ${theme.accent}`}>Lead Roles Era</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{dualCareer.leadRoles}</p>
+                        </div>
+                      )}
+                      {dualCareer.antagonistRoles && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-red-400">Antagonist Roles Era</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{dualCareer.antagonistRoles}</p>
+                        </div>
+                      )}
+                      {dualCareer.careerBalance && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 md:col-span-2">
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-neutral-400">Career Balance</h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{dualCareer.careerBalance}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
                 {/* Music Director Sonic Blueprint */}
                 {musicalEssence && (
                   <div className="mb-12">
@@ -2267,6 +2424,31 @@ export default function IconProfileClient({
             {/* ========================================== */}
             {activeTab === "legacy" && (
               <>
+                {/* Legendary Moments (Villain) */}
+                {legendaryMoments && Array.isArray(legendaryMoments) && legendaryMoments.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Legendary Moments
+                    </h3>
+                    <div className="space-y-4">
+                      {legendaryMoments.map((moment: any, idx: number) => (
+                        <div key={idx} className="p-6 md:p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-red-500 opacity-50 group-hover:opacity-100 transition-opacity" />
+                          <div className="pl-4">
+                            <div className="flex flex-col md:flex-row gap-2 md:gap-4 md:items-center mb-2">
+                              <h4 className="text-sm font-black text-white">{moment.film || moment.movie}</h4>
+                              {moment.year && <span className="text-[10px] font-black uppercase tracking-widest text-red-400">{moment.year}</span>}
+                            </div>
+                            {moment.moment && <p className="text-neutral-300 text-sm leading-relaxed">{moment.moment}</p>}
+                            {moment.description && <p className="text-neutral-300 text-sm leading-relaxed">{moment.description}</p>}
+                            {moment.impact && <p className="text-neutral-500 text-xs leading-relaxed mt-2 italic">{moment.impact}</p>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Industry Standing (Director) */}
                 {industryStanding && (
                   <div className="mb-12">
