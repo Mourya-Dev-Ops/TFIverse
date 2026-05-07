@@ -68,8 +68,8 @@ export default function IconProfileClient({
   const personalInfo = data.personalInfo || {};
   const social = data.socialMedia || data.socialMediaInfluence || data.socialMediaPresence || {};
   
-  // Aura extraction (Hero vs Heroine vs Diva vs Villain vs Comedian)
-  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || null;
+  // Aura extraction (Hero vs Heroine vs Diva vs Villain vs Comedian vs Character Artist)
+  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || null;
   
   const physicalStats = data.physicalStats || data.appearance || null;
   const appearance = data.appearance || null;
@@ -81,7 +81,7 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || data.hobbies || [];
-  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || null;
+  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || null;
   const genreStrength = data.genreStrength || data.genreExpertise || data.genreSpecialization || null;
   const philanthropy = data.philanthropy || data.philanthrophy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || data.awardsAndRecognition || [];
@@ -161,6 +161,14 @@ export default function IconProfileClient({
   const legendaryComedyMoments = data.legendaryComedyMoments || data.viralComedyMoments || null;
   const iconicComedyRoles = data.iconicComedyRoles || [];
 
+  // Character Artist specific data
+  const characterVersatility = data.characterVersatility || null;
+  const iconicCharacterRoles = data.iconicCharacterRoles || data.characterRoles || [];
+  const heroPartnerships = data.heroPartnerships || null;
+  const directorCollaborations = data.directorCollaborations || null;
+  const memorableScenes = data.memorableScenes || null;
+  const actingApproach = data.actingApproach || null;
+
   // Director specific data
   const rawVisionaryEssence = data.visionaryEssence || data.emergingEssence || data.hitmakerEssence || null;
   const visionaryEssence = rawVisionaryEssence ? {
@@ -213,8 +221,8 @@ export default function IconProfileClient({
     tabs.push({ id: "glamour", label: "Glamour" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0) {
-    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : "The Craft" });
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations) {
+    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : "The Craft" });
   }
 
   if (lifestyle || financial || politicalCareer || brandValue) {
@@ -225,7 +233,7 @@ export default function IconProfileClient({
     tabs.push({ id: "career", label: "Career" });
   }
 
-  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments || legendaryComedyMoments) {
+  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments || legendaryComedyMoments || memorableScenes) {
     tabs.push({ id: "legacy", label: "Legacy" });
   }
 
@@ -1269,6 +1277,188 @@ export default function IconProfileClient({
                               </div>
                             )}
                             {partner.comedyDynamic && <p className="text-[10px] uppercase tracking-widest font-bold text-amber-300 mt-2">{partner.comedyDynamic}</p>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Character Artist: Character Versatility */}
+                {characterVersatility && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Character Versatility
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      {Object.entries(characterVersatility).map(([key, value]: [string, any]) => {
+                        if (typeof value === 'string') {
+                          return (
+                            <div key={key} className="mb-6 pl-4 last:mb-0">
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                                {key.replace(/([A-Z])/g, ' $1').trim()}
+                              </h4>
+                              <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                            </div>
+                          );
+                        } else if (Array.isArray(value)) {
+                          return (
+                            <div key={key} className="mb-6 pl-4 last:mb-0">
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 ${theme.accent}`}>
+                                {key.replace(/([A-Z])/g, ' $1').trim()}
+                              </h4>
+                              <div className="flex flex-wrap gap-2">
+                                {value.map((item: string, i: number) => (
+                                  <span key={i} className={`px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] text-neutral-300 font-bold`}>{item}</span>
+                                ))}
+                              </div>
+                            </div>
+                          );
+                        }
+                        return null;
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Character Artist: Acting Approach */}
+                {actingApproach && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Acting Approach
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      {Object.entries(actingApproach).map(([key, value]: [string, any]) => {
+                        if (typeof value === 'string') {
+                          return (
+                            <div key={key} className="mb-6 pl-4 last:mb-0">
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                                {key.replace(/([A-Z])/g, ' $1').trim()}
+                              </h4>
+                              <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                            </div>
+                          );
+                        } else if (Array.isArray(value)) {
+                          return (
+                            <div key={key} className="mb-6 pl-4 last:mb-0">
+                              <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-3 ${theme.accent}`}>
+                                {key.replace(/([A-Z])/g, ' $1').trim()}
+                              </h4>
+                              <div className="flex flex-wrap gap-2">
+                                {value.map((item: string, i: number) => (
+                                  <span key={i} className={`px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] text-neutral-300 font-bold`}>{item}</span>
+                                ))}
+                              </div>
+                            </div>
+                          );
+                        }
+                        return null;
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Character Artist: Iconic Character Roles */}
+                {iconicCharacterRoles.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaFilm /> Iconic Character Roles
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {iconicCharacterRoles.map((role: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <div className="flex flex-col gap-1 mb-3">
+                              <h4 className="text-lg font-black text-white">{role.film || role.movie}</h4>
+                              <span className={`text-[10px] font-black uppercase tracking-widest ${theme.accent}`}>{role.year} {role.language && `• ${role.language}`}</span>
+                            </div>
+                            {role.characterName && (
+                              <div className="mb-2">
+                                <span className="text-xs font-bold text-neutral-400">as </span>
+                                <span className="text-sm font-black text-white">{role.characterName}</span>
+                              </div>
+                            )}
+                            {role.characterType && (
+                              <span className={`px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] uppercase tracking-widest font-bold text-neutral-300 inline-block mb-3`}>{role.characterType}</span>
+                            )}
+                            {role.impact && <p className="text-neutral-400 text-xs leading-relaxed mt-2">{role.impact}</p>}
+                            {role.description && <p className="text-neutral-400 text-xs leading-relaxed mt-2">{role.description}</p>}
+                            {role.iconicScene && <p className="text-neutral-500 text-[10px] leading-relaxed mt-2 italic border-l-2 border-white/10 pl-3">{role.iconicScene}</p>}
+                            {role.iconicDialogue && <p className="text-neutral-500 text-[10px] leading-relaxed mt-2 italic border-l-2 border-white/10 pl-3">"{role.iconicDialogue}"</p>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Character Artist: Hero Partnerships */}
+                {heroPartnerships && Array.isArray(heroPartnerships) && heroPartnerships.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Hero Partnerships
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {heroPartnerships.map((partner: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <span className="text-lg font-black text-white">{partner.hero || partner.heroName}</span>
+                          </div>
+                          <div className="space-y-2">
+                            {partner.filmsCount && (
+                              <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                <span className="text-xs text-neutral-400">Films Together</span>
+                                <span className="text-sm font-black text-white">{partner.filmsCount}</span>
+                              </div>
+                            )}
+                            {partner.partnership && <p className="text-neutral-400 text-xs leading-relaxed mt-2">{partner.partnership}</p>}
+                            {partner.bestFilm && (
+                              <div className="flex justify-between items-center border-b border-white/5 pb-2 mt-2">
+                                <span className="text-xs text-neutral-400">Best Film</span>
+                                <span className="text-xs font-bold text-white">{partner.bestFilm}</span>
+                              </div>
+                            )}
+                            {partner.dynamicType && <p className={`text-[10px] uppercase tracking-widest font-bold ${theme.accent} mt-2`}>{partner.dynamicType}</p>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Character Artist: Director Collaborations */}
+                {directorCollaborations && Array.isArray(directorCollaborations) && directorCollaborations.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaFilm /> Director Collaborations
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {directorCollaborations.map((collab: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <span className="text-lg font-black text-white">{collab.directorName || collab.director}</span>
+                          </div>
+                          <div className="space-y-2">
+                            {collab.filmsTogether && (
+                              <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                <span className="text-xs text-neutral-400">Films Together</span>
+                                <span className="text-sm font-black text-white">{collab.filmsTogether}</span>
+                              </div>
+                            )}
+                            {collab.partnership && <p className="text-neutral-400 text-xs leading-relaxed mt-2">{collab.partnership}</p>}
+                            {collab.films && Array.isArray(collab.films) && (
+                              <div className="mt-4 space-y-2">
+                                {collab.films.map((film: any, i: number) => (
+                                  <div key={i} className="flex flex-col gap-1 text-xs border-l-2 border-white/10 pl-2">
+                                    <span className="font-bold text-neutral-300">{film.title} <span className="text-neutral-500">({film.year})</span></span>
+                                    {film.character && <span className={`text-[9px] uppercase tracking-widest ${theme.accent}`}>{film.character}</span>}
+                                  </div>
+                                ))}
+                              </div>
+                            )}
                           </div>
                         </div>
                       ))}
@@ -2586,6 +2776,31 @@ export default function IconProfileClient({
                             {moment.description && <p className="text-neutral-300 text-sm leading-relaxed">{moment.description}</p>}
                             {moment.impact && <p className="text-neutral-500 text-xs leading-relaxed mt-2 italic">{moment.impact}</p>}
                             {moment.dialogue && <p className="text-amber-300/60 text-xs leading-relaxed mt-2 italic border-l-2 border-amber-500/30 pl-3">"{moment.dialogue}"</p>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Character Artist: Memorable Scenes */}
+                {memorableScenes && Array.isArray(memorableScenes) && memorableScenes.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Memorable Scenes
+                    </h3>
+                    <div className="space-y-4">
+                      {memorableScenes.map((scene: any, idx: number) => (
+                        <div key={idx} className="p-6 md:p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <div className="flex flex-col gap-1 mb-3">
+                              <h4 className="text-sm font-black text-white">{scene.film || scene.movie}</h4>
+                              <span className={`text-[10px] font-black uppercase tracking-widest ${theme.accent}`}>{scene.year}</span>
+                            </div>
+                            {scene.scene && <p className="text-neutral-300 text-sm leading-relaxed mb-2">{scene.scene}</p>}
+                            {scene.description && <p className="text-neutral-400 text-xs leading-relaxed">{scene.description}</p>}
+                            {scene.impact && <p className="text-neutral-500 text-[10px] leading-relaxed mt-2 italic border-l-2 border-white/10 pl-3">{scene.impact}</p>}
                           </div>
                         </div>
                       ))}
