@@ -45,23 +45,24 @@ export default async function HomePage() {
     : upcomingData;
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
+    <div className="flex-1 flex flex-col bg-black text-white selection:bg-white selection:text-black">
+      <div className="flex-1">
+        {/* ═══════════════════════════════════════════════════ */}
+        {/*  CINEMATIC HERO — Scrollytelling Sequence         */}
+        {/* ═══════════════════════════════════════════════════ */}
+        <HeroSequence isAuthenticated={!!session} />
 
-      {/* ═══════════════════════════════════════════════════ */}
-      {/*  CINEMATIC HERO — Scrollytelling Sequence         */}
-      {/* ═══════════════════════════════════════════════════ */}
-      <HeroSequence isAuthenticated={!!session} />
-
-      {/* ═══════════════════════════════════════════════════ */}
-      {/*  CLIENT SECTIONS                                   */}
-      {/* ═══════════════════════════════════════════════════ */}
-      <HomeClient
-        heroesData={finalHeroesData as any}
-        rumorsData={finalRumorsData as any}
-        upcomingData={finalUpcomingData as any}
-        isAuthenticated={!!session}
-        userId={session?.user?.id}
-      />
+        {/* ═══════════════════════════════════════════════════ */}
+        {/*  CLIENT SECTIONS                                   */}
+        {/* ═══════════════════════════════════════════════════ */}
+        <HomeClient
+          heroesData={finalHeroesData as any}
+          rumorsData={finalRumorsData as any}
+          upcomingData={finalUpcomingData as any}
+          isAuthenticated={!!session}
+          userId={session?.user?.id}
+        />
+      </div>
 
       <Footer />
     </div>

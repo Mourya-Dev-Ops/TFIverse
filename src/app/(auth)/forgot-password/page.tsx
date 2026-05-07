@@ -49,12 +49,12 @@ export default function ForgotPasswordPage() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover transform-gpu"
         >
           <source src="/videos/auth-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black" />
-        <div className="absolute inset-0 bg-black/15" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Volume Toggle */}
@@ -76,11 +76,12 @@ export default function ForgotPasswordPage() {
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover transform-gpu"
           >
             <source src="/videos/auth-bg.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         <div className="w-full max-w-[380px] relative z-10">

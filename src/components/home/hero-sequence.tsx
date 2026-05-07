@@ -169,11 +169,9 @@ function ScrollSequence({ isAuthenticated, onSkip }: { isAuthenticated: boolean;
     const ctx2 = canvas2.getContext("2d", { alpha: false });
     if (!ctx1 || !ctx2) return;
 
-    // Set smoothing for better quality
+    // Set smoothing
     ctx1.imageSmoothingEnabled = true;
-    ctx1.imageSmoothingQuality = "high";
     ctx2.imageSmoothingEnabled = true;
-    ctx2.imageSmoothingQuality = "high";
 
     const images: HTMLImageElement[] = [];
 
@@ -231,7 +229,7 @@ function ScrollSequence({ isAuthenticated, onSkip }: { isAuthenticated: boolean;
     };
 
     const resize = () => {
-      const dpr = window.devicePixelRatio || 1;
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.25);
       const w = canvas1.clientWidth || window.innerWidth;
       const h = canvas1.clientHeight || window.innerHeight;
 
@@ -242,9 +240,7 @@ function ScrollSequence({ isAuthenticated, onSkip }: { isAuthenticated: boolean;
 
       // Ensure smoothing is kept after resize
       ctx1.imageSmoothingEnabled = true;
-      ctx1.imageSmoothingQuality = "high";
       ctx2.imageSmoothingEnabled = true;
-      ctx2.imageSmoothingQuality = "high";
 
       renderFrame(Math.floor(scrollYProgress.get() * (frameCount - 1)) + 1, true);
     };
@@ -268,8 +264,8 @@ function ScrollSequence({ isAuthenticated, onSkip }: { isAuthenticated: boolean;
     <div ref={containerRef} className="h-[600vh] w-full relative bg-black z-0">
       <div className="sticky top-0 w-full h-[100dvh] overflow-hidden">
 
-        <canvas ref={canvas1Ref} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[101%] h-[101%] transition-opacity duration-0 object-cover" style={{ opacity: 1 }} />
-        <canvas ref={canvas2Ref} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[101%] h-[101%] transition-opacity duration-0 object-cover" style={{ opacity: 0 }} />
+        <canvas ref={canvas1Ref} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[101%] h-[101%] transition-opacity duration-0 object-cover will-change-opacity" style={{ opacity: 1 }} />
+        <canvas ref={canvas2Ref} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[101%] h-[101%] transition-opacity duration-0 object-cover will-change-opacity" style={{ opacity: 0 }} />
 
         <motion.div
           className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"

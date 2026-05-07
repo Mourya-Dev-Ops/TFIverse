@@ -39,7 +39,7 @@ export default async function MainLayout({
     <>
       <Navbar user={userForNavbar} />
       {/* Add padding top to account for fixed navbar */}
-      <main className="w-full pt-16">
+      <main className="w-full pt-16 flex-1 flex flex-col">
         {children}
       </main>
     </>

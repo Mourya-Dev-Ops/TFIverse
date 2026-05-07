@@ -4,10 +4,12 @@ import { useState, useMemo, useRef, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Search, ChevronRight, ChevronLeft, Globe, TrendingUp, DollarSign,
-  Clapperboard, Trophy, Calendar, Play, Cake, Tv, Laugh, Images,
-  Heart, PenLine, AlertCircle, ArrowRight, Flame, RotateCcw
-} from "lucide-react";
+  PiMagnifyingGlassDuotone as Search, PiCaretRightDuotone as ChevronRight, PiCaretLeftDuotone as ChevronLeft,
+  PiGlobeDuotone as Globe, PiCurrencyDollarDuotone as DollarSign, PiFilmStripDuotone as Clapperboard,
+  PiTrophyDuotone as Trophy, PiCalendarDuotone as Calendar, PiTelevisionDuotone as Tv, PiSmileyDuotone as Laugh,
+  PiImagesDuotone as Images, PiHeartDuotone as Heart, PiNotePencilDuotone as PenLine,
+  PiWarningCircleDuotone as AlertCircle, PiArrowRightDuotone as ArrowRight, PiArrowsCounterClockwiseDuotone as RotateCcw
+} from "react-icons/pi";
 
 type Hero = { id: number; slug: string; name: string; title?: string; birthDate?: string; portraitUrl?: string; bannerUrl?: string; featuredUrl?: string; featured?: boolean; movies?: any[] };
 type Rumor = { id: string; title: string; summary: string; status: "discussion" | "trade" | "confirmed"; source: string };
@@ -35,11 +37,6 @@ export default function HomeClient({ heroesData, rumorsData, upcomingData, isAut
 
   return (
     <div className="relative">
-
-      {/* Global ambient glow behind content */}
-      <div className="absolute top-[400px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-amber-500/[0.015] blur-[200px] pointer-events-none" />
-      <div className="absolute top-[2000px] left-1/4 w-[600px] h-[600px] rounded-full bg-blue-500/[0.01] blur-[180px] pointer-events-none" />
-      <div className="absolute top-[3500px] right-1/4 w-[500px] h-[500px] rounded-full bg-purple-500/[0.01] blur-[160px] pointer-events-none" />
 
       {/* ══════ SEARCH ══════ */}
       <section className="px-6 md:px-10 lg:px-16 pt-24 pb-12 relative">
@@ -168,10 +165,10 @@ function SectionHead({ label, href }: { label: string; href?: string }) {
 
 function NavCard({ href, icon: Icon, title, sub, tall }: { href: string; icon: any; title: string; sub?: string; tall?: boolean }) {
   return (
-    <Link href={href} className={`glow-card group flex flex-col justify-between rounded-2xl p-7 ${tall ? 'min-h-[200px]' : 'min-h-[160px]'} glass-premium relative overflow-hidden hover:bg-white/[0.02] transition-colors duration-500`}>
-      <div className="absolute -top-10 -right-10 w-24 h-24 rounded-full bg-white/[0.03] blur-2xl group-hover:bg-white/[0.06] transition-colors duration-700" />
+    <Link href={href} className={`glow-card group flex flex-col justify-between rounded-2xl p-7 ${tall ? 'min-h-[200px]' : 'min-h-[160px]'} glass-premium relative overflow-hidden hover:bg-white/[0.04] transition-colors duration-500`}>
+      <div className="absolute -top-10 -right-10 w-24 h-24 rounded-full bg-white/[0.02] blur-2xl group-hover:bg-white/[0.04] transition-all duration-700" />
       <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] shadow-inner flex items-center justify-center mb-4 group-hover:border-white/[0.15] group-hover:scale-105 transition-all duration-500 relative z-10">
-        <Icon className="w-5 h-5 text-white/60 group-hover:text-white transition-colors duration-500" />
+        <Icon className="w-5 h-5 text-white/60 group-hover:text-white transition-all duration-500 drop-shadow-md" />
       </div>
       <div className="mt-auto relative z-10">
         <h3 className="text-white font-bold text-lg tracking-tight group-hover:text-white transition-colors">{title}</h3>
@@ -183,21 +180,21 @@ function NavCard({ href, icon: Icon, title, sub, tall }: { href: string; icon: a
 
 function GalleryCard({ icon: Icon, title, href, cta }: { icon: any; title: string; href: string; cta: string }) {
   return (
-    <div className="rounded-2xl p-8 glass-premium">
-      <div className="flex items-center gap-3 mb-8">
-        <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] shadow-inner flex items-center justify-center">
-          <Icon className="w-5 h-5 text-white/60" />
+    <div className="rounded-2xl p-8 glass-premium relative overflow-hidden group hover:bg-white/[0.02] transition-colors duration-500">
+      <div className="flex items-center gap-3 mb-8 relative z-10">
+        <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] shadow-inner flex items-center justify-center group-hover:border-white/[0.15] transition-colors">
+          <Icon className="w-5 h-5 text-white/60 group-hover:text-white transition-colors duration-500 drop-shadow-md" />
         </div>
         <h3 className="text-xl font-bold text-white tracking-tight">{title}</h3>
       </div>
-      <div className="grid grid-cols-3 gap-3 mb-8">
+      <div className="grid grid-cols-3 gap-3 mb-8 relative z-10">
         {[1, 2, 3].map(i => (
-          <div key={i} className="aspect-square rounded-xl bg-gradient-to-br from-white/[0.06] to-white/[0.02] border border-white/[0.04] flex items-center justify-center">
-            <Icon className="w-5 h-5 text-white/10" />
+          <div key={i} className="aspect-square rounded-xl bg-gradient-to-br from-white/[0.06] to-white/[0.02] border border-white/[0.04] flex items-center justify-center group-hover:border-white/[0.08] transition-colors">
+            <Icon className="w-5 h-5 text-white/20 group-hover:text-white/40 transition-colors duration-500" />
           </div>
         ))}
       </div>
-      <Link href={href} className="block text-center py-3 rounded-xl border border-white/[0.08] text-white/40 hover:text-white hover:border-white/20 transition-all text-[11px] font-bold uppercase tracking-[0.2em]">
+      <Link href={href} className="block text-center py-3 rounded-xl border border-white/[0.08] text-white/40 hover:text-white hover:border-white/20 transition-all text-[11px] font-bold uppercase tracking-[0.2em] relative z-10">
         {cta}
       </Link>
     </div>
@@ -212,9 +209,9 @@ function FanZone() {
   ];
   return (
     <div className="rounded-2xl p-8 glass-premium">
-      <div className="flex items-center gap-3 mb-8">
-        <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] shadow-inner flex items-center justify-center">
-          <Heart className="w-5 h-5 text-white/60" />
+      <div className="flex items-center gap-3 mb-8 group cursor-pointer">
+        <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.08] shadow-inner flex items-center justify-center group-hover:border-white/[0.15] transition-colors">
+          <Heart className="w-5 h-5 text-white/60 group-hover:text-white transition-colors duration-500 drop-shadow-md" />
         </div>
         <h3 className="text-xl font-bold text-white tracking-tight">Fan Zone</h3>
       </div>
@@ -238,9 +235,9 @@ function FanZone() {
 function DiaryCard({ isAuth }: { isAuth: boolean }) {
   return (
     <div className="rounded-2xl p-8 glass-premium flex flex-col items-center justify-center text-center relative overflow-hidden group">
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/[0.02] to-transparent pointer-events-none" />
-      <div className="w-16 h-16 rounded-2xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 transition-transform duration-500">
-        <PenLine className="w-7 h-7 text-white/60" />
+      <div className="absolute inset-0 bg-white/[0.01] pointer-events-none group-hover:bg-white/[0.03] transition-colors duration-700" />
+      <div className="w-16 h-16 rounded-2xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 group-hover:border-white/[0.15] transition-all duration-500">
+        <PenLine className="w-7 h-7 text-white/60 group-hover:text-white transition-colors duration-500 drop-shadow-md" />
       </div>
       <h3 className="text-xl font-bold text-white tracking-tight mb-3">Movie Diary</h3>
       <p className="text-white/30 text-sm mb-8 max-w-[220px] leading-relaxed">Log watches, rate films, and build your profile.</p>

@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useState, useRef } from "react";
 import { registerUser } from "@/app/actions/auth";
 import { signIn } from "next-auth/react";
-import { Loader2, Volume2, VolumeX, Sparkles, ImagePlus, Trophy, Film, MailCheck } from "lucide-react";
+import { Loader2, Volume2, VolumeX, Film, MailCheck } from "lucide-react";
+import { PiGlobeDuotone, PiSmileyDuotone, PiTrophyDuotone } from "react-icons/pi";
 import { FcGoogle } from "react-icons/fc";
 
 export default function RegisterPage() {
@@ -69,12 +70,12 @@ export default function RegisterPage() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover transform-gpu"
         >
           <source src="/videos/auth-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black" />
-        <div className="absolute inset-0 bg-black/15" />
+        <div className="absolute inset-0 bg-black/40" />
         
         {/* Bottom-left branding on video */}
         <div className="absolute bottom-10 left-10 z-10">
@@ -106,11 +107,12 @@ export default function RegisterPage() {
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover transform-gpu"
           >
             <source src="/videos/auth-bg.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black" />
+          <div className="absolute inset-0 bg-black/40" />
           <div className="absolute bottom-4 left-6 z-10">
             <p className="text-white/60 text-[10px] font-semibold tracking-wide flex items-center gap-1.5">
               <Film className="w-3 h-3 text-white/50" /> The home of Telugu cinema
@@ -263,9 +265,9 @@ export default function RegisterPage() {
           <div className="mt-8 pt-6 border-t border-white/[0.05]">
             <div className="flex flex-col gap-3">
               {[
-                { icon: <Sparkles className="w-4 h-4 text-white/60" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", text: "Browse 500+ Telugu cinema icons" },
-                { icon: <Trophy className="w-4 h-4 text-white/60" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", text: "Create & share tier lists" },
-                { icon: <ImagePlus className="w-4 h-4 text-white/60" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", text: "Upload & discover TFI memes" },
+                { icon: <PiGlobeDuotone className="w-4 h-4 text-white/70" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", text: "Browse 500+ Telugu cinema icons" },
+                { icon: <PiTrophyDuotone className="w-4 h-4 text-white/70" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", text: "Create & share tier lists" },
+                { icon: <PiSmileyDuotone className="w-4 h-4 text-white/70" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", text: "Upload & discover TFI memes" },
               ].map((item) => (
                 <div
                   key={item.text}

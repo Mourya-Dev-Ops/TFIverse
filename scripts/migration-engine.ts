@@ -1,5 +1,5 @@
 import { config } from "dotenv";
-config({ path: ".env" }); // Load from .env
+config({ path: ".env.local" }); // Load from .env.local
 
 import fs from "fs/promises";
 import path from "path";

@@ -5,7 +5,8 @@ import { useState, useRef, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { loginUser, resendVerification } from "@/app/actions/auth";
 import { signIn } from "next-auth/react";
-import { Loader2, CheckCircle2, Volume2, VolumeX, Sparkles, ImagePlus, Trophy, Clapperboard, Film } from "lucide-react";
+import { Loader2, CheckCircle2, Volume2, VolumeX, Film } from "lucide-react";
+import { PiGlobeDuotone, PiSmileyDuotone, PiTrophyDuotone } from "react-icons/pi";
 import { FcGoogle } from "react-icons/fc";
 
 function LoginForm() {
@@ -96,13 +97,12 @@ function LoginForm() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover transform-gpu"
         >
           <source src="/videos/auth-bg.mp4" type="video/mp4" />
         </video>
-        {/* Soft edge fade into the form side */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black" />
-        <div className="absolute inset-0 bg-black/15" />
+        <div className="absolute inset-0 bg-black/40" />
         
         {/* Bottom-left branding on video */}
         <div className="absolute bottom-10 left-10 z-10">
@@ -134,11 +134,12 @@ function LoginForm() {
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover transform-gpu"
           >
             <source src="/videos/auth-bg.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black" />
+          <div className="absolute inset-0 bg-black/40" />
           <div className="absolute bottom-4 left-6 z-10">
             <p className="text-white/60 text-[10px] font-semibold tracking-wide flex items-center gap-1.5">
               <Film className="w-3 h-3 text-white/50" /> The home of Telugu cinema
@@ -266,9 +267,9 @@ function LoginForm() {
           <div className="mt-10 pt-8 border-t border-white/[0.05]">
             <div className="grid grid-cols-3 gap-3">
               {[
-                { icon: <Sparkles className="w-4 h-4 text-white/60" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", label: "Icons" },
-                { icon: <ImagePlus className="w-4 h-4 text-white/60" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", label: "Memes" },
-                { icon: <Trophy className="w-4 h-4 text-white/60" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", label: "Tier Lists" },
+                { icon: <PiGlobeDuotone className="w-4 h-4 text-white/70" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", label: "Icons" },
+                { icon: <PiSmileyDuotone className="w-4 h-4 text-white/70" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", label: "Memes" },
+                { icon: <PiTrophyDuotone className="w-4 h-4 text-white/70" />, bg: "bg-white/[0.03]", border: "border-white/[0.08]", label: "Tier Lists" },
               ].map((item) => (
                 <div
                   key={item.label}

@@ -3,7 +3,8 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { User, LogOut, Crown, Sparkles } from 'lucide-react';
+import { User, LogOut } from 'lucide-react';
+import { PiGlobeDuotone, PiSmileyDuotone, PiTrophyDuotone, PiUserDuotone } from 'react-icons/pi';
 import { signOut } from 'next-auth/react';
 
 interface NavbarProps {
@@ -52,16 +53,16 @@ export default function Navbar({ user }: NavbarProps) {
           {/* CENTER: Navigation Links */}
           <div className="hidden md:flex items-center space-x-1">
             {[
-              { href: '/icons', label: 'Icons' },
-              { href: '/memes', label: 'Memes' },
-              { href: '/tier-list', label: 'Tier Lists' },
+              { href: '/icons', label: 'Icons', icon: <PiGlobeDuotone className="w-3.5 h-3.5 text-white/70" /> },
+              { href: '/memes', label: 'Memes', icon: <PiSmileyDuotone className="w-3.5 h-3.5 text-white/70" /> },
+              { href: '/tier-list', label: 'Tier Lists', icon: <PiTrophyDuotone className="w-3.5 h-3.5 text-white/70" /> },
             ].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-[11px] font-bold uppercase tracking-[0.15em] text-white/50 hover:text-white hover:bg-white/[0.05] rounded-full transition-all duration-200"
+                className="px-4 py-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.15em] text-white/50 hover:text-white hover:bg-white/[0.05] rounded-full transition-all duration-200"
               >
-                {link.label}
+                {link.icon} {link.label}
               </Link>
             ))}
           </div>
@@ -102,9 +103,9 @@ export default function Navbar({ user }: NavbarProps) {
                       </div>
 
                       <div className="py-1">
-                        <DropdownLink href="/profile" label="My Profile" icon={<User size={16} />} onClick={() => setShowDropdown(false)} />
-                        <DropdownLink href="/tier-list/my-lists" label="My Tier Lists" icon={<Crown size={16} />} onClick={() => setShowDropdown(false)} />
-                        <DropdownLink href="/memes" label="My Memes" icon={<Sparkles size={16} />} onClick={() => setShowDropdown(false)} />
+                        <DropdownLink href="/profile" label="My Profile" icon={<PiUserDuotone size={16} className="text-white/60" />} onClick={() => setShowDropdown(false)} />
+                        <DropdownLink href="/tier-list/my-lists" label="My Tier Lists" icon={<PiTrophyDuotone size={16} className="text-white/60" />} onClick={() => setShowDropdown(false)} />
+                        <DropdownLink href="/memes" label="My Memes" icon={<PiSmileyDuotone size={16} className="text-white/60" />} onClick={() => setShowDropdown(false)} />
                       </div>
 
                       <div className="p-2 border-t border-white/[0.06]">

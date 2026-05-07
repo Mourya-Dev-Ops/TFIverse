@@ -1,6 +1,6 @@
 // lib/tmdb.ts - TMDb API Helper with Multi-Key Rotation & Caching
 
-const TMDB_KEYS = (process.env.NEXT_PUBLIC_TMDB_API_KEY || 'ba5dc12f58f09088d036049c565c2fe9')
+const TMDB_KEYS = (process.env.NEXT_PUBLIC_TMDB_API_KEY || '')
   .split(',')
   .map(k => k.trim())
   .filter(Boolean);

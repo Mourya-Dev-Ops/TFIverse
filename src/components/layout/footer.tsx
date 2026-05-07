@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaTwitter, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
+import { HiHeart } from "react-icons/hi2";
 
 export default function Footer() {
   return (
@@ -15,8 +16,13 @@ export default function Footer() {
             The premium sanctuary for Telugu cinema. Discover heroes, rank movies, join the culture.
           </p>
           <div className="flex items-center gap-3">
-            {[FaTwitter, FaInstagram, FaYoutube, FaTiktok].map((Icon, i) => (
-              <a key={i} href="#" className="w-9 h-9 rounded-full border border-white/[0.06] flex items-center justify-center text-white/25 hover:text-white/60 hover:border-white/15 transition-all">
+            {[
+              { Icon: FaTwitter, href: "https://x.com/TFI_verse" },
+              { Icon: FaInstagram, href: "https://www.instagram.com/tfiverse.in/" },
+              { Icon: FaYoutube, href: "#" },
+              { Icon: FaTiktok, href: "#" }
+            ].map(({ Icon, href }, i) => (
+              <a key={i} href={href} target={href !== "#" ? "_blank" : undefined} rel={href !== "#" ? "noopener noreferrer" : undefined} className="w-9 h-9 rounded-full border border-white/[0.06] bg-white/[0.02] flex items-center justify-center text-white/40 hover:text-white hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300">
                 <Icon className="w-3.5 h-3.5" />
               </a>
             ))}
@@ -45,7 +51,9 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto pt-8 border-t border-white/[0.04] flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-white/15 text-xs">© {new Date().getFullYear()} TFIVERSE</p>
+        <div className="flex items-center gap-1.5 text-white/15 text-xs">
+          © {new Date().getFullYear()} TFIVERSE. Made with <HiHeart className="w-3.5 h-3.5 text-red-500 mx-0.5 drop-shadow-md" /> for Telugu Cinema.
+        </div>
         <p className="text-white/10 text-[10px] font-semibold uppercase tracking-[0.25em]">Built for the culture</p>
       </div>
     </footer>
