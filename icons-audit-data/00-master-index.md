@@ -23,7 +23,7 @@
 | 8 | **Singers** | _(root)_ | 1 | [08-singers.md](./08-singers.md) | ✅ Audited + Fixed |
 | 9 | **Producers** | _(root)_ | 1 | [09-producers.md](./09-producers.md) | ✅ Audited + Fixed |
 | 10 | **Cinematographers** | _(root)_ | 1 | [10-cinematographers.md](./10-cinematographers.md) | ✅ Audited + Fixed |
-| 11 | **Editors** | _(root)_ | 1 | [11-editors.md](./11-editors.md) | 🔲 Pending |
+| 11 | **Editors** | _(root)_ | 1 | [11-editors.md](./11-editors.md) | ✅ Audited + Fixed |
 | 12 | **Lyricists** | _(root)_ | 1 | [12-lyricists.md](./12-lyricists.md) | 🔲 Pending |
 | 13 | **Choreographers** | _(root)_ | 1 | [13-choreographers.md](./13-choreographers.md) | 🔲 Pending |
 | 14 | **Stunt Directors** | _(root)_ | 1 | [14-stunt-directors.md](./14-stunt-directors.md) | 🔲 Pending |
