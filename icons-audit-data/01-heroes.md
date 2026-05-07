@@ -76,8 +76,8 @@
 | 1 | `bio` | L69 `data.bio` | **Overview** → "The Legend" card (L339) | ✅ |
 | 2 | `title` ("Viswa Vikhyatha...") | L259 `data.title` | **Banner** title lockup (L262) | ✅ |
 | 3 | `alternateNames` (5 names) | L90 | **Banner** AKA pills (L269) | ✅ |
-| 4 | `era` ("1950s-1970s Legend") | — | Not rendered as badge | ⚠️ Minor |
-| 5 | `legendStatus` ("Deceased") | — | Not rendered | ⚠️ Minor |
+| 4 | `era` ("1950s-1970s Legend") | L253 | **Banner** badge | ✅ Fixed |
+| 5 | `legendStatus` ("Deceased") | L256 | **Banner** badge | ✅ Fixed |
 | 6 | `heroAura.screenPresence` | L72 | **Overview** → Aura Grid (L387) | ✅ |
 | 7 | `heroAura.legendaryAppeal` | L72 | **Overview** → Aura Grid (L381) | ✅ Fixed |
 | 8 | `heroAura.signature` | L72 | **Overview** → Aura Grid (L399) | ✅ |
@@ -90,7 +90,7 @@
 | 15 | `personalInfo.birthDate` | L68 | **Right Sidebar** | ✅ |
 | 16 | `personalInfo.deathDate` | L68 | **Right Sidebar** | ✅ |
 | 17 | `personalInfo.familyInfo` (12 children) | L68 | **Right Sidebar** | ✅ |
-| 18 | `personalInfo.familyInfo.grandchildren` | L68 | Sidebar? Needs verify | ⚠️ Maybe |
+| 18 | `personalInfo.familyInfo.grandchildren` | L2943 | **Right Sidebar** | ✅ Fixed |
 | 19 | `personalInfo.education` | L68 | **Dossier** tab trigger (L171) | ✅ |
 | 20 | `personalInfo.careerStart` | L68 | **Right Sidebar** | ✅ |
 | 21 | `personalInfo.causeOfDeath` | L68 | **Right Sidebar** | ✅ |
@@ -103,7 +103,7 @@
 | 28 | `voiceProfile.notableCharacteristics` (5) | L77 | **Dossier** → Notable list (L689) | ✅ |
 | 29 | `voiceProfile.languagesFluent` (4) | L77 | **Dossier** → Linguistic Arsenal (L700) | ✅ |
 | 30 | `voiceProfile.iconicDialogues` (2) | L77 | **The Craft** tab (L179 trigger) | ✅ |
-| 31 | `voiceProfile.playbackSingers` | L77 | Not specifically rendered | ⚠️ Minor |
+| 31 | `voiceProfile.playbackSingers` | L1485 | **The Craft** tab | ✅ Fixed |
 | 32 | `voiceProfile.signatureVoiceElements` | L77 | **Dossier** → Vocal Dynamics (L686) | ✅ |
 | 33 | `onScreenPersona` | L127 | **Dossier** → The Persona (L718-758) | ✅ |
 | 34 | `historicalImpact` | L128 | **Legacy** tab (L191 trigger) | ✅ |
@@ -128,7 +128,7 @@
 | 53 | `knownFor` | L89 | **Overview** → Defining Legacy (L427) | ✅ |
 
 > [!NOTE]
-> **3 Minor unrendered fields:** `era`, `legendStatus`, `voiceProfile.playbackSingers` — These are cosmetic metadata fields. They don't affect the profile page experience but could be added as badges in a future polish pass.
+> All minor cosmetic fields have now been implemented.
 
 **Result: 50/53 rendered ✅ — 3 minor cosmetic fields not shown (non-critical)**
 
@@ -142,7 +142,7 @@
 | 1 | `bio` | L69 `data.bio` | **Overview** → "The Legend" card (L339) | ✅ |
 | 2 | `title` | L259 `data.title` | **Banner** title lockup (L262) | ✅ |
 | 3 | `alternateNames` | L90 | **Banner** AKA pills (L269) | ✅ |
-| 4 | `careerPhase` | — | Not rendered | ⚠️ Minor |
+| 4 | `careerPhase` | L259 | **Banner** badge | ✅ Fixed |
 | 5 | `heroAura` | L72 | **Overview** → Aura Grid (L379) | ✅ |
 | 6 | `images` | L67 | **Banner** portrait + background | ✅ |
 | 7 | `personalInfo` | L68 | **Banner** badge + **Right Sidebar** | ✅ |
@@ -163,9 +163,9 @@
 | 22 | `knownFor` | L89 | **Overview** → Defining Legacy (L427) | ✅ |
 
 > [!NOTE]
-> **1 Minor unrendered field:** `careerPhase` — Cosmetic metadata, not critical for the profile page.
+> All cosmetic metadata fields have been implemented.
 
-**Result: 21/22 rendered ✅ — 1 minor cosmetic field not shown (non-critical)**
+**Result: 22/22 rendered ✅ — 100% Complete**
 
 ---
 
@@ -212,6 +212,16 @@
 > + )}
 > ```
 
+### Fix 4: Minor Cosmetic Fields & Extended Family (NTR / Naveen)
+
+> [!IMPORTANT]
+> **Problem:** 5 minor fields were not rendering: `era`, `legendStatus`, `careerPhase`, `voiceProfile.playbackSingers`, and extended family info (`spouse`, `children`, `grandchildren`).
+>
+> **Fix applied:** 
+> - Added `era`, `legendStatus`, and `careerPhase` as pills in the banner header block (L250-260).
+> - Added a new `Musical Voices` block in The Craft tab for `playbackSingers` (L1485).
+> - Added `Spouse`, `Children`, and `Grandchildren` mapping in the `Family Heritage` sidebar (L2923-2940).
+
 ---
 
 ## 📊 Summary
@@ -219,10 +229,10 @@
 | Sub-Category | Profile | JSON Sections | Rendered | Minor Skips | Status |
 |---|---|---|---|---|---|
 | **Superstars** | Prabhas | 50 | 50 | 0 | ✅ 100% |
-| **Legends** | N.T. Rama Rao | 53 | 50 | 3 cosmetic | ✅ 100% (after fixes) |
-| **Rising Stars** | Naveen Polishetty | 22 | 21 | 1 cosmetic | ✅ 100% |
+| **Legends** | N.T. Rama Rao | 53 | 53 | 0 | ✅ 100% |
+| **Rising Stars** | Naveen Polishetty | 22 | 22 | 0 | ✅ 100% |
 
-**Overall Heroes Category: 121/125 sections rendering (4 cosmetic metadata skips) = 100% functional ✅**
+**Overall Heroes Category: 125/125 sections rendering = 100% functional ✅**
 
 > [!TIP]
 > All 3 bug fixes were committed and pushed to GitHub on 2026-05-07.

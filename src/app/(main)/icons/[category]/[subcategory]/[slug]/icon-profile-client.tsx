@@ -71,8 +71,9 @@ export default function IconProfileClient({
   // Aura extraction (Hero vs Heroine vs Diva)
   const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || null;
   
-  const physicalStats = data.physicalStats || null;
+  const physicalStats = data.physicalStats || data.appearance || null;
   const appearance = data.appearance || null;
+  const detailedSocialInfluence = data.socialMediaInfluence?.instagram ? data.socialMediaInfluence : null;
   const transformations = data.physicalTransformations || data.beautyTransformations || data.transformations || [];
   const voiceProfile = data.voiceProfile || null;
   const lifestyle = data.lifestyle || null;
@@ -84,6 +85,8 @@ export default function IconProfileClient({
   const genreStrength = data.genreStrength || data.genreExpertise || data.genreSpecialization || null;
   const philanthropy = data.philanthropy || data.philanthrophy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || data.awardsAndRecognition || [];
+  const awardsByType = data.awardsBYType || data.awardsByType || null;
+  const boxOfficeMilestones = data.boxOfficeMilestones || null;
   const quotes = data.quotes || [];
   const trivia = data.trivia || [];
   const knownFor = data.knownFor || [];
@@ -184,7 +187,7 @@ export default function IconProfileClient({
     tabs.push({ id: "empire", label: "Empire" });
   }
 
-  if (careerStats || genreStrength || awards.length > 0 || careerRetrospective || streamingDominance || careersTimeline) {
+  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || careersTimeline) {
     tabs.push({ id: "career", label: "Career" });
   }
 
@@ -192,7 +195,7 @@ export default function IconProfileClient({
     tabs.push({ id: "legacy", label: "Legacy" });
   }
 
-  if (fanbaseAnalysis || competitorComparison || superstarpotential || careerTrajectory || uniqueSellingProposition || upcomingProjects.length > 0 || futureOutlook) {
+  if (fanbaseAnalysis || competitorComparison || superstarpotential || careerTrajectory || uniqueSellingProposition || upcomingProjects.length > 0 || futureOutlook || detailedSocialInfluence) {
     tabs.push({ id: "trajectory", label: "Trajectory" });
   }
 
@@ -248,6 +251,21 @@ export default function IconProfileClient({
                 {data.generation && (
                   <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] bg-white/5 border border-white/10 backdrop-blur-md text-neutral-400">
                     {data.generation}
+                  </span>
+                )}
+                {data.eraDefiner && (
+                  <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] bg-white/5 border border-white/10 backdrop-blur-md text-neutral-400">
+                    {data.eraDefiner}
+                  </span>
+                )}
+                {data.commercialTier && (
+                  <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] bg-white/5 border border-white/10 backdrop-blur-md text-neutral-400">
+                    {data.commercialTier}
+                  </span>
+                )}
+                {data.activeStatus && (
+                  <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] bg-white/5 border border-white/10 backdrop-blur-md text-neutral-400">
+                    {data.activeStatus}
                   </span>
                 )}
                 {data.era && (
@@ -605,6 +623,14 @@ export default function IconProfileClient({
                             <li key={i} className="text-neutral-400 text-xs leading-relaxed flex gap-2"><span className="text-neutral-600 shrink-0">—</span>{feat}</li>
                           ))}
                         </ul>
+                      </div>
+                    )}
+
+                    {/* Personal Style */}
+                    {physicalStats.personalStyle && (
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 mb-6">
+                        <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Personal Style</h4>
+                        <p className="text-neutral-400 text-sm leading-relaxed">{physicalStats.personalStyle}</p>
                       </div>
                     )}
 
@@ -1939,6 +1965,69 @@ export default function IconProfileClient({
                   </div>
                 )}
 
+                {/* Box Office Milestones */}
+                {boxOfficeMilestones && (
+                  <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 mb-8 mt-8">
+                    <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-6 ${theme.accent}`}>Box Office Milestones</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                      <div className="p-4 rounded-xl border border-white/5 bg-white/5">
+                        <span className="text-xs text-neutral-400 block mb-1">Career Gross</span>
+                        <span className="text-lg font-black text-white">{boxOfficeMilestones.totalCareerBoxOffice || 'N/A'}</span>
+                      </div>
+                      <div className="p-4 rounded-xl border border-white/5 bg-white/5">
+                        <span className="text-xs text-neutral-400 block mb-1">Hit Rate</span>
+                        <span className="text-lg font-black text-white">{boxOfficeMilestones.hitPercentage || 'N/A'}</span>
+                      </div>
+                    </div>
+                    {boxOfficeMilestones.highestGrossingFilms && (
+                      <div className="mt-4">
+                        <h5 className="text-[9px] uppercase tracking-widest text-neutral-500 font-bold mb-3">Highest Grossing Films</h5>
+                        <div className="space-y-2">
+                          {boxOfficeMilestones.highestGrossingFilms.map((film: any, idx: number) => (
+                            <div key={idx} className="flex justify-between items-center p-3 rounded-lg bg-black/50 border border-white/5">
+                              <span className="text-xs font-bold text-neutral-200">{film.film} <span className="text-[10px] font-normal text-neutral-500">({film.year})</span></span>
+                              <span className={`text-xs font-black ${theme.accent}`}>{film.collection}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Awards By Type */}
+                {awardsByType && (
+                  <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 mb-8 mt-8">
+                    <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-6 ${theme.accent}`}>Awards Overview</h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      {awardsByType.totalAwardsWon && (
+                        <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                          <span className="text-xs text-neutral-400">Total Won</span>
+                          <span className="text-sm font-black text-white">{awardsByType.totalAwardsWon}</span>
+                        </div>
+                      )}
+                      {awardsByType.totalNominations && (
+                        <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                          <span className="text-xs text-neutral-400">Nominations</span>
+                          <span className="text-sm font-black text-white">{awardsByType.totalNominations}</span>
+                        </div>
+                      )}
+                      {awardsByType.nationalAwards && (
+                        <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                          <span className="text-xs text-neutral-400">National</span>
+                          <span className="text-sm font-black text-white">{awardsByType.nationalAwards}</span>
+                        </div>
+                      )}
+                      {awardsByType.stateAwards && (
+                        <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                          <span className="text-xs text-neutral-400">State</span>
+                          <span className="text-sm font-black text-white">{awardsByType.stateAwards}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
                 {/* Genre Strength Radar */}
                 {genreStrength && (
                   <div>
@@ -2536,6 +2625,58 @@ export default function IconProfileClient({
                         <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 ${theme.accent}`}>Long-term Forecast</h4>
                         <p className="text-neutral-400 text-sm leading-relaxed">{superstarpotential.forecast}</p>
                       </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Detailed Social Influence */}
+                {detailedSocialInfluence && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Digital Influence
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className={`p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0a] ${theme.glowColor} col-span-1 md:col-span-2 flex flex-col items-center text-center justify-center`}>
+                        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2 block">Influence Score</span>
+                        <span className={`text-6xl font-black ${theme.accent}`}>{detailedSocialInfluence.digitalInfluenceScore}</span>
+                        <p className="text-neutral-400 mt-4 text-sm max-w-lg">{detailedSocialInfluence.socialMediaStrategy}</p>
+                      </div>
+                      
+                      {detailedSocialInfluence.instagram && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-[#E1306C]`}>Instagram</h4>
+                          <div className="space-y-4">
+                            <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                              <span className="text-xs text-neutral-400">Followers</span>
+                              <span className="text-sm font-black text-white">{detailedSocialInfluence.instagram.followers?.toLocaleString() || 'N/A'}</span>
+                            </div>
+                            <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                              <span className="text-xs text-neutral-400">Engagement</span>
+                              <span className="text-sm font-black text-white">{detailedSocialInfluence.instagram.engagementRate}</span>
+                            </div>
+                            <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                              <span className="text-xs text-neutral-400">Level</span>
+                              <span className="text-sm font-black text-white">{detailedSocialInfluence.instagram.influencerLevel}</span>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {detailedSocialInfluence.youtube && detailedSocialInfluence.youtube.active && (
+                        <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-4 text-[#FF0000]`}>YouTube</h4>
+                          <div className="space-y-4">
+                            <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                              <span className="text-xs text-neutral-400">Channel</span>
+                              <span className="text-sm font-black text-white">{detailedSocialInfluence.youtube.channel}</span>
+                            </div>
+                            <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                              <span className="text-xs text-neutral-400">Subscribers</span>
+                              <span className="text-sm font-black text-white">{detailedSocialInfluence.youtube.subscribers?.toLocaleString() || 'N/A'}</span>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
