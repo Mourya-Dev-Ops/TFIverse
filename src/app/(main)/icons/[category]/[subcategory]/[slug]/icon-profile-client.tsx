@@ -68,8 +68,8 @@ export default function IconProfileClient({
   const personalInfo = data.personalInfo || {};
   const social = data.socialMedia || data.socialMediaInfluence || data.socialMediaPresence || {};
   
-  // Aura extraction (Hero vs Heroine vs Diva vs Villain vs Comedian vs Character Artist vs Singer)
-  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || null;
+  // Aura extraction (Hero vs Heroine vs Diva vs Villain vs Comedian vs Character Artist vs Singer vs Producer)
+  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || data.producerEssence || null;
   
   const physicalStats = data.physicalStats || data.appearance || null;
   const appearance = data.appearance || null;
@@ -81,7 +81,7 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || data.hobbies || [];
-  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || null;
+  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || data.productionStatistics || null;
   const genreStrength = data.genreStrength || data.genreExpertise || data.genreSpecialization || null;
   const philanthropy = data.philanthropy || data.philanthrophy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || data.awardsAndRecognition || [];
@@ -179,6 +179,14 @@ export default function IconProfileClient({
   const musicalFamily = data.musicalFamily || null;
   const songsSung = data.songsSung || null;
 
+  // Producer specific data
+  const productionHouse = data.productionHouse || null;
+  const productionByDecade = data.productionByDecade || null;
+  const starCollaborations = data.starCollaborations || null;
+  const talentDiscovery = data.talentDiscovery || null;
+  const landmarkProductions = data.landmarkProductions || null;
+  const productionApproach = data.productionApproach || null;
+
   // Director specific data
   const rawVisionaryEssence = data.visionaryEssence || data.emergingEssence || data.hitmakerEssence || null;
   const visionaryEssence = rawVisionaryEssence ? {
@@ -217,7 +225,7 @@ export default function IconProfileClient({
   const commercialImpact = data.commercialImpact || null;
   const careersTimeline = data.careersTimeline || null;
   const viralMoments = data.viralMoments || null;
-  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || null;
+  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || data.filmsProduced || null;
   
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
@@ -232,19 +240,19 @@ export default function IconProfileClient({
     tabs.push({ id: "glamour", label: "Glamour" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility) {
-    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : "The Craft" });
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility || starCollaborations || productionApproach) {
+    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : category === "producers" ? "Production Blueprint" : "The Craft" });
   }
 
-  if (lifestyle || financial || politicalCareer || brandValue) {
+  if (lifestyle || financial || politicalCareer || brandValue || productionHouse) {
     tabs.push({ id: "empire", label: "Empire" });
   }
 
-  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung) {
+  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung || productionByDecade || landmarkProductions) {
     tabs.push({ id: "career", label: "Career" });
   }
 
-  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments || legendaryComedyMoments || memorableScenes || livePerformances || musicalFamily) {
+  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments || legendaryComedyMoments || memorableScenes || livePerformances || musicalFamily || talentDiscovery) {
     tabs.push({ id: "legacy", label: "Legacy" });
   }
 
@@ -1597,6 +1605,92 @@ export default function IconProfileClient({
                   </div>
                 )}
 
+                {/* Producer: Production Approach */}
+                {productionApproach && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaIndustry /> Production Blueprint
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(productionApproach).map(([key, value]: [string, any]) => (
+                        <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                          </h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Producer: Star & Director Collaborations */}
+                {starCollaborations && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaHandshake /> Landmark Partnerships
+                    </h3>
+                    
+                    {starCollaborations.heroCollaborations && Array.isArray(starCollaborations.heroCollaborations) && (
+                      <div className="mb-8">
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-4 px-2">Hero Collaborations</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {starCollaborations.heroCollaborations.map((collab: any, idx: number) => (
+                            <div key={idx} className="p-6 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors">
+                              <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                              <div className="pl-4">
+                                <div className="flex items-center justify-between mb-3">
+                                  <h5 className="text-lg font-black text-white">{collab.heroName}</h5>
+                                  <span className={`text-sm font-black ${theme.accent}`}>{collab.filmsTogether} <span className="text-[10px] uppercase text-neutral-500">Films</span></span>
+                                </div>
+                                <p className="text-neutral-400 text-xs leading-relaxed mb-3">{collab.partnershipSuccess}</p>
+                                {collab.mostSuccessfulProduction && (
+                                  <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                    <span className="text-xs text-neutral-400">Biggest Hit</span>
+                                    <span className="text-xs font-bold text-white">{collab.mostSuccessfulProduction.split('-')[0]}</span>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {starCollaborations.directorPartnerships && Array.isArray(starCollaborations.directorPartnerships) && (
+                      <div>
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-4 px-2">Director Partnerships</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {starCollaborations.directorPartnerships.map((collab: any, idx: number) => (
+                            <div key={idx} className="p-6 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors">
+                              <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                              <div className="pl-4">
+                                <div className="flex items-center justify-between mb-3">
+                                  <h5 className="text-lg font-black text-white">{collab.directorName}</h5>
+                                  <span className={`text-sm font-black ${theme.accent}`}>{collab.filmsTogether} <span className="text-[10px] uppercase text-neutral-500">Films</span></span>
+                                </div>
+                                <p className="text-neutral-400 text-xs leading-relaxed mb-3">{collab.creativePartnership}</p>
+                                {collab.successRate && (
+                                  <div className="flex justify-between items-center border-b border-white/5 pb-2 mb-2">
+                                    <span className="text-xs text-neutral-400">Success Rate</span>
+                                    <span className="text-xs font-bold text-white">{collab.successRate}</span>
+                                  </div>
+                                )}
+                                {collab.mostSuccessfulProduction && (
+                                  <div className="flex justify-between items-center border-b border-white/5 pb-2">
+                                    <span className="text-xs text-neutral-400">Biggest Hit</span>
+                                    <span className="text-xs font-bold text-white">{collab.mostSuccessfulProduction}</span>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
                 {/* Music Director Sonic Blueprint */}
                 {musicalEssence && (
                   <div className="mb-12">
@@ -2446,6 +2540,62 @@ export default function IconProfileClient({
                   </div>
                 )}
 
+                {/* Producer: Production House */}
+                {productionHouse && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaBuilding /> Production Empire
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      <div className="pl-4">
+                        <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4 border-b border-white/5 pb-6">
+                          <div>
+                            <h4 className="text-2xl font-black text-white mb-1">{productionHouse.bannerName}</h4>
+                            {productionHouse.tagline && <p className="text-neutral-400 text-sm italic">"{productionHouse.tagline}"</p>}
+                          </div>
+                          {productionHouse.established && (
+                            <div className="text-right">
+                              <span className="text-[10px] font-black uppercase tracking-widest text-neutral-500 block mb-1">Established</span>
+                              <span className={`text-xl font-black ${theme.accent}`}>{productionHouse.established}</span>
+                            </div>
+                          )}
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          {productionHouse.founders && (
+                            <div>
+                              <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Founders</h5>
+                              <p className="text-neutral-300 text-sm font-bold">{Array.isArray(productionHouse.founders) ? productionHouse.founders.join(', ') : productionHouse.founders}</p>
+                            </div>
+                          )}
+                          {productionHouse.totalProductions && (
+                            <div>
+                              <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Total Productions</h5>
+                              <p className={`text-neutral-300 text-lg font-black ${theme.accent}`}>{productionHouse.totalProductions}+ Films</p>
+                            </div>
+                          )}
+                          {productionHouse.activeBanners && Array.isArray(productionHouse.activeBanners) && (
+                            <div className="md:col-span-2">
+                              <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-3">Active Banners</h5>
+                              <div className="flex flex-wrap gap-2">
+                                {productionHouse.activeBanners.map((banner: string, i: number) => (
+                                  <span key={i} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] text-neutral-300 font-bold">{banner}</span>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                          {productionHouse.industryReputation && (
+                            <div className="md:col-span-2">
+                              <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Industry Reputation</h5>
+                              <p className="text-neutral-400 text-xs leading-relaxed border-l-2 border-white/10 pl-3">{productionHouse.industryReputation}</p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Brand Value (Director) */}
                 {brandValue && (
                   <div>
@@ -2881,6 +3031,53 @@ export default function IconProfileClient({
                   </div>
                 )}
 
+                {/* Producer: Production By Decade */}
+                {productionByDecade && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaCalendarAlt /> Era Dominance
+                    </h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                      {Object.entries(productionByDecade).map(([decade, details]: [string, any]) => (
+                        <div key={decade} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 text-center group hover:border-white/10 transition-colors">
+                          <span className={`text-2xl font-black ${theme.accent} mb-2 block`}>{decade}</span>
+                          <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold block mb-3">{details.films} Films</span>
+                          {details.hits && <span className="text-xs font-black text-white block mb-1">{details.hits} Hits</span>}
+                          {details.blockbusters && <span className={`text-[10px] font-bold ${theme.accent} block`}>{details.blockbusters} Blockbusters</span>}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Producer: Landmark Productions */}
+                {landmarkProductions && Array.isArray(landmarkProductions) && landmarkProductions.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaFilm /> Landmark Productions
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {landmarkProductions.map((film: any, idx: number) => (
+                        <div key={idx} className="p-6 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <div className="flex flex-col gap-1 mb-3">
+                              <h4 className="text-lg font-black text-white">{film.title}</h4>
+                              <span className={`text-[10px] font-black uppercase tracking-widest ${theme.accent}`}>{film.year}</span>
+                            </div>
+                            <div className="flex flex-wrap gap-2 mb-3">
+                              {film.director && <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] uppercase tracking-widest font-bold text-neutral-300">Dir: {film.director}</span>}
+                              {film.boxOffice && <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] uppercase tracking-widest font-bold text-green-500">BO: {film.boxOffice}</span>}
+                            </div>
+                            {film.significance && <p className="text-neutral-400 text-xs leading-relaxed mt-2">{film.significance}</p>}
+                            {film.industryImpact && <p className="text-neutral-500 text-[10px] leading-relaxed mt-2 italic border-l-2 border-white/10 pl-3">{film.industryImpact}</p>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Commercial Impact (Music Director) */}
                 {commercialImpact && (
                   <div className="mt-8">
@@ -3097,6 +3294,59 @@ export default function IconProfileClient({
                               </li>
                             ))}
                           </ul>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Producer: Talent Discovery */}
+                {talentDiscovery && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Talent Architect
+                    </h3>
+                    
+                    {talentDiscovery.talentNurturingReputation && (
+                      <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 mb-6">
+                        <p className="text-neutral-300 text-sm leading-relaxed border-l-2 border-white/10 pl-3 italic">"{talentDiscovery.talentNurturingReputation}"</p>
+                      </div>
+                    )}
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {talentDiscovery.heroesLaunched && Array.isArray(talentDiscovery.heroesLaunched) && (
+                        <div>
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-4 px-2">Heroes Launched</h4>
+                          <div className="space-y-4">
+                            {talentDiscovery.heroesLaunched.map((hero: any, i: number) => (
+                              <div key={i} className="p-6 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                                <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                                <div className="pl-4">
+                                  <h5 className="text-sm font-black text-white mb-1">{hero.heroName}</h5>
+                                  <span className={`text-[10px] font-black uppercase tracking-widest ${theme.accent} block mb-2`}>{hero.launchFilm} ({hero.year})</span>
+                                  {hero.outcome && <p className="text-neutral-400 text-[10px] leading-relaxed">{hero.outcome}</p>}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {talentDiscovery.directorsIntroduced && Array.isArray(talentDiscovery.directorsIntroduced) && (
+                        <div>
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-4 px-2">Directors Introduced</h4>
+                          <div className="space-y-4">
+                            {talentDiscovery.directorsIntroduced.map((director: any, i: number) => (
+                              <div key={i} className="p-6 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                                <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                                <div className="pl-4">
+                                  <h5 className="text-sm font-black text-white mb-1">{director.directorName}</h5>
+                                  <span className={`text-[10px] font-black uppercase tracking-widest ${theme.accent} block mb-2`}>{director.debutFilm} ({director.year})</span>
+                                  {director.outcome && <p className="text-neutral-400 text-[10px] leading-relaxed">{director.outcome}</p>}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>
