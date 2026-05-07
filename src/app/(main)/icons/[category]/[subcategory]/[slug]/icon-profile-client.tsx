@@ -69,7 +69,7 @@ export default function IconProfileClient({
   const social = data.socialMedia || data.socialMediaInfluence || data.socialMediaPresence || {};
   
   // Aura extraction (all categories)
-  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || data.producerEssence || data.cinematographyEssence || data.editingEssence || data.lyricalEssence || data.choreographyEssence || data.stuntEssence || data.artDirectionEssence || data.costumeEssence || null;
+  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || data.producerEssence || data.cinematographyEssence || data.editingEssence || data.lyricalEssence || data.choreographyEssence || data.stuntEssence || data.artDirectionEssence || data.costumeEssence || data.vfxEssence || null;
   
   const physicalStats = data.physicalStats || data.appearance || null;
   const appearance = data.appearance || null;
@@ -81,7 +81,7 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || data.hobbies || [];
-  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || data.productionStatistics || data.cinematographyStatistics || data.editingStatistics || data.lyricalStatistics || data.choreographyStatistics || data.stuntStatistics || data.artDirectionStatistics || data.costumeStatistics || null;
+  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || data.productionStatistics || data.cinematographyStatistics || data.editingStatistics || data.lyricalStatistics || data.choreographyStatistics || data.stuntStatistics || data.artDirectionStatistics || data.costumeStatistics || data.vfxStatistics || null;
   const genreStrength = data.genreStrength || data.genreExpertise || data.genreSpecialization || null;
   const philanthropy = data.philanthropy || data.philanthrophy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || data.awardsAndRecognition || [];
@@ -232,6 +232,13 @@ export default function IconProfileClient({
   const iconicCharacterCostumes = data.iconicCharacterCostumes || null;
   const characterCostumeApproach = data.characterCostumeApproach || null;
 
+  // VFX Supervisor specific data
+  const vfxStyle = data.vfxStyle || null;
+  const technicalExpertise = data.technicalExpertise || null;
+  const iconicVFXSequences = data.iconicVFXSequences || null;
+  const vfxStudioAssociation = data.vfxStudioAssociation || null;
+  const innovationInVFX = data.innovationInVFX || null;
+
   // Director specific data
   const rawVisionaryEssence = data.visionaryEssence || data.emergingEssence || data.hitmakerEssence || null;
   const visionaryEssence = rawVisionaryEssence ? {
@@ -270,7 +277,7 @@ export default function IconProfileClient({
   const commercialImpact = data.commercialImpact || null;
   const careersTimeline = data.careersTimeline || null;
   const viralMoments = data.viralMoments || null;
-  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || data.filmsProduced || data.filmsShot || data.filmsEdited || data.songsWritten || data.songsChoreographed || data.filmsChoreographed || data.filmsDesigned || data.filmsCostumed || data.filmsWorkedOn || null;
+  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || data.filmsProduced || data.filmsShot || data.filmsEdited || data.songsWritten || data.songsChoreographed || data.filmsChoreographed || data.filmsDesigned || data.filmsCostumed || data.filmsWorkedOn || data.filmsSupervised || null;
   
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
@@ -285,19 +292,19 @@ export default function IconProfileClient({
     tabs.push({ id: "glamour", label: "Glamour" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility || starCollaborations || productionApproach || visualStyle || technicalExpertise || editingStyle || pacingAndRhythm || lyricalStyle || frequentDirectorCollaborations || danceStyle || danceStyleVersatility || actorCollaborations || actionStyle || stuntExpertise || actionVersatility || designStyle || productionDesignExpertise || costumeExpertise || characterCostumeApproach) {
-    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : category === "producers" ? "Production Blueprint" : category === "cinematographers" ? "Visual Signature" : category === "editors" ? "The Edit Room" : category === "lyricists" ? "The Pen & Paper" : category === "choreographers" ? "The Dance Floor" : category === "stunt-directors" ? "The War Room" : category === "art-directors" ? "The Design Studio" : category === "costume-designers" ? "The Atelier" : "The Craft" });
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility || starCollaborations || productionApproach || visualStyle || technicalExpertise || editingStyle || pacingAndRhythm || lyricalStyle || frequentDirectorCollaborations || danceStyle || danceStyleVersatility || actorCollaborations || actionStyle || stuntExpertise || actionVersatility || designStyle || productionDesignExpertise || costumeExpertise || characterCostumeApproach || vfxStyle) {
+    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : category === "producers" ? "Production Blueprint" : category === "cinematographers" ? "Visual Signature" : category === "editors" ? "The Edit Room" : category === "lyricists" ? "The Pen & Paper" : category === "choreographers" ? "The Dance Floor" : category === "stunt-directors" ? "The War Room" : category === "art-directors" ? "The Design Studio" : category === "costume-designers" ? "The Atelier" : category === "vfx-supervisors" ? "The VFX Lab" : "The Craft" });
   }
 
   if (lifestyle || financial || politicalCareer || brandValue || productionHouse) {
     tabs.push({ id: "empire", label: "Empire" });
   }
 
-  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung || productionByDecade || landmarkProductions || iconicVisuallyStunningFilms || iconicEditedFilms || iconicSongsWritten || iconicChoreography || iconicActionSequences || iconicSetDesigns || iconicCharacterCostumes) {
+  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung || productionByDecade || landmarkProductions || iconicVisuallyStunningFilms || iconicEditedFilms || iconicSongsWritten || iconicChoreography || iconicActionSequences || iconicSetDesigns || iconicCharacterCostumes || iconicVFXSequences) {
     tabs.push({ id: "career", label: "Career" });
   }
 
-  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments || legendaryComedyMoments || memorableScenes || livePerformances || musicalFamily || talentDiscovery || teluguLanguageContribution || literaryWorks || famousLyricalLines || viralDanceMoments || signatureMovesCreated || safetyAndProtocols || internationalWork || researchAndAuthenticity) {
+  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments || legendaryComedyMoments || memorableScenes || livePerformances || musicalFamily || talentDiscovery || teluguLanguageContribution || literaryWorks || famousLyricalLines || viralDanceMoments || signatureMovesCreated || safetyAndProtocols || internationalWork || researchAndAuthenticity || innovationInVFX) {
     tabs.push({ id: "legacy", label: "Legacy" });
   }
 
@@ -1718,6 +1725,65 @@ export default function IconProfileClient({
                                 <li key={i} className="text-neutral-300 text-xs leading-relaxed border-l-2 border-white/10 pl-3">
                                   {item}
                                 </li>
+                              ))}
+                            </ul>
+                          ) : null}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* VFX Supervisor: VFX Style */}
+                {vfxStyle && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaCubes /> Visual Signature
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {Object.entries(vfxStyle).map(([key, value]: [string, any]) => (
+                          <div key={key} className="pl-4">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </h4>
+                            {typeof value === 'string' ? (
+                              <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                            ) : Array.isArray(value) ? (
+                              <ul className="space-y-1">
+                                {value.map((item: string, i: number) => (
+                                  <li key={i} className="text-neutral-300 text-sm leading-relaxed flex items-start gap-2">
+                                    <span className={`w-1.5 h-1.5 rounded-full ${theme.accentBg} mt-1.5 flex-shrink-0`} /> <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : null}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* VFX Supervisor: Technical Expertise */}
+                {technicalExpertise && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaMicrochip /> The VFX Suite
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(technicalExpertise).map(([key, value]: [string, any]) => (
+                        <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors">
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-neutral-500">
+                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                          </h4>
+                          {typeof value === 'string' ? (
+                            <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                          ) : Array.isArray(value) ? (
+                            <ul className="space-y-2">
+                              {value.map((item: string, i: number) => (
+                                <li key={i} className="text-neutral-300 text-xs leading-relaxed border-l-2 border-white/10 pl-3">{item}</li>
                               ))}
                             </ul>
                           ) : null}
@@ -3645,6 +3711,116 @@ export default function IconProfileClient({
                   </div>
                 )}
 
+                {/* VFX Supervisor: Iconic VFX Sequences */}
+                {iconicVFXSequences && Array.isArray(iconicVFXSequences) && iconicVFXSequences.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaBolt /> Legendary VFX Mastercuts
+                    </h3>
+                    <div className="space-y-4">
+                      {iconicVFXSequences.map((seq: any, idx: number) => (
+                        <div key={idx} className="p-6 md:p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                              <div>
+                                <h4 className="text-xl font-black text-white">{seq.film} ({seq.year})</h4>
+                                <span className={`text-xs font-black uppercase tracking-widest ${theme.accent}`}>Dir: {seq.director}</span>
+                              </div>
+                              {seq.awards && Array.isArray(seq.awards) && (
+                                <div className="flex flex-wrap gap-2 justify-end">
+                                  {seq.awards.map((award: string, i: number) => (
+                                    <span key={i} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] uppercase tracking-widest font-bold text-yellow-500">🏆 {award}</span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 pt-4 border-t border-white/5">
+                              <div>
+                                {seq.sequence && (
+                                  <div className="mb-4">
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Sequence Description</h5>
+                                    <p className="text-neutral-300 text-sm leading-relaxed">{seq.sequence}</p>
+                                  </div>
+                                )}
+                                {seq.vfxType && (
+                                  <div className="mb-4">
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">VFX Type</h5>
+                                    <span className="px-2 py-1 bg-white/5 border border-white/10 rounded text-[9px] text-neutral-400">{seq.vfxType}</span>
+                                  </div>
+                                )}
+                                {seq.softwareUsed && Array.isArray(seq.softwareUsed) && (
+                                  <div>
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Tech Stack</h5>
+                                    <div className="flex flex-wrap gap-1">
+                                      {seq.softwareUsed.map((tech: string, i: number) => (
+                                        <span key={i} className="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[9px] text-neutral-300">{tech}</span>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                              <div>
+                                {seq.technicalAchievement && (
+                                  <div className="mb-4">
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Technical Achievement</h5>
+                                    <p className="text-neutral-300 text-xs leading-relaxed">{seq.technicalAchievement}</p>
+                                  </div>
+                                )}
+                                {seq.visualImpact && (
+                                  <div className="mb-4">
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Visual Impact</h5>
+                                    <p className="text-neutral-400 text-xs leading-relaxed border-l-2 border-white/10 pl-3">{seq.visualImpact}</p>
+                                  </div>
+                                )}
+                                {seq.industryImpact && (
+                                  <div>
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Industry Impact</h5>
+                                    <p className="text-neutral-400 text-xs leading-relaxed italic border-l-2 border-white/10 pl-3">{seq.industryImpact}</p>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* VFX Supervisor: VFX Studio Association */}
+                {vfxStudioAssociation && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaBuilding /> Studio Ecosystem
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {Object.entries(vfxStudioAssociation).map(([key, value]: [string, any]) => (
+                          <div key={key} className="pl-4">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </h4>
+                            {typeof value === 'string' ? (
+                              <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                            ) : Array.isArray(value) ? (
+                              <ul className="space-y-1">
+                                {value.map((item: string, i: number) => (
+                                  <li key={i} className="text-neutral-300 text-sm leading-relaxed flex items-start gap-2">
+                                    <span className={`w-1.5 h-1.5 rounded-full ${theme.accentBg} mt-1.5 flex-shrink-0`} /> <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : null}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Costume Designer: Iconic Character Costumes */}
                 {iconicCharacterCostumes && Array.isArray(iconicCharacterCostumes) && iconicCharacterCostumes.length > 0 && (
                   <div className="mb-12">
@@ -4399,6 +4575,35 @@ export default function IconProfileClient({
                           </div>
                         </div>
                       )}
+                    </div>
+                  </div>
+                )}
+
+                {/* VFX Supervisor: Innovation in VFX */}
+                {innovationInVFX && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaLightbulb /> Technical Breakthroughs
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(innovationInVFX).map(([key, value]: [string, any]) => (
+                        <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                          </h4>
+                          {typeof value === 'string' ? (
+                            <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                          ) : Array.isArray(value) ? (
+                            <ul className="space-y-2">
+                              {value.map((item: string, i: number) => (
+                                <li key={i} className="text-neutral-300 text-xs leading-relaxed flex items-start gap-2">
+                                  <span className={`w-1.5 h-1.5 rounded-full ${theme.accentBg} mt-1.5 flex-shrink-0`} /> <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : null}
+                        </div>
+                      ))}
                     </div>
                   </div>
                 )}
