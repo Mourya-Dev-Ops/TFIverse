@@ -250,6 +250,21 @@ export default function IconProfileClient({
                     {data.generation}
                   </span>
                 )}
+                {data.era && (
+                  <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] bg-white/5 border border-white/10 backdrop-blur-md text-neutral-400">
+                    {data.era}
+                  </span>
+                )}
+                {data.legendStatus && (
+                  <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] bg-white/5 border border-white/10 backdrop-blur-md text-neutral-400">
+                    {data.legendStatus}
+                  </span>
+                )}
+                {data.careerPhase && (
+                  <span className="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] bg-white/5 border border-white/10 backdrop-blur-md text-neutral-400">
+                    {data.careerPhase}
+                  </span>
+                )}
               </div>
 
               <h1 className="text-6xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] mb-4 drop-shadow-2xl">
@@ -1478,6 +1493,27 @@ export default function IconProfileClient({
                         <div key={lang} className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5 flex items-center justify-between">
                           <span className="text-xs font-bold text-white uppercase tracking-wide">{lang}</span>
                           <span className="text-xs text-neutral-400 text-right max-w-[60%]">{artist}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Playback Singers */}
+                {voiceProfile?.playbackSingers && (
+                  <div>
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-6 px-2 mt-8">Musical Voices</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {voiceProfile.playbackSingers.primary && (
+                        <div className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5 flex items-center justify-between">
+                          <span className="text-xs font-bold text-white uppercase tracking-wide">Primary Voice</span>
+                          <span className="text-xs text-neutral-400 text-right max-w-[60%]">{voiceProfile.playbackSingers.primary}</span>
+                        </div>
+                      )}
+                      {voiceProfile.playbackSingers.others?.map((singer: string, idx: number) => (
+                        <div key={idx} className="p-4 rounded-xl bg-[#0a0a0a] border border-white/5 flex items-center justify-between">
+                          <span className="text-xs font-bold text-white uppercase tracking-wide">Frequent Voice</span>
+                          <span className="text-xs text-neutral-400 text-right max-w-[60%]">{singer}</span>
                         </div>
                       ))}
                     </div>
@@ -2925,10 +2961,29 @@ export default function IconProfileClient({
                       {personalInfo.familyInfo.family?.mother && (
                         <span className="text-[10px] text-neutral-400">{personalInfo.familyInfo.family.mother}</span>
                       )}
+                      {personalInfo.familyInfo.spouse && (
+                        <span className="text-[10px] text-neutral-400 mt-1">Spouse: {personalInfo.familyInfo.spouse}</span>
+                      )}
                       {personalInfo.familyInfo.family?.siblings && personalInfo.familyInfo.family.siblings.length > 0 && (
                         <div className="mt-1 space-y-1">
                           {personalInfo.familyInfo.family.siblings.map((s: any, i: number) => (
-                            <span key={i} className="text-[10px] text-neutral-400 block">{s.name} — {s.relationship}</span>
+                            <span key={i} className="text-[10px] text-neutral-400 block">{s.name} — {s.relationship || s.profession}</span>
+                          ))}
+                        </div>
+                      )}
+                      {personalInfo.familyInfo.children && personalInfo.familyInfo.children.length > 0 && (
+                        <div className="mt-2 space-y-1">
+                          <span className="text-[9px] text-neutral-500 font-bold block">CHILDREN</span>
+                          {personalInfo.familyInfo.children.map((c: any, i: number) => (
+                            <span key={i} className="text-[10px] text-neutral-400 block">• {c.name} {c.profession ? `(${c.profession})` : ''}</span>
+                          ))}
+                        </div>
+                      )}
+                      {personalInfo.familyInfo.grandchildren && personalInfo.familyInfo.grandchildren.length > 0 && (
+                        <div className="mt-2 space-y-1">
+                          <span className="text-[9px] text-neutral-500 font-bold block">GRANDCHILDREN</span>
+                          {personalInfo.familyInfo.grandchildren.map((g: any, i: number) => (
+                            <span key={i} className="text-[10px] text-neutral-400 block">• {g.name} {g.profession ? `(${g.profession})` : ''}</span>
                           ))}
                         </div>
                       )}
