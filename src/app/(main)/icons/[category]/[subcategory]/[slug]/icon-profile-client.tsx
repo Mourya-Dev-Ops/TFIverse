@@ -69,7 +69,7 @@ export default function IconProfileClient({
   const social = data.socialMedia || data.socialMediaInfluence || data.socialMediaPresence || {};
   
   // Aura extraction (all categories)
-  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || data.producerEssence || data.cinematographyEssence || data.editingEssence || data.lyricalEssence || data.choreographyEssence || data.stuntEssence || data.artDirectionEssence || data.costumeEssence || data.vfxEssence || data.lineProducerEssence || null;
+  const aura = data.heroAura || data.queenAura || data.divaAura || data.risingQueenAura || data.antagonistEssence || data.comedyEssence || data.characterEssence || data.singerEssence || data.producerEssence || data.cinematographyEssence || data.editingEssence || data.lyricalEssence || data.choreographyEssence || data.stuntEssence || data.artDirectionEssence || data.costumeEssence || data.vfxEssence || data.lineProducerEssence || data.proEssence || null;
   
   const physicalStats = data.physicalStats || data.appearance || null;
   const appearance = data.appearance || null;
@@ -81,7 +81,7 @@ export default function IconProfileClient({
   const favorites = data.favorites || null;
   const collaborations = data.collaborations || null;
   const hobbies = data.hobbiesAndInterests || data.hobbies || [];
-  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || data.productionStatistics || data.cinematographyStatistics || data.editingStatistics || data.lyricalStatistics || data.choreographyStatistics || data.stuntStatistics || data.artDirectionStatistics || data.costumeStatistics || data.vfxStatistics || data.coordinationStatistics || null;
+  const careerStats = data.careerStats || data.careerStatistics || data.commercialStatistics || data.villainCareerStats || data.comedyCareerStats || data.characterStatistics || data.singingStatistics || data.productionStatistics || data.cinematographyStatistics || data.editingStatistics || data.lyricalStatistics || data.choreographyStatistics || data.stuntStatistics || data.artDirectionStatistics || data.costumeStatistics || data.vfxStatistics || data.coordinationStatistics || data.proStatistics || null;
   const genreStrength = data.genreStrength || data.genreExpertise || data.genreSpecialization || null;
   const philanthropy = data.philanthropy || data.philanthrophy || null;
   const awards = data.awards || data.beautyAwards || data.fashionAwards || data.awardsAndRecognition || [];
@@ -246,6 +246,14 @@ export default function IconProfileClient({
   const budgetManagementSkills = data.budgetManagementSkills || null;
   const problemSolvingAbilities = data.problemSolvingAbilities || null;
 
+  // PRO specific data
+  const mediaInfluence = data.mediaInfluence || null;
+  const journalismCareer = data.journalismCareer || null;
+  const industryRelationships = data.industryRelationships || null;
+  const strategicPromotions = data.strategicPromotions || null;
+  const industryContributions = data.industryContributions || null;
+  const legacyAndImpact = data.legacyAndImpact || null;
+
   // Director specific data
   const rawVisionaryEssence = data.visionaryEssence || data.emergingEssence || data.hitmakerEssence || null;
   const visionaryEssence = rawVisionaryEssence ? {
@@ -284,7 +292,7 @@ export default function IconProfileClient({
   const commercialImpact = data.commercialImpact || null;
   const careersTimeline = data.careersTimeline || null;
   const viralMoments = data.viralMoments || null;
-  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || data.filmsProduced || data.filmsShot || data.filmsEdited || data.songsWritten || data.songsChoreographed || data.filmsChoreographed || data.filmsDesigned || data.filmsCostumed || data.filmsWorkedOn || data.filmsSupervised || data.recentProductions || null;
+  const recentFilmography = data.recentFilmography || data.filmography || data.recentSongs || data.filmsProduced || data.filmsShot || data.filmsEdited || data.songsWritten || data.songsChoreographed || data.filmsChoreographed || data.filmsDesigned || data.filmsCostumed || data.filmsWorkedOn || data.filmsSupervised || data.recentProductions || data.filmsPromoted || null;
   
   // Available Tabs logic dynamically generated based on data availability
   const tabs = [
@@ -299,19 +307,19 @@ export default function IconProfileClient({
     tabs.push({ id: "glamour", label: "Glamour" });
   }
 
-  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility || starCollaborations || productionApproach || visualStyle || technicalExpertise || editingStyle || pacingAndRhythm || lyricalStyle || frequentDirectorCollaborations || danceStyle || danceStyleVersatility || actorCollaborations || actionStyle || stuntExpertise || actionVersatility || designStyle || productionDesignExpertise || costumeExpertise || characterCostumeApproach || vfxStyle || coordinationExpertise) {
-    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : category === "producers" ? "Production Blueprint" : category === "cinematographers" ? "Visual Signature" : category === "editors" ? "The Edit Room" : category === "lyricists" ? "The Pen & Paper" : category === "choreographers" ? "The Dance Floor" : category === "stunt-directors" ? "The War Room" : category === "art-directors" ? "The Design Studio" : category === "costume-designers" ? "The Atelier" : category === "vfx-supervisors" ? "The VFX Lab" : category === "line-producers" ? "Operations Control" : "The Craft" });
+  if (transformations.length > 0 || voiceProfile?.iconicDialogues?.length > 0 || collaborations || iconicRoles.length > 0 || filmmakerRelationships || screenChemistry || visionaryEssence || filmmakingStyle || musicalEssence || orchestralProfile || villainSpecialization || heroAntagonisms || iconicAntagonistRoles.length > 0 || comedySpecialization || heroComedyPartnerships || iconicComedyRoles.length > 0 || characterVersatility || actingApproach || iconicCharacterRoles.length > 0 || heroPartnerships || directorCollaborations || vocalProfile || musicDirectorCollaborations || duetPartnerships || genreVersatility || starCollaborations || productionApproach || visualStyle || technicalExpertise || editingStyle || pacingAndRhythm || lyricalStyle || frequentDirectorCollaborations || danceStyle || danceStyleVersatility || actorCollaborations || actionStyle || stuntExpertise || actionVersatility || designStyle || productionDesignExpertise || costumeExpertise || characterCostumeApproach || vfxStyle || coordinationExpertise || mediaInfluence || journalismCareer) {
+    tabs.push({ id: "craft", label: category === "director" ? "Vision & Craft" : category === "music-director" ? "Sonic Blueprint" : category === "villain" ? "Dark Craft" : category === "comedian" ? "Comedy Lab" : category === "character-artists" ? "The Method" : category === "singers" ? "Sonic Identity" : category === "producers" ? "Production Blueprint" : category === "cinematographers" ? "Visual Signature" : category === "editors" ? "The Edit Room" : category === "lyricists" ? "The Pen & Paper" : category === "choreographers" ? "The Dance Floor" : category === "stunt-directors" ? "The War Room" : category === "art-directors" ? "The Design Studio" : category === "costume-designers" ? "The Atelier" : category === "vfx-supervisors" ? "The VFX Lab" : category === "line-producers" ? "Operations Control" : category === "pros" ? "The Press Box" : "The Craft" });
   }
 
   if (lifestyle || financial || politicalCareer || brandValue || productionHouse) {
     tabs.push({ id: "empire", label: "Empire" });
   }
 
-  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung || productionByDecade || landmarkProductions || iconicVisuallyStunningFilms || iconicEditedFilms || iconicSongsWritten || iconicChoreography || iconicActionSequences || iconicSetDesigns || iconicCharacterCostumes || iconicVFXSequences || productionsCoordinated) {
+  if (careerStats || boxOfficeMilestones || genreStrength || awards.length > 0 || awardsByType || careerRetrospective || streamingDominance || commercialImpact || careersTimeline || chartbusterSongs || songsSung || productionByDecade || landmarkProductions || iconicVisuallyStunningFilms || iconicEditedFilms || iconicSongsWritten || iconicChoreography || iconicActionSequences || iconicSetDesigns || iconicCharacterCostumes || iconicVFXSequences || productionsCoordinated || strategicPromotions) {
     tabs.push({ id: "career", label: "Career" });
   }
 
-  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments || legendaryComedyMoments || memorableScenes || livePerformances || musicalFamily || talentDiscovery || teluguLanguageContribution || literaryWorks || famousLyricalLines || viralDanceMoments || signatureMovesCreated || safetyAndProtocols || internationalWork || researchAndAuthenticity || innovationInVFX) {
+  if (philanthropy || quotes.length > 0 || trivia.length > 0 || historicalImpact || industryContribution || mentorshipInfluence || internationalRecognition || criticalAppreciation || controversiesOrTriumphs || influenceAndLegacy || industryStanding || legendaryMoments || legendaryComedyMoments || memorableScenes || livePerformances || musicalFamily || talentDiscovery || teluguLanguageContribution || literaryWorks || famousLyricalLines || viralDanceMoments || signatureMovesCreated || safetyAndProtocols || internationalWork || researchAndAuthenticity || innovationInVFX || legacyAndImpact || industryContributions) {
     tabs.push({ id: "legacy", label: "Legacy" });
   }
 
@@ -1737,6 +1745,87 @@ export default function IconProfileClient({
                           ) : null}
                         </div>
                       ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* PRO: Media Influence */}
+                {mediaInfluence && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaNewspaper /> Influence & Reach
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {Object.entries(mediaInfluence).map(([key, value]: [string, any]) => (
+                          <div key={key} className="pl-4">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </h4>
+                            <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* PRO: Journalism Career */}
+                {journalismCareer && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaPenNib /> Journalistic Roots
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(journalismCareer).map(([key, value]: [string, any]) => (
+                        <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors">
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-neutral-500">
+                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                          </h4>
+                          {typeof value === 'string' ? (
+                            <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                          ) : Array.isArray(value) ? (
+                            <ul className="space-y-2">
+                              {value.map((item: string, i: number) => (
+                                <li key={i} className="text-neutral-300 text-xs leading-relaxed border-l-2 border-white/10 pl-3">{item}</li>
+                              ))}
+                            </ul>
+                          ) : null}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* PRO: Industry Relationships */}
+                {industryRelationships && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaUsers /> The Trust Network
+                    </h3>
+                    <div className="p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {Object.entries(industryRelationships).map(([key, value]: [string, any]) => (
+                          <div key={key} className="pl-4">
+                            <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </h4>
+                            {typeof value === 'string' ? (
+                              <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                            ) : Array.isArray(value) ? (
+                              <ul className="space-y-1">
+                                {value.map((item: string, i: number) => (
+                                  <li key={i} className="text-neutral-300 text-sm leading-relaxed flex items-start gap-2">
+                                    <span className={`w-1.5 h-1.5 rounded-full ${theme.accentBg} mt-1.5 flex-shrink-0`} /> <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : null}
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 )}
@@ -3761,6 +3850,65 @@ export default function IconProfileClient({
                   </div>
                 )}
 
+                {/* PRO: Strategic Promotions */}
+                {strategicPromotions && Array.isArray(strategicPromotions) && strategicPromotions.length > 0 && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaBullhorn /> Campaign Mastercuts
+                    </h3>
+                    <div className="space-y-4">
+                      {strategicPromotions.map((camp: any, idx: number) => (
+                        <div key={idx} className="p-6 md:p-8 rounded-[2rem] bg-[#0a0a0a] border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${theme.accentBg} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                          <div className="pl-4">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                              <div>
+                                <h4 className="text-xl font-black text-white">{camp.film} ({camp.year})</h4>
+                                <span className={`text-xs font-black uppercase tracking-widest ${theme.accent}`}>Status: {camp.successMetric || 'Completed'}</span>
+                              </div>
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 pt-4 border-t border-white/5">
+                              <div>
+                                {camp.strategy && (
+                                  <div className="mb-4">
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Promotion Strategy</h5>
+                                    <p className="text-neutral-300 text-sm leading-relaxed">{camp.strategy}</p>
+                                  </div>
+                                )}
+                                {camp.innovation && (
+                                  <div>
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Innovation</h5>
+                                    <p className="text-neutral-400 text-xs leading-relaxed italic border-l-2 border-white/10 pl-3">{camp.innovation}</p>
+                                  </div>
+                                )}
+                              </div>
+                              <div>
+                                {camp.mediaOutlets && Array.isArray(camp.mediaOutlets) && (
+                                  <div className="mb-4">
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Media Channels</h5>
+                                    <div className="flex flex-wrap gap-1">
+                                      {camp.mediaOutlets.map((outlet: string, i: number) => (
+                                        <span key={i} className="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[9px] text-neutral-300">{outlet}</span>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
+                                {camp.successMetric && (
+                                  <div>
+                                    <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-neutral-500 mb-2">Success Metric</h5>
+                                    <p className="text-neutral-400 text-xs leading-relaxed border-l-2 border-white/10 pl-3">{camp.successMetric}</p>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Line Producer: Productions Coordinated */}
                 {productionsCoordinated && Array.isArray(productionsCoordinated) && productionsCoordinated.length > 0 && (
                   <div className="mb-12">
@@ -4683,6 +4831,54 @@ export default function IconProfileClient({
                           </div>
                         </div>
                       )}
+                    </div>
+                  </div>
+                )}
+
+                {/* PRO: Legacy & Impact */}
+                {legacyAndImpact && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaAward /> The Final Word
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(legacyAndImpact).map(([key, value]: [string, any]) => (
+                        <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors">
+                          <h4 className={`text-[10px] font-black uppercase tracking-[0.3em] mb-2 ${theme.accent}`}>
+                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                          </h4>
+                          {typeof value === 'string' ? (
+                            <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                          ) : Array.isArray(value) ? (
+                            <ul className="space-y-2">
+                              {value.map((item: string, i: number) => (
+                                <li key={i} className="text-neutral-300 text-xs leading-relaxed flex items-start gap-2">
+                                  <span className={`w-1.5 h-1.5 rounded-full ${theme.accentBg} mt-1.5 flex-shrink-0`} /> <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : null}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* PRO: Industry Contributions */}
+                {industryContributions && (
+                  <div className="mb-12">
+                    <h3 className="text-xs font-black uppercase tracking-[0.3em] text-neutral-500 mb-8 px-2 flex items-center gap-3">
+                      <FaStar /> Industry Contributions
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {Object.entries(industryContributions).map(([key, value]: [string, any]) => (
+                        <div key={key} className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-white/10 transition-colors">
+                          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-3 text-neutral-500">
+                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                          </h4>
+                          <p className="text-neutral-300 text-sm leading-relaxed">{value}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 )}
