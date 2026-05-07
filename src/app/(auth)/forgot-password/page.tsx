@@ -70,14 +70,14 @@ export default function ForgotPasswordPage() {
           <div className="absolute -top-24 -left-24 w-48 h-48 bg-white/5 rounded-full blur-[80px] group-hover:bg-white/10 transition-all duration-700" />
 
           <Link href="/login" className="inline-flex items-center gap-2 text-white/30 hover:text-white transition-colors text-[9px] tracking-widest uppercase mb-8 font-black relative z-10">
-            <ArrowLeft size={14} /> Back to Identity Check
+            <ArrowLeft size={14} /> Back to Sign In
           </Link>
 
           <div className="text-center mb-10 relative z-10">
             <h1 className="text-4xl font-black text-white tracking-tighter mb-2">TFIVERSE</h1>
             <div className="flex items-center justify-center gap-3">
               <div className="h-[1px] w-4 bg-white/20" />
-              <p className="text-white/30 tracking-[0.4em] text-[8px] uppercase font-bold">Key Recovery</p>
+              <p className="text-white/30 tracking-[0.4em] text-[8px] uppercase font-bold">Password Recovery</p>
               <div className="h-[1px] w-4 bg-white/20" />
             </div>
           </div>
@@ -89,25 +89,25 @@ export default function ForgotPasswordPage() {
               <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center mb-6 text-white bg-white/5">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
               </div>
-              <h3 className="text-white text-lg font-black tracking-tight mb-2">Transmission Sent</h3>
-              <p className="text-white/50 text-[11px] font-medium tracking-wide leading-relaxed mb-8">If an account matches your alias, a reset link will arrive shortly. It remains active for 60 minutes.</p>
+              <h3 className="text-white text-lg font-black tracking-tight mb-2">Email Sent</h3>
+              <p className="text-white/50 text-[11px] font-medium tracking-wide leading-relaxed mb-8">If an account matches your email address, a password reset link will arrive shortly. It remains active for 60 minutes.</p>
               <Link href="/login" className="w-full bg-white text-black font-black py-4 rounded-2xl hover:bg-white/90 active:scale-[0.97] transition-all tracking-[0.2em] uppercase text-[10px]">Return to Login</Link>
             </div>
           ) : (
             <div className="relative z-10">
-              <p className="text-white/50 text-[11px] text-center mb-8 leading-relaxed font-medium tracking-wide px-4">Provide your network identity to receive an encrypted reset link via priority mail.</p>
+              <p className="text-white/50 text-[11px] text-center mb-8 leading-relaxed font-medium tracking-wide px-4">Provide your email address to receive a secure password reset link.</p>
               <form className="flex flex-col gap-6" onSubmit={handleSubmit} method="POST">
                 <div className="flex flex-col gap-2.5">
-                  <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase px-1">Identity</label>
+                  <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase px-1">Email Address</label>
                   <input name="email" type="email" autoComplete="email"
                     className="w-full bg-white/[0.04] border border-white/10 rounded-2xl text-white px-6 py-4 focus:outline-none focus:border-white/30 focus:bg-white/[0.07] transition-all placeholder:text-white/10 text-sm font-medium" 
-                    placeholder="agent@tfiverse.com" required autoFocus />
+                    placeholder="name@example.com" required autoFocus />
                 </div>
                 <button type="submit" disabled={loading}
                   className="w-full bg-white text-black font-black py-4 mt-4 rounded-2xl hover:bg-white/90 active:scale-[0.97] transition-all tracking-[0.25em] uppercase text-[10px] disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_10px_20px_rgba(255,255,255,0.1)]">
                   <span className="flex items-center justify-center gap-3">
                     {loading && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
-                    {loading ? "Transmitting..." : "Send Reset Protocol"}
+                    {loading ? "Sending..." : "Send Reset Link"}
                   </span>
                 </button>
               </form>
@@ -115,7 +115,7 @@ export default function ForgotPasswordPage() {
           )}
 
           <p className="mt-12 text-center text-[10px] text-white/20 tracking-widest uppercase font-bold relative z-10">
-            Remembered your access? <Link href="/login" className="text-white/60 hover:text-white transition-colors underline underline-offset-8 decoration-white/10 hover:decoration-white/40">Authenticate</Link>
+            Remembered your password? <Link href="/login" className="text-white/60 hover:text-white transition-colors underline underline-offset-8 decoration-white/10 hover:decoration-white/40">Sign In</Link>
           </p>
         </div>
       </div>

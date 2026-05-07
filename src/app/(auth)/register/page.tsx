@@ -95,7 +95,7 @@ export default function RegisterPage() {
             <h1 className="text-4xl font-black text-white tracking-tighter mb-2">TFIVERSE</h1>
             <div className="flex items-center justify-center gap-3">
               <div className="h-[1px] w-4 bg-white/20" />
-              <p className="text-white/30 tracking-[0.4em] text-[8px] uppercase font-bold">New ID Registration</p>
+              <p className="text-white/30 tracking-[0.4em] text-[8px] uppercase font-bold">Create Account</p>
               <div className="h-[1px] w-4 bg-white/20" />
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function RegisterPage() {
             <form className="flex flex-col gap-5 relative z-10" onSubmit={handleSubmit} method="POST">
               <div className="flex flex-col gap-2">
                 <div className="flex justify-between items-center px-1">
-                  <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase">Alias</label>
+                  <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase">Display Name</label>
                   <span className="text-[8px] text-white/20 uppercase tracking-[0.2em] font-bold">Max 25</span>
                 </div>
                 <input name="name" type="text" maxLength={25} autoComplete="name" required
@@ -131,22 +131,22 @@ export default function RegisterPage() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase px-1">Network Identity</label>
+                <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase px-1">Email Address</label>
                 <input name="email" type="email" autoComplete="email" required
                   className="w-full bg-white/[0.04] border border-white/10 rounded-2xl text-white px-6 py-4 focus:outline-none focus:border-white/30 focus:bg-white/[0.07] transition-all placeholder:text-white/10 text-sm font-medium" 
-                  placeholder="agent@tfiverse.com" />
+                  placeholder="name@example.com" />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase px-1">Keyphrase</label>
+                  <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase px-1">Password</label>
                   <input name="password" type="password" autoComplete="new-password" required minLength={8}
                     className="w-full bg-white/[0.04] border border-white/10 rounded-2xl text-white px-6 py-4 focus:outline-none focus:border-white/30 focus:bg-white/[0.07] transition-all placeholder:text-white/10 tracking-[0.2em] text-sm font-medium" 
                     placeholder="••••••••" />
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase px-1">Verify Key</label>
+                  <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase px-1">Confirm Password</label>
                   <input name="confirmPassword" type="password" autoComplete="new-password" required minLength={8}
                     className="w-full bg-white/[0.04] border border-white/10 rounded-2xl text-white px-6 py-4 focus:outline-none focus:border-white/30 focus:bg-white/[0.07] transition-all placeholder:text-white/10 tracking-[0.2em] text-sm font-medium" 
                     placeholder="••••••••" />
@@ -157,7 +157,7 @@ export default function RegisterPage() {
                 className="w-full bg-white text-black font-black py-4 mt-4 rounded-2xl hover:bg-white/90 active:scale-[0.97] transition-all tracking-[0.25em] uppercase text-[10px] disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_10px_20px_rgba(255,255,255,0.1)]">
                 <span className="flex items-center justify-center gap-3">
                   {loading && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
-                  {loading ? "Processing..." : "Generate Account"}
+                  {loading ? "Creating..." : "Sign Up"}
                 </span>
               </button>
             </form>
@@ -166,7 +166,7 @@ export default function RegisterPage() {
           {/* Divider */}
           <div className="mt-10 mb-8 flex items-center justify-center gap-6 opacity-20 relative z-10">
             <div className="h-[0.5px] bg-white flex-1" />
-            <span className="text-[8px] text-white uppercase tracking-[0.4em] font-black">Unified Login</span>
+            <span className="text-[8px] text-white uppercase tracking-[0.4em] font-black">Fast Auth</span>
             <div className="h-[0.5px] bg-white flex-1" />
           </div>
 
@@ -182,9 +182,9 @@ export default function RegisterPage() {
             </button>
 
           <p className="mt-12 text-center text-[10px] text-white/20 tracking-widest uppercase font-bold relative z-10">
-            Already active?{" "}
+            Already have an account?{" "}
             <Link href="/login" className="text-white/60 hover:text-white transition-colors underline underline-offset-8 decoration-white/10 hover:decoration-white/40">
-              Identify Session
+              Sign In
             </Link>
           </p>
         </div>

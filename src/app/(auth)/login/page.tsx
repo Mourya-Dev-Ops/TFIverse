@@ -124,17 +124,17 @@ function LoginForm() {
 
           <form onSubmit={handleSubmit} method="POST" className="flex flex-col gap-6 relative z-10">
             <div className="flex flex-col gap-2.5">
-              <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase px-1">Identity</label>
+              <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase px-1">Email Address</label>
               <div className="relative">
                 <input name="email" type="email" autoComplete="email" required
                   className="w-full bg-white/[0.04] border border-white/10 rounded-2xl text-white px-6 py-4 focus:outline-none focus:border-white/30 focus:bg-white/[0.07] transition-all placeholder:text-white/10 text-sm font-medium" 
-                  placeholder="agent@tfiverse.com" />
+                  placeholder="name@example.com" />
               </div>
             </div>
 
             <div className="flex flex-col gap-2.5">
               <div className="flex justify-between items-center px-1">
-                <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase">Access Key</label>
+                <label className="text-[10px] font-black text-white/40 tracking-[0.2em] uppercase">Password</label>
                 <Link href="/forgot-password" 
                   className="text-[9px] text-white/30 hover:text-white transition-colors tracking-widest uppercase font-bold">
                   Forgot?
@@ -149,7 +149,7 @@ function LoginForm() {
               className="w-full bg-white text-black font-black py-4 mt-4 rounded-2xl hover:bg-white/90 active:scale-[0.97] transition-all tracking-[0.25em] uppercase text-[10px] disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_10px_20px_rgba(255,255,255,0.1)] group overflow-hidden relative">
               <span className="relative z-10 flex items-center justify-center gap-3">
                 {loading && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
-                {loading ? "Verifying..." : "Initialize Session"}
+                {loading ? "Authenticating..." : "Sign In"}
               </span>
             </button>
           </form>
@@ -173,9 +173,9 @@ function LoginForm() {
             </button>
 
           <p className="mt-12 text-center text-[10px] text-white/20 tracking-widest uppercase font-bold">
-            New operative?{" "}
+            New to TFIverse?{" "}
             <Link href="/register" className="text-white/60 hover:text-white transition-colors underline underline-offset-8 decoration-white/10 hover:decoration-white/40">
-              Create ID
+              Create Account
             </Link>
           </p>
         </div>
