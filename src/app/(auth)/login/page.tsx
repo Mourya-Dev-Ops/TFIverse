@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useRef, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { loginUser } from "@/app/actions/auth";
+import { loginUser, resendVerification } from "@/app/actions/auth";
 import { signIn } from "next-auth/react";
 import { Loader2, Volume2, VolumeX, CheckCircle2 } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
@@ -14,6 +14,9 @@ function LoginForm() {
   const [success, setSuccess] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const [oauthLoading, setOauthLoading] = useState<string | null>(null);
+  const [showResend, setShowResend] = useState(false);
+  const [resending, setResending] = useState(false);
+  const [lastEmail, setLastEmail] = useState("");
   const [muted, setMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -50,11 +53,13 @@ function LoginForm() {
     setLoading(true);
     setError("");
     const formData = new FormData(e.currentTarget);
+    setLastEmail(formData.get("email") as string || "");
     
     const result = await loginUser(formData);
     
     if (result?.error) { 
-      setError(result.error); 
+      setError(result.error);
+      setShowResend(result.error.includes("not verified"));
       setLoading(false); 
     }
     // If no error, the server action will handle the redirect.
@@ -111,7 +116,30 @@ function LoginForm() {
 
           {error && (
             <div className="mb-8 p-4 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-200 text-[11px] text-center font-medium tracking-wide animate-in fade-in slide-in-from-top-2 duration-300">
-              {error}
+              <p>{error}</p>
+              {showResend && (
+                <button
+                  type="button"
+                  disabled={resending}
+                  onClick={async () => {
+                    setResending(true);
+                    const fd = new FormData();
+                    fd.set("email", lastEmail);
+                    const res = await resendVerification(fd);
+                    if (res?.success) {
+                      setError("");
+                      setShowResend(false);
+                      setSuccess("Verification email sent! Check your inbox.");
+                    } else if (res?.error) {
+                      setError(res.error);
+                    }
+                    setResending(false);
+                  }}
+                  className="mt-3 inline-block px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white/80 text-[10px] font-bold uppercase tracking-widest transition-all disabled:opacity-50"
+                >
+                  {resending ? "Sending..." : "Resend Verification Email"}
+                </button>
+              )}
             </div>
           )}
 

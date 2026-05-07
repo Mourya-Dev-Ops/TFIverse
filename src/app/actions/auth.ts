@@ -241,3 +241,57 @@ export async function resetPassword(formData: FormData) {
   }
 }
 
+// ─── RESEND VERIFICATION EMAIL ──────────────────────────────────
+export async function resendVerification(formData: FormData) {
+  try {
+    const headersList = await headers();
+    const ip = headersList.get('x-forwarded-for') || headersList.get('x-real-ip') || 'unknown';
+    const rateLimit = checkRateLimit(ip, 'resend-verify', 3, 15 * 60 * 1000);
+    
+    if (!rateLimit.success) {
+      return { error: "Too many requests. Please try again later." };
+    }
+
+    const email = formData.get("email") as string;
+    if (!email) {
+      return { error: "Email is required" };
+    }
+
+    const [existingUser] = await db.select().from(users).where(eq(users.email, email));
+    if (!existingUser) {
+      return { success: true };
+    }
+
+    if (existingUser.emailVerified) {
+      return { success: true };
+    }
+
+    // Delete old tokens
+    await db.delete(verificationTokens).where(eq(verificationTokens.identifier, email));
+
+    // Create new token
+    const token = uuidv4();
+    const expires = new Date(new Date().getTime() + 1000 * 60 * 60 * 24);
+
+    await db.insert(verificationTokens).values({
+      identifier: email,
+      token,
+      expires,
+    });
+
+    const emailResult = await sendVerificationEmail({
+      email,
+      name: existingUser.name || "User",
+      token,
+    });
+
+    if (!emailResult.success) {
+      return { error: "Failed to send email. Please try again." };
+    }
+
+    return { success: true };
+  } catch (error: any) {
+    console.error("Resend verification error:", error);
+    return { error: "Something went wrong" };
+  }
+}
