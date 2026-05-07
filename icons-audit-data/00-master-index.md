@@ -13,12 +13,12 @@
 | # | Category | Sub-Categories | JSON Profiles | Audit File | Status |
 |---|---|---|---|---|---|
 | 1 | **Heroes** | legends, superstars, rising-stars | 3 | [01-heroes.md](./01-heroes.md) | ✅ Audited + Fixed |
-| 2 | **Heroines** | divas, queens, rising-queens | 3 | [02-heroines.md](./02-heroines.md) | 🔲 Pending |
-| 3 | **Directors** | maestros, hitmakers, emerging | 3 | [03-directors.md](./03-directors.md) | 🔲 Pending |
-| 4 | **Music Directors** | symphony-legends, musical-masters | 2 | [04-music-directors.md](./04-music-directors.md) | 🔲 Pending |
-| 5 | **Villains** | iconic-antagonists, antagonists | 2 | [05-villains.md](./05-villains.md) | 🔲 Pending |
-| 6 | **Comedians** | comedy-kings, comedy-titans | 2 | [06-comedians.md](./06-comedians.md) | 🔲 Pending |
-| 7 | **Character Artists** | _(root)_ | 1 | [07-character-artists.md](./07-character-artists.md) | 🔲 Pending |
+| 2 | **Heroines** | divas, queens, rising-queens | 3 | [02-heroines.md](./02-heroines.md) | ✅ Audited + Fixed |
+| 3 | **Directors** | maestros, hitmakers, emerging | 3 | [03-directors.md](./03-directors.md) | ✅ Audited + Fixed |
+| 4 | **Music Directors** | symphony-legends, musical-masters | 2 | [04-music-directors.md](./04-music-directors.md) | ✅ Audited + Fixed |
+| 5 | **Villains** | iconic-antagonists, antagonists | 2 | [05-villains.md](./05-villains.md) | ✅ Audited + Fixed |
+| 6 | **Comedians** | comedy-kings, comedy-titans | 2 | [06-comedians.md](./06-comedians.md) | ✅ Audited + Fixed |
+| 7 | **Character Artists** | _(root)_ | 1 | [07-character-artists.md](./07-character-artists.md) | ✅ Audited + Fixed |
 | 8 | **Singers** | _(root)_ | 1 | [08-singers.md](./08-singers.md) | 🔲 Pending |
 | 9 | **Producers** | _(root)_ | 1 | [09-producers.md](./09-producers.md) | 🔲 Pending |
 | 10 | **Cinematographers** | _(root)_ | 1 | [10-cinematographers.md](./10-cinematographers.md) | 🔲 Pending |
