@@ -1,4 +1,5 @@
-// lib/tmdb.ts - TMDb API Helper with Multi-Key Rotation & Caching
+// lib/tmdb.ts - TMDb API Helper with Edge Caching & Key Rotation
+import { unstable_cache } from 'next/cache';
 
 const TMDB_KEYS = (process.env.NEXT_PUBLIC_TMDB_API_KEY || '')
   .split(',')
@@ -11,30 +12,23 @@ const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p';
 // ============================================================================
 // MULTI-KEY ROTATION SYSTEM
 // ============================================================================
-// TMDB allows ~40 requests per 10 seconds per API key.
-// If you add multiple keys comma-separated in your .env, we'll auto-rotate.
-// Example: NEXT_PUBLIC_TMDB_API_KEY=key1,key2,key3
+// Note: In serverless environments, this state resets on cold starts.
+// This is acceptable as the primary caching layer (unstable_cache) prevents 
+// concurrent lambdas from spamming TMDB simultaneously.
 
 let currentKeyIndex = 0;
 const keyStats = new Map<string, { failures: number; lastFail: number; cooldownUntil: number }>();
 
 function getNextKey(): string {
   const now = Date.now();
-  
-  // Try each key starting from current index
   for (let i = 0; i < TMDB_KEYS.length; i++) {
     const idx = (currentKeyIndex + i) % TMDB_KEYS.length;
     const key = TMDB_KEYS[idx];
     const stats = keyStats.get(key);
-    
-    // If key is in cooldown, skip it
     if (stats && stats.cooldownUntil > now) continue;
-    
     currentKeyIndex = (idx + 1) % TMDB_KEYS.length;
     return key;
   }
-  
-  // All keys are in cooldown — use whatever is available (oldest cooldown)
   currentKeyIndex = (currentKeyIndex + 1) % TMDB_KEYS.length;
   return TMDB_KEYS[currentKeyIndex];
 }
@@ -43,70 +37,46 @@ function markKeyFailed(key: string) {
   const stats = keyStats.get(key) || { failures: 0, lastFail: 0, cooldownUntil: 0 };
   stats.failures++;
   stats.lastFail = Date.now();
-  // Exponential backoff: 10s, 30s, 60s, 120s max
   const cooldownMs = Math.min(10000 * Math.pow(2, stats.failures - 1), 120000);
   stats.cooldownUntil = Date.now() + cooldownMs;
   keyStats.set(key, stats);
 }
 
 function markKeySuccess(key: string) {
-  keyStats.delete(key); // Reset failure count on success
+  keyStats.delete(key);
 }
 
 // ============================================================================
-// IN-MEMORY RESPONSE CACHE
-// ============================================================================
-
-const responseCache = new Map<string, { data: any; cachedAt: number }>();
-const CACHE_TTL = 1000 * 60 * 60 * 6; // 6 hours for API responses
-const MAX_CACHE_ENTRIES = 2000;
-
-function getCached(key: string): any | null {
-  const entry = responseCache.get(key);
-  if (!entry) return null;
-  if (Date.now() - entry.cachedAt > CACHE_TTL) {
-    responseCache.delete(key);
-    return null;
-  }
-  return entry.data;
-}
-
-function setCache(key: string, data: any) {
-  if (responseCache.size >= MAX_CACHE_ENTRIES) {
-    const oldestKey = responseCache.keys().next().value;
-    if (oldestKey) responseCache.delete(oldestKey);
-  }
-  responseCache.set(key, { data, cachedAt: Date.now() });
-}
-
-// ============================================================================
-// CORE FETCH WITH ROTATION
+// CORE FETCH WITH TIMEOUT & ROTATION
 // ============================================================================
 
 async function tmdbFetch(endpoint: string, params: Record<string, string> = {}): Promise<any> {
-  const cacheKey = `${endpoint}?${JSON.stringify(params)}`;
-  const cached = getCached(cacheKey);
-  if (cached) return cached;
-
   let lastError: Error | null = null;
   
-  // Try up to the number of available keys
-  for (let attempt = 0; attempt < TMDB_KEYS.length; attempt++) {
+  for (let attempt = 0; attempt < Math.max(1, TMDB_KEYS.length); attempt++) {
     const apiKey = getNextKey();
+    if (!apiKey) throw new Error('No TMDB API keys configured');
+    
     const searchParams = new URLSearchParams({ api_key: apiKey, ...params });
     const url = `${TMDB_BASE_URL}${endpoint}?${searchParams}`;
 
     try {
+      // 8-second abort controller prevents serverless functions hanging on TMDB lag
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 8000);
+      
       const response = await fetch(url, {
         headers: { 'User-Agent': 'TFiverse/2.0' },
-        next: { revalidate: 3600 }, // Next.js fetch cache: 1 hour
+        signal: controller.signal,
+        // Native fetch deduplication & cache layer
+        next: { revalidate: 3600 }, 
       });
+      clearTimeout(timeoutId);
 
       if (response.status === 429) {
-        // Rate limited — mark this key and try next
         markKeyFailed(apiKey);
         console.warn(`[TMDB] Rate limited on key ...${apiKey.slice(-4)}, rotating...`);
-        continue;
+        continue; // Try next key
       }
 
       if (!response.ok) {
@@ -115,9 +85,11 @@ async function tmdbFetch(endpoint: string, params: Record<string, string> = {}):
 
       const data = await response.json();
       markKeySuccess(apiKey);
-      setCache(cacheKey, data);
       return data;
-    } catch (error) {
+    } catch (error: any) {
+      if (error.name === 'AbortError') {
+         console.warn(`[TMDB] Request timeout on key ...${apiKey.slice(-4)}`);
+      }
       lastError = error as Error;
       markKeyFailed(apiKey);
     }
@@ -127,39 +99,72 @@ async function tmdbFetch(endpoint: string, params: Record<string, string> = {}):
 }
 
 // ============================================================================
-// PUBLIC API FUNCTIONS
+// PUBLIC API FUNCTIONS WITH NEXT.JS UNSTABLE_CACHE
 // ============================================================================
+// Explicit caching strategy prevents identical requests across multiple lambdas.
+// Using explicit string keys and tags allows for easy bulk invalidation later.
 
-export async function searchMovies(query: string, page = 1) {
-  return tmdbFetch('/search/movie', { query, page: String(page), language: 'en-US' });
-}
+export const searchMovies = async (query: string, page = 1) => {
+  return unstable_cache(
+    async () => tmdbFetch('/search/movie', { query, page: String(page), language: 'en-US' }),
+    [`tmdb-search-movies-${query}-${page}`],
+    { revalidate: 3600, tags: ['tmdb-search'] }
+  )();
+};
 
-export async function searchPeople(query: string, page = 1) {
-  return tmdbFetch('/search/person', { query, page: String(page), language: 'en-US' });
-}
+export const searchPeople = async (query: string, page = 1) => {
+  return unstable_cache(
+    async () => tmdbFetch('/search/person', { query, page: String(page), language: 'en-US' }),
+    [`tmdb-search-people-${query}-${page}`],
+    { revalidate: 3600, tags: ['tmdb-search'] }
+  )();
+};
 
-export async function getMovieDetails(movieId: number) {
-  return tmdbFetch(`/movie/${movieId}`, { language: 'en-US', append_to_response: 'credits,videos,images' });
-}
+export const getMovieDetails = async (movieId: number) => {
+  return unstable_cache(
+    async () => tmdbFetch(`/movie/${movieId}`, { language: 'en-US', append_to_response: 'credits,videos,images' }),
+    [`tmdb-movie-details-${movieId}`],
+    // Cache movie profiles for 24 hours (rarely change drastically)
+    { revalidate: 86400, tags: ['tmdb', 'tmdb-movie', `movie-${movieId}`] }
+  )();
+};
 
-export async function getPersonDetails(personId: number) {
-  return tmdbFetch(`/person/${personId}`, { language: 'en-US', append_to_response: 'movie_credits,images' });
-}
+export const getPersonDetails = async (personId: number) => {
+  return unstable_cache(
+    async () => tmdbFetch(`/person/${personId}`, { language: 'en-US', append_to_response: 'movie_credits,images' }),
+    [`tmdb-person-details-${personId}`],
+    // Cache celebrity profiles for 24 hours
+    { revalidate: 86400, tags: ['tmdb', 'tmdb-person', `person-${personId}`] }
+  )();
+};
 
-export async function getTrendingMovies(timeWindow: 'day' | 'week' = 'week') {
-  return tmdbFetch(`/trending/movie/${timeWindow}`, { language: 'en-US' });
-}
+export const getTrendingMovies = async (timeWindow: 'day' | 'week' = 'week') => {
+  return unstable_cache(
+    async () => tmdbFetch(`/trending/movie/${timeWindow}`, { language: 'en-US' }),
+    [`tmdb-trending-movies-${timeWindow}`],
+    // Refresh trending every hour
+    { revalidate: 3600, tags: ['tmdb-trending'] }
+  )();
+};
 
-export async function getPopularMovies(page = 1) {
-  return tmdbFetch('/movie/popular', { page: String(page), language: 'en-US' });
-}
+export const getPopularMovies = async (page = 1) => {
+  return unstable_cache(
+    async () => tmdbFetch('/movie/popular', { page: String(page), language: 'en-US' }),
+    [`tmdb-popular-movies-${page}`],
+    { revalidate: 3600, tags: ['tmdb-popular'] }
+  )();
+};
 
-export async function getMoviesByGenre(genreId: number, page = 1) {
-  return tmdbFetch('/discover/movie', { 
-    with_genres: String(genreId), page: String(page), language: 'en-US',
-    sort_by: 'popularity.desc'
-  });
-}
+export const getMoviesByGenre = async (genreId: number, page = 1) => {
+  return unstable_cache(
+    async () => tmdbFetch('/discover/movie', { 
+      with_genres: String(genreId), page: String(page), language: 'en-US',
+      sort_by: 'popularity.desc'
+    }),
+    [`tmdb-movies-by-genre-${genreId}-${page}`],
+    { revalidate: 86400, tags: ['tmdb-genre', `genre-${genreId}`] }
+  )();
+};
 
 // ============================================================================
 // IMAGE URL HELPERS
@@ -198,6 +203,6 @@ export function getTmdbKeyStatus() {
         cooldownUntil: stats?.cooldownUntil || 0,
       };
     }),
-    cacheSize: responseCache.size,
+    cacheStatus: 'Delegated to Next.js Edge Cache',
   };
 }

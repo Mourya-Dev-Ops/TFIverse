@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { updateProfile, checkUsername } from "@/app/actions/profile";
 import { searchTmdbMovies } from "@/app/actions/tmdb";
-import heroesData from "@/data/heroes.json";
+import { getHeroesForSearch } from "@/app/actions/heroes";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Search } from "lucide-react";
 
@@ -61,10 +61,16 @@ export default function EditProfileModal({ profile, userId, isOpen, onClose }: E
   const [movieResults, setMovieResults] = useState<any[]>([]);
   const [showMovieDropdown, setShowMovieDropdown] = useState(false);
 
+  const [allHeroes, setAllHeroes] = useState<any[]>([]);
+
+  useEffect(() => {
+    getHeroesForSearch().then(setAllHeroes).catch(() => setAllHeroes([]));
+  }, []);
+
   const filteredHeroes = useMemo(() => {
     if (!heroSearch) return [];
-    return heroesData.filter(h => h.name.toLowerCase().includes(heroSearch.toLowerCase())).slice(0, 5);
-  }, [heroSearch]);
+    return allHeroes.filter(h => h.name.toLowerCase().includes(heroSearch.toLowerCase())).slice(0, 5);
+  }, [heroSearch, allHeroes]);
 
   useEffect(() => {
     if (!movieSearch) {

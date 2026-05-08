@@ -42,7 +42,11 @@ export default function HeroSequence({ isAuthenticated }: HeroSequenceProps) {
     if (next) window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  if (!mounted) return <div className="h-screen bg-black" />;
+  if (!mounted) return (
+    <div className="h-screen bg-black flex items-center justify-center">
+      <span className="text-white/5 text-[10px] uppercase tracking-[0.5em] animate-pulse">Loading Experience</span>
+    </div>
+  );
 
   if (skipSequence) {
     return <StaticHero isAuthenticated={isAuthenticated} onEnableSequence={isMobile ? undefined : toggleSkip} />;

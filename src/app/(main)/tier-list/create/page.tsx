@@ -12,7 +12,7 @@ import { CSS } from '@dnd-kit/utilities';
 import { toPng } from 'html-to-image';
 import { useSession } from 'next-auth/react';
 import { createTierList } from '@/app/actions/tierlist';
-import heroesData from '@/data/heroes.json';
+import { getHeroMoviesForTierList } from '@/app/actions/heroes';
 import { AnimatePresence, motion } from 'framer-motion';
 import { 
   Search, Download, Save, Check, Plus, Trash2, RotateCcw, 
@@ -258,23 +258,22 @@ export default function CreateTierListPage() {
       return;
     }
 
-    const movies: Movie[] = [];
-    heroesData.forEach((hero: any) => {
-      hero.movies?.forEach((movie: any) => {
-        if (!movies.find(m => m.slug === movie.slug)) {
-          movies.push({
-            slug: movie.slug,
-            title: movie.title,
-            year: movie.year,
-            poster: movie.poster || `/images/movies/${movie.slug}.jpg`,
-            hero: hero.name,
-          });
-        }
-      });
-    });
-
-    setAllMovies(movies);
-    setUnrankedMovies(movies);
+    (async () => {
+      try {
+        const heroMovies = await getHeroMoviesForTierList();
+        const movies: Movie[] = heroMovies.map((m: any) => ({
+          slug: m.slug,
+          title: m.title,
+          year: m.year,
+          poster: m.poster || `/images/movies/${m.slug}.jpg`,
+          hero: m.hero,
+        }));
+        setAllMovies(movies);
+        setUnrankedMovies(movies);
+      } catch (err) {
+        console.error('Failed to load movies:', err);
+      }
+    })();
   }, [status, router]);
 
   const filteredMovies = unrankedMovies.filter(m => 

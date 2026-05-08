@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, memo } from "react";
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
 
@@ -120,7 +120,7 @@ export default function CategoryView({
 }
 
 // Separate Client Component for Individual Cards to handle image errors
-function ProfileCard({ person, categoryConfig, categorySlug }: { person: any, categoryConfig: any, categorySlug: string }) {
+const ProfileCard = memo(function ProfileCard({ person, categoryConfig, categorySlug }: { person: any, categoryConfig: any, categorySlug: string }) {
   const [imgError, setImgError] = useState(false);
   const portraitUrl = person.images?.portrait?.url || person.images?.avatar?.url;
   
@@ -199,6 +199,7 @@ function ProfileCard({ person, categoryConfig, categorySlug }: { person: any, ca
         <img 
           src={portraitUrl} 
           alt={person.name} 
+          loading="lazy"
           onError={() => setImgError(true)}
           className={imgClasses}
         />
@@ -268,4 +269,4 @@ function ProfileCard({ person, categoryConfig, categorySlug }: { person: any, ca
       </div>
     </Link>
   );
-}
+});

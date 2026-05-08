@@ -5,7 +5,7 @@ import { memes, memeLikes, memeViews, memeShares, memeDownloads, memeComments, u
 import { eq, and, desc, sql, asc, inArray, ilike, or } from "drizzle-orm";
 import { auth } from "@/auth";
 import { revalidatePath } from "next/cache";
-import memesData from "@/data/memes.json";
+
 import { sanitizeInput, UPLOAD_LIMITS } from "@/lib/sanitize";
 
 export async function getMemes(options: {
@@ -70,15 +70,7 @@ export async function getMemes(options: {
     }
   });
 
-  if (items.length === 0) {
-    let filtered = [...memesData];
-    if (search) {
-      filtered = filtered.filter(m => m.title.toLowerCase().includes(search.toLowerCase()) || m.description.toLowerCase().includes(search.toLowerCase()));
-    }
-    if (sort === "trending") filtered = filtered.sort((a, b) => b.views - a.views);
-    if (sort === "top") filtered = filtered.sort((a, b) => b.likes - a.likes);
-    return filtered as any;
-  }
+
 
   return items;
 }
@@ -189,7 +181,7 @@ export async function getMemeOfTheWeek() {
   });
 
   if (!item) {
-    return memesData.find(m => m.isFeatured) as any;
+    return null;
   }
 
   return item;

@@ -50,7 +50,11 @@ export async function createTierList(data: {
 export async function getTierLists(options: { userId?: string } = {}) {
   const { userId } = options;
 
-  let query = db
+  const whereClause = userId
+    ? eq(tierLists.userId, userId)
+    : eq(tierLists.isPublic, true);
+
+  const lists = await db
     .select({
       id: tierLists.id,
       title: tierLists.title,
@@ -61,32 +65,27 @@ export async function getTierLists(options: { userId?: string } = {}) {
       createdAt: tierLists.createdAt,
       username: userProfiles.username,
       avatar: userProfiles.avatarUrl,
+      likeCount: sql<number>`cast(count(${tierListLikes.id}) as int)`,
     })
     .from(tierLists)
-    .leftJoin(userProfiles, eq(tierLists.userId, userProfiles.userId));
-
-  if (userId) {
-    query = query.where(eq(tierLists.userId, userId)) as any;
-  } else {
-    query = query.where(eq(tierLists.isPublic, true)) as any;
-  }
-
-  const lists = await query
+    .leftJoin(userProfiles, eq(tierLists.userId, userProfiles.userId))
+    .leftJoin(tierListLikes, eq(tierLists.id, tierListLikes.tierListId))
+    .where(whereClause)
+    .groupBy(
+      tierLists.id,
+      tierLists.title,
+      tierLists.description,
+      tierLists.userId,
+      tierLists.tiers,
+      tierLists.isPublic,
+      tierLists.createdAt,
+      userProfiles.username,
+      userProfiles.avatarUrl,
+    )
     .orderBy(desc(tierLists.createdAt))
     .limit(50);
 
-  // Get like counts
-  const listsWithLikes = await Promise.all(
-    lists.map(async (list) => {
-      const [result] = await db
-        .select({ count: count() })
-        .from(tierListLikes)
-        .where(eq(tierListLikes.tierListId, list.id));
-      return { ...list, likeCount: result?.count || 0 };
-    })
-  );
-
-  return listsWithLikes;
+  return lists;
 }
 
 // ============================================================================
@@ -148,22 +147,33 @@ export async function getUserTierLists() {
   if (!session?.user?.id) throw new Error('Unauthorized');
 
   const lists = await db
-    .select()
+    .select({
+      id: tierLists.id,
+      title: tierLists.title,
+      description: tierLists.description,
+      userId: tierLists.userId,
+      tiers: tierLists.tiers,
+      isPublic: tierLists.isPublic,
+      createdAt: tierLists.createdAt,
+      updatedAt: tierLists.updatedAt,
+      likeCount: sql<number>`cast(count(${tierListLikes.id}) as int)`,
+    })
     .from(tierLists)
+    .leftJoin(tierListLikes, eq(tierLists.id, tierListLikes.tierListId))
     .where(eq(tierLists.userId, session.user.id))
+    .groupBy(
+      tierLists.id,
+      tierLists.title,
+      tierLists.description,
+      tierLists.userId,
+      tierLists.tiers,
+      tierLists.isPublic,
+      tierLists.createdAt,
+      tierLists.updatedAt,
+    )
     .orderBy(desc(tierLists.createdAt));
 
-  const listsWithLikes = await Promise.all(
-    lists.map(async (list) => {
-      const [result] = await db
-        .select({ count: count() })
-        .from(tierListLikes)
-        .where(eq(tierListLikes.tierListId, list.id));
-      return { ...list, likeCount: result?.count || 0 };
-    })
-  );
-
-  return listsWithLikes;
+  return lists;
 }
 
 // ============================================================================

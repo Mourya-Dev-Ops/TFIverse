@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Search, Filter, Plus, Flame, Clock, Trophy, Heart, MessageCircle, 
@@ -193,7 +193,7 @@ function FilterBtn({ active, onClick, icon, label }: { active: boolean; onClick:
   );
 }
 
-function MemeCard({ meme, isAuthenticated, onClick }: { meme: Meme; isAuthenticated: boolean; onClick: () => void }) {
+const MemeCard = memo(function MemeCard({ meme, isAuthenticated, onClick }: { meme: Meme; isAuthenticated: boolean; onClick: () => void }) {
   const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState(meme.likes);
 
@@ -247,7 +247,7 @@ function MemeCard({ meme, isAuthenticated, onClick }: { meme: Meme; isAuthentica
       </div>
     </motion.div>
   );
-}
+});
 
 function MemeDetailsModal({ meme, onClose, isAuthenticated, currentUser }: { meme: Meme & any; onClose: () => void; isAuthenticated: boolean; currentUser: any }) {
   const [isEditing, setIsEditing] = useState(false);

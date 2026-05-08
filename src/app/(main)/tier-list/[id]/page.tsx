@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import { getTierList, toggleTierListLike, deleteTierList, getTierListComments, addTierListComment, deleteTierListComment } from '@/app/actions/tierlist';
 import { toPng } from 'html-to-image';
-import heroesData from '@/data/heroes.json';
+import { getHeroMoviesForTierList } from '@/app/actions/heroes';
 import { ArrowLeft, Heart, Share2, Download, Trash2, User, X, MessageCircle, Send, Reply } from 'lucide-react';
 import { FaTwitter, FaWhatsapp, FaTelegram } from 'react-icons/fa';
 import toast from 'react-hot-toast';
@@ -27,12 +27,16 @@ const TIER_CONFIGS: TierInfo[] = [
   { id: 'H', label: 'TRASH', emoji: '🗑️', color: 'from-purple-500 to-violet-600', bgColor: 'bg-purple-500/10' },
 ];
 
-function resolveMovie(slug: string): Movie | null {
-  for (const hero of heroesData as any[]) {
-    const movie = hero.movies?.find((m: any) => m.slug === slug);
-    if (movie) return { slug: movie.slug, title: movie.title, year: movie.year, poster: movie.poster || DEFAULT_POSTER, hero: hero.name };
-  }
-  return null;
+let _cachedMovies: Movie[] | null = null;
+
+async function loadMovies(): Promise<Movie[]> {
+  if (_cachedMovies) return _cachedMovies;
+  _cachedMovies = (await getHeroMoviesForTierList()) as Movie[];
+  return _cachedMovies;
+}
+
+function resolveMovieSync(slug: string, allMovies: Movie[]): Movie | null {
+  return allMovies.find(m => m.slug === slug) || null;
 }
 
 function resolvePoster(input?: string) {
@@ -79,9 +83,10 @@ export default function ViewTierListPage() {
     if (!id) return;
     (async () => {
       try {
-        const [data, commentsData] = await Promise.all([
+        const [data, commentsData, heroMovies] = await Promise.all([
           getTierList(id),
           getTierListComments(id),
+          loadMovies(),
         ]);
         if (!data) { setLoading(false); return; }
         setTierList(data);
@@ -92,7 +97,7 @@ export default function ViewTierListPage() {
         const tiers = data.tiers as Record<string, string[]>;
         const resolved: Record<string, Movie[]> = {};
         for (const [tier, slugs] of Object.entries(tiers)) {
-          resolved[tier] = (slugs || []).map(resolveMovie).filter((m): m is Movie => m !== null);
+          resolved[tier] = (slugs || []).map(s => resolveMovieSync(s, heroMovies)).filter((m): m is Movie => m !== null);
         }
         setResolvedTiers(resolved);
         setLoading(false);

@@ -175,7 +175,7 @@ export default function RegisterPage() {
               </div>
 
               {/* Form */}
-              <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+              <form method="POST" className="flex flex-col gap-4" onSubmit={handleSubmit}>
                 <div className="flex flex-col gap-1.5">
                   <div className="flex justify-between items-center">
                     <label className="text-[12px] font-semibold text-white/40 pl-1">Display Name</label>

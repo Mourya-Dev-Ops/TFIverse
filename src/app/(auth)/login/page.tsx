@@ -203,7 +203,7 @@ function LoginForm() {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <form method="POST" onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div className="flex flex-col gap-1.5">
               <label className="text-[12px] font-semibold text-white/40 pl-1">Email</label>
               <input
