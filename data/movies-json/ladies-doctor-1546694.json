@@ -1,0 +1,146 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "homepage": "",
+  "id": 1546694,
+  "imdb_id": "tt6914934",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Ladies Doctor",
+  "overview": "Doctor Ram is about to get married to Rani. He performs an operation on Janaki, who believes that no male other than her father, brother or husband should touch her and this creates problems for Ram.",
+  "popularity": 0.0411,
+  "poster_path": null,
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1996-06-15",
+  "revenue": 0,
+  "runtime": 119,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "#ladiesdoctor1996",
+  "title": "Ladies Doctor",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 545595,
+        "known_for_department": "Acting",
+        "name": "Rajendra Prasad",
+        "original_name": "Rajendra Prasad",
+        "popularity": 0.6529,
+        "profile_path": "/zh6QJ85g5KbpkjL5fgqlOGddn5C.jpg",
+        "cast_id": 1,
+        "character": "Dr.ram prasad",
+        "credit_id": "68c7b979b9e1ed31b570d73c",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.0993,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 2,
+        "character": "Compounder",
+        "credit_id": "68c7b99a053d2d4067ca72dc",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584698,
+        "known_for_department": "Acting",
+        "name": "Vinita",
+        "original_name": "Vinita",
+        "popularity": 0.2742,
+        "profile_path": "/poWwxePVVbWThv6HOFF3czO38aK.jpg",
+        "cast_id": 3,
+        "character": "Janaki",
+        "credit_id": "68c7b9fefa33bf0d1dc90312",
+        "order": 2
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 110297,
+        "known_for_department": "Sound",
+        "name": "Vidyasagar",
+        "original_name": "Vidyasagar",
+        "popularity": 0.2783,
+        "profile_path": "/f0mzntGkD90Brbg0db7w8WCPGIT.jpg",
+        "credit_id": "68c7bab1d6a80dcd8c220477",
+        "department": "Sound",
+        "job": "Music Director"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1996-06-15T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt6914934",
+    "wikidata_id": "Q25096940",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

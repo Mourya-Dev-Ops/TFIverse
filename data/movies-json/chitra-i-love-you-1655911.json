@@ -1,0 +1,163 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1655911,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Chitra I Love You",
+  "overview": "Chitra I love you, is a romcom that has won CINE MAA AWARD in short film competition by MAA TV out of its 1000+ competitors.  Story  --------  Its about a wannabe actor meeting an assistant director in an accident and they both decides to make a short film which brings them good fortune and they find love towards each other.",
+  "popularity": 0.0214,
+  "poster_path": "/5aVcu8FsHMiMXzSSAgGhxaOSLNS.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2013-05-23",
+  "revenue": 0,
+  "runtime": 22,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Chitra I Love You",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1647676,
+        "known_for_department": "Acting",
+        "name": "Yuva Chandraa",
+        "original_name": "Yuva Chandraa",
+        "popularity": 0.0297,
+        "profile_path": null,
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "69bfa2f315f0a23476a24f33",
+        "order": 0
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1647434,
+        "known_for_department": "Directing",
+        "name": "Rahul Sankrityan",
+        "original_name": "Rahul Sankrityan",
+        "popularity": 0.1872,
+        "profile_path": "/eAhTumxcmBhKf6ZFwzN67zXneHJ.jpg",
+        "credit_id": "69bfa36a3c1ffc2ce31b0a38",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1647434,
+        "known_for_department": "Directing",
+        "name": "Rahul Sankrityan",
+        "original_name": "Rahul Sankrityan",
+        "popularity": 0.1872,
+        "profile_path": "/eAhTumxcmBhKf6ZFwzN67zXneHJ.jpg",
+        "credit_id": "69bfa38080acb312f001c966",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1647434,
+        "known_for_department": "Directing",
+        "name": "Rahul Sankrityan",
+        "original_name": "Rahul Sankrityan",
+        "popularity": 0.1872,
+        "profile_path": "/eAhTumxcmBhKf6ZFwzN67zXneHJ.jpg",
+        "credit_id": "69bfa394966ba473f601c8f2",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1647434,
+        "known_for_department": "Directing",
+        "name": "Rahul Sankrityan",
+        "original_name": "Rahul Sankrityan",
+        "popularity": 0.1872,
+        "profile_path": "/eAhTumxcmBhKf6ZFwzN67zXneHJ.jpg",
+        "credit_id": "69bfa3b0d126666d5013bc3f",
+        "department": "Editing",
+        "job": "Editor"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 2850,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/5aVcu8FsHMiMXzSSAgGhxaOSLNS.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1900
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2013-05-23T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

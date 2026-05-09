@@ -1,0 +1,94 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 562084,
+  "imdb_id": "tt7943256",
+  "origin_country": [],
+  "original_language": "te",
+  "original_title": "That is Mahalakshmi",
+  "overview": "",
+  "popularity": 0.198,
+  "poster_path": "/uGgoxEhN6sHdRuYVBwmPS3rFtq6.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Canceled",
+  "tagline": "",
+  "title": "That is Mahalakshmi",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "external_ids": {
+    "imdb_id": "tt7943256",
+    "wikidata_id": "Q43302309",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.692,
+        "height": 1000,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/uGgoxEhN6sHdRuYVBwmPS3rFtq6.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 692
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/d73IcZAWnDMnYcicMGhzx3gDWHH.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/7VN45mR4caxw1W0UzMbhkueNCa1.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Queen Once Again",
+        "type": ""
+      }
+    ]
+  }
+}

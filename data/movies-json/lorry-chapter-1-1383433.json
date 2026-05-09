@@ -1,0 +1,108 @@
+{
+  "adult": false,
+  "backdrop_path": "/c8pbZDbtcKWW79HRN2aChaPtWNC.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1383433,
+  "imdb_id": "tt32206571",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Lorry Chapter 1",
+  "overview": "Harshavardan, an ex-convict mechanic, is tasked to deliver a lorry with a valuable load to Mumbai. He gets entangled with the villainous Pratap, who wants to become CM through illegal means.",
+  "popularity": 0.0416,
+  "poster_path": "/aKBAzaWPzs5AF9PC3PPXkxyIa7F.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2024-08-02",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Released",
+  "tagline": "",
+  "title": "Lorry Chapter 1",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "external_ids": {
+    "imdb_id": "tt32206571",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/c8pbZDbtcKWW79HRN2aChaPtWNC.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 900,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/aKBAzaWPzs5AF9PC3PPXkxyIa7F.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 600
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Telugu Lorry Chapter-1 Trailer  | Sreekanth Reddy Asam | Chandrashikha | Rocky | Nagarjuna",
+        "key": "qbrgrD3Ztt0",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Trailer",
+        "official": false,
+        "id": "672ad932433c82ea267e88f9",
+        "published_at": "2024-07-13T06:30:14.000Z"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2024-08-02T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

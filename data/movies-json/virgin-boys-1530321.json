@@ -1,0 +1,110 @@
+{
+  "adult": false,
+  "backdrop_path": "/eOWJQYEn7Uu7OYdPbYyGplGLagn.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 1530321,
+  "imdb_id": "tt36955269",
+  "origin_country": [
+    "US"
+  ],
+  "original_language": "te",
+  "original_title": "Virgin Boys",
+  "overview": "Arya, Rony and Dundi three naive boys joins posh co-ed college and clash with a rich brat's gang. Arya finds love, Rony forms a bond and Dundi causes chaos with his antics. A fun emotional journey of campus life, friendship and first love.",
+  "popularity": 0.1126,
+  "poster_path": "/s4QoF3Be7CDzSnYjcUWSDXLwszz.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2025-07-11",
+  "revenue": 0,
+  "runtime": 133,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Released",
+  "tagline": "",
+  "title": "Virgin Boys",
+  "video": false,
+  "vote_average": 2,
+  "vote_count": 1,
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt36955269",
+    "wikidata_id": "Q135231217",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-07-11T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/eOWJQYEn7Uu7OYdPbYyGplGLagn.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/s4QoF3Be7CDzSnYjcUWSDXLwszz.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Virgin Boys",
+        "type": ""
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  }
+}

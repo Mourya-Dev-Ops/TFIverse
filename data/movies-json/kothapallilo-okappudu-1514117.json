@@ -1,0 +1,456 @@
+{
+  "adult": false,
+  "backdrop_path": "/juUr9cIX09G7fIiQzEX9X2MmBpS.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1514117,
+  "imdb_id": "tt37501723",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "కొత్తపల్లిలో ఒకప్పుడు",
+  "overview": "When a man pursues a local woman, his relationship with her friend is misconstrued by the villagers.",
+  "popularity": 0.1225,
+  "poster_path": "/renqstBr6YWrp0J0ngad4dnIrMl.jpg",
+  "production_companies": [
+    {
+      "id": 181542,
+      "logo_path": null,
+      "name": "Spirit Media",
+      "origin_country": "IN"
+    },
+    {
+      "id": 129119,
+      "logo_path": null,
+      "name": "Paruchuri Vijaya Praveena Arts",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2025-07-18",
+  "revenue": 0,
+  "runtime": 123,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Kothapallilo Okappudu",
+  "video": false,
+  "vote_average": 6,
+  "vote_count": 1,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2109334,
+        "known_for_department": "Acting",
+        "name": "Ravindra Vijay",
+        "original_name": "Ravindra Vijay",
+        "popularity": 0.2798,
+        "profile_path": "/2mw4VbANE3QtI9dzQXdrG74RizL.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "6877704a8e8c5e308f779930",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4383498,
+        "known_for_department": "Acting",
+        "name": "Manoj Chandra",
+        "original_name": "Manoj Chandra",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "6877705a3510c8c8bc0524d0",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5567803,
+        "known_for_department": "Acting",
+        "name": "Usha Bonela",
+        "original_name": "Usha Bonela",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "68777068b47b67a2ac05242d",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5567805,
+        "known_for_department": "Acting",
+        "name": "Monika T",
+        "original_name": "Monika T",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "6877707e78f65ed39ccce1a2",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3503570,
+        "known_for_department": "Acting",
+        "name": "Shining Phani",
+        "original_name": "Shining Phani",
+        "popularity": 0.0286,
+        "profile_path": null,
+        "cast_id": 14,
+        "character": "",
+        "credit_id": "6877708959da6860d977995e",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5567806,
+        "known_for_department": "Acting",
+        "name": "Bongu Sathi",
+        "original_name": "Bongu Sathi",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "cast_id": 15,
+        "character": "",
+        "credit_id": "68777091ecacd1e0991cceb0",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5567807,
+        "known_for_department": "Acting",
+        "name": "Benerjee",
+        "original_name": "Benerjee",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "cast_id": 16,
+        "character": "",
+        "credit_id": "6877709fd83bff3034165c5e",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3627232,
+        "known_for_department": "Acting",
+        "name": "Prem Sagar",
+        "original_name": "Prem Sagar",
+        "popularity": 0.2463,
+        "profile_path": null,
+        "cast_id": 17,
+        "character": "",
+        "credit_id": "687770a46a26017548165c2e",
+        "order": 7
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2115741,
+        "known_for_department": "Acting",
+        "name": "Praveena Paruchuri",
+        "original_name": "Praveena Paruchuri",
+        "popularity": 0.0917,
+        "profile_path": "/99RoUSDXgumrhaM2XihMG0SaxxV.jpg",
+        "credit_id": "68776f1ec6ef77dbd143d11d",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5567798,
+        "known_for_department": "Writing",
+        "name": "Guru Kiran Bathula",
+        "original_name": "Guru Kiran Bathula",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "68776f39f8a0e415a877996e",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2115741,
+        "known_for_department": "Acting",
+        "name": "Praveena Paruchuri",
+        "original_name": "Praveena Paruchuri",
+        "popularity": 0.0917,
+        "profile_path": "/99RoUSDXgumrhaM2XihMG0SaxxV.jpg",
+        "credit_id": "68776f493a1757aea2165bc9",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 215910,
+        "known_for_department": "Acting",
+        "name": "Rana Daggubati",
+        "original_name": "Rana Daggubati",
+        "popularity": 0.9302,
+        "profile_path": "/dCQE1CoWWc6RoXUTxOKjAXO8KDr.jpg",
+        "credit_id": "68776f95e0d4b3de5d1ccebc",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1107020,
+        "known_for_department": "Writing",
+        "name": "Gopalakrishna Paruchuri",
+        "original_name": "Gopalakrishna Paruchuri",
+        "popularity": 0.4135,
+        "profile_path": null,
+        "credit_id": "68776fa7620dd67c10cf1615",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5567799,
+        "known_for_department": "Production",
+        "name": "Aloor Niranjan",
+        "original_name": "Aloor Niranjan",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "68776fb459da6860d977993d",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2728156,
+        "known_for_department": "Camera",
+        "name": "Petros Antoniadis",
+        "original_name": "Petros Antoniadis",
+        "popularity": 0.1613,
+        "profile_path": null,
+        "credit_id": "68776fdd1cd3300879779937",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3335005,
+        "known_for_department": "Directing",
+        "name": "Kiran R",
+        "original_name": "Kiran R",
+        "popularity": 0.0603,
+        "profile_path": null,
+        "credit_id": "6877702899edc017e5cf1571",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3335005,
+        "known_for_department": "Directing",
+        "name": "Kiran R",
+        "original_name": "Kiran R",
+        "popularity": 0.0603,
+        "profile_path": null,
+        "credit_id": "6877703681bf3d10d20523f8",
+        "department": "Editing",
+        "job": "Editor"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt37501723",
+    "wikidata_id": "Q135333759",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 355446,
+        "name": "kothapalli"
+      },
+      {
+        "id": 355447,
+        "name": "okappudu"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "GB",
+        "release_dates": [
+          {
+            "certification": "12A",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2025-07-18T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U/A 16+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-07-18T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/juUr9cIX09G7fIiQzEX9X2MmBpS.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/4z3gg0enyhboo7HcdiQOdrz21da.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3840
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1350,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/renqstBr6YWrp0J0ngad4dnIrMl.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 900
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/1EFfkaBkks55ANcl3537kXs93L5.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.678,
+        "height": 1800,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/997ILUQLl2U9yS5ukoQ7qswcq8h.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1220
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/lmu7wk9rafySE5SVMf8Yup7FTjF.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/10dhIvtoksLfyFtclF7y7xFBl6p.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Kothapallilo Okappudu Trailer | Rana Daggubati | Praveena Paruchuri | In Theatres July 18th",
+        "key": "q2nS-84YukE",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Trailer",
+        "official": true,
+        "id": "68776ec97f454369dc779957",
+        "published_at": "2025-07-10T05:12:07.000Z"
+      },
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Rana Daggubati Presents \"KOTHAPALLILO OKAPPUDU\" - Teaser | Praveena Paruchuri | In Theatres July 18",
+        "key": "GnLLSf8br-A",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Teaser",
+        "official": true,
+        "id": "6877f774bc36a2a3db04e76b",
+        "published_at": "2025-07-04T11:34:00.000Z"
+      }
+    ]
+  }
+}

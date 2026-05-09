@@ -1,0 +1,547 @@
+{
+  "adult": false,
+  "backdrop_path": "/hCm8C6GRM0mGAd2A9qQoYq8vGW1.jpg",
+  "belongs_to_collection": null,
+  "budget": 2123894,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 10751,
+      "name": "Family"
+    }
+  ],
+  "homepage": "",
+  "id": 517508,
+  "imdb_id": "tt8072400",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "హలో గురు ప్రేమ కోసమే",
+  "overview": "After a rocky start, a friendship develops between a happy-go-lucky youth and a girl from the city.",
+  "popularity": 0.5808,
+  "poster_path": "/7atXs7vvt7P6eHqMkPEjvPcG9af.jpg",
+  "production_companies": [
+    {
+      "id": 14464,
+      "logo_path": null,
+      "name": "Sri Venkateswara Creations",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2018-10-18",
+  "revenue": 5479646,
+  "runtime": 145,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Hello Guru Prema Kosame",
+  "video": false,
+  "vote_average": 6.3,
+  "vote_count": 19,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 544986,
+        "known_for_department": "Acting",
+        "name": "Ram Pothineni",
+        "original_name": "Ram Pothineni",
+        "popularity": 1.3206,
+        "profile_path": "/co7EItZMqNAvKJmH16NMoVB24cl.jpg",
+        "cast_id": 0,
+        "character": "Sanju",
+        "credit_id": "5acda8de0e0a26320a03a811",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1470724,
+        "known_for_department": "Acting",
+        "name": "Anupama Parameswaran",
+        "original_name": "Anupama Parameswaran",
+        "popularity": 0.9966,
+        "profile_path": "/iA8NAbwIKTbA8fKTNtXsAiBcC4W.jpg",
+        "cast_id": 1,
+        "character": "Anu",
+        "credit_id": "5acda8e9c3a3687e4003ac46",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 89153,
+        "known_for_department": "Acting",
+        "name": "Prakash Raj",
+        "original_name": "Prakash Raj",
+        "popularity": 2.6506,
+        "profile_path": "/dJvFZOXmZdkYCOUcKTXQAhBcAoH.jpg",
+        "cast_id": 3,
+        "character": "Viswanath",
+        "credit_id": "5acdad940e0a26320a03ad65",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1065002,
+        "known_for_department": "Acting",
+        "name": "Pranitha Subhash",
+        "original_name": "Pranitha Subhash",
+        "popularity": 0.5606,
+        "profile_path": "/nYTdnt5wHIYHa0hK95ZNwsx2mdd.jpg",
+        "cast_id": 7,
+        "character": "Reethu",
+        "credit_id": "5acdae0dc3a36834de09381a",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1163230,
+        "known_for_department": "Acting",
+        "name": "Posani Krishna Murali",
+        "original_name": "Posani Krishna Murali",
+        "popularity": 0.7494,
+        "profile_path": "/mJHo1EvOORv2FAK12zpFESDQfM.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "5c065b519251417e55086846",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 582184,
+        "known_for_department": "Acting",
+        "name": "Sithara",
+        "original_name": "Sithara",
+        "popularity": 0.3915,
+        "profile_path": "/9km7P6HyYOg0qMFMicgbg64Fkn5.jpg",
+        "cast_id": 10,
+        "character": "Gayatri",
+        "credit_id": "5c065b629251410b920d52e5",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 560038,
+        "known_for_department": "Acting",
+        "name": "Jayaprakash",
+        "original_name": "Jayaprakash",
+        "popularity": 0.6603,
+        "profile_path": "/eyYfMqy7NsED7SYrAzaso9ZjLT5.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "5c065b70c3a3685a4b0d75f7",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1543710,
+        "known_for_department": "Acting",
+        "name": "Noel Sean",
+        "original_name": "Noel Sean",
+        "popularity": 0.1867,
+        "profile_path": null,
+        "cast_id": 12,
+        "character": "Karthik",
+        "credit_id": "5c065b830e0a2636ce0e8ceb",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 146937,
+        "known_for_department": "Acting",
+        "name": "Sayaji Shinde",
+        "original_name": "Sayaji Shinde",
+        "popularity": 0.6919,
+        "profile_path": "/r4VBYop4XktGuSZ0wozRqJbEzMH.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "5c065b9ac3a36865bc0e7280",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584479,
+        "known_for_department": "Acting",
+        "name": "Suresh",
+        "original_name": "Suresh",
+        "popularity": 0.4615,
+        "profile_path": "/jT78sxmRMh37YEFvZiz2Qfyri1N.jpg",
+        "cast_id": 17,
+        "character": "",
+        "credit_id": "62dc576b33a5330061255b95",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1412713,
+        "known_for_department": "Acting",
+        "name": "Saptagiri",
+        "original_name": "Saptagiri",
+        "popularity": 0.3063,
+        "profile_path": "/h8G2HkmuwDuEgJEIAoUBvN8dSwN.jpg",
+        "cast_id": 18,
+        "character": "",
+        "credit_id": "62dc577558361b0054686c4f",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1638475,
+        "known_for_department": "Acting",
+        "name": "Praveen",
+        "original_name": "Praveen",
+        "popularity": 0.1974,
+        "profile_path": "/aBegVOvddJViXAPBL5k8MXnZCYA.jpg",
+        "cast_id": 19,
+        "character": "",
+        "credit_id": "62dc577958361b0054686c56",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1638503,
+        "known_for_department": "Acting",
+        "name": "Satya",
+        "original_name": "Satya",
+        "popularity": 0.834,
+        "profile_path": "/fWHqfjiqnORU6R2fqwiJnowujdP.jpg",
+        "cast_id": 20,
+        "character": "",
+        "credit_id": "62dc577e33a5330051950ead",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 581097,
+        "known_for_department": "Acting",
+        "name": "Aamani",
+        "original_name": "Aamani",
+        "popularity": 0.3229,
+        "profile_path": "/pitQe6OOFey0uzv2rmwljb4lJmr.jpg",
+        "cast_id": 21,
+        "character": "Lakshmi",
+        "credit_id": "69badc9616a8024c6c2c9519",
+        "order": 13
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237681,
+        "known_for_department": "Sound",
+        "name": "Devi Sri Prasad",
+        "original_name": "Devi Sri Prasad",
+        "popularity": 0.53,
+        "profile_path": "/4Be4HLS7qqbVPfKyA3yHvtpObFc.jpg",
+        "credit_id": "6125e657944a570065a03596",
+        "department": "Sound",
+        "job": "Music"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3280224,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Srinu Tadala",
+        "original_name": "Srinu Tadala",
+        "popularity": 0.1314,
+        "profile_path": null,
+        "credit_id": "617295756d4c9700272c9a1c",
+        "department": "Costume & Make-Up",
+        "job": "Costume Designer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 230013,
+        "known_for_department": "Production",
+        "name": "Dil Raju",
+        "original_name": "Dil Raju",
+        "popularity": 0.0949,
+        "profile_path": "/rKATd51tomVLWw7EjjNgM7uAQCW.jpg",
+        "credit_id": "5acda907c3a3687e7203850c",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1526584,
+        "known_for_department": "Camera",
+        "name": "Vijay C Chakravarthy",
+        "original_name": "Vijay C Chakravarthy",
+        "popularity": 0.1811,
+        "profile_path": null,
+        "credit_id": "5acdadba0e0a267f9a01c55a",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1967174,
+        "known_for_department": "Art",
+        "name": "Sahi Suresh",
+        "original_name": "Sahi Suresh",
+        "popularity": 0.1352,
+        "profile_path": null,
+        "credit_id": "5acdade09251410c0301b459",
+        "department": "Art",
+        "job": "Art Direction"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1267541,
+        "known_for_department": "Directing",
+        "name": "Trinadha Rao Nakkina",
+        "original_name": "Trinadha Rao Nakkina",
+        "popularity": 0.1969,
+        "profile_path": null,
+        "credit_id": "5acdae270e0a2631f703a930",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1765046,
+        "known_for_department": "Crew",
+        "name": "Vamsi Kaka",
+        "original_name": "Vamsi Kaka",
+        "popularity": 0.2919,
+        "profile_path": "/7Q71Q3MvVHRn7z9uwkjyFWsgR9w.jpg",
+        "credit_id": "5e0114d4d1a89300128c6a0c",
+        "department": "Crew",
+        "job": "Public Relations"
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Hello Guru Prema Kosame Trailer - Ram Pothineni, Anupama Parameswaran | Dil Raju",
+        "key": "8Q4o87KPInY",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Trailer",
+        "official": true,
+        "id": "5bd568700e0a2622dd029b66",
+        "published_at": "2018-10-10T05:36:51.000Z"
+      },
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Hello Guru Prema Kosame Teaser - Ram Pothineni, Anupama Parameswaran | Dil Raju",
+        "key": "QIpWbcdxdqk",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Teaser",
+        "official": true,
+        "id": "5bd5686092514103890257c2",
+        "published_at": "2018-09-17T11:27:26.000Z"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2018-10-18T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/uUXnMrQJSW8F7abTXB2mlUlVDcN.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1238,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/hCm8C6GRM0mGAd2A9qQoYq8vGW1.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 2201
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/lYTU6RO5duuZyj5cgCChB6qaMzy.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 1280
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/mvBhljeIcxlO7EUXLf08irgRp3h.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/plYUn1EJdx5e7JSQkT6z6oXyN3R.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/5VqWbyN1EmzvqpFNSzGN7sLJRTj.jpg",
+        "vote_average": 3.334,
+        "vote_count": 3,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 960,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/37fEcWvPnMvTURgu88Noun5NSlU.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 640
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/cRbYgwVYt2yA7XXqLPIPrZj8Vnh.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/aKgwLrL6wsxKHfA6zt5cQMdDumk.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/cS630M0l7pP3SIcC7WWvUnT8R2X.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 960,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/obfGaNNCL6ee6zjhrk3Bu6glGN5.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 640
+      },
+      {
+        "aspect_ratio": 0.75,
+        "height": 2560,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/7atXs7vvt7P6eHqMkPEjvPcG9af.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt8072400",
+    "wikidata_id": "Q58411508",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Dumdaar Khiladi",
+        "type": "Hindi"
+      },
+      {
+        "iso_3166_1": "TH",
+        "title": "ฮัลโหล คุณครับ มาปิ๊งรักกันเถอะ",
+        "type": ""
+      }
+    ]
+  }
+}

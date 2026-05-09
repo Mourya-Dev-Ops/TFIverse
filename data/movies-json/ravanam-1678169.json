@@ -1,0 +1,96 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "homepage": "",
+  "id": 1678169,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Ravanam",
+  "overview": "An upcoming film.",
+  "popularity": 0.0623,
+  "poster_path": null,
+  "production_companies": [
+    {
+      "id": 14464,
+      "logo_path": null,
+      "name": "Sri Venkateswara Creations",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Rumored",
+  "tagline": "",
+  "title": "Ravanam",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2182258,
+        "known_for_department": "Directing",
+        "name": "Prashanth Neel",
+        "original_name": "ಪ್ರಶಾಂತ್ ನೀಲ್",
+        "popularity": 0.6737,
+        "profile_path": "/oq6ydaurgC4NueXuo64R5QoFnfp.jpg",
+        "credit_id": "69e774516713189306b279fe",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

@@ -1,0 +1,716 @@
+{
+  "adult": false,
+  "backdrop_path": "/zcWuuXbRR6mxHV2X6G0EcAUXCO0.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1417743,
+  "imdb_id": "tt33343597",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "మౌగ్లీ",
+  "overview": "In the battle between love and lust, a tribal man fights to save his deaf and mute girlfriend from a ruthless forest officer, unravelling cat and mouse drama within the heart of the forest.",
+  "popularity": 1.0223,
+  "poster_path": "/zWUvV7hEHUrIm5GyoIVWAukzKDX.jpg",
+  "production_companies": [
+    {
+      "id": 106829,
+      "logo_path": null,
+      "name": "People Media Factory",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2025-12-13",
+  "revenue": 0,
+  "runtime": 157,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Mowgli",
+  "video": false,
+  "vote_average": 5.5,
+  "vote_count": 2,
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "GB",
+        "release_dates": [
+          {
+            "certification": "12A",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2025-12-13T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-12-13T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4321168,
+        "known_for_department": "Acting",
+        "name": "Roshan Kanakala",
+        "original_name": "Roshan Kanakala",
+        "popularity": 0.0418,
+        "profile_path": "/7nA6ODuwW844tXOL1yk1tUwCQAc.jpg",
+        "cast_id": 5,
+        "character": "Mowgli",
+        "credit_id": "6787060dee84fa4def7bd845",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5179979,
+        "known_for_department": "Acting",
+        "name": "Sakshi S Mhadolkar",
+        "original_name": "Sakshi S Mhadolkar",
+        "popularity": 0.0143,
+        "profile_path": "/dCFBRaAFrxSWwUstRZSNZzA2voD.jpg",
+        "cast_id": 1,
+        "character": "Jasmine",
+        "credit_id": "678702ddbd793c03544f151d",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3763783,
+        "known_for_department": "Directing",
+        "name": "Bandi Saroj Kumar",
+        "original_name": "Bandi Saroj Kumar",
+        "popularity": 0.09,
+        "profile_path": null,
+        "cast_id": 6,
+        "character": "SI. Christopher Nolan",
+        "credit_id": "68c39033a14ab80e69cdc74f",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1638514,
+        "known_for_department": "Acting",
+        "name": "Harsha Chemudu",
+        "original_name": "Viva Harsha",
+        "popularity": 0.4136,
+        "profile_path": "/be0atwoQTudy7WaVCNwWbQuxjvG.jpg",
+        "cast_id": 4,
+        "character": "Prabhas Bunty",
+        "credit_id": "678705f0db4fe022ad4eafba",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3081342,
+        "known_for_department": "Acting",
+        "name": "Mounika Reddy",
+        "original_name": "Mounika Reddy",
+        "popularity": 0.4269,
+        "profile_path": "/nLhyRS42M6g80eQnQsRPc35heUG.jpg",
+        "cast_id": 35,
+        "character": "Assistant Cherographer",
+        "credit_id": "693c5903f3e7a1ccd13953b5",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2187317,
+        "known_for_department": "Acting",
+        "name": "Suhas",
+        "original_name": "Suhas",
+        "popularity": 0.3723,
+        "profile_path": "/4TZK8EkWiWPiC7wvDu4yFIXP41D.jpg",
+        "cast_id": 36,
+        "character": "",
+        "credit_id": "693c5a4f3e7084c3bfaec4d5",
+        "order": 5
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2592520,
+        "known_for_department": "Writing",
+        "name": "Sandeep Raj",
+        "original_name": "Sandeep Raj",
+        "popularity": 0.2536,
+        "profile_path": "/glncVpKt1YKMcmoV7vNCEGWnJtu.jpg",
+        "credit_id": "67870410b9094c7dfebb7afb",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2592520,
+        "known_for_department": "Writing",
+        "name": "Sandeep Raj",
+        "original_name": "Sandeep Raj",
+        "popularity": 0.2536,
+        "profile_path": "/glncVpKt1YKMcmoV7vNCEGWnJtu.jpg",
+        "credit_id": "68c391245e7b198c7b199d8a",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2459948,
+        "known_for_department": "Production",
+        "name": "T G Vishwa Prasad",
+        "original_name": "T G Vishwa Prasad",
+        "popularity": 0.1729,
+        "profile_path": null,
+        "credit_id": "68c391350d2fb07809d261c7",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5684558,
+        "known_for_department": "Production",
+        "name": "Krithi Prasad",
+        "original_name": "Krithi Prasad",
+        "popularity": 0.0261,
+        "profile_path": null,
+        "credit_id": "68c3914bcbba984c45860f90",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2225047,
+        "known_for_department": "Sound",
+        "name": "Kaala Bhairava",
+        "original_name": "Kaala Bhairava",
+        "popularity": 0.0856,
+        "profile_path": null,
+        "credit_id": "68c3915ee58b817ebad261c8",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586679,
+        "known_for_department": "Sound",
+        "name": "Maruti",
+        "original_name": "Maruti",
+        "popularity": 0.0387,
+        "profile_path": null,
+        "credit_id": "68c391768ade3c8fc52a0604",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3279921,
+        "known_for_department": "Editing",
+        "name": "Kodati Pavan Kalyan",
+        "original_name": "Kodati Pavan Kalyan",
+        "popularity": 0.0839,
+        "profile_path": null,
+        "credit_id": "68c3918378c801d6f02a0632",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3407696,
+        "known_for_department": "Art",
+        "name": "Kiran Mamidi",
+        "original_name": "Kiran Mamidi",
+        "popularity": 0.0773,
+        "profile_path": null,
+        "credit_id": "68c391bac885a7964d3bdfb7",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3280028,
+        "known_for_department": "Production",
+        "name": "Sujith Kumar Kolli",
+        "original_name": "Sujith Kumar Kolli",
+        "popularity": 0.0557,
+        "profile_path": null,
+        "credit_id": "68c391d22aa492eec1d26193",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5684564,
+        "known_for_department": "Production",
+        "name": "Meghasyam Pathada",
+        "original_name": "Meghasyam Pathada",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "68c391ef9165067244bac84a",
+        "department": "Production",
+        "job": "Coordinating Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5684565,
+        "known_for_department": "Directing",
+        "name": "Natraj Madigonda",
+        "original_name": "Natraj Madigonda",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "68c392016ebe8d5443199e22",
+        "department": "Directing",
+        "job": "Action Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586679,
+        "known_for_department": "Sound",
+        "name": "Maruti",
+        "original_name": "Maruti",
+        "popularity": 0.0387,
+        "profile_path": null,
+        "credit_id": "68c3921d869229fe5d2cea62",
+        "department": "Writing",
+        "job": "Co-Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2547394,
+        "known_for_department": "Directing",
+        "name": "Radhakrishna Reddy",
+        "original_name": "Radhakrishna Reddy",
+        "popularity": 0.0944,
+        "profile_path": null,
+        "credit_id": "68c39236619cd3df2a2cea00",
+        "department": "Writing",
+        "job": "Co-Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2200190,
+        "known_for_department": "Crew",
+        "name": "Vamsi Shekar",
+        "original_name": "Vamsi Shekar",
+        "popularity": 0.2716,
+        "profile_path": null,
+        "credit_id": "68c392470a865658477ce42a",
+        "department": "Crew",
+        "job": "Public Relations"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 4601254,
+        "known_for_department": "Costume & Make-Up",
+        "name": "sushmitha bommidi",
+        "original_name": "sushmitha bommidi",
+        "popularity": 0.0143,
+        "profile_path": "/l2LUBSMA4IFOFQI69MIbhtJoFj8.jpg",
+        "credit_id": "68c39696a3ac4701fb3bdf7b",
+        "department": "Costume & Make-Up",
+        "job": "Costume Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5684585,
+        "known_for_department": "Costume & Make-Up",
+        "name": "G. V. Annapurna",
+        "original_name": "G. V. Annapurna",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "68c396cb2e580561ae3bdf60",
+        "department": "Costume & Make-Up",
+        "job": "Costume Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5684586,
+        "known_for_department": "Editing",
+        "name": "K. A. N. Chiranjivi",
+        "original_name": "K. A. N. Chiranjivi",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "68c39703b191dc1ee9cdc7f2",
+        "department": "Editing",
+        "job": "Colorist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3984174,
+        "known_for_department": "Art",
+        "name": "Sathish Dasari",
+        "original_name": "Sathish Dasari",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "68c39775a71168daa13bdfdb",
+        "department": "Directing",
+        "job": "Co-Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3279915,
+        "known_for_department": "Directing",
+        "name": "Vara Kodali",
+        "original_name": "Vara Kodali",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "68c3979a623bfa60e186100e",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5684590,
+        "known_for_department": "Directing",
+        "name": "Sarvotham Reddy",
+        "original_name": "Sarvotham Reddy",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "68c3984e619cd3df2a2cea2c",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5684592,
+        "known_for_department": "Directing",
+        "name": "Krishna GK",
+        "original_name": "Krishna GK",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "68c39878ca74771033cdc758",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5684594,
+        "known_for_department": "Directing",
+        "name": "Bhavitha Kanakatla",
+        "original_name": "Bhavitha Kanakatla",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "68c39892a14ab80e69cdc7a2",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5684596,
+        "known_for_department": "Directing",
+        "name": "Maganti Siva",
+        "original_name": "Maganti Siva",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "68c398be80e2477e8a2cea4a",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5684598,
+        "known_for_department": "Camera",
+        "name": "Vijay Raccha",
+        "original_name": "Vijay Raccha",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "68c398e81152730555cdc82c",
+        "department": "Camera",
+        "job": "Still Photographer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5500075,
+        "known_for_department": "Editing",
+        "name": "Likhith Lee",
+        "original_name": "Likhith Lee",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "68c3990280e2477e8a2cea50",
+        "department": "Editing",
+        "job": "Associate Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5684600,
+        "known_for_department": "Visual Effects",
+        "name": "Srikar Reddy Arutla",
+        "original_name": "Srikar Reddy Arutla",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "68c3992b86753141c9cdc7b2",
+        "department": "Visual Effects",
+        "job": "Visual Effects Supervisor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2222244,
+        "known_for_department": "Production",
+        "name": "Dhani Aelay",
+        "original_name": "Dhani Aelay",
+        "popularity": 0.1763,
+        "profile_path": null,
+        "credit_id": "68c39941fce69ab8ad861042",
+        "department": "Production",
+        "job": "Publicist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3865804,
+        "known_for_department": "Sound",
+        "name": "Sai Maneendhar Reddy",
+        "original_name": "Sai Maneendhar Reddy",
+        "popularity": 0.0734,
+        "profile_path": null,
+        "credit_id": "68c399758e785cd823cdc759",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3810064,
+        "known_for_department": "Sound",
+        "name": "Santosh Kumar Vodnala",
+        "original_name": "Santosh Kumar Vodnala",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "68c3999709f9dd36c0cdc80b",
+        "department": "Sound",
+        "job": "Sound Mixer"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt33343597",
+    "wikidata_id": "Q137394697",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Mowgli Trailer | Roshan Kanakala | Bandi Saroj Kumar | Sandeep Raj | Sakkshi | TG Vishwa Prasad",
+        "key": "gd3xol_YZyU",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Trailer",
+        "official": true,
+        "id": "693c0319842950fbba360c6e",
+        "published_at": "2025-12-02T05:37:06.000Z"
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/zcWuuXbRR6mxHV2X6G0EcAUXCO0.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1280
+      },
+      {
+        "aspect_ratio": 1.777,
+        "height": 1626,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/7tncY4QIDH8DEzmKbKETLgFv51k.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 2890
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1296,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/eyL2FAIYEFznwMH44cZnCol4R5b.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2304
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/9lNByz3fWz4HgCOOlSDMDhDzNC0.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [
+      {
+        "aspect_ratio": 2.078,
+        "height": 308,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/4sSCioVmaXWxUt9lPymi6jloxp.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 640
+      },
+      {
+        "aspect_ratio": 1.736,
+        "height": 311,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/1RNZdqzNebwuTi5bPk7nfKKcFmf.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 540
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/zWUvV7hEHUrIm5GyoIVWAukzKDX.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1365
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1431,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/fwyXKqVffOOoES5HhJutqivYEVi.jpg",
+        "vote_average": 2.278,
+        "vote_count": 3,
+        "width": 954
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/sRFxeHhJTy61OBiGdJFCFQD1RYx.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.75,
+        "height": 800,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/izddn7XITzcfmAQ1La8WngcEzeM.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 600
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/sImBZ1enCoXaI7BRMCdHTMvB3ob.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1365
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Mowgli 2025",
+        "type": ""
+      }
+    ]
+  }
+}

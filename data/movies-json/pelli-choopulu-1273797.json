@@ -1,0 +1,323 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1273797,
+  "imdb_id": "tt0271711",
+  "origin_country": [
+    "US"
+  ],
+  "original_language": "te",
+  "original_title": "పెళ్ళి చూపులు",
+  "overview": "Pelli Choopulu (transl. Matchmaking) is a 1983 Indian Telugu-language romantic drama film directed by Parvataneni Sambasiva Rao.[1] A remake of K. Bhagyaraj's Tamil film Thooral Ninnu Pochchu (1982),[2] it stars Chandramohan and Vijayashanti. The film was released on 1 January 1983 and became a success.",
+  "popularity": 0.3749,
+  "poster_path": null,
+  "production_companies": [
+    {
+      "id": 13902,
+      "logo_path": null,
+      "name": "Sri Sarathi Studios Private Limited",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1983-01-01",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Pelli Choopulu",
+  "video": false,
+  "vote_average": 7,
+  "vote_count": 1,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2362826,
+        "known_for_department": "Directing",
+        "name": "Chandra Mohan",
+        "original_name": "Chandra Mohan",
+        "popularity": 0.0239,
+        "profile_path": null,
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "6619910aaf3da6016318c239",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584259,
+        "known_for_department": "Acting",
+        "name": "Vijayashanti",
+        "original_name": "Vijayashanti",
+        "popularity": 0.46,
+        "profile_path": "/tUzNRk8vqyEXgi1gE6JCTZcEOHD.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "66199115109cd0017ea3cc80",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 552991,
+        "known_for_department": "Acting",
+        "name": "Kaikala Satyanarayana",
+        "original_name": "Kaikala Satyanarayana",
+        "popularity": 0.4741,
+        "profile_path": "/wEw5EQRIi7KLAQWIMlOyHxZxeuy.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "6619911c4da3d4017c927376",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335709,
+        "known_for_department": "Acting",
+        "name": "Gummadi",
+        "original_name": "Gummadi",
+        "popularity": 0.4144,
+        "profile_path": "/qKXVkv7RmDKveWWZael013w7h1B.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "6619912369c70f016656f208",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 545595,
+        "known_for_department": "Acting",
+        "name": "Rajendra Prasad",
+        "original_name": "Rajendra Prasad",
+        "popularity": 0.7246,
+        "profile_path": "/zh6QJ85g5KbpkjL5fgqlOGddn5C.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "6940f54331da4aff872ca207",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1180573,
+        "known_for_department": "Acting",
+        "name": "Suryakantham",
+        "original_name": "Suryakantham",
+        "popularity": 0.4348,
+        "profile_path": "/AuZe7FwhUlJtPc6FZHnmpo1OeC5.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "6940f5631f4ff479489c4f6f",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1662036,
+        "known_for_department": "Acting",
+        "name": "Chitti Babu",
+        "original_name": "Chitti Babu",
+        "popularity": 0.1268,
+        "profile_path": null,
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "6940f5ac417c405ab2cfec40",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1107228,
+        "known_for_department": "Acting",
+        "name": "Annapoorna",
+        "original_name": "Annapoorna",
+        "popularity": 0.5291,
+        "profile_path": "/8yFs4CeF7SoiW5j0BTtZXP2jZ9H.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "6940f5bf1f4ff479489c4f8a",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5123898,
+        "known_for_department": "Acting",
+        "name": "Hema Sundar",
+        "original_name": "Hema Sundar",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "cast_id": 14,
+        "character": "",
+        "credit_id": "6940f5c6b24cb53c843c52cd",
+        "order": 8
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1673832,
+        "known_for_department": "Directing",
+        "name": "Parvataneni Sambasiva Rao",
+        "original_name": "P. Sambasiva Rao",
+        "popularity": 0.2633,
+        "profile_path": null,
+        "credit_id": "6940f44bbbee21cfe52ca1bb",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1037352,
+        "known_for_department": "Writing",
+        "name": "D. V. Narasa Raju",
+        "original_name": "D. V. Narasa Raju",
+        "popularity": 0.294,
+        "profile_path": null,
+        "credit_id": "6940f48285195a0e382ca1c1",
+        "department": "Writing",
+        "job": "Dialogue"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1661902,
+        "known_for_department": "Camera",
+        "name": "Baba Azmi",
+        "original_name": "Baba Azmi",
+        "popularity": 0.2042,
+        "profile_path": null,
+        "credit_id": "6940f4b1c3f65fb364c01960",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1673832,
+        "known_for_department": "Directing",
+        "name": "Parvataneni Sambasiva Rao",
+        "original_name": "P. Sambasiva Rao",
+        "popularity": 0.2633,
+        "profile_path": null,
+        "credit_id": "6940f4c190d9fdde32c01916",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584606,
+        "known_for_department": "Sound",
+        "name": "K. V. Mahadevan",
+        "original_name": "K. V. Mahadevan",
+        "popularity": 0.1694,
+        "profile_path": "/sItCos5KpE9SM0Cpf6j9xiCOVlG.jpg",
+        "credit_id": "6940f52ccf0d7fad92a0400a",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1660479,
+        "known_for_department": "Writing",
+        "name": "Acharya Aatreya",
+        "original_name": "Acharya Aatreya",
+        "popularity": 0.1408,
+        "profile_path": null,
+        "credit_id": "6940f5d83275cb055dcfec01",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584585,
+        "known_for_department": "Sound",
+        "name": "S. P. Balasubramaniam",
+        "original_name": "S. P. Balasubramaniam",
+        "popularity": 0.4224,
+        "profile_path": "/vKcUYibvLFRPADiNwQtl27e1STy.jpg",
+        "credit_id": "6940f5e317c428a716c0194b",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1998883,
+        "known_for_department": "Sound",
+        "name": "P. Susheela",
+        "original_name": "P. Susheela",
+        "popularity": 0.0796,
+        "profile_path": "/k5UIA5ihxo9ACiVZAdts6r03PN3.jpg",
+        "credit_id": "6940f5ef743befdce9467db4",
+        "department": "Sound",
+        "job": "Playback Singer"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt0271711",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "videos": {
+    "results": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "1983-01-01T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 14,
+      "name": "Fantasy"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1094416,
+  "imdb_id": "",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Untitled Film about Lord Kartikeya",
+  "overview": "Based on the legend of Lord Kartikeya",
+  "popularity": 0.3303,
+  "poster_path": "/9JoNGjXezbles1pFnRi6GIvEQ0x.jpg",
+  "production_companies": [
+    {
+      "id": 69898,
+      "logo_path": "/bvPo07eG1gz3r6OCuscRvDmTi20.png",
+      "name": "Haarika & Hassine Creations",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Planned",
+  "tagline": "",
+  "title": "Untitled Film about Lord Kartikeya",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "release_dates": {
+    "results": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "external_ids": {
+    "imdb_id": "",
+    "wikidata_id": "",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 148037,
+        "known_for_department": "Acting",
+        "name": "N.T. Rama Rao Jr.",
+        "original_name": "N.T. Rama Rao Jr.",
+        "popularity": 3.0352,
+        "profile_path": "/5ycQgZ3SPUa12bq0yn1jpToBq9X.jpg",
+        "cast_id": 8,
+        "character": "Kartikeya",
+        "credit_id": "695b81a228848130143be6a9",
+        "order": 0
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 116923,
+        "known_for_department": "Directing",
+        "name": "Trivikram Srinivas",
+        "original_name": "Trivikram Srinivas",
+        "popularity": 0.6817,
+        "profile_path": "/i8FMmDxo2tXbKyrpAJWxokeClWI.jpg",
+        "credit_id": "640173099653f600853dfe35",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 116923,
+        "known_for_department": "Directing",
+        "name": "Trivikram Srinivas",
+        "original_name": "Trivikram Srinivas",
+        "popularity": 0.6817,
+        "profile_path": "/i8FMmDxo2tXbKyrpAJWxokeClWI.jpg",
+        "credit_id": "640172f2699fb70087755796",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1628862,
+        "known_for_department": "Production",
+        "name": "S. Radha Krishna",
+        "original_name": "S. Radha Krishna",
+        "popularity": 0.183,
+        "profile_path": "/eYrVl6n0bN5KE7ES9GIr8hwCiah.jpg",
+        "credit_id": "67f5112131c9f27299ad5562",
+        "department": "Production",
+        "job": "Producer"
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.666,
+        "height": 1402,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/60VYQqMxas93mJY8zcdWyjXcL5e.jpg",
+        "vote_average": 3.334,
+        "vote_count": 2,
+        "width": 934
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/9JoNGjXezbles1pFnRi6GIvEQ0x.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/qX4fmPkyGXsLkMa7r9BLR6oeP0J.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/7cAMfHHgl0tv1REp13zZJ0mCglG.jpg",
+        "vote_average": 0,
+        "vote_count": 1,
+        "width": 2000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "God of War",
+        "type": "working title"
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Untitled Trivikram Srinivas Film with NTR",
+        "type": "Working Title"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  }
+}

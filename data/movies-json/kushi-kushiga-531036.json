@@ -1,0 +1,353 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 531036,
+  "imdb_id": "tt1606265",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Kushi Kushiga",
+  "overview": "Bhavani is at loggerheads with Surya and wants to see his end, as he gets a big share of the property they were fighting for. Bhavani's sister falls for Surya which invites more trouble for Bhavani.",
+  "popularity": 0.3657,
+  "poster_path": "/2AuZXVEfTuIRWHQVNtrR2TLwL2P.jpg",
+  "production_companies": [
+    {
+      "id": 276328,
+      "logo_path": null,
+      "name": "Adityaram Movies",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2004-04-16",
+  "revenue": 0,
+  "runtime": 148,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Kushi Kushiga",
+  "video": false,
+  "vote_average": 7,
+  "vote_count": 1,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 465273,
+        "known_for_department": "Acting",
+        "name": "Jagapati Babu",
+        "original_name": "Jagapati Babu",
+        "popularity": 0.7855,
+        "profile_path": "/bm72k6FmDxhxtZsl1xvxoz88Hkm.jpg",
+        "cast_id": 0,
+        "character": "",
+        "credit_id": "5b28eefcc3a36847cc0048e4",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1060285,
+        "known_for_department": "Acting",
+        "name": "Venu Thottempudi",
+        "original_name": "Venu Thottempudi",
+        "popularity": 0.2179,
+        "profile_path": "/aqyK4ftAxsDPAAYJrUHXMImsJWu.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "5b28ef079251412c89005217",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 141701,
+        "known_for_department": "Acting",
+        "name": "Ramya Krishnan",
+        "original_name": "Ramya Krishnan",
+        "popularity": 2.13,
+        "profile_path": "/kZvSnBTgsMgTsUE5o1yFQnDR3dl.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "5b28ef17c3a36847ba004212",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1052854,
+        "known_for_department": "Acting",
+        "name": "Sangeetha Krish",
+        "original_name": "Sangeetha Krish",
+        "popularity": 1.133,
+        "profile_path": "/s0jx36aN50nO2eFOlsqJzS9RoAl.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "5b28ef54c3a36847b0005290",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 237994,
+        "known_for_department": "Acting",
+        "name": "Nikita Thukral",
+        "original_name": "Nikita Thukral",
+        "popularity": 0.3649,
+        "profile_path": "/eks5hOWDTtoZLVfygTcyewcqqZG.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "5b28ef609251412c5400493d",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 589654,
+        "known_for_department": "Acting",
+        "name": "Ali Basha",
+        "original_name": "Ali Basha",
+        "popularity": 0.6916,
+        "profile_path": "/1z0YbDqP81BD6VxeghJG7vo9Mny.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "68dd6f0dbadad19432b9b2d3",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 591149,
+        "known_for_department": "Acting",
+        "name": "Giri Babu",
+        "original_name": "Giri Babu",
+        "popularity": 0.5728,
+        "profile_path": "/rOwTKoZGqAnh1jPCpPnn7ccAT0i.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "68dd6f18fed97aaddb2dfabb",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 283294,
+        "known_for_department": "Acting",
+        "name": "Devan",
+        "original_name": "Devan",
+        "popularity": 0.7712,
+        "profile_path": "/TSAMYfaw3yWAXWO3cuqehIkYbO.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "68dd6f2176b8e9eb48531a3f",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1107237,
+        "known_for_department": "Acting",
+        "name": "Kondavalasa Lakshmana Rao",
+        "original_name": "Kondavalasa Lakshmana Rao",
+        "popularity": 0.235,
+        "profile_path": null,
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "68dd6f2dbd6f2ac689b4280e",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 148052,
+        "known_for_department": "Acting",
+        "name": "M. S. Narayana",
+        "original_name": "M. S. Narayana",
+        "popularity": 0.6206,
+        "profile_path": "/1XRTmhRSOtHBVmoPfz45WxbLfFQ.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "68dd6f3bf33c7790af5316c9",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 544990,
+        "known_for_department": "Acting",
+        "name": "Pragathi Mahavadi",
+        "original_name": "Pragathi Mahavadi",
+        "popularity": 0.6511,
+        "profile_path": "/9v63JB33LMkfR90raHu9O1iHZOQ.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "68dd6f47dbc4b02213e1d069",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586628,
+        "known_for_department": "Acting",
+        "name": "Dharmavarupu Subramanyam",
+        "original_name": "Dharmavarupu Subramanyam",
+        "popularity": 0.393,
+        "profile_path": "/hIFs97t4snTwfnXqxZ61F3sC7I5.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "68dd6f56e7892e6677531b87",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 213428,
+        "known_for_department": "Acting",
+        "name": "Sunil Varma",
+        "original_name": "Sunil Varma",
+        "popularity": 0.87,
+        "profile_path": "/ifmUCkLgpEzbfnRjIw62otrADpI.jpg",
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "68dd6f5ea5ada44abbe1d0cb",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1107010,
+        "known_for_department": "Acting",
+        "name": "Bhanuchander",
+        "original_name": "Bhanuchander",
+        "popularity": 0.3522,
+        "profile_path": "/wOGSHy867uQB6xHbQ9A7yFEUO4g.jpg",
+        "cast_id": 16,
+        "character": "",
+        "credit_id": "68ea90f9be95e8ec311a241f",
+        "order": 13
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1335933,
+        "known_for_department": "Acting",
+        "name": "Delhi Rajeshwari",
+        "original_name": "Delhi Rajeshwari",
+        "popularity": 0.1882,
+        "profile_path": "/d6sGEt3xUOHgmYWC1je9FeSC6Zi.jpg",
+        "cast_id": 17,
+        "character": "",
+        "credit_id": "68ea91272d68d2d174321848",
+        "order": 14
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1066255,
+        "known_for_department": "Directing",
+        "name": "G. Ram Prasad",
+        "original_name": "G. Ram Prasad",
+        "popularity": 0.164,
+        "profile_path": "/tEhraWzeakI63ZTJGU5dgciTkpW.jpg",
+        "credit_id": "68ea90457e48e565a51f63bb",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 581077,
+        "known_for_department": "Sound",
+        "name": "S A Rajkumar",
+        "original_name": "S A Rajkumar",
+        "popularity": 0.1701,
+        "profile_path": null,
+        "credit_id": "68ea9074365b1017587869b8",
+        "department": "Sound",
+        "job": "Music"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2452290,
+        "known_for_department": "Production",
+        "name": "Aditya Ram",
+        "original_name": "Aditya Ram",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "68ea90de61a56237e19fd8da",
+        "department": "Production",
+        "job": "Producer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt1606265",
+    "wikidata_id": "Q16250614",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2004-04-16T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.697,
+        "height": 964,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/2AuZXVEfTuIRWHQVNtrR2TLwL2P.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 672
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

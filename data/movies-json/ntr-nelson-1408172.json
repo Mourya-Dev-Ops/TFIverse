@@ -1,0 +1,119 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1408172,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "NTR Nelson",
+  "overview": "",
+  "popularity": 0.1141,
+  "poster_path": null,
+  "production_companies": [
+    {
+      "id": 107352,
+      "logo_path": "/qNLrEbrNigDNR6QgaRtwXtRIwgx.png",
+      "name": "Sithara Entertainments",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Rumored",
+  "tagline": "",
+  "title": "NTR Nelson",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 148037,
+        "known_for_department": "Acting",
+        "name": "N.T. Rama Rao Jr.",
+        "original_name": "N.T. Rama Rao Jr.",
+        "popularity": 3.0352,
+        "profile_path": "/5ycQgZ3SPUa12bq0yn1jpToBq9X.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "67f0c11df5a80aa545997988",
+        "order": 0
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1790294,
+        "known_for_department": "Production",
+        "name": "Suryadevara Naga Vamsi",
+        "original_name": "Suryadevara Naga Vamsi",
+        "popularity": 0.1702,
+        "profile_path": "/hLJpBV45WFqS3sYxS3zmBhcHAoq.jpg",
+        "credit_id": "676e4570d0b08f9718615154",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1378577,
+        "known_for_department": "Directing",
+        "name": "Nelson Dilipkumar",
+        "original_name": "Nelson Dilipkumar",
+        "popularity": 2.5212,
+        "profile_path": "/n0T7BQnWXPr4yhezpVzoqklxwTe.jpg",
+        "credit_id": "67e5c3c5f8cba94bbcba3d34",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "videos": {
+    "results": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

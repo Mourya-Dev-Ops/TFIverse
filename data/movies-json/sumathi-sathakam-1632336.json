@@ -1,0 +1,147 @@
+{
+  "adult": false,
+  "backdrop_path": "/qqsB7Alk5SqypCrX6zlDMcM0cu1.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 1632336,
+  "imdb_id": "tt39330422",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Sumathi Sathakam",
+  "overview": "A village shopkeeper pursues the woman he loves, but faces obstacles from local beliefs and strict customs in his wild attempt to overcome community opposition and claim her heart.",
+  "popularity": 0.4979,
+  "poster_path": "/s5d8fKNObRThIPdD3mCAxyv2voV.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2026-02-06",
+  "revenue": 0,
+  "runtime": 145,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Sumathi Sathakam",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2725205,
+        "known_for_department": "Acting",
+        "name": "Amardeep Chowdary",
+        "original_name": "Amardeep Chowdary",
+        "popularity": 0.0429,
+        "profile_path": null,
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "698c05ce7b329dfcf1f7b53a",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2102545,
+        "known_for_department": "Acting",
+        "name": "Mahesh Vitta",
+        "original_name": "Mahesh Vitta",
+        "popularity": 0.3164,
+        "profile_path": "/vDWROJAL3lbH020ZtoN3VMZeMo0.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "698c0687a2c8b48822d3a627",
+        "order": 1
+      }
+    ],
+    "crew": []
+  },
+  "external_ids": {
+    "imdb_id": "tt39330422",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U/A 13+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2026-02-06T00:00:00.000Z",
+            "type": 3
+          },
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "Etvwin",
+            "release_date": "2026-03-19T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/qqsB7Alk5SqypCrX6zlDMcM0cu1.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1920
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1499,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/s5d8fKNObRThIPdD3mCAxyv2voV.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

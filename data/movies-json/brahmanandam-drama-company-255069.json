@@ -1,0 +1,264 @@
+{
+  "adult": false,
+  "backdrop_path": "/t2KFn4BTsh6YrsSB37mP1B5hzT7.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "homepage": "",
+  "id": 255069,
+  "imdb_id": "tt1601813",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "బ్రహ్మానందం డ్రామా కంపెనీ",
+  "overview": "Anandam runs a drama company. Vasu, Srinu, Soni are the heroes and heroine of the drama company. The company gets a chance to perform in Bangkok and the heroine gives them a hand. Anandam announces that whoever gets the heroine will become the hero in the company. From there on the film takes several twists as the duo are in pursuit of a heroine and strange circumstances follows.",
+  "popularity": 0.3249,
+  "poster_path": "/dikzQhhefRP7ly7VOM1SKduFQjX.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2008-07-11",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Brahmanandam Drama Company",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 935915,
+        "known_for_department": "Acting",
+        "name": "Sivaji Sontineni",
+        "original_name": "Sivaji Sontineni",
+        "popularity": 1.3034,
+        "profile_path": "/rYttVZsngTbaS2ElxDiIiQ32RbL.jpg",
+        "cast_id": 6,
+        "character": "Vasu",
+        "credit_id": "68d65555de8c35ed8d68ae95",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 91631,
+        "known_for_department": "Acting",
+        "name": "Ravi Krishna",
+        "original_name": "Ravi Krishna",
+        "popularity": 0.3586,
+        "profile_path": "/rFWaeHowBwlC8lRxwUGMypHRF0N.jpg",
+        "cast_id": 7,
+        "character": "Srinu",
+        "credit_id": "68d65562de8c35ed8d68ae98",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 237686,
+        "known_for_department": "Acting",
+        "name": "Kamalinee Mukherjee",
+        "original_name": "Kamalinee Mukherjee",
+        "popularity": 1.204,
+        "profile_path": "/xoOdHUgXUAIzsrCgAwSsXT9pXrE.jpg",
+        "cast_id": 8,
+        "character": "Arpitha",
+        "credit_id": "68d65589fd49dd96a7697270",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2683848,
+        "known_for_department": "Acting",
+        "name": "Samiksha",
+        "original_name": "Samiksha",
+        "popularity": 0.0239,
+        "profile_path": null,
+        "cast_id": 9,
+        "character": "Soni",
+        "credit_id": "68d655ad0a0c4d053f611204",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.0993,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 1,
+        "character": "Anandam",
+        "credit_id": "52fe4edc9251416c9114030f",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 591153,
+        "known_for_department": "Acting",
+        "name": "Raghu Babu",
+        "original_name": "Raghu Babu",
+        "popularity": 0.8126,
+        "profile_path": "/9aE6s9wqHgRcBY7wiUfkEZMgJNK.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "52fe4edc9251416c91140317",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 565889,
+        "known_for_department": "Acting",
+        "name": "Ravi Babu",
+        "original_name": "Ravi Babu",
+        "popularity": 1.0616,
+        "profile_path": "/qAz3Rp4t5REIPDPcbrE7Q6x1Nk0.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "52fe4edc9251416c9114031b",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 589654,
+        "known_for_department": "Acting",
+        "name": "Ali Basha",
+        "original_name": "Ali Basha",
+        "popularity": 0.8312,
+        "profile_path": "/1z0YbDqP81BD6VxeghJG7vo9Mny.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "54ceffa89251415cb8005fe7",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 146145,
+        "known_for_department": "Acting",
+        "name": "Jeeva",
+        "original_name": "Jeeva",
+        "popularity": 0.4653,
+        "profile_path": "/kDXx8HrAuWNtjOnUp1jlGeDvq8b.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "68d655d3c823738e60095cbf",
+        "order": 8
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5712137,
+        "known_for_department": "Directing",
+        "name": "E. Srikanth Nahatha",
+        "original_name": "E. Srikanth Nahatha",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "68d65602b41b98b58d095da3",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1267542,
+        "known_for_department": "Sound",
+        "name": "Sai Karthik",
+        "original_name": "Sai Karthik",
+        "popularity": 0.1586,
+        "profile_path": "/wKsLkQ3IeXMKpqdzF45zS8tvJYC.jpg",
+        "credit_id": "68d6569c6fb86e4ac590adde",
+        "department": "Sound",
+        "job": "Music"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "external_ids": {
+    "imdb_id": "tt1601813",
+    "wikidata_id": "Q4955550",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2008-07-11T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/t2KFn4BTsh6YrsSB37mP1B5hzT7.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.75,
+        "height": 1600,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/dikzQhhefRP7ly7VOM1SKduFQjX.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1200
+      }
+    ]
+  }
+}

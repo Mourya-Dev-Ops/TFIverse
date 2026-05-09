@@ -1,0 +1,366 @@
+{
+  "adult": false,
+  "backdrop_path": "/vsEUIc83MdJQ84u7eXu6dNAyvOK.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1627593,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Chitra Vichitram",
+  "overview": "",
+  "popularity": 0,
+  "poster_path": "/avOWMYunLKq02nmlvVtEhFb6mZZ.jpg",
+  "production_companies": [
+    {
+      "id": 288220,
+      "logo_path": null,
+      "name": "Alpha Pie CINEMA Productions",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 27,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "A PETTY CHAOS BETWEEN AN IDEALISTIC DIRECTOR, A FRUSTRATED EDITOR AND A SELF PROCLAIMED LOCAL DON.",
+  "title": "Chitra Vichitram",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5218440,
+        "known_for_department": "Acting",
+        "name": "Nikhil Dev",
+        "original_name": "Nikhil Dev",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 1,
+        "character": "PACHHAAKULA SURESH",
+        "credit_id": "698072436b45a571f51ebfa2",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5376669,
+        "known_for_department": "Acting",
+        "name": "Erric Justin",
+        "original_name": "Erric Justin",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 2,
+        "character": "SHIVA",
+        "credit_id": "6980725fe858bcdd871ec1a9",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5980456,
+        "known_for_department": "Acting",
+        "name": "VARSHITH VSP",
+        "original_name": "VARSHITH VSP",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 3,
+        "character": "TINKU",
+        "credit_id": "6980728e59ecd10546fd49ce",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5218448,
+        "known_for_department": "Camera",
+        "name": "Harshil",
+        "original_name": "Harshil",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 4,
+        "character": "VENKAT",
+        "credit_id": "69807331ef19ca5a40b98adf",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5980462,
+        "known_for_department": "Acting",
+        "name": "SANTOSH DARAA",
+        "original_name": "SANTOSH DARAA",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 5,
+        "character": "SANTOSH",
+        "credit_id": "6980736f4dfdd7aea11bdb96",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5218500,
+        "known_for_department": "Camera",
+        "name": "Rohan Bangari",
+        "original_name": "Rohan Bangari",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 6,
+        "character": "ROHAN",
+        "credit_id": "698073808baa66cc5e1bdaa1",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5980464,
+        "known_for_department": "Acting",
+        "name": "ROHIT",
+        "original_name": "ROHIT",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 7,
+        "character": "THE BLIND GUY",
+        "credit_id": "698073a34dfdd7aea11bdbb4",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5376671,
+        "known_for_department": "Acting",
+        "name": "Sai Sudhindra",
+        "original_name": "Sai Sudhindra",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 18,
+        "character": "Tarun",
+        "credit_id": "6982e4b929ebf05c54e74933",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5990887,
+        "known_for_department": "Acting",
+        "name": "Meghana Amgoth",
+        "original_name": "Meghana Amgoth",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 20,
+        "character": "The Dreamy Girl",
+        "credit_id": "69861ea8bb479b3e2361b07d",
+        "order": 8
+      }
+    ],
+    "crew": [
+      {
+        "adult": true,
+        "gender": 0,
+        "id": 5980471,
+        "known_for_department": "Directing",
+        "name": "HARSHIL",
+        "original_name": "HARSHIL",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6980748a8fb65bc1e91ff01c",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": true,
+        "gender": 0,
+        "id": 5218445,
+        "known_for_department": "Directing",
+        "name": "Nikhil Dev",
+        "original_name": "Nikhil Dev",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "698074a2de671e709bb98b92",
+        "department": "Directing",
+        "job": "Co-Director"
+      },
+      {
+        "adult": true,
+        "gender": 0,
+        "id": 5218446,
+        "known_for_department": "Editing",
+        "name": "Nikhil Dev",
+        "original_name": "Nikhil Dev",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "698074b9d4336c055db98c7a",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": true,
+        "gender": 0,
+        "id": 5218514,
+        "known_for_department": "Writing",
+        "name": "Nikhil Dev",
+        "original_name": "Nikhil Dev",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "698074dc34414d05538c390b",
+        "department": "Editing",
+        "job": "Color Grading"
+      },
+      {
+        "adult": true,
+        "gender": 0,
+        "id": 5980480,
+        "known_for_department": "Crew",
+        "name": "ERRIC JUSTIN",
+        "original_name": "ERRIC JUSTIN",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6980753cefb3a61ac6fd4926",
+        "department": "Crew",
+        "job": "Fight Choreographer"
+      },
+      {
+        "adult": true,
+        "gender": 0,
+        "id": 5980485,
+        "known_for_department": "Crew",
+        "name": "ROHAN",
+        "original_name": "ROHAN",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69807579379f281ff58c3b2c",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": true,
+        "gender": 0,
+        "id": 5980490,
+        "known_for_department": "Crew",
+        "name": "HARSHIL",
+        "original_name": "HARSHIL",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69807589dc7e791beb8c3a92",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": true,
+        "gender": 0,
+        "id": 5980496,
+        "known_for_department": "Crew",
+        "name": "NIKHIL DEV",
+        "original_name": "NIKHIL DEV",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "698075a8eb330b49bcb21274",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": true,
+        "gender": 0,
+        "id": 5980510,
+        "known_for_department": "Sound",
+        "name": "NIKHIL DEV",
+        "original_name": "NIKHIL DEV",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69807624bccddc91a4b98b91",
+        "department": "Sound",
+        "job": "Sound"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5305477,
+        "known_for_department": "Acting",
+        "name": "VN Sriguna",
+        "original_name": "VN Sriguna",
+        "popularity": 0,
+        "profile_path": "/g2MR0dgXakVb44wXcQkXcVmd1mh.jpg",
+        "credit_id": "6982e56c88f209b6a5e7497a",
+        "department": "Sound",
+        "job": "Music"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": "alphapiecinema",
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.777,
+        "height": 1420,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/vsEUIc83MdJQ84u7eXu6dNAyvOK.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2524
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 2181,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/avOWMYunLKq02nmlvVtEhFb6mZZ.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1454
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 996002,
+  "imdb_id": "tt8212108",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "బంగారు చెల్లెలు",
+  "overview": "",
+  "popularity": 0.2001,
+  "poster_path": null,
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1979-01-01",
+  "revenue": 0,
+  "runtime": 144,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Bangaru Chellelu",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1208885,
+        "known_for_department": "Acting",
+        "name": "Sobhan Babu",
+        "original_name": "Sobhan Babu",
+        "popularity": 0.5473,
+        "profile_path": "/t7AZwl1hs56SnayALuAlOM4gesj.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "62c3f4c74e4dff005a9b74fb",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584418,
+        "known_for_department": "Acting",
+        "name": "Jayasudha",
+        "original_name": "Jayasudha",
+        "popularity": 0.6012,
+        "profile_path": "/xOP3pYlrqyBw5x9CDEMkYXPzpNu.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "62c3f4d34e4dff007d559454",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 109549,
+        "known_for_department": "Acting",
+        "name": "Sridevi",
+        "original_name": "Sridevi",
+        "popularity": 1.5226,
+        "profile_path": "/6wxquADm0CMYMon04uEI48ZiBBf.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "62c3f4df2da84606ae4aa666",
+        "order": 2
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2003968,
+        "known_for_department": "Directing",
+        "name": "B. A. Subba Rao",
+        "original_name": "B. A. Subba Rao",
+        "popularity": 0.2191,
+        "profile_path": "/4tkhyZH7kN4NJjNaPwxUMzqhXVV.jpg",
+        "credit_id": "62c3f51d22e48038847e00d2",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "external_ids": {
+    "imdb_id": "tt8212108",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1979-01-01T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

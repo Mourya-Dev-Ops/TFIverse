@@ -1,0 +1,573 @@
+{
+  "adult": false,
+  "backdrop_path": "/54mPL7MoKc4NMU6WbBluWPV7gLd.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "homepage": "",
+  "id": 1330078,
+  "imdb_id": "tt28359277",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "ఆయ్",
+  "overview": "Set in Godavari region, When Karthik comes home between COVID lockdowns, he connects with old friends and falls for a woman whose romantic feelings seem influenced by her caste.",
+  "popularity": 0.4924,
+  "poster_path": "/xaFBtlMVpqY8ieXR9iB7Ji27fgO.jpg",
+  "production_companies": [
+    {
+      "id": 104707,
+      "logo_path": "/rPjGhLE4qPHyZ6kjnJRZrgGt4bs.png",
+      "name": "GA2 Pictures",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2024-08-15",
+  "revenue": 0,
+  "runtime": 141,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "Mem Friendsandi!",
+  "title": "Aay",
+  "video": false,
+  "vote_average": 6.4,
+  "vote_count": 7,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4308265,
+        "known_for_department": "Acting",
+        "name": "Narne Nithin",
+        "original_name": "Narne Nithin",
+        "popularity": 0.1224,
+        "profile_path": "/vMHKPkAyHgW5pBS3ds3Ayp8ROF8.jpg",
+        "cast_id": 2,
+        "character": "Karthik",
+        "credit_id": "66bf7681092dbdb4d49a0a25",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 4744485,
+        "known_for_department": "Acting",
+        "name": "Nayan Sarika",
+        "original_name": "Nayan Sarika",
+        "popularity": 0.3397,
+        "profile_path": "/ibzZkFL1JdUxl8YJ6y3KEOBJt8y.jpg",
+        "cast_id": 7,
+        "character": "Pallavi",
+        "credit_id": "66e2e52e9013fe87222391b2",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3007440,
+        "known_for_department": "Acting",
+        "name": "Ankith Koyya",
+        "original_name": "Ankith Koyya",
+        "popularity": 0.3122,
+        "profile_path": "/9Qoakgqtp7d85h7sigwu9AVzyGh.jpg",
+        "cast_id": 3,
+        "character": "Hari",
+        "credit_id": "66bf76959fda0e509c9da247",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1511161,
+        "known_for_department": "Acting",
+        "name": "Mime Gopi",
+        "original_name": "மைம் கோபி",
+        "popularity": 0.5457,
+        "profile_path": "/gglNAjJMlCb0p7ig3OVpgsXMkMD.jpg",
+        "cast_id": 4,
+        "character": "Durga",
+        "credit_id": "66bf76a8296276b7abc1721e",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1196109,
+        "known_for_department": "Acting",
+        "name": "Rajkumar Kasireddy",
+        "original_name": "Rajkumar Kasireddy",
+        "popularity": 0.2935,
+        "profile_path": "/u7kPoGR1d3Xuo633V4hIBdhiLdm.jpg",
+        "cast_id": 1,
+        "character": "Subbu",
+        "credit_id": "66bf7678df5d9737d148995c",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3569501,
+        "known_for_department": "Acting",
+        "name": "Sneha Gupta",
+        "original_name": "Sneha Gupta",
+        "popularity": 0.1503,
+        "profile_path": "/nTgtHtIM8tLYLDWVeymcjXbraro.jpg",
+        "cast_id": 6,
+        "character": "Special Appearance",
+        "credit_id": "66cdf19e525c64740ac425ee",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3747367,
+        "known_for_department": "Acting",
+        "name": "Surabhi Prabhavathi",
+        "original_name": "సురభి ప్రభావతి",
+        "popularity": 0.4641,
+        "profile_path": "/lEpxXvSXJEmM0qssUoTWv2Fsi9y.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "66e2e77cc81b24b3fe2397eb",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 565865,
+        "known_for_department": "Acting",
+        "name": "VTV Ganesh",
+        "original_name": "VTV Ganesh",
+        "popularity": 0.4133,
+        "profile_path": "/5JomvpPx6PrExYcZAbHM1MoHjoZ.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "66e2e78128048d92def8fc3a",
+        "order": 7
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4889668,
+        "known_for_department": "Directing",
+        "name": "Anji K Maniputhra",
+        "original_name": "Anji K Maniputhra",
+        "popularity": 0.0662,
+        "profile_path": null,
+        "credit_id": "66bf76e802f320957a1f333c",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 933606,
+        "known_for_department": "Production",
+        "name": "Bunny Vas",
+        "original_name": "Bunny Vas",
+        "popularity": 0.1465,
+        "profile_path": "/wuORjl5RorJUpLeWL6UspfC1zak.jpg",
+        "credit_id": "67a07130e99df23a9f26709b",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2256862,
+        "known_for_department": "Camera",
+        "name": "Sairam Maganti",
+        "original_name": "Sairam Maganti",
+        "popularity": 0.0705,
+        "profile_path": null,
+        "credit_id": "684f47581fbdd9fa2fbb5366",
+        "department": "Camera",
+        "job": "Still Photographer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 592813,
+        "known_for_department": "Production",
+        "name": "Allu Aravind",
+        "original_name": "Allu Aravind",
+        "popularity": 0.3304,
+        "profile_path": "/A8kwUqjUPOht79Eqi3rD4zPA0fY.jpg",
+        "credit_id": "684f47623cc157a5091bf5d8",
+        "department": "Crew",
+        "job": "Presenter"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1765046,
+        "known_for_department": "Crew",
+        "name": "Vamsi Kaka",
+        "original_name": "Vamsi Kaka",
+        "popularity": 0.4333,
+        "profile_path": "/7Q71Q3MvVHRn7z9uwkjyFWsgR9w.jpg",
+        "credit_id": "684f476f631b06539a1ecde7",
+        "department": "Crew",
+        "job": "Public Relations"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2115635,
+        "known_for_department": "Production",
+        "name": "Anil Kumar Vanga",
+        "original_name": "Anil Kumar Vanga",
+        "popularity": 0.1968,
+        "profile_path": "/mqIQhCGeraDOvhrCt1b6ucxSFa4.jpg",
+        "credit_id": "684f477c24370a5bfb3fc36f",
+        "department": "Production",
+        "job": "Publicist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2115634,
+        "known_for_department": "Production",
+        "name": "Uday Bhanu Avirineni",
+        "original_name": "Uday Bhanu Avirineni",
+        "popularity": 0.1608,
+        "profile_path": "/ismwIRDqhYiylM85KUCSBO5PZio.jpg",
+        "credit_id": "684f4784b68cba1afa1ecb56",
+        "department": "Production",
+        "job": "Publicist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1668653,
+        "known_for_department": "Art",
+        "name": "Kiran Kumar Manne",
+        "original_name": "Kiran Kumar Manne",
+        "popularity": 0.0565,
+        "profile_path": null,
+        "credit_id": "684f47991d533970511bf5bd",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4945574,
+        "known_for_department": "Camera",
+        "name": "Sameer Kalyani",
+        "original_name": "Sameer Kalyani",
+        "popularity": 0.0327,
+        "profile_path": null,
+        "credit_id": "684f47a880ad301196295111",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3154667,
+        "known_for_department": "Sound",
+        "name": "Ram Miriyala",
+        "original_name": "Ram Miriyala",
+        "popularity": 0.1012,
+        "profile_path": null,
+        "credit_id": "684f47b7640159de78295315",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3313383,
+        "known_for_department": "Sound",
+        "name": "Ajay Arasada",
+        "original_name": "Ajay Arasada",
+        "popularity": 0.062,
+        "profile_path": null,
+        "credit_id": "684f47c2256989cb361bf535",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3279921,
+        "known_for_department": "Editing",
+        "name": "Kodati Pavan Kalyan",
+        "original_name": "Kodati Pavan Kalyan",
+        "popularity": 0.1263,
+        "profile_path": null,
+        "credit_id": "684f47d2b6a9aac54e1ec9f9",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5507312,
+        "known_for_department": "Writing",
+        "name": "Suresh Banisetti",
+        "original_name": "Suresh Banisetti",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "684f481eb1d362cf68b0e65e",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4889668,
+        "known_for_department": "Directing",
+        "name": "Anji K Maniputhra",
+        "original_name": "Anji K Maniputhra",
+        "popularity": 0.0662,
+        "profile_path": null,
+        "credit_id": "684f483d104285654a1bf6bb",
+        "department": "Writing",
+        "job": "Writer"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt28359277",
+    "wikidata_id": "Q129169439",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U/A 13+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2024-08-15T00:00:00.000Z",
+            "type": 3
+          },
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "Netflix",
+            "release_date": "2024-09-12T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 900,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/54mPL7MoKc4NMU6WbBluWPV7gLd.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1600
+      },
+      {
+        "aspect_ratio": 1.777,
+        "height": 922,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/6YCYt6Tp6P7yOmo3UvdhusHOGEZ.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1638
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1034,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/aH9l7ffeeBPVhOJ4YxbpYy2INc.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1838
+      },
+      {
+        "aspect_ratio": 1.777,
+        "height": 1688,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/27YNLor7FRhEHk83zDLZLkwAqbe.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2999
+      },
+      {
+        "aspect_ratio": 1.777,
+        "height": 922,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/oDhohReWu71EZ7KfCMdZy9PFKYs.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1638
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1125,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/f8jJJkH4DmrUjNsQ098rI7vp7S9.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 1.779,
+        "height": 832,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/2DbRK45ssYBZmw08M4TuJQeN3pB.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1480
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1152,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/tV9eVnkIG8l1UuRslMIFVAY4a7e.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2048
+      }
+    ],
+    "logos": [
+      {
+        "aspect_ratio": 6.649,
+        "height": 94,
+        "iso_3166_1": "PT",
+        "iso_639_1": "pt",
+        "file_path": "/oX0gfU4JMc72VOCrUoGXRgzvwYD.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 625
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1600,
+        "iso_3166_1": "PT",
+        "iso_639_1": "pt",
+        "file_path": "/rWTzPQOOZvpDfLHQsAmkRENfvdI.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1067
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1802,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/xaFBtlMVpqY8ieXR9iB7Ji27fgO.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1202
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1110,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/mfkiAoZCqObxtGOSGbadTd8g6L3.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 740
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/dvXbjmpnvmtzc4wBtP2kf4UNdF2.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1366
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 2404,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/dbfyj9Nu80gyLYjvzNdjKmCa98U.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1602
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1951,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/rx5tvFMAt0m0SalzqS5JxJUoDqC.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1301
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1200,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/f8mx71FQo8H1EU6dUE8sfy3VU9q.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 800
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1580,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/tjajBcISXivDRZlF1ZPwGVVvoRR.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1053
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "videos": {
+    "results": []
+  },
+  "keywords": {
+    "keywords": []
+  }
+}

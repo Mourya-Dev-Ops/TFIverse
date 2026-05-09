@@ -1,0 +1,157 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1301217,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Agni Samskaram",
+  "overview": "Agni Samskaram is a Telugu film starring Chiranjeevi, Kavitha and Subhashini.[1][2]",
+  "popularity": 0.1985,
+  "poster_path": "/rzpbzm281pyuKQbtr61noR8cRTH.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "1980-01-04",
+  "revenue": 0,
+  "runtime": 119,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Agni Samskaram",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 147079,
+        "known_for_department": "Acting",
+        "name": "Chiranjeevi",
+        "original_name": "Chiranjeevi",
+        "popularity": 0.5847,
+        "profile_path": "/jRCxnhftb7NprH92cdfah8KoAHg.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "6662788091c5531b96d5c297",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 117533,
+        "known_for_department": "Acting",
+        "name": "Madhavi",
+        "original_name": "Madhavi",
+        "popularity": 0.3395,
+        "profile_path": "/6ChxtchACMxgImDNB3KnGiymYqb.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "686ccc1d1d0ef79eab70340d",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1335729,
+        "known_for_department": "Acting",
+        "name": "Kavitha",
+        "original_name": "Kavitha",
+        "popularity": 0.2762,
+        "profile_path": null,
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "686ccc524621fbdb6751eb86",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5551255,
+        "known_for_department": "Acting",
+        "name": "Subhashini",
+        "original_name": "Subhashini",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "686ccc6a0a2ea4778351e33b",
+        "order": 3
+      }
+    ],
+    "crew": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/rzpbzm281pyuKQbtr61noR8cRTH.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/erlA6hOW4hcqd9OaLFmCqyyb8Kt.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1980-01-04T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

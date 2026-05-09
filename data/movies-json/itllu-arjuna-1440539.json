@@ -1,0 +1,421 @@
+{
+  "adult": false,
+  "backdrop_path": "/w2wlWZwPeQFGpSlkOv7RPFjNFPg.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 1440539,
+  "imdb_id": "tt39131708",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "ఇట్లు అర్జున",
+  "overview": "",
+  "popularity": 0.1611,
+  "poster_path": "/8vMXOE5SNZi9lCBkVyg6tPbRHbZ.jpg",
+  "production_companies": [
+    {
+      "id": 254752,
+      "logo_path": null,
+      "name": "What Next Entertainments",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Post Production",
+  "tagline": "",
+  "title": "Itllu Arjuna",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "videos": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.777,
+        "height": 1407,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/w2wlWZwPeQFGpSlkOv7RPFjNFPg.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 2500
+      },
+      {
+        "aspect_ratio": 1.777,
+        "height": 916,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/jSGFHnwbhPWoK2ugDH4WB1GnO2.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 1628
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.666,
+        "height": 1600,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/2eF32kV6n456F5oXS4BDhyJ6Jsb.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1066
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2484,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/8vMXOE5SNZi9lCBkVyg6tPbRHbZ.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1656
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/305TOBJYCjuZriRu9FrbRHOprPX.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/rBt2GeImmmqVwNty2pHbwTmOokf.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1600,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/oUcDaMsDJo20AQPmyeyH6vqdn7W.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 1067
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/wpX4aEkq82PCeokPkgepPkR3Oht.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 2000
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt39131708",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5873688,
+        "known_for_department": "Acting",
+        "name": "Aniesh",
+        "original_name": "Aniesh Reddy",
+        "popularity": 0.0143,
+        "profile_path": "/keK6lLz8jb7vc07i7wqs3pZQha6.jpg",
+        "cast_id": 10,
+        "character": "Arjun",
+        "credit_id": "693bf4add0eb59e4136ec3f9",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1899034,
+        "known_for_department": "Acting",
+        "name": "Anaswara Rajan",
+        "original_name": "Anaswara Rajan",
+        "popularity": 6.3153,
+        "profile_path": "/zWy5AjnXf7sm60X5PVa0mWDaFsp.jpg",
+        "cast_id": 1,
+        "character": "Keerthi",
+        "credit_id": "67bffd690d255c44c1c8cd7e",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4353605,
+        "known_for_department": "Acting",
+        "name": "Rohit Nanda",
+        "original_name": "Rohit Nanda",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "6939266c4aeaa403b406a241",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2120686,
+        "known_for_department": "Acting",
+        "name": "Getup Srinu",
+        "original_name": "Getup Srinu",
+        "popularity": 0.261,
+        "profile_path": "/xb2lJ213oU3DS6kMkDuqlf7EFeG.jpg",
+        "cast_id": 20,
+        "character": "",
+        "credit_id": "693e6351c7c39a82935dffff",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5304775,
+        "known_for_department": "Camera",
+        "name": "Raja Mahadhevan",
+        "original_name": "Raja Mahadhevan",
+        "popularity": 0.0286,
+        "profile_path": null,
+        "credit_id": "6939249055fdee136a63868a",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585344,
+        "known_for_department": "Sound",
+        "name": "S. Thaman",
+        "original_name": "S. Thaman",
+        "popularity": 0.5088,
+        "profile_path": "/y2VYUPTSWr580Fx8hxUNcUTViUa.jpg",
+        "credit_id": "69392635339d82f485f87a5d",
+        "department": "Sound",
+        "job": "Music"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5868415,
+        "known_for_department": "Production",
+        "name": "Shekar Reddy Nagelli",
+        "original_name": "Shekar Reddy Nagelli",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "693930a0e40a0cf0a5638893",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3302208,
+        "known_for_department": "Directing",
+        "name": "Mahesh Uppala",
+        "original_name": "Mahesh Uppala",
+        "popularity": 0.0286,
+        "profile_path": null,
+        "credit_id": "693b9906c66d8b3e8c0c164b",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3302208,
+        "known_for_department": "Directing",
+        "name": "Mahesh Uppala",
+        "original_name": "Mahesh Uppala",
+        "popularity": 0.0286,
+        "profile_path": null,
+        "credit_id": "693b991228a5b01f080c165c",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1963839,
+        "known_for_department": "Directing",
+        "name": "Venky Kudumula",
+        "original_name": "Venky Kudumula",
+        "popularity": 0.1533,
+        "profile_path": null,
+        "credit_id": "693cff2df60e9d9213f78187",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2342661,
+        "known_for_department": "Crew",
+        "name": "Dinesh Subbarayan",
+        "original_name": "Dinesh Subbarayan",
+        "popularity": 0.1174,
+        "profile_path": null,
+        "credit_id": "693e5d6c52d414fffd61a0e4",
+        "department": "Crew",
+        "job": "Stunt Coordinator"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2112008,
+        "known_for_department": "Art",
+        "name": "Raam Kumar",
+        "original_name": "Raam Kumar",
+        "popularity": 0.06,
+        "profile_path": null,
+        "credit_id": "693e5d8c705c0e3b2c99ebd7",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5876647,
+        "known_for_department": "Editing",
+        "name": "Koti K",
+        "original_name": "Koti K",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "693e5d9e384907e06f780e1c",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2652633,
+        "known_for_department": "Costume & Make-Up",
+        "name": "P. Rajini",
+        "original_name": "P. Rajini",
+        "popularity": 0.0655,
+        "profile_path": null,
+        "credit_id": "693e5da6e5dfdbb8685dff54",
+        "department": "Costume & Make-Up",
+        "job": "Costume Design"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2200190,
+        "known_for_department": "Crew",
+        "name": "Vamsi Shekar",
+        "original_name": "Vamsi Shekar",
+        "popularity": 0.2716,
+        "profile_path": null,
+        "credit_id": "693e5dbdb74634cd70f78522",
+        "department": "Crew",
+        "job": "Public Relations"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2460399,
+        "known_for_department": "Production",
+        "name": "Ananth Kancherla",
+        "original_name": "Ananth Kancherla",
+        "popularity": 0.1947,
+        "profile_path": null,
+        "credit_id": "693e5de5a011253a2283e9b4",
+        "department": "Production",
+        "job": "Publicist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1181164,
+        "known_for_department": "Writing",
+        "name": "Kalyan Chakravarthy",
+        "original_name": "Kalyan Chakravarthy",
+        "popularity": 0.1625,
+        "profile_path": null,
+        "credit_id": "693e5e22f0444edb805dfe95",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585344,
+        "known_for_department": "Sound",
+        "name": "S. Thaman",
+        "original_name": "S. Thaman",
+        "popularity": 0.5088,
+        "profile_path": "/y2VYUPTSWr580Fx8hxUNcUTViUa.jpg",
+        "credit_id": "693e5e3998ee32e1b45dffaa",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5017886,
+        "known_for_department": "Writing",
+        "name": "Manasa Sharma",
+        "original_name": "Manasa Sharma",
+        "popularity": 0.0352,
+        "profile_path": null,
+        "credit_id": "6943895f6ce18622dde6e7a3",
+        "department": "Writing",
+        "job": "Screenplay"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "release_dates": {
+    "results": []
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 1566118,
+  "imdb_id": "tt38735381",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Love Game",
+  "overview": "The beautiful love story of Chaitra and Anirudh implodes as her past catches up with them, and he ends up in jail for the attempted murder of her in a surprising turn of events",
+  "popularity": 0.0143,
+  "poster_path": "/vwmQQPtsUWW6uoxUPtd9KZVMmdq.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Rumored",
+  "tagline": "Karma is a ditch",
+  "title": "Love Game",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3897663,
+        "known_for_department": "Writing",
+        "name": "Lakshman Sai Kumar Tumati",
+        "original_name": "Lakshman Sai Kumar Tumati",
+        "popularity": 0.0071,
+        "profile_path": "/8yTs8iAprD37qxT0s0tvLbtWW4k.jpg",
+        "credit_id": "68fa4fdca901a2615b417af6",
+        "department": "Writing",
+        "job": "Story"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3897663,
+        "known_for_department": "Writing",
+        "name": "Lakshman Sai Kumar Tumati",
+        "original_name": "Lakshman Sai Kumar Tumati",
+        "popularity": 0.0071,
+        "profile_path": "/8yTs8iAprD37qxT0s0tvLbtWW4k.jpg",
+        "credit_id": "68fa4fec13246edb3953682f",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3897663,
+        "known_for_department": "Writing",
+        "name": "Lakshman Sai Kumar Tumati",
+        "original_name": "Lakshman Sai Kumar Tumati",
+        "popularity": 0.0071,
+        "profile_path": "/8yTs8iAprD37qxT0s0tvLbtWW4k.jpg",
+        "credit_id": "68fa4ffe375e998c294670b3",
+        "department": "Writing",
+        "job": "Dialogue"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt38735381",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/vwmQQPtsUWW6uoxUPtd9KZVMmdq.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "release_dates": {
+    "results": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "adult": false,
+  "backdrop_path": "/7OUvbR0vU0Ox6guYKHJbfGEbVPB.jpg",
+  "belongs_to_collection": null,
+  "budget": 330,
+  "genres": [
+    {
+      "id": 99,
+      "name": "Documentary"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1578118,
+  "imdb_id": "tt38909748",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Eighth Hill - A Sacred Revolution: Tirupati's Dream without Plastic",
+  "overview": "Deep in the sacred Tirumala Hills, where millions walk in devotion, one man walks with a different purpose.  This documentary introduces Shivaji Paleti - an unsung hero who has dedicated his life to protect the hills from plastic pollution. With bare hands and endless patience, he cleans, he preserves, and he teaches what true devotion towards Mother Earth means. His perseverance never faded away despite numerous hardships. A true modern-day warrior who led the \"Plastic Free Tirupati\" movement with an example, turning personal conviction into a collective awakening.  The \"Eighth Hill\" stands as a reflection of our own atrocities. An unsettling mirror showing how what we dismiss as a single piece of trash can grow into a mountain of consequence. Through Shivaji’s story, this film explores not just environmental preservation, but the deeper meaning of responsibility, faith, and humanity’s bond with nature.",
+  "popularity": 0.0143,
+  "poster_path": "/qG3UBTVom30cDd4QffLy9ASSNDP.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2025-11-15",
+  "revenue": 0,
+  "runtime": 46,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    },
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "A Documentary Film highlighting the concerns of plastic pollution on the environment through the journey of Shivaji Paleti",
+  "title": "Eighth Hill - A Sacred Revolution: Tirupati's Dream without Plastic",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5808000,
+        "known_for_department": "Acting",
+        "name": "Shivaji Paleti",
+        "original_name": "Shivaji Paleti",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "cast_id": 10,
+        "character": "Himself",
+        "credit_id": "6911c6102c2055c6bf31b716",
+        "order": 0
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5807966,
+        "known_for_department": "Directing",
+        "name": "Vamshi Krishna Pennakoduru",
+        "original_name": "Vamshi Krishna Pennakoduru",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6911c2fedc7b73f47c31b4d5",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5807968,
+        "known_for_department": "Camera",
+        "name": "Nithin Sindam",
+        "original_name": "Nithin Sindam",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6911c3141265c9afcad25b48",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5807963,
+        "known_for_department": "Directing",
+        "name": "Vinay Kumar Sahu",
+        "original_name": "Vinay Kumar Sahu",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6911c335579b325ab63a318e",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5807973,
+        "known_for_department": "Writing",
+        "name": "Ayesha Shaikh",
+        "original_name": "Ayesha Shaikh",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6911c399540af423d04c85e8",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5807966,
+        "known_for_department": "Directing",
+        "name": "Vamshi Krishna Pennakoduru",
+        "original_name": "Vamshi Krishna Pennakoduru",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6911c3ae9e0edb599f875304",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5807974,
+        "known_for_department": "Sound",
+        "name": "Lasya Vishnubhatla",
+        "original_name": "Lasya Vishnubhatla",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6911c3f7dec48a90c1d25ace",
+        "department": "Sound",
+        "job": "Vocals"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5807983,
+        "known_for_department": "Editing",
+        "name": "Sai Chandu",
+        "original_name": "Sai Chandu",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6911c453f125b88b5631b39b",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5807963,
+        "known_for_department": "Directing",
+        "name": "Vinay Kumar Sahu",
+        "original_name": "Vinay Kumar Sahu",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6911c51fc91fc053addd224c",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt38909748",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Why passion?",
+        "key": "63mwbER9I28",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Featurette",
+        "official": false,
+        "id": "6985930e09e6855ead99d5b3",
+        "published_at": "2026-01-06T01:30:06.000Z"
+      },
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "EIGHTH HILL | A Sacred Revolution - Tirupati's dream without plastic.  | documentary film Trailer.",
+        "key": "96l0x_CVO_c",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Trailer",
+        "official": false,
+        "id": "6911c13f91326c06e2dd21dd",
+        "published_at": "2025-09-06T12:16:46.000Z"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 222551,
+        "name": "environmental activist"
+      },
+      {
+        "id": 256260,
+        "name": "plastic pollution"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2025-11-15T00:00:00.000Z",
+            "type": 1
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.777,
+        "height": 844,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/7OUvbR0vU0Ox6guYKHJbfGEbVPB.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1500
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/uo1bj4sbpryOTE87HxY20gAVbfZ.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/wtgNeHcD8U84cNpEBAJYDAcX0x.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/5lB0IYzZNDgQW9xcDrj1uYqmH0T.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/iMlMOmSWqlU1oFTDb13lhs3x2jE.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/6D3UL4dGZ4k90oGQn0h2u71wNRK.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/hm01iykukxooQfYZF8vre13OVXA.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/7Po4bwT67ljSvGekBV6CJz9yawx.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.779,
+        "height": 985,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/ouQAntlIwTCktkoLqOazuYqRi9K.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1752
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/lM8GZbHX43kmEVev8iMxZmS1twx.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/5ZrHsRqBpvxEaXMeAtr5EO9Lv9q.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3840
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.707,
+        "height": 1600,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/qG3UBTVom30cDd4QffLy9ASSNDP.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1131
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

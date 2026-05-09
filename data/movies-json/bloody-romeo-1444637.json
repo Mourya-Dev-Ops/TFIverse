@@ -1,0 +1,267 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "homepage": "",
+  "id": 1444637,
+  "imdb_id": "tt31474235",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "బ్లడీ రోమియో",
+  "overview": "",
+  "popularity": 0.3448,
+  "poster_path": "/dEdEpHrzKieQpy2aZO46PuWOA7T.jpg",
+  "production_companies": [
+    {
+      "id": 183672,
+      "logo_path": null,
+      "name": "Niharika Entertainment",
+      "origin_country": "IN"
+    },
+    {
+      "id": 259393,
+      "logo_path": null,
+      "name": "Unanimous Productions",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Planned",
+  "tagline": "",
+  "title": "Bloody Romeo",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt31474235",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 3149,
+        "name": "gangster"
+      },
+      {
+        "id": 308676,
+        "name": "street food"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1080,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/dEdEpHrzKieQpy2aZO46PuWOA7T.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 720
+      },
+      {
+        "aspect_ratio": 0.75,
+        "height": 2048,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/AbG20M6bD7CbLOo8br7h9d0HkFr.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1536
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2716,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/tmiU8cz3CXuGNScQhqgDy3SUzlG.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1811
+      },
+      {
+        "aspect_ratio": 0.714,
+        "height": 2716,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/irwSW50AkgReZEUXvl38OvB7AJK.jpg",
+        "vote_average": 0,
+        "vote_count": 1,
+        "width": 1940
+      }
+    ]
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 225387,
+        "known_for_department": "Acting",
+        "name": "Nani",
+        "original_name": "Nani",
+        "popularity": 1.4451,
+        "profile_path": "/csRjrh58D90LhFNiqNEUTohzoIK.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "67cb23b4dba14916062b6bfa",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 117690,
+        "known_for_department": "Acting",
+        "name": "Prithviraj Sukumaran",
+        "original_name": "Prithviraj Sukumaran",
+        "popularity": 1.9703,
+        "profile_path": "/oxLS80XtmMJVHbTfFCfXMJvE5i9.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "6955383cc5d7af490dd7a78e",
+        "order": 1
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1454674,
+        "known_for_department": "Directing",
+        "name": "Sujeeth",
+        "original_name": "Sujeeth",
+        "popularity": 0.3811,
+        "profile_path": null,
+        "credit_id": "67cb240236598226a1aff11a",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2987379,
+        "known_for_department": "Production",
+        "name": "Venkat Boyanapalli",
+        "original_name": "Venkat Boyanapalli",
+        "popularity": 0.0722,
+        "profile_path": null,
+        "credit_id": "67cb24167479d8c8492b6c9d",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1454674,
+        "known_for_department": "Directing",
+        "name": "Sujeeth",
+        "original_name": "Sujeeth",
+        "popularity": 0.3811,
+        "profile_path": null,
+        "credit_id": "68f0eb5264603b1d14e2ba4e",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5555318,
+        "known_for_department": "Production",
+        "name": "Shynu Mash",
+        "original_name": "Shynu Mash",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "699c6781101f2e8a16b296db",
+        "department": "Production",
+        "job": "Publicist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2200190,
+        "known_for_department": "Crew",
+        "name": "Vamsi Shekar",
+        "original_name": "Vamsi Shekar",
+        "popularity": 0.2716,
+        "profile_path": null,
+        "credit_id": "699d3de652c78db272375088",
+        "department": "Crew",
+        "job": "Public Relations"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3865804,
+        "known_for_department": "Sound",
+        "name": "Sai Maneendhar Reddy",
+        "original_name": "Sai Maneendhar Reddy",
+        "popularity": 0.0734,
+        "profile_path": null,
+        "credit_id": "699d3e0a6755b480f40e6141",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 6028352,
+        "known_for_department": "Sound",
+        "name": "Kannan Krish",
+        "original_name": "Kannan Krish",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "699d3e513019ad57c3e90088",
+        "department": "Sound",
+        "job": "Sound Editor"
+      }
+    ]
+  }
+}

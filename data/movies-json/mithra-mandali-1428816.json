@@ -1,0 +1,505 @@
+{
+  "adult": false,
+  "backdrop_path": "/o8eYClSIbfnesuewPE0yYEagFU9.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 1428816,
+  "imdb_id": "tt37273405",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "మిత్ర మండలి",
+  "overview": "The lives of a group of misfit friends become chaotic after one of them falls for a politician's daughter.",
+  "popularity": 0.2716,
+  "poster_path": "/A1nFTGWgoP1FAiDsE0NJXTVjORk.jpg",
+  "production_companies": [
+    {
+      "id": 264999,
+      "logo_path": null,
+      "name": "BV Works",
+      "origin_country": "IN"
+    },
+    {
+      "id": 265000,
+      "logo_path": null,
+      "name": "Sapta Aswa Creatives",
+      "origin_country": "IN"
+    },
+    {
+      "id": 189491,
+      "logo_path": "/6eJXkSYVMkAF3GXjwtUxeZH3EuS.png",
+      "name": "Vyra Entertainments",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2025-10-15",
+  "revenue": 0,
+  "runtime": 136,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Mithra Mandali",
+  "video": false,
+  "vote_average": 4,
+  "vote_count": 2,
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt37273405",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1751708,
+        "known_for_department": "Acting",
+        "name": "Priyadarshi Pullikonda",
+        "original_name": "Priyadarshi Pullikonda",
+        "popularity": 0.5618,
+        "profile_path": "/tVsqnESLdGJSua54qZ47wtoLjCI.jpg",
+        "cast_id": 1,
+        "character": "Chaitanya",
+        "credit_id": "67a1df17a45287b7fde2cfa3",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3721424,
+        "known_for_department": "Acting",
+        "name": "Niharika NM",
+        "original_name": "Niharika NM",
+        "popularity": 0.0889,
+        "profile_path": "/u9fD9XNUSiw1b9pQoTYUyl9pWj4.jpg",
+        "cast_id": 3,
+        "character": "Swecha",
+        "credit_id": "67d3ff2e914de8d891028c50",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2225963,
+        "known_for_department": "Acting",
+        "name": "Vishnu Oi",
+        "original_name": "Vishnu Oi",
+        "popularity": 0.2977,
+        "profile_path": "/A46W2WAH9T0HK8YkbQZiZAyOaES.jpg",
+        "cast_id": 4,
+        "character": "Sathwik",
+        "credit_id": "67d3ff39a2b18dbedd64eeb4",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3089946,
+        "known_for_department": "Acting",
+        "name": "Rag Mayur",
+        "original_name": "Rag Mayur",
+        "popularity": 0.1577,
+        "profile_path": "/qzXA7j2XQnWfnkakJoCKPbn0PWI.jpg",
+        "cast_id": 5,
+        "character": "Abhi",
+        "credit_id": "67d3ff44f17459c8ff53be71",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4871155,
+        "known_for_department": "Acting",
+        "name": "Prasad Behara",
+        "original_name": "Prasad Behara",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "cast_id": 6,
+        "character": "Rajeev",
+        "credit_id": "6849739a49572790b6302536",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335263,
+        "known_for_department": "Acting",
+        "name": "Satya Prakash",
+        "original_name": "Satya Prakash",
+        "popularity": 0.3075,
+        "profile_path": "/858vQ4NMh89fjjKEIeCh15oW5Y1.jpg",
+        "cast_id": 13,
+        "character": "MLA Candidate",
+        "credit_id": "691d5ec2c00142fe5657cf6a",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 565865,
+        "known_for_department": "Acting",
+        "name": "VTV Ganesh",
+        "original_name": "VTV Ganesh",
+        "popularity": 0.4133,
+        "profile_path": "/5JomvpPx6PrExYcZAbHM1MoHjoZ.jpg",
+        "cast_id": 14,
+        "character": "Narayana",
+        "credit_id": "691d5ef65096eae7e22c9bd4",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 146147,
+        "known_for_department": "Acting",
+        "name": "Vennela Kishore",
+        "original_name": "Vennela Kishore",
+        "popularity": 0.9934,
+        "profile_path": "/8a0mcxMPjD4KR15gyE5QmbDeTub.jpg",
+        "cast_id": 15,
+        "character": "SI Sagar",
+        "credit_id": "691d63fcd7b4d92a7124f468",
+        "order": 7
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 933606,
+        "known_for_department": "Production",
+        "name": "Bunny Vas",
+        "original_name": "Bunny Vas",
+        "popularity": 0.1465,
+        "profile_path": "/wuORjl5RorJUpLeWL6UspfC1zak.jpg",
+        "credit_id": "67a1df27a45287b7fde2cfac",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5498356,
+        "known_for_department": "Writing",
+        "name": "S. Vijayendar",
+        "original_name": "S. Vijayendar",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "684973cf933b5d32a13fd4c1",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5498356,
+        "known_for_department": "Writing",
+        "name": "S. Vijayendar",
+        "original_name": "S. Vijayendar",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "684973d6c83ebe7819bb3cf3",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3526964,
+        "known_for_department": "Sound",
+        "name": "R. R. Dhruvan",
+        "original_name": "R. R. Dhruvan",
+        "popularity": 0.0286,
+        "profile_path": null,
+        "credit_id": "684973e9caf33a218dbb3ca7",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2999140,
+        "known_for_department": "Camera",
+        "name": "S. J. Siddharth",
+        "original_name": "Sid",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "68497466046760db8a9f59d7",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3279921,
+        "known_for_department": "Editing",
+        "name": "Kodati Pavan Kalyan",
+        "original_name": "Kodati Pavan Kalyan",
+        "popularity": 0.1263,
+        "profile_path": null,
+        "credit_id": "684974ac17f22872843024b0",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2558945,
+        "known_for_department": "Art",
+        "name": "Gandhi Nadikudikar",
+        "original_name": "Gandhi Nadikudikar",
+        "popularity": 0.0662,
+        "profile_path": null,
+        "credit_id": "6849750ab2c4b2a3ca293b14",
+        "department": "Art",
+        "job": "Production Design"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 286227,
+        "name": "comedy of errors"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "GB",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2025-10-15T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IE",
+        "release_dates": [
+          {
+            "certification": "12A",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2025-10-17T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U/A 16+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-10-17T00:00:00.000Z",
+            "type": 3
+          },
+          {
+            "certification": "U/A 16+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-11-06T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1440,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/o8eYClSIbfnesuewPE0yYEagFU9.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 2560
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1572,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/2p4Q7QWocY0SpAB0iDoyABYEOS0.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2795
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "IN",
+        "iso_639_1": "hi",
+        "file_path": "/nv8zHkj5tQ0NMFXl3nN7nFmiqcd.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "IN",
+        "iso_639_1": "ta",
+        "file_path": "/gfnfyv0uwa2X797EURDEvX8OOt5.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/9fGwRv8tt3OAEtsIshAtlhdWzjz.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/6YPKoVk2JyqZ6MYaz8HRp0oxqm0.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [
+      {
+        "aspect_ratio": 1.027,
+        "height": 368,
+        "iso_3166_1": "IN",
+        "iso_639_1": "hi",
+        "file_path": "/vGs9FmHL3hNvgcKgH6WNZxNswjG.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 378
+      },
+      {
+        "aspect_ratio": 1.166,
+        "height": 343,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/dgxPYL7NBOOclybYpoVV9od2y74.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 400
+      },
+      {
+        "aspect_ratio": 1.026,
+        "height": 350,
+        "iso_3166_1": "IN",
+        "iso_639_1": "ta",
+        "file_path": "/7yfYKyx13yV0YIjiy4vUxcCdc6G.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 359
+      },
+      {
+        "aspect_ratio": 1.165,
+        "height": 382,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/b9jhL2GCz8EadVeeN3lUO3tgzNU.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 445
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/A1nFTGWgoP1FAiDsE0NJXTVjORk.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/2S7PILwfqz9c1UX41zRfSyVh47e.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/jhsZtcqyN9DQCsgB8I63CJXR6Aa.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1350,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/hx3pQrrd52V2cGXw1Z6KYyDX8CH.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 900
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Mitra Mandali",
+        "type": "Alternate"
+      }
+    ]
+  }
+}

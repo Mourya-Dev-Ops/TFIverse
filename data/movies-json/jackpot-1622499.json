@@ -1,0 +1,125 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1622499,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "జాక్‌పాట్",
+  "overview": "The plot centers on a, sometimes psychological, romantic comedy storyline.",
+  "popularity": 0.0143,
+  "poster_path": null,
+  "production_companies": [
+    {
+      "id": 287157,
+      "logo_path": null,
+      "name": "Sri Gayathri Arts",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2001-07-27",
+  "revenue": 0,
+  "runtime": 128,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Jackpot",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1442141,
+        "known_for_department": "Acting",
+        "name": "Kashinath",
+        "original_name": "Kashinath",
+        "popularity": 0.1287,
+        "profile_path": "/33pf49JsaNhySDnx2SeAPfQNmW.jpg",
+        "credit_id": "6975bd33759aff6a60ab99ba",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2001-07-27T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "జాక్‌పాట్",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Jackpot",
+        "type": ""
+      }
+    ]
+  }
+}

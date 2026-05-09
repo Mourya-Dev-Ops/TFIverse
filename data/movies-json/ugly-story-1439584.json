@@ -1,0 +1,432 @@
+{
+  "adult": false,
+  "backdrop_path": "/hzsoVwU7k9ebO2CoVSK7OGS0tJY.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "homepage": "",
+  "id": 1439584,
+  "imdb_id": "tt35992024",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Ugly Story",
+  "overview": "",
+  "popularity": 0.5675,
+  "poster_path": "/wwCQ0aZWbleGswX6hJAjk8CH19q.jpg",
+  "production_companies": [
+    {
+      "id": 91666,
+      "logo_path": null,
+      "name": "Lucky Media",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2026-05-22",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Post Production",
+  "tagline": "",
+  "title": "Ugly Story",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1071558,
+        "known_for_department": "Acting",
+        "name": "Nandu Vijay Krishna",
+        "original_name": "Nandu Vijay Krishna",
+        "popularity": 0.2269,
+        "profile_path": "/z4ntPEduBCkqmci7RgrZ8xiNQ8a.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "67bd74fd11434cab4b5999be",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 230024,
+        "known_for_department": "Acting",
+        "name": "Avika Gor",
+        "original_name": "Avika Gor",
+        "popularity": 0.3913,
+        "profile_path": "/2HJXqe3Y98nw2lDESNmwAM6cfQ8.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "67bd750511434cab4b5999c3",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3028643,
+        "known_for_department": "Acting",
+        "name": "Ravi Teja Mahadasyam",
+        "original_name": "Ravi Teja Mahadasyam",
+        "popularity": 0.0735,
+        "profile_path": "/7MwkZCDAxcYYbsHblZFSMbzvETe.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "67bd751d7617568fc65e9404",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2732304,
+        "known_for_department": "Acting",
+        "name": "Pragya Nayan Sinha",
+        "original_name": "Pragya Nayan Sinha",
+        "popularity": 0.3266,
+        "profile_path": "/i6823ExArOclEoSuLhhCEYVShYJ.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "67bd75347617568fc65e9418",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585567,
+        "known_for_department": "Acting",
+        "name": "Shivaji Raja",
+        "original_name": "Shivaji Raja",
+        "popularity": 0.3786,
+        "profile_path": "/uYGakx7oROck3LhhLPeDxG7F0c9.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "69fbb717854000302259f806",
+        "order": 4
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4274856,
+        "known_for_department": "Production",
+        "name": "L. Pranava Swaroop",
+        "original_name": "L. Pranava Swaroop",
+        "popularity": 0,
+        "profile_path": "/7VgnX8gn37op7ePMP8bQ2FzoUo5.jpg",
+        "credit_id": "67bd75d2f402def7122db819",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4274856,
+        "known_for_department": "Production",
+        "name": "L. Pranava Swaroop",
+        "original_name": "L. Pranava Swaroop",
+        "popularity": 0,
+        "profile_path": "/7VgnX8gn37op7ePMP8bQ2FzoUo5.jpg",
+        "credit_id": "67bd75e9b41e95d32c599753",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3193172,
+        "known_for_department": "Production",
+        "name": "Bekkem Venugopal",
+        "original_name": "Bekkem Venugopal",
+        "popularity": 0.0453,
+        "profile_path": null,
+        "credit_id": "67bd7601f402def7122db827",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4274844,
+        "known_for_department": "Directing",
+        "name": "Aswwani Sri Krisshna",
+        "original_name": "Aswwani Sri Krisshna",
+        "popularity": 0.0071,
+        "profile_path": "/lZQrgdjVY76Ut4CAXwMiWo31uAK.jpg",
+        "credit_id": "67bd766dec6a9392a72dae86",
+        "department": "Production",
+        "job": "Associate Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4539517,
+        "known_for_department": "Camera",
+        "name": "Shrie Saikumar Daara",
+        "original_name": "Shrie Saikumar Daara",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "67bd76bdb41e95d32c5997bd",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3324291,
+        "known_for_department": "Editing",
+        "name": "R. Srikanth Patnaik",
+        "original_name": "R. Srikanth Patnaik",
+        "popularity": 0.068,
+        "profile_path": null,
+        "credit_id": "67bd772da0f42fcaf32dac9c",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2527508,
+        "known_for_department": "Art",
+        "name": "Vithal Kosanam",
+        "original_name": "Vithal Kosanam",
+        "popularity": 0.1087,
+        "profile_path": null,
+        "credit_id": "67bd774c7617568fc65e94b9",
+        "department": "Art",
+        "job": "Art Direction"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6194991,
+        "known_for_department": "Editing",
+        "name": "Mithun Soma",
+        "original_name": "Mithun Soma",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69fbb74568d700bacf1b092c",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2258072,
+        "known_for_department": "Sound",
+        "name": "Shravan Bharadwaj",
+        "original_name": "Shravan Bharadwaj",
+        "popularity": 0.0871,
+        "profile_path": null,
+        "credit_id": "69fbb75c4aa5b0f52859f869",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3388782,
+        "known_for_department": "Crew",
+        "name": "Eshwar Penti",
+        "original_name": "Eshwar Penti",
+        "popularity": 0.0457,
+        "profile_path": null,
+        "credit_id": "69fbb771067b7df780d9a403",
+        "department": "Crew",
+        "job": "Choreographer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6194993,
+        "known_for_department": "Sound",
+        "name": "Chathurvedhi Thirunagari",
+        "original_name": "Chathurvedhi Thirunagari",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "69fbb785854000302259f810",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5023628,
+        "known_for_department": "Sound",
+        "name": "uday appala",
+        "original_name": "uday appala",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69fbb7989bc1a9da2fd9a418",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2231790,
+        "known_for_department": "Crew",
+        "name": "V. R. Madhu",
+        "original_name": "V. R. Madhu",
+        "popularity": 0.0239,
+        "profile_path": null,
+        "credit_id": "69fbb7b2e0be26ba8e59f7ff",
+        "department": "Crew",
+        "job": "Public Relations"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt35992024",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2026-05-22T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Ugly Story - Official Trailer | Nandu, Avikagor | Pranava Swaroop | Shravan Bharadwaj",
+        "key": "7hLQtxlhmeM",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Trailer",
+        "official": true,
+        "id": "69fca4a11f03990baced2fff",
+        "published_at": "2026-05-06T06:25:00.000Z"
+      },
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Ugly Story - Official Teaser | Nandu, Avikagor | Pranava Swaroop | Shravan Bharadwaj",
+        "key": "C_DA9dS8Muo",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Teaser",
+        "official": true,
+        "id": "69eca14c393047ebb9935eb6",
+        "published_at": "2025-10-02T13:15:01.000Z"
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/hzsoVwU7k9ebO2CoVSK7OGS0tJY.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3840
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/wwCQ0aZWbleGswX6hJAjk8CH19q.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/dUiItr0fdiyc0lBzLFbIzCLud0D.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2025,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/sRv5GRpQBvxrmKkFrZYVRq2jHCo.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 1350
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/hxJOr9MRXTg3HYMpdj6VbD1FSXZ.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/5M67sZ0ujqvIovNUqrIr90e749x.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 2000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

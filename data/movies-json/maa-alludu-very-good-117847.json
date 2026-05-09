@@ -1,0 +1,232 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 117847,
+  "imdb_id": "tt1579802",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "మా అల్లుడు వెరీగుడ్",
+  "overview": "Maa Alludu Very Good is an Comedy Romance based movie. In which,Purse Ram aka Parasuram (Naresh) is a petty thief who is grown up on stealing things since his childhood. He happens to see a girl Meghana (Mounika) and then instantly falls in love with her. He comes to know that she prefers educated guys with knowledge in various languages and cops. He impresses Meghana by feigning that he is a strict cop.",
+  "popularity": 0.5465,
+  "poster_path": null,
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2003-03-03",
+  "revenue": 0,
+  "runtime": 145,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Released",
+  "tagline": "",
+  "title": "Maa Alludu Very Good",
+  "video": false,
+  "vote_average": 5,
+  "vote_count": 1,
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt1579802",
+    "wikidata_id": "Q24039586",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237993,
+        "known_for_department": "Acting",
+        "name": "Allari Naresh",
+        "original_name": "Allari Naresh",
+        "popularity": 0.6832,
+        "profile_path": "/2k4n2sYl9OmzKdm1ItzP3nFwW6k.jpg",
+        "cast_id": 2,
+        "character": "Parasuram",
+        "credit_id": "52fe4bc0c3a36847f821283f",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1066261,
+        "known_for_department": "Acting",
+        "name": "Mounica",
+        "original_name": "Mounica",
+        "popularity": 0.1754,
+        "profile_path": "/p9DQGG4VMoG5oJXGLTiLqCYvGmG.jpg",
+        "cast_id": 3,
+        "character": "Meghana",
+        "credit_id": "52fe4bc0c3a36847f8212843",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 545595,
+        "known_for_department": "Acting",
+        "name": "Rajendra Prasad",
+        "original_name": "Rajendra Prasad",
+        "popularity": 0.7246,
+        "profile_path": "/zh6QJ85g5KbpkjL5fgqlOGddn5C.jpg",
+        "cast_id": 4,
+        "character": "AV Rao",
+        "credit_id": "52fe4bc0c3a36847f8212847",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 141701,
+        "known_for_department": "Acting",
+        "name": "Ramya Krishnan",
+        "original_name": "Ramya Krishnan",
+        "popularity": 2.13,
+        "profile_path": "/kZvSnBTgsMgTsUE5o1yFQnDR3dl.jpg",
+        "cast_id": 5,
+        "character": "Prabhavati",
+        "credit_id": "52fe4bc0c3a36847f821284b",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.5485,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "52fe4bc0c3a36847f821284f",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 435722,
+        "known_for_department": "Acting",
+        "name": "Kovai Sarala",
+        "original_name": "Kovai Sarala",
+        "popularity": 0.7882,
+        "profile_path": "/rujbfPg6rp9DOphQZYUjll7KNPz.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "52fe4bc0c3a36847f8212853",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584511,
+        "known_for_department": "Acting",
+        "name": "Mallikarjuna Rao",
+        "original_name": "Mallikarjuna Rao",
+        "popularity": 0.4229,
+        "profile_path": "/nRTgNcAdSLqRmk5mQXR3Lz3HXbY.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "52fe4bc1c3a36847f8212857",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 591153,
+        "known_for_department": "Acting",
+        "name": "Raghu Babu",
+        "original_name": "Raghu Babu",
+        "popularity": 0.7605,
+        "profile_path": "/9aE6s9wqHgRcBY7wiUfkEZMgJNK.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "52fe4bc1c3a36847f821285f",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1060290,
+        "known_for_department": "Acting",
+        "name": "Krishna Bhagavan",
+        "original_name": "Krishna Bhagavan",
+        "popularity": 0.396,
+        "profile_path": "/xR3Wy7HT98ZhbizA88pKfLx05Bf.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "54d1f8699251411b6b00230a",
+        "order": 8
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1060277,
+        "known_for_department": "Directing",
+        "name": "E.V.V. Satyanarayana",
+        "original_name": "E.V.V. Satyanarayana",
+        "popularity": 0.3511,
+        "profile_path": "/dYTWo7GAyYEGr0zrkiHvw7EdIaF.jpg",
+        "credit_id": "52fe4bc0c3a36847f821283b",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2003-03-03T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

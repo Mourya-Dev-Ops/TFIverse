@@ -1,0 +1,177 @@
+{
+  "adult": false,
+  "backdrop_path": "/3QNid6DJXZTJbGx8h3vtxGWBNe.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 40908,
+  "imdb_id": "tt1604887",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Bava Nachadu",
+  "overview": "A happily married couple, involving a simple village girl and her good looking actor husband, face a turbulent challenge when the wife's younger sister gets infatuated with her sisters husband.",
+  "popularity": 0.3728,
+  "poster_path": "/7Goa0HdErvdiaRWfn6QfYeSR7QJ.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2001-06-07",
+  "revenue": 0,
+  "runtime": 146,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Bava Nachadu",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "external_ids": {
+    "imdb_id": "tt1604887",
+    "wikidata_id": "Q4873626",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 149958,
+        "known_for_department": "Acting",
+        "name": "Nagarjuna Akkineni",
+        "original_name": "Nagarjuna Akkineni",
+        "popularity": 1.0828,
+        "profile_path": "/i42K59YZY2NbNfqxfo78YoFz6Bv.jpg",
+        "cast_id": 1,
+        "character": "Actor",
+        "credit_id": "52fe45aac3a36847f80d3a73",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 141705,
+        "known_for_department": "Acting",
+        "name": "Simran",
+        "original_name": "Simran",
+        "popularity": 1.9379,
+        "profile_path": "/BRsVC78sFbFy0NQhaUkGkuUUOL.jpg",
+        "cast_id": 2,
+        "character": "Actress",
+        "credit_id": "52fe45aac3a36847f80d3a77",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 86225,
+        "known_for_department": "Acting",
+        "name": "Reema Sen",
+        "original_name": "Reema Sen",
+        "popularity": 0.6177,
+        "profile_path": "/f5Xe92gA1BXa4BddAxnysRZwnjf.jpg",
+        "cast_id": 3,
+        "character": "Actress",
+        "credit_id": "52fe45aac3a36847f80d3a7b",
+        "order": 2
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 93194,
+        "known_for_department": "Directing",
+        "name": "K. S. Ravikumar",
+        "original_name": "K. S. Ravikumar",
+        "popularity": 0.8113,
+        "profile_path": "/8dUdM3sFvL4aXnDtLJJCkDMNEbo.jpg",
+        "credit_id": "52fe45aac3a36847f80d3a81",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2001-06-07T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/3QNid6DJXZTJbGx8h3vtxGWBNe.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/iOlpCvWgHUlwLL42VgarCz98A41.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/7Goa0HdErvdiaRWfn6QfYeSR7QJ.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "adult": false,
+  "backdrop_path": "/5jSzcIwAQemPIldXrLtCckIWYOl.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 132454,
+  "imdb_id": "tt1116033",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "గొడవ",
+  "overview": "Vaibhav made his acting debut in 2007, starring in the Telugu film Godava under his father's direction opposite Shradha Arya, It didn't do well at the box office",
+  "popularity": 0.2721,
+  "poster_path": "/hf0xRMSfUzrRDxqFB2ywcZujWxa.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2007-04-04",
+  "revenue": 0,
+  "runtime": 145,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Godava",
+  "video": false,
+  "vote_average": 7.5,
+  "vote_count": 2,
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 150687,
+        "known_for_department": "Acting",
+        "name": "Vaibhav",
+        "original_name": "Vaibhav Reddy",
+        "popularity": 0.3146,
+        "profile_path": "/pCgjirnEoMXJmGRAOXhj5UgLmS8.jpg",
+        "cast_id": 2,
+        "character": "Hero",
+        "credit_id": "52fe4b95c3a368484e1901a3",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 86285,
+        "known_for_department": "Acting",
+        "name": "Shraddha Arya",
+        "original_name": "Shraddha Arya",
+        "popularity": 0.4258,
+        "profile_path": "/98dJGprftDK5HY9fautt779gT3r.jpg",
+        "cast_id": 3,
+        "character": "Heroine",
+        "credit_id": "52fe4b95c3a368484e1901a7",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1095510,
+        "known_for_department": "Acting",
+        "name": "Aswini",
+        "original_name": "Aswini",
+        "popularity": 0.0772,
+        "profile_path": null,
+        "cast_id": 4,
+        "character": "Heroine Friend",
+        "credit_id": "52fe4b95c3a368484e1901ab",
+        "order": 2
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3630509,
+        "known_for_department": "Crew",
+        "name": "Nixon Cruz Master",
+        "original_name": "Nixon Cruz Master",
+        "popularity": 0.1809,
+        "profile_path": null,
+        "credit_id": "62d761ef1c635b0050895fe2",
+        "department": "Crew",
+        "job": "Choreographer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584666,
+        "known_for_department": "Directing",
+        "name": "A. Kodandarami Reddy",
+        "original_name": "A. Kodandarami Reddy",
+        "popularity": 0.4415,
+        "profile_path": "/fiCud1dJJNu1ZIPmwWjqj8fJekP.jpg",
+        "credit_id": "598e7bc1c3a36874b4005a69",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "external_ids": {
+    "imdb_id": "tt1116033",
+    "wikidata_id": "Q77892744",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2007-04-04T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/5jSzcIwAQemPIldXrLtCckIWYOl.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3840
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/hf0xRMSfUzrRDxqFB2ywcZujWxa.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Rowdy Bodyguard The Powerful Man",
+        "type": "Hindi Dubbed"
+      }
+    ]
+  }
+}

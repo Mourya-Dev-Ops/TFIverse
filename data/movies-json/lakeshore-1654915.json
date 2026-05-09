@@ -1,0 +1,271 @@
+{
+  "adult": false,
+  "backdrop_path": "/t3J0e0pjVV7RHXZbnHi4Q9oKEBO.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "https://www.youtube.com/@nonarrativefilms.3086",
+  "id": 1654915,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "lakeshore.",
+  "overview": "A tragedy of the innocent.",
+  "popularity": 0,
+  "poster_path": "/kWQfxqE626T45YaNay62fhJzPqV.jpg",
+  "production_companies": [
+    {
+      "id": 171932,
+      "logo_path": null,
+      "name": "NO NARRATIVE FILMS",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 10,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    },
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Post Production",
+  "tagline": "",
+  "title": "lakeshore.",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6103529,
+        "known_for_department": "Acting",
+        "name": "Siri",
+        "original_name": "Siri",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 11,
+        "character": "Her",
+        "credit_id": "69c8a9f8f22a45dd49b424c8",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5274501,
+        "known_for_department": "Acting",
+        "name": "Siddharth",
+        "original_name": "Siddharth",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "cast_id": 12,
+        "character": "Him",
+        "credit_id": "69ca5bb1c5593a88e544e9c7",
+        "order": 1
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6084232,
+        "known_for_department": "Directing",
+        "name": "Deepthi",
+        "original_name": "Deepthi",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69bd152e63e64f56f08c1f1f",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6084233,
+        "known_for_department": "Writing",
+        "name": "Pippalla",
+        "original_name": "Pippalla",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69bd1541e9d7f0382a9deda2",
+        "department": "Writing",
+        "job": "Script Consultant"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3472646,
+        "known_for_department": "Directing",
+        "name": "Y. Nithin",
+        "original_name": "Y. Nithin",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "69bd154d93be18a6d65fb4ab",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3472646,
+        "known_for_department": "Directing",
+        "name": "Y. Nithin",
+        "original_name": "Y. Nithin",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "69bd1557555189808506e65d",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3472646,
+        "known_for_department": "Directing",
+        "name": "Y. Nithin",
+        "original_name": "Y. Nithin",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "69bd1562156643fd018c1fe3",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3472646,
+        "known_for_department": "Directing",
+        "name": "Y. Nithin",
+        "original_name": "Y. Nithin",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "69bd157212a6d3f6469ded5e",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3472646,
+        "known_for_department": "Directing",
+        "name": "Y. Nithin",
+        "original_name": "Y. Nithin",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "69bd15828831a9750245f35d",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3472646,
+        "known_for_department": "Directing",
+        "name": "Y. Nithin",
+        "original_name": "Y. Nithin",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "69bd159347648820029dee16",
+        "department": "Production",
+        "job": "Producer"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2026-04-03T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "videos": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.777,
+        "height": 1024,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/t3J0e0pjVV7RHXZbnHi4Q9oKEBO.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1820
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1024,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/kWQfxqE626T45YaNay62fhJzPqV.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 683
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1024,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/6K5qPu6QjRtciuHCSvnuwQBxE7o.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 683
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 307519,
+  "imdb_id": "tt0314340",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Maa Inti Mahalakshmi",
+  "overview": "",
+  "popularity": 0.0338,
+  "poster_path": null,
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "1959-01-01",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Released",
+  "tagline": "",
+  "title": "Maa Inti Mahalakshmi",
+  "video": false,
+  "vote_average": 10,
+  "vote_count": 1,
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "external_ids": {
+    "imdb_id": "tt0314340",
+    "wikidata_id": "Q16250935",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1959-01-01T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  }
+}

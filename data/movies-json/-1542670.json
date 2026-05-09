@@ -1,0 +1,110 @@
+{
+  "adult": false,
+  "backdrop_path": "/yzK7dcru92T8R0VvNbxP55FZa6x.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1542670,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "ఆదిత్య విక్రమ వ్యూహ",
+  "overview": "Aditya Vikrama Vyuha is a crime thriller. Vikram is a private detective. He helps Aditya, a police officer, catch a serial killer named 'The Painter.' He kills only five to six people once a year, in the same month. Will Vikram find him? What is the motive behind the serial murders?",
+  "popularity": 0,
+  "poster_path": "/pI8okdzPNKVzx5qKJ6jmhIng8BB.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 106,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "ఆదిత్య విక్రమ వ్యూహ",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": []
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Aditya Vikrama Vyuha Movie Trailer | Aravind | Pranay Sood | Releasing On September 5th On Aha",
+        "key": "diB1CqXCw-Q",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Trailer",
+        "official": true,
+        "id": "68bd2bc265e6732d2f9bc10e",
+        "published_at": "2025-09-02T10:30:26.000Z"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1215,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/yzK7dcru92T8R0VvNbxP55FZa6x.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2160
+      },
+      {
+        "aspect_ratio": 1.782,
+        "height": 1212,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/TqFiucoTIWeG1hoEmIWa8JOekO.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2160
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 2820,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/pI8okdzPNKVzx5qKJ6jmhIng8BB.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1880
+      }
+    ]
+  }
+}

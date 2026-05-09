@@ -1,0 +1,196 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1511403,
+  "imdb_id": "tt37971318",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "King 100",
+  "overview": "",
+  "popularity": 0.1432,
+  "poster_path": null,
+  "production_companies": [
+    {
+      "id": 44098,
+      "logo_path": "/eplqXZD7BVDvu4E2QyKRFkL7rtJ.png",
+      "name": "Annapurna Studios",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "",
+  "title": "King 100",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 149958,
+        "known_for_department": "Acting",
+        "name": "Nagarjuna Akkineni",
+        "original_name": "Nagarjuna Akkineni",
+        "popularity": 1.0828,
+        "profile_path": "/i42K59YZY2NbNfqxfo78YoFz6Bv.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "686fb334829c5e59b5e80a1a",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 55062,
+        "known_for_department": "Acting",
+        "name": "Tabu",
+        "original_name": "तबु",
+        "popularity": 1.8277,
+        "profile_path": "/cvt5nvCHr1ICf5u8A2mlzLQ8LsV.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "68e7aebcff9f0f40224a95f9",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 4287748,
+        "known_for_department": "Acting",
+        "name": "Sushmitha Bhat",
+        "original_name": "Sushmitha Bhat",
+        "popularity": 0.407,
+        "profile_path": "/bQW98KlIoo15qIUn4X4nEM5PvBx.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "6906fa3caf08241413dd8286",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1114583,
+        "known_for_department": "Acting",
+        "name": "Aishwarya Rajesh",
+        "original_name": "Aishwarya Rajesh",
+        "popularity": 0.8177,
+        "profile_path": "/9xChl6zSGT9Svx5jghZg1yrW47w.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "69c8ecaf44a19900c1a59ccb",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2223551,
+        "known_for_department": "Directing",
+        "name": "Ra. Karthik",
+        "original_name": "Ra. Karthik",
+        "popularity": 0.1388,
+        "profile_path": null,
+        "credit_id": "686fb349df11df65fa5414d6",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2223551,
+        "known_for_department": "Directing",
+        "name": "Ra. Karthik",
+        "original_name": "Ra. Karthik",
+        "popularity": 0.1388,
+        "profile_path": null,
+        "credit_id": "686fb3554cb158d7bded6eac",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 149958,
+        "known_for_department": "Acting",
+        "name": "Nagarjuna Akkineni",
+        "original_name": "Nagarjuna Akkineni",
+        "popularity": 1.0828,
+        "profile_path": "/i42K59YZY2NbNfqxfo78YoFz6Bv.jpg",
+        "credit_id": "686fb4936c8222d8dd6e935f",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237681,
+        "known_for_department": "Sound",
+        "name": "Devi Sri Prasad",
+        "original_name": "Devi Sri Prasad",
+        "popularity": 0.53,
+        "profile_path": "/4Be4HLS7qqbVPfKyA3yHvtpObFc.jpg",
+        "credit_id": "695ace48c702ee9a62c37ce2",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt37971318",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

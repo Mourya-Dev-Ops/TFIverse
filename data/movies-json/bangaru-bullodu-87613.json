@@ -1,0 +1,496 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "homepage": "",
+  "id": 87613,
+  "imdb_id": "tt1579530",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "బంగారు బుల్లోడు",
+  "overview": "Rani, a traditional village girl, and Priya, a progressive young woman from America, compete for the love of \"Balayya,\" a charming man torn between the two.",
+  "popularity": 0.517,
+  "poster_path": "/rnBCya9WrkiIdMlb7XVaBNKm1Zu.jpg",
+  "production_companies": [
+    {
+      "id": 45769,
+      "logo_path": null,
+      "name": "Jagapathy Art Pictures",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1993-09-03",
+  "revenue": 0,
+  "runtime": 147,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Bangaru Bullodu",
+  "video": false,
+  "vote_average": 6.5,
+  "vote_count": 2,
+  "external_ids": {
+    "imdb_id": "tt1579530",
+    "wikidata_id": "Q5350168",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 150529,
+        "known_for_department": "Acting",
+        "name": "Nandamuri Balakrishna",
+        "original_name": "Nandamuri Balakrishna",
+        "popularity": 1.5728,
+        "profile_path": "/vOqW5ByakRQOUOn6ipupgioxsM9.jpg",
+        "cast_id": 3,
+        "character": "Bala Krishna",
+        "credit_id": "53b6d1acc3a3685eb100288a",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 141701,
+        "known_for_department": "Acting",
+        "name": "Ramya Krishnan",
+        "original_name": "Ramya Krishnan",
+        "popularity": 2.13,
+        "profile_path": "/kZvSnBTgsMgTsUE5o1yFQnDR3dl.jpg",
+        "cast_id": 4,
+        "character": "Rani",
+        "credit_id": "53b6d1ae0e0a2676b8005658",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 123180,
+        "known_for_department": "Acting",
+        "name": "Raveena Tandon",
+        "original_name": "Raveena Tandon",
+        "popularity": 1.4632,
+        "profile_path": "/3ifGMlHKKRFvK9Sg5y2bs5jWUlI.jpg",
+        "cast_id": 5,
+        "character": "Priya",
+        "credit_id": "53b6d1ba0e0a2676bf00577c",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584684,
+        "known_for_department": "Acting",
+        "name": "Rao Gopal Rao",
+        "original_name": "Rao Gopal Rao",
+        "popularity": 0.496,
+        "profile_path": "/5s1FqtrDKSc35NUCH42cPPbtSSs.jpg",
+        "cast_id": 7,
+        "character": "Ramadasu",
+        "credit_id": "53b6d1c5c3a3685ebd0029ad",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584685,
+        "known_for_department": "Acting",
+        "name": "Allu Ramalingaiah",
+        "original_name": "Allu Ramalingaiah",
+        "popularity": 0.3037,
+        "profile_path": "/tYVXmeZSgbYCuIsResUfrm2kjnz.jpg",
+        "cast_id": 8,
+        "character": "Kannappa",
+        "credit_id": "53b6d1c60e0a2676c7005b8b",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.5485,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 6,
+        "character": "Prisoner",
+        "credit_id": "53b6d1bf0e0a2676c400582f",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1107228,
+        "known_for_department": "Acting",
+        "name": "Annapoorna",
+        "original_name": "Annapoorna",
+        "popularity": 0.5291,
+        "profile_path": "/8yFs4CeF7SoiW5j0BTtZXP2jZ9H.jpg",
+        "cast_id": 9,
+        "character": "Annapurnamma",
+        "credit_id": "53b6d1c70e0a2676cb0057a0",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 55066,
+        "known_for_department": "Acting",
+        "name": "Sharat Saxena",
+        "original_name": "Sharat Saxena",
+        "popularity": 0.6419,
+        "profile_path": "/ArW6nQ23bjVfbcFmNVl4W9zpd7X.jpg",
+        "cast_id": 11,
+        "character": "Commissioner Srikanth",
+        "credit_id": "69444b18ff8fedac6c705942",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 283294,
+        "known_for_department": "Acting",
+        "name": "Devan",
+        "original_name": "Devan",
+        "popularity": 0.7712,
+        "profile_path": "/TSAMYfaw3yWAXWO3cuqehIkYbO.jpg",
+        "cast_id": 12,
+        "character": "DIG Benerjee",
+        "credit_id": "69444b2a028f36c774ace47e",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5885430,
+        "known_for_department": "Acting",
+        "name": "Devaraj",
+        "original_name": "Devaraj",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "cast_id": 13,
+        "character": "Nana",
+        "credit_id": "69444b4d3de81d64b6ace465",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584675,
+        "known_for_department": "Acting",
+        "name": "Babu Mohan",
+        "original_name": "Babu Mohan",
+        "popularity": 0.3566,
+        "profile_path": "/v6p1UjzbjGmkTf0yI2hz44GZbxc.jpg",
+        "cast_id": 14,
+        "character": "Paatha dasu",
+        "credit_id": "69444b5bf6fa5af390ace31d",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584248,
+        "known_for_department": "Acting",
+        "name": "Srividya",
+        "original_name": "Srividya",
+        "popularity": 0.6255,
+        "profile_path": "/iQ5uS9zImGAGSXVW97t7tY871Q9.jpg",
+        "cast_id": 15,
+        "character": "Tulasamma",
+        "credit_id": "69444b6d71bbd68740ace3fd",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 120934,
+        "known_for_department": "Acting",
+        "name": "Baladitya",
+        "original_name": "Baladitya",
+        "popularity": 0.1528,
+        "profile_path": null,
+        "cast_id": 16,
+        "character": "",
+        "credit_id": "69444b7a028f36c774ace484",
+        "order": 12
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 186059,
+        "known_for_department": "Production",
+        "name": "V. B. Rajendra Prasad",
+        "original_name": "V. B. Rajendra Prasad",
+        "popularity": 0.3431,
+        "profile_path": null,
+        "credit_id": "53b6d1a70e0a2676bf005778",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585267,
+        "known_for_department": "Directing",
+        "name": "Ravi Raja Pinisetty",
+        "original_name": "Ravi Raja Pinisetty",
+        "popularity": 0.4138,
+        "profile_path": "/9f79yJWicaRTt9dnF4sdUcAx8J3.jpg",
+        "credit_id": "53b6d19dc3a3685eab00290e",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2610852,
+        "known_for_department": "Writing",
+        "name": "G. Satyamurthy",
+        "original_name": "G. Satyamurthy",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "69444beada83e1615d36ab58",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1522855,
+        "known_for_department": "Camera",
+        "name": "Sarath",
+        "original_name": "Sarath",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69444ca935c8f52261ace40d",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1106924,
+        "known_for_department": "Editing",
+        "name": "Gautham Raju",
+        "original_name": "Gautham Raju",
+        "popularity": 0.1828,
+        "profile_path": null,
+        "credit_id": "69444cb9f27a48384ad578bf",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2292001,
+        "known_for_department": "Writing",
+        "name": "Bhuvana Chandra",
+        "original_name": "Bhuvana Chandra",
+        "popularity": 0.1077,
+        "profile_path": "/AsD9UxT9kMLYMpkckrhNp0m0XtN.jpg",
+        "credit_id": "69444cf4ba33cf9d1e8bca52",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1660553,
+        "known_for_department": "Writing",
+        "name": "Veturi Sundararama Murthy",
+        "original_name": "Veturi Sundararama Murthy",
+        "popularity": 0.0586,
+        "profile_path": "/nPWQSVKm9gk0lc63z1sQLCTEIHb.jpg",
+        "credit_id": "69444d00a5db4ef1178bca6a",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584585,
+        "known_for_department": "Sound",
+        "name": "S. P. Balasubramaniam",
+        "original_name": "S. P. Balasubramaniam",
+        "popularity": 0.4224,
+        "profile_path": "/vKcUYibvLFRPADiNwQtl27e1STy.jpg",
+        "credit_id": "69444d0ba5db4ef1178bca6d",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1738680,
+        "known_for_department": "Sound",
+        "name": "K. S. Chithra",
+        "original_name": "K. S. Chithra",
+        "popularity": 0.1883,
+        "profile_path": "/qutkAK4SPBY07n0cBSlS0PuVVNd.jpg",
+        "credit_id": "69444d24a5db4ef1178bca72",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584256,
+        "known_for_department": "Sound",
+        "name": "Mano",
+        "original_name": "Mano",
+        "popularity": 0.2528,
+        "profile_path": "/rt9kMuvBFD609qmBIetrpd8pVHT.jpg",
+        "credit_id": "69444d31c96bb895eed57a9b",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1661887,
+        "known_for_department": "Sound",
+        "name": "S.P. Sailaja",
+        "original_name": "S.P. Sailaja",
+        "popularity": 0.1659,
+        "profile_path": null,
+        "credit_id": "69444d409ee398e9c6ace24c",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2229426,
+        "known_for_department": "Sound",
+        "name": "Minmini",
+        "original_name": "Minmini",
+        "popularity": 0.1164,
+        "profile_path": "/x0Zxi1wDoIwwkNBjDGjaiUIEoij.jpg",
+        "credit_id": "69444d4b8937abec3adec73f",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1849588,
+        "known_for_department": "Sound",
+        "name": "Thotakura Somaraju",
+        "original_name": "Thotakura Somaraju",
+        "popularity": 0.1819,
+        "profile_path": null,
+        "credit_id": "69444e824ce5a070b60fb19e",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 552984,
+        "known_for_department": "Sound",
+        "name": "Saluri Koteswara Rao",
+        "original_name": "Saluri Koteswara Rao",
+        "popularity": 0.2525,
+        "profile_path": "/mihUu99EOf6qLCM3jlMtlwgLqbJ.jpg",
+        "credit_id": "69444e8e5eca7d060036ab15",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/rnBCya9WrkiIdMlb7XVaBNKm1Zu.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "GB",
+        "release_dates": [
+          {
+            "certification": "12A",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "Netflix",
+            "release_date": "2023-11-27T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1993-09-03T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Ek Anari Do Khiladi",
+        "type": "Hindi dubbed"
+      }
+    ]
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "adult": false,
+  "backdrop_path": "/1FRuYYzoFbJUzCcgYdIYTytu4Kf.jpg",
+  "belongs_to_collection": null,
+  "budget": 6100000,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "homepage": "",
+  "id": 224219,
+  "imdb_id": "tt2370244",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "యాక్షన్ 3D",
+  "overview": "Four guys head to Goa for a bachelor’s party, wake up with a huge hangover and realise things have gone awry.",
+  "popularity": 0.3421,
+  "poster_path": "/6pD3JfQyo2khfsRwcMlcgjZd9fF.jpg",
+  "production_companies": [
+    {
+      "id": 45597,
+      "logo_path": "/cikGdkHOmFTXgi95V1yx8EIoZyi.png",
+      "name": "AK Entertainments",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2013-06-21",
+  "revenue": 12000000,
+  "runtime": 150,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Action 3D",
+  "video": false,
+  "vote_average": 4,
+  "vote_count": 1,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237993,
+        "known_for_department": "Acting",
+        "name": "Allari Naresh",
+        "original_name": "Allari Naresh",
+        "popularity": 0.647,
+        "profile_path": "/2k4n2sYl9OmzKdm1ItzP3nFwW6k.jpg",
+        "cast_id": 4,
+        "character": "Bala Vardhan aka Bava",
+        "credit_id": "52fe4e349251416c7514eba3",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237969,
+        "known_for_department": "Acting",
+        "name": "Shaam",
+        "original_name": "Shaam",
+        "popularity": 1.2679,
+        "profile_path": "/eqvAJxumDcXuZA0tnJmhSeEde17.jpg",
+        "cast_id": 5,
+        "character": "Ajay",
+        "credit_id": "52fe4e349251416c7514eba7",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 150687,
+        "known_for_department": "Acting",
+        "name": "Vaibhav",
+        "original_name": "Vaibhav Reddy",
+        "popularity": 0.3693,
+        "profile_path": "/pCgjirnEoMXJmGRAOXhj5UgLmS8.jpg",
+        "cast_id": 6,
+        "character": "Shiva",
+        "credit_id": "52fe4e349251416c7514ebab",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237968,
+        "known_for_department": "Crew",
+        "name": "Raju Sundaram",
+        "original_name": "Raju Sundaram",
+        "popularity": 0.5542,
+        "profile_path": "/zNnOzgKlosRdmO4bG8aDMAYEWWs.jpg",
+        "cast_id": 7,
+        "character": "Purushottam aka Purush",
+        "credit_id": "52fe4e349251416c7514ebaf",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.0993,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 8,
+        "character": "Magnet Mama",
+        "credit_id": "52fe4e349251416c7514ebb3",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1209805,
+        "known_for_department": "Acting",
+        "name": "Neelam Upadhyaya",
+        "original_name": "Neelam Upadhyaya",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "cast_id": 9,
+        "character": "Geetha",
+        "credit_id": "52fe4e349251416c7514ebb7",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 150530,
+        "known_for_department": "Acting",
+        "name": "Sneha Ullal",
+        "original_name": "Sneha Ullal",
+        "popularity": 0.3602,
+        "profile_path": "/dS6AD6WaSsbI79g0LCkUPfwUGCV.jpg",
+        "cast_id": 10,
+        "character": "Sameera",
+        "credit_id": "52fe4e349251416c7514ebbb",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 237987,
+        "known_for_department": "Acting",
+        "name": "Kamna Jethmalani",
+        "original_name": "Kamna Jethmalani",
+        "popularity": 0.3716,
+        "profile_path": "/hqwWBWHYKhP2KqiZoj3aK9So4gk.jpg",
+        "cast_id": 11,
+        "character": "Anitha",
+        "credit_id": "52fe4e349251416c7514ebbf",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 148052,
+        "known_for_department": "Acting",
+        "name": "M. S. Narayana",
+        "original_name": "M. S. Narayana",
+        "popularity": 0.6471,
+        "profile_path": "/1XRTmhRSOtHBVmoPfz45WxbLfFQ.jpg",
+        "cast_id": 14,
+        "character": "Bokka Venkatrao",
+        "credit_id": "54cf0122c3a3681c9c004f37",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 589654,
+        "known_for_department": "Acting",
+        "name": "Ali Basha",
+        "original_name": "Ali Basha",
+        "popularity": 0.6916,
+        "profile_path": "/1z0YbDqP81BD6VxeghJG7vo9Mny.jpg",
+        "cast_id": 15,
+        "character": "",
+        "credit_id": "54cf0132925141475b0075b0",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 222760,
+        "known_for_department": "Acting",
+        "name": "Silambarasan",
+        "original_name": "Silambarasan",
+        "popularity": 0.931,
+        "profile_path": "/1T35CiKVldfxElZfQqaoN6GhvuU.jpg",
+        "cast_id": 16,
+        "character": "Guest Appearance",
+        "credit_id": "54cf0141c3a3687f92006e60",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 389604,
+        "known_for_department": "Acting",
+        "name": "Sudeepa",
+        "original_name": "Sudeep",
+        "popularity": 1.0021,
+        "profile_path": "/8c5TYgGwbkcQkvC3ZlTU41OfYBN.jpg",
+        "cast_id": 18,
+        "character": "Guest Appearance",
+        "credit_id": "55099f0ac3a3682b4e003ae1",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 213428,
+        "known_for_department": "Acting",
+        "name": "Sunil Varma",
+        "original_name": "Sunil Varma",
+        "popularity": 0.6676,
+        "profile_path": "/ifmUCkLgpEzbfnRjIw62otrADpI.jpg",
+        "cast_id": 20,
+        "character": "Guest Appearance",
+        "credit_id": "5530303ac3a3682e83000019",
+        "order": 12
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1209798,
+        "known_for_department": "Production",
+        "name": "Anil Sunkara",
+        "original_name": "Anil Sunkara",
+        "popularity": 0.0734,
+        "profile_path": null,
+        "credit_id": "52fe4e349251416c7514eb93",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1209798,
+        "known_for_department": "Production",
+        "name": "Anil Sunkara",
+        "original_name": "Anil Sunkara",
+        "popularity": 0.0734,
+        "profile_path": null,
+        "credit_id": "52fe4e349251416c7514eb99",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 92057,
+        "known_for_department": "Sound",
+        "name": "Bappi Lahiri",
+        "original_name": "Bappi Lahiri",
+        "popularity": 0.2827,
+        "profile_path": "/5HBI7ecr8YtTVinhXx5Yd90cxHN.jpg",
+        "credit_id": "52fe4e349251416c7514eb9f",
+        "department": "Sound",
+        "job": "Music"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1117637,
+        "known_for_department": "Camera",
+        "name": "Sarvesh Murari",
+        "original_name": "Sarvesh Murari",
+        "popularity": 0.1554,
+        "profile_path": null,
+        "credit_id": "54cf00a2c3a3687f8f0073dc",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1339512,
+        "known_for_department": "Editing",
+        "name": "M. R. Varmaa",
+        "original_name": "M. R. Varmaa",
+        "popularity": 0.2209,
+        "profile_path": null,
+        "credit_id": "54cf00ba9251415fb3005e94",
+        "department": "Editing",
+        "job": "Editor"
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Action 3D official theatrical trailer HD- Allari Naresh",
+        "key": "Z_aEysQNFFw",
+        "site": "YouTube",
+        "size": 480,
+        "type": "Trailer",
+        "official": false,
+        "id": "533ec71dc3a368544800b3de",
+        "published_at": "2013-05-04T16:11:28.000Z"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2013-06-21T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 770,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/1FRuYYzoFbJUzCcgYdIYTytu4Kf.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1369
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 2560,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/6pD3JfQyo2khfsRwcMlcgjZd9fF.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1707
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt2370244",
+    "wikidata_id": "Q4677059",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "homepage": "",
+  "id": 310622,
+  "imdb_id": "tt0262223",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "అల్లూరి సీతారామరాజు",
+  "overview": "Cinematic version of the life of the legendary freedom fighter.",
+  "popularity": 0.3681,
+  "poster_path": "/A69u2G1jfbpL27Zrl6KDtBdlcjm.jpg",
+  "production_companies": [
+    {
+      "id": 36866,
+      "logo_path": null,
+      "name": "Padmalaya Studios",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1974-05-01",
+  "revenue": 0,
+  "runtime": 187,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Alluri Seetarama Raju",
+  "video": false,
+  "vote_average": 8.75,
+  "vote_count": 4,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1470750,
+        "known_for_department": "Acting",
+        "name": "Krishna",
+        "original_name": "Krishna",
+        "popularity": 0.2447,
+        "profile_path": "/85O0Icv3d2DL9EfK44ZXZO8aqIU.jpg",
+        "cast_id": 0,
+        "character": "Alluri Seetarama Raju",
+        "credit_id": "57a15953925141100f002dc6",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335686,
+        "known_for_department": "Acting",
+        "name": "Kongara Jaggayya",
+        "original_name": "Kongara Jaggayya",
+        "popularity": 0.2523,
+        "profile_path": "/aYYoYtHnjOiNPunr62OPocokdAH.jpg",
+        "cast_id": 1,
+        "character": "Rutherford Scott Coward",
+        "credit_id": "57a1597292514167ae00391c",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 943089,
+        "known_for_department": "Acting",
+        "name": "Vijaya Nirmala",
+        "original_name": "Vijaya Nirmala",
+        "popularity": 0.0696,
+        "profile_path": "/btvKBQPfC4dt0o2FB33TWiYaz53.jpg",
+        "cast_id": 2,
+        "character": "Seetha",
+        "credit_id": "57a159859251416767003d39",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586627,
+        "known_for_department": "Acting",
+        "name": "Chandramohan",
+        "original_name": "Chandramohan",
+        "popularity": 0.6123,
+        "profile_path": "/pXkbPFie2pOGgc9cd84BUz0OP4A.jpg",
+        "cast_id": 3,
+        "character": "Govindu",
+        "credit_id": "57a15995925141100f002def",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1107022,
+        "known_for_department": "Acting",
+        "name": "M. Balayya",
+        "original_name": "M. Balayya",
+        "popularity": 0.1407,
+        "profile_path": null,
+        "cast_id": 5,
+        "character": "Aggi Raju",
+        "credit_id": "57a159d39251416767003d64",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1208884,
+        "known_for_department": "Acting",
+        "name": "Kanta Rao",
+        "original_name": "Kanta Rao",
+        "popularity": 0.2123,
+        "profile_path": "/75sR0b4eTPI1VLoHOeuRO5pPCDj.jpg",
+        "cast_id": 12,
+        "character": "Padalu",
+        "credit_id": "61a3d1b9e2bca800895c64a5",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1611382,
+        "known_for_department": "Acting",
+        "name": "Rajanala Kaleswara Rao",
+        "original_name": "Rajanala Kaleswara Rao",
+        "popularity": 0.1181,
+        "profile_path": "/fYnCbXV0Fh9eUrPgQI2YOwXdsw3.jpg",
+        "cast_id": 21,
+        "character": "Major Goodall",
+        "credit_id": "692811b823baaad693248fdc",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1356414,
+        "known_for_department": "Acting",
+        "name": "Mikkilineni",
+        "original_name": "Mikkilineni",
+        "popularity": 0.2121,
+        "profile_path": "/hixximPs8FRe2pHlBjqyi01ZwyY.jpg",
+        "cast_id": 22,
+        "character": "Seetha's father",
+        "credit_id": "692811e4792b9dd8f2a75b44",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335709,
+        "known_for_department": "Acting",
+        "name": "Gummadi",
+        "original_name": "Gummadi",
+        "popularity": 0.4149,
+        "profile_path": "/qKXVkv7RmDKveWWZael013w7h1B.jpg",
+        "cast_id": 18,
+        "character": "Gamgantam Dhora",
+        "credit_id": "61a3d352e2bca80064cad202",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1267544,
+        "known_for_department": "Acting",
+        "name": "Prabhakar Reddy",
+        "original_name": "Prabhakar Reddy",
+        "popularity": 0.207,
+        "profile_path": null,
+        "cast_id": 14,
+        "character": "Gam Malludora",
+        "credit_id": "61a3d1f0a3d02700629cda4b",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2026410,
+        "known_for_department": "Acting",
+        "name": "Ramesh Babu Ghattamaneni",
+        "original_name": "Ramesh Babu Ghattamaneni",
+        "popularity": 0.0604,
+        "profile_path": null,
+        "cast_id": 23,
+        "character": "Young Alluri Sitarama Raju",
+        "credit_id": "6928122352403149d5c1264e",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3608455,
+        "known_for_department": "Acting",
+        "name": "Sreedhar",
+        "original_name": "Sreedhar",
+        "popularity": 0.064,
+        "profile_path": null,
+        "cast_id": 20,
+        "character": "Tirupathayya",
+        "credit_id": "62bf944928723c004c80a2ce",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584346,
+        "known_for_department": "Acting",
+        "name": "Pandari Bai",
+        "original_name": "Pandari Bai",
+        "popularity": 0.4891,
+        "profile_path": "/hQRkAIELIKQihKEeWMVW0j3GHsE.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "61a3d1d63e2ec80029945cce",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3263179,
+        "known_for_department": "Acting",
+        "name": "Raja Babu",
+        "original_name": "Raja Babu",
+        "popularity": 0.0873,
+        "profile_path": "/hQBSR46T1qXie1VWGVKAuBNpiIb.jpg",
+        "cast_id": 15,
+        "character": "",
+        "credit_id": "61a3d22f00508a0066706ff6",
+        "order": 13
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584456,
+        "known_for_department": "Acting",
+        "name": "Manjula Vijayakumar",
+        "original_name": "Manjula Vijayakumar",
+        "popularity": 0.4704,
+        "profile_path": "/46zkEG4JOYnRw7OG8StufvacHMW.jpg",
+        "cast_id": 16,
+        "character": "",
+        "credit_id": "61a3d32a869e750068ce78e1",
+        "order": 14
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1047326,
+        "known_for_department": "Acting",
+        "name": "Rajasree",
+        "original_name": "Rajasree",
+        "popularity": 0.1671,
+        "profile_path": null,
+        "cast_id": 17,
+        "character": "",
+        "credit_id": "61a3d337e2bca800895c66cd",
+        "order": 15
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584684,
+        "known_for_department": "Acting",
+        "name": "Rao Gopal Rao",
+        "original_name": "Rao Gopal Rao",
+        "popularity": 0.5446,
+        "profile_path": "/5s1FqtrDKSc35NUCH42cPPbtSSs.jpg",
+        "cast_id": 19,
+        "character": "",
+        "credit_id": "61a3d3614a52f800642c17a9",
+        "order": 16
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1660494,
+        "known_for_department": "Directing",
+        "name": "V. Ramachandra Rao",
+        "original_name": "V. Ramachandra Rao",
+        "popularity": 0.0168,
+        "profile_path": null,
+        "credit_id": "57a15a0192514108eb006164",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1660495,
+        "known_for_department": "Writing",
+        "name": "Tripuraneni Maharadhi",
+        "original_name": "Maharadhi Tripuraneni",
+        "popularity": 0.0528,
+        "profile_path": null,
+        "credit_id": "57a15a1ec3a36879c20029e6",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1660496,
+        "known_for_department": "Camera",
+        "name": "V.S.R. Swamy",
+        "original_name": "V.S.R. Swamy",
+        "popularity": 0.0579,
+        "profile_path": null,
+        "credit_id": "57a15a64925141056d00660e",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1660503,
+        "known_for_department": "Sound",
+        "name": "P. Adinarayana Rao",
+        "original_name": "P. Adinarayana Rao",
+        "popularity": 0.0569,
+        "profile_path": null,
+        "credit_id": "57a15a9592514167ae0039b8",
+        "department": "Sound",
+        "job": "Music"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 171687,
+        "known_for_department": "Production",
+        "name": "G. Hanumantha Rao",
+        "original_name": "G. Hanumantha Rao",
+        "popularity": 0.045,
+        "profile_path": null,
+        "credit_id": "6928125a594768be34371969",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1470750,
+        "known_for_department": "Acting",
+        "name": "Krishna",
+        "original_name": "Krishna",
+        "popularity": 0.2447,
+        "profile_path": "/85O0Icv3d2DL9EfK44ZXZO8aqIU.jpg",
+        "credit_id": "6928126998bc74bb14eaa28e",
+        "department": "Crew",
+        "job": "Presenter"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt0262223",
+    "wikidata_id": "Q4733357",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1974-05-01T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.698,
+        "height": 860,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/A69u2G1jfbpL27Zrl6KDtBdlcjm.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 600
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Alluri Seetharama Raju",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Alluri Sitaramaraju",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Alluri Seetharamaraju",
+        "type": ""
+      }
+    ]
+  }
+}

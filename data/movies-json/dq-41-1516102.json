@@ -1,0 +1,352 @@
+{
+  "adult": false,
+  "backdrop_path": "/yp9HDSeZlp2TbwRUju8ZhX0ERH1.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1516102,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "DQ 41",
+  "overview": "He loved a girl with no past and gave her a future ....Now destiny returns to take her back , steeped in a forgotten life , buried memories and claims he cannot disprove, caught between destiny and love , she must decide what truly means",
+  "popularity": 0.2494,
+  "poster_path": "/5YHiSKaUsNuwWo9TWRXFm7jQbx2.jpg",
+  "production_companies": [
+    {
+      "id": 111875,
+      "logo_path": "/9O7xb3qb7NCwtvW1J4rVkizegg1.png",
+      "name": "Sri Lakshmi Venkateswara Cinemas",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "",
+  "title": "DQ 41",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1115225,
+        "known_for_department": "Acting",
+        "name": "Dulquer Salmaan",
+        "original_name": "Dulquer Salmaan",
+        "popularity": 1.4752,
+        "profile_path": "/8AT3qDRakZQSZ6HVj7sQFUzN07N.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "687ce97fa231441fb5169d63",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 587753,
+        "known_for_department": "Acting",
+        "name": "Pooja Hegde",
+        "original_name": "Pooja Hegde",
+        "popularity": 1.8255,
+        "profile_path": "/2ZxrR6DVIWtDDtmIhJ6i64wwWSU.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "687ce989692b97576e38d709",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2536188,
+        "known_for_department": "Acting",
+        "name": "Dheekshith Shetty",
+        "original_name": "Dheekshith Shetty",
+        "popularity": 1.4282,
+        "profile_path": "/f0MzEH6dmEZiXuZ78ycDKgxECbD.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "68f471a5781d4231a1751ebb",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4014326,
+        "known_for_department": "Acting",
+        "name": "Vinali Bhatnagar",
+        "original_name": "Vinali Bhatnagar",
+        "popularity": 0.0865,
+        "profile_path": "/26gNCM9AO1UL6PoxvUS59jRUAOg.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "68f4728c499fa7ae86751e7b",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 141701,
+        "known_for_department": "Acting",
+        "name": "Ramya Krishnan",
+        "original_name": "Ramya Krishnan",
+        "popularity": 2.2012,
+        "profile_path": "/kZvSnBTgsMgTsUE5o1yFQnDR3dl.jpg",
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "68f471cfd61d63f1d5baf64b",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586629,
+        "known_for_department": "Acting",
+        "name": "Rao Ramesh",
+        "original_name": "Rao Ramesh",
+        "popularity": 0.8394,
+        "profile_path": "/jzO0wN21tEcmz0haekvliQU91JM.jpg",
+        "cast_id": 18,
+        "character": "",
+        "credit_id": "69bbecb8bfd765812c57dcaa",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 85589,
+        "known_for_department": "Acting",
+        "name": "Sachin Khedekar",
+        "original_name": "सचिन खेड़ेकर",
+        "popularity": 1.177,
+        "profile_path": "/jRSgXFTDAbAb4RsW9nvNYsdhxWo.jpg",
+        "cast_id": 19,
+        "character": "",
+        "credit_id": "69bbecc652059ec0efaafcc8",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4871155,
+        "known_for_department": "Acting",
+        "name": "Prasad Behara",
+        "original_name": "Prasad Behara",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "cast_id": 20,
+        "character": "",
+        "credit_id": "69bbecd25182526aca57dcaf",
+        "order": 7
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2187318,
+        "known_for_department": "Production",
+        "name": "Sudhakar Cherukuri",
+        "original_name": "Sudhakar Cherukuri",
+        "popularity": 0.0882,
+        "profile_path": "/4PRVTmhpCsnGwfNkQynyNDWznAo.jpg",
+        "credit_id": "687ce99b80971a73a3528ae1",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5605810,
+        "known_for_department": "Directing",
+        "name": "Ravi Nelakuditi",
+        "original_name": "Ravi Nelakuditi",
+        "popularity": 0.0461,
+        "profile_path": null,
+        "credit_id": "689071554d3806a43af3e910",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2035066,
+        "known_for_department": "Art",
+        "name": "Kolla Avinash",
+        "original_name": "Kolla Avinash",
+        "popularity": 0.4354,
+        "profile_path": "/27Tw9vCcGV1iNE0Y8MIpLY3U5r2.jpg",
+        "credit_id": "6890716ae0342ba883b7f45c",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584950,
+        "known_for_department": "Sound",
+        "name": "G. V. Prakash Kumar",
+        "original_name": "G. V. Prakash Kumar",
+        "popularity": 1.191,
+        "profile_path": "/ArX3l6CdNo0sGI8b6PFYveR9Azm.jpg",
+        "credit_id": "68907176f7452194f911dd42",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1794702,
+        "known_for_department": "Camera",
+        "name": "Anay Goswami",
+        "original_name": "Anay Goswami",
+        "popularity": 0.1795,
+        "profile_path": null,
+        "credit_id": "6890718d72165d6b0ef3e7d4",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5605810,
+        "known_for_department": "Directing",
+        "name": "Ravi Nelakuditi",
+        "original_name": "Ravi Nelakuditi",
+        "popularity": 0.0461,
+        "profile_path": null,
+        "credit_id": "68907de32da5aef65fb7f720",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3081243,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Kavya Sriram",
+        "original_name": "Kavya Sriram",
+        "popularity": 0.1678,
+        "profile_path": "/kKjZ5TdXBkdfoeugwERiiwK6yTs.jpg",
+        "credit_id": "6891b35c747a289083772899",
+        "department": "Costume & Make-Up",
+        "job": "Costume Designer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1488793,
+        "known_for_department": "Editing",
+        "name": "Kotagiri Venkateswara Rao",
+        "original_name": "Kotagiri Venkateswara Rao",
+        "popularity": 0.2372,
+        "profile_path": "/3oTREXmvPlgnEO9vvMxRLIItSbn.jpg",
+        "credit_id": "69494eb8f9efd0381e0736ab",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2200190,
+        "known_for_department": "Crew",
+        "name": "Vamsi Shekar",
+        "original_name": "Vamsi Shekar",
+        "popularity": 0.332,
+        "profile_path": null,
+        "credit_id": "694d5b1b1cdb3f496f0729a9",
+        "department": "Crew",
+        "job": "Public Relations"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3272539,
+        "known_for_department": "Production",
+        "name": "Vijay Kumar Chaganti",
+        "original_name": "Vijay Kumar Chaganti",
+        "popularity": 0.0681,
+        "profile_path": null,
+        "credit_id": "69bbec964335cdd74e57d91d",
+        "department": "Writing",
+        "job": "Creative Producer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/yp9HDSeZlp2TbwRUju8ZhX0ERH1.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/5YHiSKaUsNuwWo9TWRXFm7jQbx2.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "keywords": {
+    "keywords": []
+  }
+}

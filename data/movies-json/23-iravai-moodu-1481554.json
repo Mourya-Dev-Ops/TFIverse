@@ -1,0 +1,662 @@
+{
+  "adult": false,
+  "backdrop_path": "/l2GDxck4NNOSZIF3k8v8FVeIxGa.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "homepage": "",
+  "id": 1481554,
+  "imdb_id": "tt35851471",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "ఇరవై మూడు",
+  "overview": "23 (Iravai Moodu) is a hard-hitting social drama that interweaves three gripping narratives inspired by real-life tragedies: the 1991 Tsunduru massacre, the 1993 Chilakaluripeta bus burning incident, and the 1997 Hyderabad car bomb blast.  Bold, unflinching, and deeply thought-provoking, 23 serves as a powerful outcry for dignity, justice, and societal reform.",
+  "popularity": 0.2135,
+  "poster_path": "/sIULuvuzbf54Fm1U5ckkEbK1Vai.jpg",
+  "production_companies": [
+    {
+      "id": 181542,
+      "logo_path": null,
+      "name": "Spirit Media",
+      "origin_country": "IN"
+    },
+    {
+      "id": 262386,
+      "logo_path": null,
+      "name": "Studio 99",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2025-05-16",
+  "revenue": 0,
+  "runtime": 130,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "All are equal, but some are more equal.",
+  "title": "23 (Iravai Moodu)",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5440179,
+        "known_for_department": "Acting",
+        "name": "Teja",
+        "original_name": "Teja",
+        "popularity": 0.0387,
+        "profile_path": null,
+        "cast_id": 4,
+        "character": "Sagar",
+        "credit_id": "6825d96bd332be6464a174e7",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5440180,
+        "known_for_department": "Acting",
+        "name": "Tanmayee",
+        "original_name": "Tanmayee",
+        "popularity": 0.0239,
+        "profile_path": null,
+        "cast_id": 5,
+        "character": "Suseela",
+        "credit_id": "6825d9ccd34847924931597d",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5440920,
+        "known_for_department": "Acting",
+        "name": "Praneeth",
+        "original_name": "Praneeth",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "cast_id": 8,
+        "character": "Das",
+        "credit_id": "68263f6e34194d40d04b5860",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1430880,
+        "known_for_department": "Acting",
+        "name": "Jhansi",
+        "original_name": "Jhansi",
+        "popularity": 0.2463,
+        "profile_path": "/rOgVPpJWfgrYnkzzD9aZB5TQYus.jpg",
+        "cast_id": 24,
+        "character": "Dr. Beena",
+        "credit_id": "683ff901e68027323b2898f7",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5482614,
+        "known_for_department": "Acting",
+        "name": "Thagubothu Ramesh",
+        "original_name": "Thagubothu Ramesh",
+        "popularity": 0.0362,
+        "profile_path": null,
+        "cast_id": 25,
+        "character": "Raju Bhai",
+        "credit_id": "683ff928f0064156c2ad8cc3",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5482609,
+        "known_for_department": "Production",
+        "name": "Gangimalla Mahesh",
+        "original_name": "Gangimalla Mahesh",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 26,
+        "character": "Chandra",
+        "credit_id": "683ff95c2ab005893aad8af7",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5482615,
+        "known_for_department": "Acting",
+        "name": "Veda Vyas",
+        "original_name": "Veda Vyas",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "cast_id": 27,
+        "character": "Chinna Bhai",
+        "credit_id": "683ff9858f5e10eb267bb9c7",
+        "order": 6
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2344508,
+        "known_for_department": "Directing",
+        "name": "Raj Rachakonda",
+        "original_name": "Raj Rachakonda",
+        "popularity": 0.0537,
+        "profile_path": null,
+        "credit_id": "6825d871ddf6d9999cada49b",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2344508,
+        "known_for_department": "Directing",
+        "name": "Raj Rachakonda",
+        "original_name": "Raj Rachakonda",
+        "popularity": 0.0537,
+        "profile_path": null,
+        "credit_id": "6825d8cb97a5e2ce612d2a73",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2344508,
+        "known_for_department": "Directing",
+        "name": "Raj Rachakonda",
+        "original_name": "Raj Rachakonda",
+        "popularity": 0.0537,
+        "profile_path": null,
+        "credit_id": "6825d8e9232a066bb1767dc0",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5440182,
+        "known_for_department": "Writing",
+        "name": "Indus Martin",
+        "original_name": "Indus Martin",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6825da48752abbbbf85a3c4a",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584377,
+        "known_for_department": "Sound",
+        "name": "Mark K. Robin",
+        "original_name": "Mark K. Robin",
+        "popularity": 0.119,
+        "profile_path": "/aQ7n73TkyVQMwwMjXgJsTOt0gjU.jpg",
+        "credit_id": "683ff57982aa5347f4538e6a",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3581120,
+        "known_for_department": "Directing",
+        "name": "Shreyansh Dixit",
+        "original_name": "Shreyansh Dixit",
+        "popularity": 0.0239,
+        "profile_path": null,
+        "credit_id": "683ff5b37335d1f780ad8b9f",
+        "department": "Crew",
+        "job": "Creative Consultant"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4045785,
+        "known_for_department": "Crew",
+        "name": "Ashok Manikonda",
+        "original_name": "Ashok Manikonda",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "683ff5c7c302e7202dfcb24c",
+        "department": "Crew",
+        "job": "Creative Consultant"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4045786,
+        "known_for_department": "Crew",
+        "name": "Krishna Chakravarthula",
+        "original_name": "Krishna Chakravarthula",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "683ff5dd5dfae176b8fcb127",
+        "department": "Crew",
+        "job": "Creative Consultant"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2450182,
+        "known_for_department": "Writing",
+        "name": "Chandrabose",
+        "original_name": "Chandrabose",
+        "popularity": 0.1385,
+        "profile_path": "/oYwzbTQGJXLcdHsUbkweoDiUw6A.jpg",
+        "credit_id": "683ff607498ce85b9f68a7a2",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5440182,
+        "known_for_department": "Writing",
+        "name": "Indus Martin",
+        "original_name": "Indus Martin",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "683ff618d764063f52ad89f5",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4606104,
+        "known_for_department": "Writing",
+        "name": "Sri Sri",
+        "original_name": "Sri Sri",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "683ff65b053619a7adfdbf07",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2357833,
+        "known_for_department": "Directing",
+        "name": "Venkat Siddareddy",
+        "original_name": "Venkat Siddareddy",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "683ff69746d574fbc47f4ebb",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4041932,
+        "known_for_department": "Editing",
+        "name": "Anil Aalayam",
+        "original_name": "Anil Aalayam",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "683ff6abd764063f52ad89f9",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5482609,
+        "known_for_department": "Production",
+        "name": "Gangimalla Mahesh",
+        "original_name": "Gangimalla Mahesh",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "683ff6c112beb1d6bcf2c11f",
+        "department": "Production",
+        "job": "Casting Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5482610,
+        "known_for_department": "Art",
+        "name": "Pulla Vishnuvardha",
+        "original_name": "Pulla Vishnuvardha",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "683ff6d3aa854ccd4a538d8f",
+        "department": "Art",
+        "job": "Art Direction"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1649688,
+        "known_for_department": "Sound",
+        "name": "Ajith Abraham George",
+        "original_name": "Ajith Abraham George",
+        "popularity": 0.1864,
+        "profile_path": null,
+        "credit_id": "683ff71e39ca7e01dead897b",
+        "department": "Sound",
+        "job": "Recording Supervision"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3406077,
+        "known_for_department": "Sound",
+        "name": "Tony joseph",
+        "original_name": "Tony joseph",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "683ff7b3b01a29a96468a944",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5482612,
+        "known_for_department": "Sound",
+        "name": "Nidhin B Molickal",
+        "original_name": "Nidhin B Molickal",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "683ff7c775f11744d1fdbf5f",
+        "department": "Sound",
+        "job": "Sound Mixer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5321607,
+        "known_for_department": "Sound",
+        "name": "Nirvan Athreya",
+        "original_name": "Nirvan Athreya",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "683ff7d747739703bf7f4e88",
+        "department": "Sound",
+        "job": "Music Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3532860,
+        "known_for_department": "Writing",
+        "name": "Rahman",
+        "original_name": "Rahman",
+        "popularity": 0.1196,
+        "profile_path": null,
+        "credit_id": "683ff9ed636eb94e297f4cdb",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4606104,
+        "known_for_department": "Writing",
+        "name": "Sri Sri",
+        "original_name": "Sri Sri",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "683ffa08053619a7adfdbf21",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2067890,
+        "known_for_department": "Sound",
+        "name": "Karthik",
+        "original_name": "Karthik",
+        "popularity": 0.1989,
+        "profile_path": "/52p4kSTUZuw4KqV8pqu5Qr7IKnt.jpg",
+        "credit_id": "683ffa1c636eb94e297f4cde",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2035074,
+        "known_for_department": "Sound",
+        "name": "Ramya Behra",
+        "original_name": "Ramya Behra",
+        "popularity": 0.0798,
+        "profile_path": null,
+        "credit_id": "683ffa38e68027323b2898ff",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2081646,
+        "known_for_department": "Sound",
+        "name": "Chinmayi Sripaada",
+        "original_name": "Chinmayi Sripaada",
+        "popularity": 0.1272,
+        "profile_path": "/j3bkeLC42zmfu38suUpK2CyxVXG.jpg",
+        "credit_id": "683ffab12243f6b024fdbf3e",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 85707,
+        "known_for_department": "Sound",
+        "name": "Kailash Kher",
+        "original_name": "Kailash Kher",
+        "popularity": 0.1783,
+        "profile_path": "/7rLWpRqN8iwyf3BlJRa80YupL9X.jpg",
+        "credit_id": "683ffabf3ac908d6b5fdc151",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3447751,
+        "known_for_department": "Sound",
+        "name": "Kapil Kapilan",
+        "original_name": "Kapil Kapilan",
+        "popularity": 0.0193,
+        "profile_path": null,
+        "credit_id": "683ffacfb21389eba37f4bc1",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5014334,
+        "known_for_department": "Production",
+        "name": "Shouri Gomatham",
+        "original_name": "Shouri Gomatham",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "683ffafb0aa8d8b170fcb221",
+        "department": "Crew",
+        "job": "Creative Consultant"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3581296,
+        "known_for_department": "Acting",
+        "name": "Saurabh Dixit",
+        "original_name": "Saurabh Dixit",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "683ffb0a3ac908d6b5fdc15e",
+        "department": "Crew",
+        "job": "Creative Consultant"
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "“23” Telugu Official Movie Trailer I Raj Rachakonda | Jhansi l Teja | Tanmai | Spirit Media",
+        "key": "K0JqiRvESq8",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Trailer",
+        "official": true,
+        "id": "682766a8762b885ae876834b",
+        "published_at": "2025-05-06T13:35:02.000Z"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt35851471",
+    "wikidata_id": "Q134479425",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1217,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/l2GDxck4NNOSZIF3k8v8FVeIxGa.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 2164
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/lzltjj8CaMTWSn94IwZA92ocZ2E.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/uOEt6FL8xr6oqzkPA0eEltUwMhF.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/cwoizonPB5wJBnmUiYlFhE1pMNq.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.75,
+        "height": 2667,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/sIULuvuzbf54Fm1U5ckkEbK1Vai.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Iravai Moodu",
+        "type": "Telugu script in English"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U/A 16+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "Paid Premieres",
+            "release_date": "2025-05-15T00:00:00.000Z",
+            "type": 1
+          },
+          {
+            "certification": "U/A 16+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-05-16T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "US",
+        "release_dates": [
+          {
+            "certification": "NR",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-05-16T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

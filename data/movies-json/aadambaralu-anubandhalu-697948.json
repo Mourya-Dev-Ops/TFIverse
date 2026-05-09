@@ -1,0 +1,444 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 697948,
+  "imdb_id": "tt0261515",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "ఆడంబరాలు - అనుబంధాలు",
+  "overview": "",
+  "popularity": 0.153,
+  "poster_path": "/vw6p37DBbsusbDY8pkeGjnyWcaV.jpg",
+  "production_companies": [
+    {
+      "id": 283779,
+      "logo_path": null,
+      "name": "Lokeshwari Art Pictures",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1974-06-01",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Aadambaralu Anubandhalu",
+  "video": false,
+  "vote_average": 9,
+  "vote_count": 1,
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt0261515",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1470750,
+        "known_for_department": "Acting",
+        "name": "Krishna",
+        "original_name": "Krishna",
+        "popularity": 0.2447,
+        "profile_path": "/85O0Icv3d2DL9EfK44ZXZO8aqIU.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "5ea7a69ed38b580026275de2",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2367912,
+        "known_for_department": "Acting",
+        "name": "Sharada Devi",
+        "original_name": "Sharada Devi",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "5ea7a6ab2d1e400024832204",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1166378,
+        "known_for_department": "Acting",
+        "name": "Savitri",
+        "original_name": "Savitri",
+        "popularity": 0.3791,
+        "profile_path": "/ouEi3MJ5E1hdEnrcuC61veeG8GX.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "69468fe4d36bff9d442fb944",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1267544,
+        "known_for_department": "Acting",
+        "name": "Prabhakar Reddy",
+        "original_name": "Prabhakar Reddy",
+        "popularity": 0.207,
+        "profile_path": null,
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "69469003d36bff9d442fb947",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3263179,
+        "known_for_department": "Acting",
+        "name": "Raja Babu",
+        "original_name": "Raja Babu",
+        "popularity": 0.0873,
+        "profile_path": "/hQBSR46T1qXie1VWGVKAuBNpiIb.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "69469010c82dfba7ec8cddd3",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1208884,
+        "known_for_department": "Acting",
+        "name": "Kanta Rao",
+        "original_name": "Kanta Rao",
+        "popularity": 0.2123,
+        "profile_path": "/75sR0b4eTPI1VLoHOeuRO5pPCDj.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "6946904757d48dcef1b1c318",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584684,
+        "known_for_department": "Acting",
+        "name": "Rao Gopal Rao",
+        "original_name": "Rao Gopal Rao",
+        "popularity": 0.5446,
+        "profile_path": "/5s1FqtrDKSc35NUCH42cPPbtSSs.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "6946909c8eee8717838cdc57",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1122103,
+        "known_for_department": "Acting",
+        "name": "Chittoor V. Nagayya",
+        "original_name": "Chittoor V. Nagayya",
+        "popularity": 0.2054,
+        "profile_path": "/iPLEIndzk3sGvYlXBhzkTxm4tsa.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "694690a34671fb7c99b1c327",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1041998,
+        "known_for_department": "Sound",
+        "name": "M. Ranga Rao",
+        "original_name": "M. Ranga Rao",
+        "popularity": 0.1345,
+        "profile_path": null,
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "694690a8c82dfba7ec8cdddc",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1611653,
+        "known_for_department": "Acting",
+        "name": "Roja Ramani",
+        "original_name": "Roja Ramani",
+        "popularity": 0.4233,
+        "profile_path": null,
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "694690c032b230feb18eb0ca",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584623,
+        "known_for_department": "Acting",
+        "name": "Rama Prabha",
+        "original_name": "Rama Prabha",
+        "popularity": 0.2979,
+        "profile_path": "/oLF9RSdde7KUTxurEciD7CeW54e.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "694690c4ee183a60c88cdcc7",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1423167,
+        "known_for_department": "Acting",
+        "name": "Vijayalalitha",
+        "original_name": "Vijayalalitha",
+        "popularity": 0.1753,
+        "profile_path": null,
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "694690d7c82dfba7ec8cdde3",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 4029785,
+        "known_for_department": "Acting",
+        "name": "Halam",
+        "original_name": "Halam",
+        "popularity": 0.1625,
+        "profile_path": "/yIgEeULWjiedZCK2X8sImV1pQ3x.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "694690e3bae8c36a4d8cdd3a",
+        "order": 12
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1208888,
+        "known_for_department": "Directing",
+        "name": "Chittajallu Srinivasa Rao",
+        "original_name": "Chittajallu Srinivasa Rao",
+        "popularity": 0.1118,
+        "profile_path": null,
+        "credit_id": "69469119cf7b67db108eb086",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3617470,
+        "known_for_department": "Writing",
+        "name": "Kosaraju Raghavaiah Chowdary",
+        "original_name": "Kosaraju Raghavaiah Chowdary",
+        "popularity": 0.0256,
+        "profile_path": null,
+        "credit_id": "694691b0c82dfba7ec8cddea",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1930492,
+        "known_for_department": "Writing",
+        "name": "Arudra",
+        "original_name": "Arudra",
+        "popularity": 0.1067,
+        "profile_path": null,
+        "credit_id": "694691ba4671fb7c99b1c336",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3617469,
+        "known_for_department": "Writing",
+        "name": "Dasarathi",
+        "original_name": "Dasarathi",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "694691c557d48dcef1b1c321",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3511456,
+        "known_for_department": "Writing",
+        "name": "C. Narayana Reddy",
+        "original_name": "C. Narayana Reddy",
+        "popularity": 0.0637,
+        "profile_path": null,
+        "credit_id": "694691ce3ac49418c4b1c1e7",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5714256,
+        "known_for_department": "Editing",
+        "name": "R. Hanumantha Rao",
+        "original_name": "R. Hanumantha Rao",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "694691e8d303a6bc278eafea",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 933605,
+        "known_for_department": "Sound",
+        "name": "K. Chakravarthy",
+        "original_name": "Chakravarthy",
+        "popularity": 0.1741,
+        "profile_path": null,
+        "credit_id": "694691f73714ad501c8cdcce",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1998883,
+        "known_for_department": "Sound",
+        "name": "P. Susheela",
+        "original_name": "P. Susheela",
+        "popularity": 0.0574,
+        "profile_path": "/k5UIA5ihxo9ACiVZAdts6r03PN3.jpg",
+        "credit_id": "694691ffc82dfba7ec8cddf4",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1872424,
+        "known_for_department": "Sound",
+        "name": "S. Janaki",
+        "original_name": "S. Janaki",
+        "popularity": 0.1323,
+        "profile_path": "/idhDokv4l7UCC34Zf8IdLg8e40W.jpg",
+        "credit_id": "6946920705478850e22fb751",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584585,
+        "known_for_department": "Sound",
+        "name": "S. P. Balasubramaniam",
+        "original_name": "S. P. Balasubramaniam",
+        "popularity": 0.4617,
+        "profile_path": "/vKcUYibvLFRPADiNwQtl27e1STy.jpg",
+        "credit_id": "6946921cf6ad527ab3154bdc",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1336545,
+        "known_for_department": "Sound",
+        "name": "L. R. Eswari",
+        "original_name": "L. R. Eswari",
+        "popularity": 0.0297,
+        "profile_path": "/nTyBiQeSbn4rSwI07FuJSf6PgyJ.jpg",
+        "credit_id": "6946922606cc792b2ffb1102",
+        "department": "Sound",
+        "job": "Playback Singer"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1200,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/vw6p37DBbsusbDY8pkeGjnyWcaV.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 800
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 852,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/hOZ9xkPGcLQ3D1KfJeappjHUrE5.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 568
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "{\"folded_name\"=>\"Telugu\", \"english_name\"=>\"Telugu\", \"iso_639_1\"=>\"te\", \"native_name\"=>\"Telugu\"}",
+            "note": "",
+            "release_date": "1974-06-01T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

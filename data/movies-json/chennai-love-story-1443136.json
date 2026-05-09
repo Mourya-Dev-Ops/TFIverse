@@ -1,0 +1,330 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1443136,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Chennai Love Story",
+  "overview": "Two young people navigate their first experience of love, dealing with its powerful emotions and obstacles while discovering the delicate nature of newfound romance.",
+  "popularity": 0.0674,
+  "poster_path": "/9BjK1Mh8fofyHNYZNMJ8oLhBXDw.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "",
+  "title": "Chennai Love Story",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2045437,
+        "known_for_department": "Acting",
+        "name": "Kiran Abbavaram",
+        "original_name": "Kiran Abbavaram",
+        "popularity": 2.981,
+        "profile_path": "/zzmj6hKSQCp9T8naWs01Fk4dfLk.jpg",
+        "cast_id": 1,
+        "character": "Steven Sankar",
+        "credit_id": "67c730887d01032752ac8ffe",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2934345,
+        "known_for_department": "Acting",
+        "name": "Sri Gouri Priya Reddy",
+        "original_name": "Sri Gouri Priya Reddy",
+        "popularity": 0.7184,
+        "profile_path": "/aLUBrLtig6XjNltUXRQyNXbTCiV.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "683d663d517cf91849d21967",
+        "order": 1
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1418729,
+        "known_for_department": "Directing",
+        "name": "Sai Rajesh Neelam",
+        "original_name": "Sai Rajesh Neelam",
+        "popularity": 0.049,
+        "profile_path": null,
+        "credit_id": "67c730b90bcafd0d3cf067ea",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1418729,
+        "known_for_department": "Directing",
+        "name": "Sai Rajesh Neelam",
+        "original_name": "Sai Rajesh Neelam",
+        "popularity": 0.049,
+        "profile_path": null,
+        "credit_id": "683d6650c12a13c466d218e7",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2045456,
+        "known_for_department": "Production",
+        "name": "Sriniwas Kumar Naidu",
+        "original_name": "Sriniwas Kumar Naidu",
+        "popularity": 0.1053,
+        "profile_path": null,
+        "credit_id": "683d6673b21389eba37f40bc",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3324333,
+        "known_for_department": "Camera",
+        "name": "Viswas Daniel",
+        "original_name": "Viswas Daniel",
+        "popularity": 0.0168,
+        "profile_path": null,
+        "credit_id": "6893b9d1ef104ce52207c229",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1652253,
+        "known_for_department": "Writing",
+        "name": "Anantha Sriram",
+        "original_name": "Anantha Sriram",
+        "popularity": 0.1721,
+        "profile_path": "/sAa5frxlT5gv7YtXGdPY9edh0mW.jpg",
+        "credit_id": "6893b9df16f584496607c21e",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3942511,
+        "known_for_department": "Art",
+        "name": "Bhaskar Mudavath",
+        "original_name": "Bhaskar Mudavath",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6893b9e899a069b6c907c22f",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2770904,
+        "known_for_department": "Editing",
+        "name": "Santhosh Kamireddy",
+        "original_name": "Santhosh Kamireddy",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6893b9f4386aad1df7c37dd7",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2099000,
+        "known_for_department": "Editing",
+        "name": "Pankaj Halder",
+        "original_name": "Pankaj Halder",
+        "popularity": 0.105,
+        "profile_path": null,
+        "credit_id": "6893ba0016f584496607c221",
+        "department": "Editing",
+        "job": "Colorist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5610572,
+        "known_for_department": "Production",
+        "name": "Vishala Datla",
+        "original_name": "Vishala Datla",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6893ba103ee737d8b092202e",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5610574,
+        "known_for_department": "Production",
+        "name": "Syam Prasad Meka",
+        "original_name": "Syam Prasad Meka",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6893ba1e08a8e46ddb922030",
+        "department": "Production",
+        "job": "Line Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2460399,
+        "known_for_department": "Production",
+        "name": "Ananth Kancherla",
+        "original_name": "Ananth Kancherla",
+        "popularity": 0.1947,
+        "profile_path": null,
+        "credit_id": "6893ba496e6d93da9999a5db",
+        "department": "Production",
+        "job": "Publicist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2149077,
+        "known_for_department": "Directing",
+        "name": "Lucky Bezawada",
+        "original_name": "Lucky Bezawada",
+        "popularity": 0.0168,
+        "profile_path": null,
+        "credit_id": "6893ba59a871f4e1f766e528",
+        "department": "Directing",
+        "job": "Co-Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2149070,
+        "known_for_department": "Writing",
+        "name": "Ravi Namburii",
+        "original_name": "Ravi Varma Namburi",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6893ba6bdbbdf2346d4d8ee1",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2149070,
+        "known_for_department": "Writing",
+        "name": "Ravi Namburii",
+        "original_name": "Ravi Varma Namburi",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6893ba71eb02e8b0bcc37dea",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 225317,
+        "known_for_department": "Sound",
+        "name": "Mani Sharma",
+        "original_name": "Mani Sharma",
+        "popularity": 0.2979,
+        "profile_path": "/99QZjwoHVgDxH6FJ5apNNaS0aAP.jpg",
+        "credit_id": "69cac1e8b66db6f5f963744d",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1350,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/9BjK1Mh8fofyHNYZNMJ8oLhBXDw.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 900
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1350,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/tZvbqhjDTfAZAbJq3NjGv53TngV.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 900
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1349,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/sMEGbLIOsgpu3WujQPpbA0BW9ne.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 899
+      }
+    ]
+  }
+}

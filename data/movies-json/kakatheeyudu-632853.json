@@ -1,0 +1,94 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 632853,
+  "imdb_id": "tt10651232",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Kakatheeyudu",
+  "overview": "Army man Surya(Nandamuri Tarakaratna) extorts money from deceitful bigshots and sets up an educational trust that provides free education for poor children. He gets murdered by his enemy Rudraraju(Vinod Kumar). Deva, brother of Surya, somehow manages to continue his brother's mission wherein he gets a face-off with Rudraraju. Would Deva face the same fate as Surya or would he succeed in his goal?",
+  "popularity": 0.0261,
+  "poster_path": "/3m20GFjdX5Tq1S0JnmqZof0BmsD.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2019-07-05",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Released",
+  "tagline": "",
+  "title": "Kakatheeyudu",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt10651232",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2019-07-05T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/3m20GFjdX5Tq1S0JnmqZof0BmsD.jpg",
+        "vote_average": 0,
+        "vote_count": 1,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.75,
+        "height": 1600,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/4rBEhAtcq8u0wdbVidyqshjT4Gw.jpg",
+        "vote_average": 0,
+        "vote_count": 1,
+        "width": 1200
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

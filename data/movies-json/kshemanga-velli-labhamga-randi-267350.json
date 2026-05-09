@@ -1,0 +1,250 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "homepage": "",
+  "id": 267350,
+  "imdb_id": "tt1575593",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "క్షేమంగా వెళ్ళి లాభంగా రండి",
+  "overview": "Three mechanics in a car company are wayward husbands. Their weakness lies in drinking and spending half of their salary on the unnecessary items. Their wives have a tough time running their houses with the meager money provided by their men. Their world is turned upside down by a couple who move in next door.",
+  "popularity": 0.3705,
+  "poster_path": "/7MFvDB4RBOipmVOVRwQ5Uf93J8y.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2000-02-04",
+  "revenue": 0,
+  "runtime": 172,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Kshemanga Velli Labhamga Randi",
+  "video": false,
+  "vote_average": 7.2,
+  "vote_count": 6,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1003981,
+        "known_for_department": "Acting",
+        "name": "Srikanth",
+        "original_name": "శ్రీకాంత్",
+        "popularity": 0.7734,
+        "profile_path": "/o10UQ9zvh9cOAUENybde25yrueV.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "535f9eab0e0a264fe500808b",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.0993,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "535f9ecc0e0a264fdb007a80",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 545595,
+        "known_for_department": "Acting",
+        "name": "Rajendra Prasad",
+        "original_name": "Rajendra Prasad",
+        "popularity": 0.7246,
+        "profile_path": "/zh6QJ85g5KbpkjL5fgqlOGddn5C.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "535f9edf0e0a264fd5007d52",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584134,
+        "known_for_department": "Acting",
+        "name": "Roja Selvamani",
+        "original_name": "Roja Selvamani",
+        "popularity": 0.3732,
+        "profile_path": "/vAPBxryYv76xjY3Ra7NavnFpUCy.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "535f9ef40e0a264fe1007c3a",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 141701,
+        "known_for_department": "Acting",
+        "name": "Ramya Krishnan",
+        "original_name": "Ramya Krishnan",
+        "popularity": 2.2012,
+        "profile_path": "/kZvSnBTgsMgTsUE5o1yFQnDR3dl.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "535f9efc0e0a264fe5008090",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 89153,
+        "known_for_department": "Acting",
+        "name": "Prakash Raj",
+        "original_name": "Prakash Raj",
+        "popularity": 2.6506,
+        "profile_path": "/dJvFZOXmZdkYCOUcKTXQAhBcAoH.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "535f9f050e0a264fd8007d5d",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 435722,
+        "known_for_department": "Acting",
+        "name": "Kovai Sarala",
+        "original_name": "Kovai Sarala",
+        "popularity": 0.7882,
+        "profile_path": "/rujbfPg6rp9DOphQZYUjll7KNPz.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "535f9f180e0a264fd8007d60",
+        "order": 6
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1066262,
+        "known_for_department": "Directing",
+        "name": "Raja Vannem Reddy",
+        "original_name": "Raja Vannem Reddy",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "535f9e1e0e0a264fdb007a6e",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1066262,
+        "known_for_department": "Directing",
+        "name": "Raja Vannem Reddy",
+        "original_name": "Raja Vannem Reddy",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "535f9e820e0a264fd8007d51",
+        "department": "Sound",
+        "job": "Music"
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Kshemanga Velli Labanga Randi Telugu Full Movie with English Subtitles | Srikanth | Aditya Movies",
+        "key": "L7rTthS5_fg",
+        "site": "YouTube",
+        "size": 720,
+        "type": "Featurette",
+        "official": false,
+        "id": "535f9d970e0a264feb007b0f",
+        "published_at": "2012-07-02T08:09:55.000Z"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt1575593",
+    "wikidata_id": "Q12994959",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 18035,
+        "name": "family"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2000-02-04T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.75,
+        "height": 1600,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/7MFvDB4RBOipmVOVRwQ5Uf93J8y.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1200
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Kshemamga Velli Labhamga Randi",
+        "type": ""
+      }
+    ]
+  }
+}

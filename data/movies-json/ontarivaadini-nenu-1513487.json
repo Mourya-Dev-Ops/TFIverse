@@ -1,0 +1,171 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1513487,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Ontarivaadini Nenu",
+  "overview": "A tale of a loner, who tries to find his solace in humour",
+  "popularity": 0.0973,
+  "poster_path": "/f0R9k7tb4sa9hipKZSggfVD9Va8.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2025-06-13",
+  "revenue": 0,
+  "runtime": 14,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Ontarivaadini Nenu",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5158328,
+        "known_for_department": "Acting",
+        "name": "Vikhyath",
+        "original_name": "Vikhyath",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 1,
+        "character": "Kaashyap Morapaati",
+        "credit_id": "6875ebf07cc282d0847330b5",
+        "order": 0
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5158328,
+        "known_for_department": "Acting",
+        "name": "Vikhyath",
+        "original_name": "Vikhyath",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6875ec2a503b2c19cb637309",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5158328,
+        "known_for_department": "Acting",
+        "name": "Vikhyath",
+        "original_name": "Vikhyath",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6875ec47a5b3643a5fd15fbf",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5158328,
+        "known_for_department": "Acting",
+        "name": "Vikhyath",
+        "original_name": "Vikhyath",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6875ec5e93a3f999bb73308e",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5158331,
+        "known_for_department": "Editing",
+        "name": "Srivatsava",
+        "original_name": "Srivatsava",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6875ec77578ad18db5d1600e",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5565051,
+        "known_for_department": "Art",
+        "name": "Sreeja",
+        "original_name": "Sreeja",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6875ed0482975c53237c5285",
+        "department": "Art",
+        "job": "Title Designer"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-06-13T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1024,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/f0R9k7tb4sa9hipKZSggfVD9Va8.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 683
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

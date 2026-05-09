@@ -1,0 +1,99 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 307388,
+  "imdb_id": "tt0256648",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "భలే అమ్మాయిలు",
+  "overview": "Rao cheats Girija. So her sister Saroja decides to teach him a lesson. In this process, she falls in love with Anand.",
+  "popularity": 0.0789,
+  "poster_path": "/wGbsDurLsqUD7Zyo0C4OHvkMX1H.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1957-01-01",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Released",
+  "tagline": "",
+  "title": "Bhale Ammayilu",
+  "video": false,
+  "vote_average": 10,
+  "vote_count": 1,
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "external_ids": {
+    "imdb_id": "tt0256648",
+    "wikidata_id": "Q16342384",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1957-01-01T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "videos": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 864,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/wGbsDurLsqUD7Zyo0C4OHvkMX1H.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 576
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1063,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/bxjfRqeJEXIpXpZOaEO01TTvAbK.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 709
+      }
+    ]
+  }
+}

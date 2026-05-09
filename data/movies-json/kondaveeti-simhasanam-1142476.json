@@ -1,0 +1,479 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "homepage": "",
+  "id": 1142476,
+  "imdb_id": "tt0280845",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "కొండవీటి సింహాసనం",
+  "overview": "Kondaveeti Simhasanam is a 2002 Indian Telugu-language action drama film directed by Dasari Narayana Rao",
+  "popularity": 0.3632,
+  "poster_path": "/gbS8ibHheD8lwUHgnVZRocXgQLu.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2002-02-08",
+  "revenue": 0,
+  "runtime": 154,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Kondaveeti Simhasanam",
+  "video": false,
+  "vote_average": 6.5,
+  "vote_count": 2,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585268,
+        "known_for_department": "Acting",
+        "name": "Mohan Babu",
+        "original_name": "Mohan Babu",
+        "popularity": 0.5568,
+        "profile_path": "/zwqcXtnk0ju0nhuhvZXSLL2nLIy.jpg",
+        "cast_id": 1,
+        "character": "Satti",
+        "credit_id": "649167b3c2ff3d0139afcfce",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 288587,
+        "known_for_department": "Acting",
+        "name": "Soundarya",
+        "original_name": "Soundarya",
+        "popularity": 0.3989,
+        "profile_path": "/pqACucRtWoz3mwhPeSLa9OATilN.jpg",
+        "cast_id": 2,
+        "character": "Chitti",
+        "credit_id": "649167c3559d2200ff128182",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335262,
+        "known_for_department": "Directing",
+        "name": "Dasari Narayana Rao",
+        "original_name": "Dasari Narayana Rao",
+        "popularity": 0.5231,
+        "profile_path": "/y45ZAkHZvsuRbHMoeBx9zIF4ohT.jpg",
+        "cast_id": 3,
+        "character": "Ramachandra Naidu",
+        "credit_id": "649167d82f8d090100abf39d",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 585421,
+        "known_for_department": "Acting",
+        "name": "Deepti Bhatnagar",
+        "original_name": "Deepti Bhatnagar",
+        "popularity": 0.2647,
+        "profile_path": "/7sArSiSE5vW0wP3Hv5kXhCU87do.jpg",
+        "cast_id": 5,
+        "character": "Rani",
+        "credit_id": "6491682e263462012d4bbfc8",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 585400,
+        "known_for_department": "Acting",
+        "name": "Laya",
+        "original_name": "Laya",
+        "popularity": 0.5275,
+        "profile_path": "/uRj5rqDmmKHtNQLneMzEpaX2dcD.jpg",
+        "cast_id": 6,
+        "character": "Varala",
+        "credit_id": "6491683742bf010101c03f31",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3662471,
+        "known_for_department": "Acting",
+        "name": "Udaya Bhanu",
+        "original_name": "Udaya Bhanu",
+        "popularity": 0.0286,
+        "profile_path": null,
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "64916854263462014e599c72",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 583959,
+        "known_for_department": "Acting",
+        "name": "Mumtaj",
+        "original_name": "Mumtaj",
+        "popularity": 0.2999,
+        "profile_path": "/nqigGGdVs6nLzAimUeq2uUf2nTs.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "64916862c2ff3d00c59ba96d",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584609,
+        "known_for_department": "Acting",
+        "name": "Jayachitra",
+        "original_name": "Jayachitra",
+        "popularity": 0.1433,
+        "profile_path": null,
+        "cast_id": 9,
+        "character": "Nagamani",
+        "credit_id": "64916885559d2200e207e76e",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 141695,
+        "known_for_department": "Acting",
+        "name": "Kota Srinivasa Rao",
+        "original_name": "Kota Srinivasa Rao",
+        "popularity": 0.6862,
+        "profile_path": "/iEJprOPpeLhnyxBu2KdiJtw5Adb.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "6491689126346200ca1bb36c",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 560027,
+        "known_for_department": "Acting",
+        "name": "Ambika",
+        "original_name": "Ambika",
+        "popularity": 0.4828,
+        "profile_path": "/ef3yqRwHpMcsdA9eygCRjjK72f6.jpg",
+        "cast_id": 16,
+        "character": "",
+        "credit_id": "6946c511ea4043936f2fb782",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1107228,
+        "known_for_department": "Acting",
+        "name": "Annapoorna",
+        "original_name": "Annapoorna",
+        "popularity": 0.4174,
+        "profile_path": "/8yFs4CeF7SoiW5j0BTtZXP2jZ9H.jpg",
+        "cast_id": 17,
+        "character": "",
+        "credit_id": "6946c5181869be1085072be3",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1341487,
+        "known_for_department": "Acting",
+        "name": "Telangana Shakuntala",
+        "original_name": "Telangana Sakuntala",
+        "popularity": 0.402,
+        "profile_path": "/yOAdaJf5q231iiNLvJEEDXWRnE5.jpg",
+        "cast_id": 18,
+        "character": "",
+        "credit_id": "6946c520d6fb1811b07ab8ae",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1208884,
+        "known_for_department": "Acting",
+        "name": "Kanta Rao",
+        "original_name": "Kanta Rao",
+        "popularity": 0.2123,
+        "profile_path": "/75sR0b4eTPI1VLoHOeuRO5pPCDj.jpg",
+        "cast_id": 19,
+        "character": "",
+        "credit_id": "6946c545d36bff9d442fb9c4",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1314931,
+        "known_for_department": "Acting",
+        "name": "Narra Venkateswara Rao",
+        "original_name": "Narra Venkateswara Rao",
+        "popularity": 0.2077,
+        "profile_path": "/dhpd7PAY06hhHDDOEsLIUFFTMQZ.jpg",
+        "cast_id": 20,
+        "character": "",
+        "credit_id": "6946c54de5964a61ccb1c292",
+        "order": 13
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2317872,
+        "known_for_department": "Acting",
+        "name": "P. J. Sarma",
+        "original_name": "P. J. Sarma",
+        "popularity": 0.1106,
+        "profile_path": "/zHvUmphRS54ETGzEDpPEkYl225V.jpg",
+        "cast_id": 21,
+        "character": "",
+        "credit_id": "6946c55302ba77b2d78cdeb5",
+        "order": 14
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2026457,
+        "known_for_department": "Acting",
+        "name": "Mada Venkateswara Rao",
+        "original_name": "Mada Venkateswara Rao",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "cast_id": 22,
+        "character": "",
+        "credit_id": "6946c564fd335acbc8b1c2de",
+        "order": 15
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335296,
+        "known_for_department": "Acting",
+        "name": "Suthi Velu",
+        "original_name": "Suthi Velu",
+        "popularity": 0.3068,
+        "profile_path": null,
+        "cast_id": 23,
+        "character": "",
+        "credit_id": "6946c569c82dfba7ec8cdec8",
+        "order": 16
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1662036,
+        "known_for_department": "Acting",
+        "name": "Chitti Babu",
+        "original_name": "Chitti Babu",
+        "popularity": 0.1104,
+        "profile_path": null,
+        "cast_id": 24,
+        "character": "",
+        "credit_id": "6946c57924937a5336154e25",
+        "order": 17
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1661313,
+        "known_for_department": "Acting",
+        "name": "Jenny",
+        "original_name": "Jenny",
+        "popularity": 0.2107,
+        "profile_path": "/fejSGfZwZtar4pES1rDMg9SYHlG.jpg",
+        "cast_id": 25,
+        "character": "",
+        "credit_id": "6946c58d89e2aa8f55072d6e",
+        "order": 18
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584834,
+        "known_for_department": "Acting",
+        "name": "Ranganath",
+        "original_name": "Ranganath",
+        "popularity": 0.207,
+        "profile_path": null,
+        "cast_id": 26,
+        "character": "Ramachandraiah's father",
+        "credit_id": "6946c5991f1f9300167ab8b2",
+        "order": 19
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2619014,
+        "known_for_department": "Acting",
+        "name": "Raghunatha Reddy",
+        "original_name": "Raghunatha Reddy",
+        "popularity": 0.0549,
+        "profile_path": null,
+        "cast_id": 27,
+        "character": "",
+        "credit_id": "6946c5bce41379f239072c1c",
+        "order": 20
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1661045,
+        "known_for_department": "Acting",
+        "name": "Gautam Raju",
+        "original_name": "Gautam Raju",
+        "popularity": 0.2761,
+        "profile_path": null,
+        "cast_id": 28,
+        "character": "",
+        "credit_id": "6946c5c3fd335acbc8b1c2e4",
+        "order": 21
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335262,
+        "known_for_department": "Directing",
+        "name": "Dasari Narayana Rao",
+        "original_name": "Dasari Narayana Rao",
+        "popularity": 0.5231,
+        "profile_path": "/y45ZAkHZvsuRbHMoeBx9zIF4ohT.jpg",
+        "credit_id": "649168a4c2ff3d0139afd046",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335262,
+        "known_for_department": "Directing",
+        "name": "Dasari Narayana Rao",
+        "original_name": "Dasari Narayana Rao",
+        "popularity": 0.5231,
+        "profile_path": "/y45ZAkHZvsuRbHMoeBx9zIF4ohT.jpg",
+        "credit_id": "6946c47b1869be1085072bd7",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335262,
+        "known_for_department": "Directing",
+        "name": "Dasari Narayana Rao",
+        "original_name": "Dasari Narayana Rao",
+        "popularity": 0.5231,
+        "profile_path": "/y45ZAkHZvsuRbHMoeBx9zIF4ohT.jpg",
+        "credit_id": "6946c48e6d621584d07ab9bb",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1660496,
+        "known_for_department": "Camera",
+        "name": "V.S.R. Swamy",
+        "original_name": "V.S.R. Swamy",
+        "popularity": 0.0579,
+        "profile_path": null,
+        "credit_id": "6946c49d46f03006098eb146",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 552984,
+        "known_for_department": "Sound",
+        "name": "Saluri Koteswara Rao",
+        "original_name": "Saluri Koteswara Rao",
+        "popularity": 0.1762,
+        "profile_path": "/mihUu99EOf6qLCM3jlMtlwgLqbJ.jpg",
+        "credit_id": "6946c4a81989c6c4278cdd19",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "external_ids": {
+    "imdb_id": "tt0280845",
+    "wikidata_id": "Q112567599",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2002-02-08T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 900,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/gbS8ibHheD8lwUHgnVZRocXgQLu.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 600
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "videos": {
+    "results": []
+  }
+}

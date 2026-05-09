@@ -1,0 +1,176 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "homepage": "",
+  "id": 1494621,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "#NBK111",
+  "overview": "",
+  "popularity": 0.1246,
+  "poster_path": "/xoKbiIaxJNg2VTJWkJBj2vYYgvH.jpg",
+  "production_companies": [
+    {
+      "id": 187703,
+      "logo_path": "/tIMfcL48a2d2Hhg3mldmEVmhVgu.png",
+      "name": "Vriddhi Cinemas",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "",
+  "title": "#NBK111",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 150529,
+        "known_for_department": "Acting",
+        "name": "Nandamuri Balakrishna",
+        "original_name": "Nandamuri Balakrishna",
+        "popularity": 1.1705,
+        "profile_path": "/vOqW5ByakRQOUOn6ipupgioxsM9.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "68453bc34e83f7c09bde6b33",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 91548,
+        "known_for_department": "Acting",
+        "name": "Nayanthara",
+        "original_name": "Nayanthara",
+        "popularity": 1.948,
+        "profile_path": "/5KubBeb2DkNXoU4lzzBdWzqzzlM.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "690755b3272237eafe4c8763",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1906653,
+        "known_for_department": "Acting",
+        "name": "Dimple Hayathi",
+        "original_name": "Dimple Hayathi",
+        "popularity": 0.4892,
+        "profile_path": "/6vreBkqWxRX5zaJSY2GKBPTFxES.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "69c7f84ebb7e4e5a11e3bd73",
+        "order": 2
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 146938,
+        "known_for_department": "Directing",
+        "name": "Gopichand Malineni",
+        "original_name": "Gopichand Malineni",
+        "popularity": 0.2954,
+        "profile_path": null,
+        "credit_id": "68453bd65c84d6d731fd5927",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3815651,
+        "known_for_department": "Production",
+        "name": "Venkata Satish Kilaru",
+        "original_name": "Venkata Satish Kilaru",
+        "popularity": 0.0398,
+        "profile_path": "/yI2R6x9RMl5c97Q2xaUf78go3HU.jpg",
+        "credit_id": "68453c113b2f6815f9de6a8e",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1466575,
+        "known_for_department": "Camera",
+        "name": "Arvind Kashyap",
+        "original_name": "Arvind Kashyap",
+        "popularity": 0.114,
+        "profile_path": null,
+        "credit_id": "68f23035aff425c01fb23142",
+        "department": "Camera",
+        "job": "Director of Photography"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.683,
+        "height": 2048,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/xoKbiIaxJNg2VTJWkJBj2vYYgvH.jpg",
+        "vote_average": 0,
+        "vote_count": 1,
+        "width": 1398
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

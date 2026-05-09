@@ -1,0 +1,208 @@
+{
+  "adult": false,
+  "backdrop_path": "/5zMQ0pdSSI6CSgNC0uE3U38XuCr.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 279360,
+  "imdb_id": "tt0246169",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Priya",
+  "overview": "Priya is romance based movie in which, the story revolves around radhika, who is only daughter of a rich industrialist. Chandramohan who is unemployed for long time gets into a small fight with radhika and later she selects him as general manager of her company. Chandramohan develops love towards her and expresses it and when both are in love, her father doesn’t like it and seperate them by creating a misunderstanding between them. Her father plans to get her married with Chiranjeevi, who is also rich but later she realises that he’s a sad love story behind him.",
+  "popularity": 0.2372,
+  "poster_path": "/7e9TD15jexu0MKroUbKkgF8XZOc.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1981-10-23",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Priya",
+  "video": false,
+  "vote_average": 8,
+  "vote_count": 1,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 147079,
+        "known_for_department": "Acting",
+        "name": "Chiranjeevi",
+        "original_name": "Chiranjeevi",
+        "popularity": 0.7305,
+        "profile_path": "/jRCxnhftb7NprH92cdfah8KoAHg.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "53b0d5e0c3a3682eea005aeb",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 562177,
+        "known_for_department": "Acting",
+        "name": "Radikaa Sarathkumar",
+        "original_name": "Radhika Sarathkumar",
+        "popularity": 5.5182,
+        "profile_path": "/kEKzT8HAJw8lfFUtWWd0SoQ9kC9.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "53b0d5e2c3a3682edf0057c8",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586627,
+        "known_for_department": "Acting",
+        "name": "Chandramohan",
+        "original_name": "Chandramohan",
+        "popularity": 0.7185,
+        "profile_path": "/pXkbPFie2pOGgc9cd84BUz0OP4A.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "53b0d5e3c3a3682ee2005d84",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1701119,
+        "known_for_department": "Acting",
+        "name": "Swapna",
+        "original_name": "Swapna",
+        "popularity": 0.2295,
+        "profile_path": "/qKSqfHhLHNB99cDBEjLvOoEVbrh.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "60242ff795c0af0040546862",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335751,
+        "known_for_department": "Directing",
+        "name": "S. P. Chittibabu",
+        "original_name": "S. P. Chittibabu",
+        "popularity": 0.0673,
+        "profile_path": null,
+        "credit_id": "53b0d5d40e0a265980007285",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 933605,
+        "known_for_department": "Sound",
+        "name": "K. Chakravarthy",
+        "original_name": "Chakravarthy",
+        "popularity": 0.1305,
+        "profile_path": null,
+        "credit_id": "53b0d5d6c3a3682ee2005d7c",
+        "department": "Sound",
+        "job": "Music"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1335752,
+        "known_for_department": "Production",
+        "name": "M V H Raippa Raju",
+        "original_name": "M V H Raippa Raju",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "53b0d5de0e0a26597500732d",
+        "department": "Production",
+        "job": "Producer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt0246169",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/5zMQ0pdSSI6CSgNC0uE3U38XuCr.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/7e9TD15jexu0MKroUbKkgF8XZOc.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1981-10-23T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

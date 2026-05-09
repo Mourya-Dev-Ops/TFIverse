@@ -1,0 +1,611 @@
+{
+  "adult": false,
+  "backdrop_path": "/yiY4kqZo7hHYoE7TTnUvY71Dbmm.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1280611,
+  "imdb_id": "tt28019966",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "పరధ",
+  "overview": "A veiled village woman's life changes when city visitors challenge her traditions. As she questions customs and investigates a curse, rumors of Sati emerge, leading her to confront societal norms.",
+  "popularity": 2.3948,
+  "poster_path": "/nCo9QiSaW9KziUCMip6rWyZCgqK.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2025-08-22",
+  "revenue": 0,
+  "runtime": 142,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "In the name of Love",
+  "title": "Paradha",
+  "video": false,
+  "vote_average": 5.7,
+  "vote_count": 3,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1470724,
+        "known_for_department": "Acting",
+        "name": "Anupama Parameswaran",
+        "original_name": "Anupama Parameswaran",
+        "popularity": 0.9966,
+        "profile_path": "/iA8NAbwIKTbA8fKTNtXsAiBcC4W.jpg",
+        "cast_id": 1,
+        "character": "Subbalakshmi \"Subbu\"",
+        "credit_id": "662bd1a5e16e5a011fe78281",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1499301,
+        "known_for_department": "Acting",
+        "name": "Darshana Rajendran",
+        "original_name": "Darshana Rajendran",
+        "popularity": 9.9583,
+        "profile_path": "/avQPUIWTjJmsWhKTXGeGJs6jUpB.jpg",
+        "cast_id": 2,
+        "character": "Amishta \"Ami\"",
+        "credit_id": "662bd1af501cf2011cb3b62d",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1052854,
+        "known_for_department": "Acting",
+        "name": "Sangeetha Krish",
+        "original_name": "Sangeetha Krish",
+        "popularity": 1.0861,
+        "profile_path": "/s0jx36aN50nO2eFOlsqJzS9RoAl.jpg",
+        "cast_id": 3,
+        "character": "Rathnamma",
+        "credit_id": "662bd1bc8566d201207eed37",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3089946,
+        "known_for_department": "Acting",
+        "name": "Rag Mayur",
+        "original_name": "Rag Mayur",
+        "popularity": 0.1577,
+        "profile_path": "/qzXA7j2XQnWfnkakJoCKPbn0PWI.jpg",
+        "cast_id": 15,
+        "character": "Rajesh",
+        "credit_id": "66c1c06dcc8c54efb51a8930",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 545595,
+        "known_for_department": "Acting",
+        "name": "Rajendra Prasad",
+        "original_name": "Rajendra Prasad",
+        "popularity": 0.6529,
+        "profile_path": "/zh6QJ85g5KbpkjL5fgqlOGddn5C.jpg",
+        "cast_id": 19,
+        "character": "Krishna",
+        "credit_id": "68c9370407a07270db0c128f",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 215912,
+        "known_for_department": "Acting",
+        "name": "Harsha Vardhan",
+        "original_name": "Harshavardhan",
+        "popularity": 0.7969,
+        "profile_path": "/A6mdUVQBu565oz20DzlxjGUWIZr.jpg",
+        "cast_id": 20,
+        "character": "Madhav",
+        "credit_id": "68da8acdf33c7790af530a1c",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 120953,
+        "known_for_department": "Directing",
+        "name": "Gautham Vasudev Menon",
+        "original_name": "கௌதம் மேனன்",
+        "popularity": 0.7106,
+        "profile_path": "/qOFycWPpr3Hi4kVXKWnTTKCAnGk.jpg",
+        "cast_id": 21,
+        "character": "The Photographer",
+        "credit_id": "68da8d9f138454397fc7699c",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3355065,
+        "known_for_department": "Acting",
+        "name": "Gnaneswari Kandregula",
+        "original_name": "Gnaneswari Kandregula",
+        "popularity": 0.2085,
+        "profile_path": "/u72AFHzwqtRLPKh2gjXyMgviQqf.jpg",
+        "cast_id": 22,
+        "character": "Officer",
+        "credit_id": "68da950b55a3afdd632ded15",
+        "order": 7
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3073399,
+        "known_for_department": "Directing",
+        "name": "Praveen Kandregula",
+        "original_name": "Praveen Kandregula",
+        "popularity": 0.0536,
+        "profile_path": null,
+        "credit_id": "662bd1cf01b1ca011de42aa6",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2527503,
+        "known_for_department": "Production",
+        "name": "Vijay Donkada",
+        "original_name": "Vijay Donkada",
+        "popularity": 0.0297,
+        "profile_path": null,
+        "credit_id": "662bd1ddb54002011d046adb",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1198764,
+        "known_for_department": "Sound",
+        "name": "Gopi Sundar",
+        "original_name": "Gopi Sundar",
+        "popularity": 0.4305,
+        "profile_path": "/wfMEDekbAN0gOxvSTgSTGBfCN6b.jpg",
+        "credit_id": "662bd1fa53866e011ef1310c",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4490658,
+        "known_for_department": "Crew",
+        "name": "Rohit Koppu",
+        "original_name": "Rohit Koppu",
+        "popularity": 0.0322,
+        "profile_path": null,
+        "credit_id": "662bd20bb54002011b0466a5",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4676701,
+        "known_for_department": "Writing",
+        "name": "Poojitha Sreekanti",
+        "original_name": "Poojitha Sreekanti",
+        "popularity": 0.0289,
+        "profile_path": null,
+        "credit_id": "662bd21a2fe2fa011c971998",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4676702,
+        "known_for_department": "Writing",
+        "name": "Prahaas Boppudi",
+        "original_name": "Prahaas Boppudi",
+        "popularity": 0.0331,
+        "profile_path": null,
+        "credit_id": "662bd223c1e56e011ff1d41d",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4676703,
+        "known_for_department": "Camera",
+        "name": "Mridul Sujit Sen",
+        "original_name": "Mridul Sujit Sen",
+        "popularity": 0.0289,
+        "profile_path": null,
+        "credit_id": "662bd23001b1ca011be428e9",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1105605,
+        "known_for_department": "Editing",
+        "name": "Dharmendra Kakarala",
+        "original_name": "Dharmendra Kakarala",
+        "popularity": 0.1348,
+        "profile_path": null,
+        "credit_id": "662bd23cc1ffbd011c6c3481",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1875040,
+        "known_for_department": "Sound",
+        "name": "Varun Venugopal",
+        "original_name": "Varun Venugopal",
+        "popularity": 0.1076,
+        "profile_path": null,
+        "credit_id": "662bd2c93d7454011ed251ce",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4676710,
+        "known_for_department": "Art",
+        "name": "Srinivas Kalinga",
+        "original_name": "Srinivas Kalinga",
+        "popularity": 0.0752,
+        "profile_path": null,
+        "credit_id": "662bd2dee8d0b4011d118fd7",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3301068,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Poojita Tadikonda",
+        "original_name": "Poojita Tadikonda",
+        "popularity": 0.0582,
+        "profile_path": null,
+        "credit_id": "662bd2ea6e0d72011e1fc5e4",
+        "department": "Costume & Make-Up",
+        "job": "Costume Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2279501,
+        "known_for_department": "Writing",
+        "name": "Vanamali",
+        "original_name": "Vanamali",
+        "popularity": 0.0874,
+        "profile_path": null,
+        "credit_id": "6790de8fa3c7d79472dff85c",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2446685,
+        "known_for_department": "Editing",
+        "name": "SRIK Varier",
+        "original_name": "SRIK Varier",
+        "popularity": 0.2842,
+        "profile_path": null,
+        "credit_id": "6790dee7550e6fc3cddffca7",
+        "department": "Editing",
+        "job": "Colorist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2875201,
+        "known_for_department": "Sound",
+        "name": "Nagarjuna Thallapalli",
+        "original_name": "Nagarjuna Thallapalli",
+        "popularity": 0.1176,
+        "profile_path": null,
+        "credit_id": "6790df06550e6fc3cddffce0",
+        "department": "Sound",
+        "job": "Sound Designer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt28019966",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-08-22T00:00:00.000Z",
+            "type": 3
+          },
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-09-11T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/yiY4kqZo7hHYoE7TTnUvY71Dbmm.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/omj0vTPDigk9A5e7a1NfU2sPGPI.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1440,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/ltaCK82i7UEpNv3hzL4DA39rZ5C.jpg",
+        "vote_average": 0,
+        "vote_count": 1,
+        "width": 2560
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1440,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/1N4mw5ZIQ1SE2AArN7ftRQJILUM.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2560
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/ycZ10slZpdiCi4a0KrhNFROCm3w.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/x3vSJ08erhDKw5zNuQWEvxWK7n1.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/fHAbtgbVOZqfBuDA4GI06anvek7.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/sdlp3EQKuOQf3ofsgJwa0nsp5ul.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/xA2cjOq4dDtZ7gT5zjqB2QxroGf.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/9gYXEKs5UJlkO9spHQNPden7wr6.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/qEpnee2AKMSERzlEqw1Aj0GenPT.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [
+      {
+        "aspect_ratio": 3.409,
+        "height": 286,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/9y1z0CZ7NckGFk7MHLQVICimpgM.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 975
+      },
+      {
+        "aspect_ratio": 2.711,
+        "height": 256,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/dyR1EkwtKQZQuceS79P3NtVSH8z.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 694
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1200,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/nCo9QiSaW9KziUCMip6rWyZCgqK.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 800
+      },
+      {
+        "aspect_ratio": 0.671,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/wOOxDIhZCUmWkEPxBajQwmKVm8l.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1375
+      },
+      {
+        "aspect_ratio": 0.671,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "ta",
+        "file_path": "/aU7gf908dB5qBXmVu6RJgcnmcxt.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1375
+      },
+      {
+        "aspect_ratio": 0.668,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/sotWZk8rfLCmfNspGz2qfRXBGwL.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1368
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1536,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/q76oPGTPNb8W0kUWOUhHT9gF75S.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1024
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/ooz93tdt1Hc784khoy7xjKmpnjn.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/1yWRYuduYzTOkNyTXnwQfFbAdMi.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/7uh56QdOqdez186cavYAM0uFAVf.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/gXcBAGNXzfxOuB3sM0guJx3XKyH.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "adult": false,
+  "backdrop_path": "/3u5jO0imaeZAIpjgxMrVYs1ZP7c.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1485316,
+  "imdb_id": "tt35682880",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "The Devil's Chair",
+  "overview": "The Devil's Chair is about a modern couple in a live-in relationship. After a series of reckless bets, Vikram loses not only his job but also his financial stability. Desperate and vulnerable, he stumbles upon a mysterious antique chair - home to Pundaksha, a sinister spirit from another realm. Vikram falls deeper into Pundaksha's trap. Will Ghost take control over him? Watch now!",
+  "popularity": 0.0457,
+  "poster_path": "/sV4kaBYqOr4CqOBlNDyCJ0mE5ZB.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2025-02-21",
+  "revenue": 0,
+  "runtime": 102,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Released",
+  "tagline": "",
+  "title": "The Devil's Chair",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2025-02-21T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt35682880",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/3u5jO0imaeZAIpjgxMrVYs1ZP7c.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/wcuuCF7NZDLbbyNR8xdjPyJoCUZ.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [
+      {
+        "aspect_ratio": 1.458,
+        "height": 561,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/jHsTz6yxrZERZBwlRmfHPCbPpi3.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 818
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/sV4kaBYqOr4CqOBlNDyCJ0mE5ZB.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1350,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/vUpPzc26jr0zKVy50IADgsMy05v.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 900
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2381326,
+        "known_for_department": "Acting",
+        "name": "Adhire Abhi",
+        "original_name": "Adhire Abhi",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "682ebfc61200103fb76cd616",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5454252,
+        "known_for_department": "Acting",
+        "name": "Swathi Mandal",
+        "original_name": "Swathi Mandal",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "682ebfd06010d287b27ba39d",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5454253,
+        "known_for_department": "Acting",
+        "name": "Chathrapathi Shekar",
+        "original_name": "Chathrapathi Shekar",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "682ebfd8fb3a984938a8d12c",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5454254,
+        "known_for_department": "Acting",
+        "name": "Chandra Subbagari",
+        "original_name": "Chandra Subbagari",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "682ebfe29fb490b7b7a8d192",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5454255,
+        "known_for_department": "Acting",
+        "name": "Venkat Duggireddy USA",
+        "original_name": "Venkat Duggireddy USA",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "682ebfebd8044b6ba96cd63a",
+        "order": 4
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5454251,
+        "known_for_department": "Directing",
+        "name": "Ganga Saptasikhara",
+        "original_name": "Ganga Saptasikhara",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "682ebfb0fa40c3db9b3af665",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  }
+}

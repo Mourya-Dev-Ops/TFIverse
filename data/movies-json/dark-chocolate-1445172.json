@@ -1,0 +1,291 @@
+{
+  "adult": false,
+  "backdrop_path": "/aIXcdgeixGboexeao03FWslhqUG.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "homepage": "",
+  "id": 1445172,
+  "imdb_id": "tt35279341",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "డార్క్ చాక్లెట్",
+  "overview": "After a string of failures, former star Yagna faces mockery from rival Dinesh through PR and fake accounts. Banned from Film Chamber for his attitude, can the \"one-hit wonder\" make a comeback?",
+  "popularity": 0.12,
+  "poster_path": "/gjBtTayPIEF52LFNODsGyEmkpOf.jpg",
+  "production_companies": [
+    {
+      "id": 181542,
+      "logo_path": null,
+      "name": "Spirit Media",
+      "origin_country": "IN"
+    },
+    {
+      "id": 277362,
+      "logo_path": null,
+      "name": "Waltair Productions",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2026-02-14",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    },
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Dark Chocolate",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1975894,
+        "known_for_department": "Acting",
+        "name": "Vishwadev Rachakonda",
+        "original_name": "Vishwadev Rachakonda",
+        "popularity": 0.137,
+        "profile_path": null,
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "67cc78599a3f7013fa4f8c07",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 544987,
+        "known_for_department": "Acting",
+        "name": "Bindu Madhavi",
+        "original_name": "Bindu Madhavi",
+        "popularity": 0.475,
+        "profile_path": "/k74x48kELHXy5JxRkrJmO3t2Ndu.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "67cc7863cb18486ea15b85c3",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1289131,
+        "known_for_department": "Acting",
+        "name": "Rakesh Rachakonda",
+        "original_name": "Rakesh Rachakonda",
+        "popularity": 0.0505,
+        "profile_path": null,
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "68efefb713b25aa97f40d053",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3976754,
+        "known_for_department": "Acting",
+        "name": "Ramesh Konambhotla",
+        "original_name": "Ramesh Konambhotla",
+        "popularity": 0.0239,
+        "profile_path": null,
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "68efefcb7d98623cb340cee8",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1975894,
+        "known_for_department": "Acting",
+        "name": "Vishwadev Rachakonda",
+        "original_name": "Vishwadev Rachakonda",
+        "popularity": 0.137,
+        "profile_path": null,
+        "credit_id": "67cc7875ed64be9833f58356",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 215910,
+        "known_for_department": "Acting",
+        "name": "Rana Daggubati",
+        "original_name": "Rana Daggubati",
+        "popularity": 1.1535,
+        "profile_path": "/dCQE1CoWWc6RoXUTxOKjAXO8KDr.jpg",
+        "credit_id": "67cc7883ed64be9833f58367",
+        "department": "Crew",
+        "job": "Presenter"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1289142,
+        "known_for_department": "Acting",
+        "name": "Shashank Srivatsavaya",
+        "original_name": "Shashank Srivatsavaya",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "68eff01b53d2f4b6da40d07a",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1289142,
+        "known_for_department": "Acting",
+        "name": "Shashank Srivatsavaya",
+        "original_name": "Shashank Srivatsavaya",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "694e7f6d219c77e555fb0ba1",
+        "department": "Writing",
+        "job": "Writer"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt35279341",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "DARK CHOCOLATE Movie - Meta Mass Mela | Official Teaser | VishwaDev, Bindu Madhavi | Vivek Sagar",
+        "key": "nSadVBntPP8",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Teaser",
+        "official": false,
+        "id": "68eff25b20af296353aee209",
+        "published_at": "2025-10-11T09:45:04.000Z"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 360425,
+        "name": "dark chocolate"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "A",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2026-02-14T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1536,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/aIXcdgeixGboexeao03FWslhqUG.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2731
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.666,
+        "height": 1286,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/gjBtTayPIEF52LFNODsGyEmkpOf.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 857
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1325,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/zY0cSKeajZRDViqG6vmadnm2iwW.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 883
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1297,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/zLyV7CKh2RRqT0XcARWLr5vUNQV.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 865
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1265,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/ud1KMbqrjMQv2wrcKdpQHuYpfW.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 843
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

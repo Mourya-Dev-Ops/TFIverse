@@ -1,0 +1,573 @@
+{
+  "adult": false,
+  "backdrop_path": "/dpQu2WocTv0NMDdPLNwQiZJaOBX.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "homepage": "",
+  "id": 1388451,
+  "imdb_id": "tt34442678",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Bhairavam",
+  "overview": "The relationship between three childhood friends begins to crumble as their loyalty is tested.",
+  "popularity": 0.5846,
+  "poster_path": "/dT4zhRKIgRLcoSOWbxsA6vMWLxx.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2025-05-30",
+  "revenue": 0,
+  "runtime": 155,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Bhairavam",
+  "video": false,
+  "vote_average": 3,
+  "vote_count": 1,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1825808,
+        "known_for_department": "Acting",
+        "name": "Bellamkonda Srinivas",
+        "original_name": "Bellamkonda Srinivas",
+        "popularity": 1.0637,
+        "profile_path": "/8EiUDObdAq4txMfaGVsev28Ss7y.jpg",
+        "cast_id": 1,
+        "character": "Seenu",
+        "credit_id": "673761f6ffe3878e9e9fc426",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1013090,
+        "known_for_department": "Acting",
+        "name": "Manchu Manoj",
+        "original_name": "Manchu Manoj",
+        "popularity": 0.5372,
+        "profile_path": "/eNIxi8fVrv97VAhwPFiw6iSU2Y1.jpg",
+        "cast_id": 3,
+        "character": "Gajapathi",
+        "credit_id": "6737620fd673fd2606ae9b3a",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3223352,
+        "known_for_department": "Acting",
+        "name": "Aditi Shankar",
+        "original_name": "Aditi Shankar",
+        "popularity": 0.1016,
+        "profile_path": "/oZQFKfTMnqZDW7z5v9qL1pkN6Bh.jpg",
+        "cast_id": 4,
+        "character": "Vennela",
+        "credit_id": "6737621e6bd4889bfbc7add2",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584418,
+        "known_for_department": "Acting",
+        "name": "Jayasudha",
+        "original_name": "Jayasudha",
+        "popularity": 0.6012,
+        "profile_path": "/xOP3pYlrqyBw5x9CDEMkYXPzpNu.jpg",
+        "cast_id": 17,
+        "character": "Nagarathnamma",
+        "credit_id": "6881aec780aff51a8555dfd8",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 938965,
+        "known_for_department": "Acting",
+        "name": "Nara Rohith",
+        "original_name": "నారా రోహిత్",
+        "popularity": 0.5101,
+        "profile_path": "/nfgWrE7d3IJwCDhwzg895djIQbB.jpg",
+        "cast_id": 2,
+        "character": "Varada",
+        "credit_id": "67376201ac9f3ba081559061",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1361991,
+        "known_for_department": "Acting",
+        "name": "Anandhi",
+        "original_name": "Anandhi",
+        "popularity": 0.6705,
+        "profile_path": "/2pGgJ8TowhQfFG6So3pdbN6QCXT.jpg",
+        "cast_id": 5,
+        "character": "Neelima",
+        "credit_id": "673762276bd4889bfbc7add5",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1517172,
+        "known_for_department": "Acting",
+        "name": "Divya Pillai",
+        "original_name": "Divya Pillai",
+        "popularity": 0.508,
+        "profile_path": "/n0BfTrgMiF0pAHvwl4Q3xvjHWlL.jpg",
+        "cast_id": 6,
+        "character": "Poornima",
+        "credit_id": "67376232e05823bd9c7c75ae",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3693818,
+        "known_for_department": "Acting",
+        "name": "Inaya Sultana",
+        "original_name": "Inaya Sultana",
+        "popularity": 0.0434,
+        "profile_path": "/dV6TgIICL2XhF6DsAUWzrgXsCQC.jpg",
+        "cast_id": 16,
+        "character": "",
+        "credit_id": "67f76284ea80d851759952ca",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 85595,
+        "known_for_department": "Acting",
+        "name": "Sampath Raj",
+        "original_name": "Sampath Raj",
+        "popularity": 0.8398,
+        "profile_path": "/oQgoihP26Hyg6gMFVpACRAygZli.jpg",
+        "cast_id": 18,
+        "character": "",
+        "credit_id": "6881aee248ea55973355e216",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 146147,
+        "known_for_department": "Acting",
+        "name": "Vennela Kishore",
+        "original_name": "Vennela Kishore",
+        "popularity": 0.9934,
+        "profile_path": "/8a0mcxMPjD4KR15gyE5QmbDeTub.jpg",
+        "cast_id": 19,
+        "character": "",
+        "credit_id": "6881afd4e517610e93f77a64",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586625,
+        "known_for_department": "Acting",
+        "name": "Ajay",
+        "original_name": "Ajay",
+        "popularity": 0.8393,
+        "profile_path": "/uByCHJa3eaCL0SgFGDYYLlsVggC.jpg",
+        "cast_id": 20,
+        "character": "",
+        "credit_id": "6881b279096e0ed3fb72dd14",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1477614,
+        "known_for_department": "Acting",
+        "name": "Sharath Lohitashwa",
+        "original_name": "Sharath Lohitashwa",
+        "popularity": 0.3036,
+        "profile_path": "/xsjwJYo0iag5EVjMrRpJ9PiBThi.jpg",
+        "cast_id": 21,
+        "character": "",
+        "credit_id": "6881b2b1c74b327f5a38ebfd",
+        "order": 11
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2981701,
+        "known_for_department": "Directing",
+        "name": "Vijay Kanakamedala",
+        "original_name": "Vijay Kanakamedala",
+        "popularity": 0.0552,
+        "profile_path": null,
+        "credit_id": "673762fa021223a874c61269",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1543625,
+        "known_for_department": "Production",
+        "name": "K.K. Radha Mohan",
+        "original_name": "K.K. Radha Mohan",
+        "popularity": 0.1176,
+        "profile_path": null,
+        "credit_id": "6737630d48e9d2cf01a8abbb",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1594196,
+        "known_for_department": "Sound",
+        "name": "Sricharan Pakala",
+        "original_name": "Sricharan Pakala",
+        "popularity": 0.1149,
+        "profile_path": null,
+        "credit_id": "6737631e021223a874c61274",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1785005,
+        "known_for_department": "Art",
+        "name": "Brahma Kadali",
+        "original_name": "Brahma Kadali",
+        "popularity": 0.2378,
+        "profile_path": null,
+        "credit_id": "6737632ee05823bd9c7c762b",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2234927,
+        "known_for_department": "Camera",
+        "name": "Hari K. Vedantam",
+        "original_name": "Hari K. Vedantam",
+        "popularity": 0.0609,
+        "profile_path": null,
+        "credit_id": "6737634c48e9d2cf01a8abcc",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3007504,
+        "known_for_department": "Writing",
+        "name": "Toom Venkat",
+        "original_name": "Toom Venkat",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "67376365021223a874c612cb",
+        "department": "Writing",
+        "job": "Dialogue"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3007504,
+        "known_for_department": "Writing",
+        "name": "Toom Venkat",
+        "original_name": "Toom Venkat",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6737637a143e439db4c698d9",
+        "department": "Writing",
+        "job": "Story"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1131222,
+        "known_for_department": "Writing",
+        "name": "R. S. Durai Senthilkumar",
+        "original_name": "R. S. Durai Senthilkumar",
+        "popularity": 0.2082,
+        "profile_path": "/nmmHBnpe06Z1VGXLwNoy1WyttKU.jpg",
+        "credit_id": "6737638e48e9d2cf01a8ac41",
+        "department": "Writing",
+        "job": "Original Story"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2200190,
+        "known_for_department": "Crew",
+        "name": "Vamsi Shekar",
+        "original_name": "Vamsi Shekar",
+        "popularity": 0.332,
+        "profile_path": null,
+        "credit_id": "6737639d6bd4889bfbc7ae5b",
+        "department": "Crew",
+        "job": "Public Relations"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt34442678",
+    "wikidata_id": "Q134606231",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Bhairavam Trailer | Bellamkonda Sreenivas,Manchu Manoj,Nara Rohith | Vijay kanakamedala | Radhamohan",
+        "key": "3qiqCTvhpOg",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Trailer",
+        "official": true,
+        "id": "682ad36ac264ae3629648ccc",
+        "published_at": "2025-05-18T13:32:00.000Z"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "GB",
+        "release_dates": [
+          {
+            "certification": "15",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2025-06-06T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "A",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-05-30T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.779,
+        "height": 1214,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/dpQu2WocTv0NMDdPLNwQiZJaOBX.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2160
+      },
+      {
+        "aspect_ratio": 1.78,
+        "height": 935,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/45w4PcYy4O2YcVHMGsS7PNdm23C.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1664
+      },
+      {
+        "aspect_ratio": 1.779,
+        "height": 921,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/3U1mtRuktVY16vIO4QAoEDOmUjL.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1638
+      },
+      {
+        "aspect_ratio": 1.776,
+        "height": 1440,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/bESaT9VeJn36rCJFFkBiFOEnVbR.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2558
+      }
+    ],
+    "logos": [
+      {
+        "aspect_ratio": 3.383,
+        "height": 183,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/bFPonxyEdZmPlklFCPZmn6Dg8sh.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 619
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 2612,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/pWImUye0RNPqtNl1G1RK6nFtYIt.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1741
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1199,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/iyTnUvm3QuvGwabmbVeNan0CnoA.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 800
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2999,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/vfdGV2Ke6n4DBRghGkRi8oUxXyp.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/9zjPbdBqlRw9AikLhEBxctI6QdQ.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1366
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/5EWS9mBVykFiQykWELEBrTDnt9c.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/w9uZRMyQKzhwlO5Goxpd6xHoEDT.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1366
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1920,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/uTVdmcUOSS0e2Xpxck726ldRaxi.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/dT4zhRKIgRLcoSOWbxsA6vMWLxx.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/2ezCqUm1QgYhP2zqGQm3AYXUllz.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1200,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/r474A5n4KnM5tTaEK8ifw6f3T8Y.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 800
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/3ayntTL4gsgOjMuo5mVcWXHObfo.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

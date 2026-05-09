@@ -1,0 +1,524 @@
+{
+  "adult": false,
+  "backdrop_path": "/qfftBkYxFAJmIwRxErqEYoa97uF.jpg",
+  "belongs_to_collection": null,
+  "budget": 594734,
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "homepage": "",
+  "id": 1376820,
+  "imdb_id": "tt34117876",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "ఘటికాచలం",
+  "overview": "Kaushik, a timid medical student, finds himself battling not only his inner demons but also a sinister entity named Ghatikachalam that whispers through shadows and feeds on his fears. As his nights turn sleepless and his grip on reality begins to shatter, his family resorts to ancient spiritual rites to save him from a force far beyond their understanding.",
+  "popularity": 0.1055,
+  "poster_path": "/rjxyLloFbnjCHPm3XHBs6SZx3SA.jpg",
+  "production_companies": [
+    {
+      "id": 266129,
+      "logo_path": null,
+      "name": "Oasis Entertainment",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2025-05-31",
+  "revenue": 0,
+  "runtime": 118,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Ghatikachalam",
+  "video": false,
+  "vote_average": 5.8,
+  "vote_count": 3,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3499009,
+        "known_for_department": "Acting",
+        "name": "Nikhil Devadula",
+        "original_name": "Nikhil Devadula",
+        "popularity": 0.0535,
+        "profile_path": null,
+        "cast_id": 1,
+        "character": "Kaushik / Kadikachalam",
+        "credit_id": "6859d5fa94d21c3421e64a7f",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5523621,
+        "known_for_department": "Acting",
+        "name": "Samyu Reddy",
+        "original_name": "Samyu Reddy",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "6859d613cf3001fea00ccd3c",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3086396,
+        "known_for_department": "Acting",
+        "name": "Aarvika Gupta",
+        "original_name": "Arvika Gupta",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 17,
+        "character": "",
+        "credit_id": "6859f44c14df8e04d5e64b33",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5520524,
+        "known_for_department": "Acting",
+        "name": "Arjun Vihaan",
+        "original_name": "Arjun Vihaan",
+        "popularity": 0.0423,
+        "profile_path": "/lRnDZAFkN60e6W9wGGPnQMykZwV.jpg",
+        "cast_id": 18,
+        "character": "",
+        "credit_id": "6859f4d5b2c999b4ff08d6a2",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1916998,
+        "known_for_department": "Directing",
+        "name": "Prabhakar Podakandla",
+        "original_name": "Prabhakar Podakandla",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "cast_id": 19,
+        "character": "",
+        "credit_id": "6859f5305cfca826e5a5a44b",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 588014,
+        "known_for_department": "Acting",
+        "name": "Rangadham",
+        "original_name": "Rangadham",
+        "popularity": 0.0827,
+        "profile_path": null,
+        "cast_id": 20,
+        "character": "",
+        "credit_id": "6859f5429f7e6d346e796ab4",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5523765,
+        "known_for_department": "Acting",
+        "name": "Tanmai Khushi",
+        "original_name": "Tanmai Khushi",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "cast_id": 21,
+        "character": "",
+        "credit_id": "6859f54fcb37a51b2b9a28a4",
+        "order": 6
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5523622,
+        "known_for_department": "Directing",
+        "name": "Amar Kamepalli",
+        "original_name": "Amar Kamepalli",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6859d63fc412abc41c21c718",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5523622,
+        "known_for_department": "Directing",
+        "name": "Amar Kamepalli",
+        "original_name": "Amar Kamepalli",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6859d64bc9afb21d6208d619",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5523625,
+        "known_for_department": "Production",
+        "name": "M.C. Raju",
+        "original_name": "M.C. Raju",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6859d6635c7cbe1a3da5a3fc",
+        "department": "Writing",
+        "job": "Story"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5523625,
+        "known_for_department": "Production",
+        "name": "M.C. Raju",
+        "original_name": "M.C. Raju",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6859d66dbb3a9226a108d608",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5523626,
+        "known_for_department": "Writing",
+        "name": "Srinivas Malkar",
+        "original_name": "Srinivas Malkar",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6859d68baf2eb8ce5921c7e5",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5523627,
+        "known_for_department": "Sound",
+        "name": "Favio G. Cuccurullo",
+        "original_name": "Favio G. Cuccurullo",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6859d69a8b3bcd4465a5a44f",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3287796,
+        "known_for_department": "Crew",
+        "name": "GSK Media-Suresh Kumar",
+        "original_name": "GSK Media Kumar",
+        "popularity": 0.0382,
+        "profile_path": null,
+        "credit_id": "6859d6ae8f4d28bbe14f6a1d",
+        "department": "Crew",
+        "job": "Public Relations"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4728380,
+        "known_for_department": "Camera",
+        "name": "SS Manoj",
+        "original_name": "SS Manoj",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6859d6c5c0ef962cd5796a49",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3941105,
+        "known_for_department": "Editing",
+        "name": "Srinivas Bainaboyina",
+        "original_name": "Srinivas Bainaboyina",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6859d71b2db1cda64621c763",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5523629,
+        "known_for_department": "Art",
+        "name": "Anil Pogaru",
+        "original_name": "Anil Pogaru",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6859d7335992e3d3da08d6a2",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2115635,
+        "known_for_department": "Production",
+        "name": "Anil Kumar Vanga",
+        "original_name": "Anil Kumar Vanga",
+        "popularity": 0.2105,
+        "profile_path": "/mqIQhCGeraDOvhrCt1b6ucxSFa4.jpg",
+        "credit_id": "6859de535716d20c9221c75f",
+        "department": "Production",
+        "job": "Publicist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2115634,
+        "known_for_department": "Production",
+        "name": "Uday Bhanu Avirineni",
+        "original_name": "Uday Bhanu Avirineni",
+        "popularity": 0.2597,
+        "profile_path": "/ismwIRDqhYiylM85KUCSBO5PZio.jpg",
+        "credit_id": "6859de5baa6ef04182796a81",
+        "department": "Production",
+        "job": "Publicist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3865804,
+        "known_for_department": "Sound",
+        "name": "Sai Maneendhar Reddy",
+        "original_name": "Sai Maneendhar Reddy",
+        "popularity": 0.0734,
+        "profile_path": null,
+        "credit_id": "6859de69d5c05664049a2863",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2558961,
+        "known_for_department": "Sound",
+        "name": "Aravind Menon",
+        "original_name": "Aravind Menon",
+        "popularity": 0.178,
+        "profile_path": "/imKmccMLSEut8MowQY7wsSBildh.jpg",
+        "credit_id": "6859de7802fcd42f460cccc1",
+        "department": "Sound",
+        "job": "Sound Mixer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt34117876",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/qfftBkYxFAJmIwRxErqEYoa97uF.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/bMSueVwTgb8I6C8ZmguvbgOdugi.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/dKRx5jTwuh61nX99PU3trNGW6f4.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/vi4JupifCNfrNzXLpUnmf3l6WOu.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.75,
+        "height": 1600,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/rjxyLloFbnjCHPm3XHBs6SZx3SA.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1200
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1600,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/uSFCO8vzGpkWRqY8YnpFiz9qIWI.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 1066
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1515,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/f0Pl44zLJYa6G484vKmNH4UHQig.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1010
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1280,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/AjO39idkWYwFBahehIovfYYyzhg.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 854
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1280,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/hDizlmns5vONCGNTro6scbMTgMw.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 853
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1080,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/pEBSOQ8MWb5ChkpSGhbusjcxjmq.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 720
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1280,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/sjUauwEo8H11LE1qeuxkeDRRa1N.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 853
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1280,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/dGIwmBetgVYeDMQd8Hs5uesRmv6.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 854
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/yRIKPKo1yODzucSvpn9HGOd4k7g.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 667
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1474,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/8tLjbWvsnTes3NdnvfHNvm1FyP0.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 983
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "A",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-05-31T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 227057,
+  "imdb_id": "tt3683458",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Kotha Janta",
+  "overview": "Kotha Janta (Telugu: కొత్త జంట, English: New Pair) is an upcoming Telugu film directed by Maruthi and produced by Bunny Vasu on the prestigious Geetha Arts Banner. It stars Allu Sirish and Regina Cassandra in the lead roles",
+  "popularity": 0.2074,
+  "poster_path": "/bI7hzpuHHq0ET60HghrzGIunK0P.jpg",
+  "production_companies": [
+    {
+      "id": 38582,
+      "logo_path": "/raGURQPCh7EvoBe9XHkOuw6v2o1.png",
+      "name": "Geetha Arts",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2014-05-02",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Kotha Janta",
+  "video": false,
+  "vote_average": 3.5,
+  "vote_count": 2,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1168398,
+        "known_for_department": "Acting",
+        "name": "Allu Sirish",
+        "original_name": "Allu Sirish",
+        "popularity": 0.2385,
+        "profile_path": "/1AVhdx7Itm7dOgpnaRWRTXR5v46.jpg",
+        "cast_id": 0,
+        "character": "",
+        "credit_id": "5348f48fc3a3684bb3000ecd",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1166967,
+        "known_for_department": "Acting",
+        "name": "Regina Cassandra",
+        "original_name": "Regina Cassandra",
+        "popularity": 0.488,
+        "profile_path": "/n3eiWhFQ3oFU1zWwEPsMR3rptjS.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "5348f49dc3a3684ba8000ec7",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1120380,
+        "known_for_department": "Acting",
+        "name": "Nyra Banerjee",
+        "original_name": "Nyra Banerjee",
+        "popularity": 0.5077,
+        "profile_path": "/gCv3m2KccpwNMRyv1FHKiLNCkvd.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "5348f4bbc3a3684bbb000edc",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1517687,
+        "known_for_department": "Acting",
+        "name": "Madhunandan",
+        "original_name": "Madhunandan",
+        "popularity": 0.1824,
+        "profile_path": "/mgdaJCVzD5XczMcYQj9xpFbKiiJ.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "560ed0699251415e53000d94",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 591165,
+        "known_for_department": "Acting",
+        "name": "Giri",
+        "original_name": "Giri",
+        "popularity": 0.0541,
+        "profile_path": null,
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "560ed077c3a368681700ccc9",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1412713,
+        "known_for_department": "Acting",
+        "name": "Saptagiri",
+        "original_name": "Saptagiri",
+        "popularity": 0.377,
+        "profile_path": "/h8G2HkmuwDuEgJEIAoUBvN8dSwN.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "576ac650c3a36848350003bf",
+        "order": 5
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1179683,
+        "known_for_department": "Directing",
+        "name": "Maruthi Dasari",
+        "original_name": "Maruthi Dasari",
+        "popularity": 2.4153,
+        "profile_path": "/lTMtTzNxi6U9kouoJDbEARsHoVJ.jpg",
+        "credit_id": "5aaa18529251410579008279",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 592813,
+        "known_for_department": "Production",
+        "name": "Allu Aravind",
+        "original_name": "Allu Aravind",
+        "popularity": 0.3304,
+        "profile_path": "/A8kwUqjUPOht79Eqi3rD4zPA0fY.jpg",
+        "credit_id": "68c6085b9a46da8921e61752",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 933606,
+        "known_for_department": "Production",
+        "name": "Bunny Vas",
+        "original_name": "Bunny Vas",
+        "popularity": 0.1465,
+        "profile_path": "/wuORjl5RorJUpLeWL6UspfC1zak.jpg",
+        "credit_id": "68c60faa9dd6b44d8278fddf",
+        "department": "Production",
+        "job": "Producer"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt3683458",
+    "wikidata_id": "Q17067804",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2014-05-02T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "videos": {
+    "results": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.745,
+        "height": 1079,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/bI7hzpuHHq0ET60HghrzGIunK0P.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 804
+      }
+    ]
+  }
+}

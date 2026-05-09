@@ -1,0 +1,656 @@
+{
+  "adult": false,
+  "backdrop_path": "/2pA5fvLPZGYR5OukwiRCeliHvNM.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1227241,
+  "imdb_id": "tt32237111",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "మా ఇంటి బంగారం",
+  "overview": "",
+  "popularity": 3.7919,
+  "poster_path": "/n7X5JZLzqzUxwdn9Mwx9cegEnBv.jpg",
+  "production_companies": [
+    {
+      "id": 262244,
+      "logo_path": "/vlXkdM3aTAGQTmBSZx7ulk6mM5V.png",
+      "name": "Tralala Moving Pictures",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2026-05-15",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "This GOLD is BLOODY bold",
+  "title": "Maa Inti Bangaram",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 225312,
+        "known_for_department": "Acting",
+        "name": "Samantha Ruth Prabhu",
+        "original_name": "సమంత రూత్ ప్రభు",
+        "popularity": 1.1883,
+        "profile_path": "/iGQ0AT1bNULlrJwSOGSRqLDSfGG.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "65993404bd588b01a9571613",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1047711,
+        "known_for_department": "Acting",
+        "name": "Gulshan Devaiah",
+        "original_name": "Gulshan Devaiah",
+        "popularity": 0.549,
+        "profile_path": "/6fOS4P9KiPFvIuLyvIUfMyXiF29.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "68ff784f8b9e1d016927631c",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1210124,
+        "known_for_department": "Acting",
+        "name": "Diganth Manchale",
+        "original_name": "Diganth Manchale",
+        "popularity": 0.3449,
+        "profile_path": "/o5T3X15zNomtDt5CumYBVZ3FIdI.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "68ff78a0a41184b054bbf79f",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 544979,
+        "known_for_department": "Acting",
+        "name": "Gautami Tadimalla",
+        "original_name": "Gautami Tadimalla",
+        "popularity": 0.5163,
+        "profile_path": "/jIl0nNou47v2KMejA7CMO6i0JFH.jpg",
+        "cast_id": 20,
+        "character": "",
+        "credit_id": "693fdfb0127b8768d961a6e5",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1333243,
+        "known_for_department": "Acting",
+        "name": "Anand",
+        "original_name": "Anand",
+        "popularity": 0.4102,
+        "profile_path": "/nITOqirdTcd3hDCZvp8QWknV6WU.jpg",
+        "cast_id": 38,
+        "character": "",
+        "credit_id": "69608cf8d6ab46862cb54449",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1339169,
+        "known_for_department": "Acting",
+        "name": "Sreemukhi",
+        "original_name": "Sreemukhi",
+        "popularity": 0.164,
+        "profile_path": "/jCgM4s01p6f5LoAiCmRUPZ2pCBL.jpg",
+        "cast_id": 39,
+        "character": "",
+        "credit_id": "6960a425a4494f3aa63d60d0",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1325397,
+        "known_for_department": "Acting",
+        "name": "Srilakshmi",
+        "original_name": "Srilakshmi",
+        "popularity": 0.1215,
+        "profile_path": "/czQXxJ6c149HPmY0JSHPxEL5wXW.jpg",
+        "cast_id": 40,
+        "character": "",
+        "credit_id": "6960a432d6ab46862cb54508",
+        "order": 6
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2553270,
+        "known_for_department": "Directing",
+        "name": "Shantharuban Gnanasekaran",
+        "original_name": "Shantharuban Gnanasekaran",
+        "popularity": 0.0281,
+        "profile_path": null,
+        "credit_id": "659934556e938a0259cd97b4",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3283453,
+        "known_for_department": "Writing",
+        "name": "Nagendra Kasi",
+        "original_name": "Nagendra Kasi",
+        "popularity": 0.0168,
+        "profile_path": null,
+        "credit_id": "6599346b89b56101a4c3edf8",
+        "department": "Writing",
+        "job": "Dialogue"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 225312,
+        "known_for_department": "Acting",
+        "name": "Samantha Ruth Prabhu",
+        "original_name": "సమంత రూత్ ప్రభు",
+        "popularity": 1.1883,
+        "profile_path": "/iGQ0AT1bNULlrJwSOGSRqLDSfGG.jpg",
+        "credit_id": "67d695db13d0e96b427bd5f8",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 225389,
+        "known_for_department": "Directing",
+        "name": "B. V. Nandini Reddy",
+        "original_name": "B. V. Nandini Reddy",
+        "popularity": 0.3355,
+        "profile_path": null,
+        "credit_id": "68fea7ecd7a7848ef6927197",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1116433,
+        "known_for_department": "Camera",
+        "name": "Om Prakash",
+        "original_name": "Om Prakash",
+        "popularity": 0.1216,
+        "profile_path": null,
+        "credit_id": "68ff78e8b309e5bae29fb5ff",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1123764,
+        "known_for_department": "Sound",
+        "name": "Santhosh Narayanan",
+        "original_name": "Santhosh Narayanan",
+        "popularity": 0.2715,
+        "profile_path": "/z8A2tjQFOLjUg17uWroc2TcEviN.jpg",
+        "credit_id": "68ff78f72af12f9da7eab29a",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3727724,
+        "known_for_department": "Production",
+        "name": "Himank Reddy Duvvuru",
+        "original_name": "Himank Reddy Duvvuru",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "68ff7a8cf0abe2e2109fb4c4",
+        "department": "Production",
+        "job": "Co-Producer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 85466,
+        "known_for_department": "Writing",
+        "name": "Sita Menon",
+        "original_name": "Sita Menon",
+        "popularity": 0.3266,
+        "profile_path": null,
+        "credit_id": "68ff7ae345bd84222e2763c1",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3073400,
+        "known_for_department": "Writing",
+        "name": "Vasanth Maringanti",
+        "original_name": "Vasanth Maringanti",
+        "popularity": 0.0352,
+        "profile_path": null,
+        "credit_id": "68ff7b04c296bbaa112763fe",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1105605,
+        "known_for_department": "Editing",
+        "name": "Dharmendra Kakarala",
+        "original_name": "Dharmendra Kakarala",
+        "popularity": 0.1855,
+        "profile_path": null,
+        "credit_id": "68ff7b560db63dc321fb72a3",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1765046,
+        "known_for_department": "Crew",
+        "name": "Vamsi Kaka",
+        "original_name": "Vamsi Kaka",
+        "popularity": 0.4333,
+        "profile_path": "/7Q71Q3MvVHRn7z9uwkjyFWsgR9w.jpg",
+        "credit_id": "68ff7b6b7958eafc8e3bff2c",
+        "department": "Crew",
+        "job": "Public Relations"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3427461,
+        "known_for_department": "Visual Effects",
+        "name": "Nikhil Koduru",
+        "original_name": "Nikhil Koduru",
+        "popularity": 0.0563,
+        "profile_path": null,
+        "credit_id": "693fe0242645394b9e7813cc",
+        "department": "Crew",
+        "job": "Post-Production Manager"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 81676,
+        "known_for_department": "Directing",
+        "name": "Raj Nidimoru",
+        "original_name": "Raj Nidimoru",
+        "popularity": 0.9509,
+        "profile_path": "/8Pu6AWiB6BC0LZgL8KrtgtlmHy8.jpg",
+        "credit_id": "695ea7e7da013659328f7dc6",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 81676,
+        "known_for_department": "Directing",
+        "name": "Raj Nidimoru",
+        "original_name": "Raj Nidimoru",
+        "popularity": 0.9509,
+        "profile_path": "/8Pu6AWiB6BC0LZgL8KrtgtlmHy8.jpg",
+        "credit_id": "695ea8077a902ce1a722c941",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 85466,
+        "known_for_department": "Writing",
+        "name": "Sita Menon",
+        "original_name": "Sita Menon",
+        "popularity": 0.3266,
+        "profile_path": null,
+        "credit_id": "695ea824c2403bc55c08a350",
+        "department": "Art",
+        "job": "Creative Director"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1682889,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Pallavi Singh",
+        "original_name": "Pallavi Singh",
+        "popularity": 0.248,
+        "profile_path": null,
+        "credit_id": "695ea83b441891013b08a2ec",
+        "department": "Costume & Make-Up",
+        "job": "Costume Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3427461,
+        "known_for_department": "Visual Effects",
+        "name": "Nikhil Koduru",
+        "original_name": "Nikhil Koduru",
+        "popularity": 0.0563,
+        "profile_path": null,
+        "credit_id": "695ea8794ca8462462d037b9",
+        "department": "Visual Effects",
+        "job": "VFX Supervisor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 92508,
+        "known_for_department": "Crew",
+        "name": "Lee Whittaker",
+        "original_name": "Lee Whittaker",
+        "popularity": 0.3785,
+        "profile_path": "/xDcxHYWmK2O5MFGrmMd3DAPMUn5.jpg",
+        "credit_id": "695ea88f280a455eebd037b5",
+        "department": "Directing",
+        "job": "Action Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5278716,
+        "known_for_department": "Production",
+        "name": "Rakesh Reddy Gaddam",
+        "original_name": "Rakesh Reddy Gaddam",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "695ea8a697cb7657bb5a1502",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4676702,
+        "known_for_department": "Writing",
+        "name": "Prahaas Boppudi",
+        "original_name": "Prahaas Boppudi",
+        "popularity": 0.0561,
+        "profile_path": null,
+        "credit_id": "695ea8cc9ed5c714ab22c965",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5924682,
+        "known_for_department": "Crew",
+        "name": "Marvel Natraj",
+        "original_name": "Marvel Natraj",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "695ea8e2df3685224c22c93a",
+        "department": "Crew",
+        "job": "Fight Choreographer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5924683,
+        "known_for_department": "Production",
+        "name": "Aryan Daggubati",
+        "original_name": "Aryan Daggubati",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "695ea8f5864e666294d11924",
+        "department": "Production",
+        "job": "Line Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4446282,
+        "known_for_department": "Sound",
+        "name": "Vandana Ramakrishna",
+        "original_name": "Vandana Ramakrishna",
+        "popularity": 0.1196,
+        "profile_path": null,
+        "credit_id": "695ea91ee946a8f102d11915",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5493688,
+        "known_for_department": "Sound",
+        "name": "Varun Arsid",
+        "original_name": "Varun Arsid",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "695ea933aef41714f56ec22b",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2514544,
+        "known_for_department": "Art",
+        "name": "Ullas Hydoor",
+        "original_name": "Ullas Hydoor",
+        "popularity": 0.0418,
+        "profile_path": null,
+        "credit_id": "69608823e95d30735f363e48",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5198747,
+        "known_for_department": "Production",
+        "name": "Aesthetic Kunjamma",
+        "original_name": "Aesthetic Kunjamma",
+        "popularity": 0.1021,
+        "profile_path": "/b72AAeSG8mV6J8SgYvfghPBoegN.jpg",
+        "credit_id": "696088302664de36691d7e9d",
+        "department": "Production",
+        "job": "Publicist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6144688,
+        "known_for_department": "Writing",
+        "name": "Rehman",
+        "original_name": "Rehman",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "69dfe20e19e1a17d173af792",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2081646,
+        "known_for_department": "Sound",
+        "name": "Chinmayi Sripaada",
+        "original_name": "Chinmayi Sripaada",
+        "popularity": 0.1272,
+        "profile_path": "/j3bkeLC42zmfu38suUpK2CyxVXG.jpg",
+        "credit_id": "69dfe21f8713f3493b012a26",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5380466,
+        "known_for_department": "Sound",
+        "name": "Punya Selva",
+        "original_name": "Punya Selva",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "69dfe2311310a2149ab7f9a0",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 85447,
+        "known_for_department": "Crew",
+        "name": "Pony Verma",
+        "original_name": "Pony Verma",
+        "popularity": 0.1863,
+        "profile_path": null,
+        "credit_id": "69dfe25d4ce3c3b63f211f12",
+        "department": "Crew",
+        "job": "Choreographer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt32237111",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2026-05-15T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 900,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/2pA5fvLPZGYR5OukwiRCeliHvNM.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1600
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 900,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/lAbxmPvGfdNshyrtXAtj0EZon2z.jpg",
+        "vote_average": 0,
+        "vote_count": 1,
+        "width": 1600
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 900,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/oe3mk2TualS5uhHBweXn9seDzQJ.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1600
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/n7X5JZLzqzUxwdn9Mwx9cegEnBv.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1365
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1350,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/OPwNfFyYCj76OjKZ3NZsJzWx7u.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 900
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1362,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/sIIxLGvOQKPQPRwX7vFrsZ5P7Ml.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 908
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

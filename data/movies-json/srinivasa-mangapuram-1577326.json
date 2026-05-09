@@ -1,0 +1,379 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1577326,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "శ్రీనివాస మంగాపురం",
+  "overview": "",
+  "popularity": 0.0943,
+  "poster_path": "/7KnqSoNWrmPSSatvAnIGrTmJS3Q.jpg",
+  "production_companies": [
+    {
+      "id": 279856,
+      "logo_path": null,
+      "name": "Chandamama Kathalu Pictures",
+      "origin_country": "IN"
+    },
+    {
+      "id": 80065,
+      "logo_path": "/9zMLq3789hC7qAPpbMl4TwaxJ69.png",
+      "name": "Vyjayanthi Movies",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "",
+  "title": "Srinivasa Mangapuram",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5805382,
+        "known_for_department": "Acting",
+        "name": "Jaya Krishna Ghattamaneni",
+        "original_name": "Jaya Krishna Ghattamaneni",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 1,
+        "character": "Srinu",
+        "credit_id": "69101b4cdc4f028746a0c45f",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 4147044,
+        "known_for_department": "Acting",
+        "name": "Rasha Thadani",
+        "original_name": "Rasha Thadani",
+        "popularity": 0.0416,
+        "profile_path": "/6IWdfZLST2m4vroHcvxl1pfCqoU.jpg",
+        "cast_id": 6,
+        "character": "Manga",
+        "credit_id": "691ac15ff79bc6131d6d91a1",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585268,
+        "known_for_department": "Acting",
+        "name": "Mohan Babu",
+        "original_name": "Mohan Babu",
+        "popularity": 0.5311,
+        "profile_path": "/zwqcXtnk0ju0nhuhvZXSLL2nLIy.jpg",
+        "cast_id": 8,
+        "character": "Venkatappaya Naidu",
+        "credit_id": "69a28ba2b5749133fbff5a02",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 736815,
+        "known_for_department": "Acting",
+        "name": "Naresh",
+        "original_name": "Naresh",
+        "popularity": 0.5508,
+        "profile_path": "/yT9Sgp7y8h3xhlmgzafUwlIXy1H.jpg",
+        "cast_id": 14,
+        "character": "Swatantra Babu",
+        "credit_id": "69cca8c68f9ba178ce6c2b71",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586625,
+        "known_for_department": "Acting",
+        "name": "Ajay",
+        "original_name": "Ajay",
+        "popularity": 0.8393,
+        "profile_path": "/uByCHJa3eaCL0SgFGDYYLlsVggC.jpg",
+        "cast_id": 18,
+        "character": "",
+        "credit_id": "69df8e6efea55dcb6bf93d4b",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237969,
+        "known_for_department": "Acting",
+        "name": "Shaam",
+        "original_name": "Shaam",
+        "popularity": 1.3376,
+        "profile_path": "/eqvAJxumDcXuZA0tnJmhSeEde17.jpg",
+        "cast_id": 19,
+        "character": "",
+        "credit_id": "69df8e98efce9085e2211ca9",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 213432,
+        "known_for_department": "Acting",
+        "name": "Brahmaji",
+        "original_name": "Brahmaji",
+        "popularity": 0.5886,
+        "profile_path": "/xDTE7POq1bkyjLINxdy7rW4wQlg.jpg",
+        "cast_id": 20,
+        "character": "",
+        "credit_id": "69df8eb871bf30ccfdb4ca98",
+        "order": 6
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1201733,
+        "known_for_department": "Directing",
+        "name": "Ajay Bhupathi",
+        "original_name": "Ajay Bhupathi",
+        "popularity": 0.1866,
+        "profile_path": "/60kyKmBXX60CDuC6mDCqeWtH9fD.jpg",
+        "credit_id": "69101b6d49a2d5cbc8ce8622",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1201733,
+        "known_for_department": "Directing",
+        "name": "Ajay Bhupathi",
+        "original_name": "Ajay Bhupathi",
+        "popularity": 0.1866,
+        "profile_path": "/60kyKmBXX60CDuC6mDCqeWtH9fD.jpg",
+        "credit_id": "69101b79a04bfc56e49abbd6",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3266129,
+        "known_for_department": "Production",
+        "name": "P. Uday Kiran",
+        "original_name": "P. Uday Kiran",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "69101b880ff15da6849abc63",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585264,
+        "known_for_department": "Production",
+        "name": "C. Ashwini Dutt",
+        "original_name": "C. Ashwini Dutt",
+        "popularity": 0.1669,
+        "profile_path": "/9WAIxfz9hvFWYD7VZeUdQ800e7X.jpg",
+        "credit_id": "69101b955b452b4483a0c4db",
+        "department": "Crew",
+        "job": "Presenter"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584950,
+        "known_for_department": "Sound",
+        "name": "G. V. Prakash Kumar",
+        "original_name": "G. V. Prakash Kumar",
+        "popularity": 1.191,
+        "profile_path": "/ArX3l6CdNo0sGI8b6PFYveR9Azm.jpg",
+        "credit_id": "691f10348a7ba2e274c2cf3c",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2249326,
+        "known_for_department": "Production",
+        "name": "Gemini Kiran",
+        "original_name": "Gemini Kiran",
+        "popularity": 0.0492,
+        "profile_path": null,
+        "credit_id": "69a28c328b06250f43c16e16",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4041607,
+        "known_for_department": "Editing",
+        "name": "Madhav Kumar Gullapalli",
+        "original_name": "Madhav Kumar",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "69a28cee73d54c134c187271",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1967174,
+        "known_for_department": "Art",
+        "name": "Sahi Suresh",
+        "original_name": "Sahi Suresh",
+        "popularity": 0.1352,
+        "profile_path": null,
+        "credit_id": "69a28d3b283fa31e38ff598d",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6038031,
+        "known_for_department": "Production",
+        "name": "Sakamuri Narayana Swamy",
+        "original_name": "Sakamuri Narayana Swamy",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69a28da972a0ea9a34c4ac1a",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2200190,
+        "known_for_department": "Crew",
+        "name": "Vamsi Shekar",
+        "original_name": "Vamsi Shekar",
+        "popularity": 0.332,
+        "profile_path": null,
+        "credit_id": "69cca8f90c5d5baea6ce0445",
+        "department": "Crew",
+        "job": "Public Relations"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2041626,
+        "known_for_department": "Crew",
+        "name": "Real Satheesh",
+        "original_name": "Real Satheesh",
+        "popularity": 0.1299,
+        "profile_path": "/u0FGgcilK4kBFZ2YHNv4uKEixGM.jpg",
+        "credit_id": "69cca90dfb2d8dcf68572ede",
+        "department": "Crew",
+        "job": "Fight Choreographer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1668224,
+        "known_for_department": "Camera",
+        "name": "Jayakrishna Gummadi",
+        "original_name": "Jayakrishna Gummadi",
+        "popularity": 0.0541,
+        "profile_path": null,
+        "credit_id": "69cca93c65a049c2ef572f04",
+        "department": "Camera",
+        "job": "Director of Photography"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/7KnqSoNWrmPSSatvAnIGrTmJS3Q.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/A8v4BUh3ckR0gzyfFnaRyYYAiYg.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1600,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/2tcb8NcViOnMTYwHeAsSqQmML9R.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1066
+      }
+    ]
+  }
+}

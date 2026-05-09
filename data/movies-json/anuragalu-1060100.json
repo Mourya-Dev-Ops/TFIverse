@@ -1,0 +1,99 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1060100,
+  "imdb_id": "tt0186826",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Anuragalu",
+  "overview": "A young blind girl finds love.",
+  "popularity": 0.1624,
+  "poster_path": "/sD5cIoA3wvoSsYPwfJmmF88b4rP.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "1975-11-29",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Released",
+  "tagline": "",
+  "title": "Anuragalu",
+  "video": false,
+  "vote_average": 6.5,
+  "vote_count": 2,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 109549,
+        "known_for_department": "Acting",
+        "name": "Sridevi",
+        "original_name": "Sridevi",
+        "popularity": 1.5226,
+        "profile_path": "/6wxquADm0CMYMon04uEI48ZiBBf.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "6765d7ffae1b411f405e11c4",
+        "order": 0
+      }
+    ],
+    "crew": []
+  },
+  "videos": {
+    "results": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.751,
+        "height": 750,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/sD5cIoA3wvoSsYPwfJmmF88b4rP.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 563
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "external_ids": {
+    "imdb_id": "tt0186826",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "1975-11-29T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

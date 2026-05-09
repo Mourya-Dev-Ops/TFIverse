@@ -1,0 +1,120 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1607632,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Untitled Ravi Teja - Vivek Athreya Movie",
+  "overview": "",
+  "popularity": 0.0379,
+  "poster_path": null,
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Rumored",
+  "tagline": "",
+  "title": "Untitled Ravi Teja - Vivek Athreya Movie",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 146935,
+        "known_for_department": "Acting",
+        "name": "Ravi Teja",
+        "original_name": "Ravi Teja",
+        "popularity": 0.9088,
+        "profile_path": "/5a9g645O30Qzhe3VFjvkhjnNfm2.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "6955f9cdf79bd0c6b674f4e7",
+        "order": 0
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1964726,
+        "known_for_department": "Directing",
+        "name": "Vivek Athreya",
+        "original_name": "Vivek Athreya",
+        "popularity": 0.1979,
+        "profile_path": "/tLEMEJ9lanONxmJekjprw0L0xXj.jpg",
+        "credit_id": "6955f9dff26925855d88ed3c",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1964726,
+        "known_for_department": "Directing",
+        "name": "Vivek Athreya",
+        "original_name": "Vivek Athreya",
+        "popularity": 0.1979,
+        "profile_path": "/tLEMEJ9lanONxmJekjprw0L0xXj.jpg",
+        "credit_id": "6955f9ef9c2f848f39d7a809",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "videos": {
+    "results": []
+  }
+}

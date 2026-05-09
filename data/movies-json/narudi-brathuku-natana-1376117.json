@@ -1,0 +1,298 @@
+{
+  "adult": false,
+  "backdrop_path": "/lVkIO3LzuTExYZ0ZMDVMDWygPtg.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1376117,
+  "imdb_id": "tt32035059",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "నరుడి బ్రతుకు నటన",
+  "overview": "Sathya, a self-centered aspiring actor who lacks talent, believes he is meant to be famous. After facing rejection, he sets off on a journey through Kerala to learn about emotions and life. Stranded in the village of Kadamakkudy, he meets a mysterious man named D. Salman. The people he meets and the experiences he has change him in ways he never expected.",
+  "popularity": 0.1627,
+  "poster_path": "/2X54ZBnpq9MsE1JXd29jNeZxvRa.jpg",
+  "production_companies": [
+    {
+      "id": 106829,
+      "logo_path": null,
+      "name": "People Media Factory",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2024-10-25",
+  "revenue": 0,
+  "runtime": 125,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Narudi Brathuku Natana",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2531864,
+        "known_for_department": "Acting",
+        "name": "Shiva Ramachandravarapu",
+        "original_name": "Shiva Ramachandravarapu",
+        "popularity": 0.0727,
+        "profile_path": null,
+        "cast_id": 1,
+        "character": "Satya",
+        "credit_id": "671a9ac25be9e8759da70790",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1053452,
+        "known_for_department": "Acting",
+        "name": "Nithin Prasanna",
+        "original_name": "Nithin Prasanna",
+        "popularity": 0.1505,
+        "profile_path": "/eQXE5mDPjkhhDky0MFTeA4PYTja.jpg",
+        "cast_id": 2,
+        "character": "D. Salman",
+        "credit_id": "671a9ad9769107d77b479bb8",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2192494,
+        "known_for_department": "Acting",
+        "name": "Sruthi Jayan",
+        "original_name": "Sruthi Jayan",
+        "popularity": 0.1699,
+        "profile_path": "/rmCEgqdYysu2Ey3p9G0pbFGzneO.jpg",
+        "cast_id": 3,
+        "character": "Lekha",
+        "credit_id": "6883f5f40f25d300c352a997",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3735690,
+        "known_for_department": "Acting",
+        "name": "Viva Raghav",
+        "original_name": "Viva Raghav",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "cast_id": 4,
+        "character": "Satya's Friend",
+        "credit_id": "6883f610a5746dc8592462d4",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2989069,
+        "known_for_department": "Acting",
+        "name": "Dayanand Reddy",
+        "original_name": "Dayanand Reddy",
+        "popularity": 0.5579,
+        "profile_path": "/8rP0hqbamgqPCVkjMhbXtydAYI4.jpg",
+        "cast_id": 5,
+        "character": "Satya's Father",
+        "credit_id": "6883f6209f14f68eb2245ffc",
+        "order": 4
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5586504,
+        "known_for_department": "Directing",
+        "name": "Rishikeshwar Yogi",
+        "original_name": "Rishikeshwar Yogi",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6883f62d809b249fc62460ef",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5586504,
+        "known_for_department": "Directing",
+        "name": "Rishikeshwar Yogi",
+        "original_name": "Rishikeshwar Yogi",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6883f632889cf9581e24605f",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2459948,
+        "known_for_department": "Production",
+        "name": "T G Vishwa Prasad",
+        "original_name": "T G Vishwa Prasad",
+        "popularity": 0.1729,
+        "profile_path": null,
+        "credit_id": "6883f641976736e15d2460bd",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5586505,
+        "known_for_department": "Camera",
+        "name": "Fahad Abdul Majeed",
+        "original_name": "Fahad Abdul Majeed",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6883f6831733da38d252a9ab",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1649690,
+        "known_for_department": "Sound",
+        "name": "Ranganaath Ravee",
+        "original_name": "Renganaath Ravee",
+        "popularity": 0.1752,
+        "profile_path": null,
+        "credit_id": "6883f68e9f14f68eb2246006",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1671007,
+        "known_for_department": "Sound",
+        "name": "NyX Lopez",
+        "original_name": "NyX Lopez",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6883f6b13f1f6bc2bed9a9d8",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt32035059",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U/A 13+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2024-10-25T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/lVkIO3LzuTExYZ0ZMDVMDWygPtg.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/jaNE7W45NCQgWWhjTfoiyJWmTCl.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/1EY6ZA7ZPF5Gdb5xAIgLCigmDps.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1280,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/sTfP7tBZyxNnDJfUC8Gz2kluDwe.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 853
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1080,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/2X54ZBnpq9MsE1JXd29jNeZxvRa.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 719
+      }
+    ]
+  }
+}

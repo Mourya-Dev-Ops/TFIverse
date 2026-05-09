@@ -1,0 +1,584 @@
+{
+  "adult": false,
+  "backdrop_path": "/duGsoRaWy3zXXPZtRdOAgefQXA7.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 10402,
+      "name": "Music"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1626170,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "సింగ్ గీతం",
+  "overview": "",
+  "popularity": 0.2126,
+  "poster_path": "/hgthycmrf6emYfMLWBZMNuv5XSR.jpg",
+  "production_companies": [
+    {
+      "id": 80065,
+      "logo_path": "/9zMLq3789hC7qAPpbMl4TwaxJ69.png",
+      "name": "Vyjayanthi Movies",
+      "origin_country": "IN"
+    },
+    {
+      "id": 104527,
+      "logo_path": null,
+      "name": "Swapna Cinema",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2026-06-10",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Post Production",
+  "tagline": "Let's Sing Geetham...",
+  "title": "Sing Geetham",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Teaser",
+        "key": "jJMv6in6Ga4",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Teaser",
+        "official": true,
+        "id": "69f4e353af847f749b59c7e5",
+        "published_at": "2026-05-01T15:50:51.000Z"
+      }
+    ]
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4608163,
+        "known_for_department": "Acting",
+        "name": "Ahilya Bamroo",
+        "original_name": "Ahilya Bamroo",
+        "popularity": 0.0413,
+        "profile_path": "/cQGwAB8mHUEZ5c49dSrnPwDFP8g.jpg",
+        "cast_id": 7,
+        "character": "Gowri",
+        "credit_id": "69ecc6f372a0ecda4b28d502",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183396,
+        "known_for_department": "Acting",
+        "name": "Ayaan",
+        "original_name": "Ayaan",
+        "popularity": 0.0168,
+        "profile_path": null,
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "69f58150459cfab15ba1c77c",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3321524,
+        "known_for_department": "Acting",
+        "name": "Shalini Kondepudi",
+        "original_name": "Shalini Kondepudi",
+        "popularity": 0.0732,
+        "profile_path": "/zneTc7m9FEsjaCse8kM8ji8Df2M.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "69f5723040c189ec0120fb58",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2249477,
+        "known_for_department": "Acting",
+        "name": "Sivannarayana Naripeddi",
+        "original_name": "Sivannarayana Naripeddi",
+        "popularity": 0.2808,
+        "profile_path": "/nqG9wFjXEool9NLPRrUsnZbjm72.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "69f4e09f9637a2680d483893",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 580662,
+        "known_for_department": "Acting",
+        "name": "Tulasi",
+        "original_name": "Tulasi",
+        "popularity": 1.0118,
+        "profile_path": "/oETAXn9y9YZ6yvCZFvzOcHBImr0.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "69f4e0da5cbfb410ffbf81eb",
+        "order": 4
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584327,
+        "known_for_department": "Directing",
+        "name": "Singeetam Srinivasa Rao",
+        "original_name": "Singeetam Srinivasa Rao",
+        "popularity": 0.8793,
+        "profile_path": "/rSJD58OQRVnJKBjL1HAXjbr9ew9.jpg",
+        "credit_id": "697dcf243c9cf658b6e4e5c6",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237681,
+        "known_for_department": "Sound",
+        "name": "Devi Sri Prasad",
+        "original_name": "Devi Sri Prasad",
+        "popularity": 0.5725,
+        "profile_path": "/4Be4HLS7qqbVPfKyA3yHvtpObFc.jpg",
+        "credit_id": "697df03fa8d840ff61ea0eb9",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584327,
+        "known_for_department": "Directing",
+        "name": "Singeetam Srinivasa Rao",
+        "original_name": "Singeetam Srinivasa Rao",
+        "popularity": 0.8793,
+        "profile_path": "/rSJD58OQRVnJKBjL1HAXjbr9ew9.jpg",
+        "credit_id": "69ecc574325625ab15dc7d64",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4785111,
+        "known_for_department": "Directing",
+        "name": "Prakeerthi Uppalapaati",
+        "original_name": "Prakeerthi Uppalapaati",
+        "popularity": 0.0418,
+        "profile_path": null,
+        "credit_id": "69f581f8414437346ba1c82e",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4075284,
+        "known_for_department": "Art",
+        "name": "Arvind Mule",
+        "original_name": "Arvind Mule",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "69f5820661ac1dce03369529",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4785008,
+        "known_for_department": "Camera",
+        "name": "Ankur Sanjeev C",
+        "original_name": "Ankur Sanjeev C",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f58215d6479b6421c25f50",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2099286,
+        "known_for_department": "Writing",
+        "name": "Sree Mani",
+        "original_name": "Sree Mani",
+        "popularity": 0.0959,
+        "profile_path": "/9zCz1XWtxEZKo3xpBVvHJnIFhlf.jpg",
+        "credit_id": "69f58221f44c934288a1c7e5",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2801312,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Geetha Gowtham",
+        "original_name": "Geetha Gowtham",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f582e5d6479b6421c25f74",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1508808,
+        "known_for_department": "Directing",
+        "name": "Nag Ashwin",
+        "original_name": "Nag Ashwin",
+        "popularity": 0.5948,
+        "profile_path": "/497odnRihLzESOdShcXZkNg3UaX.jpg",
+        "credit_id": "69f58301b1879dffa2d4aa59",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183410,
+        "known_for_department": "Writing",
+        "name": "Shashank Chintalpudi",
+        "original_name": "Shashank Chintalpudi",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f58354b1879dffa2d4aa71",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183414,
+        "known_for_department": "Writing",
+        "name": "Rathna Sreekar",
+        "original_name": "Rathna Sreekar",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f5837dd43dddd4cc2a4185",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183415,
+        "known_for_department": "Writing",
+        "name": "Rahul V Rajeshwar",
+        "original_name": "Rahul V Rajeshwar",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f58391cf2650c3570e7c53",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1501861,
+        "known_for_department": "Writing",
+        "name": "Nanda Kishore",
+        "original_name": "Nanda Kishore",
+        "popularity": 0.1523,
+        "profile_path": null,
+        "credit_id": "69f583a6311c46a755c25f2d",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3685025,
+        "known_for_department": "Directing",
+        "name": "Gautami Challagulla",
+        "original_name": "Gautami Challagulla",
+        "popularity": 0.0357,
+        "profile_path": null,
+        "credit_id": "69f583c494dc157b37c25fcd",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183418,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Ajay Kumar Namballa",
+        "original_name": "Ajay Kumar Namballa",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f583e9914a31a4f9a1c84e",
+        "department": "Costume & Make-Up",
+        "job": "Costume Designer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2200190,
+        "known_for_department": "Crew",
+        "name": "Vamsi Shekar",
+        "original_name": "Vamsi Shekar",
+        "popularity": 0.332,
+        "profile_path": null,
+        "credit_id": "69f584036783b21ab4d4aa0b",
+        "department": "Crew",
+        "job": "Public Relations"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183422,
+        "known_for_department": "Production",
+        "name": "Anil Kumar Lakkamraju",
+        "original_name": "Anil Kumar Lakkamraju",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f584125357a60a8d369581",
+        "department": "Production",
+        "job": "Production Executive"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183424,
+        "known_for_department": "Directing",
+        "name": "Manikrishna",
+        "original_name": "Manikrishna",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f5843d25fe0f229ed4aa6e",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183426,
+        "known_for_department": "Directing",
+        "name": "Srinivas Arumilli",
+        "original_name": "Srinivas Arumilli",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f584584b40dca57d2a41ff",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4306907,
+        "known_for_department": "Acting",
+        "name": "Kamala Manohari",
+        "original_name": "Kamala Manohari",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f58474402605bbb7421ce3",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183430,
+        "known_for_department": "Directing",
+        "name": "Vamsi Marella",
+        "original_name": "Vamsi Marella",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f5848cd3ba6fecfc0e7c73",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183433,
+        "known_for_department": "Directing",
+        "name": "Trishal V",
+        "original_name": "Trishal V",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f584ad3302caa168d4aa5b",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183435,
+        "known_for_department": "Directing",
+        "name": "Gowrov Rayudu",
+        "original_name": "Gowrov Rayudu",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f584cd414437346ba1c87f",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183437,
+        "known_for_department": "Directing",
+        "name": "V Varma",
+        "original_name": "V Varma",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f584e810ef058b1ba1c7d4",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183438,
+        "known_for_department": "Directing",
+        "name": "Vikram",
+        "original_name": "Vikram",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "69f585052a6083bbd7421d59",
+        "department": "Directing",
+        "job": "Assistant Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6183439,
+        "known_for_department": "Directing",
+        "name": "Vishwa Swaroop",
+        "original_name": "Vishwa Swaroop",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69f5851e4b40dca57d2a4223",
+        "department": "Directing",
+        "job": "Assistant Director"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2026-06-11T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "US",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "Premieres",
+            "release_date": "2026-06-10T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 721,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/duGsoRaWy3zXXPZtRdOAgefQXA7.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1282
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.666,
+        "height": 1760,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/hgthycmrf6emYfMLWBZMNuv5XSR.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1173
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "SingGeetham",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "SSR61",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "SSR 61",
+        "type": ""
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  }
+}

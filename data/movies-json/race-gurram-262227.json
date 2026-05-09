@@ -1,0 +1,1116 @@
+{
+  "adult": false,
+  "backdrop_path": "/m4izPWHxXNg237sQm4jks9m9xxP.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "homepage": "",
+  "id": 262227,
+  "imdb_id": "tt3142764",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "రేసుగుర్రం",
+  "overview": "Ram and Lakshman, aka Lucky, are brothers who are polar opposites in nature. Their mother wishes to see them united.",
+  "popularity": 1.2233,
+  "poster_path": "/oHqHsgx8lc01xrBraY4OBJtdeRn.jpg",
+  "production_companies": [
+    {
+      "id": 45601,
+      "logo_path": null,
+      "name": "Sri Lakshmi Narasimha Productions",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2014-04-11",
+  "revenue": 0,
+  "runtime": 162,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Race Gurram",
+  "video": false,
+  "vote_average": 6.7,
+  "vote_count": 59,
+  "external_ids": {
+    "imdb_id": "tt3142764",
+    "wikidata_id": "Q7278904",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 108215,
+        "known_for_department": "Acting",
+        "name": "Allu Arjun",
+        "original_name": "అల్లు అర్జున్",
+        "popularity": 2.5094,
+        "profile_path": "/wHr3bKhYpiDiYVMZLZqebeauEVw.jpg",
+        "cast_id": 2,
+        "character": "Allu Lakshman Prasad / Lucky",
+        "credit_id": "53390cb49251417dad003d39",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 85883,
+        "known_for_department": "Acting",
+        "name": "Shruti Haasan",
+        "original_name": "Shruti Haasan",
+        "popularity": 1.8975,
+        "profile_path": "/1zYJuSccSA45VVBdgozpRcL99Rd.jpg",
+        "cast_id": 3,
+        "character": "Spandana",
+        "credit_id": "53390cd49251417da1003ebf",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 85882,
+        "known_for_department": "Acting",
+        "name": "Ravi Kishan",
+        "original_name": "रवि किशन",
+        "popularity": 1.2198,
+        "profile_path": "/rkUTRk0tuA98RepP9jhgcCbhHqy.jpg",
+        "cast_id": 9,
+        "character": "Heavy Industries Minister Maddali Shiva Reddy",
+        "credit_id": "53390e129251417da7003d7c",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.5485,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 12,
+        "character": "Inspector Kill Bill Pandey",
+        "credit_id": "54b892ed9251411d770035c3",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237969,
+        "known_for_department": "Acting",
+        "name": "Shaam",
+        "original_name": "Shaam",
+        "popularity": 1.3376,
+        "profile_path": "/eqvAJxumDcXuZA0tnJmhSeEde17.jpg",
+        "cast_id": 14,
+        "character": "A.C.P Allu Ram Prasad IPS",
+        "credit_id": "54cf064bc3a3687f92006f52",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 148052,
+        "known_for_department": "Acting",
+        "name": "M. S. Narayana",
+        "original_name": "M. S. Narayana",
+        "popularity": 0.6206,
+        "profile_path": "/1XRTmhRSOtHBVmoPfz45WxbLfFQ.jpg",
+        "cast_id": 4,
+        "character": "Teashop Owner",
+        "credit_id": "53390dc09251411302002d2a",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 89153,
+        "known_for_department": "Acting",
+        "name": "Prakash Raj",
+        "original_name": "Prakash Raj",
+        "popularity": 2.9783,
+        "profile_path": "/dJvFZOXmZdkYCOUcKTXQAhBcAoH.jpg",
+        "cast_id": 10,
+        "character": "Bheem Prakash",
+        "credit_id": "53390e229251417d9e003e0a",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 146149,
+        "known_for_department": "Acting",
+        "name": "Jayaprakash Reddy",
+        "original_name": "Jayaprakash Reddy",
+        "popularity": 0.2912,
+        "profile_path": "/m0djrw7flYPrE77uV5ufOmywTnb.jpg",
+        "cast_id": 6,
+        "character": "J.P.",
+        "credit_id": "53390de79251417daa003de5",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 589654,
+        "known_for_department": "Acting",
+        "name": "Ali Basha",
+        "original_name": "Ali Basha",
+        "popularity": 0.6916,
+        "profile_path": "/1z0YbDqP81BD6VxeghJG7vo9Mny.jpg",
+        "cast_id": 13,
+        "character": "Dr. Bali MBBS",
+        "credit_id": "54cf007dc3a3681c9c004f23",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 213429,
+        "known_for_department": "Acting",
+        "name": "Saloni Aswani",
+        "original_name": "Saloni Aswani",
+        "popularity": 0.2036,
+        "profile_path": "/gCNy6jJWoQFPgE3df9Tmw2sFKJI.jpg",
+        "cast_id": 7,
+        "character": "Shweta",
+        "credit_id": "53390df69251417da4003dd3",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585404,
+        "known_for_department": "Acting",
+        "name": "Mukesh Rishi",
+        "original_name": "Mukesh Rishi",
+        "popularity": 0.8709,
+        "profile_path": "/iNLleMqHTHrbAlVRCFyye4NZxxb.jpg",
+        "cast_id": 15,
+        "character": "Peddi Reddy",
+        "credit_id": "54cf06ae92514121a4000d74",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 141695,
+        "known_for_department": "Acting",
+        "name": "Kota Srinivasa Rao",
+        "original_name": "Kota Srinivasa Rao",
+        "popularity": 0.681,
+        "profile_path": "/iEJprOPpeLhnyxBu2KdiJtw5Adb.jpg",
+        "cast_id": 8,
+        "character": "Hanumayya",
+        "credit_id": "53390e059251417dad003d58",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 591153,
+        "known_for_department": "Acting",
+        "name": "Raghu Babu",
+        "original_name": "Raghu Babu",
+        "popularity": 0.7605,
+        "profile_path": "/9aE6s9wqHgRcBY7wiUfkEZMgJNK.jpg",
+        "cast_id": 5,
+        "character": "Thief",
+        "credit_id": "53390dcd9251417d9e003e02",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1163230,
+        "known_for_department": "Acting",
+        "name": "Posani Krishna Murali",
+        "original_name": "Posani Krishna Murali",
+        "popularity": 0.6569,
+        "profile_path": "/mJHo1EvOORv2FAK12zpFESDQfM.jpg",
+        "cast_id": 21,
+        "character": "Home Minister Govardhan",
+        "credit_id": "559bd86f9251413ccc0017ab",
+        "order": 13
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1001829,
+        "known_for_department": "Acting",
+        "name": "Satya Krishnan",
+        "original_name": "Satya Krishnan",
+        "popularity": 0.2301,
+        "profile_path": "/8ymNkVGuJuAQkYcVc2ZZuxw6xov.jpg",
+        "cast_id": 23,
+        "character": "TV Reporter",
+        "credit_id": "59fe7f6a925141470502dc45",
+        "order": 14
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1661343,
+        "known_for_department": "Acting",
+        "name": "Kyra Dutt",
+        "original_name": "Kyra Dutt",
+        "popularity": 0.2504,
+        "profile_path": "/wGOBQCfCxHntpqQbRKW1Zsl1Yrk.jpg",
+        "cast_id": 24,
+        "character": "Special appearance in the song \"Boochade Boochade\"",
+        "credit_id": "5c79f85cc3a368193217801c",
+        "order": 15
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2280723,
+        "known_for_department": "Acting",
+        "name": "Vikram Sahidev",
+        "original_name": "Vikram Sahidev",
+        "popularity": 0.1104,
+        "profile_path": "/fkyERWWS32DPzxnfgCbif6VWIOq.jpg",
+        "cast_id": 32,
+        "character": "Young Lucky",
+        "credit_id": "618a0fa7fe63180044c0830d",
+        "order": 16
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 544990,
+        "known_for_department": "Acting",
+        "name": "Pragathi Mahavadi",
+        "original_name": "Pragathi Mahavadi",
+        "popularity": 0.6511,
+        "profile_path": "/9v63JB33LMkfR90raHu9O1iHZOQ.jpg",
+        "cast_id": 36,
+        "character": "Spandana's mother",
+        "credit_id": "68a9474e378a5b9d319da7f4",
+        "order": 17
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 565890,
+        "known_for_department": "Acting",
+        "name": "Tanikella Bharani",
+        "original_name": "Tanikella Bharani",
+        "popularity": 0.8451,
+        "profile_path": "/zRjr0F64Eznbliz1RvN9icj3Lq1.jpg",
+        "cast_id": 37,
+        "character": "Dasaradh Prasad",
+        "credit_id": "68a947840911cb824f6cde12",
+        "order": 18
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1264046,
+        "known_for_department": "Acting",
+        "name": "Pavitra Lokesh",
+        "original_name": "Pavitra Lokesh",
+        "popularity": 0.4789,
+        "profile_path": "/cytt3npHpd1YDstV7e2VeDeZ5J6.jpg",
+        "cast_id": 38,
+        "character": "Lucky and Ram's mother",
+        "credit_id": "68a947c22cf904ae89a998bb",
+        "order": 19
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 146937,
+        "known_for_department": "Acting",
+        "name": "Sayaji Shinde",
+        "original_name": "Sayaji Shinde",
+        "popularity": 0.7272,
+        "profile_path": "/r4VBYop4XktGuSZ0wozRqJbEzMH.jpg",
+        "cast_id": 39,
+        "character": "Chief Minister",
+        "credit_id": "68a94808deec6a71aa44837d",
+        "order": 20
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1064957,
+        "known_for_department": "Acting",
+        "name": "Srinivasa Reddy",
+        "original_name": "Srinivasa Reddy",
+        "popularity": 0.5379,
+        "profile_path": "/aUMNaDeskPGyDoEGwqvBxZPnzYR.jpg",
+        "cast_id": 40,
+        "character": "Lucky's friend",
+        "credit_id": "68a9483d23ef87fe6d547855",
+        "order": 21
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1289123,
+        "known_for_department": "Acting",
+        "name": "Thagubothu Ramesh",
+        "original_name": "Thagubothu Ramesh",
+        "popularity": 0.3638,
+        "profile_path": "/1D510DdV5c4CnWkzl13zIwAshZQ.jpg",
+        "cast_id": 41,
+        "character": "Lucky's friend",
+        "credit_id": "68a94857aef665268a1e46f5",
+        "order": 22
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 559738,
+        "known_for_department": "Acting",
+        "name": "Rajiv Kanakala",
+        "original_name": "Rajiv Kanakala",
+        "popularity": 0.7641,
+        "profile_path": "/29Czs1esSU744TOe3ddDzCuCa0g.jpg",
+        "cast_id": 42,
+        "character": "Rajeev",
+        "credit_id": "68a9487da04ee918798d182f",
+        "order": 23
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335931,
+        "known_for_department": "Acting",
+        "name": "Venkateswara Rao Paruchuri",
+        "original_name": "Venkateswara Rao Paruchuri",
+        "popularity": 0.5253,
+        "profile_path": "/beZ0WB3lN4KUANKmfZkmgP2wgp8.jpg",
+        "cast_id": 43,
+        "character": "Sameer's father",
+        "credit_id": "68a9489fd92415a50da9988b",
+        "order": 24
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 591149,
+        "known_for_department": "Acting",
+        "name": "Giri Babu",
+        "original_name": "Giri Babu",
+        "popularity": 0.5728,
+        "profile_path": "/rOwTKoZGqAnh1jPCpPnn7ccAT0i.jpg",
+        "cast_id": 44,
+        "character": "Rama Chandra Murthy",
+        "credit_id": "68a948ef378a5b9d319da807",
+        "order": 25
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1430784,
+        "known_for_department": "Acting",
+        "name": "Duvvasi Mohan",
+        "original_name": "Duvvasi Mohan",
+        "popularity": 0.3439,
+        "profile_path": "/oN2XhpPwZWXP544QhMrkrekTP2X.jpg",
+        "cast_id": 45,
+        "character": "Konda",
+        "credit_id": "68a949135911f7924aa99a04",
+        "order": 26
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 588032,
+        "known_for_department": "Acting",
+        "name": "Narsing Yadav",
+        "original_name": "Narsing Yadav",
+        "popularity": 0.2226,
+        "profile_path": "/6XXilySySycI5Zf6jhGQgHzHgEz.jpg",
+        "cast_id": 46,
+        "character": "Party member",
+        "credit_id": "68a9496046a9c893ed6cdd54",
+        "order": 27
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1647251,
+        "known_for_department": "Acting",
+        "name": "Venu",
+        "original_name": "Venu Tillu",
+        "popularity": 0.1533,
+        "profile_path": "/m367s4YmY92g3Woi3LpU6ahbOtm.jpg",
+        "cast_id": 47,
+        "character": "Drunkard",
+        "credit_id": "68a949802e055fbb7f66fbfe",
+        "order": 28
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2499169,
+        "known_for_department": "Acting",
+        "name": "Sudigali Sudheer",
+        "original_name": "Sudigali Sudheer",
+        "popularity": 0.0487,
+        "profile_path": "/wF8pCBKXw8sihXJvaApsTglPzgu.jpg",
+        "cast_id": 48,
+        "character": "Spandana's car driver",
+        "credit_id": "68a949ab43d900a450a999b6",
+        "order": 29
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1648895,
+        "known_for_department": "Acting",
+        "name": "Raghu Karumanchi",
+        "original_name": "Raghu Karumanchi",
+        "popularity": 0.1934,
+        "profile_path": "/qtD3WtfbRC0hXtIWjWuEtrDDV22.jpg",
+        "cast_id": 49,
+        "character": "Banda",
+        "credit_id": "68a949d3ce6d589e929da71a",
+        "order": 30
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1070462,
+        "known_for_department": "Directing",
+        "name": "Surender Reddy",
+        "original_name": "Surender Reddy",
+        "popularity": 0.2953,
+        "profile_path": "/3yEFZgXyufl67uoK6daY4XUjIQC.jpg",
+        "credit_id": "53390c9e9251417d9b003ef7",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1305901,
+        "known_for_department": "Production",
+        "name": "Nallamalapu Srinivas",
+        "original_name": "Nallamalapu Srinivas",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "53390c859251417da7003d5a",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1422002,
+        "known_for_department": "Production",
+        "name": "Dr. Venkateswara Rao",
+        "original_name": "Dr. Venkateswara Rao",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "54cf072dc3a3687f92006f87",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2254149,
+        "known_for_department": "Production",
+        "name": "Sreenivasa Reddy",
+        "original_name": "Sreenivasa Reddy",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "5c7a0125c3a3681c4b178cac",
+        "department": "Production",
+        "job": "Casting Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 494979,
+        "known_for_department": "Camera",
+        "name": "Manoj Paramahamsa",
+        "original_name": "Manoj Paramahamsa",
+        "popularity": 0.1725,
+        "profile_path": null,
+        "credit_id": "5c7a0040925141026f46c996",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585344,
+        "known_for_department": "Sound",
+        "name": "S. Thaman",
+        "original_name": "S. Thaman",
+        "popularity": 0.4203,
+        "profile_path": "/y2VYUPTSWr580Fx8hxUNcUTViUa.jpg",
+        "credit_id": "5c7a00b8c3a36841dc179220",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1327329,
+        "known_for_department": "Writing",
+        "name": "Vakkantham Vamsi",
+        "original_name": "Vakkantham Vamsi",
+        "popularity": 0.3671,
+        "profile_path": "/8GbB1IglPKKYhIVFCyQQCv0Fz7z.jpg",
+        "credit_id": "5c7a00340e0a2611da10f8e3",
+        "department": "Writing",
+        "job": "Story"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1106924,
+        "known_for_department": "Editing",
+        "name": "Gautham Raju",
+        "original_name": "Gautham Raju",
+        "popularity": 0.1828,
+        "profile_path": null,
+        "credit_id": "5d5e7488f263ba001494afe6",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1070462,
+        "known_for_department": "Directing",
+        "name": "Surender Reddy",
+        "original_name": "Surender Reddy",
+        "popularity": 0.2953,
+        "profile_path": "/3yEFZgXyufl67uoK6daY4XUjIQC.jpg",
+        "credit_id": "68a945628ec3a1966e781637",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1756345,
+        "known_for_department": "Writing",
+        "name": "Vema Reddy",
+        "original_name": "Vema Reddy",
+        "popularity": 0.0897,
+        "profile_path": null,
+        "credit_id": "68a9458467751769309da739",
+        "department": "Writing",
+        "job": "Dialogue"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2450182,
+        "known_for_department": "Writing",
+        "name": "Chandrabose",
+        "original_name": "Chandrabose",
+        "popularity": 0.1385,
+        "profile_path": "/oYwzbTQGJXLcdHsUbkweoDiUw6A.jpg",
+        "credit_id": "6971aadba56443f72f09393c",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2472983,
+        "known_for_department": "Writing",
+        "name": "Varikuppala Yadagiri",
+        "original_name": "Varikuppala Yadagiri",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6971aaf133705c1baee36b91",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3532860,
+        "known_for_department": "Writing",
+        "name": "Rahman",
+        "original_name": "Rahman",
+        "popularity": 0.1196,
+        "profile_path": null,
+        "credit_id": "6971ab07b794efb98deba982",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1932076,
+        "known_for_department": "Sound",
+        "name": "Shreya Ghoshal",
+        "original_name": "Shreya Ghoshal",
+        "popularity": 0.6286,
+        "profile_path": "/4oFjcu7J2jQ6HuNQRzEu685eTyf.jpg",
+        "credit_id": "6971ab21da1306b3d8096760",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2067881,
+        "known_for_department": "Sound",
+        "name": "Rahul Nambiar",
+        "original_name": "Rahul Nambiar",
+        "popularity": 0.1524,
+        "profile_path": null,
+        "credit_id": "6971ab347dc5308e87e36ac2",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2241477,
+        "known_for_department": "Sound",
+        "name": "Naveen Madhav",
+        "original_name": "Naveen Madhav",
+        "popularity": 0.0596,
+        "profile_path": null,
+        "credit_id": "6971ab4aba09a4cc35d1d2c8",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2280129,
+        "known_for_department": "Sound",
+        "name": "Siddharth Mahadevan",
+        "original_name": "Siddharth Mahadevan",
+        "popularity": 0.071,
+        "profile_path": null,
+        "credit_id": "6971ab5da6e1eb45a7daa2be",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2028371,
+        "known_for_department": "Acting",
+        "name": "Rabbit Mac",
+        "original_name": "Rabbit Mac",
+        "popularity": 0.0168,
+        "profile_path": "/sC6c5vcyzNE2Zp339PIHJhw8XlY.jpg",
+        "credit_id": "6971ab74d2d1f54b3ad1d2b5",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1672741,
+        "known_for_department": "Sound",
+        "name": "Dinesh Kanagaratnam",
+        "original_name": "Dinesh Kanagaratnam",
+        "popularity": 0.0261,
+        "profile_path": null,
+        "credit_id": "6971abc1662b8950ba91a6c9",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2351091,
+        "known_for_department": "Sound",
+        "name": "Megha",
+        "original_name": "Megha",
+        "popularity": 0.0387,
+        "profile_path": null,
+        "credit_id": "6971abd8e5f69268a1e36b3c",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 85883,
+        "known_for_department": "Acting",
+        "name": "Shruti Haasan",
+        "original_name": "Shruti Haasan",
+        "popularity": 1.8975,
+        "profile_path": "/1zYJuSccSA45VVBdgozpRcL99Rd.jpg",
+        "credit_id": "6971abed41597353a291a6dc",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585344,
+        "known_for_department": "Sound",
+        "name": "S. Thaman",
+        "original_name": "S. Thaman",
+        "popularity": 0.4203,
+        "profile_path": "/y2VYUPTSWr580Fx8hxUNcUTViUa.jpg",
+        "credit_id": "6971ac04b448bc1edf096740",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1244561,
+        "known_for_department": "Sound",
+        "name": "Usha Uthup",
+        "original_name": "Usha Uthup",
+        "popularity": 0.1775,
+        "profile_path": "/my2bXpLiJl3a3nmygIhnDulqqRf.jpg",
+        "credit_id": "6971ac1d0c91a6db79eba8ea",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2081728,
+        "known_for_department": "Sound",
+        "name": "M. M. Manasi",
+        "original_name": "M. M. Manasi",
+        "popularity": 0.1066,
+        "profile_path": "/ldqOUOV8cpD57ymKUQ7LBONQAGK.jpg",
+        "credit_id": "6971ac3135644139aee36ac6",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5954962,
+        "known_for_department": "Sound",
+        "name": "M. M. Monisha",
+        "original_name": "M. M. Monisha",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6971ac5506a58e01b66e6e10",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3738611,
+        "known_for_department": "Sound",
+        "name": "Simha Bhagavathula",
+        "original_name": "Simha Bhagavathula",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "6971ac8cdeef20acb0d1d2d1",
+        "department": "Sound",
+        "job": "Playback Singer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "UA",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2026-04-08T00:00:00.000Z",
+            "type": 2
+          },
+          {
+            "certification": "UA",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2014-04-11T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Main Hoon Lucky The Racer",
+        "type": "Hindi dub"
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Lucky The Racer",
+        "type": "malayalam dub"
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Race Kuthirai",
+        "type": "Tamil dub"
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Race Guram",
+        "type": ""
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/dNWdHNzBG5Z3I2TwUESxmyALppC.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/m4izPWHxXNg237sQm4jks9m9xxP.jpg",
+        "vote_average": 2.278,
+        "vote_count": 3,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/4DXhyKAo4Zn88byJloNT82EkKFF.jpg",
+        "vote_average": 1.75,
+        "vote_count": 4,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/yeZ9CyURvSkZ9CGohDxBt0t0P04.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 3840
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/cyYLx1hISf2dJz5iMOGv3hZlPi0.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 3840
+      }
+    ],
+    "logos": [
+      {
+        "aspect_ratio": 2.807,
+        "height": 171,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/yBDA5Zl7X5sbwqeKl7K89SEoGBu.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 480
+      },
+      {
+        "aspect_ratio": 2.805,
+        "height": 1180,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/yinU9Dkk8oslqZXZZvB7RC7W5Rn.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3310
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 2100,
+        "iso_3166_1": "IN",
+        "iso_639_1": "kn",
+        "file_path": "/gu3bzAFuQH3fZEFnCsj9uWGZH0v.jpg",
+        "vote_average": 2.542,
+        "vote_count": 4,
+        "width": 1400
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2325,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/oHqHsgx8lc01xrBraY4OBJtdeRn.jpg",
+        "vote_average": 1.434,
+        "vote_count": 5,
+        "width": 1550
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1969,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/5x2wDPcQ1Imf3Sy6qGiZSei7Oxs.jpg",
+        "vote_average": 1.222,
+        "vote_count": 3,
+        "width": 1313
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/rNIsCxgrtOGRDDa4P06tfgKbxua.jpg",
+        "vote_average": 0.958,
+        "vote_count": 4,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.715,
+        "height": 1510,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/qeRkv2dL3sdXce8QCU2BEyxK40c.jpg",
+        "vote_average": 0.958,
+        "vote_count": 5,
+        "width": 1080
+      },
+      {
+        "aspect_ratio": 0.659,
+        "height": 1639,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/rwK60T8jUjXIyEqoyxnjONh1rbN.jpg",
+        "vote_average": 0.958,
+        "vote_count": 4,
+        "width": 1080
+      },
+      {
+        "aspect_ratio": 0.721,
+        "height": 1600,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/ftNiBR1JRNTQZpI24kFFnNuEkHV.jpg",
+        "vote_average": 0.5,
+        "vote_count": 4,
+        "width": 1153
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "ml",
+        "file_path": "/slvjtcwkWA6MFKDV6pOgxblUC1I.jpg",
+        "vote_average": 0.166,
+        "vote_count": 2,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/5hRo842xIRoJqluy08Di1Z68XuG.jpg",
+        "vote_average": 0.166,
+        "vote_count": 3,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 2158,
+        "iso_3166_1": "IN",
+        "iso_639_1": "hi",
+        "file_path": "/rvUMR3cYLF7rlHjmMcdgJl1oe4Y.jpg",
+        "vote_average": 0.166,
+        "vote_count": 2,
+        "width": 1438
+      },
+      {
+        "aspect_ratio": 0.75,
+        "height": 1600,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/4ojbzpHL0wmlnrmlLQGLds6Hwvu.jpg",
+        "vote_average": 0.166,
+        "vote_count": 3,
+        "width": 1200
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/prpPAu3eZO1ljxb92oxyOf41KQ6.jpg",
+        "vote_average": 0.166,
+        "vote_count": 3,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/qRqdw57Sdp7oaUJpbm6WJM1VNw1.jpg",
+        "vote_average": 0.166,
+        "vote_count": 3,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/dUmP3ZuCMU6QQhL1Xbkc03tPbRl.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      }
+    ]
+  }
+}

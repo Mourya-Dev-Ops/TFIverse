@@ -1,0 +1,322 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "homepage": "",
+  "id": 82197,
+  "imdb_id": "tt1296409",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Nenu Meeku Telusa...?",
+  "overview": "Aditya (Manoj Manchu) has a strange disorder. His memory keeps refreshing every night he sleeps, but he wakes up with a blank mind every day. Only two people (his uncle and his personal doctor) know about his problem. He falls in a situation where he is accused of a murder. The rest of the story is all about how he rescues himself.",
+  "popularity": 0.5284,
+  "poster_path": "/z3oeMTr5F4x95tru1oO7AmKMZVf.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2008-10-10",
+  "revenue": 0,
+  "runtime": 150,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Nenu Meeku Telusa...?",
+  "video": false,
+  "vote_average": 7.3,
+  "vote_count": 3,
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1013090,
+        "known_for_department": "Acting",
+        "name": "Manchu Manoj",
+        "original_name": "Manchu Manoj",
+        "popularity": 0.5372,
+        "profile_path": "/eNIxi8fVrv97VAhwPFiw6iSU2Y1.jpg",
+        "cast_id": 1,
+        "character": "Aditya",
+        "credit_id": "531f69b2c3a368363f00259a",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 150530,
+        "known_for_department": "Acting",
+        "name": "Sneha Ullal",
+        "original_name": "Sneha Ullal",
+        "popularity": 0.4472,
+        "profile_path": "/dS6AD6WaSsbI79g0LCkUPfwUGCV.jpg",
+        "cast_id": 0,
+        "character": "Anjali",
+        "credit_id": "531f69a3c3a368363f002597",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 86305,
+        "known_for_department": "Acting",
+        "name": "Riya Sen",
+        "original_name": "Riya Sen",
+        "popularity": 1.4049,
+        "profile_path": "/trE9bpNzYVZCb9a3TeOvVujZdgR.jpg",
+        "cast_id": 3,
+        "character": "Madhumitha",
+        "credit_id": "531f69ffc3a3685c51009e58",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1045387,
+        "known_for_department": "Acting",
+        "name": "Kausha Rach",
+        "original_name": "Kausha Rach",
+        "popularity": 0.2006,
+        "profile_path": "/9GHmBDhrtEzyNGB9CZ3uJkXDcvg.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "5b091cbac3a3683a3c001649",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.5485,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "68dd7f0bc7b43c600db42816",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 565890,
+        "known_for_department": "Acting",
+        "name": "Tanikella Bharani",
+        "original_name": "Tanikella Bharani",
+        "popularity": 0.8451,
+        "profile_path": "/zRjr0F64Eznbliz1RvN9icj3Lq1.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "68dd7f25d3e94966c02dfdda",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 589654,
+        "known_for_department": "Acting",
+        "name": "Ali Basha",
+        "original_name": "Ali Basha",
+        "popularity": 0.6916,
+        "profile_path": "/1z0YbDqP81BD6VxeghJG7vo9Mny.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "68dd7f2ef1b9ec124dc77753",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 130111,
+        "known_for_department": "Acting",
+        "name": "Nassar",
+        "original_name": "Nassar",
+        "popularity": 1.4637,
+        "profile_path": "/p3I0tSQY3C5qZW3NzFfbpjKPNL6.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "68dd7f47bd66200ffd38d4e3",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 213428,
+        "known_for_department": "Acting",
+        "name": "Sunil Varma",
+        "original_name": "Sunil Varma",
+        "popularity": 0.87,
+        "profile_path": "/ifmUCkLgpEzbfnRjIw62otrADpI.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "68dd7f589221e538142dfa47",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1105609,
+        "known_for_department": "Acting",
+        "name": "Uttej",
+        "original_name": "Uttej",
+        "popularity": 0.2941,
+        "profile_path": "/ntwumxdq3aYSi4fJln1kPa1JlD2.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "68dd7f62f1c834ba3038d3c2",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584511,
+        "known_for_department": "Acting",
+        "name": "Mallikarjuna Rao",
+        "original_name": "Mallikarjuna Rao",
+        "popularity": 0.4229,
+        "profile_path": "/nRTgNcAdSLqRmk5mQXR3Lz3HXbY.jpg",
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "68dd7f8a5f0a94b17c38cff9",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 213431,
+        "known_for_department": "Acting",
+        "name": "Supreet",
+        "original_name": "Supreet",
+        "popularity": 0.362,
+        "profile_path": "/3HZopNIG3zeaSpbGjEvsdmoXjaR.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "68dd7f952856ed08825318cd",
+        "order": 11
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1300372,
+        "known_for_department": "Directing",
+        "name": "Ajay Sastri",
+        "original_name": "Ajay Sastri",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "531f69e6c3a3685c5d00a0be",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1123764,
+        "known_for_department": "Sound",
+        "name": "Santhosh Narayanan",
+        "original_name": "Santhosh Narayanan",
+        "popularity": 0.2715,
+        "profile_path": "/z8A2tjQFOLjUg17uWroc2TcEviN.jpg",
+        "credit_id": "5f84041d02842000371a486c",
+        "department": "Crew",
+        "job": "Additional Music"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "external_ids": {
+    "imdb_id": "tt1296409",
+    "wikidata_id": "Q6991671",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "UA",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2008-10-10T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/hZ96hlifXNLOgdLeR6i8kvRV6Lz.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 951,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/2XVI95w8fO20T8imYY20tujAID3.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 634
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2250,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/z3oeMTr5F4x95tru1oO7AmKMZVf.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1500
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Meri Taqdeer In My Hands",
+        "type": "Hindi Dubbed"
+      }
+    ]
+  }
+}

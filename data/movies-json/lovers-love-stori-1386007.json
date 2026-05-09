@@ -1,0 +1,90 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1386007,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Lovers love stori",
+  "overview": "Is love an algorithm? In a village, four youngsters are hooked up with selfishness, deceit, regret and sacrifice but they are committed to their deep desires. In various twists and turns, do they decode their true love?",
+  "popularity": 0.0521,
+  "poster_path": "/5ftThdfFcJbMn1jt8KYHi1ozXdz.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2022-03-01",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Lovers love stori",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "videos": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.679,
+        "height": 1101,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/5ftThdfFcJbMn1jt8KYHi1ozXdz.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 748
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "GB",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2022-03-01T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

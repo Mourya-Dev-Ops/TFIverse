@@ -1,0 +1,352 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "homepage": "",
+  "id": 1085616,
+  "imdb_id": "tt3428398",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Anandamanandamaye",
+  "overview": "While on a train journey, Kiran, an engineer, meets Bhuvana and falls in love with her. Bhuavana's family agrees to their marriage, but mistaken identities lead to the cancellation of the wedding.",
+  "popularity": 0.2949,
+  "poster_path": "/8HdTnvyNEWmT6CsRabewu48uYu.jpg",
+  "production_companies": [
+    {
+      "id": 63848,
+      "logo_path": null,
+      "name": "Usha Kiran Movies",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [],
+  "release_date": "2004-02-06",
+  "revenue": 0,
+  "runtime": 147,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Anandamanandamaye",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1021599,
+        "known_for_department": "Acting",
+        "name": "Jai Akash",
+        "original_name": "Jai Akash",
+        "popularity": 0.114,
+        "profile_path": "/rNTtovSHRp1fUaszszrDCoEQh52.jpg",
+        "cast_id": 1,
+        "character": "Kiran",
+        "credit_id": "63e8d53a12777800895fa427",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 238011,
+        "known_for_department": "Acting",
+        "name": "Renuka Menon",
+        "original_name": "Renuka Menon",
+        "popularity": 0.1842,
+        "profile_path": "/AbSmZEj7p1fXp3R0UfxwtcSxpXC.jpg",
+        "cast_id": 2,
+        "character": "Bhuvana",
+        "credit_id": "63e8d574a2e60200b5ee4a80",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 88817,
+        "known_for_department": "Acting",
+        "name": "J. D. Chakravarthi",
+        "original_name": "J. D. Chakravarthi",
+        "popularity": 0.7046,
+        "profile_path": "/4sRwxgggTEhsaJzwZRZbxbLRzUA.jpg",
+        "cast_id": 3,
+        "character": "Chakri",
+        "credit_id": "63e8d5919512e1008cb7914f",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 125205,
+        "known_for_department": "Acting",
+        "name": "Preeti Jhangiani",
+        "original_name": "Preeti Jhangiani",
+        "popularity": 0.8751,
+        "profile_path": "/mFpshXUX3BfPDTVfoKUWKPCMXma.jpg",
+        "cast_id": 4,
+        "character": "Mahi",
+        "credit_id": "63e8d5c36c849200851b1ac7",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 283294,
+        "known_for_department": "Acting",
+        "name": "Devan",
+        "original_name": "Devan",
+        "popularity": 0.7672,
+        "profile_path": "/TSAMYfaw3yWAXWO3cuqehIkYbO.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "63e8d6269512e1008cb79177",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584683,
+        "known_for_department": "Acting",
+        "name": "Sumalatha",
+        "original_name": "Sumalatha",
+        "popularity": 0.6452,
+        "profile_path": "/lfIs0x9MudhZM3yY2AcKSLsh2ks.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "63e8d636a2e60200d4af1c8d",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586556,
+        "known_for_department": "Acting",
+        "name": "Sudhakar",
+        "original_name": "Sudhakar",
+        "popularity": 0.8945,
+        "profile_path": "/5KLwpe33RflDnJDE1mtychosmLl.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "63e8d64a63aad200e05d62d8",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1007325,
+        "known_for_department": "Acting",
+        "name": "Venu Madhav",
+        "original_name": "Venu Madhav",
+        "popularity": 0.3832,
+        "profile_path": "/oHuaEIJV4KVkyqjBTOxQ1ECoxgP.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "63e8d6629512e100cd723705",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1486677,
+        "known_for_department": "Acting",
+        "name": "Master Bharath",
+        "original_name": "Master Bharath",
+        "popularity": 0.155,
+        "profile_path": "/nKsOmyYVY0miS1siMqsMxOK1OpN.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "63e8d68b63aad2008f85e627",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 213428,
+        "known_for_department": "Acting",
+        "name": "Sunil Varma",
+        "original_name": "Sunil Varma",
+        "popularity": 0.6676,
+        "profile_path": "/ifmUCkLgpEzbfnRjIw62otrADpI.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "63e8d6b46c84920097ff902f",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 591152,
+        "known_for_department": "Acting",
+        "name": "Hema",
+        "original_name": "Hema",
+        "popularity": 0.3148,
+        "profile_path": "/4s1Kiq09KI4p7RFjmclEelLnyV8.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "63e8d6dca2e60200d4af1cd4",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585567,
+        "known_for_department": "Acting",
+        "name": "Shivaji Raja",
+        "original_name": "Shivaji Raja",
+        "popularity": 0.3786,
+        "profile_path": "/uYGakx7oROck3LhhLPeDxG7F0c9.jpg",
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "63e8d6f663aad200e05d631c",
+        "order": 11
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 544993,
+        "known_for_department": "Editing",
+        "name": "Marthand K Venkatesh",
+        "original_name": "Marthand K Venkatesh",
+        "popularity": 0.1541,
+        "profile_path": "/5t3F2VGVmTLXMLumejZ8SqPCskW.jpg",
+        "credit_id": "63e9b28e12777800dc83aac8",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 577809,
+        "known_for_department": "Production",
+        "name": "Ramoji Rao",
+        "original_name": "Ramoji Rao",
+        "popularity": 0.1619,
+        "profile_path": "/67GLVYQW4pUZO4Zp7w93IOoGpc7.jpg",
+        "credit_id": "63e9b12b63aad2008f865660",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 568675,
+        "known_for_department": "Camera",
+        "name": "Ajayan Vincent",
+        "original_name": "Ajayan Vincent",
+        "popularity": 0.0404,
+        "profile_path": "/5bDLEPkMDnGpKJMXHVlmGqzckw1.jpg",
+        "credit_id": "63e9b2729512e1008cb7fb8a",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 552984,
+        "known_for_department": "Sound",
+        "name": "Saluri Koteswara Rao",
+        "original_name": "Saluri Koteswara Rao",
+        "popularity": 0.1762,
+        "profile_path": "/mihUu99EOf6qLCM3jlMtlwgLqbJ.jpg",
+        "credit_id": "63e9b335d388ae0080627f0e",
+        "department": "Sound",
+        "job": "Music"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1107021,
+        "known_for_department": "Directing",
+        "name": "Sreenu Vaitla",
+        "original_name": "Sreenu Vaitla",
+        "popularity": 0.6464,
+        "profile_path": "/dj1i0r5wQ5biXWz7HUpi9PYhx1z.jpg",
+        "credit_id": "63e9b0e4a2e6020081fba954",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "external_ids": {
+    "imdb_id": "tt3428398",
+    "wikidata_id": "Q16246629",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2004-02-06T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/8HdTnvyNEWmT6CsRabewu48uYu.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Anandamanandamaaye",
+        "type": "Romantic comedy"
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "ఆనందమానందమాయే",
+        "type": "Comedy"
+      }
+    ]
+  }
+}

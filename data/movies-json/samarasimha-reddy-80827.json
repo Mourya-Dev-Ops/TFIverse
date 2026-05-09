@@ -1,0 +1,535 @@
+{
+  "adult": false,
+  "backdrop_path": "/6Tqdo6vC76sh9P51H3kGpBZyBQY.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "homepage": "",
+  "id": 80827,
+  "imdb_id": "tt1575672",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "సమరసింహా రెడ్డి",
+  "overview": "A man claims to be the long-lost brother of three sisters, returning to help improve their lives. His true identity, and the intention behind his scheme, is revealed in a Rayalaseema-set flashback.",
+  "popularity": 0.3778,
+  "poster_path": "/yDDu07KAOaKKud0GaRQpZoIT5T4.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1999-01-13",
+  "revenue": 0,
+  "runtime": 150,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Samarasimha Reddy",
+  "video": false,
+  "vote_average": 5.4,
+  "vote_count": 7,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 150529,
+        "known_for_department": "Acting",
+        "name": "Nandamuri Balakrishna",
+        "original_name": "Nandamuri Balakrishna",
+        "popularity": 1.5728,
+        "profile_path": "/vOqW5ByakRQOUOn6ipupgioxsM9.jpg",
+        "cast_id": 1,
+        "character": "Samarasimha Reddy / Abbulu / Vasu",
+        "credit_id": "52fe47e09251416c91078b59",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 141705,
+        "known_for_department": "Acting",
+        "name": "Simran",
+        "original_name": "Simran",
+        "popularity": 1.9414,
+        "profile_path": "/BRsVC78sFbFy0NQhaUkGkuUUOL.jpg",
+        "cast_id": 2,
+        "character": "Srikakulam Chittamma",
+        "credit_id": "52fe47e09251416c91078b5d",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 133177,
+        "known_for_department": "Acting",
+        "name": "Anjala Zaveri",
+        "original_name": "Anjala Zaveri",
+        "popularity": 0.3671,
+        "profile_path": "/70klVZAmLYUWjcbDJpDPzVChoms.jpg",
+        "cast_id": 6,
+        "character": "Anjali",
+        "credit_id": "53c366f3c3a3684cdf009671",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584695,
+        "known_for_department": "Acting",
+        "name": "Sanghavi",
+        "original_name": "Sanghavi",
+        "popularity": 0.6591,
+        "profile_path": "/9b3ui7wmI4gSk7MZiLayzRns6Cp.jpg",
+        "cast_id": 16,
+        "character": "Neelaveni",
+        "credit_id": "68dd86e0a6ccdd420dbb1c37",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 146149,
+        "known_for_department": "Acting",
+        "name": "Jayaprakash Reddy",
+        "original_name": "Jayaprakash Reddy",
+        "popularity": 0.2912,
+        "profile_path": "/m0djrw7flYPrE77uV5ufOmywTnb.jpg",
+        "cast_id": 10,
+        "character": "Veera Raghava Reddy",
+        "credit_id": "68dd868d97406a9834e1cece",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 552991,
+        "known_for_department": "Acting",
+        "name": "Kaikala Satyanarayana",
+        "original_name": "Kaikala Satyanarayana",
+        "popularity": 0.4741,
+        "profile_path": "/wEw5EQRIi7KLAQWIMlOyHxZxeuy.jpg",
+        "cast_id": 12,
+        "character": "Police Commissioner",
+        "credit_id": "68dd86a1132102f2b1c77513",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 141695,
+        "known_for_department": "Acting",
+        "name": "Kota Srinivasa Rao",
+        "original_name": "Kota Srinivasa Rao",
+        "popularity": 0.681,
+        "profile_path": "/iEJprOPpeLhnyxBu2KdiJtw5Adb.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "53c3668ac3a3684cf4008bf6",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584878,
+        "known_for_department": "Acting",
+        "name": "Babloo Prithiveeraj",
+        "original_name": "Babloo Prithiveeraj",
+        "popularity": 0.5907,
+        "profile_path": "/lnRXcRebSmfJaSaRqTt91o1vkhE.jpg",
+        "cast_id": 28,
+        "character": "Vaasu",
+        "credit_id": "692bc777b00af7a1ca3b85e1",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584638,
+        "known_for_department": "Acting",
+        "name": "Thilakan",
+        "original_name": "Thilakan",
+        "popularity": 0.8905,
+        "profile_path": "/guNMMzIzJ4L2GsQHXOJxesZTX73.jpg",
+        "cast_id": 18,
+        "character": "Narasimha Reddy",
+        "credit_id": "692bc4c49f662dc9efe73e19",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.5485,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 5,
+        "character": "Kotilingam",
+        "credit_id": "53c36696c3a3684cdf00966a",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 148052,
+        "known_for_department": "Acting",
+        "name": "M. S. Narayana",
+        "original_name": "M. S. Narayana",
+        "popularity": 0.6206,
+        "profile_path": "/1XRTmhRSOtHBVmoPfz45WxbLfFQ.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "53c36710c3a3684cec00905a",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1007325,
+        "known_for_department": "Acting",
+        "name": "Venu Madhav",
+        "original_name": "Venu Madhav",
+        "popularity": 0.3832,
+        "profile_path": "/oHuaEIJV4KVkyqjBTOxQ1ECoxgP.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "68dd8697dfa796eac8bb1d14",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1107227,
+        "known_for_department": "Acting",
+        "name": "Ahuti Prasad",
+        "original_name": "Ahuti Prasad",
+        "popularity": 0.4054,
+        "profile_path": "/z0Al1VOH1O45uDQCXt6kadn9psR.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "68dd86af738307dda3b9b2ac",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1430784,
+        "known_for_department": "Acting",
+        "name": "Duvvasi Mohan",
+        "original_name": "Duvvasi Mohan",
+        "popularity": 0.3439,
+        "profile_path": "/oN2XhpPwZWXP544QhMrkrekTP2X.jpg",
+        "cast_id": 14,
+        "character": "",
+        "credit_id": "68dd86be9f5e490494c77830",
+        "order": 13
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 591151,
+        "known_for_department": "Acting",
+        "name": "Gundu Hanumantha Rao",
+        "original_name": "Gundu Hanumantha Rao",
+        "popularity": 0.4317,
+        "profile_path": "/hrZUe9HrDFoVNByNQGAfw5TnEt8.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "68dd8682738307dda3b9b2a9",
+        "order": 14
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1334885,
+        "known_for_department": "Acting",
+        "name": "Amanchi Venkata Subrahmanyam",
+        "original_name": "Amanchi Venkata Subrahmanyam",
+        "popularity": 0.198,
+        "profile_path": "/flibtZ5M6FIFhA6OFvm2IP7NDLX.jpg",
+        "cast_id": 15,
+        "character": "",
+        "credit_id": "68dd86cc841deb5da2b9b73c",
+        "order": 15
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1833212,
+        "known_for_department": "Acting",
+        "name": "Ironleg Sastri",
+        "original_name": "Ironleg Sastri",
+        "popularity": 0.1594,
+        "profile_path": null,
+        "cast_id": 17,
+        "character": "",
+        "credit_id": "68dd86ea94d9fbf08db427be",
+        "order": 16
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584257,
+        "known_for_department": "Acting",
+        "name": "Sumithra",
+        "original_name": "Sumithra",
+        "popularity": 0.9573,
+        "profile_path": "/yqK5REqTdG5wPPw4wkOAT46NwxL.jpg",
+        "cast_id": 19,
+        "character": "",
+        "credit_id": "692bc650dfc8b7b52f17cdbd",
+        "order": 17
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1327484,
+        "known_for_department": "Acting",
+        "name": "Sujitha",
+        "original_name": "Sujitha",
+        "popularity": 0.5326,
+        "profile_path": "/y6Q5Kt4AUdI8xNT3CNhsGiLcK1Z.jpg",
+        "cast_id": 20,
+        "character": "",
+        "credit_id": "692bc657984c2e050217ce89",
+        "order": 18
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1144476,
+        "known_for_department": "Acting",
+        "name": "Sangita",
+        "original_name": "Sangita",
+        "popularity": 0.6237,
+        "profile_path": "/tO1t4sYTE1X0M9y1o0sx1lhENGj.jpg",
+        "cast_id": 21,
+        "character": "",
+        "credit_id": "692bc660fb0a5afc5117ce08",
+        "order": 19
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1107240,
+        "known_for_department": "Acting",
+        "name": "Jayalalita",
+        "original_name": "Jayalalita",
+        "popularity": 1.5679,
+        "profile_path": "/qvw64GoEDOYMvxEwourE6lT94SL.jpg",
+        "cast_id": 22,
+        "character": "",
+        "credit_id": "692bc66866adac63cb24ef42",
+        "order": 20
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 944727,
+        "known_for_department": "Acting",
+        "name": "Mohan Raj",
+        "original_name": "Mohan Raj",
+        "popularity": 0.2434,
+        "profile_path": "/bKjtIMcgikgyuEQsxMKBnxdYPOJ.jpg",
+        "cast_id": 23,
+        "character": "",
+        "credit_id": "692bc678484afb9a6aaa3f90",
+        "order": 21
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335263,
+        "known_for_department": "Acting",
+        "name": "Satya Prakash",
+        "original_name": "Satya Prakash",
+        "popularity": 0.3075,
+        "profile_path": "/858vQ4NMh89fjjKEIeCh15oW5Y1.jpg",
+        "cast_id": 24,
+        "character": "",
+        "credit_id": "692bc6a46236301ae2247e09",
+        "order": 22
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1333516,
+        "known_for_department": "Acting",
+        "name": "Devaraj",
+        "original_name": "Devaraj",
+        "popularity": 0.381,
+        "profile_path": "/nUvDzDVZ5q0Hnze8iQwOJe3QiS9.jpg",
+        "cast_id": 25,
+        "character": "",
+        "credit_id": "692bc6b86b139e4f62247d9b",
+        "order": 23
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1429175,
+        "known_for_department": "Acting",
+        "name": "Hemant Ravan",
+        "original_name": "Hemant Ravan",
+        "popularity": 0.0887,
+        "profile_path": "/kVYoZj8P7zKhQhKTwse3H2Ze40y.jpg",
+        "cast_id": 26,
+        "character": "",
+        "credit_id": "692bc6c7271bcc273ee73e13",
+        "order": 24
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1053174,
+        "known_for_department": "Acting",
+        "name": "Bandla Ganesh",
+        "original_name": "Bandla Ganesh",
+        "popularity": 0.4823,
+        "profile_path": "/874gkTlQBZRawZbvF28bslX09KJ.jpg",
+        "cast_id": 27,
+        "character": "",
+        "credit_id": "692bc6d36236301ae2247e12",
+        "order": 25
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1107230,
+        "known_for_department": "Directing",
+        "name": "B. Gopal",
+        "original_name": "B. Gopal",
+        "popularity": 0.2588,
+        "profile_path": "/c0lIwqgWn5pIfU4tz86HYnL0cb9.jpg",
+        "credit_id": "531f6df992514177ae0092ae",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1107020,
+        "known_for_department": "Writing",
+        "name": "Gopalakrishna Paruchuri",
+        "original_name": "Gopalakrishna Paruchuri",
+        "popularity": 0.3383,
+        "profile_path": null,
+        "credit_id": "5f0d7cb613a320003581ae32",
+        "department": "Writing",
+        "job": "Dialogue"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt1575672",
+    "wikidata_id": "Q16253846",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "A",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1999-01-13T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/6Tqdo6vC76sh9P51H3kGpBZyBQY.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [
+      {
+        "aspect_ratio": 1.912,
+        "height": 1561,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/cwPeY0WZ9Y9xJ0kPu1Uei7Bbig0.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2984
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/yDDu07KAOaKKud0GaRQpZoIT5T4.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.744,
+        "height": 860,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/dsFIBr9UGNl345z7wBNqLvWYxP5.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 640
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Samarasimha Reddy",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Rakhwala: One Man Army",
+        "type": "Hindi Dubbed"
+      }
+    ]
+  }
+}

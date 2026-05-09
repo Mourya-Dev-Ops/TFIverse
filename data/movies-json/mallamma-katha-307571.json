@@ -1,0 +1,166 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 307571,
+  "imdb_id": "tt0187261",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "మల్లమ్మ కథ",
+  "overview": "Film starring Gummadi, Sharada and Sridevi",
+  "popularity": 0.1423,
+  "poster_path": "/VsxzKplDdsZMcOsKXjnAEMuQXn.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1973-01-01",
+  "revenue": 0,
+  "runtime": 120,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Mallamma Katha",
+  "video": false,
+  "vote_average": 10,
+  "vote_count": 1,
+  "external_ids": {
+    "imdb_id": "tt0187261",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 109549,
+        "known_for_department": "Acting",
+        "name": "Sridevi",
+        "original_name": "Sridevi",
+        "popularity": 1.5226,
+        "profile_path": "/6wxquADm0CMYMon04uEI48ZiBBf.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "67aa9d17dd9b7d2eaab085c9",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335709,
+        "known_for_department": "Acting",
+        "name": "Gummadi",
+        "original_name": "Gummadi",
+        "popularity": 0.4144,
+        "profile_path": "/qKXVkv7RmDKveWWZael013w7h1B.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "67aa9d2c9d346d3ef49b8c7f",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1151397,
+        "known_for_department": "Acting",
+        "name": "Sharada",
+        "original_name": "Sharada",
+        "popularity": 0.4022,
+        "profile_path": "/qaC7niVbch3Tz912TuHHEUkBoVb.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "67aa9d39518408abf8bb1945",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1470750,
+        "known_for_department": "Acting",
+        "name": "Krishna",
+        "original_name": "Krishna",
+        "popularity": 0.2139,
+        "profile_path": "/85O0Icv3d2DL9EfK44ZXZO8aqIU.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "67aa9d6f6be6ab6e139b89fe",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5298524,
+        "known_for_department": "Directing",
+        "name": "A Sanjeev",
+        "original_name": "A Sanjeev",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "67d0df64b5ee0e397c60b3fd",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1973-01-01T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/VsxzKplDdsZMcOsKXjnAEMuQXn.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

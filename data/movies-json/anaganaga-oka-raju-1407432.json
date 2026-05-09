@@ -1,0 +1,620 @@
+{
+  "adult": false,
+  "backdrop_path": "/sqmkeZ3bdfIrnYV6azaNdIyTS9w.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 1407432,
+  "imdb_id": "tt15427952",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "అనగనగా ఒక రాజు",
+  "overview": "A lazy, entitled brat who wants to lead an easy life is in for a rude shock that changes the course of his life.",
+  "popularity": 1.4275,
+  "poster_path": "/iCzGY1JD4DXqAjDKhsesKzs9vdK.jpg",
+  "production_companies": [
+    {
+      "id": 107352,
+      "logo_path": "/qNLrEbrNigDNR6QgaRtwXtRIwgx.png",
+      "name": "Sithara Entertainments",
+      "origin_country": "IN"
+    },
+    {
+      "id": 166697,
+      "logo_path": null,
+      "name": "Fortune Four Cinemas",
+      "origin_country": "IN"
+    },
+    {
+      "id": 172461,
+      "logo_path": null,
+      "name": "Srikara Studios",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2026-01-14",
+  "revenue": 0,
+  "runtime": 147,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Anaganaga Oka Raju",
+  "video": false,
+  "vote_average": 7.333,
+  "vote_count": 15,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2192356,
+        "known_for_department": "Acting",
+        "name": "Naveen Polishetty",
+        "original_name": "Naveen Polishetty",
+        "popularity": 0.3773,
+        "profile_path": "/gRiUWSinhzDdWciFxX4FMRzu30Y.jpg",
+        "cast_id": 1,
+        "character": "Raju",
+        "credit_id": "676ba12e3260bc061b7ec6b8",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2504878,
+        "known_for_department": "Acting",
+        "name": "Meenakshi Chaudhary",
+        "original_name": "Meenakshi Chaudhary",
+        "popularity": 0.7167,
+        "profile_path": "/hUIpX29tedOatiBW5fqtnD9Xi0z.jpg",
+        "cast_id": 3,
+        "character": "Charulata \"Charu\"",
+        "credit_id": "676d057b355bec07b09279ca",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586629,
+        "known_for_department": "Acting",
+        "name": "Rao Ramesh",
+        "original_name": "Rao Ramesh",
+        "popularity": 0.8394,
+        "profile_path": "/jzO0wN21tEcmz0haekvliQU91JM.jpg",
+        "cast_id": 14,
+        "character": "",
+        "credit_id": "695c9a6cfe06a72f2564b978",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3152506,
+        "known_for_department": "Acting",
+        "name": "Tarak Ponnappa",
+        "original_name": "Tarak Ponnappa",
+        "popularity": 0.294,
+        "profile_path": "/aDIglGyZgmTbrLbva0vtgy96K3X.jpg",
+        "cast_id": 24,
+        "character": "",
+        "credit_id": "6965652767bcaafc4e934e9f",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3280222,
+        "known_for_department": "Acting",
+        "name": "Goparaju Ramana",
+        "original_name": "Goparaju Ramana",
+        "popularity": 0.2828,
+        "profile_path": "/vRQKXftT1PXokqcfOKL9JjoiBht.jpg",
+        "cast_id": 25,
+        "character": "",
+        "credit_id": "6965654417c4d9100a7b1b82",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1341485,
+        "known_for_department": "Acting",
+        "name": "Ananth Babu",
+        "original_name": "Ananth Babu",
+        "popularity": 0.316,
+        "profile_path": "/6gtD5IYIbEG8KzaSDMDrDWGvTnR.jpg",
+        "cast_id": 26,
+        "character": "",
+        "credit_id": "69656564fb6a77934bdc4dbd",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1328272,
+        "known_for_department": "Acting",
+        "name": "Madhusudhan Rao",
+        "original_name": "Madhusudhan Rao",
+        "popularity": 0.6274,
+        "profile_path": "/e6BpJSqq9KBnsY6p95nrrXRsI0V.jpg",
+        "cast_id": 27,
+        "character": "",
+        "credit_id": "69656580f813302ce7284be7",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2547605,
+        "known_for_department": "Acting",
+        "name": "Bhadram",
+        "original_name": "Bhadram",
+        "popularity": 0.1178,
+        "profile_path": "/6QHbHMBTsysO1vO2liDF25NRQzT.jpg",
+        "cast_id": 17,
+        "character": "",
+        "credit_id": "695f595481cb6f36ebb0518c",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1712424,
+        "known_for_department": "Acting",
+        "name": "Chammak Chandra",
+        "original_name": "Chammak Chandra",
+        "popularity": 0.374,
+        "profile_path": "/xEtdW0GJozV3rIi2ZLJo4na7piE.jpg",
+        "cast_id": 18,
+        "character": "",
+        "credit_id": "695f595974c37fb5f53905b1",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2035060,
+        "known_for_department": "Acting",
+        "name": "Mahesh Achanta",
+        "original_name": "Mahesh Achanta",
+        "popularity": 0.3635,
+        "profile_path": "/2TO7x9It2iSwd3nmWTnyyA7QECR.jpg",
+        "cast_id": 19,
+        "character": "",
+        "credit_id": "695f59757865dda41f863af3",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3239503,
+        "known_for_department": "Acting",
+        "name": "Pammi Sai",
+        "original_name": "Pammi Sai",
+        "popularity": 0.3861,
+        "profile_path": "/7kZ6bLXdztpSObESzgMRnpmcVxm.jpg",
+        "cast_id": 21,
+        "character": "",
+        "credit_id": "695f5b0ab72fbbc15e276a65",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1430836,
+        "known_for_department": "Acting",
+        "name": "Kadambari Kiran",
+        "original_name": "Kadambari Kiran",
+        "popularity": 0.3119,
+        "profile_path": "/j6oQNoZw0pT40e0RdtyKB84VuIE.jpg",
+        "cast_id": 22,
+        "character": "",
+        "credit_id": "695f5b1fb72fbbc15e276a69",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2480543,
+        "known_for_department": "Acting",
+        "name": "Saanve Meghana",
+        "original_name": "Saanve Meghana",
+        "popularity": 0.4277,
+        "profile_path": "/5lpb5ZEzocuQGxCbYemCVPCUEWu.jpg",
+        "cast_id": 15,
+        "character": "Special appearance in the song \"Andhra to Telangana\"",
+        "credit_id": "695c9adbfe06a72f2564b984",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 149958,
+        "known_for_department": "Acting",
+        "name": "Nagarjuna Akkineni",
+        "original_name": "Nagarjuna Akkineni",
+        "popularity": 1.2798,
+        "profile_path": "/i42K59YZY2NbNfqxfo78YoFz6Bv.jpg",
+        "cast_id": 16,
+        "character": "Narrator",
+        "credit_id": "695f58a006a7e47ebb3905a2",
+        "order": 13
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5266501,
+        "known_for_department": "Acting",
+        "name": "Master Revanth",
+        "original_name": "Master Revanth",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 20,
+        "character": "",
+        "credit_id": "695f59f577e6509f53f9e580",
+        "order": 14
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1790294,
+        "known_for_department": "Production",
+        "name": "Suryadevara Naga Vamsi",
+        "original_name": "Suryadevara Naga Vamsi",
+        "popularity": 0.1832,
+        "profile_path": "/hLJpBV45WFqS3sYxS3zmBhcHAoq.jpg",
+        "credit_id": "676ba1413260bc061b7ec6c9",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5712237,
+        "known_for_department": "Writing",
+        "name": "Maari",
+        "original_name": "Maari",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "68d667ec6fb86e4ac590ae45",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5712237,
+        "known_for_department": "Writing",
+        "name": "Maari",
+        "original_name": "Maari",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "68d667f9b54861613cc83595",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1309358,
+        "known_for_department": "Sound",
+        "name": "Mickey J Meyer",
+        "original_name": "Mickey J Meyer",
+        "popularity": 0.1672,
+        "profile_path": "/ogeUjNtob45rVaKJ9TKxwys46s2.jpg",
+        "credit_id": "68d66817cf8fe91158095dfa",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3355377,
+        "known_for_department": "Production",
+        "name": "Sai Soujanya",
+        "original_name": "Sai Soujanya",
+        "popularity": 0.1962,
+        "profile_path": null,
+        "credit_id": "68d6682b0812ddaff868af44",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1839349,
+        "known_for_department": "Camera",
+        "name": "J. Yuvaraj",
+        "original_name": "J. Yuvaraj",
+        "popularity": 0.0546,
+        "profile_path": null,
+        "credit_id": "68d66850b112231f4369739d",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2336878,
+        "known_for_department": "Editing",
+        "name": "B. Yugendhran",
+        "original_name": "B. Yugendhran",
+        "popularity": 0.0946,
+        "profile_path": null,
+        "credit_id": "68d668675f663d99ba90ad39",
+        "department": "Editing",
+        "job": "Colorist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2192356,
+        "known_for_department": "Acting",
+        "name": "Naveen Polishetty",
+        "original_name": "Naveen Polishetty",
+        "popularity": 0.3773,
+        "profile_path": "/gRiUWSinhzDdWciFxX4FMRzu30Y.jpg",
+        "credit_id": "6909dc5e762a7b748682adf7",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2450182,
+        "known_for_department": "Writing",
+        "name": "Chandrabose",
+        "original_name": "Chandrabose",
+        "popularity": 0.1385,
+        "profile_path": "/oYwzbTQGJXLcdHsUbkweoDiUw6A.jpg",
+        "credit_id": "694a9b8b57d48dcef1b1d35d",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1770025,
+        "known_for_department": "Sound",
+        "name": "Anurag Kulkarni",
+        "original_name": "Anurag Kulkarni",
+        "popularity": 0.2159,
+        "profile_path": null,
+        "credit_id": "694a9b9cc2cfd514a37acb80",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2464444,
+        "known_for_department": "Sound",
+        "name": "Sameera Bharadwaj",
+        "original_name": "Sameera Bharadwaj",
+        "popularity": 0.1155,
+        "profile_path": null,
+        "credit_id": "694a9ba5958d552c457ac829",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3376634,
+        "known_for_department": "Sound",
+        "name": "Dhanunjay Seepana",
+        "original_name": "Dhanunjay Seepana",
+        "popularity": 0.0817,
+        "profile_path": null,
+        "credit_id": "6965117dee0baeb778284993",
+        "department": "Sound",
+        "job": "Playback Singer"
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Anaganaga Oka Raju | Official Trailer | Naveen Polishetty, Meenakshi Chaudhary | Netflix India",
+        "key": "q1nthwsIxwM",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Trailer",
+        "official": true,
+        "id": "69b12ef43f26e25be31b7e1a",
+        "published_at": "2026-02-09T11:30:00.000Z"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt15427952",
+    "wikidata_id": "Q137713080",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "DE",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2026-01-14T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "GB",
+        "release_dates": [
+          {
+            "certification": "12A",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2026-01-14T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U/A 13+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2026-01-14T00:00:00.000Z",
+            "type": 3
+          },
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "Netflix",
+            "release_date": "2026-02-11T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/sqmkeZ3bdfIrnYV6azaNdIyTS9w.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1152,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/aaV8tCxhyrZK6AFlddJUvPauRbz.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2048
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/xunIWXeyOncn3VFiB0x4GLq5Mze.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [
+      {
+        "aspect_ratio": 2.587,
+        "height": 126,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/tYcmHqgWdtf1UTC1kwNABzxWlUL.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 326
+      },
+      {
+        "aspect_ratio": 1.714,
+        "height": 346,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/1p1CMf7Jw4S8kBufR7DWuT3VJat.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 593
+      },
+      {
+        "aspect_ratio": 7.326,
+        "height": 46,
+        "iso_3166_1": "TR",
+        "iso_639_1": "tr",
+        "file_path": "/nJ9pcjxz0GNMVwoUp6PLrsueLS4.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 337
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.707,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/iCzGY1JD4DXqAjDKhsesKzs9vdK.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 1448
+      },
+      {
+        "aspect_ratio": 0.75,
+        "height": 1702,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/1EMPFJPNA0srjlWrudxjDqdlFFq.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 1277
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "hi",
+        "file_path": "/5sSl9C2M22kD31gIzvEGAGxgm07.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 500
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

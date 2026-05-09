@@ -1,0 +1,171 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 723165,
+  "imdb_id": "tt3963562",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "యశోద కృష్ణ",
+  "overview": "Chronicles the birth and childhood of Krishna, who is prophesied to be the death of his tyrannical uncle Kans. Also tells the story of Krishna's subsequent rebirth as Srinivas during which he is reunited with his foster mother Yashoda.",
+  "popularity": 0.3025,
+  "poster_path": "/mdH5ywgBk4uaOnjNLmo6Gt5TFpk.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "1975-01-20",
+  "revenue": 0,
+  "runtime": 175,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Yashoda Krishna",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1003966,
+        "known_for_department": "Acting",
+        "name": "S. V. Ranga Rao",
+        "original_name": "S. V. Ranga Rao",
+        "popularity": 0.2838,
+        "profile_path": "/yzDKN7DqHOc7OKOrELatN56HMdr.jpg",
+        "cast_id": 1,
+        "character": "Kamsa",
+        "credit_id": "5f076c2d55bc3500331f964c",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1034831,
+        "known_for_department": "Acting",
+        "name": "Jamuna",
+        "original_name": "Jamuna",
+        "popularity": 0.1634,
+        "profile_path": "/vev05ehTlBa4YHb3ZhPdS4eon2q.jpg",
+        "cast_id": 2,
+        "character": "Yashoda",
+        "credit_id": "5f076c46e10f4600373593d7",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 109549,
+        "known_for_department": "Acting",
+        "name": "Sridevi",
+        "original_name": "Sridevi",
+        "popularity": 1.5977,
+        "profile_path": "/6wxquADm0CMYMon04uEI48ZiBBf.jpg",
+        "cast_id": 3,
+        "character": "Krishna (child)",
+        "credit_id": "5f076c885e12000038e6a82f",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335709,
+        "known_for_department": "Acting",
+        "name": "Gummadi",
+        "original_name": "Gummadi",
+        "popularity": 0.4149,
+        "profile_path": "/qKXVkv7RmDKveWWZael013w7h1B.jpg",
+        "cast_id": 4,
+        "character": "Nand",
+        "credit_id": "5f076cc1126ec3003532e55c",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1208888,
+        "known_for_department": "Directing",
+        "name": "Chittajallu Srinivasa Rao",
+        "original_name": "Chittajallu Srinivasa Rao",
+        "popularity": 0.1118,
+        "profile_path": null,
+        "credit_id": "5f076d2e1d1bf400386677bd",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt3963562",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "{\"folded_name\"=>\"Telugu\", \"english_name\"=>\"Telugu\", \"iso_639_1\"=>\"te\", \"native_name\"=>\"Telugu\"}",
+            "note": "",
+            "release_date": "1975-01-20T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "videos": {
+    "results": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/mdH5ywgBk4uaOnjNLmo6Gt5TFpk.jpg",
+        "vote_average": 3.334,
+        "vote_count": 0,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1108,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/qxoWC2JnwHpzaQXLaDQHTyi5W6x.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 739
+      }
+    ]
+  }
+}

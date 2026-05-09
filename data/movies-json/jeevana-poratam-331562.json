@@ -1,0 +1,244 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 331562,
+  "imdb_id": "tt1411876",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Jeevana Poratam",
+  "overview": "Despite being a gold medalist, Bharath remains unemployed. When he turns to corrupt means in order to earn money, his brother comes to his rescue.",
+  "popularity": 0.2175,
+  "poster_path": "/t1311CEzxJbYgRSun74wg1qDvoV.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "1986-04-10",
+  "revenue": 0,
+  "runtime": 145,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Jeevana Poratam",
+  "video": false,
+  "vote_average": 4,
+  "vote_count": 1,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 91555,
+        "known_for_department": "Acting",
+        "name": "Rajinikanth",
+        "original_name": "Rajinikanth",
+        "popularity": 1.8971,
+        "profile_path": "/cQBcrXqcQPfXOQfNfgO3slJM2xi.jpg",
+        "cast_id": 0,
+        "character": "",
+        "credit_id": "550b40489251414693002141",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1208885,
+        "known_for_department": "Acting",
+        "name": "Sobhan Babu",
+        "original_name": "Sobhan Babu",
+        "popularity": 0.4878,
+        "profile_path": "/t7AZwl1hs56SnayALuAlOM4gesj.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "686f62f627620ab32fe806bf",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 562177,
+        "known_for_department": "Acting",
+        "name": "Radikaa Sarathkumar",
+        "original_name": "Radhika Sarathkumar",
+        "popularity": 5.5182,
+        "profile_path": "/kEKzT8HAJw8lfFUtWWd0SoQ9kC9.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "686f630bd2fe0bbfb6e8077a",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584259,
+        "known_for_department": "Acting",
+        "name": "Vijayashanti",
+        "original_name": "Vijayashanti",
+        "popularity": 0.46,
+        "profile_path": "/tUzNRk8vqyEXgi1gE6JCTZcEOHD.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "686f631baf6b528508ed6e89",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 736815,
+        "known_for_department": "Acting",
+        "name": "Naresh",
+        "original_name": "Naresh",
+        "popularity": 0.5508,
+        "profile_path": "/yT9Sgp7y8h3xhlmgzafUwlIXy1H.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "686f6322eb6de7aeae9a52fe",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 141700,
+        "known_for_department": "Acting",
+        "name": "Meenakshi Sheshadri",
+        "original_name": "Meenakshi Sheshadri",
+        "popularity": 1.0418,
+        "profile_path": "/4gJUemgCehzXBE0V1USlgpjjDgA.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "686f6333e467830aac104779",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 141702,
+        "known_for_department": "Acting",
+        "name": "Urvashi",
+        "original_name": "Urvashi",
+        "popularity": 0.7875,
+        "profile_path": "/s5q8iDWeZ8lVBtr87kBXS0S326H.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "686f634b9b2ba2c5c19a5320",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237629,
+        "known_for_department": "Acting",
+        "name": "Sarath Babu",
+        "original_name": "Sarath Babu",
+        "popularity": 0.5311,
+        "profile_path": "/giugWi2EV6GYxmrkn4XKgyvjRGp.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "686f63714621fbdb6751f82c",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 552991,
+        "known_for_department": "Acting",
+        "name": "Kaikala Satyanarayana",
+        "original_name": "Kaikala Satyanarayana",
+        "popularity": 0.4741,
+        "profile_path": "/wEw5EQRIi7KLAQWIMlOyHxZxeuy.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "686f638397e7a847f2ed6b6a",
+        "order": 8
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1997077,
+        "known_for_department": "Production",
+        "name": "T. Subbarami Reddy",
+        "original_name": "T. Subbarami Reddy",
+        "popularity": 0.1216,
+        "profile_path": "/zyl3BsnRM2EqCdE4MrdDoWDwziL.jpg",
+        "credit_id": "5aa88db40e0a263dc702bde2",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5095176,
+        "known_for_department": "Directing",
+        "name": "Rajachandra",
+        "original_name": "Rajachandra",
+        "popularity": 0.0286,
+        "profile_path": null,
+        "credit_id": "686f64372766d73ce6703df3",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt1411876",
+    "wikidata_id": "Q16249672",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "1986-04-10T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/t1311CEzxJbYgRSun74wg1qDvoV.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      }
+    ]
+  }
+}

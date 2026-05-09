@@ -1,0 +1,451 @@
+{
+  "adult": false,
+  "backdrop_path": "/qoA95biFj7fJG0PliltpWnU0hh2.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1608706,
+  "imdb_id": "tt35448249",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Sahakutumbaanam",
+  "overview": "An orphan discovers her neighbor's seemingly perfect life is a lie.",
+  "popularity": 0.4921,
+  "poster_path": "/gICJnkAs2aQ0nLWvlQlbde3rWz3.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2025-12-19",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Sahakutumbaanam",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5938292,
+        "known_for_department": "Acting",
+        "name": "Raam Kiran",
+        "original_name": "Raam Kiran",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "69676e7cdb1b2d67e8686e8b",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1716356,
+        "known_for_department": "Acting",
+        "name": "Megha Akash",
+        "original_name": "Megha Akash",
+        "popularity": 0.5116,
+        "profile_path": "/bo7mHzWxGJUYCju0odcd3KZTBFu.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "69676e881f5090e4c2703792",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 545595,
+        "known_for_department": "Acting",
+        "name": "Rajendra Prasad",
+        "original_name": "Rajendra Prasad",
+        "popularity": 0.6529,
+        "profile_path": "/zh6QJ85g5KbpkjL5fgqlOGddn5C.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "69676e92f3cd5a1e39caceb3",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.0993,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "69676e9b186da16eeb866419",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 544980,
+        "known_for_department": "Acting",
+        "name": "Subhalekha Sudhakar",
+        "original_name": "Subhalekha Sudhakar",
+        "popularity": 0.3743,
+        "profile_path": "/euDijVOTT0dbI3mWBOvU4q4RCk1.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "69676ea3f3cd5a1e39caceb7",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1638503,
+        "known_for_department": "Acting",
+        "name": "Satya",
+        "original_name": "Satya",
+        "popularity": 0.834,
+        "profile_path": "/fWHqfjiqnORU6R2fqwiJnowujdP.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "69676eb1431eb0dc56686de2",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3372657,
+        "known_for_department": "Acting",
+        "name": "Ramesh Bhuvanagiri",
+        "original_name": "Ramesh Bhuvanagiri",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "69676ebbcb7f6a5ddc36d6bd",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 585388,
+        "known_for_department": "Acting",
+        "name": "Rajshri Nair",
+        "original_name": "Rajshri Nair",
+        "popularity": 0.292,
+        "profile_path": "/pYqirSBEogl3hMvnAkXFKmOhPoT.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "69676ec57d36de7500703641",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1289123,
+        "known_for_department": "Acting",
+        "name": "Thagubothu Ramesh",
+        "original_name": "Thagubothu Ramesh",
+        "popularity": 0.3639,
+        "profile_path": "/1D510DdV5c4CnWkzl13zIwAshZQ.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "69676edbafed94d69a487a31",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2049739,
+        "known_for_department": "Acting",
+        "name": "Racha Ravi",
+        "original_name": "Racha Ravi",
+        "popularity": 0.1357,
+        "profile_path": "/fA6mnllOYcjKNiEYnlmkc0syenN.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "69676ee5a614b2121d686e0e",
+        "order": 9
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5914619,
+        "known_for_department": "Directing",
+        "name": "Uday Sharma",
+        "original_name": "Uday Sharma",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6959060f53166d948ee42f70",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5914619,
+        "known_for_department": "Directing",
+        "name": "Uday Sharma",
+        "original_name": "Uday Sharma",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69676ef451a201cac3cace99",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5938293,
+        "known_for_department": "Production",
+        "name": "H Mahadev Goud",
+        "original_name": "H Mahadev Goud",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "69676f0d5460ecce4d687576",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5938294,
+        "known_for_department": "Camera",
+        "name": "Madhu Dasari",
+        "original_name": "Madhu Dasari",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69676f19fcff0f49be687477",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 225317,
+        "known_for_department": "Sound",
+        "name": "Mani Sharma",
+        "original_name": "Mani Sharma",
+        "popularity": 0.2979,
+        "profile_path": "/99QZjwoHVgDxH6FJ5apNNaS0aAP.jpg",
+        "credit_id": "69676f2495548bec84687530",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1652253,
+        "known_for_department": "Writing",
+        "name": "Anantha Sriram",
+        "original_name": "Anantha Sriram",
+        "popularity": 0.1721,
+        "profile_path": "/sAa5frxlT5gv7YtXGdPY9edh0mW.jpg",
+        "credit_id": "69676f2d47072c9a63cacde3",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5888450,
+        "known_for_department": "Writing",
+        "name": "Uma Vanguri",
+        "original_name": "Uma Vanguri",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69676f352b7adbb712687447",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1681235,
+        "known_for_department": "Crew",
+        "name": "Chinni Prakash Mohan",
+        "original_name": "Chinni Prakash Mohan",
+        "popularity": 0.2101,
+        "profile_path": null,
+        "credit_id": "69676f4313ecc2825dec00e9",
+        "department": "Crew",
+        "job": "Choreographer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5938297,
+        "known_for_department": "Production",
+        "name": "Rohith Kumar Padmanabha",
+        "original_name": "Rohith Kumar Padmanabha",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69676f5162c6dfc0c0b1f380",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3379311,
+        "known_for_department": "Editing",
+        "name": "Shashank Mali",
+        "original_name": "Shashank Mali",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "69676f5da2f652b158b1f470",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3325573,
+        "known_for_department": "Editing",
+        "name": "Shiva Sarvani",
+        "original_name": "Shiva Sarvani",
+        "popularity": 0.0579,
+        "profile_path": null,
+        "credit_id": "69676f695f0fc67ba0ec005b",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2162156,
+        "known_for_department": "Art",
+        "name": "P S Varman",
+        "original_name": "P S Varman",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "69676fbc5fa3bbd348487a8d",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5938309,
+        "known_for_department": "Directing",
+        "name": "Kumar Mallarapu",
+        "original_name": "Kumar Mallarapu",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69676fcc2d3642d123b1f3a2",
+        "department": "Directing",
+        "job": "Co-Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3865804,
+        "known_for_department": "Sound",
+        "name": "Sai Maneendhar Reddy",
+        "original_name": "Sai Maneendhar Reddy",
+        "popularity": 0.0734,
+        "profile_path": null,
+        "credit_id": "69676fe2b55a1ba08536d709",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2231790,
+        "known_for_department": "Crew",
+        "name": "V. R. Madhu",
+        "original_name": "V. R. Madhu",
+        "popularity": 0.0239,
+        "profile_path": null,
+        "credit_id": "69676fec6054fb95f1b1f56d",
+        "department": "Crew",
+        "job": "Public Relations"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3318455,
+        "known_for_department": "Production",
+        "name": "Shakthi Graphiste",
+        "original_name": "Shakthi Graphiste",
+        "popularity": 0.0453,
+        "profile_path": null,
+        "credit_id": "69676ff60483c55cd36874db",
+        "department": "Production",
+        "job": "Publicist"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt35448249",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2025-12-19T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/qoA95biFj7fJG0PliltpWnU0hh2.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/gICJnkAs2aQ0nLWvlQlbde3rWz3.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "adult": false,
+  "backdrop_path": "/mrF1ZTvp0BOUXKTgJ0P5e2Y9U6c.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 37,
+      "name": "Western"
+    }
+  ],
+  "homepage": "",
+  "id": 1264369,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Untitled Ram Charan - Sukumar Movie",
+  "overview": "A disgraced former equestrian prodigy returns to the competitive horse-racing world after years in exile, driven by a chance to reclaim the title that was stolen from him. As old wounds reopen and rivalries intensify, his comeback becomes more than a fight for victory. Bound to a fierce, untamed horse that mirrors his own fractured spirit, he must confront obsession, betrayal, and the cost of redemption in a world where pride runs deeper than blood.",
+  "popularity": 0.3685,
+  "poster_path": "/OWfC6XnzWhefnNWj0hYPUpztvQ.jpg",
+  "production_companies": [
+    {
+      "id": 69125,
+      "logo_path": "/7kRvsVRhT76VTbhGLgJ2CrTgdpa.png",
+      "name": "Mythri Movie Makers",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Planned",
+  "tagline": "RARING TO CONQUER",
+  "title": "Untitled Ram Charan - Sukumar Movie",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 147023,
+        "known_for_department": "Acting",
+        "name": "Ram Charan",
+        "original_name": "Ram Charan",
+        "popularity": 1.7401,
+        "profile_path": "/twGqYUCR0Yh33j3TcgRTZRBRhTd.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "6601511d0929f6017e9dc059",
+        "order": 0
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237051,
+        "known_for_department": "Directing",
+        "name": "Sukumar",
+        "original_name": "Sukumar",
+        "popularity": 0.5368,
+        "profile_path": "/jUnBwmEjf82UxUDQpJI0CwscfHC.jpg",
+        "credit_id": "66015138197de40163180ba3",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237681,
+        "known_for_department": "Sound",
+        "name": "Devi Sri Prasad",
+        "original_name": "Devi Sri Prasad",
+        "popularity": 0.5725,
+        "profile_path": "/4Be4HLS7qqbVPfKyA3yHvtpObFc.jpg",
+        "credit_id": "6601517b0929f6017e9dc090",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237051,
+        "known_for_department": "Directing",
+        "name": "Sukumar",
+        "original_name": "Sukumar",
+        "popularity": 0.5368,
+        "profile_path": "/jUnBwmEjf82UxUDQpJI0CwscfHC.jpg",
+        "credit_id": "696b50c5c3c913b58720c5a0",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1648660,
+        "known_for_department": "Production",
+        "name": "Naveen Yerneni",
+        "original_name": "Naveen Yerneni",
+        "popularity": 0.2639,
+        "profile_path": "/iestiUKLGHblxeQtI0DF5ENCxLW.jpg",
+        "credit_id": "696b50e82ca1f7733d8fc2fa",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1648659,
+        "known_for_department": "Production",
+        "name": "Y. Ravi Shankar",
+        "original_name": "Y. Ravi Shankar",
+        "popularity": 0.1851,
+        "profile_path": "/stZ6Fzi96nUlWyomx7hhXcqBQiX.jpg",
+        "credit_id": "696b50fc0e3b8c398cf9415a",
+        "department": "Production",
+        "job": "Producer"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": []
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 374443,
+        "name": "rc17"
+      },
+      {
+        "id": 374444,
+        "name": "rc sukku"
+      },
+      {
+        "id": 374445,
+        "name": "raring to conquer"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": []
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "RC 17",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "RC Sukumar 2",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Raring To Conquer",
+        "type": ""
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.779,
+        "height": 1594,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/mrF1ZTvp0BOUXKTgJ0P5e2Y9U6c.jpg",
+        "vote_average": 0,
+        "vote_count": 1,
+        "width": 2835
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.711,
+        "height": 1507,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/OWfC6XnzWhefnNWj0hYPUpztvQ.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1072
+      }
+    ]
+  }
+}

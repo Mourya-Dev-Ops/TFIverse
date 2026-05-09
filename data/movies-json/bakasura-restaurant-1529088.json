@@ -1,0 +1,248 @@
+{
+  "adult": false,
+  "backdrop_path": "/6tDhr9CRWQ1xWm4LbS7fIVzNFSs.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 27,
+      "name": "Horror"
+    }
+  ],
+  "homepage": "",
+  "id": 1529088,
+  "imdb_id": "tt36793656",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "బకాసుర రెస్టారెంట్",
+  "overview": "A group of five youngsters decides to make a wish, but it backfires as it leads them to unveil a supernatural force around them.",
+  "popularity": 0.1904,
+  "poster_path": "/pyznPP82WBdWOYvKHbQq9bDv4Ng.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2025-08-08",
+  "revenue": 0,
+  "runtime": 158,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Bakasura Restaurant",
+  "video": false,
+  "vote_average": 6.333,
+  "vote_count": 3,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1638475,
+        "known_for_department": "Acting",
+        "name": "Praveen",
+        "original_name": "Praveen",
+        "popularity": 0.2637,
+        "profile_path": "/aBegVOvddJViXAPBL5k8MXnZCYA.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "689c12684edcd1564f268b9b",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1638514,
+        "known_for_department": "Acting",
+        "name": "Harsha Chemudu",
+        "original_name": "Viva Harsha",
+        "popularity": 0.4872,
+        "profile_path": "/be0atwoQTudy7WaVCNwWbQuxjvG.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "689c1277f44e894201c700de",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2262423,
+        "known_for_department": "Acting",
+        "name": "Ramachandra Raju",
+        "original_name": "Ramachandra Raju",
+        "popularity": 0.5164,
+        "profile_path": "/kU1a4H8o1IQA25Lyq3cW70aufhT.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "689c128b9e81e6e63b268a3b",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5697888,
+        "known_for_department": "Acting",
+        "name": "Ramya priya",
+        "original_name": "Ramya priya",
+        "popularity": 0.047,
+        "profile_path": null,
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "68cccd4e2565e371931493da",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2008676,
+        "known_for_department": "Camera",
+        "name": "Bala Saraswathi",
+        "original_name": "Bala Saraswathi",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "68cccd926dacf3c6060a879b",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5697889,
+        "known_for_department": "Writing",
+        "name": "SJ shiva",
+        "original_name": "SJ shiva",
+        "popularity": 0.0362,
+        "profile_path": null,
+        "credit_id": "68cccdae8f23aa82b20a87fe",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5697889,
+        "known_for_department": "Writing",
+        "name": "SJ shiva",
+        "original_name": "SJ shiva",
+        "popularity": 0.0362,
+        "profile_path": null,
+        "credit_id": "68cccdba22cd1ef7b8149498",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt36793656",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Bakasura Restaurant Movie Official Trailer || Praveen || Harsha Chemudu || Garuda Ram || MTB",
+        "key": "TsuJbNdaBJw",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Trailer",
+        "official": false,
+        "id": "68ded9b57bd54e69a5405ec7",
+        "published_at": "2025-08-03T13:26:33.000Z"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U/A 16+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-08-08T00:00:00.000Z",
+            "type": 3
+          },
+          {
+            "certification": "U/A 16+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-09-07T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/6tDhr9CRWQ1xWm4LbS7fIVzNFSs.jpg",
+        "vote_average": 0,
+        "vote_count": 1,
+        "width": 1920
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1280,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/pyznPP82WBdWOYvKHbQq9bDv4Ng.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 854
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/m2R8jh9inapR8Ww6fJt7OOjSTGE.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/3LfZOBatuMXdZrwA9A24e52EbHQ.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1365
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "adult": false,
+  "backdrop_path": "/5GkUJSoWFon7aEDDAOZ2gaANDSZ.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1685629,
+  "imdb_id": "tt29722301",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Sodhara",
+  "overview": "Sodara is a heartfelt story set in a rural village where deep-rooted traditions and strong family values shape everyday life. At its center are two brothers-Chiru, the elder, known for his responsibility and unwavering sense of duty, and Pavan, the younger, whose charm and impulsiveness often get him into trouble.",
+  "popularity": 0.1998,
+  "poster_path": "/7Kw1e0zhNciVNFI4g8C0PENVqyq.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2026-04-25",
+  "revenue": 0,
+  "runtime": 130,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Sodhara",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt29722301",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U/A 13+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "aha",
+            "release_date": "2026-04-25T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/5GkUJSoWFon7aEDDAOZ2gaANDSZ.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1920
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/7Kw1e0zhNciVNFI4g8C0PENVqyq.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 900,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/hJrLhbUUi45lvLdUo85zLlYZRKe.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 600
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1505,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/1QjSdd2GHKcbzGCKN942JHt4MRQ.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1003
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

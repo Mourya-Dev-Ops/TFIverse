@@ -1,0 +1,90 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1605200,
+  "imdb_id": "tt32641580",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Bagundi",
+  "overview": "Riya lives a quiet life with her caring mother and paralyzed father. When three suitors arrive for matchmaking, strange paranormal events drive them away. But soon, it's revealed they came with a deadly intent-to kill Riya. As her mother returns with a hidden diary, chilling truths and a dark psychotic crime unravel, exposing who the real culprit is and why Riya's life is in danger.",
+  "popularity": 0.0478,
+  "poster_path": "/he1gVc9Dz5CQnWTlIX8TnDGwHxT.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2024-09-20",
+  "revenue": 0,
+  "runtime": 107,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Bagundi",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt32641580",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2024-09-20T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 900,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/he1gVc9Dz5CQnWTlIX8TnDGwHxT.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 600
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

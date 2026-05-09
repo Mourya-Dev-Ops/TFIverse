@@ -1,0 +1,301 @@
+{
+  "adult": false,
+  "backdrop_path": "/9KbFJLSX6KWSFLcgHCEoim6wRqX.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1508081,
+  "imdb_id": "tt26489351",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Jagamerigina Satyam",
+  "overview": "In 1994, in the picturesque village of Dimda on the Telangana border, this is the gripping story of Satyam-a kind-hearted farmer's son. His love for Saritha, the village sarpanch's niece, sparks jealousy and rage, leading to betrayal.",
+  "popularity": 0.0214,
+  "poster_path": "/vkiq4ZonUTNq5LRxFZVPNLQm1Pe.jpg",
+  "production_companies": [
+    {
+      "id": 266992,
+      "logo_path": null,
+      "name": "Amrutha Satyanarayana Creations",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2025-04-18",
+  "revenue": 0,
+  "runtime": 141,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Jagamerigina Satyam",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5543273,
+        "known_for_department": "Acting",
+        "name": "Avinash Varma",
+        "original_name": "Avinash Varma",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "686775284d8ca860365e368f",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5543274,
+        "known_for_department": "Acting",
+        "name": "Aadya Reddy",
+        "original_name": "Aadya Reddy",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "68677539d394b3118e79e192",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5543276,
+        "known_for_department": "Acting",
+        "name": "Neelima Pathakamsetti",
+        "original_name": "Neelima Pathakamsetti",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "68677557b219068e1deeb403",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5543279,
+        "known_for_department": "Acting",
+        "name": "Vasudeva Rao",
+        "original_name": "Vasudeva Rao",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "686775a607d616dd2b6772a5",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5543280,
+        "known_for_department": "Acting",
+        "name": "Nithin Bhogaraju",
+        "original_name": "Nithin Bhogaraju",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "686775b942a50da6dd991fb5",
+        "order": 4
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5543282,
+        "known_for_department": "Directing",
+        "name": "Tirupathi Pale",
+        "original_name": "Tirupathi Pale",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "686775d823993319f31b23e8",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1543707,
+        "known_for_department": "Editing",
+        "name": "Amar Reddy Kudumula",
+        "original_name": "Amar Reddy Kudumula",
+        "popularity": 0.0765,
+        "profile_path": null,
+        "credit_id": "686775f25679294983eeb3ac",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2121281,
+        "known_for_department": "Sound",
+        "name": "Suresh Bobbili",
+        "original_name": "Suresh Bobbili",
+        "popularity": 0.0836,
+        "profile_path": null,
+        "credit_id": "68677622d394b3118e79e1a0",
+        "department": "Sound",
+        "job": "Music Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5543284,
+        "known_for_department": "Crew",
+        "name": "Shoyabh",
+        "original_name": "Shoyabh",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "68677655ba0015204d9bc81f",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1335922,
+        "known_for_department": "Crew",
+        "name": "Jithu Master",
+        "original_name": "Jithu Master",
+        "popularity": 0.0495,
+        "profile_path": null,
+        "credit_id": "686777bf42a50da6dd991fc1",
+        "department": "Crew",
+        "job": "Choreographer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5543282,
+        "known_for_department": "Directing",
+        "name": "Tirupathi Pale",
+        "original_name": "Tirupathi Pale",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6867800b9c5ad7b693eeb440",
+        "department": "Writing",
+        "job": "Writer"
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Jagamerigina Satyam Telugu Movie Trailer | Suresh Bobbili | Tirupathi Pale | Mango Music",
+        "key": "sJ-pAJxarnI",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Trailer",
+        "official": false,
+        "id": "6867789202e07c3bf61b2434",
+        "published_at": "2025-04-14T10:30:36.000Z"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt26489351",
+    "wikidata_id": "Q133934123",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/9KbFJLSX6KWSFLcgHCEoim6wRqX.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/itFmxDECD0ELuk9sRxfjz3wQ1WP.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/vkiq4ZonUTNq5LRxFZVPNLQm1Pe.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/muxkxdZvXclX3RKRKAweBxiwW5D.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 1000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-04-18T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    }
+  ],
+  "homepage": "",
+  "id": 1544325,
+  "imdb_id": "tt38263122",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "వాయుపుత్ర",
+  "overview": "",
+  "popularity": 0.0478,
+  "poster_path": "/8uCuTRuvN619sl00NTkLPOthN6T.jpg",
+  "production_companies": [
+    {
+      "id": 107352,
+      "logo_path": "/qNLrEbrNigDNR6QgaRtwXtRIwgx.png",
+      "name": "Sithara Entertainments",
+      "origin_country": "IN"
+    },
+    {
+      "id": 166697,
+      "logo_path": null,
+      "name": "Fortune Four Cinemas",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2026-10-16",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "",
+  "title": "Vayuputra",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1380060,
+        "known_for_department": "Writing",
+        "name": "Chandoo Mondeti",
+        "original_name": "Chandoo Mondeti",
+        "popularity": 0.2891,
+        "profile_path": null,
+        "credit_id": "68c1197574c5e036819c203e",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1380060,
+        "known_for_department": "Writing",
+        "name": "Chandoo Mondeti",
+        "original_name": "Chandoo Mondeti",
+        "popularity": 0.2891,
+        "profile_path": null,
+        "credit_id": "68c1199d79652a04e74e6c5c",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3355377,
+        "known_for_department": "Production",
+        "name": "Sai Soujanya",
+        "original_name": "Sai Soujanya",
+        "popularity": 0.1795,
+        "profile_path": null,
+        "credit_id": "68c119aacd29e6487206ac19",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1790294,
+        "known_for_department": "Production",
+        "name": "Suryadevara Naga Vamsi",
+        "original_name": "Suryadevara Naga Vamsi",
+        "popularity": 0.1702,
+        "profile_path": "/hLJpBV45WFqS3sYxS3zmBhcHAoq.jpg",
+        "credit_id": "68c119ca1db6f1cff898c9ba",
+        "department": "Production",
+        "job": "Producer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt38263122",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2026-10-16T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1749,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/8uCuTRuvN619sl00NTkLPOthN6T.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1166
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

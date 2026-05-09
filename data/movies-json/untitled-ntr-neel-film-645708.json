@@ -1,0 +1,704 @@
+{
+  "adult": false,
+  "backdrop_path": "/nKxhIN3zSRB47ED32MNIipzaPGK.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 645708,
+  "imdb_id": "tt14697030",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Untitled NTR - Neel Film",
+  "overview": "",
+  "popularity": 1.3467,
+  "poster_path": "/ArRnaOR9m0qpTcaFSA0XbbdLU8X.jpg",
+  "production_companies": [
+    {
+      "id": 69125,
+      "logo_path": "/7kRvsVRhT76VTbhGLgJ2CrTgdpa.png",
+      "name": "Mythri Movie Makers",
+      "origin_country": "IN"
+    },
+    {
+      "id": 163427,
+      "logo_path": null,
+      "name": "N. T. R. Arts",
+      "origin_country": "IN"
+    },
+    {
+      "id": 3522,
+      "logo_path": "/d3u51JgEP5KwPfxS13ocqvtzZeX.png",
+      "name": "T-Series",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2027-06-10",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "",
+  "title": "Untitled NTR - Neel Film",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 148037,
+        "known_for_department": "Acting",
+        "name": "N.T. Rama Rao Jr.",
+        "original_name": "N.T. Rama Rao Jr.",
+        "popularity": 3.1771,
+        "profile_path": "/5ycQgZ3SPUa12bq0yn1jpToBq9X.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "61f7d7cddcf875292edcc88c",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2252714,
+        "known_for_department": "Acting",
+        "name": "Rukmini Vasanth",
+        "original_name": "Rukmini Vasanth",
+        "popularity": 0.6899,
+        "profile_path": "/tNK06M8gRSMSiaeD2rYc855YbvF.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "67739ba04111599e3812a7f2",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 72118,
+        "known_for_department": "Acting",
+        "name": "Anil Kapoor",
+        "original_name": "Anil Kapoor",
+        "popularity": 1.6565,
+        "profile_path": "/6RcrXGFzO50Tazqc8tbDlzYKvTd.jpg",
+        "cast_id": 24,
+        "character": "",
+        "credit_id": "68b948b6dc9395075f8cdb85",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584764,
+        "known_for_department": "Acting",
+        "name": "Biju Menon",
+        "original_name": "Biju Menon",
+        "popularity": 1.5977,
+        "profile_path": "/kSnzfoZphQGrnOBH7MfU3HMTKGJ.jpg",
+        "cast_id": 37,
+        "character": "",
+        "credit_id": "6910a7aca5ef06b8d24c7cf3",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1697412,
+        "known_for_department": "Acting",
+        "name": "Roshan Mathew",
+        "original_name": "Roshan Mathew",
+        "popularity": 0.5479,
+        "profile_path": "/9BzqaEdErGxF1EDELQEXpnRsqQu.jpg",
+        "cast_id": 47,
+        "character": "",
+        "credit_id": "69fb083b3c674f4c79cd0def",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 89153,
+        "known_for_department": "Acting",
+        "name": "Prakash Raj",
+        "original_name": "Prakash Raj",
+        "popularity": 2.9783,
+        "profile_path": "/dJvFZOXmZdkYCOUcKTXQAhBcAoH.jpg",
+        "cast_id": 46,
+        "character": "",
+        "credit_id": "69fb081d5bf1b4faa75b67a2",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 82078,
+        "known_for_department": "Acting",
+        "name": "Khushboo",
+        "original_name": "Khushboo",
+        "popularity": 3.2225,
+        "profile_path": "/cu6ABz6a7iR1hLlCvBUzDSM2vag.jpg",
+        "cast_id": 39,
+        "character": "",
+        "credit_id": "69ae58cf60b777ea46fcbe92",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 559738,
+        "known_for_department": "Acting",
+        "name": "Rajiv Kanakala",
+        "original_name": "Rajiv Kanakala",
+        "popularity": 0.7641,
+        "profile_path": "/29Czs1esSU744TOe3ddDzCuCa0g.jpg",
+        "cast_id": 44,
+        "character": "",
+        "credit_id": "69ef64ea52feb6b54f029b33",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1705304,
+        "known_for_department": "Acting",
+        "name": "Bimal Oberoi",
+        "original_name": "Bimal Oberoi",
+        "popularity": 0.1064,
+        "profile_path": "/zAbX2B87d3XqsIq4Bus94HjPTU3.jpg",
+        "cast_id": 40,
+        "character": "",
+        "credit_id": "69cf6abb74522763e44b549d",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2018475,
+        "known_for_department": "Acting",
+        "name": "Alexandr Mizev",
+        "original_name": "Александр Мизёв",
+        "popularity": 0.7352,
+        "profile_path": "/3zT2oGWL4k8CtJoct8HCxvOvsMZ.jpg",
+        "cast_id": 45,
+        "character": "",
+        "credit_id": "69f8e4231b5dfdef4f9ddd5d",
+        "order": 9
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1065421,
+        "known_for_department": "Acting",
+        "name": "Kalyan Ram",
+        "original_name": "Kalyan Ram",
+        "popularity": 0.8677,
+        "profile_path": "/awI6PFXlXu59xHEYKONSr0v0SHZ.jpg",
+        "credit_id": "62892f85e267de00677fadbf",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2182258,
+        "known_for_department": "Directing",
+        "name": "Prashanth Neel",
+        "original_name": "ಪ್ರಶಾಂತ್ ನೀಲ್",
+        "popularity": 0.6737,
+        "profile_path": "/oq6ydaurgC4NueXuo64R5QoFnfp.jpg",
+        "credit_id": "659e010c24b33300f156fd66",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1648660,
+        "known_for_department": "Production",
+        "name": "Naveen Yerneni",
+        "original_name": "Naveen Yerneni",
+        "popularity": 0.2639,
+        "profile_path": "/iestiUKLGHblxeQtI0DF5ENCxLW.jpg",
+        "credit_id": "641f419f23be4600df9878bc",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1648659,
+        "known_for_department": "Production",
+        "name": "Y. Ravi Shankar",
+        "original_name": "Y. Ravi Shankar",
+        "popularity": 0.1851,
+        "profile_path": "/stZ6Fzi96nUlWyomx7hhXcqBQiX.jpg",
+        "credit_id": "641f427a08cf8700defddd1c",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2006306,
+        "known_for_department": "Sound",
+        "name": "Ravi Basrur",
+        "original_name": "Ravi Basrur",
+        "popularity": 0.1975,
+        "profile_path": "/mlHRC8r4J3ZND7w80B59x3WeX1I.jpg",
+        "credit_id": "66b5ba74ecc808bbc9c5eb38",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2200149,
+        "known_for_department": "Camera",
+        "name": "Bhuvan Gowda",
+        "original_name": "Bhuvan Gowda",
+        "popularity": 0.1025,
+        "profile_path": null,
+        "credit_id": "66b5bbec95eff952feae160e",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2111277,
+        "known_for_department": "Crew",
+        "name": "Chetan D'Souza",
+        "original_name": "Chetan D'Souza",
+        "popularity": 0.255,
+        "profile_path": null,
+        "credit_id": "67a8e15cde283c900ec8d6b9",
+        "department": "Crew",
+        "job": "Stunt Coordinator"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 102252,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Anaita Shroff Adajania",
+        "original_name": "Anaita Shroff Adajania",
+        "popularity": 0.332,
+        "profile_path": "/yLDxdFAcESXvsfgZKv8ob8TSWvw.jpg",
+        "credit_id": "67ab13b45c0e67e56bbb2b02",
+        "department": "Costume & Make-Up",
+        "job": "Costume Designer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2182258,
+        "known_for_department": "Directing",
+        "name": "Prashanth Neel",
+        "original_name": "ಪ್ರಶಾಂತ್ ನೀಲ್",
+        "popularity": 0.6737,
+        "profile_path": "/oq6ydaurgC4NueXuo64R5QoFnfp.jpg",
+        "credit_id": "68024b8cd317be5e5c992c88",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5669765,
+        "known_for_department": "Sound",
+        "name": "Atharva Mulye",
+        "original_name": "Atharva Mulye",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "68b948d40251feffce94638a",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5669767,
+        "known_for_department": "Sound",
+        "name": "Reapstar",
+        "original_name": "Reapstar",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "68b948e04604258c058cdc45",
+        "department": "Sound",
+        "job": "Music Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5498717,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Komal Vora",
+        "original_name": "Komal Vora",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "68b948f355ff55b5e58cdc72",
+        "department": "Costume & Make-Up",
+        "job": "Assistant Costume Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3930599,
+        "known_for_department": "Sound",
+        "name": "Prathap",
+        "original_name": "Prathap",
+        "popularity": 0.0543,
+        "profile_path": null,
+        "credit_id": "68b949291db6f1cff898a9f8",
+        "department": "Sound",
+        "job": "Sound Recordist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1395007,
+        "known_for_department": "Sound",
+        "name": "Arun S Mani",
+        "original_name": "Arun S Mani",
+        "popularity": 0.1355,
+        "profile_path": null,
+        "credit_id": "68b94949c9b90846f1068d10",
+        "department": "Sound",
+        "job": "Supervising Sound Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5669768,
+        "known_for_department": "Sound",
+        "name": "Sreehari BR",
+        "original_name": "Sreehari BR",
+        "popularity": 0.0362,
+        "profile_path": null,
+        "credit_id": "68b94978538501451b4e4e05",
+        "department": "Sound",
+        "job": "Sound Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4287798,
+        "known_for_department": "Sound",
+        "name": "Al Arjun",
+        "original_name": "Al Arjun",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "68b9498c7618bd35c11bb5bc",
+        "department": "Sound",
+        "job": "Sound Engineer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2199630,
+        "known_for_department": "Sound",
+        "name": "Raju Albert",
+        "original_name": "Raju Albert",
+        "popularity": 0.1521,
+        "profile_path": null,
+        "credit_id": "68b949a3be9f47ef5d9463d9",
+        "department": "Sound",
+        "job": "Sound Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5012927,
+        "known_for_department": "Editing",
+        "name": "Pranav Sri Prasad",
+        "original_name": "Pranav Sri Prasad",
+        "popularity": 0.0286,
+        "profile_path": null,
+        "credit_id": "68b949b810647f072c1bb495",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3289006,
+        "known_for_department": "Production",
+        "name": "Kosaraju Harikrishna",
+        "original_name": "Kosaraju Harikrishna",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "68b94a25c7cfcca8619bb239",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237968,
+        "known_for_department": "Crew",
+        "name": "Raju Sundaram",
+        "original_name": "Raju Sundaram",
+        "popularity": 0.5074,
+        "profile_path": "/zNnOzgKlosRdmO4bG8aDMAYEWWs.jpg",
+        "credit_id": "6977aa9b7250d9fd6f69518a",
+        "department": "Crew",
+        "job": "Choreographer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1669621,
+        "known_for_department": "Production",
+        "name": "Gulshan Kumar",
+        "original_name": "Gulshan Kumar",
+        "popularity": 0.3102,
+        "profile_path": "/mVeAflCvh2duDd1KprjelOrSwiV.jpg",
+        "credit_id": "69e784b26c99f475d7d19478",
+        "department": "Crew",
+        "job": "Presenter"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 83595,
+        "known_for_department": "Production",
+        "name": "Bhushan Kumar",
+        "original_name": "Bhushan Kumar",
+        "popularity": 0.5525,
+        "profile_path": "/luUFnGoGwjwZ5CHAePRIQpAwT5b.jpg",
+        "credit_id": "69e784c30fe5cdc58919615d",
+        "department": "Crew",
+        "job": "Presenter"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 141882,
+        "known_for_department": "Production",
+        "name": "Krishan Kumar",
+        "original_name": "Krishan Kumar",
+        "popularity": 0.4439,
+        "profile_path": "/gw2jzzkdRyIHglwieCiFSQ9cLZZ.jpg",
+        "credit_id": "69e784e38d8a8aa335196189",
+        "department": "Crew",
+        "job": "Presenter"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 587735,
+        "known_for_department": "Crew",
+        "name": "Peter Hein",
+        "original_name": "Peter Hein",
+        "popularity": 0.4562,
+        "profile_path": "/881LTUkVppdwtFaBDLgd70SEEBe.jpg",
+        "credit_id": "69fb08eaeb4593fc6664d3a0",
+        "department": "Crew",
+        "job": "Stunt Coordinator"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2027-06-11T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      },
+      {
+        "iso_3166_1": "US",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "Premieres",
+            "release_date": "2027-06-10T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1169,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/nKxhIN3zSRB47ED32MNIipzaPGK.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2078
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/ArRnaOR9m0qpTcaFSA0XbbdLU8X.jpg",
+        "vote_average": 3.334,
+        "vote_count": 2,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/a8LZTIQfGc75djZU4o3FsnstpwP.jpg",
+        "vote_average": 1.75,
+        "vote_count": 4,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/8PoMe365Ktq7TRQHsIY2c5EQ27M.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/saJ3hQSNIX9NuufeDU1EQP3GwNU.jpg",
+        "vote_average": 1.222,
+        "vote_count": 3,
+        "width": 1365
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2999,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/pxrmIjhmnigF7MPDbD0k1M5epRx.jpg",
+        "vote_average": 0.166,
+        "vote_count": 2,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/4MJTwfCl6T8Fnbfs89PDGQqaIUu.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/1zNZ2rDF4I0hzSU5dwusboAIaEp.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt14697030",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": ""
+  },
+  "videos": {
+    "results": []
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Dragon",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "NTR Neel",
+        "type": "Working Title"
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "NTRNeel",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "NTR 31",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "NTR31",
+        "type": ""
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 14636,
+        "name": "india"
+      },
+      {
+        "id": 34079,
+        "name": "death"
+      },
+      {
+        "id": 208992,
+        "name": "1960s"
+      }
+    ]
+  }
+}

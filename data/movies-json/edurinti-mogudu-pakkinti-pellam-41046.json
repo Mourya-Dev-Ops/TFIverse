@@ -1,0 +1,151 @@
+{
+  "adult": false,
+  "backdrop_path": "/y5mPe6BhiSrRbnCcS7gVk0k44zj.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 41046,
+  "imdb_id": "tt0268279",
+  "origin_country": [
+    "US"
+  ],
+  "original_language": "te",
+  "original_title": "Edurinti Mogudu Pakkinti Pellam",
+  "overview": "Edurinti Mogudu Pakkinti Pellam",
+  "popularity": 0.2243,
+  "poster_path": "/frPGMd2neZ8dMq1uhda2OmhfHjl.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "1991-08-30",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Released",
+  "tagline": "",
+  "title": "Edurinti Mogudu Pakkinti Pellam",
+  "video": false,
+  "vote_average": 8,
+  "vote_count": 3,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 545595,
+        "known_for_department": "Acting",
+        "name": "Rajendra Prasad",
+        "original_name": "Rajendra Prasad",
+        "popularity": 0.7246,
+        "profile_path": "/zh6QJ85g5KbpkjL5fgqlOGddn5C.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "615d0eb666a7c30062ff66d9",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2716214,
+        "known_for_department": "Acting",
+        "name": "Divyavani",
+        "original_name": "Divyavani",
+        "popularity": 0.0898,
+        "profile_path": "/62R2DPsFIRqivkg3yZrvrqJI573.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "615d0f44dbf14400277e4ce7",
+        "order": 1
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2049688,
+        "known_for_department": "Directing",
+        "name": "Narasimha Rao Relangi",
+        "original_name": "Narasimha Rao Relangi",
+        "popularity": 0.1251,
+        "profile_path": null,
+        "credit_id": "62c771fa58361b004d2bf794",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2049688,
+        "known_for_department": "Directing",
+        "name": "Narasimha Rao Relangi",
+        "original_name": "Narasimha Rao Relangi",
+        "popularity": 0.1251,
+        "profile_path": null,
+        "credit_id": "62c77223f74f5f0055c90d2a",
+        "department": "Writing",
+        "job": "Writer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "1991-08-30T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt0268279",
+    "wikidata_id": "Q5341336",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/y5mPe6BhiSrRbnCcS7gVk0k44zj.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/frPGMd2neZ8dMq1uhda2OmhfHjl.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

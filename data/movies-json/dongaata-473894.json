@@ -1,0 +1,572 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 473894,
+  "imdb_id": "tt1579756",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "దొంగాట",
+  "overview": "A thief boards a train intending to steal a young woman’s necklace, but after she’s betrayed by her lover, he unexpectedly becomes the one she can rely on.",
+  "popularity": 0.3043,
+  "poster_path": "/goWN0jHzSOq44qKhdLBMhijzYp0.jpg",
+  "production_companies": [
+    {
+      "id": 98173,
+      "logo_path": "/fVON6GgfYCShJHuqrM6QugWyNSY.png",
+      "name": "Sri Durga Arts",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [],
+  "release_date": "1997-06-11",
+  "revenue": 0,
+  "runtime": 138,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Dongaata",
+  "video": false,
+  "vote_average": 7,
+  "vote_count": 3,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 465273,
+        "known_for_department": "Acting",
+        "name": "Jagapati Babu",
+        "original_name": "Jagapati Babu",
+        "popularity": 0.7855,
+        "profile_path": "/bm72k6FmDxhxtZsl1xvxoz88Hkm.jpg",
+        "cast_id": 1,
+        "character": "Raju",
+        "credit_id": "6073dbd2c9dbf9002a8cde45",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 288587,
+        "known_for_department": "Acting",
+        "name": "Soundarya",
+        "original_name": "Soundarya",
+        "popularity": 0.5099,
+        "profile_path": "/pqACucRtWoz3mwhPeSLa9OATilN.jpg",
+        "cast_id": 2,
+        "character": "Subbalakshmi",
+        "credit_id": "6073dbe3c9dbf90058799b96",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584479,
+        "known_for_department": "Acting",
+        "name": "Suresh",
+        "original_name": "Suresh",
+        "popularity": 0.4799,
+        "profile_path": "/jT78sxmRMh37YEFvZiz2Qfyri1N.jpg",
+        "cast_id": 3,
+        "character": "Prakash Rao",
+        "credit_id": "6073dc18cdf2e6006e9be4ea",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1196297,
+        "known_for_department": "Acting",
+        "name": "Ritu Shivpuri",
+        "original_name": "Ritu Shivpuri",
+        "popularity": 0.1978,
+        "profile_path": "/9q5dgtLy0SOlr49PmElgqMAAHn1.jpg",
+        "cast_id": 4,
+        "character": "Lavanya",
+        "credit_id": "6073dc287c6de300296974ad",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 141695,
+        "known_for_department": "Acting",
+        "name": "Kota Srinivasa Rao",
+        "original_name": "Kota Srinivasa Rao",
+        "popularity": 0.6862,
+        "profile_path": "/iEJprOPpeLhnyxBu2KdiJtw5Adb.jpg",
+        "cast_id": 5,
+        "character": "Subbalakshmi's father",
+        "credit_id": "6073dc322a210c0058a5e1d9",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.0993,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 6,
+        "character": "Constable",
+        "credit_id": "6073dc3c2a210c0058a5e1f4",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584675,
+        "known_for_department": "Acting",
+        "name": "Babu Mohan",
+        "original_name": "Babu Mohan",
+        "popularity": 0.3566,
+        "profile_path": "/v6p1UjzbjGmkTf0yI2hz44GZbxc.jpg",
+        "cast_id": 7,
+        "character": "Pimp",
+        "credit_id": "6073dc502fe2fa0057288e9f",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584511,
+        "known_for_department": "Acting",
+        "name": "Mallikarjuna Rao",
+        "original_name": "Mallikarjuna Rao",
+        "popularity": 0.4229,
+        "profile_path": "/nRTgNcAdSLqRmk5mQXR3Lz3HXbY.jpg",
+        "cast_id": 8,
+        "character": "Ambothula Appa Rao",
+        "credit_id": "6073dc5b2a210c0058a5e21a",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237629,
+        "known_for_department": "Acting",
+        "name": "Sarath Babu",
+        "original_name": "Sarath Babu",
+        "popularity": 0.5311,
+        "profile_path": "/giugWi2EV6GYxmrkn4XKgyvjRGp.jpg",
+        "cast_id": 9,
+        "character": "ASP Vikram",
+        "credit_id": "6073dc64f9253200291f7867",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1339743,
+        "known_for_department": "Acting",
+        "name": "Janaki",
+        "original_name": "Janaki",
+        "popularity": 0.2196,
+        "profile_path": null,
+        "cast_id": 10,
+        "character": "Subbalakshmi's mother",
+        "credit_id": "6073dc6f2a09bc00578d2c3b",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1107022,
+        "known_for_department": "Acting",
+        "name": "M. Balayya",
+        "original_name": "M. Balayya",
+        "popularity": 0.1489,
+        "profile_path": null,
+        "cast_id": 11,
+        "character": "Raju's father",
+        "credit_id": "6073dc7f2a210c0058a5e256",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586556,
+        "known_for_department": "Acting",
+        "name": "Sudhakar",
+        "original_name": "Sudhakar",
+        "popularity": 0.8908,
+        "profile_path": "/5KLwpe33RflDnJDE1mtychosmLl.jpg",
+        "cast_id": 28,
+        "character": "Paropakari Papanna",
+        "credit_id": "694c04f924f9d0fccf2fb153",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 544980,
+        "known_for_department": "Acting",
+        "name": "Subhalekha Sudhakar",
+        "original_name": "Subhalekha Sudhakar",
+        "popularity": 0.5566,
+        "profile_path": "/euDijVOTT0dbI3mWBOvU4q4RCk1.jpg",
+        "cast_id": 29,
+        "character": "Prasad",
+        "credit_id": "694c050768435f9fa68eaa2f",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1341485,
+        "known_for_department": "Acting",
+        "name": "Ananth Babu",
+        "original_name": "Ananth Babu",
+        "popularity": 0.2663,
+        "profile_path": "/6gtD5IYIbEG8KzaSDMDrDWGvTnR.jpg",
+        "cast_id": 30,
+        "character": "Hotel Owner",
+        "credit_id": "694c052c763d7ced0b2fb171",
+        "order": 13
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1661045,
+        "known_for_department": "Acting",
+        "name": "Gautam Raju",
+        "original_name": "Gautam Raju",
+        "popularity": 0.2761,
+        "profile_path": null,
+        "cast_id": 31,
+        "character": "SI",
+        "credit_id": "694c053f2cd33f4edb8cd5c2",
+        "order": 14
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4240531,
+        "known_for_department": "Acting",
+        "name": "Gadiraju Subba Rao",
+        "original_name": "Gadiraju Subba Rao",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 32,
+        "character": "",
+        "credit_id": "694c0554db0d7128e48cd68b",
+        "order": 15
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1332744,
+        "known_for_department": "Acting",
+        "name": "Alphonsa",
+        "original_name": "Alphonsa",
+        "popularity": 0.3933,
+        "profile_path": "/vDK9P8tsWBQXltSQ5YAsm2SLeTn.jpg",
+        "cast_id": 33,
+        "character": "Special appearance",
+        "credit_id": "694c05d062d4bc626981150f",
+        "order": 16
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1333388,
+        "known_for_department": "Acting",
+        "name": "Mamilla Shailaja Priya",
+        "original_name": "Mamilla Shailaja Priya",
+        "popularity": 0.3378,
+        "profile_path": "/Ae9I3yBoUZusGlJiFIKZtQFZyFz.jpg",
+        "cast_id": 34,
+        "character": "Subbalakshmi's friend",
+        "credit_id": "694c06966b4ff0c5b00740ad",
+        "order": 17
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 552982,
+        "known_for_department": "Directing",
+        "name": "Kodi Ramakrishna",
+        "original_name": "Kodi Ramakrishna",
+        "popularity": 0.2546,
+        "profile_path": "/A3VWjOpmJ9q9ChAlHOF5dNspuAX.jpg",
+        "credit_id": "6073dc91cdf2e6003fa5c7ae",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1632999,
+        "known_for_department": "Writing",
+        "name": "Diwakar Babu",
+        "original_name": "Diwakar Babu",
+        "popularity": 0.0691,
+        "profile_path": null,
+        "credit_id": "6073dca31da7a600589b2db4",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1337585,
+        "known_for_department": "Camera",
+        "name": "S. Gopala Reddy",
+        "original_name": "S. Gopala Reddy",
+        "popularity": 0.1428,
+        "profile_path": null,
+        "credit_id": "6073dcc7d29bdd002921e7ef",
+        "department": "Crew",
+        "job": "Presenter"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1211510,
+        "known_for_department": "Editing",
+        "name": "Nandamuri Hari",
+        "original_name": "Nandamuri Hari",
+        "popularity": 0.0696,
+        "profile_path": null,
+        "credit_id": "6073dce9ca8354006fbdf89c",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1314993,
+        "known_for_department": "Production",
+        "name": "K. L. Narayana",
+        "original_name": "K. L. Narayana",
+        "popularity": 0.0404,
+        "profile_path": null,
+        "credit_id": "68e4babd033bc74f2a9cb4db",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584266,
+        "known_for_department": "Sound",
+        "name": "Bharadwaj",
+        "original_name": "Bharadwaj",
+        "popularity": 0.222,
+        "profile_path": "/bR5a2MlHYS16qBLP7GvD0qcMjYP.jpg",
+        "credit_id": "68e4bb14c3f4a732bebd9f52",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1337585,
+        "known_for_department": "Camera",
+        "name": "S. Gopala Reddy",
+        "original_name": "S. Gopala Reddy",
+        "popularity": 0.1428,
+        "profile_path": null,
+        "credit_id": "694bfdc604eefa2d668ea9e7",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2035077,
+        "known_for_department": "Writing",
+        "name": "Sirivennela Seetharama Sastry",
+        "original_name": "Sirivennela Seetharama Sastry",
+        "popularity": 0.2193,
+        "profile_path": "/7AJ3NgUPWlrCX63Zha32i7sShd4.jpg",
+        "credit_id": "694c043d9a70cadda78115ab",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2292001,
+        "known_for_department": "Writing",
+        "name": "Bhuvana Chandra",
+        "original_name": "Bhuvana Chandra",
+        "popularity": 0.0964,
+        "profile_path": "/AsD9UxT9kMLYMpkckrhNp0m0XtN.jpg",
+        "credit_id": "694c045176536d42e8b1bb41",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584585,
+        "known_for_department": "Sound",
+        "name": "S. P. Balasubramaniam",
+        "original_name": "S. P. Balasubramaniam",
+        "popularity": 0.4224,
+        "profile_path": "/vKcUYibvLFRPADiNwQtl27e1STy.jpg",
+        "credit_id": "694c047e95089ddb5e7ab1d7",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1738680,
+        "known_for_department": "Sound",
+        "name": "K. S. Chithra",
+        "original_name": "K. S. Chithra",
+        "popularity": 0.1253,
+        "profile_path": "/qutkAK4SPBY07n0cBSlS0PuVVNd.jpg",
+        "credit_id": "694c048962d4bc62698114f3",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584256,
+        "known_for_department": "Sound",
+        "name": "Mano",
+        "original_name": "Mano",
+        "popularity": 0.2528,
+        "profile_path": "/rt9kMuvBFD609qmBIetrpd8pVHT.jpg",
+        "credit_id": "694c049286c6d003b67ad12e",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2229458,
+        "known_for_department": "Sound",
+        "name": "Malgudi Subha",
+        "original_name": "Malgudi Subha",
+        "popularity": 0.0845,
+        "profile_path": "/pjrISUfXckVO8qbXZCdDUPcBGhX.jpg",
+        "credit_id": "694c049c86c6d003b67ad131",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2229556,
+        "known_for_department": "Sound",
+        "name": "Swarnalatha",
+        "original_name": "Swarnalatha",
+        "popularity": 0.0928,
+        "profile_path": "/xZB2Q0gkxhb7t2qwp3ygxXevcHI.jpg",
+        "credit_id": "694c04a59a70cadda78115af",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1422792,
+        "known_for_department": "Sound",
+        "name": "Anuradha Sriram",
+        "original_name": "Anuradha Sriram",
+        "popularity": 0.2701,
+        "profile_path": "/eTzC68JPJuT2pXcVSq7ciSHtBpI.jpg",
+        "credit_id": "694c04af36b6acc6ac8eaaba",
+        "department": "Sound",
+        "job": "Playback Singer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt1579756",
+    "wikidata_id": "Q19571489",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/goWN0jHzSOq44qKhdLBMhijzYp0.jpg",
+        "vote_average": 3.334,
+        "vote_count": 0,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.733,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/8e1P4EFOdybmiXoDQFBlmboKINE.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 550
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 165317,
+        "name": "based on movie"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "1997-06-11T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Dongata",
+        "type": ""
+      }
+    ]
+  }
+}

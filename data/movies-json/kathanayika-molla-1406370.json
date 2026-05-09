@@ -1,0 +1,150 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1406370,
+  "imdb_id": "tt0290694",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "కథానాయిక మొల్ల",
+  "overview": "The story is based on life of the poet Molla, who translated the Ramayana from Sanskrit into Telugu.",
+  "popularity": 0.1196,
+  "poster_path": null,
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "1970-01-01",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Kathanayika Molla",
+  "video": false,
+  "vote_average": 7,
+  "vote_count": 1,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 583972,
+        "known_for_department": "Acting",
+        "name": "Vanisri",
+        "original_name": "Vanisri",
+        "popularity": 0.6862,
+        "profile_path": "/a3orZ1KKPndvk2DV0sIuXCCVK1f.jpg",
+        "cast_id": 1,
+        "character": "Molla",
+        "credit_id": "676854ed8e9d9ccdeb912470",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2011122,
+        "known_for_department": "Acting",
+        "name": "Haranath",
+        "original_name": "Haranath",
+        "popularity": 0.1403,
+        "profile_path": "/te8RRzsDJ4Ioj2pSEp2mxtB7f5i.jpg",
+        "cast_id": 2,
+        "character": "Lord Vishnu",
+        "credit_id": "67685503f926be03cc7509fe",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335709,
+        "known_for_department": "Acting",
+        "name": "Gummadi",
+        "original_name": "Gummadi",
+        "popularity": 0.4144,
+        "profile_path": "/qKXVkv7RmDKveWWZael013w7h1B.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "6768550f03a3aa53309128c2",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335722,
+        "known_for_department": "Acting",
+        "name": "Padmanabham",
+        "original_name": "Padmanabham",
+        "popularity": 0.2913,
+        "profile_path": "/yKwLIP9RP3o8GWm3Q5CLJLFkeX1.jpg",
+        "cast_id": 4,
+        "character": "Tenali Ramakrishna",
+        "credit_id": "6768552003a3aa53309128c7",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335722,
+        "known_for_department": "Acting",
+        "name": "Padmanabham",
+        "original_name": "Padmanabham",
+        "popularity": 0.2913,
+        "profile_path": "/yKwLIP9RP3o8GWm3Q5CLJLFkeX1.jpg",
+        "credit_id": "6768552ef926be03cc750a15",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt0290694",
+    "wikidata_id": "Q10962501",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "1970-01-01T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  }
+}

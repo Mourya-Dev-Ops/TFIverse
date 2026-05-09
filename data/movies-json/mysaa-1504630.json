@@ -1,0 +1,478 @@
+{
+  "adult": false,
+  "backdrop_path": "/eomkOPUAGgNoTXhgvcgkrBtTBGF.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "homepage": "",
+  "id": 1504630,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "మైసా",
+  "overview": "Unafraid of war and unwilling to stop until she finds that one answer. She carries no doubts. Only the ache of an answer she's searched her whole life.",
+  "popularity": 0.2328,
+  "poster_path": "/tX6l2OQZfzSrqXSeqqj5wictfed.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "",
+  "title": "Mysaa",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1752056,
+        "known_for_department": "Acting",
+        "name": "Rashmika Mandanna",
+        "original_name": "Rashmika Mandanna",
+        "popularity": 2.0754,
+        "profile_path": "/c1wQq0OAzU9nFhGYn4iOoi7dmqD.jpg",
+        "cast_id": 1,
+        "character": "Mysaa",
+        "credit_id": "685e46c17a9315d553b9ad12",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1275608,
+        "known_for_department": "Acting",
+        "name": "Easwari Rao",
+        "original_name": "ఈశ్వరీ రావు",
+        "popularity": 0.6731,
+        "profile_path": "/fjyvQ45YZcovy2Egj2eux8UiuHU.jpg",
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "6944391f8c3ceea19536a9fc",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1266840,
+        "known_for_department": "Acting",
+        "name": "Guru Somasundaram",
+        "original_name": "Guru Somasundaram",
+        "popularity": 0.4879,
+        "profile_path": "/eqjEcc6LnZI5teGwOrrArAr5vko.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "69443930be292a30a6705829",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586629,
+        "known_for_department": "Acting",
+        "name": "Rao Ramesh",
+        "original_name": "Rao Ramesh",
+        "popularity": 0.8394,
+        "profile_path": "/jzO0wN21tEcmz0haekvliQU91JM.jpg",
+        "cast_id": 14,
+        "character": "",
+        "credit_id": "6944393ce9f94f2b208bcabe",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4286318,
+        "known_for_department": "Acting",
+        "name": "Praveen Dacharam",
+        "original_name": "Praveen Dacharam",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "cast_id": 15,
+        "character": "",
+        "credit_id": "6944394f7fe61729f7ace280",
+        "order": 4
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3127101,
+        "known_for_department": "Directing",
+        "name": "Rawindra Pulle",
+        "original_name": "Rawindra Pulle",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "685e481b059a43363634f304",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3127101,
+        "known_for_department": "Directing",
+        "name": "Rawindra Pulle",
+        "original_name": "Rawindra Pulle",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "685e486984c796ddc87eccdd",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5530137,
+        "known_for_department": "Production",
+        "name": "Anil Sayyapureddy",
+        "original_name": "Anil Sayyapureddy",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "685e48a4460a677250dd0976",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5530139,
+        "known_for_department": "Production",
+        "name": "Sai Gopa",
+        "original_name": "Sai Gopa",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "685e48d4acbe6cd3cc4d139d",
+        "department": "Production",
+        "job": "Co-Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5530140,
+        "known_for_department": "Production",
+        "name": "Ajay",
+        "original_name": "Ajay",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "685e48f17b25c5f7f0303551",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1540762,
+        "known_for_department": "Camera",
+        "name": "Shreyaas Krishna",
+        "original_name": "Shreyaas Krishna",
+        "popularity": 0.0466,
+        "profile_path": null,
+        "credit_id": "6884c2711600dcfb76246212",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1135092,
+        "known_for_department": "Writing",
+        "name": "Hanu Raghavapudi",
+        "original_name": "Hanu Raghavapudi",
+        "popularity": 0.2346,
+        "profile_path": "/7tizD44Jp35OLykxEQlMxKOjuTz.jpg",
+        "credit_id": "6885f1821600dcfb76246797",
+        "department": "Writing",
+        "job": "Story"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1504453,
+        "known_for_department": "Sound",
+        "name": "Jakes Bejoy",
+        "original_name": "Jakes Bejoy",
+        "popularity": 0.2014,
+        "profile_path": "/n1JPfYACCoK6wzXUGITLvw3ku7F.jpg",
+        "credit_id": "68ef8bc44bbc92ae0f0961fc",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2200190,
+        "known_for_department": "Crew",
+        "name": "Vamsi Shekar",
+        "original_name": "Vamsi Shekar",
+        "popularity": 0.332,
+        "profile_path": null,
+        "credit_id": "68ef8be896e2ad6e0cf0a270",
+        "department": "Crew",
+        "job": "Public Relations"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1634806,
+        "known_for_department": "Acting",
+        "name": "Andy Long Nguyen",
+        "original_name": "Andy Long Nguyen",
+        "popularity": 0.3026,
+        "profile_path": "/iUKE2kZ53bwkER0kW6JWZ2Kn6w3.jpg",
+        "credit_id": "68f04cf2b2956527fdad7c21",
+        "department": "Crew",
+        "job": "Fight Choreographer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5895653,
+        "known_for_department": "Production",
+        "name": "Srikanth Reddy Sathi",
+        "original_name": "Srikanth Reddy Sathi",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "694b82650b107d2826b1d6ea",
+        "department": "Production",
+        "job": "Co-Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4676710,
+        "known_for_department": "Art",
+        "name": "Srinivas Kalinga",
+        "original_name": "Srinivas Kalinga",
+        "popularity": 0.0591,
+        "profile_path": null,
+        "credit_id": "694b8270a79d0063cd7acdd3",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3288902,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Ayesha Mariam",
+        "original_name": "Ayesha Mariam",
+        "popularity": 0.1113,
+        "profile_path": "/nc0xGmNyh52TB8vSO0RM3J4s4kt.jpg",
+        "credit_id": "694b827e806b75e8872fe24a",
+        "department": "Costume & Make-Up",
+        "job": "Costume Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5895654,
+        "known_for_department": "Production",
+        "name": "Bujji Samardi",
+        "original_name": "Bujji Samardi",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "694b828a5692d556ee1560d3",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5895655,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Shreya Salvi",
+        "original_name": "Shreya Salvi",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "694b8298edfc44b8a97acddd",
+        "department": "Costume & Make-Up",
+        "job": "Makeup Artist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1643578,
+        "known_for_department": "Sound",
+        "name": "Sachin Sudhakaran",
+        "original_name": "Sachin Sudhakaran",
+        "popularity": 0.3456,
+        "profile_path": "/uCr5Q0tx3MkVFFQC1XlNCUrRAeq.jpg",
+        "credit_id": "694b82a19aecf23af68130ce",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1643577,
+        "known_for_department": "Sound",
+        "name": "Hari Haran",
+        "original_name": "Hari Haran",
+        "popularity": 0.3604,
+        "profile_path": "/p8eA1lehNhAsXeYI9o35IOXY7B4.jpg",
+        "credit_id": "694b82a9b0e2908aec8ec68c",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2558961,
+        "known_for_department": "Sound",
+        "name": "Aravind Menon",
+        "original_name": "Aravind Menon",
+        "popularity": 0.2018,
+        "profile_path": "/imKmccMLSEut8MowQY7wsSBildh.jpg",
+        "credit_id": "694b82b2958d552c457acd1a",
+        "department": "Sound",
+        "job": "Sound Mixer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2974598,
+        "known_for_department": "Directing",
+        "name": "Hemambar Jasthi",
+        "original_name": "Hemambar Jasthi",
+        "popularity": 0.0168,
+        "profile_path": null,
+        "credit_id": "694b82bc488148d062b1d60a",
+        "department": "Directing",
+        "job": "Co-Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5198747,
+        "known_for_department": "Production",
+        "name": "Aesthetic Kunjamma",
+        "original_name": "Aesthetic Kunjamma",
+        "popularity": 0.0878,
+        "profile_path": "/b72AAeSG8mV6J8SgYvfghPBoegN.jpg",
+        "credit_id": "694b82c5a1b37fcb9ab1d584",
+        "department": "Production",
+        "job": "Publicist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1670840,
+        "known_for_department": "Editing",
+        "name": "Suresh Ravi",
+        "original_name": "Suresh Ravi",
+        "popularity": 0.1018,
+        "profile_path": null,
+        "credit_id": "694b82d3c2cfd514a37aced9",
+        "department": "Editing",
+        "job": "Colorist"
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Mysaa First Glimpse (Telugu) | Rashmika Mandanna | Rawindra Pulle | Jakes Bejoy | UnFormula Films",
+        "key": "R3OIUTX3qy0",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Teaser",
+        "official": false,
+        "id": "694f193f4bab13a264fb0efd",
+        "published_at": "2025-12-24T05:37:04.000Z"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/eomkOPUAGgNoTXhgvcgkrBtTBGF.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/9izlbZYeFAciUgUFRY1hrXPEDc2.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/tX6l2OQZfzSrqXSeqqj5wictfed.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1978,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/u88ZBncIOCa9Wwvr6553foIocXG.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1319
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

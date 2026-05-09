@@ -1,0 +1,179 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "homepage": "",
+  "id": 1533741,
+  "imdb_id": "tt37727259",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "#MEGA 158",
+  "overview": "",
+  "popularity": 0.1736,
+  "poster_path": null,
+  "production_companies": [
+    {
+      "id": 176175,
+      "logo_path": null,
+      "name": "KVN Productions",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2027-01-13",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "",
+  "title": "#MEGA 158",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 147079,
+        "known_for_department": "Acting",
+        "name": "Chiranjeevi",
+        "original_name": "Chiranjeevi",
+        "popularity": 0.5847,
+        "profile_path": "/jRCxnhftb7NprH92cdfah8KoAHg.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "69b3c7c8466ac0a026cbd9f7",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1107197,
+        "known_for_department": "Acting",
+        "name": "Priyamani",
+        "original_name": "Priyamani",
+        "popularity": 0.8018,
+        "profile_path": "/zB365nF9wec5KBczviUTAX9MwHj.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "69d3818ebddb3fa606ca6d0b",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1899034,
+        "known_for_department": "Acting",
+        "name": "Anaswara Rajan",
+        "original_name": "Anaswara Rajan",
+        "popularity": 6.3153,
+        "profile_path": "/zWy5AjnXf7sm60X5PVa0mWDaFsp.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "69d3819746becfc9a86396fc",
+        "order": 2
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1186625,
+        "known_for_department": "Directing",
+        "name": "Bobby Kolli",
+        "original_name": "Bobby Kolli",
+        "popularity": 0.3807,
+        "profile_path": "/b0vOz06sawC4MQ4pdg0JboXqqTk.jpg",
+        "credit_id": "69b3c83bf552a33a95dca0e5",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585344,
+        "known_for_department": "Sound",
+        "name": "S. Thaman",
+        "original_name": "S. Thaman",
+        "popularity": 0.5088,
+        "profile_path": "/y2VYUPTSWr580Fx8hxUNcUTViUa.jpg",
+        "credit_id": "69d381a6c9e5d3da3d4d956c",
+        "department": "Sound",
+        "job": "Sound"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2340304,
+        "known_for_department": "Camera",
+        "name": "Nimish Ravi",
+        "original_name": "Nimish Ravi",
+        "popularity": 0.117,
+        "profile_path": "/3prTwkLnNym21TUYBjgs1RtlOmr.jpg",
+        "credit_id": "69d4e61435fb4673a9313c19",
+        "department": "Camera",
+        "job": "Director of Photography"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt37727259",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "videos": {
+    "results": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2027-01-13T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

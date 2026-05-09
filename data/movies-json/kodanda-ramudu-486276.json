@@ -1,0 +1,467 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 486276,
+  "imdb_id": "tt1575587",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "కోదండ రాముడు",
+  "overview": "Ramu, a tour guide, is deeply in love with Mounika, who does not believe in the concept of love. She pretends to be smitten by him and then humiliates him when he proposes marriage.",
+  "popularity": 0.5128,
+  "poster_path": "/zH2zY6dE8BUo2gDYvPMIdC9XJta.jpg",
+  "production_companies": [
+    {
+      "id": 276172,
+      "logo_path": null,
+      "name": "Kanthi Krishna Arts",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2000-01-01",
+  "revenue": 0,
+  "runtime": 140,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Kodanda Ramudu",
+  "video": false,
+  "vote_average": 6,
+  "vote_count": 1,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 88817,
+        "known_for_department": "Acting",
+        "name": "J. D. Chakravarthi",
+        "original_name": "J. D. Chakravarthi",
+        "popularity": 0.6978,
+        "profile_path": "/4sRwxgggTEhsaJzwZRZbxbLRzUA.jpg",
+        "cast_id": 0,
+        "character": "Ramu",
+        "credit_id": "5a056c9ac3a3686adc0108fa",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 237709,
+        "known_for_department": "Acting",
+        "name": "Rambha",
+        "original_name": "Rambha",
+        "popularity": 0.8459,
+        "profile_path": "/hrJSSIEr5f5je2XHmnYVDF52vvn.jpg",
+        "cast_id": 1,
+        "character": "Mounika",
+        "credit_id": "5a056cb19251417de60113f4",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 585400,
+        "known_for_department": "Acting",
+        "name": "Laya",
+        "original_name": "Laya",
+        "popularity": 0.5604,
+        "profile_path": "/uRj5rqDmmKHtNQLneMzEpaX2dcD.jpg",
+        "cast_id": 2,
+        "character": "Latha",
+        "credit_id": "5a056cbdc3a3686a380108f8",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.5485,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "5a056cd09251417dc5011fb8",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 589654,
+        "known_for_department": "Acting",
+        "name": "Ali Basha",
+        "original_name": "Ali Basha",
+        "popularity": 0.6916,
+        "profile_path": "/1z0YbDqP81BD6VxeghJG7vo9Mny.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "5a056cd8c3a3686a8c012505",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585567,
+        "known_for_department": "Acting",
+        "name": "Shivaji Raja",
+        "original_name": "Shivaji Raja",
+        "popularity": 0.4312,
+        "profile_path": "/uYGakx7oROck3LhhLPeDxG7F0c9.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "5a056cefc3a3686ab6011549",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1335965,
+        "known_for_department": "Acting",
+        "name": "Kallu Chidambaram",
+        "original_name": "Kallu Chidambaram",
+        "popularity": 0.2838,
+        "profile_path": null,
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "5a056cf7c3a3686a6801195e",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 148052,
+        "known_for_department": "Acting",
+        "name": "M. S. Narayana",
+        "original_name": "M. S. Narayana",
+        "popularity": 0.6206,
+        "profile_path": "/1XRTmhRSOtHBVmoPfz45WxbLfFQ.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "5a056d0c9251417dc501201c",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1334885,
+        "known_for_department": "Acting",
+        "name": "Amanchi Venkata Subrahmanyam",
+        "original_name": "Amanchi Venkata Subrahmanyam",
+        "popularity": 0.198,
+        "profile_path": "/flibtZ5M6FIFhA6OFvm2IP7NDLX.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "5a056d14c3a3686a7d011780",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585271,
+        "known_for_department": "Acting",
+        "name": "Raja Ravindra",
+        "original_name": "Raja Ravindra",
+        "popularity": 0.369,
+        "profile_path": "/87759xPmVF3K9UyVkvdUA7SfrQI.jpg",
+        "cast_id": 15,
+        "character": "",
+        "credit_id": "68dd129890957a399fb9af84",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1107228,
+        "known_for_department": "Acting",
+        "name": "Annapoorna",
+        "original_name": "Annapoorna",
+        "popularity": 0.5291,
+        "profile_path": "/8yFs4CeF7SoiW5j0BTtZXP2jZ9H.jpg",
+        "cast_id": 16,
+        "character": "",
+        "credit_id": "68dd12aa899a5a5cf8bb195f",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 86015,
+        "known_for_department": "Acting",
+        "name": "Lakshmi",
+        "original_name": "Lakshmi",
+        "popularity": 0.7929,
+        "profile_path": "/ddJU483vxl0kqPL9O30LDWDBj1J.jpg",
+        "cast_id": 17,
+        "character": "",
+        "credit_id": "68dd12b9ce2239051f38d1a5",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1137651,
+        "known_for_department": "Acting",
+        "name": "Sana",
+        "original_name": "Sana",
+        "popularity": 0.2615,
+        "profile_path": "/pcCtKwE1GK9eNeFprC5BBqg87rN.jpg",
+        "cast_id": 19,
+        "character": "",
+        "credit_id": "68dfc2c3bbd0ac0e724c68f2",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1661045,
+        "known_for_department": "Acting",
+        "name": "Gautam Raju",
+        "original_name": "Gautam Raju",
+        "popularity": 0.463,
+        "profile_path": null,
+        "cast_id": 20,
+        "character": "",
+        "credit_id": "68dfc2d147e619f936129d00",
+        "order": 13
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1489093,
+        "known_for_department": "Acting",
+        "name": "Subbaraya Sharma",
+        "original_name": "Subbaraya Sharma",
+        "popularity": 0.0716,
+        "profile_path": "/fFJb5oiyTzuc3BLs5NBsf1qgT15.jpg",
+        "cast_id": 21,
+        "character": "",
+        "credit_id": "68dfc2fc78fb919681129cea",
+        "order": 14
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584509,
+        "known_for_department": "Acting",
+        "name": "Somayajulu J V",
+        "original_name": "Somayajulu J V",
+        "popularity": 0.2209,
+        "profile_path": "/oT1qD39zifPBixECtza4zjsnIgw.jpg",
+        "cast_id": 22,
+        "character": "",
+        "credit_id": "68dfc315552ead67fe5b868a",
+        "order": 15
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 584512,
+        "known_for_department": "Acting",
+        "name": "Nirmalamma",
+        "original_name": "Nirmalamma",
+        "popularity": 0.2303,
+        "profile_path": null,
+        "cast_id": 23,
+        "character": "",
+        "credit_id": "68dfc32f90c2058fd75b87cb",
+        "order": 16
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584834,
+        "known_for_department": "Acting",
+        "name": "Ranganath",
+        "original_name": "Ranganath",
+        "popularity": 0.3078,
+        "profile_path": null,
+        "cast_id": 24,
+        "character": "",
+        "credit_id": "68dfc34ca62fa7060d129da0",
+        "order": 17
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1430794,
+        "known_for_department": "Acting",
+        "name": "Surya Bhagawan Das",
+        "original_name": "Surya Bhagawan Das",
+        "popularity": 0.4717,
+        "profile_path": "/fflRAfFuyvM4QIGkS3EVcqIjVm1.jpg",
+        "cast_id": 25,
+        "character": "",
+        "credit_id": "68dfc365ff90e45d655b86dd",
+        "order": 18
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1920932,
+        "known_for_department": "Crew",
+        "name": "Sarat",
+        "original_name": "Sarat",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "5a056e759251417dc101232c",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1920931,
+        "known_for_department": "Production",
+        "name": "Ramakrishna Reddy",
+        "original_name": "Ramakrishna Reddy",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "5a056e42c3a3686ab60117cc",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1029010,
+        "known_for_department": "Directing",
+        "name": "S.V. Krishna Reddy",
+        "original_name": "S.V. Krishna Reddy",
+        "popularity": 0.4144,
+        "profile_path": "/pL4vAq0RsXipGfAZ0bI07rcmxZS.jpg",
+        "credit_id": "5a056f2dc3a3686a38010cf2",
+        "department": "Sound",
+        "job": "Music"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1632999,
+        "known_for_department": "Writing",
+        "name": "Diwakar Babu",
+        "original_name": "Diwakar Babu",
+        "popularity": 0.0774,
+        "profile_path": null,
+        "credit_id": "5a056e5ec3a3686af1011dd0",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1029010,
+        "known_for_department": "Directing",
+        "name": "S.V. Krishna Reddy",
+        "original_name": "S.V. Krishna Reddy",
+        "popularity": 0.4144,
+        "profile_path": "/pL4vAq0RsXipGfAZ0bI07rcmxZS.jpg",
+        "credit_id": "5a056e0d9251417dfd011210",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3077829,
+        "known_for_department": "Editing",
+        "name": "K. Ramagopal Reddy",
+        "original_name": "K. Ramagopal Reddy",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "68dfc3ad50571fe8b32a47d9",
+        "department": "Editing",
+        "job": "Editor"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt1575587",
+    "wikidata_id": "Q6425206",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2000-01-01T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.695,
+        "height": 1142,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/zH2zY6dE8BUo2gDYvPMIdC9XJta.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 794
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1174,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/uuO0QHb0sU0Lbz61ALHVSv9U4Ry.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 782
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

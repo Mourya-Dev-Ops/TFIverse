@@ -1,0 +1,746 @@
+{
+  "adult": false,
+  "backdrop_path": "/tOHTlklduJYPM2szh98fC2soG7O.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10751,
+      "name": "Family"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "homepage": "",
+  "id": 1108193,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "షష్టిపూర్తి",
+  "overview": "",
+  "popularity": 0.2409,
+  "poster_path": "/enImpkNbqkiGrxIhxWzEGphT35i.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2025-05-30",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Shashtipoorti",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 545595,
+        "known_for_department": "Acting",
+        "name": "Rajendra Prasad",
+        "original_name": "Rajendra Prasad",
+        "popularity": 0.7246,
+        "profile_path": "/zh6QJ85g5KbpkjL5fgqlOGddn5C.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "642a67de0f36550110798262",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5469272,
+        "known_for_department": "Production",
+        "name": "Rupeysh",
+        "original_name": "Rupeysh",
+        "popularity": 0.0659,
+        "profile_path": "/2bdLQq3qyHxJb5LHQ2gR0f7TOoS.jpg",
+        "cast_id": 32,
+        "character": "",
+        "credit_id": "68378f118ece7a1dae414f39",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1158780,
+        "known_for_department": "Acting",
+        "name": "Archana",
+        "original_name": "Archana",
+        "popularity": 0.2807,
+        "profile_path": "/mgj8CBy5M1zWFDfPM4GI73c1rEo.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "642a67e5a3e4ba37eea40f72",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1255517,
+        "known_for_department": "Acting",
+        "name": "Aakanksha Singh",
+        "original_name": "Aakanksha Singh",
+        "popularity": 0.3296,
+        "profile_path": "/5gjJZ47p54cgoSBjQKaJTw4q0Nl.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "642a68ce8de0ae00978dda83",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1333834,
+        "known_for_department": "Acting",
+        "name": "Achyuth Kumar",
+        "original_name": "Achyuth Kumar",
+        "popularity": 0.5462,
+        "profile_path": "/zO1MoCgaz0RxILjga8VYXguROMp.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "642a6905b39e350093eb5499",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584354,
+        "known_for_department": "Acting",
+        "name": "Y. Vijaya",
+        "original_name": "Y. Vijaya",
+        "popularity": 0.9054,
+        "profile_path": "/zyo1kuf67tOhWtecyn8uGaahDsS.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "642a690b9cc67b0571583c21",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 544980,
+        "known_for_department": "Acting",
+        "name": "Subhalekha Sudhakar",
+        "original_name": "Subhalekha Sudhakar",
+        "popularity": 0.5566,
+        "profile_path": "/euDijVOTT0dbI3mWBOvU4q4RCk1.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "642a6911a3e4ba3248d803f8",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2864601,
+        "known_for_department": "Acting",
+        "name": "Chakrapani Ananda",
+        "original_name": "Chakrapani Ananda",
+        "popularity": 0.1854,
+        "profile_path": "/2jvujC0gUTWWIgsjR6YSjDbhzDw.jpg",
+        "cast_id": 19,
+        "character": "",
+        "credit_id": "6837887c380ebee35a730e3c",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1751759,
+        "known_for_department": "Acting",
+        "name": "Prabhas Sreenu",
+        "original_name": "Prabhas Sreenu",
+        "popularity": 0.2807,
+        "profile_path": "/nggCOeeye2bNm1tTodz0cgJPL2W.jpg",
+        "cast_id": 20,
+        "character": "",
+        "credit_id": "68378881226d8b2e862b8402",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2553477,
+        "known_for_department": "Acting",
+        "name": "Chalaki Chanti",
+        "original_name": "Chalaki Chanti",
+        "popularity": 0.0297,
+        "profile_path": null,
+        "cast_id": 21,
+        "character": "",
+        "credit_id": "6837888edd07645cc0038585",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1999839,
+        "known_for_department": "Acting",
+        "name": "Muralidhar Goud",
+        "original_name": "Muralidhar Goud",
+        "popularity": 0.3783,
+        "profile_path": "/3KldPSnn08WhuwoUR9GhZ9OnsI2.jpg",
+        "cast_id": 22,
+        "character": "",
+        "credit_id": "6837889b0cb72accea838fc8",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2120687,
+        "known_for_department": "Acting",
+        "name": "Jabardasth Ramprasad",
+        "original_name": "Jabardasth Ramprasad",
+        "popularity": 0.3747,
+        "profile_path": "/ud7ejWOdrED63N8tMCFQUmirftZ.jpg",
+        "cast_id": 23,
+        "character": "",
+        "credit_id": "683788a9ea961108ed056203",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1338658,
+        "known_for_department": "Acting",
+        "name": "Sanjay Swaroop",
+        "original_name": "Sanjay Swaroop",
+        "popularity": 0.3793,
+        "profile_path": "/zVErh5DAZyNbyGoaD5ZLHsKcdal.jpg",
+        "cast_id": 24,
+        "character": "",
+        "credit_id": "683788b0380ebee35a730e40",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2187316,
+        "known_for_department": "Acting",
+        "name": "Darbha Appaji Ambarisha",
+        "original_name": "Darbha Appaji Ambarisha",
+        "popularity": 0.1384,
+        "profile_path": "/xloua8ADzktCAq4BVTC6XvLEfjE.jpg",
+        "cast_id": 25,
+        "character": "",
+        "credit_id": "683788b78f47ed8371b6c60c",
+        "order": 13
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 76888,
+        "known_for_department": "Sound",
+        "name": "Ilaiyaraaja",
+        "original_name": "Ilaiyaraaja",
+        "popularity": 0.6521,
+        "profile_path": "/eBiHTgm2cbOl9uIO3Q21UrLx9hF.jpg",
+        "credit_id": "642a695101b1ca00b62ac784",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3992056,
+        "known_for_department": "Writing",
+        "name": "Pravan Prabha",
+        "original_name": "Pravan Prabha",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "642a69d6a3e4ba3248d80459",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3992056,
+        "known_for_department": "Writing",
+        "name": "Pravan Prabha",
+        "original_name": "Pravan Prabha",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "642a69dd0f365500f1c2b1e7",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 3288902,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Ayesha Mariam",
+        "original_name": "Ayesha Mariam",
+        "popularity": 0.1113,
+        "profile_path": "/nc0xGmNyh52TB8vSO0RM3J4s4kt.jpg",
+        "credit_id": "642a6a0f9cc67b05e201fbb8",
+        "department": "Costume & Make-Up",
+        "job": "Costume Designer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1640322,
+        "known_for_department": "Crew",
+        "name": "Brinda Gopal",
+        "original_name": "Brinda",
+        "popularity": 0.2246,
+        "profile_path": "/fcC4NTNqQZaJtVuFHM9oRUDr97Y.jpg",
+        "credit_id": "642a6a209cc67b05796c1495",
+        "department": "Crew",
+        "job": "Choreographer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2160296,
+        "known_for_department": "Editing",
+        "name": "Karthika Srinivas",
+        "original_name": "Karthika Srinivas",
+        "popularity": 0.1935,
+        "profile_path": "/sIG1GLTq0CizSQP15qjHg7GzVw6.jpg",
+        "credit_id": "642a6a339cc67b05bf6fc405",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2279497,
+        "known_for_department": "Writing",
+        "name": "Chaitanya Prasad",
+        "original_name": "Chaitanya Prasad",
+        "popularity": 0.0852,
+        "profile_path": null,
+        "credit_id": "642a6a469cc67b059cc4e2d1",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3532860,
+        "known_for_department": "Writing",
+        "name": "Rahman",
+        "original_name": "Rahman",
+        "popularity": 0.1196,
+        "profile_path": null,
+        "credit_id": "642a6a4f8de0ae00f4c0d878",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1007281,
+        "known_for_department": "Art",
+        "name": "Thotta Tharani",
+        "original_name": "Thotta Tharani",
+        "popularity": 0.2181,
+        "profile_path": null,
+        "credit_id": "642a6a810f365500f1c2b251",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3495951,
+        "known_for_department": "Camera",
+        "name": "Raam Reddy",
+        "original_name": "Raam Reddy",
+        "popularity": 0.0686,
+        "profile_path": null,
+        "credit_id": "642a6b3366540800d5c0bc16",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 225318,
+        "known_for_department": "Sound",
+        "name": "M.M. Keeravaani",
+        "original_name": "M.M. Keeravaani",
+        "popularity": 0.4964,
+        "profile_path": "/r0f7RTGIkG0ZBaQViIKrE1g82Ec.jpg",
+        "credit_id": "683788ddd8c5a82db50384d1",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5469272,
+        "known_for_department": "Production",
+        "name": "Rupeysh",
+        "original_name": "Rupeysh",
+        "popularity": 0.0659,
+        "profile_path": "/2bdLQq3qyHxJb5LHQ2gR0f7TOoS.jpg",
+        "credit_id": "68378928498f2497a8731995",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3388782,
+        "known_for_department": "Crew",
+        "name": "Eshwar Penti",
+        "original_name": "Eshwar Penti",
+        "popularity": 0.0614,
+        "profile_path": null,
+        "credit_id": "6837893af14f7406a5839036",
+        "department": "Crew",
+        "job": "Choreographer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3630509,
+        "known_for_department": "Crew",
+        "name": "Nixon Cruz Master",
+        "original_name": "Nixon Cruz Master",
+        "popularity": 0.1809,
+        "profile_path": null,
+        "credit_id": "68378950e4293714eaeb3f67",
+        "department": "Crew",
+        "job": "Choreographer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2115635,
+        "known_for_department": "Production",
+        "name": "Anil Kumar Vanga",
+        "original_name": "Anil Kumar Vanga",
+        "popularity": 0.1968,
+        "profile_path": "/mqIQhCGeraDOvhrCt1b6ucxSFa4.jpg",
+        "credit_id": "683789742efd43839f8391e4",
+        "department": "Production",
+        "job": "Publicist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2115634,
+        "known_for_department": "Production",
+        "name": "Uday Bhanu Avirineni",
+        "original_name": "Uday Bhanu Avirineni",
+        "popularity": 0.1608,
+        "profile_path": "/ismwIRDqhYiylM85KUCSBO5PZio.jpg",
+        "credit_id": "6837897bd9b03bb27105644f",
+        "department": "Production",
+        "job": "Publicist"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-05-30T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.776,
+        "height": 1140,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/tOHTlklduJYPM2szh98fC2soG7O.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2025
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 900,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/jaJtyUcFTS6Cyako7dLcp6avuPC.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1600
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1406,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/gASBdMFOdZlY9hiDKW16TwordyI.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2500
+      },
+      {
+        "aspect_ratio": 1.777,
+        "height": 1688,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/g4XfmLk5uCNY9zovZGNAWvxWjgN.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3000
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1695,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/fF0066t2vKNRzfC9QOhVJhhVEuc.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3013
+      },
+      {
+        "aspect_ratio": 1.777,
+        "height": 922,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/eA7DFunKP3IEuLjasbCdfWcOmPX.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1638
+      },
+      {
+        "aspect_ratio": 1.777,
+        "height": 922,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/rFh5vLHN1UYtgSZaQgLeGh0Omiy.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1638
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1843,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/ej0ZtibohIsPVbcrJXqwsgw8AgC.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3277
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1125,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/omPdfW12aPEHlJjRmQZzE5wrCPr.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1125,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/bjyMgnKDAxgNvAaF3pSWSP4bRIe.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 1.777,
+        "height": 922,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/3QLR9ntQfwTQQ7KIr0MlA2yruEF.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1638
+      },
+      {
+        "aspect_ratio": 1.777,
+        "height": 808,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/c8XIngCnI5SEwMUiPMaHTTv49vv.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1436
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1682,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/enImpkNbqkiGrxIhxWzEGphT35i.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1122
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/ttqQGtfi16I5h89TcPqflS6qtuG.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1366
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/8T47XXTrm9r2sWgEIhQRt0t0Rtf.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1154,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/hHSFhfJxHbHKW10TNoKrdDqfPD6.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 770
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 2326,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/ut77pjBwl5K4VIP6vOJvNLYNNp4.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1550
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/1JTKEfzsfucbTAVNGnbOIqB6lpm.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1628,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/8WBsbC5Vos6liBtUhQ6txnNmatx.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1086
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/brUf0968kyuQw9EkKfo98HUWcoS.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1366
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/guz6Y0dFKKJPS0RA63bqQIo9Bq.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1474,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/9eo27oGs7lavdssbmyTdj6CyBKe.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 983
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Sashtipoorti",
+        "type": "Alternate"
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Shashtipoorthi",
+        "type": "Alternate"
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Shashti poorthi",
+        "type": "Alternate"
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Sashti poorthi",
+        "type": "Alternate"
+      }
+    ]
+  }
+}

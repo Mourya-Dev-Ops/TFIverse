@@ -1,0 +1,289 @@
+{
+  "adult": false,
+  "backdrop_path": "/5ltfMZaV2RK3kIaPsGU9YqQQA4B.jpg",
+  "belongs_to_collection": null,
+  "budget": 20,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 99,
+      "name": "Documentary"
+    }
+  ],
+  "homepage": "",
+  "id": 1666667,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "A Rock",
+  "overview": "Don't Let a Machine Rewrite the Dream which you once held so tightly.",
+  "popularity": 0.0563,
+  "poster_path": "/bszT5mgUgrNTQGyYSx0fa055OkT.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2026-05-22",
+  "revenue": 0,
+  "runtime": 6,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    },
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Planned",
+  "tagline": "What is this Earth without Art ?",
+  "title": "A Rock",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "A Rock I Promo I 22.05.26",
+        "key": "ZYR0lMoRFUQ",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Teaser",
+        "official": false,
+        "id": "69d799bacf2d880afe6565e7",
+        "published_at": "2026-04-09T12:20:22.000Z"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2026-05-22T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.779,
+        "height": 727,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/5ltfMZaV2RK3kIaPsGU9YqQQA4B.jpg",
+        "vote_average": 0,
+        "vote_count": 1,
+        "width": 1293
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1536,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/bszT5mgUgrNTQGyYSx0fa055OkT.jpg",
+        "vote_average": 0,
+        "vote_count": 1,
+        "width": 1024
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "A Rock",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "US",
+        "title": "A Rock",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "ఒక రాయి",
+        "type": "Secondary"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 33896,
+        "name": "montage"
+      },
+      {
+        "id": 263548,
+        "name": "short film"
+      },
+      {
+        "id": 370746,
+        "name": "father and son"
+      },
+      {
+        "id": 371378,
+        "name": "anti ai"
+      }
+    ]
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6049529,
+        "known_for_department": "Camera",
+        "name": "Advaith Jayakrishnan",
+        "original_name": "Advaith Jayakrishnan",
+        "popularity": 0.0071,
+        "profile_path": "/hFEEDUkuKao42Bwu90V6SHrDI1L.jpg",
+        "cast_id": 1,
+        "character": "Drummer",
+        "credit_id": "69d7864d00d77946162354cd",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6129472,
+        "known_for_department": "Acting",
+        "name": "Kedar Subhedar",
+        "original_name": "Kedar Subhedar",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "cast_id": 2,
+        "character": "Father",
+        "credit_id": "69d78657dd8fdebf247c1ca1",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5973005,
+        "known_for_department": "Acting",
+        "name": "Kode Bhuvan Surya Teja",
+        "original_name": "Kode Bhuvan Surya Teja",
+        "popularity": 0,
+        "profile_path": "/l84bFHSkFT9NMPgxzZBrMMyTFfj.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "69d78669fad29988307c1e45",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6049519,
+        "known_for_department": "Acting",
+        "name": "Abdullah Ghouri",
+        "original_name": "Abdullah Ghouri",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 10,
+        "character": "Part of Montage",
+        "credit_id": "69e4cd90daf7f6af60830ca2",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 6049524,
+        "known_for_department": "Directing",
+        "name": "Yelamanchili Jyothira Rushi",
+        "original_name": "Yelamanchili Jyothira Rushi",
+        "popularity": 0.0143,
+        "profile_path": "/e9AyKw2qKgRxKicfa4svjBbUBEi.jpg",
+        "credit_id": "69d787256964b4621e65644c",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 6049524,
+        "known_for_department": "Directing",
+        "name": "Yelamanchili Jyothira Rushi",
+        "original_name": "Yelamanchili Jyothira Rushi",
+        "popularity": 0.0143,
+        "profile_path": "/e9AyKw2qKgRxKicfa4svjBbUBEi.jpg",
+        "credit_id": "69d7872e9ee0e811fe7679b6",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 6049524,
+        "known_for_department": "Directing",
+        "name": "Yelamanchili Jyothira Rushi",
+        "original_name": "Yelamanchili Jyothira Rushi",
+        "popularity": 0.0143,
+        "profile_path": "/e9AyKw2qKgRxKicfa4svjBbUBEi.jpg",
+        "credit_id": "69d7873b75af7bf07375952b",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6129478,
+        "known_for_department": "Crew",
+        "name": "Sowrya Pallam Reddy",
+        "original_name": "Sowrya Pallam Reddy",
+        "popularity": 0.0445,
+        "profile_path": "/rJjF2qO01j5gyAWRXd15Orv8XIJ.jpg",
+        "credit_id": "69d78752cb18c06113d77373",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6049529,
+        "known_for_department": "Camera",
+        "name": "Advaith Jayakrishnan",
+        "original_name": "Advaith Jayakrishnan",
+        "popularity": 0.0071,
+        "profile_path": "/hFEEDUkuKao42Bwu90V6SHrDI1L.jpg",
+        "credit_id": "69d78762af24b798b8d77371",
+        "department": "Sound",
+        "job": "Music"
+      }
+    ]
+  }
+}

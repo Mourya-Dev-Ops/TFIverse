@@ -1,0 +1,288 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "homepage": "",
+  "id": 94912,
+  "imdb_id": "tt0257362",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "అడవి రాముడు",
+  "overview": "Nagabhushanam and his son Nagaraju (Satyanarayana) runs smuggling and Illegal transport of forest produce in the Forest. Ramu (NTR) opposes and raises the villagers to fight against him. Padma (Jayaprada) Daughter of Forest officer (Jaggayya) loves him. One tribal lady Chilakamma (Jayasudha) also loves him as a brother. Nagabhushanam takes the help of Jaggu (Sridhar) to sent Ramu away from the forest. Later half reveals that Ramu was in fact a Forest officer in secret mission to investigate the case of Forest affairs. The story finally leads to the arrest of criminals.",
+  "popularity": 0.5228,
+  "poster_path": "/sNybH5Z55OZXPFUjt8OcobITKt6.jpg",
+  "production_companies": [
+    {
+      "id": 12902,
+      "logo_path": null,
+      "name": "Satya Films",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [],
+  "release_date": "1977-04-28",
+  "revenue": 0,
+  "runtime": 143,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Adavi Ramudu",
+  "video": false,
+  "vote_average": 7,
+  "vote_count": 2,
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "UA",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "1977-04-28T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1320,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/sNybH5Z55OZXPFUjt8OcobITKt6.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 880
+      }
+    ]
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1003933,
+        "known_for_department": "Acting",
+        "name": "N.T. Rama Rao",
+        "original_name": "N.T. Rama Rao",
+        "popularity": 0.6555,
+        "profile_path": "/eAtPt0FJxUarWgt9XoFLX0t6BaB.jpg",
+        "cast_id": 1,
+        "character": "Ramu",
+        "credit_id": "52fe496f9251416c750c7ea5",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 238016,
+        "known_for_department": "Acting",
+        "name": "Jaya Prada",
+        "original_name": "Jaya Prada",
+        "popularity": 0.7318,
+        "profile_path": "/jD3BDABDH36vYPaQrI3PFWM9KJ9.jpg",
+        "cast_id": 8,
+        "character": "Padma",
+        "credit_id": "5a920bd60e0a2616c00154c0",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584418,
+        "known_for_department": "Acting",
+        "name": "Jayasudha",
+        "original_name": "Jayasudha",
+        "popularity": 0.6012,
+        "profile_path": "/xOP3pYlrqyBw5x9CDEMkYXPzpNu.jpg",
+        "cast_id": 9,
+        "character": "Chilakama",
+        "credit_id": "5a920be19251414171013d5e",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1661827,
+        "known_for_department": "Acting",
+        "name": "Nagabhushanam",
+        "original_name": "Nagabhushanam",
+        "popularity": 0.0672,
+        "profile_path": "/k15yCgKqJiCRkIe87QK4UrPr9jQ.jpg",
+        "cast_id": 10,
+        "character": "Dharmaraju",
+        "credit_id": "5a920de1925141417a013a4c",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 552991,
+        "known_for_department": "Acting",
+        "name": "Kaikala Satyanarayana",
+        "original_name": "Kaikala Satyanarayana",
+        "popularity": 0.4741,
+        "profile_path": "/wEw5EQRIi7KLAQWIMlOyHxZxeuy.jpg",
+        "cast_id": 11,
+        "character": "Nagaraju",
+        "credit_id": "5a920df30e0a2616c60152b1",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584623,
+        "known_for_department": "Acting",
+        "name": "Rama Prabha",
+        "original_name": "Rama Prabha",
+        "popularity": 0.364,
+        "profile_path": "/oLF9RSdde7KUTxurEciD7CeW54e.jpg",
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "5a920e05c3a36825290159c3",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584346,
+        "known_for_department": "Acting",
+        "name": "Pandari Bai",
+        "original_name": "Pandari Bai",
+        "popularity": 0.6236,
+        "profile_path": "/hQRkAIELIKQihKEeWMVW0j3GHsE.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "5a920e10c3a36825020144a6",
+        "order": 6
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237252,
+        "known_for_department": "Directing",
+        "name": "K Raghavendra Rao",
+        "original_name": "K Raghavendra Rao",
+        "popularity": 0.3837,
+        "profile_path": "/aXUNYnHOFs7GTJPKkscsFjtbUgo.jpg",
+        "credit_id": "5a920b5e0e0a2616bd0144e6",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584223,
+        "known_for_department": "Camera",
+        "name": "A. Vincent",
+        "original_name": "A. Vincent",
+        "popularity": 0.1909,
+        "profile_path": "/vcauu4M5Bd7GJBMYlrWQEhYYV40.jpg",
+        "credit_id": "5a920baec3a36824fd0159cd",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 928860,
+        "known_for_department": "Writing",
+        "name": "Jandhyala Subramanya Sastry",
+        "original_name": "Jandhyala Subramanya Sastry",
+        "popularity": 0.3749,
+        "profile_path": "/ly4RquWKMbwjc4aUYfiN92mHa60.jpg",
+        "credit_id": "5a920b84925141417d0137bf",
+        "department": "Writing",
+        "job": "Story"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1488793,
+        "known_for_department": "Editing",
+        "name": "Kotagiri Venkateswara Rao",
+        "original_name": "Kotagiri Venkateswara Rao",
+        "popularity": 0.2372,
+        "profile_path": "/3oTREXmvPlgnEO9vvMxRLIItSbn.jpg",
+        "credit_id": "5a920bb90e0a2616cc015d95",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584606,
+        "known_for_department": "Sound",
+        "name": "K. V. Mahadevan",
+        "original_name": "K. V. Mahadevan",
+        "popularity": 0.1694,
+        "profile_path": "/sItCos5KpE9SM0Cpf6j9xiCOVlG.jpg",
+        "credit_id": "5a920b9b925141417d0137dd",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237252,
+        "known_for_department": "Directing",
+        "name": "K Raghavendra Rao",
+        "original_name": "K Raghavendra Rao",
+        "popularity": 0.3837,
+        "profile_path": "/aXUNYnHOFs7GTJPKkscsFjtbUgo.jpg",
+        "credit_id": "5a920b78c3a368675b000b34",
+        "department": "Writing",
+        "job": "Screenplay"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt0257362",
+    "wikidata_id": "Q4680903",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

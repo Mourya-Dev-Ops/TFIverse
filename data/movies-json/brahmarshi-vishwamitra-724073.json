@@ -1,0 +1,436 @@
+{
+  "adult": false,
+  "backdrop_path": "/fJ91QpA8fbvGpuZOvRn8iow1S2D.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 36,
+      "name": "History"
+    },
+    {
+      "id": 10402,
+      "name": "Music"
+    }
+  ],
+  "homepage": "",
+  "id": 724073,
+  "imdb_id": "tt0259225",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "బ్రహ్మర్షి విశ్వామిత్ర",
+  "overview": "The story is based on the life of Vishvamitra, who is one of the most venerated sages of ancient times in India. At last, Vishwamitra penance power reaches to heights of Himalayas where he utilizes it to the welfare of the universe by preaching great Gayatri Mantra and the movie ends Vishwamitra becoming one among the stars of the universe at Saptarishi Mandalam.",
+  "popularity": 0.5324,
+  "poster_path": "/xBWvj4O0egGjxX7RPv5uNytz6ny.jpg",
+  "production_companies": [
+    {
+      "id": 137103,
+      "logo_path": null,
+      "name": "NTR Charity Trust",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1991-04-19",
+  "revenue": 0,
+  "runtime": 148,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Brahmarshi Vishwamitra",
+  "video": false,
+  "vote_average": 8,
+  "vote_count": 1,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1003933,
+        "known_for_department": "Acting",
+        "name": "N.T. Rama Rao",
+        "original_name": "N.T. Rama Rao",
+        "popularity": 0.6555,
+        "profile_path": "/eAtPt0FJxUarWgt9XoFLX0t6BaB.jpg",
+        "cast_id": 1,
+        "character": "Vishwamitra / Ravana",
+        "credit_id": "5f0bff761f98d10036205a8b",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 150529,
+        "known_for_department": "Acting",
+        "name": "Nandamuri Balakrishna",
+        "original_name": "Nandamuri Balakrishna",
+        "popularity": 1.5728,
+        "profile_path": "/vOqW5ByakRQOUOn6ipupgioxsM9.jpg",
+        "cast_id": 2,
+        "character": "Satya Harichandra / Dushyanta",
+        "credit_id": "5f0bff89efe37c0036c8f671",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 141700,
+        "known_for_department": "Acting",
+        "name": "Meenakshi Sheshadri",
+        "original_name": "Meenakshi Sheshadri",
+        "popularity": 1.0418,
+        "profile_path": "/4gJUemgCehzXBE0V1USlgpjjDgA.jpg",
+        "cast_id": 3,
+        "character": "Menaka",
+        "credit_id": "5f0bff9b81c7be0033f72a3a",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1228601,
+        "known_for_department": "Acting",
+        "name": "Deepika Chikhalia",
+        "original_name": "Deepika Chikhalia",
+        "popularity": 0.1879,
+        "profile_path": null,
+        "cast_id": 4,
+        "character": "Chandramathi",
+        "credit_id": "5f0bffacea39490036ae7cd7",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1172251,
+        "known_for_department": "Directing",
+        "name": "Madhumita",
+        "original_name": "Madhumita",
+        "popularity": 0.1328,
+        "profile_path": null,
+        "cast_id": 16,
+        "character": "Shakuntala",
+        "credit_id": "68c6b08b443932a125220542",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 86510,
+        "known_for_department": "Acting",
+        "name": "Amjad Khan",
+        "original_name": "Amjad Khan",
+        "popularity": 0.9877,
+        "profile_path": "/52s7Cbukn505Bo0JzLdurF8RXb.jpg",
+        "cast_id": 5,
+        "character": "Veerabahu",
+        "credit_id": "5f0bffc31f98d10036205ba5",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335709,
+        "known_for_department": "Acting",
+        "name": "Gummadi",
+        "original_name": "Gummadi",
+        "popularity": 0.4144,
+        "profile_path": "/qKXVkv7RmDKveWWZael013w7h1B.jpg",
+        "cast_id": 6,
+        "character": "Vashista",
+        "credit_id": "5f0bffe4eec5b50034d1992c",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 110724,
+        "known_for_department": "Acting",
+        "name": "Aruna Irani",
+        "original_name": "Aruna Irani",
+        "popularity": 0.8068,
+        "profile_path": "/opwljyDvJyxW6ZmC3Ao6lNCQi0r.jpg",
+        "cast_id": 14,
+        "character": "Kalakoushukudu's wife",
+        "credit_id": "624ed299396e97008553f654",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584398,
+        "known_for_department": "Acting",
+        "name": "Disco Shanti",
+        "original_name": "Disco Shanti",
+        "popularity": 0.4806,
+        "profile_path": "/qma0bZivm3ce61LbI0U32AeCKv5.jpg",
+        "cast_id": 15,
+        "character": "Shakuntala's Friend",
+        "credit_id": "624ed2abcf4b8b0053969506",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584709,
+        "known_for_department": "Acting",
+        "name": "Kanaka",
+        "original_name": "Kanaka",
+        "popularity": 0.4916,
+        "profile_path": "/kmQyYhphRHbPuOolpyCkvL6QGAG.jpg",
+        "cast_id": 17,
+        "character": "Seetha",
+        "credit_id": "68c6b0aa72b11f7db5ca6e90",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584398,
+        "known_for_department": "Acting",
+        "name": "Disco Shanti",
+        "original_name": "Disco Shanti",
+        "popularity": 0.4806,
+        "profile_path": "/qma0bZivm3ce61LbI0U32AeCKv5.jpg",
+        "cast_id": 18,
+        "character": "Matanga Kanya",
+        "credit_id": "68c6b0b78cbf802980ca6dc1",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584273,
+        "known_for_department": "Acting",
+        "name": "Kuyili",
+        "original_name": "Kuyili",
+        "popularity": 0.3564,
+        "profile_path": null,
+        "cast_id": 19,
+        "character": "Matanga Kanya",
+        "credit_id": "68c6b0c626341e4ef0a0f258",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 148037,
+        "known_for_department": "Acting",
+        "name": "N.T. Rama Rao Jr.",
+        "original_name": "N.T. Rama Rao Jr.",
+        "popularity": 3.1771,
+        "profile_path": "/5ycQgZ3SPUa12bq0yn1jpToBq9X.jpg",
+        "cast_id": 20,
+        "character": "Bharata",
+        "credit_id": "68c6b0daf35beb9a7aca6ec8",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1356414,
+        "known_for_department": "Acting",
+        "name": "Mikkilineni",
+        "original_name": "Mikkilineni",
+        "popularity": 0.2719,
+        "profile_path": "/hixximPs8FRe2pHlBjqyi01ZwyY.jpg",
+        "cast_id": 21,
+        "character": "Janaka",
+        "credit_id": "68c6b0e6f5b02f7603ca6dd5",
+        "order": 13
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1003933,
+        "known_for_department": "Acting",
+        "name": "N.T. Rama Rao",
+        "original_name": "N.T. Rama Rao",
+        "popularity": 0.6555,
+        "profile_path": "/eAtPt0FJxUarWgt9XoFLX0t6BaB.jpg",
+        "credit_id": "5f0c002df48b340036fef9e3",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1003933,
+        "known_for_department": "Acting",
+        "name": "N.T. Rama Rao",
+        "original_name": "N.T. Rama Rao",
+        "popularity": 0.6555,
+        "profile_path": "/eAtPt0FJxUarWgt9XoFLX0t6BaB.jpg",
+        "credit_id": "5f0c004eea39490038aecdee",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1003933,
+        "known_for_department": "Acting",
+        "name": "N.T. Rama Rao",
+        "original_name": "N.T. Rama Rao",
+        "popularity": 0.6555,
+        "profile_path": "/eAtPt0FJxUarWgt9XoFLX0t6BaB.jpg",
+        "credit_id": "5f0c004481c7be0032f84787",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1003933,
+        "known_for_department": "Acting",
+        "name": "N.T. Rama Rao",
+        "original_name": "N.T. Rama Rao",
+        "popularity": 0.6555,
+        "profile_path": "/eAtPt0FJxUarWgt9XoFLX0t6BaB.jpg",
+        "credit_id": "5f0c005a81c7be0033f72a9f",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1337554,
+        "known_for_department": "Camera",
+        "name": "Nandamuri Mohana Krishna",
+        "original_name": "Nandamuri Mohana Krishna",
+        "popularity": 0.0362,
+        "profile_path": null,
+        "credit_id": "5f0c007eea39490036ae801d",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1003933,
+        "known_for_department": "Acting",
+        "name": "N.T. Rama Rao",
+        "original_name": "N.T. Rama Rao",
+        "popularity": 0.6555,
+        "profile_path": "/eAtPt0FJxUarWgt9XoFLX0t6BaB.jpg",
+        "credit_id": "5f0c00691f98d10037247bf0",
+        "department": "Editing",
+        "job": "Editor"
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Brahmarshi Viswamitra Telugu Full Length Movie || NTR, Balakrishna,Meenakshi Sheshadri,",
+        "key": "tQcSzSKH8HY",
+        "site": "YouTube",
+        "size": 720,
+        "type": "Trailer",
+        "official": false,
+        "id": "66043ea7197de401861e236b",
+        "published_at": "2015-06-26T12:19:43.000Z"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt0259225",
+    "wikidata_id": "Q19571109",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.78,
+        "height": 1046,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/fJ91QpA8fbvGpuZOvRn8iow1S2D.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1862
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/xBWvj4O0egGjxX7RPv5uNytz6ny.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 205027,
+        "name": "sage"
+      },
+      {
+        "id": 330517,
+        "name": "saptarshi"
+      },
+      {
+        "id": 330519,
+        "name": "7 sages"
+      },
+      {
+        "id": 330520,
+        "name": "seven sages"
+      },
+      {
+        "id": 330521,
+        "name": "sapta rishi"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "1991-04-19T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

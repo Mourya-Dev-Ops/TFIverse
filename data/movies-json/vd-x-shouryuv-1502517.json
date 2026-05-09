@@ -1,0 +1,332 @@
+{
+  "adult": false,
+  "backdrop_path": "/rBx4YmgEKnyA7fjhqlwOMapF9xo.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1502517,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "VD x Shouryuv",
+  "overview": "",
+  "popularity": 0.0684,
+  "poster_path": "/iVDiECIxV5d9vO1ySIfN7nJVHCO.jpg",
+  "production_companies": [
+    {
+      "id": 189491,
+      "logo_path": "/6eJXkSYVMkAF3GXjwtUxeZH3EuS.png",
+      "name": "Vyra Entertainments",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "",
+  "title": "VD x Shouryuv",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": []
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "#VDxSHOURYUV Pooja Ceremony | Vijay Deverakonda | Shouryuv",
+        "key": "TUhT96TtraQ",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Behind the Scenes",
+        "official": false,
+        "id": "69e90ffd83f5fc1e55333def",
+        "published_at": "2026-04-21T13:38:35.000Z"
+      },
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "That’s a Roar Lyrical Video  - #VDxSHOURYUV | Vijay Deverakonda | Shouryuv | Hesham Abdul Wahab",
+        "key": "utt8xW-_hzo",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Clip",
+        "official": false,
+        "id": "69e9105b27233a9547bb16ff",
+        "published_at": "2026-04-19T11:30:39.000Z"
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "VD x Shouryuv",
+        "type": "Tentative Title"
+      }
+    ]
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1508809,
+        "known_for_department": "Acting",
+        "name": "Vijay Deverakonda",
+        "original_name": "Vijay Deverakonda",
+        "popularity": 2.3396,
+        "profile_path": "/8oVIWyIoFUal8SJFnmCUtkkm1HP.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "69aa03903c3e5672401ed50c",
+        "order": 0
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3853592,
+        "known_for_department": "Directing",
+        "name": "Shouryuv",
+        "original_name": "Shouryuv",
+        "popularity": 0.0781,
+        "profile_path": null,
+        "credit_id": "6858e42b7ba9f761a0cb5071",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1848072,
+        "known_for_department": "Sound",
+        "name": "Hesham Abdul Wahab",
+        "original_name": "Hesham Abdul Wahab",
+        "popularity": 0.0586,
+        "profile_path": "/ufyGtcf2pvudH7sNgJO2wE8Xe8K.jpg",
+        "credit_id": "69e31c374cef7f6e020d12a5",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1676428,
+        "known_for_department": "Art",
+        "name": "Suresh Selvarajan",
+        "original_name": "Suresh Selvarajan",
+        "popularity": 0.2065,
+        "profile_path": null,
+        "credit_id": "69e31c727f06035e49aded50",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1432022,
+        "known_for_department": "Visual Effects",
+        "name": "Eric Durst",
+        "original_name": "Eric Durst",
+        "popularity": 0.2169,
+        "profile_path": null,
+        "credit_id": "69e31c9089ce261f7a24fbc1",
+        "department": "Visual Effects",
+        "job": "Visual Effects Supervisor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1893017,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Sachin Lovalekar",
+        "original_name": "Sachin Lovalekar",
+        "popularity": 0.1351,
+        "profile_path": null,
+        "credit_id": "69e31cadd178234902818f46",
+        "department": "Costume & Make-Up",
+        "job": "Costume Design"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 62776,
+        "known_for_department": "Camera",
+        "name": "Alejandro Martínez",
+        "original_name": "Alejandro Martínez",
+        "popularity": 0.3459,
+        "profile_path": null,
+        "credit_id": "69e31cdcf4f55cca99bee2d1",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1439026,
+        "known_for_department": "Editing",
+        "name": "Praveen Antony",
+        "original_name": "Praveen Antony",
+        "popularity": 0.1596,
+        "profile_path": "/b0rheTZWzPorWCF0wMitfXlMRJu.jpg",
+        "credit_id": "69e31d41f59b6f0d3a77c19f",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2015346,
+        "known_for_department": "Production",
+        "name": "Mohan Cherukuri",
+        "original_name": "Mohan Cherukuri",
+        "popularity": 0.2196,
+        "profile_path": null,
+        "credit_id": "69e31d4469bfb6c2f70d13ae",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4160744,
+        "known_for_department": "Production",
+        "name": "Dr. Vijender Reddy Teegala",
+        "original_name": "Dr. Vijender Reddy Teegala",
+        "popularity": 0.0362,
+        "profile_path": null,
+        "credit_id": "69e31d56b8e95197e4adedd0",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3853592,
+        "known_for_department": "Directing",
+        "name": "Shouryuv",
+        "original_name": "Shouryuv",
+        "popularity": 0.0781,
+        "profile_path": null,
+        "credit_id": "69e32a1ab80c27c74a24fb05",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1848072,
+        "known_for_department": "Sound",
+        "name": "Hesham Abdul Wahab",
+        "original_name": "Hesham Abdul Wahab",
+        "popularity": 0.0586,
+        "profile_path": "/ufyGtcf2pvudH7sNgJO2wE8Xe8K.jpg",
+        "credit_id": "69e52bd9fb6efe81fe549c72",
+        "department": "Writing",
+        "job": "Lyricist"
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/rBx4YmgEKnyA7fjhqlwOMapF9xo.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/75mJbRaiMPbkSPJGfIWq3nFPgER.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/qHEfvCfihCnMYdxyqJ5msuHs2VT.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/iVDiECIxV5d9vO1ySIfN7nJVHCO.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/nIAu7m6Unb7IgVeVX2S1lhFy0yt.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      }
+    ]
+  }
+}

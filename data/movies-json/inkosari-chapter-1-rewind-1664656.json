@@ -1,0 +1,361 @@
+{
+  "adult": false,
+  "backdrop_path": "/yA3uIdd3MreUwA8RTjYQB4IpN9q.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    }
+  ],
+  "homepage": "https://www.youtube.com/watch?v=OrVwGXPkDO0",
+  "id": 1664656,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Inkosari - Chapter 1 : Rewind",
+  "overview": "INKOSARI follows the journey of Shashank, a man haunted by the shadows of his past. After months of therapy and self-reflection, he is miraculously given..  a chance by LIFE.",
+  "popularity": 0.1023,
+  "poster_path": "/bjXgCY2RwO1rcMPs5ILklJDYqAd.jpg",
+  "production_companies": [
+    {
+      "id": 294554,
+      "logo_path": null,
+      "name": "ExpressoFilms",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [],
+  "release_date": "2026-03-30",
+  "revenue": 0,
+  "runtime": 38,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    },
+    {
+      "english_name": "Hindi",
+      "iso_639_1": "hi",
+      "name": "हिन्दी"
+    },
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "One More Time, Between Then and Now.",
+  "title": "Inkosari - Chapter 1 : Rewind",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2026-03-30T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "INKOSARI | Chapter - 1 : Rewind | Shashank Kundavaram | Meghana | Rugved Chandra | ExpressoFilms",
+        "key": "OrVwGXPkDO0",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Featurette",
+        "official": false,
+        "id": "69d4ea071af5921cfa313d03",
+        "published_at": "2026-03-29T18:50:05.000Z"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121926,
+        "known_for_department": "Acting",
+        "name": "Shashank Kundavaram",
+        "original_name": "Shashank Kundavaram",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 1,
+        "character": "Shashank / Shashi",
+        "credit_id": "69d38a9ff62f5b30c47711d2",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121927,
+        "known_for_department": "Acting",
+        "name": "Rugved Chandra",
+        "original_name": "Rugved Chandra",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "cast_id": 2,
+        "character": "Rugved",
+        "credit_id": "69d38ab08e2ea59ac64d9778",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121928,
+        "known_for_department": "Acting",
+        "name": "Meghana",
+        "original_name": "Meghana",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 3,
+        "character": "Ananya",
+        "credit_id": "69d38abc04609c99a1ac82d3",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121936,
+        "known_for_department": "Acting",
+        "name": "Danish Bukkapatanam",
+        "original_name": "Danish Bukkapatanam",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 10,
+        "character": "Danish",
+        "credit_id": "69d38bafb20eeaa2ba3b1477",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121941,
+        "known_for_department": "Acting",
+        "name": "Kaparthi Sharma",
+        "original_name": "Kaparthi Sharma",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 11,
+        "character": "Kaparthi",
+        "credit_id": "69d38bde963bce4528ac83ca",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121938,
+        "known_for_department": "Acting",
+        "name": "Harshith Manepally",
+        "original_name": "Harshith Manepally",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "cast_id": 12,
+        "character": "Harshith",
+        "credit_id": "69d38bea3c6fe98a5e63966b",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121943,
+        "known_for_department": "Acting",
+        "name": "Dheeraj Reddy",
+        "original_name": "Dheeraj Reddy",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "cast_id": 13,
+        "character": "Dheeraj",
+        "credit_id": "69d38bf737f534464c909c4d",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121944,
+        "known_for_department": "Acting",
+        "name": "Praneeth Noule",
+        "original_name": "Praneeth Noule",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "cast_id": 14,
+        "character": "Praneeth",
+        "credit_id": "69d38c0bd93c9314f9f5f8d2",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121945,
+        "known_for_department": "Acting",
+        "name": "Rajkumar Etikala",
+        "original_name": "Rajkumar Etikala",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "cast_id": 15,
+        "character": "Shashank's Father",
+        "credit_id": "69d38c1ad78b58c278909b19",
+        "order": 8
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121927,
+        "known_for_department": "Acting",
+        "name": "Rugved Chandra",
+        "original_name": "Rugved Chandra",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "69d38ada03d521afe363969a",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121932,
+        "known_for_department": "Sound",
+        "name": "Ayush Jain",
+        "original_name": "Ayush Jain",
+        "popularity": 0.0454,
+        "profile_path": null,
+        "credit_id": "69d38b332c4d7844a3ca6dae",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121927,
+        "known_for_department": "Acting",
+        "name": "Rugved Chandra",
+        "original_name": "Rugved Chandra",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "69d38b7d6fac9fd8e2f5fa28",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121927,
+        "known_for_department": "Acting",
+        "name": "Rugved Chandra",
+        "original_name": "Rugved Chandra",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "69d38b8f1812ee6ca15c698d",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121926,
+        "known_for_department": "Acting",
+        "name": "Shashank Kundavaram",
+        "original_name": "Shashank Kundavaram",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69d38b99f842e431f5ca6b7c",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6121934,
+        "known_for_department": "Sound",
+        "name": "Avatsara Gadiraju",
+        "original_name": "Avatsara Gadiraju",
+        "popularity": 0.0243,
+        "profile_path": null,
+        "credit_id": "69d4e9a74342be1c736ae39a",
+        "department": "Sound",
+        "job": "Music Programmer"
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 2160,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/yA3uIdd3MreUwA8RTjYQB4IpN9q.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3840
+      }
+    ],
+    "logos": [
+      {
+        "aspect_ratio": 3.51,
+        "height": 259,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/c4e3YVDy1nOV1qOHV8uXYJUOtad.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 909
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 900,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/bjXgCY2RwO1rcMPs5ILklJDYqAd.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 600
+      }
+    ]
+  }
+}

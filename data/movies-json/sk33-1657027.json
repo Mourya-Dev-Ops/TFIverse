@@ -1,0 +1,146 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    }
+  ],
+  "homepage": "",
+  "id": 1657027,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "SK33",
+  "overview": "",
+  "popularity": 0.0281,
+  "poster_path": null,
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Planned",
+  "tagline": "",
+  "title": "SK33",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1011802,
+        "known_for_department": "Acting",
+        "name": "Sundeep Kishan",
+        "original_name": "Sundeep Kishan",
+        "popularity": 1.4654,
+        "profile_path": "/qUGN6rvwu9Qef3DGenha2pIEpNY.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "69c21d54fceb469bf21b1750",
+        "order": 0
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2999413,
+        "known_for_department": "Directing",
+        "name": "Ugandhar Muni",
+        "original_name": "Ugandhar Muni",
+        "popularity": 0.0495,
+        "profile_path": null,
+        "credit_id": "69c21cc22d460cc7d5d35075",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2999413,
+        "known_for_department": "Directing",
+        "name": "Ugandhar Muni",
+        "original_name": "Ugandhar Muni",
+        "popularity": 0.0495,
+        "profile_path": null,
+        "credit_id": "69c21cd0ed49d136f47b3653",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2990168,
+        "known_for_department": "Production",
+        "name": "Mahidhar Reddy",
+        "original_name": "Mahidhar Reddy",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "69c21cebd73be1cc8e7b3805",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5734933,
+        "known_for_department": "Production",
+        "name": "Rajasekhar Annabhimoj",
+        "original_name": "Rajasekhar Annabhimoj",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "69c21d14191ef3587813ca64",
+        "department": "Production",
+        "job": "Producer"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

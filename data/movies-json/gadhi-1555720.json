@@ -1,0 +1,136 @@
+{
+  "adult": false,
+  "backdrop_path": "/31uOQmC2HgUj20Wxn8Kj7VA8zse.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1555720,
+  "imdb_id": "tt37038371",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Gadhi",
+  "overview": "Ajay and Anjali were in love. Their friend was Bablu. An uncle and aunty known to Bablu were going to their hometown and gave the house keys to Bablu before leaving. Bablu gave those keys to Ajay.",
+  "popularity": 0.0071,
+  "poster_path": "/7G2eCjnJK96rh32XtYoMW6pKHJE.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2025-06-06",
+  "revenue": 0,
+  "runtime": 91,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Released",
+  "tagline": "",
+  "title": "Gadhi",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Gadhi  Movie Trailer Mohan Depa,Mohana Siddhi Tharun Kalluri  Kasiram Yenneti Entertainment",
+        "key": "Q-pOS7sPbtg",
+        "site": "YouTube",
+        "size": 720,
+        "type": "Trailer",
+        "official": false,
+        "id": "68e895c508d362892e30c1e1",
+        "published_at": "2025-06-03T06:21:17.000Z"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt37038371",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "A",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-06-06T00:00:00.000Z",
+            "type": 3
+          },
+          {
+            "certification": "A",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-10-10T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/31uOQmC2HgUj20Wxn8Kj7VA8zse.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/6GlOCsFWyHyhNKwQv5yyikQr0mi.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1200,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/7G2eCjnJK96rh32XtYoMW6pKHJE.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 800
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/cZ0BMWbcKvhIuziZU25jXLrW26N.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

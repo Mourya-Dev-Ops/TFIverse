@@ -1,0 +1,90 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1173156,
+  "imdb_id": "tt27350100",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Narayana & Co",
+  "overview": "A middle-class family in financial distress agrees to an illegal deal and embarks on a hilarious journey to overcome their problems, discovering the true meaning of family in the process.",
+  "popularity": 0.1292,
+  "poster_path": "/bDyn0wXdMQBAIEEr6Y4WCa9EZwp.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2023-06-30",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Narayana & Co",
+  "video": false,
+  "vote_average": 3,
+  "vote_count": 1,
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt27350100",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2023-06-30T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/bDyn0wXdMQBAIEEr6Y4WCa9EZwp.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

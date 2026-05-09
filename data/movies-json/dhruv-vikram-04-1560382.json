@@ -1,0 +1,167 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1560382,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "#Dhruv Vikram 04",
+  "overview": "",
+  "popularity": 0.084,
+  "poster_path": null,
+  "production_companies": [
+    {
+      "id": 69125,
+      "logo_path": "/7kRvsVRhT76VTbhGLgJ2CrTgdpa.png",
+      "name": "Mythri Movie Makers",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Planned",
+  "tagline": "",
+  "title": "#Dhruv Vikram 04",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2038676,
+        "known_for_department": "Acting",
+        "name": "Dhruv Vikram",
+        "original_name": "Dhruv Vikram",
+        "popularity": 0.4407,
+        "profile_path": "/eKImxQNXiAFzz1QkQ1zO1Lv7eUy.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "6992b8bf02e7f556ba287b64",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2252714,
+        "known_for_department": "Acting",
+        "name": "Rukmini Vasanth",
+        "original_name": "Rukmini Vasanth",
+        "popularity": 0.5753,
+        "profile_path": "/tNK06M8gRSMSiaeD2rYc855YbvF.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "6992b8c95bd26248e12af208",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2476557,
+        "known_for_department": "Acting",
+        "name": "Sreeleela",
+        "original_name": "Sreeleela",
+        "popularity": 0.7954,
+        "profile_path": "/lzmLrhKpLlAtDhgdScRHlDykOJu.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "6992b8d0c765e230e7124830",
+        "order": 2
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2784458,
+        "known_for_department": "Directing",
+        "name": "Deepak Reddy",
+        "original_name": "Deepak Reddy",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "68e93979269fecc38a5f6b0b",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1648660,
+        "known_for_department": "Production",
+        "name": "Naveen Yerneni",
+        "original_name": "Naveen Yerneni",
+        "popularity": 0.2054,
+        "profile_path": "/iestiUKLGHblxeQtI0DF5ENCxLW.jpg",
+        "credit_id": "695394656050d1c175d7a052",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1648659,
+        "known_for_department": "Production",
+        "name": "Y. Ravi Shankar",
+        "original_name": "Y. Ravi Shankar",
+        "popularity": 0.1606,
+        "profile_path": "/stZ6Fzi96nUlWyomx7hhXcqBQiX.jpg",
+        "credit_id": "6953947390b1567a4bc38148",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5040583,
+        "known_for_department": "Sound",
+        "name": "Sai Abhyankkar",
+        "original_name": "Sai Abhyankkar",
+        "popularity": 0.1055,
+        "profile_path": "/qcFxJm7fKOdcpcBpjHwVTP6hGq2.jpg",
+        "credit_id": "6992b8b087060a016d1246d3",
+        "department": "Sound",
+        "job": "Sound"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": []
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "videos": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  }
+}

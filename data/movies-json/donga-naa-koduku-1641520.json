@@ -1,0 +1,128 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 1641520,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "దొంగ నా కొడుకు",
+  "overview": "",
+  "popularity": 0.0718,
+  "poster_path": null,
+  "production_companies": [
+    {
+      "id": 69125,
+      "logo_path": "/7kRvsVRhT76VTbhGLgJ2CrTgdpa.png",
+      "name": "Mythri Movie Makers",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Planned",
+  "tagline": "",
+  "title": "Donga Naa Koduku",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4495391,
+        "known_for_department": "Acting",
+        "name": "Mouli",
+        "original_name": "Mouli",
+        "popularity": 0.1083,
+        "profile_path": "/xziRbfJac97k5mp0vg1B96LkdV2.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "699d5f867c61879f67c0ea75",
+        "order": 0
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1648660,
+        "known_for_department": "Production",
+        "name": "Naveen Yerneni",
+        "original_name": "Naveen Yerneni",
+        "popularity": 0.2639,
+        "profile_path": "/iestiUKLGHblxeQtI0DF5ENCxLW.jpg",
+        "credit_id": "699d5f94a4ff8e95f90e6022",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1648659,
+        "known_for_department": "Production",
+        "name": "Y. Ravi Shankar",
+        "original_name": "Y. Ravi Shankar",
+        "popularity": 0.1851,
+        "profile_path": "/stZ6Fzi96nUlWyomx7hhXcqBQiX.jpg",
+        "credit_id": "699d5f9e24f7b114f6065f12",
+        "department": "Production",
+        "job": "Producer"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

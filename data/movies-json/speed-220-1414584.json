@@ -1,0 +1,90 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1414584,
+  "imdb_id": "tt33241209",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Speed 220",
+  "overview": "There are two very good friends who become sworn enemies because of a girl. Will they become friends again?",
+  "popularity": 0.0496,
+  "poster_path": "/faIjwPy2lmWVpHIheAMuclAS94q.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2024-09-06",
+  "revenue": 0,
+  "runtime": 114,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Speed 220",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt33241209",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2024-09-06T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1200,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/faIjwPy2lmWVpHIheAMuclAS94q.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 800
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

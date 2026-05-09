@@ -1,0 +1,267 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1605240,
+  "imdb_id": "tt0186856",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "బంగారు కొడుకు",
+  "overview": "",
+  "popularity": 0.0479,
+  "poster_path": null,
+  "production_companies": [
+    {
+      "id": 284528,
+      "logo_path": null,
+      "name": "Sri Uma Productions",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1982-02-19",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Bangaru Koduku",
+  "video": false,
+  "vote_average": 10,
+  "vote_count": 1,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1470750,
+        "known_for_department": "Acting",
+        "name": "Krishna",
+        "original_name": "Krishna",
+        "popularity": 0.2447,
+        "profile_path": "/85O0Icv3d2DL9EfK44ZXZO8aqIU.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "6950dfb7f4f5338a1cc37458",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 109549,
+        "known_for_department": "Acting",
+        "name": "Sridevi",
+        "original_name": "Sridevi",
+        "popularity": 1.5977,
+        "profile_path": "/6wxquADm0CMYMon04uEI48ZiBBf.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "6950dfbd31394de71d7c6e33",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1034831,
+        "known_for_department": "Acting",
+        "name": "Jamuna",
+        "original_name": "Jamuna",
+        "popularity": 0.1634,
+        "profile_path": "/vev05ehTlBa4YHb3ZhPdS4eon2q.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "6950dfc376a338c001d792c9",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1267544,
+        "known_for_department": "Acting",
+        "name": "Prabhakar Reddy",
+        "original_name": "Prabhakar Reddy",
+        "popularity": 0.207,
+        "profile_path": null,
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "6950dfcdd721a2cf0fc37539",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585268,
+        "known_for_department": "Acting",
+        "name": "Mohan Babu",
+        "original_name": "Mohan Babu",
+        "popularity": 0.5568,
+        "profile_path": "/zwqcXtnk0ju0nhuhvZXSLL2nLIy.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "6950e084272bd61a8670f311",
+        "order": 4
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335262,
+        "known_for_department": "Directing",
+        "name": "Dasari Narayana Rao",
+        "original_name": "Dasari Narayana Rao",
+        "popularity": 0.5231,
+        "profile_path": "/y45ZAkHZvsuRbHMoeBx9zIF4ohT.jpg",
+        "credit_id": "6950dfdcbf210200927c6da9",
+        "department": "Writing",
+        "job": "Story"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335734,
+        "known_for_department": "Directing",
+        "name": "K. S. R. Das",
+        "original_name": "K. S. R. Das",
+        "popularity": 0.2238,
+        "profile_path": "/enTQqKU9aRTkcjLBNGA7dDIZxq0.jpg",
+        "credit_id": "6950dfeb61c4436c704ace9f",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5902662,
+        "known_for_department": "Production",
+        "name": "NN Bhat",
+        "original_name": "NN Bhat",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "6950e0025e13fdf58dcbceac",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 933605,
+        "known_for_department": "Sound",
+        "name": "K. Chakravarthy",
+        "original_name": "Chakravarthy",
+        "popularity": 0.1741,
+        "profile_path": null,
+        "credit_id": "6950e0169ddde4d93588da18",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1660553,
+        "known_for_department": "Writing",
+        "name": "Veturi Sundararama Murthy",
+        "original_name": "Veturi Sundararama Murthy",
+        "popularity": 0.1238,
+        "profile_path": "/nPWQSVKm9gk0lc63z1sQLCTEIHb.jpg",
+        "credit_id": "6950e0258e4bcaaa7a4acf47",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584585,
+        "known_for_department": "Sound",
+        "name": "S. P. Balasubramaniam",
+        "original_name": "S. P. Balasubramaniam",
+        "popularity": 0.4617,
+        "profile_path": "/vKcUYibvLFRPADiNwQtl27e1STy.jpg",
+        "credit_id": "6950e02c8e4bcaaa7a4acf4a",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1872424,
+        "known_for_department": "Sound",
+        "name": "S. Janaki",
+        "original_name": "S. Janaki",
+        "popularity": 0.1323,
+        "profile_path": "/idhDokv4l7UCC34Zf8IdLg8e40W.jpg",
+        "credit_id": "6950e037bf210200927c6dc1",
+        "department": "Sound",
+        "job": "Playback Singer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1998883,
+        "known_for_department": "Sound",
+        "name": "P. Susheela",
+        "original_name": "P. Susheela",
+        "popularity": 0.0574,
+        "profile_path": "/k5UIA5ihxo9ACiVZAdts6r03PN3.jpg",
+        "credit_id": "6950e0401f0671291ec3747d",
+        "department": "Sound",
+        "job": "Playback Singer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt0186856",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "UA",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "1982-02-19T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "adult": false,
+  "backdrop_path": "/8lkyZr20wxBbdje9RpPOhjtNnoj.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 468852,
+  "imdb_id": "tt9638298",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Maa Abbayi",
+  "overview": "For the protagonist ‘abbai’ (Sree Vishnu), life is all about taking care of his elder sister and doting parents until they are all killed in a mysterious bomb blast. The plot follows this youngster going all out to avenge their deaths.",
+  "popularity": 0.2571,
+  "poster_path": "/478SX1tSbLpecq6nyh2Zfqte7AB.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2017-03-17",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Maa Abbayi",
+  "video": false,
+  "vote_average": 10,
+  "vote_count": 1,
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Maa Abbayi Official Theatrical Trailer | Sree Vishnu | Chitra Shukla | Kumar Vatti | Suresh Bobbili",
+        "key": "OqxzbLmdRSg",
+        "site": "YouTube",
+        "size": 1080,
+        "type": "Trailer",
+        "official": false,
+        "id": "5981a03dc3a3680caa01003a",
+        "published_at": "2017-02-21T15:00:02.000Z"
+      }
+    ]
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1751749,
+        "known_for_department": "Acting",
+        "name": "Sree Vishnu",
+        "original_name": "Sree Vishnu",
+        "popularity": 0.2141,
+        "profile_path": "/fSbWn5uUjPMgEtIIrZiJoiU9v1C.jpg",
+        "cast_id": 0,
+        "character": "",
+        "credit_id": "5a61c09fc3a368535a01114e",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1962502,
+        "known_for_department": "Acting",
+        "name": "Chitra Shukla",
+        "original_name": "Chitra Shukla",
+        "popularity": 0.349,
+        "profile_path": "/yrD7S2T7YGqo45atr5DfBu28LSN.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "5a61c0a69251410e23012448",
+        "order": 1
+      }
+    ],
+    "crew": []
+  },
+  "external_ids": {
+    "imdb_id": "tt9638298",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Vishnu Shastra",
+        "type": "Hindi Dubbed"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "UA",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2017-03-17T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/8lkyZr20wxBbdje9RpPOhjtNnoj.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/478SX1tSbLpecq6nyh2Zfqte7AB.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 500
+      }
+    ]
+  }
+}

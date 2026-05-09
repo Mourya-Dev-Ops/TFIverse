@@ -1,0 +1,108 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 331561,
+  "imdb_id": "tt1411911",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Nyayam Meere Cheppali",
+  "overview": "A 1985 Telugu movie.",
+  "popularity": 0.2438,
+  "poster_path": null,
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "1985-02-08",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Nyayam Meere Cheppali",
+  "video": false,
+  "vote_average": 5,
+  "vote_count": 3,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335686,
+        "known_for_department": "Acting",
+        "name": "Kongara Jaggayya",
+        "original_name": "Kongara Jaggayya",
+        "popularity": 0.2523,
+        "profile_path": "/aYYoYtHnjOiNPunr62OPocokdAH.jpg",
+        "cast_id": 0,
+        "character": "",
+        "credit_id": "550b3f2cc3a36848830021eb",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 91555,
+        "known_for_department": "Acting",
+        "name": "Rajinikanth",
+        "original_name": "Rajinikanth",
+        "popularity": 1.6903,
+        "profile_path": "/cQBcrXqcQPfXOQfNfgO3slJM2xi.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "550b3f31c3a368487d0021bc",
+        "order": 1
+      }
+    ],
+    "crew": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt1411911",
+    "wikidata_id": "Q7070958",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1985-02-08T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": []
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

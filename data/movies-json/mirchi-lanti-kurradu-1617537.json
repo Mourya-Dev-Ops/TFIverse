@@ -1,0 +1,76 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 1617537,
+  "imdb_id": "tt37788463",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Mirchi Lanti Kurradu",
+  "overview": "Siddhu, a cheerful man, falls in love with Vasundhara, an introvert woman. However, they fail to save their relationship amidst increasing differences between them.",
+  "popularity": 0,
+  "poster_path": "/GjwdboBMWvdsBeAmQi1b37xryd.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 115,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Mirchi Lanti Kurradu",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [],
+    "crew": []
+  },
+  "release_dates": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 900,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/GjwdboBMWvdsBeAmQi1b37xryd.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 600
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "external_ids": {
+    "imdb_id": "tt37788463",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": []
+  }
+}

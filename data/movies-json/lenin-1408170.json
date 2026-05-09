@@ -1,0 +1,357 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1408170,
+  "imdb_id": "tt5256640",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "లెనిన్",
+  "overview": "The life of Russian communist revolutionary, Vladimir Lenin.",
+  "popularity": 1.1843,
+  "poster_path": "/rAHQviBq8Fxi20hNtHPGLnr4L0f.jpg",
+  "production_companies": [
+    {
+      "id": 107352,
+      "logo_path": "/qNLrEbrNigDNR6QgaRtwXtRIwgx.png",
+      "name": "Sithara Entertainments",
+      "origin_country": "IN"
+    },
+    {
+      "id": 98919,
+      "logo_path": null,
+      "name": "Manam Enterprises",
+      "origin_country": "IN"
+    },
+    {
+      "id": 44098,
+      "logo_path": "/eplqXZD7BVDvu4E2QyKRFkL7rtJ.png",
+      "name": "Annapurna Studios",
+      "origin_country": "IN"
+    },
+    {
+      "id": 18157,
+      "logo_path": null,
+      "name": "Trikita Entertainment",
+      "origin_country": "RU"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    },
+    {
+      "iso_3166_1": "RU",
+      "name": "Russia"
+    }
+  ],
+  "release_date": "2026-06-26",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Post Production",
+  "tagline": "",
+  "title": "Lenin",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1544304,
+        "known_for_department": "Acting",
+        "name": "Akhil Akkineni",
+        "original_name": "Akhil Akkineni",
+        "popularity": 0.5622,
+        "profile_path": "/uErlyTiIXxTA0Qd7UTtYukOD51O.jpg",
+        "cast_id": 1,
+        "character": "Lenin",
+        "credit_id": "676e44f90c4402b6319294d4",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 4485095,
+        "known_for_department": "Acting",
+        "name": "Bhagyashri Borse",
+        "original_name": "Bhagyashree Borse",
+        "popularity": 0.574,
+        "profile_path": "/z1q1PEKFHVdKrBzD1Wk2q2WQMrj.jpg",
+        "cast_id": 16,
+        "character": "Bharathi",
+        "credit_id": "685d2418be0658808d7b3e47",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 935915,
+        "known_for_department": "Acting",
+        "name": "Sivaji Sontineni",
+        "original_name": "Sivaji Sontineni",
+        "popularity": 1.3034,
+        "profile_path": "/rYttVZsngTbaS2ElxDiIiQ32RbL.jpg",
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "67fe39c5de5e4dec62ae74e2",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1275608,
+        "known_for_department": "Acting",
+        "name": "Easwari Rao",
+        "original_name": "ఈశ్వరీ రావు",
+        "popularity": 0.5495,
+        "profile_path": "/fjyvQ45YZcovy2Egj2eux8UiuHU.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "67fe39cede5e4dec62ae74e8",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1790294,
+        "known_for_department": "Production",
+        "name": "Suryadevara Naga Vamsi",
+        "original_name": "Suryadevara Naga Vamsi",
+        "popularity": 0.1702,
+        "profile_path": "/hLJpBV45WFqS3sYxS3zmBhcHAoq.jpg",
+        "credit_id": "676e450ed6d10ecc8c12ad18",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3628328,
+        "known_for_department": "Directing",
+        "name": "Murali Kishor Abburu",
+        "original_name": "Murali Kishor Abburu",
+        "popularity": 0.0621,
+        "profile_path": null,
+        "credit_id": "676e451fd6d10ecc8c12ad21",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 149958,
+        "known_for_department": "Acting",
+        "name": "Nagarjuna Akkineni",
+        "original_name": "Nagarjuna Akkineni",
+        "popularity": 1.0828,
+        "profile_path": "/i42K59YZY2NbNfqxfo78YoFz6Bv.jpg",
+        "credit_id": "67c06f6e072a707ae935b415",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585344,
+        "known_for_department": "Sound",
+        "name": "S. Thaman",
+        "original_name": "S. Thaman",
+        "popularity": 0.5088,
+        "profile_path": "/y2VYUPTSWr580Fx8hxUNcUTViUa.jpg",
+        "credit_id": "67f50cb71bb047289999a662",
+        "department": "Sound",
+        "job": "Music Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1526585,
+        "known_for_department": "Editing",
+        "name": "Naveen Nooli",
+        "original_name": "Naveen Nooli",
+        "popularity": 0.247,
+        "profile_path": "/dTYIRplqzKtT6LB8uONcIcsJz6I.jpg",
+        "credit_id": "67f50d8f31c9f27299ad5412",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2035066,
+        "known_for_department": "Art",
+        "name": "Kolla Avinash",
+        "original_name": "Kolla Avinash",
+        "popularity": 0.4354,
+        "profile_path": "/27Tw9vCcGV1iNE0Y8MIpLY3U5r2.jpg",
+        "credit_id": "67f50da531c9f27299ad541f",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2582704,
+        "known_for_department": "Camera",
+        "name": "I. Naveen Kumar",
+        "original_name": "I. Naveen Kumar",
+        "popularity": 0.0379,
+        "profile_path": null,
+        "credit_id": "67f60f04d4c444a1cc991ec5",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1327262,
+        "known_for_department": "Production",
+        "name": "Elena Yatsura",
+        "original_name": "Елена Яцура",
+        "popularity": 0.07,
+        "profile_path": null,
+        "credit_id": "6843589b0addf6db3b4dd9db",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3628328,
+        "known_for_department": "Directing",
+        "name": "Murali Kishor Abburu",
+        "original_name": "Murali Kishor Abburu",
+        "popularity": 0.0621,
+        "profile_path": null,
+        "credit_id": "684358a17ec22a200896c90e",
+        "department": "Writing",
+        "job": "Writer"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt5256640",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "LENIN - TITLE GLIMPSE | AKKINENI AKHIL | SREELEELA | NANDA KISHORE | AKKINENI NAGARJUNA | NAGA VAMSI",
+        "key": "w2ZbnBobkuQ",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Teaser",
+        "official": true,
+        "id": "67f50e59ddf9194387d9e223",
+        "published_at": "2025-04-08T11:34:23.000Z"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2026-06-26T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/4XBPNUVYrKbxkJGn53uFSz8VHsW.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1366
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/rAHQviBq8Fxi20hNtHPGLnr4L0f.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1365
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/3GER9CDJQMe3eG3CcQer0zvSIyc.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1365
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/vMhmsHb9GvlALNzblHYIiC6N3vA.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 1600,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/xDMbD4tquYWmoY7LHxCOk8l9ZfB.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1066
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

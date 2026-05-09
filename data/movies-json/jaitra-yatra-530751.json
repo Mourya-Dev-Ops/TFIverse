@@ -1,0 +1,398 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 530751,
+  "imdb_id": "tt1579781",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Jaitra Yatra",
+  "overview": "Teja is son of Seetharamudu from the settlement area, where police & politicians rule the people. How Teja goes against them and wins the war against the legal bureaucrats, forms rest of the plot.",
+  "popularity": 0.1539,
+  "poster_path": "/g0tjzzV7g6tHaqNOHIEdjN2xnaE.jpg",
+  "production_companies": [
+    {
+      "id": 69121,
+      "logo_path": null,
+      "name": "Sri Sravanthi Movies",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1991-11-13",
+  "revenue": 0,
+  "runtime": 139,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Jaitra Yatra",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt1579781",
+    "wikidata_id": "Q18126177",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1991-11-13T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.692,
+        "height": 971,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/g0tjzzV7g6tHaqNOHIEdjN2xnaE.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 672
+      }
+    ]
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 149958,
+        "known_for_department": "Acting",
+        "name": "Nagarjuna Akkineni",
+        "original_name": "Nagarjuna Akkineni",
+        "popularity": 1.0828,
+        "profile_path": "/i42K59YZY2NbNfqxfo78YoFz6Bv.jpg",
+        "cast_id": 0,
+        "character": "",
+        "credit_id": "5b26cd88c3a36841de011125",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584259,
+        "known_for_department": "Acting",
+        "name": "Vijayashanti",
+        "original_name": "Vijayashanti",
+        "popularity": 0.4156,
+        "profile_path": "/tUzNRk8vqyEXgi1gE6JCTZcEOHD.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "5b26cda19251410d81014c05",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 565890,
+        "known_for_department": "Acting",
+        "name": "Tanikella Bharani",
+        "original_name": "Tanikella Bharani",
+        "popularity": 0.742,
+        "profile_path": "/zRjr0F64Eznbliz1RvN9icj3Lq1.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "68dd0313428e209247e1cd1c",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1422554,
+        "known_for_department": "Acting",
+        "name": "Banerjee",
+        "original_name": "Banerjee",
+        "popularity": 0.3077,
+        "profile_path": "/czUUqcEgBmDBNMx0zwIIy2HSZsp.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "68dd031d0cef717c92b426af",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 586627,
+        "known_for_department": "Acting",
+        "name": "Chandramohan",
+        "original_name": "Chandramohan",
+        "popularity": 0.6123,
+        "profile_path": "/pXkbPFie2pOGgc9cd84BUz0OP4A.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "68dd032ca5ada44abbe1ce77",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.0993,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "68dd0339358e0cdcdb531803",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 131261,
+        "known_for_department": "Acting",
+        "name": "Delhi Ganesh",
+        "original_name": "Delhi Ganesh",
+        "popularity": 0.2975,
+        "profile_path": "/8oMzQRumoUs5a6iStcK1B3znY1D.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "68dd0346686bca377f2df886",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585576,
+        "known_for_department": "Acting",
+        "name": "Vijayachander",
+        "original_name": "Vijayachander",
+        "popularity": 0.1255,
+        "profile_path": null,
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "68df02873d9079276d2a4442",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 131262,
+        "known_for_department": "Acting",
+        "name": "Nizhalgal Ravi",
+        "original_name": "Nizhalgal Ravi",
+        "popularity": 0.4612,
+        "profile_path": "/g62k2PPCRcet0PhagJxS3rFTpdK.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "68df0299969928f16aee4c42",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1060290,
+        "known_for_department": "Acting",
+        "name": "Krishna Bhagavan",
+        "original_name": "Krishna Bhagavan",
+        "popularity": 0.2699,
+        "profile_path": "/xR3Wy7HT98ZhbizA88pKfLx05Bf.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "68df02a96a38ae5a5a5b83fd",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 213432,
+        "known_for_department": "Acting",
+        "name": "Brahmaji",
+        "original_name": "Brahmaji",
+        "popularity": 0.5281,
+        "profile_path": "/xDTE7POq1bkyjLINxdy7rW4wQlg.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "68df02c23d9079276d2a4447",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335263,
+        "known_for_department": "Acting",
+        "name": "Satya Prakash",
+        "original_name": "Satya Prakash",
+        "popularity": 0.3196,
+        "profile_path": "/858vQ4NMh89fjjKEIeCh15oW5Y1.jpg",
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "68df02fe20dc3c15144c64fc",
+        "order": 11
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1152282,
+        "known_for_department": "Acting",
+        "name": "Narayana Rao Uppalapati",
+        "original_name": "Narayana Rao Uppalapati",
+        "popularity": 0.0977,
+        "profile_path": null,
+        "credit_id": "5b26cdd4c3a36812ce007d6e",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 565890,
+        "known_for_department": "Acting",
+        "name": "Tanikella Bharani",
+        "original_name": "Tanikella Bharani",
+        "popularity": 0.742,
+        "profile_path": "/zRjr0F64Eznbliz1RvN9icj3Lq1.jpg",
+        "credit_id": "68df032c412a3adf63972737",
+        "department": "Writing",
+        "job": "Dialogue"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1152282,
+        "known_for_department": "Acting",
+        "name": "Narayana Rao Uppalapati",
+        "original_name": "Narayana Rao Uppalapati",
+        "popularity": 0.0977,
+        "profile_path": null,
+        "credit_id": "68df03520db2c47f2e3b8a45",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1152282,
+        "known_for_department": "Acting",
+        "name": "Narayana Rao Uppalapati",
+        "original_name": "Narayana Rao Uppalapati",
+        "popularity": 0.0977,
+        "profile_path": null,
+        "credit_id": "68df036fb41db9a781ee4c8a",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584585,
+        "known_for_department": "Sound",
+        "name": "S. P. Balasubramaniam",
+        "original_name": "S. P. Balasubramaniam",
+        "popularity": 0.4617,
+        "profile_path": "/vKcUYibvLFRPADiNwQtl27e1STy.jpg",
+        "credit_id": "68df03afff90e45d655b83d1",
+        "department": "Sound",
+        "job": "Music"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 37242,
+        "known_for_department": "Editing",
+        "name": "Sreekar Prasad",
+        "original_name": "Sreekar Prasad",
+        "popularity": 0.3076,
+        "profile_path": "/cHpDtVlleMlplodhKmjPCGqaAFS.jpg",
+        "credit_id": "68df03c4196b74f65f129945",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1670512,
+        "known_for_department": "Camera",
+        "name": "Hari Anumolu",
+        "original_name": "Hari Anumolu",
+        "popularity": 0.1204,
+        "profile_path": null,
+        "credit_id": "68df03dc95c8c882d03b89d4",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1137474,
+        "known_for_department": "Production",
+        "name": "Sravanthi Ravi Kishore",
+        "original_name": "Sravanthi Ravi Kishore",
+        "popularity": 0.2048,
+        "profile_path": "/ebo869IeQGMhqxVYNMw3dP3jnW4.jpg",
+        "credit_id": "68df03f6f99c229cfaee4c75",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2055156,
+        "known_for_department": "Art",
+        "name": "Ranga Peketi",
+        "original_name": "Ranga Peketi",
+        "popularity": 0.0511,
+        "profile_path": null,
+        "credit_id": "68df049d78fb919681129942",
+        "department": "Art",
+        "job": "Art Direction"
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

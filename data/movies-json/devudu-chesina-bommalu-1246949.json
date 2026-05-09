@@ -1,0 +1,213 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 1246949,
+  "imdb_id": "tt8059260",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Devudu Chesina Bommalu",
+  "overview": "A man falls in love with a woman and gets married to her. However, a fated incident on the night of the couple's wedding causes one of them to face unfathomable circumstances.",
+  "popularity": 0.1451,
+  "poster_path": "/cRgVgjK7jB9KbOrjidKC55QbG0s.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1976-11-11",
+  "revenue": 0,
+  "runtime": 144,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Devudu Chesina Bommalu",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584682,
+        "known_for_department": "Acting",
+        "name": "Murali Mohan",
+        "original_name": "Murali Mohan",
+        "popularity": 0.3614,
+        "profile_path": "/otex9PxT1wXvvR4ATVG5lZH5UDV.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "65d2ce7628d7fe017c34cd6a",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584418,
+        "known_for_department": "Acting",
+        "name": "Jayasudha",
+        "original_name": "Jayasudha",
+        "popularity": 0.5248,
+        "profile_path": "/xOP3pYlrqyBw5x9CDEMkYXPzpNu.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "65d2ce7d4bc38b018954bf0a",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1490438,
+        "known_for_department": "Acting",
+        "name": "Prabha",
+        "original_name": "Prabha",
+        "popularity": 0.0784,
+        "profile_path": "/jtI1W48Jr8g8hHmrUEeCRAOQXv9.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "6992f539037515daa5287a50",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585268,
+        "known_for_department": "Acting",
+        "name": "Mohan Babu",
+        "original_name": "Mohan Babu",
+        "popularity": 0.5568,
+        "profile_path": "/zwqcXtnk0ju0nhuhvZXSLL2nLIy.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "6992f5a880f30a36946f6e01",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 591149,
+        "known_for_department": "Acting",
+        "name": "Giri Babu",
+        "original_name": "Giri Babu",
+        "popularity": 0.4574,
+        "profile_path": "/rOwTKoZGqAnh1jPCpPnn7ccAT0i.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "6992f5b2dde0cf5f23124720",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1150027,
+        "known_for_department": "Acting",
+        "name": "Saakshi Ranga Rao",
+        "original_name": "Saakshi Ranga Rao",
+        "popularity": 0.0819,
+        "profile_path": null,
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "6992f5d348c917cd226f6e47",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1107239,
+        "known_for_department": "Acting",
+        "name": "Kalpana Rai",
+        "original_name": "Kalpana Rai",
+        "popularity": 0.204,
+        "profile_path": "/x3Nsq29SWSvQMCfbq8TlEgXvnNS.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "6992f5eafdefff70ec0657ca",
+        "order": 6
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4544814,
+        "known_for_department": "Directing",
+        "name": "V. Hanuman Prasad",
+        "original_name": "V. Hanuman Prasad",
+        "popularity": 0.0261,
+        "profile_path": null,
+        "credit_id": "65d2ce972fccee0185a51b89",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt8059260",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1976-11-11T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.75,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/cRgVgjK7jB9KbOrjidKC55QbG0s.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1536
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}

@@ -1,0 +1,676 @@
+{
+  "adult": false,
+  "backdrop_path": "/m8bM4y7hMKq3AOeaGtQiY2UHLe6.jpg",
+  "belongs_to_collection": {
+    "id": 350309,
+    "name": "Bāhubali Collection",
+    "poster_path": "/4YAX6AIFsU7gCCWAxoQ5ajdwSIN.jpg",
+    "backdrop_path": "/wpXu0AdZUGmExrN39uVYJNSh9ug.jpg"
+  },
+  "budget": 0,
+  "genres": [
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "https://baahubali.com",
+  "id": 1570976,
+  "imdb_id": "tt38807583",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Bāhubali: The Eternal War — Part 1",
+  "overview": "The murdered Prince Baahubali enters the afterlife and joins an eternal war between gods and demons across 14 realms.",
+  "popularity": 1.1727,
+  "poster_path": "/n1KLxyMDfktpfFxv3X35OiA9IzF.jpg",
+  "production_companies": [
+    {
+      "id": 57946,
+      "logo_path": "/oBMVxYVfjmirgN7tpz4CaSSTnNj.png",
+      "name": "Arka Media Works",
+      "origin_country": "IN"
+    },
+    {
+      "id": 279390,
+      "logo_path": null,
+      "name": "Aniventure Studios",
+      "origin_country": ""
+    },
+    {
+      "id": 279391,
+      "logo_path": null,
+      "name": "Zaratan Studios",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2027-06-10",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "",
+  "title": "Baahubali: The Eternal War – Part 1",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237045,
+        "known_for_department": "Acting",
+        "name": "Prabhas",
+        "original_name": "Prabhas",
+        "popularity": 2.6943,
+        "profile_path": "/u6RVP8ukgLaymeoi5VmX0JRAcCn.jpg",
+        "cast_id": 5,
+        "character": "Amarendra Baahubali (voice)",
+        "credit_id": "690690ab438df80039f92a42",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 141701,
+        "known_for_department": "Acting",
+        "name": "Ramya Krishnan",
+        "original_name": "Ramya Krishnan",
+        "popularity": 2.2012,
+        "profile_path": "/kZvSnBTgsMgTsUE5o1yFQnDR3dl.jpg",
+        "cast_id": 6,
+        "character": "Sivagami (voice)",
+        "credit_id": "69069120da18a21add463973",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1040493,
+        "known_for_department": "Acting",
+        "name": "Sahil Vaid",
+        "original_name": "Sahil Vaid",
+        "popularity": 0.7175,
+        "profile_path": "/cDMYHIBwtto2VoECGrXjzhJkKYh.jpg",
+        "cast_id": 35,
+        "character": "Indra (voice - Hindi)",
+        "credit_id": "69dffa88cc8aa1c5b4b7fc1c",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6144963,
+        "known_for_department": "Acting",
+        "name": "Mohak Ninad",
+        "original_name": "Mohak Ninad",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "cast_id": 36,
+        "character": "Vishasura/Amarendra Baahubali  (voice - Hindi)",
+        "credit_id": "69dffc5c38dc9cc069f9408d",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1488791,
+        "known_for_department": "Production",
+        "name": "Shobu Yarlagadda",
+        "original_name": "Shobu Yarlagadda",
+        "popularity": 0.1234,
+        "profile_path": null,
+        "credit_id": "690217722d855ee9581db250",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 147021,
+        "known_for_department": "Directing",
+        "name": "S. S. Rajamouli",
+        "original_name": "S. S. Rajamouli",
+        "popularity": 1.0192,
+        "profile_path": "/g7jXGAVT8T5vq81fO5JWDleDc75.jpg",
+        "credit_id": "6902177f92c3978afc73b3c8",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1748367,
+        "known_for_department": "Directing",
+        "name": "Ishan Shukla",
+        "original_name": "Ishan Shukla",
+        "popularity": 0.069,
+        "profile_path": "/bDtBhhz0R1JT0ZfBpFRcu4S6dVg.jpg",
+        "credit_id": "690217b311990101b173b4a6",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1488790,
+        "known_for_department": "Production",
+        "name": "Prasad Devineni",
+        "original_name": "Prasad Devineni",
+        "popularity": 0.1445,
+        "profile_path": null,
+        "credit_id": "690218ccef1748aa61b64db4",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1718142,
+        "known_for_department": "Visual Effects",
+        "name": "Sandeep Kamal",
+        "original_name": "Sandeep Kamal",
+        "popularity": 0.1311,
+        "profile_path": null,
+        "credit_id": "6907ca84022e519fe12fec8e",
+        "department": "Visual Effects",
+        "job": "VFX Supervisor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 147021,
+        "known_for_department": "Directing",
+        "name": "S. S. Rajamouli",
+        "original_name": "S. S. Rajamouli",
+        "popularity": 1.0192,
+        "profile_path": "/g7jXGAVT8T5vq81fO5JWDleDc75.jpg",
+        "credit_id": "690a164437c2fcf976f5ffa7",
+        "department": "Crew",
+        "job": "Presenter"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1748367,
+        "known_for_department": "Directing",
+        "name": "Ishan Shukla",
+        "original_name": "Ishan Shukla",
+        "popularity": 0.069,
+        "profile_path": "/bDtBhhz0R1JT0ZfBpFRcu4S6dVg.jpg",
+        "credit_id": "690a165291b282abe9db8e9c",
+        "department": "Writing",
+        "job": "Story"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 225318,
+        "known_for_department": "Sound",
+        "name": "M.M. Keeravaani",
+        "original_name": "M.M. Keeravaani",
+        "popularity": 0.3741,
+        "profile_path": "/r0f7RTGIkG0ZBaQViIKrE1g82Ec.jpg",
+        "credit_id": "690a1672d0d45c262882af07",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 146144,
+        "known_for_department": "Directing",
+        "name": "Deva Katta",
+        "original_name": "Deva Katta",
+        "popularity": 0.2626,
+        "profile_path": null,
+        "credit_id": "690a167b6ad5f44e14c96b13",
+        "department": "Writing",
+        "job": "Dialogue"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 581908,
+        "known_for_department": "Writing",
+        "name": "Madhan Karky",
+        "original_name": "Madhan Karky",
+        "popularity": 0.3996,
+        "profile_path": "/6zwJAtDi6ScjmsL8qwnTwJto70I.jpg",
+        "credit_id": "690a168596185801dfc96b57",
+        "department": "Writing",
+        "job": "Dialogue"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2875201,
+        "known_for_department": "Sound",
+        "name": "Nagarjuna Thallapalli",
+        "original_name": "Nagarjuna Thallapalli",
+        "popularity": 0.1213,
+        "profile_path": null,
+        "credit_id": "690a1697869dd36ce6db8de0",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1666868,
+        "known_for_department": "Sound",
+        "name": "Kannan Ganpat",
+        "original_name": "Kannan Ganpat",
+        "popularity": 0.1891,
+        "profile_path": null,
+        "credit_id": "690a16a93c47569350db8f8e",
+        "department": "Sound",
+        "job": "Sound Mixer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1718142,
+        "known_for_department": "Visual Effects",
+        "name": "Sandeep Kamal",
+        "original_name": "Sandeep Kamal",
+        "popularity": 0.1311,
+        "profile_path": null,
+        "credit_id": "690a175eca394bccb8db934b",
+        "department": "Crew",
+        "job": "Technical Supervisor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2397318,
+        "known_for_department": "Art",
+        "name": "Rupali Gatti",
+        "original_name": "Rupali Gatti",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "690a178f58d421717a41391a",
+        "department": "Visual Effects",
+        "job": "Visual Development"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5781885,
+        "known_for_department": "Visual Effects",
+        "name": "Alexandre Henri",
+        "original_name": "Alexandre Henri",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "credit_id": "690a19eba1bb100afa413927",
+        "department": "Visual Effects",
+        "job": "Animation Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3607819,
+        "known_for_department": "Creator",
+        "name": "Soumya Sharma",
+        "original_name": "Soumya Sharma",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "690a1a7d0edcb3c6b041395b",
+        "department": "Writing",
+        "job": "Story"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 20503,
+        "known_for_department": "Acting",
+        "name": "Scott Mosier",
+        "original_name": "Scott Mosier",
+        "popularity": 0.6256,
+        "profile_path": "/tuRQwgHYG4iAQXxU3R1CLPnto0w.jpg",
+        "credit_id": "690a220f00019f42d4c96b70",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5796149,
+        "known_for_department": "Sound",
+        "name": "Nagarjuna Thalapalli",
+        "original_name": "Nagarjuna Thalapalli",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "690a22ae7019aae188112947",
+        "department": "Sound",
+        "job": "Sound Designer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5796158,
+        "known_for_department": "Production",
+        "name": "Kaustubh Govind Borwankar",
+        "original_name": "Kaustubh Govind Borwankar",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "690a22f5426f49e07870cb8e",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1483386,
+        "known_for_department": "Acting",
+        "name": "Abhishek Krishnan",
+        "original_name": "Abhishek Krishnan",
+        "popularity": 0.0409,
+        "profile_path": "/9JgonJpchmsoaHCWufnfMj8q4Rf.jpg",
+        "credit_id": "690a2350bfd846ffd682af79",
+        "department": "Visual Effects",
+        "job": "Head of Animation"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5796166,
+        "known_for_department": "Crew",
+        "name": "Abhishek Sushanto Karmakar",
+        "original_name": "Abhishek Sushanto Karmakar",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "690a2366f168ad93be4138f8",
+        "department": "Crew",
+        "job": "CG Supervisor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2784865,
+        "known_for_department": "Directing",
+        "name": "Sanjiv Waeerkar",
+        "original_name": "Sanjiv Waeerkar",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "690a23b100019f42d4c96b84",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5796171,
+        "known_for_department": "Art",
+        "name": "Priyanka Chavan",
+        "original_name": "Priyanka Chavan",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "690a23f062ac56b21782af00",
+        "department": "Art",
+        "job": "Concept Artist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5796172,
+        "known_for_department": "Art",
+        "name": "Giby Joseph",
+        "original_name": "Giby Joseph",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "690a241799183fba09f5ff4a",
+        "department": "Art",
+        "job": "Concept Artist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5796175,
+        "known_for_department": "Art",
+        "name": "Ajey Lele",
+        "original_name": "Ajey Lele",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "690a245ae3ddb79ebc413acc",
+        "department": "Art",
+        "job": "Concept Artist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5796176,
+        "known_for_department": "Visual Effects",
+        "name": "Aadarsh S Chandran",
+        "original_name": "Aadarsh S Chandran",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "690a24956d802f650ec967db",
+        "department": "Visual Effects",
+        "job": "3D Artist"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5796178,
+        "known_for_department": "Production",
+        "name": "Nikith Mulukala",
+        "original_name": "Nikith Mulukala",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "credit_id": "690a24c20f887021ca413a26",
+        "department": "Production",
+        "job": "Production Coordinator"
+      }
+    ]
+  },
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Baahubali: The Eternal War - Official Trailer (2027)",
+        "key": "iDqSKfIQ-q4",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Teaser",
+        "official": false,
+        "id": "69f66f5344ab088dbf7d0e12",
+        "published_at": "2025-11-04T15:01:31.000Z"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt38807583",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2027-06-10T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/m8bM4y7hMKq3AOeaGtQiY2UHLe6.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1280
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/2f3Dhh75pviYsU5priRiNsaMCHN.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/AgmhFN9x24AFL1u7xkH9VziCOio.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/rKf5HBuGRjuvR18j0AwLBLHn87F.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/1eR3zCVCeNavN5OeHc3l8ZkPmMQ.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/d18oqejMyNDDt5esTrtANRxlBl5.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/djW34oYVukTDzux4xSSR8nDMwWg.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/fvBrBzi0zi8Kj28yZOkGB17xcxt.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/jfz0D5ofhA6cpIp3IR4Ny9W5DUr.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/n1KLxyMDfktpfFxv3X35OiA9IzF.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1366
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 2243,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/81YqnTRxmAQLLBfjZHmf9KbUSXE.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1494
+      },
+      {
+        "aspect_ratio": 0.75,
+        "height": 2048,
+        "iso_3166_1": "US",
+        "iso_639_1": "en",
+        "file_path": "/tP0YYjorWgxvB6VaSCy2zyjvzWh.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1536
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "US",
+        "title": "Baahubali: The Eternal War Part 1",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Baahubali - The Eternal War Part 1",
+        "type": ""
+      }
+    ]
+  }
+}

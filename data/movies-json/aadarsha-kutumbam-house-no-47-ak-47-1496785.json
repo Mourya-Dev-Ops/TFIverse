@@ -1,0 +1,255 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10751,
+      "name": "Family"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "homepage": "",
+  "id": 1496785,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "ఆదర్శ కుటుంబం హౌస్ నెం. 47 - AK 47",
+  "overview": "",
+  "popularity": 0.125,
+  "poster_path": "/4xyzmQj2SrocgWVlV1aCxeyCDsz.jpg",
+  "production_companies": [
+    {
+      "id": 69898,
+      "logo_path": "/bvPo07eG1gz3r6OCuscRvDmTi20.png",
+      "name": "Haarika & Hassine Creations",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "In Production",
+  "tagline": "",
+  "title": "Aadarsha Kutumbam House No: 47 - AK 47",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 88166,
+        "known_for_department": "Acting",
+        "name": "Venkatesh",
+        "original_name": "Venkatesh",
+        "popularity": 2.0386,
+        "profile_path": "/t5PWjy177ZTUM6wdjaVjqp5FLJq.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "684a822a17f2287284302900",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2182257,
+        "known_for_department": "Acting",
+        "name": "Srinidhi Shetty",
+        "original_name": "Srinidhi Shetty",
+        "popularity": 0.448,
+        "profile_path": "/pTsixKDFS3n2xsvR6wDZ9J6jjfQ.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "68f77d9e268466e0b62d6f66",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 938965,
+        "known_for_department": "Acting",
+        "name": "Nara Rohith",
+        "original_name": "నారా రోహిత్",
+        "popularity": 0.4263,
+        "profile_path": "/nfgWrE7d3IJwCDhwzg895djIQbB.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "696e10a3695591492c20d82c",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1638503,
+        "known_for_department": "Acting",
+        "name": "Satya",
+        "original_name": "Satya",
+        "popularity": 0.834,
+        "profile_path": "/fWHqfjiqnORU6R2fqwiJnowujdP.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "6988c2bfb7e59d42c2f81355",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 116923,
+        "known_for_department": "Directing",
+        "name": "Trivikram Srinivas",
+        "original_name": "Trivikram Srinivas",
+        "popularity": 0.6817,
+        "profile_path": "/i8FMmDxo2tXbKyrpAJWxokeClWI.jpg",
+        "credit_id": "684a8244771c655f8030278c",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 116923,
+        "known_for_department": "Directing",
+        "name": "Trivikram Srinivas",
+        "original_name": "Trivikram Srinivas",
+        "popularity": 0.6817,
+        "profile_path": "/i8FMmDxo2tXbKyrpAJWxokeClWI.jpg",
+        "credit_id": "684a82598de362ff1e9f5d25",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1628862,
+        "known_for_department": "Production",
+        "name": "S. Radha Krishna",
+        "original_name": "S. Radha Krishna",
+        "popularity": 0.183,
+        "profile_path": "/eYrVl6n0bN5KE7ES9GIr8hwCiah.jpg",
+        "credit_id": "689ef2de00c4cdd17c5d2b8b",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1790294,
+        "known_for_department": "Production",
+        "name": "Suryadevara Naga Vamsi",
+        "original_name": "Suryadevara Naga Vamsi",
+        "popularity": 0.1702,
+        "profile_path": "/hLJpBV45WFqS3sYxS3zmBhcHAoq.jpg",
+        "credit_id": "693fdf0a5095af08a8f78aad",
+        "department": "Production",
+        "job": "Co-Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 585344,
+        "known_for_department": "Sound",
+        "name": "S. Thaman",
+        "original_name": "S. Thaman",
+        "popularity": 0.5088,
+        "profile_path": "/y2VYUPTSWr580Fx8hxUNcUTViUa.jpg",
+        "credit_id": "69e9c49de5672d2b1bbcb31e",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 2048,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/4xyzmQj2SrocgWVlV1aCxeyCDsz.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1365
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/1Z0ypXqSRWjnjPRVU6YiHwawsLC.jpg",
+        "vote_average": 1.75,
+        "vote_count": 2,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.666,
+        "height": 2560,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/jPSGgfM981VlzX5ZYmggB5qShY2.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1706
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "AK47",
+        "type": ""
+      },
+      {
+        "iso_3166_1": "IN",
+        "title": "Aadarsha Kutumbam",
+        "type": ""
+      }
+    ]
+  }
+}

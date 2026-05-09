@@ -1,0 +1,223 @@
+{
+  "adult": false,
+  "backdrop_path": "/rOHZIArbvH0rKkM7tE3NF40SQUj.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 10751,
+      "name": "Family"
+    }
+  ],
+  "homepage": "",
+  "id": 1475987,
+  "imdb_id": "tt33773297",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Kallu Compound 1995",
+  "overview": "A Telangana village under prohibition in 1995, where a powerful toddy tapper, Pratap Goud, exploits villagers.",
+  "popularity": 0.0642,
+  "poster_path": "/q8DqVZtEaYDf8PXPNbKCG2JYAcy.jpg",
+  "production_companies": [
+    {
+      "id": 261408,
+      "logo_path": null,
+      "name": "Blue Horizon Movie Factory",
+      "origin_country": ""
+    }
+  ],
+  "production_countries": [],
+  "release_date": "2024-10-18",
+  "revenue": 0,
+  "runtime": 117,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Kallu Compound 1995",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "KALLU COMPOUND 1995 MOVIE TRAILER",
+        "key": "ZHL-CM5oe5A",
+        "site": "YouTube",
+        "size": 2160,
+        "type": "Trailer",
+        "official": false,
+        "id": "6819d982cb42f7195384d62c",
+        "published_at": "2024-04-12T16:44:55.000Z"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5418030,
+        "known_for_department": "Acting",
+        "name": "Ganesh",
+        "original_name": "Ganesh",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 2,
+        "character": "Raju",
+        "credit_id": "6818c4562aa03a60cc1d1096",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5418031,
+        "known_for_department": "Acting",
+        "name": "Ayeshi Patel",
+        "original_name": "Ayeshi Patel",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 3,
+        "character": "Malleshwari",
+        "credit_id": "6818c465c5a20273be64001e",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1163230,
+        "known_for_department": "Acting",
+        "name": "Posani Krishna Murali",
+        "original_name": "Posani Krishna Murali",
+        "popularity": 0.7494,
+        "profile_path": "/mJHo1EvOORv2FAK12zpFESDQfM.jpg",
+        "cast_id": 4,
+        "character": "Raghava (MLA)",
+        "credit_id": "6818c473d5c815e0c91d1093",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5418028,
+        "known_for_department": "Directing",
+        "name": "Praveen Jetti",
+        "original_name": "Praveen Jetti",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 5,
+        "character": "Pratap Goud",
+        "credit_id": "6818c47cbbbf46d7f6640008",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5420016,
+        "known_for_department": "Acting",
+        "name": "Jeeva",
+        "original_name": "Jeeva",
+        "popularity": 0,
+        "profile_path": null,
+        "cast_id": 6,
+        "character": "Raja Reddy (MP)",
+        "credit_id": "6819d9cd9f87dbcf256403ea",
+        "order": 4
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5418028,
+        "known_for_department": "Directing",
+        "name": "Praveen Jetti",
+        "original_name": "Praveen Jetti",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "6818c42e462af15b95031b25",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "UA",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2024-10-18T00:00:00.000Z",
+            "type": 3
+          },
+          {
+            "certification": "UA",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-05-05T00:00:00.000Z",
+            "type": 4
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/rOHZIArbvH0rKkM7tE3NF40SQUj.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1350,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/q8DqVZtEaYDf8PXPNbKCG2JYAcy.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 900
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "external_ids": {
+    "imdb_id": "tt33773297",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  }
+}

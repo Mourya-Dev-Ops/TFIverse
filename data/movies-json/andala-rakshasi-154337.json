@@ -1,0 +1,374 @@
+{
+  "adult": false,
+  "backdrop_path": "/mdGfXJp5rUT0MQuayAHydgUBdiI.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 154337,
+  "imdb_id": "tt2316756",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "అందాల రాక్షసి",
+  "overview": "Gautham, a wealthy man, falls for a woman named Mithuna only to learn that she loves another man. However, a sudden chain of events changes their lives forever.",
+  "popularity": 0.3952,
+  "poster_path": "/xTJSZ1XtPrZrjbHcASNf9GWMXBw.jpg",
+  "production_companies": [
+    {
+      "id": 79395,
+      "logo_path": "/cxgZzPxh77xTJJ8b94hf2uJAdlL.png",
+      "name": "Vaaraahi Chalana Chitram",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2012-08-10",
+  "revenue": 0,
+  "runtime": 145,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Andala Rakshasi",
+  "video": false,
+  "vote_average": 6.3,
+  "vote_count": 8,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1135119,
+        "known_for_department": "Acting",
+        "name": "Lavanya Tripathi",
+        "original_name": "Lavanya Tripathi",
+        "popularity": 0.326,
+        "profile_path": "/fp31MLIjisF6MdWRBN3KQ9T8S3u.jpg",
+        "cast_id": 4,
+        "character": "Midhuna",
+        "credit_id": "52fe4b5c9251416c910d7f4f",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1052322,
+        "known_for_department": "Acting",
+        "name": "Rahul Ravindran",
+        "original_name": "Rahul Ravindran",
+        "popularity": 0.2938,
+        "profile_path": "/ejAiUB2QUhiOaGfDPgAM505R5uY.jpg",
+        "cast_id": 3,
+        "character": "Gautham",
+        "credit_id": "52fe4b5c9251416c910d7f4b",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1135117,
+        "known_for_department": "Acting",
+        "name": "Naveen Chandra",
+        "original_name": "Naveen Chandra",
+        "popularity": 0.8324,
+        "profile_path": "/6iEhNOOqRTOQ0JFSiv6agtqvwx9.jpg",
+        "cast_id": 2,
+        "character": "Surya",
+        "credit_id": "52fe4b5c9251416c910d7f47",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1693611,
+        "known_for_department": "Acting",
+        "name": "C. V. L. Narasimha Rao",
+        "original_name": "C. V. L. Narasimha Rao",
+        "popularity": 0.193,
+        "profile_path": "/ehPetJv7j7nRWYYRrPUpKvhiru9.jpg",
+        "cast_id": 12,
+        "character": "Midhuna's Father",
+        "credit_id": "62efea75140bad007d19c332",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 544990,
+        "known_for_department": "Acting",
+        "name": "Pragathi Mahavadi",
+        "original_name": "Pragathi Mahavadi",
+        "popularity": 0.6511,
+        "profile_path": "/9v63JB33LMkfR90raHu9O1iHZOQ.jpg",
+        "cast_id": 11,
+        "character": "Mithuna's mother",
+        "credit_id": "60a82d12bbd0b0002b40c688",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3333503,
+        "known_for_department": "Acting",
+        "name": "Micky Makhija",
+        "original_name": "Micky Makhija",
+        "popularity": 0.1126,
+        "profile_path": "/4Bcm67iVvsAoyZxMcFbZ7yy6feW.jpg",
+        "cast_id": 15,
+        "character": "Gautam's Father",
+        "credit_id": "6857f7d5d767d6e8f1398da6",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335753,
+        "known_for_department": "Acting",
+        "name": "Narasimha Raju",
+        "original_name": "Narasimha Raju",
+        "popularity": 0.0311,
+        "profile_path": null,
+        "cast_id": 16,
+        "character": "",
+        "credit_id": "6857f800bc662f227fcb4e71",
+        "order": 6
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1668466,
+        "known_for_department": "Production",
+        "name": "Sai Korrapati",
+        "original_name": "Sai Korrapati",
+        "popularity": 0.1041,
+        "profile_path": null,
+        "credit_id": "60a82ab8501cf20026d2f9c6",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 147021,
+        "known_for_department": "Directing",
+        "name": "S. S. Rajamouli",
+        "original_name": "S. S. Rajamouli",
+        "popularity": 1.2185,
+        "profile_path": "/g7jXGAVT8T5vq81fO5JWDleDc75.jpg",
+        "credit_id": "60a82ac885702e00580aecf0",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1339518,
+        "known_for_department": "Camera",
+        "name": "G. Murali",
+        "original_name": "G. Murali",
+        "popularity": 0.0404,
+        "profile_path": "/7Hc4deVk6mC0zEvUJ3lWvU9LXLY.jpg",
+        "credit_id": "60a82ad95541fa006df09098",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2737012,
+        "known_for_department": "Editing",
+        "name": "G V Chandrasekar",
+        "original_name": "G V Chandrasekar",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "60a82c124b0c630078d4e6df",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1135092,
+        "known_for_department": "Writing",
+        "name": "Hanu Raghavapudi",
+        "original_name": "Hanu Raghavapudi",
+        "popularity": 0.2346,
+        "profile_path": "/7tizD44Jp35OLykxEQlMxKOjuTz.jpg",
+        "credit_id": "60a82cc7501cf20059304960",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1135092,
+        "known_for_department": "Writing",
+        "name": "Hanu Raghavapudi",
+        "original_name": "Hanu Raghavapudi",
+        "popularity": 0.2346,
+        "profile_path": "/7tizD44Jp35OLykxEQlMxKOjuTz.jpg",
+        "credit_id": "52fe4b5c9251416c910d7f43",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1337184,
+        "known_for_department": "Sound",
+        "name": "Radhan",
+        "original_name": "Radhan",
+        "popularity": 0.1062,
+        "profile_path": "/8fJbIfph53BOACVz59IIMRoPr4Y.jpg",
+        "credit_id": "5a75d40b925141059703263e",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1712856,
+        "known_for_department": "Writing",
+        "name": "Rakendu Mouli",
+        "original_name": "Rakendu Mouli Vennelakanti",
+        "popularity": 0.3438,
+        "profile_path": "/bTPcmRTCTjiASiEp4Nu5SQArTaM.jpg",
+        "credit_id": "66d29ba863ff7d608d457591",
+        "department": "Writing",
+        "job": "Lyricist"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1712856,
+        "known_for_department": "Writing",
+        "name": "Rakendu Mouli",
+        "original_name": "Rakendu Mouli Vennelakanti",
+        "popularity": 0.3438,
+        "profile_path": "/bTPcmRTCTjiASiEp4Nu5SQArTaM.jpg",
+        "credit_id": "66d29bbfa658ab22ebb60970",
+        "department": "Sound",
+        "job": "Playback Singer"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt2316756",
+    "wikidata_id": "Q4753488",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 9673,
+        "name": "love"
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/mdGfXJp5rUT0MQuayAHydgUBdiI.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1536,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/xTJSZ1XtPrZrjbHcASNf9GWMXBw.jpg",
+        "vote_average": 3.334,
+        "vote_count": 3,
+        "width": 1024
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/4DueUvlkuWuAV8uCyTjut7Aq8ov.jpg",
+        "vote_average": 0.166,
+        "vote_count": 1,
+        "width": 500
+      },
+      {
+        "aspect_ratio": 0.75,
+        "height": 2000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/cO6TapwM74xzZBYigD2XntSAJBo.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1500
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 920,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/wuT1DnI9mzzx0ToZ70fyb5v97Fc.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 614
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2012-08-10T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  }
+}

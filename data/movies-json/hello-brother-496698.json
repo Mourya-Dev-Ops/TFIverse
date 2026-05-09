@@ -1,0 +1,449 @@
+{
+  "adult": false,
+  "backdrop_path": "/3FZldfC6wnTzbKkWIJuoOyrALUY.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    }
+  ],
+  "homepage": "",
+  "id": 496698,
+  "imdb_id": "tt0282554",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "హలో బ్రదర్",
+  "overview": "A couple has twin sons with reflection mentality but one of the sons is abducted and left on the road by a criminal. Both brothers grow up with different personalities and when they cross each other's path misunderstanding arises.",
+  "popularity": 0.5143,
+  "poster_path": "/f2BLnilf2ELTA1riVFB7GCr8Qse.jpg",
+  "production_companies": [
+    {
+      "id": 98173,
+      "logo_path": "/fVON6GgfYCShJHuqrM6QugWyNSY.png",
+      "name": "Sri Durga Arts",
+      "origin_country": "IN"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1994-04-20",
+  "revenue": 0,
+  "runtime": 152,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Hello Brother",
+  "video": false,
+  "vote_average": 6.375,
+  "vote_count": 16,
+  "external_ids": {
+    "imdb_id": "tt0282554",
+    "wikidata_id": "Q5708631",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "1994-04-20T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 149958,
+        "known_for_department": "Acting",
+        "name": "Nagarjuna Akkineni",
+        "original_name": "Nagarjuna Akkineni",
+        "popularity": 1.2798,
+        "profile_path": "/i42K59YZY2NbNfqxfo78YoFz6Bv.jpg",
+        "cast_id": 0,
+        "character": "Deva & Ravi Varma",
+        "credit_id": "5a50c68d9251411322008e94",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 288587,
+        "known_for_department": "Acting",
+        "name": "Soundarya",
+        "original_name": "Soundarya",
+        "popularity": 0.5099,
+        "profile_path": "/pqACucRtWoz3mwhPeSLa9OATilN.jpg",
+        "cast_id": 1,
+        "character": "Ooha",
+        "credit_id": "5a50c6a09251411330008c81",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 141701,
+        "known_for_department": "Acting",
+        "name": "Ramya Krishnan",
+        "original_name": "Ramya Krishnan",
+        "popularity": 2.13,
+        "profile_path": "/kZvSnBTgsMgTsUE5o1yFQnDR3dl.jpg",
+        "cast_id": 2,
+        "character": "Manga",
+        "credit_id": "5a50c6adc3a3687562007e5f",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 146936,
+        "known_for_department": "Acting",
+        "name": "Srihari",
+        "original_name": "Srihari",
+        "popularity": 0.5623,
+        "profile_path": "/j0sMxR2Hq69iLCJKMcVHe4XuA17.jpg",
+        "cast_id": 6,
+        "character": "Simhachalam",
+        "credit_id": "5a50c8270e0a260275009268",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 141695,
+        "known_for_department": "Acting",
+        "name": "Kota Srinivasa Rao",
+        "original_name": "Kota Srinivasa Rao",
+        "popularity": 0.681,
+        "profile_path": "/iEJprOPpeLhnyxBu2KdiJtw5Adb.jpg",
+        "cast_id": 7,
+        "character": "S.I.Thadi Mataiyya",
+        "credit_id": "5a50c837c3a368751f00919a",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.5485,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 8,
+        "character": "Kaasi",
+        "credit_id": "5a50c8450e0a2602690093d3",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 589654,
+        "known_for_department": "Acting",
+        "name": "Ali Basha",
+        "original_name": "Ali Basha",
+        "popularity": 0.6916,
+        "profile_path": "/1z0YbDqP81BD6VxeghJG7vo9Mny.jpg",
+        "cast_id": 9,
+        "character": "Higaral",
+        "credit_id": "5a50c8540e0a26026f0093dd",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 237629,
+        "known_for_department": "Acting",
+        "name": "Sarath Babu",
+        "original_name": "Sarath Babu",
+        "popularity": 0.5311,
+        "profile_path": "/giugWi2EV6GYxmrkn4XKgyvjRGp.jpg",
+        "cast_id": 10,
+        "character": "Chakravarthy",
+        "credit_id": "5a50c862c3a368754a008abd",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 229981,
+        "known_for_department": "Acting",
+        "name": "Napoleon",
+        "original_name": "Napoleon",
+        "popularity": 0.2254,
+        "profile_path": "/sdOwjrQI2R6ozvhZMEwSY7dXeYP.jpg",
+        "cast_id": 11,
+        "character": "Mishra",
+        "credit_id": "6897efaa50754c169792ec62",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5616972,
+        "known_for_department": "Acting",
+        "name": "Rajanala",
+        "original_name": "Rajanala",
+        "popularity": 0.0071,
+        "profile_path": null,
+        "cast_id": 12,
+        "character": "Rajanala",
+        "credit_id": "6897efb9b787a192fb2677c6",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5616973,
+        "known_for_department": "Acting",
+        "name": "Sangeetha",
+        "original_name": "Sangeetha",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "cast_id": 13,
+        "character": "Geetha",
+        "credit_id": "6897efcaaaa1bdb9a092eacc",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584668,
+        "known_for_department": "Acting",
+        "name": "Charan Raj",
+        "original_name": "Charan Raj",
+        "popularity": 0.5279,
+        "profile_path": "/mmEb8jPvyhg6BisENTxM3LQpaCr.jpg",
+        "cast_id": 14,
+        "character": "Misro",
+        "credit_id": "6897efd83b2be8256b8ea86f",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1107228,
+        "known_for_department": "Acting",
+        "name": "Annapoorna",
+        "original_name": "Annapoorna",
+        "popularity": 0.5291,
+        "profile_path": "/8yFs4CeF7SoiW5j0BTtZXP2jZ9H.jpg",
+        "cast_id": 15,
+        "character": "Akkamamba",
+        "credit_id": "6897eff7b6edef11308da43d",
+        "order": 12
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1060277,
+        "known_for_department": "Directing",
+        "name": "E.V.V. Satyanarayana",
+        "original_name": "E.V.V. Satyanarayana",
+        "popularity": 0.3511,
+        "profile_path": "/dYTWo7GAyYEGr0zrkiHvw7EdIaF.jpg",
+        "credit_id": "5a50c6c1c3a368755300901b",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1332692,
+        "known_for_department": "Acting",
+        "name": "L. B. Sriram",
+        "original_name": "L. B. Sriram",
+        "popularity": 0.4627,
+        "profile_path": "/yGEj6G8NIaLeFnDJdQxJy0mhbbg.jpg",
+        "credit_id": "5a50c6eac3a368751f00908a",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1060277,
+        "known_for_department": "Directing",
+        "name": "E.V.V. Satyanarayana",
+        "original_name": "E.V.V. Satyanarayana",
+        "popularity": 0.3511,
+        "profile_path": "/dYTWo7GAyYEGr0zrkiHvw7EdIaF.jpg",
+        "credit_id": "5a50c80e9251411330008dbc",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1060277,
+        "known_for_department": "Directing",
+        "name": "E.V.V. Satyanarayana",
+        "original_name": "E.V.V. Satyanarayana",
+        "popularity": 0.3511,
+        "profile_path": "/dYTWo7GAyYEGr0zrkiHvw7EdIaF.jpg",
+        "credit_id": "68e4b52710fb2072ddc28222",
+        "department": "Writing",
+        "job": "Story"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3377658,
+        "known_for_department": "Camera",
+        "name": "K. Ravindra Babu",
+        "original_name": "K. Ravindra Babu",
+        "popularity": 0.0441,
+        "profile_path": null,
+        "credit_id": "68e4b5439c0452f88f618346",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1314993,
+        "known_for_department": "Production",
+        "name": "K. L. Narayana",
+        "original_name": "K. L. Narayana",
+        "popularity": 0.0404,
+        "profile_path": null,
+        "credit_id": "68e4b5d3f9a0a7ee5a36f149",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 552984,
+        "known_for_department": "Sound",
+        "name": "Saluri Koteswara Rao",
+        "original_name": "Saluri Koteswara Rao",
+        "popularity": 0.2525,
+        "profile_path": "/mihUu99EOf6qLCM3jlMtlwgLqbJ.jpg",
+        "credit_id": "69904c37d070fa1121efaa12",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1849588,
+        "known_for_department": "Sound",
+        "name": "Thotakura Somaraju",
+        "original_name": "Thotakura Somaraju",
+        "popularity": 0.1819,
+        "profile_path": null,
+        "credit_id": "69904c5739453eee9b4ec9f9",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1337585,
+        "known_for_department": "Camera",
+        "name": "S. Gopala Reddy",
+        "original_name": "S. Gopala Reddy",
+        "popularity": 0.1402,
+        "profile_path": null,
+        "credit_id": "69904c7321fbe8ff138c9529",
+        "department": "Camera",
+        "job": "Director of Photography"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 15016,
+        "name": "twins"
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/3FZldfC6wnTzbKkWIJuoOyrALUY.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/iDjPyNa3VXGP6zimXp3KkMAJ53G.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [
+      {
+        "aspect_ratio": 2.942,
+        "height": 154,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/uC0twighYbLcqyaSz3kYsO4RpEZ.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 453
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1920,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/f2BLnilf2ELTA1riVFB7GCr8Qse.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1280
+      }
+    ]
+  }
+}

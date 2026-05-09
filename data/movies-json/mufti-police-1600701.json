@@ -1,0 +1,212 @@
+{
+  "adult": false,
+  "backdrop_path": "/2eUo1gxYrGsH6ab5xj1ASukQ0iA.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "homepage": "",
+  "id": 1600701,
+  "imdb_id": null,
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Mufti Police",
+  "overview": "When writer Jeba is murdered at midnight, the calm of an upscale apartment complex shatters. Inspector Magudapathi, known for his unorthodox methods, delves into the residents' secrets to uncover the truth. Amid the chaos, Adhi`s growing bond with his mother's therapist, Meera, complicates everything. Mufti Police is a tense thriller where every neighbor hides a motive and the truth is darker than anyone expects.",
+  "popularity": 0.216,
+  "poster_path": "/7ojSzvyYKKtpFsJLQOFSRi8yVZ8.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2025-11-21",
+  "revenue": 0,
+  "runtime": 125,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Mufti Police",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 544977,
+        "known_for_department": "Acting",
+        "name": "Arjun Sarja",
+        "original_name": "Arjun Sarja",
+        "popularity": 0.7312,
+        "profile_path": "/fQ0yTvyDdykFxfHNYKNfRKzlCyz.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "6944d2decc88e5d2d9811607",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1114583,
+        "known_for_department": "Acting",
+        "name": "Aishwarya Rajesh",
+        "original_name": "Aishwarya Rajesh",
+        "popularity": 0.8177,
+        "profile_path": "/9xChl6zSGT9Svx5jghZg1yrW47w.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "6944d2e7da1253e059072439",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2074948,
+        "known_for_department": "Acting",
+        "name": "Ramkumar Ganesan",
+        "original_name": "Ramkumar Ganesan",
+        "popularity": 0.2955,
+        "profile_path": "/5DNM10MWKCZ1kIMCI3HLZvKLOcF.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "6944d313e5964a61ccb1bae1",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1839131,
+        "known_for_department": "Acting",
+        "name": "Abhirami Venkatachalam",
+        "original_name": "Abhirami Venkatachalam",
+        "popularity": 0.4349,
+        "profile_path": "/agzUo8aQFoqpgguwU0PiFzwMuYt.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "6944d320c54c9cd9f1fb04cf",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3254253,
+        "known_for_department": "Acting",
+        "name": "Prankster Rahul",
+        "original_name": "Prankster Rahul",
+        "popularity": 0.2248,
+        "profile_path": "/zGoJF6gQzliIFQWDN3WlqfLdkl3.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "6944d345728568dbaa8115a8",
+        "order": 4
+      }
+    ],
+    "crew": []
+  },
+  "external_ids": {
+    "imdb_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "videos": {
+    "results": []
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U/A 16+",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "2025-11-21T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [
+      {
+        "aspect_ratio": 1.778,
+        "height": 720,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/2eUo1gxYrGsH6ab5xj1ASukQ0iA.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1280
+      },
+      {
+        "aspect_ratio": 1.778,
+        "height": 1080,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/o46munCk49lxypa1s1Txbtgmiiz.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1920
+      }
+    ],
+    "logos": [
+      {
+        "aspect_ratio": 2.545,
+        "height": 275,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/neIg7jOgpqai0PJEcTTtHYBqSOP.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 700
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/7ojSzvyYKKtpFsJLQOFSRi8yVZ8.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1000
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 1500,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/9SJOIaudDDbxQewempqfPN6rhjp.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1000
+      }
+    ]
+  }
+}

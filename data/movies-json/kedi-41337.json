@@ -1,0 +1,306 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 41337,
+  "imdb_id": "tt1582524",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "కేడీ",
+  "overview": "Rummy agrees to marry Janki, but not until he has accumulated a substantial wealth, so he decides to become a gambler.",
+  "popularity": 0.3714,
+  "poster_path": "/6xquLwlfkB1epcI99mAQzhwY97D.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "2010-02-11",
+  "revenue": 0,
+  "runtime": 153,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Kedi",
+  "video": false,
+  "vote_average": 4.4,
+  "vote_count": 8,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 149958,
+        "known_for_department": "Acting",
+        "name": "Nagarjuna Akkineni",
+        "original_name": "Nagarjuna Akkineni",
+        "popularity": 1.0828,
+        "profile_path": "/i42K59YZY2NbNfqxfo78YoFz6Bv.jpg",
+        "cast_id": 1,
+        "character": "rummy",
+        "credit_id": "52fe45c2c3a36847f80d8f0b",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 85521,
+        "known_for_department": "Acting",
+        "name": "Mamta Mohandas",
+        "original_name": "Mamta Mohandas",
+        "popularity": 0.5194,
+        "profile_path": "/ce9B8AG0IN77F9GR3b8gj13CP1q.jpg",
+        "cast_id": 2,
+        "character": "Janaki",
+        "credit_id": "52fe45c2c3a36847f80d8f0f",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 88167,
+        "known_for_department": "Acting",
+        "name": "Anushka Shetty",
+        "original_name": "Anushka Shetty",
+        "popularity": 2.0943,
+        "profile_path": "/zpe6Es8kdNOXuPdXiJvqxzsmN6z.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "52fe45c2c3a36847f80d8f13",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 113810,
+        "known_for_department": "Acting",
+        "name": "Brahmanandam",
+        "original_name": "Brahmanandam",
+        "popularity": 2.0993,
+        "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "68dd88dadfa796eac8bb1d4a",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 146937,
+        "known_for_department": "Acting",
+        "name": "Sayaji Shinde",
+        "original_name": "Sayaji Shinde",
+        "popularity": 0.6919,
+        "profile_path": "/r4VBYop4XktGuSZ0wozRqJbEzMH.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "68dd88e98a2840a1d6e1cd92",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 565890,
+        "known_for_department": "Acting",
+        "name": "Tanikella Bharani",
+        "original_name": "Tanikella Bharani",
+        "popularity": 0.742,
+        "profile_path": "/zRjr0F64Eznbliz1RvN9icj3Lq1.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "68dd88f8a5ada44abbe1d137",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1296867,
+        "known_for_department": "Acting",
+        "name": "Ankur Vikal",
+        "original_name": "Ankur Vikal",
+        "popularity": 0.5142,
+        "profile_path": "/bV4EkfFSyvDm2oYxjaZVcGdGV9C.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "68dd8907155d09fcdd2df9fe",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 215912,
+        "known_for_department": "Acting",
+        "name": "Harsha Vardhan",
+        "original_name": "Harshavardhan",
+        "popularity": 0.7969,
+        "profile_path": "/A6mdUVQBu565oz20DzlxjGUWIZr.jpg",
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "68dd891393612836f6e1d993",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 584888,
+        "known_for_department": "Acting",
+        "name": "Kelly Dorji",
+        "original_name": "Kelly Dorji",
+        "popularity": 0.1776,
+        "profile_path": "/bOHbApxFuSczyq8Bt1ozmTTmJ4H.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "68dd8928950a51110ac776ca",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 227326,
+        "known_for_department": "Acting",
+        "name": "Mukul Dev",
+        "original_name": "Mukul Dev",
+        "popularity": 0.5465,
+        "profile_path": "/lCi90n8qUz0TsHVtfZkX4DRLDA5.jpg",
+        "cast_id": 14,
+        "character": "",
+        "credit_id": "68dd893aa5ada44abbe1d13e",
+        "order": 9
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1117637,
+        "known_for_department": "Camera",
+        "name": "Sarvesh Murari",
+        "original_name": "Sarvesh Murari",
+        "popularity": 0.1395,
+        "profile_path": null,
+        "credit_id": "52fe45c2c3a36847f80d8f1f",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1630051,
+        "known_for_department": "Directing",
+        "name": "Kiran Kumar",
+        "original_name": "Kiran Kumar",
+        "popularity": 0.0429,
+        "profile_path": null,
+        "credit_id": "57514c77c3a36852c10016c4",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1879517,
+        "known_for_department": "Directing",
+        "name": "Sandeep Reddy Vanga",
+        "original_name": "Sandeep Reddy Vanga",
+        "popularity": 0.9173,
+        "profile_path": "/ik1rXY6ci6i7LDm9cV178W3txgb.jpg",
+        "credit_id": "5a3f95060e0a264f39009955",
+        "department": "Directing",
+        "job": "Assistant Director"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt1582524",
+    "wikidata_id": "Q6382605",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "UA",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "2010-02-11T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": [
+      {
+        "iso_3166_1": "IN",
+        "title": "Singavettai",
+        "type": "Tamil Dubbed"
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [
+      {
+        "aspect_ratio": 1.217,
+        "height": 2837,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/dZsWwlcnwoqxEzh94fivWeETVHM.png",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 3453
+      }
+    ],
+    "posters": [
+      {
+        "aspect_ratio": 0.666,
+        "height": 1600,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/6xquLwlfkB1epcI99mAQzhwY97D.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 1066
+      }
+    ]
+  }
+}

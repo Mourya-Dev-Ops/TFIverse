@@ -1,0 +1,358 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "",
+  "id": 155153,
+  "imdb_id": "tt0266290",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "Babai Abbai",
+  "overview": "Having no one else to care for them, two men decide to live their lives as \"uncle\" and \"nephew\" despite not having any blood relation.",
+  "popularity": 0.2478,
+  "poster_path": "/iVc5XfNvPWDOqKAlTe3dDZvH9QZ.jpg",
+  "production_companies": [],
+  "production_countries": [
+    {
+      "iso_3166_1": "IN",
+      "name": "India"
+    }
+  ],
+  "release_date": "1985-05-02",
+  "revenue": 0,
+  "runtime": 122,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Babai Abbai",
+  "video": false,
+  "vote_average": 8,
+  "vote_count": 1,
+  "videos": {
+    "results": []
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 928863,
+        "known_for_department": "Acting",
+        "name": "Suthi Veerabhadra Rao",
+        "original_name": "Suthi Veerabhadra Rao",
+        "popularity": 0.2414,
+        "profile_path": null,
+        "cast_id": 11,
+        "character": "Veerabhadra Rao \"Babai\"",
+        "credit_id": "6341ccda71ffdf007faf9ffd",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 150529,
+        "known_for_department": "Acting",
+        "name": "Nandamuri Balakrishna",
+        "original_name": "Nandamuri Balakrishna",
+        "popularity": 1.5728,
+        "profile_path": "/vOqW5ByakRQOUOn6ipupgioxsM9.jpg",
+        "cast_id": 1,
+        "character": "Balasubramanyam \"Abbai\"",
+        "credit_id": "60053045b0040a003e942841",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1021602,
+        "known_for_department": "Acting",
+        "name": "Anitha Reddy",
+        "original_name": "Anitha Reddy",
+        "popularity": 0.0286,
+        "profile_path": null,
+        "cast_id": 2,
+        "character": "Krishna Veni",
+        "credit_id": "60053063813cb6003f56e047",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335296,
+        "known_for_department": "Acting",
+        "name": "Suthi Velu",
+        "original_name": "Suthi Velu",
+        "popularity": 0.3168,
+        "profile_path": null,
+        "cast_id": 3,
+        "character": "Vara Prasad",
+        "credit_id": "600530750328b9003ce35117",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 545595,
+        "known_for_department": "Acting",
+        "name": "Rajendra Prasad",
+        "original_name": "Rajendra Prasad",
+        "popularity": 0.7246,
+        "profile_path": "/zh6QJ85g5KbpkjL5fgqlOGddn5C.jpg",
+        "cast_id": 4,
+        "character": "Taxi Driver",
+        "credit_id": "6005308e420228003df36d1c",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1325397,
+        "known_for_department": "Acting",
+        "name": "Srilakshmi",
+        "original_name": "Srilakshmi",
+        "popularity": 0.1215,
+        "profile_path": "/czQXxJ6c149HPmY0JSHPxEL5wXW.jpg",
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "6341cd07e4b576009b90a7b6",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 584512,
+        "known_for_department": "Acting",
+        "name": "Nirmalamma",
+        "original_name": "Nirmalamma",
+        "popularity": 0.2303,
+        "profile_path": null,
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "6341cd1521621b0079544928",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1289125,
+        "known_for_department": "Acting",
+        "name": "Pavala Shyamala",
+        "original_name": "Pavala Shyamala",
+        "popularity": 0.2245,
+        "profile_path": null,
+        "cast_id": 14,
+        "character": "",
+        "credit_id": "6341cd219c97bd00796cd425",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 141695,
+        "known_for_department": "Acting",
+        "name": "Kota Srinivasa Rao",
+        "original_name": "Kota Srinivasa Rao",
+        "popularity": 0.681,
+        "profile_path": "/iEJprOPpeLhnyxBu2KdiJtw5Adb.jpg",
+        "cast_id": 15,
+        "character": "",
+        "credit_id": "6341cd354f33ad007fb46461",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1422553,
+        "known_for_department": "Acting",
+        "name": "Vizag Prasad",
+        "original_name": "Vizag Prasad",
+        "popularity": 0.0898,
+        "profile_path": null,
+        "cast_id": 16,
+        "character": "",
+        "credit_id": "6341cd554f33ad008a3accbf",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1661889,
+        "known_for_department": "Acting",
+        "name": "Potti Prasad",
+        "original_name": "Potti Prasad",
+        "popularity": 0.1027,
+        "profile_path": null,
+        "cast_id": 17,
+        "character": "",
+        "credit_id": "6341cd72e4b576007bfd0e87",
+        "order": 10
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1113742,
+        "known_for_department": "Writing",
+        "name": "George Barr McCutcheon",
+        "original_name": "George Barr McCutcheon",
+        "popularity": 0.2824,
+        "profile_path": null,
+        "credit_id": "6341ccb25b4fed007fe69be2",
+        "department": "Writing",
+        "job": "Novel"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 928860,
+        "known_for_department": "Writing",
+        "name": "Jandhyala Subramanya Sastry",
+        "original_name": "Jandhyala Subramanya Sastry",
+        "popularity": 0.3749,
+        "profile_path": "/ly4RquWKMbwjc4aUYfiN92mHa60.jpg",
+        "credit_id": "600530aacb3084003ddcf478",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1337585,
+        "known_for_department": "Camera",
+        "name": "S. Gopala Reddy",
+        "original_name": "S. Gopala Reddy",
+        "popularity": 0.1402,
+        "profile_path": null,
+        "credit_id": "600530e863e6fb003c03c8d1",
+        "department": "Crew",
+        "job": "Cinematography"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 933605,
+        "known_for_department": "Sound",
+        "name": "K. Chakravarthy",
+        "original_name": "Chakravarthy",
+        "popularity": 0.1305,
+        "profile_path": null,
+        "credit_id": "600530f9fe5c91003d376a2b",
+        "department": "Sound",
+        "job": "Music"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2941294,
+        "known_for_department": "Production",
+        "name": "M. Sudhakar Reddy",
+        "original_name": "M. Sudhakar Reddy",
+        "popularity": 0,
+        "profile_path": null,
+        "credit_id": "600531107d5db5003dd45b22",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 928860,
+        "known_for_department": "Writing",
+        "name": "Jandhyala Subramanya Sastry",
+        "original_name": "Jandhyala Subramanya Sastry",
+        "popularity": 0.3749,
+        "profile_path": "/ly4RquWKMbwjc4aUYfiN92mHa60.jpg",
+        "credit_id": "6005311a30f79c003d0ce5a0",
+        "department": "Writing",
+        "job": "Writer"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt0266290",
+    "wikidata_id": "Q16341855",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "U",
+            "descriptors": [],
+            "iso_639_1": "te",
+            "note": "",
+            "release_date": "1985-05-02T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 2049,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/iVc5XfNvPWDOqKAlTe3dDZvH9QZ.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1366
+      },
+      {
+        "aspect_ratio": 0.75,
+        "height": 2560,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/1jq7BJVUFXKD2RSVbWOVfZw1Evk.jpg",
+        "vote_average": 3.334,
+        "vote_count": 1,
+        "width": 1920
+      },
+      {
+        "aspect_ratio": 0.667,
+        "height": 750,
+        "iso_3166_1": null,
+        "iso_639_1": null,
+        "file_path": "/1lqPKbFwmyRhSfXMQWw6x6PH9kf.jpg",
+        "vote_average": 0.166,
+        "vote_count": 2,
+        "width": 500
+      }
+    ]
+  }
+}

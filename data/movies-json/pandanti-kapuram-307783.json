@@ -1,0 +1,343 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [],
+  "homepage": "",
+  "id": 307783,
+  "imdb_id": "tt0316376",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "te",
+  "original_title": "పండంటి కాపురం",
+  "overview": "Pandanti Kapuram is a 1972 Telugu, family drama film.",
+  "popularity": 0.4978,
+  "poster_path": "/zGLTfCClK8IbswEMfowLEl5AofZ.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "1972-01-01",
+  "revenue": 0,
+  "runtime": 0,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Telugu",
+      "iso_639_1": "te",
+      "name": "తెలుగు"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Pandanti Kapuram",
+  "video": false,
+  "vote_average": 9,
+  "vote_count": 2,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1470750,
+        "known_for_department": "Acting",
+        "name": "Krishna",
+        "original_name": "Krishna",
+        "popularity": 0.2447,
+        "profile_path": "/85O0Icv3d2DL9EfK44ZXZO8aqIU.jpg",
+        "cast_id": 2,
+        "character": "Ravi",
+        "credit_id": "5720c79e925141423200003b",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1034831,
+        "known_for_department": "Acting",
+        "name": "Jamuna",
+        "original_name": "Jamuna",
+        "popularity": 0.1634,
+        "profile_path": "/vev05ehTlBa4YHb3ZhPdS4eon2q.jpg",
+        "cast_id": 4,
+        "character": "Rani Malini Devi/Savitha",
+        "credit_id": "6928065dc9c5d096c024611b",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 936104,
+        "known_for_department": "Acting",
+        "name": "B. Saroja Devi",
+        "original_name": "B. Saroja Devi",
+        "popularity": 0.3377,
+        "profile_path": "/qeMj8p2AsTuqLLx97bDUGOaLCaS.jpg",
+        "cast_id": 5,
+        "character": "Sobha",
+        "credit_id": "692806694a1fc337ea26c213",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 943089,
+        "known_for_department": "Acting",
+        "name": "Vijaya Nirmala",
+        "original_name": "Vijaya Nirmala",
+        "popularity": 0.0696,
+        "profile_path": "/btvKBQPfC4dt0o2FB33TWiYaz53.jpg",
+        "cast_id": 6,
+        "character": "Suseela \"Susi\"",
+        "credit_id": "69280673c699acb1d7248f22",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1003966,
+        "known_for_department": "Acting",
+        "name": "S. V. Ranga Rao",
+        "original_name": "S. V. Ranga Rao",
+        "popularity": 0.2838,
+        "profile_path": "/yzDKN7DqHOc7OKOrELatN56HMdr.jpg",
+        "cast_id": 1,
+        "character": "Narayana Rao",
+        "credit_id": "5720c791c3a368117a00003c",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1335709,
+        "known_for_department": "Acting",
+        "name": "Gummadi",
+        "original_name": "Gummadi",
+        "popularity": 0.4149,
+        "profile_path": "/qKXVkv7RmDKveWWZael013w7h1B.jpg",
+        "cast_id": 3,
+        "character": "Srinivasa Rao \"Vasu\"",
+        "credit_id": "5720c7a7c3a368117a000042",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1267544,
+        "known_for_department": "Acting",
+        "name": "Prabhakar Reddy",
+        "original_name": "Prabhakar Reddy",
+        "popularity": 0.207,
+        "profile_path": null,
+        "cast_id": 7,
+        "character": "Madhu",
+        "credit_id": "69280690b104c22865eaa2a4",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1356414,
+        "known_for_department": "Acting",
+        "name": "Mikkilineni",
+        "original_name": "Mikkilineni",
+        "popularity": 0.2121,
+        "profile_path": "/hixximPs8FRe2pHlBjqyi01ZwyY.jpg",
+        "cast_id": 8,
+        "character": "Koteswara Rao",
+        "credit_id": "692806abb104c22865eaa2a8",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 584685,
+        "known_for_department": "Acting",
+        "name": "Allu Ramalingaiah",
+        "original_name": "Allu Ramalingaiah",
+        "popularity": 0.2205,
+        "profile_path": "/tYVXmeZSgbYCuIsResUfrm2kjnz.jpg",
+        "cast_id": 9,
+        "character": "Chengayya",
+        "credit_id": "692806b759faf41409371a9f",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3263179,
+        "known_for_department": "Acting",
+        "name": "Raja Babu",
+        "original_name": "Raja Babu",
+        "popularity": 0.0873,
+        "profile_path": "/hQBSR46T1qXie1VWGVKAuBNpiIb.jpg",
+        "cast_id": 10,
+        "character": "Sanjeevi",
+        "credit_id": "6928074f2f34c8a5d3a759c0",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1150027,
+        "known_for_department": "Acting",
+        "name": "Saakshi Ranga Rao",
+        "original_name": "Saakshi Ranga Rao",
+        "popularity": 0.0819,
+        "profile_path": null,
+        "cast_id": 11,
+        "character": "Rudrayya",
+        "credit_id": "6928076f744371e84ba75c55",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584346,
+        "known_for_department": "Acting",
+        "name": "Pandari Bai",
+        "original_name": "Pandari Bai",
+        "popularity": 0.4891,
+        "profile_path": "/hQRkAIELIKQihKEeWMVW0j3GHsE.jpg",
+        "cast_id": 12,
+        "character": "Chinnamma",
+        "credit_id": "692807a559faf41409371aa3",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 584418,
+        "known_for_department": "Acting",
+        "name": "Jayasudha",
+        "original_name": "Jayasudha",
+        "popularity": 0.5248,
+        "profile_path": "/xOP3pYlrqyBw5x9CDEMkYXPzpNu.jpg",
+        "cast_id": 13,
+        "character": "Santhi",
+        "credit_id": "692807b292edc640ed248dbc",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 736815,
+        "known_for_department": "Acting",
+        "name": "Naresh",
+        "original_name": "Naresh",
+        "popularity": 0.4543,
+        "profile_path": "/yT9Sgp7y8h3xhlmgzafUwlIXy1H.jpg",
+        "cast_id": 14,
+        "character": "Ramu",
+        "credit_id": "692807dcec7b21006ed9ce30",
+        "order": 13
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4512058,
+        "known_for_department": "Acting",
+        "name": "Baby Dolly",
+        "original_name": "Baby Dolly",
+        "popularity": 0.0453,
+        "profile_path": null,
+        "cast_id": 15,
+        "character": "Babu",
+        "credit_id": "692807eda63269fd1f30d22f",
+        "order": 14
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 585379,
+        "known_for_department": "Acting",
+        "name": "V Balakrishna",
+        "original_name": "V Balakrishna",
+        "popularity": 0.0453,
+        "profile_path": null,
+        "cast_id": 16,
+        "character": "Botany Lecturer",
+        "credit_id": "692808006a65040263c124b3",
+        "order": 15
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1661889,
+        "known_for_department": "Acting",
+        "name": "Potti Prasad",
+        "original_name": "Potti Prasad",
+        "popularity": 0.0849,
+        "profile_path": null,
+        "cast_id": 17,
+        "character": "Botany Lecturer's son",
+        "credit_id": "6928080ae587e7c06a30d066",
+        "order": 16
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1335692,
+        "known_for_department": "Directing",
+        "name": "Lakshmi Deepak P",
+        "original_name": "Lakshmi Deepak P",
+        "popularity": 0.0621,
+        "profile_path": null,
+        "credit_id": "5720c757c3a368118100003c",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "imdb_id": "tt0316376",
+    "wikidata_id": "Q15706073",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": []
+  },
+  "release_dates": {
+    "results": [
+      {
+        "iso_3166_1": "IN",
+        "release_dates": [
+          {
+            "certification": "",
+            "descriptors": [],
+            "iso_639_1": "",
+            "note": "",
+            "release_date": "1972-01-01T00:00:00.000Z",
+            "type": 3
+          }
+        ]
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [],
+    "logos": [],
+    "posters": [
+      {
+        "aspect_ratio": 0.667,
+        "height": 3000,
+        "iso_3166_1": "IN",
+        "iso_639_1": "te",
+        "file_path": "/zGLTfCClK8IbswEMfowLEl5AofZ.jpg",
+        "vote_average": 0,
+        "vote_count": 0,
+        "width": 2000
+      }
+    ]
+  },
+  "alternative_titles": {
+    "titles": []
+  }
+}
