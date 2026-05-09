@@ -3,8 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { User, LogOut } from 'lucide-react';
-import { PiGlobeDuotone, PiSmileyDuotone, PiTrophyDuotone, PiUserDuotone } from 'react-icons/pi';
+import { PiGlobeDuotone, PiSmileyDuotone, PiTrophyDuotone, PiUserDuotone, PiSignOutDuotone } from 'react-icons/pi';
 import { signOut } from 'next-auth/react';
 
 interface NavbarProps {
@@ -113,7 +112,7 @@ export default function Navbar({ user }: NavbarProps) {
                           onClick={() => signOut({ callbackUrl: '/' })}
                           className="w-full text-left px-3 py-2 text-xs text-white/50 hover:text-white hover:bg-white/[0.05] rounded-xl transition-all flex items-center gap-3 font-bold uppercase tracking-widest"
                         >
-                          <LogOut size={16} /> Sign Out
+                          <PiSignOutDuotone size={16} /> Sign Out
                         </button>
                       </div>
                     </motion.div>

@@ -41,16 +41,27 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# legacy
-/old_legacy/
+# legacy — keep scripts/data, ignore build artifacts
+old_legacy/.next/
+old_legacy/node_modules/
+old_legacy/venv/
+old_legacy/tsconfig.tsbuildinfo
+old_legacy/next-env.d.ts
+old_legacy/logs/
+old_legacy/.env
+
+# old_legacy large/junk files that should never be in git
+old_legacy/public/data/movies/
 
 # temp/dev
 /scratch/
 *.log
 
 # data backups (JSON files)
-/data/
 /movies json/
+
+# raw sql dump (keep only the zip)
+db_backup.sql
 
 # graphify
 /graphify/
