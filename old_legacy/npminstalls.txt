@@ -1,0 +1,1 @@
+npm install canvas-confetti framer-motion react-chartjs-2 chart.js react-countup tsparticles react-twitter-embed

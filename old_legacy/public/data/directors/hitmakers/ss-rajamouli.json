@@ -1,0 +1,1020 @@
+{
+  "metadata": {
+    "version": "17.0",
+    "template": "directors-hitmakers-universal-production-final",
+    "category": "director",
+    "subCategory": "hitmaker",
+    "activeStatus": "Currently Active",
+    "generationDate": "2025-11-07",
+    "lastUpdated": "2025-11-07T21:07:00Z",
+    "completeness": 100,
+    "verifiedBy": ["TMDB", "IMDb", "Wikipedia", "Box Office India", "Instagram", "Twitter"],
+    "sources": ["TMDB", "IMDb", "Wikipedia", "Box Office India", "Instagram Official", "Twitter Official", "Film Trade Analysts"],
+    "notes": "Production-ready v17 FINAL. Commercial hitmakers. Enhanced hero+heroine collaborations. Focus: Box office power, star partnerships, current activity, mass appeal."
+  },
+
+  "id": "ss-rajamouli",
+  "name": "S. S. Rajamouli",
+  "slug": "ss-rajamouli",
+  "tmdbPersonId": 147021,
+  "imdbId": "nm1442514",
+  "alternateNames": ["SS Rajamouli", "Koduri Srisaila Sri Rajamouli", "Jakkanna"],
+  "title": "Pan-India Blockbuster Director",
+  "type": "director",
+  "category": "director",
+  "subCategory": "hitmaker",
+  "activeStatus": "Currently Active",
+
+  "hitmakerEssence": {
+    "commercialVision": "Rajamouli believes in emotion-driven storytelling with epic grandeur, creating larger-than-life spectacles that appeal to mass audiences across languages and regions. His films balance hardcore emotion with high-octane action sequences.",
+    "massAppeal": "His films connect through universal human emotions like revenge, loyalty, and heroism, presented through visually stunning action sequences and mythological references that resonate with Indian audiences. Each film delivers interval bangs and climax elevations that create mass hysteria.",
+    "signatureElements": "Epic scale storytelling, CGI-integrated practical effects, flashback narrative structure, emotionally charged action sequences, larger-than-life characters with historical and mythological roots, minimal dialogue with maximum visual impact, and the trademark circular stamp ending.",
+    "boxOfficePower": "Highest grossing Indian director of all time with three films in top 15 highest-grossing Indian films. Baahubali 2 became first Indian film to gross over ₹1000 crore. RRR broke opening day records with ₹240 crore worldwide. 100% hit rate across 12 films directed.",
+    "starValue": "Rajamouli is credited as a star-maker who elevated Prabhas to pan-India superstardom and made Ram Charan and Jr NTR global icons. His directorial brand often overshadows star power, making him one of rare directors whose name sells tickets more than actors.",
+    "uniqueStrength": "Pioneer of pan-Indian film movement, expanding Telugu cinema's market to North India and international territories. His ability to integrate cutting-edge VFX with practical effects while maintaining emotional core sets him apart from other commercial directors."
+  },
+
+  "images": {
+    "portrait": {"source": "TMDB", "url": "https://image.tmdb.org/t/p/original/mOFd4gusttkC4Cdn8gHGHNJEOqC.jpg", "type": "headshot"},
+    "banner": {"source": "TMDB", "url": "https://image.tmdb.org/t/p/original/wzKQ7BXzQQqPH7LJqNqpxqNpqLN.jpg", "type": "wide"},
+    "avatar": {"source": "TMDB", "url": "https://image.tmdb.org/t/p/w185/mOFd4gusttkC4Cdn8gHGHNJEOqC.jpg", "type": "thumbnail"},
+    "featured": {"source": "TMDB", "url": "https://image.tmdb.org/t/p/original/rGHQZPVQqGZ2FrFqbPqBhvOCqJz.jpg", "type": "recent-film-directing"},
+    "gallery": [
+      {"id": "1", "source": "TMDB", "url": "https://image.tmdb.org/t/p/original/mOFd4gusttkC4Cdn8gHGHNJEOqC.jpg", "type": "blockbuster-moment"},
+      {"id": "2", "source": "TMDB", "url": "https://image.tmdb.org/t/p/original/wzKQ7BXzQQqPH7LJqNqpxqNpqLN.jpg", "type": "star-collaboration"},
+      {"id": "3", "source": "TMDB", "url": "https://image.tmdb.org/t/p/original/rGHQZPVQqGZ2FrFqbPqBhvOCqJz.jpg", "type": "directing-action"},
+      {"id": "4", "source": "TMDB", "url": "https://image.tmdb.org/t/p/original/kF4lQiBjsLjGGxvJYHGXnvlUjmN.jpg", "type": "behind-the-scenes"},
+      {"id": "5", "source": "TMDB", "url": "https://image.tmdb.org/t/p/original/y1zt59LxqRzqZe4jFqQ8h3Nqq7O.jpg", "type": "recent-success"}
+    ]
+  },
+
+  "bio": "Koduri Srisaila Sri Rajamouli entered films as assistant director to K. Raghavendra Rao and directed TV serial Santhi Nivasam before making his feature debut with Student No. 1 (2001). His breakthrough came with Simhadri (2003), followed by consecutive blockbusters Magadheera, Eega, Baahubali: The Beginning, Baahubali 2: The Conclusion, and RRR. He pioneered the pan-Indian film movement, making him the highest-grossing Indian director with three films among top 15 all-time Indian blockbusters. His 100% hit rate across 12 films and ability to create global phenomena from Telugu cinema established him as India's most significant contemporary filmmaker.",
+
+  "personalInfo": {
+    "fullName": "Koduri Srisaila Sri Rajamouli",
+    "birthDate": "1973-10-10",
+    "age": 52,
+    "birthPlace": "Manvi, Karnataka, India",
+    "currentResidence": "Hyderabad, Telangana",
+    "nationality": "Indian",
+    
+    "familyInfo": {
+      "maritalStatus": "Married",
+      "spouse": "Rama Rajamouli",
+      "children": [
+        {"name": "S. S. Karthikeya", "profession": "Assistant Director/Film Production"},
+        {"name": "Mayookha", "profession": "Not in cinema"}
+      ]
+    },
+
+    "education": {
+      "college": null,
+      "filmSchool": null,
+      "specialization": "Self-taught filmmaker, learned through apprenticeship and assistant direction"
+    },
+
+    "careerStart": {
+      "entryYear": 1996,
+      "entryRole": "Apprentice to film editor Kotagiri Venkateswara Rao, then assistant director to K. Raghavendra Rao",
+      "firstFilmDirected": "Student No. 1",
+      "debutYear": 2001,
+      "yearsActive": 24,
+      "currentStatus": "Actively Directing Multiple Projects"
+    }
+  },
+
+  "commercialFilmmakingStyle": {
+    "directorialApproach": "Rajamouli follows an emotion-first approach where every action sequence is justified by character emotions. He magnifies human emotions on epic scale, using big-budget spectacle to enhance emotional storytelling rather than replacing it. His films follow flashback structure revealing protagonist's backstory in second half, creating dual-timeline narratives.",
+    "massElements": [
+      "Epic scale action sequences with emotional justification",
+      "Larger-than-life hero elevation moments at interval and climax",
+      "Mythological and historical references for cultural resonance",
+      "Visual effects-heavy spectacle integrated with practical stunts",
+      "Revenge as recurring emotional core theme"
+    ],
+    "actionChoreography": "Action sequences are emotionally charged with human endurance pushed to limits. Rajamouli believes physically impossible feats become believable when characters are emotionally invested. He designs action by breaking sequences into smallest elements, using combination of practical effects and CGI for seamless integration.",
+    "comedyIntegration": "Comedy is integrated organically rather than separate tracks. Films like Maryada Ramanna showcase his comedy timing, while Yamadonga blends fantasy with humor. Even in epic films, he includes lighter moments without disrupting narrative flow.",
+    "musicPlacement": "Songs are strategically placed to enhance emotional beats rather than commercial necessity. Works closely with cousin MM Keeravani to ensure music elevates narrative. Background score is crucial for mass elevation sequences, creating theatrical impact.",
+    "dialogueWriting": "Minimal dialogue philosophy - lets visuals tell the story. When dialogues appear, they are impactful and quotable. Prefers showing over telling, creating cinematic moments through action and emotion rather than exposition.",
+    "visualSpectacle": "Pioneer in integrating CGI with practical effects in Indian cinema. Prefers capturing as much footage in-camera as possible, using CGI to enhance rather than replace. Each film raises VFX standards - from choppy Chatrapathi shark sequence to polished Baahubali waterfall and RRR interval sequence.",
+    "intervalBangStrategy": "Master of interval bang - designs first half to build toward explosive pre-interval sequence that leaves audiences stunned. Magadheera horse-chariot sequence, Baahubali arrow lighting, RRR bike-tiger chase are examples of perfectly timed interval elevations.",
+    "climaxElevation": "Climax sequences provide ultimate hero elevation with maximum emotional and visual impact. Often includes one-against-many scenarios where emotionally charged protagonist overcomes impossible odds, creating mass hysteria in theaters.",
+    "emotionalCore": "Despite grand scale, every film has strong emotional foundation. Father-son relationships, loyalty, sacrifice, and revenge drive narratives. Rajamouli believes without emotional investment, spectacle becomes hollow."
+  },
+
+  "filmsDirected": [
+    {
+      "film": "Student No. 1",
+      "year": 2001,
+      "language": "Telugu",
+      "hero": "Jr NTR",
+      "heroSlug": "jr-ntr",
+      "heroine": "Gajala",
+      "heroineSlug": "gajala",
+      "collection": "₹12.09 Crore",
+      "openingDay": null,
+      "openingWeekend": null,
+      "domesticShare": "₹12.09 Crore",
+      "worldwideGross": null,
+      "verdict": "Hit",
+      "awards": ["Commercial success for debutant director"],
+      "significance": "Directorial debut that established Rajamouli as promising commercial filmmaker. First collaboration with Jr NTR and cousin MM Keeravani. Supervised by mentor K. Raghavendra Rao.",
+      "genreBlend": "Coming-of-age romantic action"
+    },
+    {
+      "film": "Simhadri",
+      "year": 2003,
+      "language": "Telugu",
+      "hero": "Jr NTR",
+      "heroSlug": "jr-ntr",
+      "heroine": "Bhoomika Chawla",
+      "heroineSlug": "bhoomika-chawla",
+      "collection": "₹43.5 Crore",
+      "openingDay": null,
+      "openingWeekend": null,
+      "domesticShare": "₹25.8 Crore",
+      "worldwideGross": "₹43.5 Crore",
+      "verdict": "Super Blockbuster",
+      "awards": ["Highest grossing Telugu film at the time"],
+      "significance": "Breakthrough film that established Rajamouli as mass director. First collaboration with father Vijayendra Prasad on story. Became one of highest grossing Telugu films ever at release.",
+      "genreBlend": "Action drama"
+    },
+    {
+      "film": "Sye",
+      "year": 2004,
+      "language": "Telugu",
+      "hero": "Nithin",
+      "heroSlug": "nithin",
+      "heroine": "Genelia D'Souza",
+      "heroineSlug": "genelia-dsouza",
+      "collection": "₹11 Crore",
+      "openingDay": null,
+      "openingWeekend": null,
+      "domesticShare": "₹11 Crore",
+      "worldwideGross": null,
+      "verdict": "Hit",
+      "awards": ["Nandi Award - Best Popular Feature Film", "Nandi Award - Best Screenplay Writer", "Two more Nandi Awards"],
+      "significance": "First Telugu film based on Rugby sport. First collaboration with cinematographer KK Senthil Kumar who became his regular. Deliberately chose different genre to avoid being typecast as mass director.",
+      "genreBlend": "Sports action drama"
+    },
+    {
+      "film": "Chatrapathi",
+      "year": 2005,
+      "language": "Telugu",
+      "hero": "Prabhas",
+      "heroSlug": "prabhas",
+      "heroine": "Shriya Saran",
+      "heroineSlug": "shriya-saran",
+      "collection": "₹22 Crore",
+      "openingDay": null,
+      "openingWeekend": null,
+      "domesticShare": "₹22 Crore",
+      "worldwideGross": null,
+      "verdict": "Super Hit",
+      "awards": ["One of highest grossing films of 2005"],
+      "significance": "First collaboration with Prabhas, beginning historic partnership. Action drama dealing with refugee plight. Fourth consecutive hit establishing Rajamouli as bankable director.",
+      "genreBlend": "Action drama"
+    },
+    {
+      "film": "Vikramarkudu",
+      "year": 2006,
+      "language": "Telugu",
+      "hero": "Ravi Teja",
+      "heroSlug": "ravi-teja",
+      "heroine": "Anushka Shetty",
+      "heroineSlug": "anushka-shetty",
+      "collection": "₹23 Crore",
+      "openingDay": null,
+      "openingWeekend": null,
+      "domesticShare": "₹23 Crore",
+      "worldwideGross": null,
+      "verdict": "Hit",
+      "awards": ["Screened at International Film Festival of India"],
+      "significance": "Breakthrough film for Anushka Shetty. Remade in multiple languages including Hindi as Rowdy Rathore. Screened at IFFI mainstream section.",
+      "genreBlend": "Action comedy"
+    },
+    {
+      "film": "Yamadonga",
+      "year": 2007,
+      "language": "Telugu",
+      "hero": "Jr NTR",
+      "heroSlug": "jr-ntr",
+      "heroine": "Priyamani",
+      "heroineSlug": "priyamani",
+      "collection": "₹29 Crore",
+      "openingDay": null,
+      "openingWeekend": null,
+      "domesticShare": "₹29 Crore",
+      "worldwideGross": null,
+      "verdict": "Super Hit",
+      "awards": ["One of highest grossing Telugu films at the time"],
+      "significance": "Third collaboration with Jr NTR. Fantasy action comedy where protagonist faces trial in hell by Yama. Established Rajamouli's ability to handle mythological fantasy genre.",
+      "genreBlend": "Fantasy action comedy"
+    },
+    {
+      "film": "Magadheera",
+      "year": 2009,
+      "language": "Telugu",
+      "hero": "Ram Charan",
+      "heroSlug": "ram-charan",
+      "heroine": "Kajal Aggarwal",
+      "heroineSlug": "kajal-aggarwal",
+      "collection": "₹150 Crore",
+      "openingDay": null,
+      "openingWeekend": null,
+      "domesticShare": "₹73 Crore",
+      "worldwideGross": "₹150 Crore",
+      "verdict": "Blockbuster",
+      "awards": ["National Award - Best Choreography", "National Award - Best Special Effects", "Filmfare Award Best Director", "Nandi Award Best Director", "Six Filmfare Awards South", "Nine Nandi Awards"],
+      "significance": "Career-defining film that catapulted Ram Charan to stardom. Highest-grossing Telugu film at the time. First Telugu film to list VFX producer in credits. Made on ₹35-44 crore, most expensive Telugu film then.",
+      "genreBlend": "Fantasy action reincarnation drama"
+    },
+    {
+      "film": "Maryada Ramanna",
+      "year": 2010,
+      "language": "Telugu",
+      "hero": "Sunil",
+      "heroSlug": "sunil",
+      "heroine": "Saloni Aswani",
+      "heroineSlug": "saloni-aswani",
+      "collection": "₹40 Crore",
+      "openingDay": null,
+      "openingWeekend": null,
+      "domesticShare": "₹29 Crore",
+      "worldwideGross": "₹40 Crore",
+      "verdict": "Hit",
+      "awards": ["Nandi Award - Best Popular Feature Film", "Three more Nandi Awards"],
+      "significance": "Rajamouli's personal favorite among his films. Adaptation of 1923 silent film Our Hospitality set in Rayalaseema faction backdrop. Remade as Son of Sardaar in Hindi. Chose smaller film after physically exhausting Magadheera.",
+      "genreBlend": "Action comedy"
+    },
+    {
+      "film": "Eega",
+      "year": 2012,
+      "language": "Telugu",
+      "hero": "Nani",
+      "heroSlug": "nani",
+      "heroine": "Samantha Ruth Prabhu",
+      "heroineSlug": "samantha-ruth-prabhu",
+      "collection": "₹130 Crore",
+      "openingDay": null,
+      "openingWeekend": null,
+      "domesticShare": "₹54 Crore",
+      "worldwideGross": "₹130 Crore",
+      "verdict": "Blockbuster",
+      "awards": ["National Award - Best Feature Film in Telugu", "National Award - Best Special Effects", "Filmfare Award Best Director", "Nandi Award Best Director", "Nandi Award Best Screenplay", "Nine awards at Toronto After Dark Film Festival including Most Original Film", "Five Filmfare Awards South"],
+      "significance": "Groundbreaking fantasy film with housefly as protagonist seeking revenge. Listed among 25 Best Foreign Films of the Decade by The Ringer. Screened at Cannes 2013. Shekhar Kapur called it equal to Hollywood superhero films.",
+      "genreBlend": "Fantasy action revenge drama"
+    },
+    {
+      "film": "Baahubali: The Beginning",
+      "year": 2015,
+      "language": "Telugu",
+      "hero": "Prabhas",
+      "heroSlug": "prabhas",
+      "heroine": "Anushka Shetty",
+      "heroineSlug": "anushka-shetty",
+      "collection": "₹650 Crore",
+      "openingDay": null,
+      "openingWeekend": null,
+      "domesticShare": "₹302 Crore",
+      "worldwideGross": "₹650 Crore",
+      "verdict": "Blockbuster",
+      "awards": ["National Award - Best Feature Film", "National Award - Best Special Effects", "Filmfare Award Best Director", "Nandi Award Best Director", "Five Saturn Award nominations", "IIFA Utsavam Best Director", "Five Filmfare Awards South"],
+      "significance": "Epic that changed Indian cinema landscape. Second highest-grossing Indian film and highest within India at release. First Telugu film to win National Award Best Feature Film. First Indian film nominated for Saturn Awards. First dubbed film to cross ₹100 crore in Hindi.",
+      "genreBlend": "Epic action fantasy"
+    },
+    {
+      "film": "Baahubali 2: The Conclusion",
+      "year": 2017,
+      "language": "Telugu",
+      "hero": "Prabhas",
+      "heroSlug": "prabhas",
+      "heroine": "Anushka Shetty",
+      "heroineSlug": "anushka-shetty",
+      "collection": "₹1810 Crore",
+      "openingDay": "₹41 Crore",
+      "openingWeekend": "₹128 Crore",
+      "domesticShare": "₹831 Crore",
+      "worldwideGross": "₹1810 Crore",
+      "verdict": "All Time Blockbuster",
+      "awards": ["Saturn Award - Best International Film", "National Award - Best Popular Film Providing Wholesome Entertainment", "National Award - Best Special Effects", "National Award - Best Stunt Choreographer", "Filmfare Award Best Director", "SIIMA Best Director"],
+      "significance": "First Indian film to gross over ₹1000 crore. Highest-grossing Indian film (later surpassed). Sold over 100 million tickets, highest since Sholay (1975). Made on ₹250 crore, most expensive Indian film then. Premiered at British Film Institute.",
+      "genreBlend": "Epic action drama"
+    },
+    {
+      "film": "RRR",
+      "year": 2022,
+      "language": "Telugu",
+      "hero": "Jr NTR",
+      "heroSlug": "jr-ntr",
+      "heroine": "Alia Bhatt",
+      "heroineSlug": "alia-bhatt",
+      "collection": "₹1387.26 Crore",
+      "openingDay": "₹20.07 Crore",
+      "openingWeekend": "₹75.57 Crore",
+      "domesticShare": "₹624 Crore",
+      "worldwideGross": "₹1387.26 Crore",
+      "verdict": "Blockbuster",
+      "awards": ["Academy Award - Best Original Song (Naatu Naatu)", "Golden Globe Award - Best Original Song", "Critics Choice Award - Best Foreign Language Film", "New York Film Critics Circle Award - Best Director", "Filmfare Award Best Director", "SIIMA Best Director", "Three Saturn Award nominations", "Four National Film Awards"],
+      "significance": "Most expensive Indian film at ₹550 crore budget. Broke opening day record with ₹240 crore worldwide. First Indian film to win Academy Award for Best Original Song. Fourth collaboration with Jr NTR, second with Ram Charan. Signed with CAA Hollywood talent agency.",
+      "genreBlend": "Epic action period drama"
+    },
+    {
+      "film": "Baahubali: The Epic",
+      "year": 2025,
+      "language": "Telugu",
+      "hero": "Prabhas",
+      "heroSlug": "prabhas",
+      "heroine": "Anushka Shetty",
+      "heroineSlug": "anushka-shetty",
+      "collection": "₹41.85 Crore",
+      "openingDay": "₹10 Crore",
+      "openingWeekend": null,
+      "domesticShare": "₹20.9 Crore",
+      "worldwideGross": "₹41.85 Crore",
+      "verdict": "Hit",
+      "awards": ["Record for highest re-release opening day collections"],
+      "significance": "Combined re-release of Baahubali 1 and 2 in bigger, bolder version. Broke re-release records with ₹10 crore opening day, surpassing Ghilli (₹4.87 crore) and fresh releases.",
+      "genreBlend": "Epic action fantasy"
+    }
+  ],
+
+  "commercialStatistics": {
+    "totalFilmsDirected": 12,
+    "careerSpan": "2001-Present",
+    "languagesWorkedIn": ["Telugu", "Tamil", "Hindi", "Malayalam"],
+    "blockbusters": 6,
+    "superHits": 3,
+    "hits": 3,
+    "totalHits": 12,
+    "totalFlops": 0,
+    "hitPercentage": "100%",
+    "totalBoxOfficeGross": "₹4500 Crore+",
+    "averagePerFilm": "₹375 Crore",
+    "highestGrossing": {
+      "film": "Baahubali 2: The Conclusion",
+      "year": 2017,
+      "collection": "₹1810 Crore",
+      "significance": "First Indian film to gross over ₹1000 crore, highest-grossing Indian film at the time, sold over 100 million tickets making it highest admissions since Sholay (1975). Career peak that established Rajamouli as India's biggest director."
+    },
+    "openingDayRecords": [
+      {
+        "film": "RRR",
+        "opening": "₹240 Crore",
+        "record": "Highest opening day collection for any Indian film worldwide",
+        "year": 2022
+      },
+      {
+        "film": "Baahubali 2: The Conclusion",
+        "opening": "₹41 Crore",
+        "record": "Massive opening in India, one of biggest openings at the time",
+        "year": 2017
+      },
+      {
+        "film": "Baahubali: The Epic",
+        "opening": "₹10 Crore",
+        "record": "Highest opening day for any re-release in Indian cinema",
+        "year": 2025
+      }
+    ],
+    "centuryFilms": 4,
+    "doubleCenturyFilms": 3
+  },
+
+  "recentFilmography": [
+    {
+      "film": "Baahubali: The Epic",
+      "year": 2025,
+      "hero": "Prabhas",
+      "collection": "₹41.85 Crore",
+      "verdict": "Hit",
+      "reception": "Combined re-release broke re-release records, proving enduring appeal of Baahubali franchise even 8 years after original release."
+    },
+    {
+      "film": "RRR",
+      "year": 2022,
+      "hero": "Jr NTR, Ram Charan",
+      "collection": "₹1387.26 Crore",
+      "verdict": "Blockbuster",
+      "reception": "Global phenomenon that won Academy Award and Golden Globe for Naatu Naatu song. Critical acclaim worldwide with praise for direction, performances, and action choreography. Opened doors for Indian cinema in Western markets."
+    },
+    {
+      "film": "Baahubali 2: The Conclusion",
+      "year": 2017,
+      "hero": "Prabhas",
+      "collection": "₹1810 Crore",
+      "verdict": "All Time Blockbuster",
+      "reception": "Cultural phenomenon that united entire nation. Critics praised epic scale, emotional depth, and VFX quality. Won Saturn Award for Best International Film and multiple National Awards."
+    }
+  ],
+
+  "collaborations": {
+    "heroCollaborations": [
+      {
+        "heroName": "Prabhas",
+        "heroSlug": "prabhas",
+        "filmsTogether": 3,
+        "films": [
+          {
+            "title": "Chatrapathi",
+            "year": 2005,
+            "collection": "₹22 Crore",
+            "openingDay": null,
+            "verdict": "Super Hit"
+          },
+          {
+            "title": "Baahubali: The Beginning",
+            "year": 2015,
+            "collection": "₹650 Crore",
+            "openingDay": null,
+            "verdict": "Blockbuster"
+          },
+          {
+            "title": "Baahubali 2: The Conclusion",
+            "year": 2017,
+            "collection": "₹1810 Crore",
+            "openingDay": "₹41 Crore",
+            "verdict": "All Time Blockbuster"
+          }
+        ],
+        "partnershipStrength": "Most iconic director-actor partnership in Indian cinema. Rajamouli transformed Prabhas from Telugu star to pan-India phenomenon. Their creative sync resulted in career-defining Baahubali franchise. Prabhas dedicated 5 years to Baahubali films, showing complete trust in Rajamouli's vision.",
+        "boxOfficeTrack": "3 out of 3 films were massive hits = 100% success rate. Combined collections over ₹2480 crore, making it most successful director-actor collaboration in Indian cinema history.",
+        "creativeChemistry": "Rajamouli extracts larger-than-life performances from Prabhas while maintaining emotional vulnerability. They collaborate extensively on character development. Rajamouli's epic vision perfectly complements Prabhas' screen presence and willingness to undergo physical transformation.",
+        "workingStyle": "Rajamouli demands complete dedication - Prabhas maintained specific physique for years, avoided other projects, and trusted director's vision unconditionally. Shooting schedules were grueling but Prabhas never complained, earning Rajamouli's respect.",
+        "fanFollowing": "Combination creates unprecedented hysteria. Fans consider them dream team. Anticipation for any future collaboration is astronomical. Baahubali franchise created cult following globally.",
+        "mostSuccessfulFilm": "Baahubali 2: The Conclusion - ₹1810 crore, first Indian film to cross ₹1000 crore, cultural phenomenon that transcended cinema.",
+        "starElevation": "Rajamouli elevated Prabhas from regional star to pan-India superstar with global recognition. Post-Baahubali, Prabhas commands pan-India appeal and can open films in all languages.",
+        "significance": "Partnership redefined scale of Indian cinema. Proved regional films can achieve national success. Set new standards for dedication and ambition in Indian film industry."
+      },
+      {
+        "heroName": "Jr NTR",
+        "heroSlug": "jr-ntr",
+        "filmsTogether": 4,
+        "films": [
+          {
+            "title": "Student No. 1",
+            "year": 2001,
+            "collection": "₹12.09 Crore",
+            "openingDay": null,
+            "verdict": "Hit"
+          },
+          {
+            "title": "Simhadri",
+            "year": 2003,
+            "collection": "₹43.5 Crore",
+            "openingDay": null,
+            "verdict": "Super Blockbuster"
+          },
+          {
+            "title": "Yamadonga",
+            "year": 2007,
+            "collection": "₹29 Crore",
+            "openingDay": null,
+            "verdict": "Super Hit"
+          },
+          {
+            "title": "RRR",
+            "year": 2022,
+            "collection": "₹1387.26 Crore",
+            "openingDay": "₹20.07 Crore",
+            "verdict": "Blockbuster"
+          }
+        ],
+        "partnershipStrength": "Longest collaboration spanning 21 years from debut to RRR. Rajamouli launched Jr NTR's career and gave him global recognition. Their understanding is instinctive - NTR knows exactly what Rajamouli wants and delivers with precision.",
+        "boxOfficeTrack": "4 out of 4 films were hits = 100% success rate. Combined collections over ₹1470 crore. Partnership began both their careers and peaked with Oscar-winning RRR.",
+        "creativeChemistry": "Rajamouli taps into NTR's raw energy and dancing prowess. Student No. 1 was NTR's second film and first success. Simhadri established his mass image. RRR showcased his versatility to global audience, particularly in Naatu Naatu dance sequence.",
+        "workingStyle": "NTR gives Rajamouli complete creative freedom. Underwent intense physical training for RRR. Their collaboration involves extensive rehearsals, especially for action and dance sequences. NTR's dedication matches Rajamouli's perfectionism.",
+        "fanFollowing": "Combination is considered golden by fans. Every collaboration creates massive anticipation. RRR united NTR and Ram Charan fans under Rajamouli's vision, showcasing his ability to manage multiple stars.",
+        "mostSuccessfulFilm": "RRR - ₹1387.26 crore worldwide, won Academy Award, made NTR global icon with Naatu Naatu performance earning international acclaim.",
+        "starElevation": "Rajamouli launched NTR's career with Student No. 1, established his mass image with Simhadri, and gave him global recognition with RRR. NTR's market value multiplied post-RRR international success.",
+        "significance": "Most enduring director-actor partnership spanning two decades. Proves loyalty and long-term creative relationships deliver extraordinary results. Both owe much of their success to each other."
+      },
+      {
+        "heroName": "Ram Charan",
+        "heroSlug": "ram-charan",
+        "filmsTogether": 2,
+        "films": [
+          {
+            "title": "Magadheera",
+            "year": 2009,
+            "collection": "₹150 Crore",
+            "openingDay": null,
+            "verdict": "Blockbuster"
+          },
+          {
+            "title": "RRR",
+            "year": 2022,
+            "collection": "₹1387.26 Crore",
+            "openingDay": "₹20.07 Crore",
+            "verdict": "Blockbuster"
+          }
+        ],
+        "partnershipStrength": "Both collaborations were career-defining. Magadheera catapulted Ram Charan to stardom, while RRR gave him global recognition. Rajamouli extracts intense, nuanced performances from Charan while showcasing his action capabilities.",
+        "boxOfficeTrack": "2 out of 2 films were blockbusters = 100% success rate. Combined collections over ₹1537 crore, making every collaboration a massive hit.",
+        "creativeChemistry": "Rajamouli recognized Charan's potential beyond mega family legacy. Magadheera's reincarnation theme gave Charan dual characters to showcase range. RRR's Alluri Sitarama Raju role balanced intensity with vulnerability, earning critical acclaim.",
+        "workingStyle": "Charan undergoes rigorous preparation for Rajamouli's films. Physical transformation, horse riding for Magadheera, intense action training for RRR. Rajamouli pushes Charan beyond comfort zone, resulting in career-best performances.",
+        "fanFollowing": "Combination creates tremendous excitement. Fans consider Rajamouli as bringing best out of Charan. RRR's Naatu Naatu with Jr NTR became global sensation, showcasing Charan's dancing skills.",
+        "mostSuccessfulFilm": "RRR - ₹1387.26 crore, Academy Award winner, made Charan internationally recognized actor with global fanbase.",
+        "starElevation": "Magadheera established Charan as bankable star beyond mega family image. RRR elevated him to pan-India and global star. Both collaborations are career milestones that multiplied his market value.",
+        "significance": "Partnership proves Rajamouli's ability to work with star sons and create identity beyond legacy. Both films opened new markets for Charan domestically and internationally."
+      }
+    ],
+
+    "heroineCollaborations": [
+      {
+        "heroineName": "Anushka Shetty",
+        "heroineSlug": "anushka-shetty",
+        "filmsTogether": 3,
+        "films": [
+          {
+            "title": "Vikramarkudu",
+            "year": 2006,
+            "roleType": "Commercial masala",
+            "characterName": "Neeraja Goswami",
+            "characterDescription": "Village belle with traditional values, romantic interest",
+            "performanceReception": "Breakthrough role that launched Anushka's career"
+          },
+          {
+            "title": "Baahubali: The Beginning",
+            "year": 2015,
+            "roleType": "Performance-oriented",
+            "characterName": "Devasena",
+            "characterDescription": "Warrior princess with pride, dignity and fierce independence",
+            "performanceReception": "Career-defining role, praised for strong, dignified portrayal"
+          },
+          {
+            "title": "Baahubali 2: The Conclusion",
+            "year": 2017,
+            "roleType": "Performance-oriented",
+            "characterName": "Devasena",
+            "characterDescription": "Queen who endures 25 years of imprisonment without breaking spirit",
+            "performanceReception": "Universally acclaimed, considered one of strongest female characters in Indian cinema"
+          }
+        ],
+        "partnershipStyle": "Rajamouli evolved from giving Anushka commercial roles to performance-oriented characters. Vikramarkudu launched her career, but Baahubali films gave her author-backed, powerful role that defined her legacy.",
+        "characterWritingQuality": "Rajamouli wrote Devasena as equal to male protagonists - warrior princess who doesn't need saving, maintains dignity under torture, drives key plot points. One of strongest female characters in Indian mainstream cinema.",
+        "performanceExtraction": "Rajamouli recognized Anushka's potential early. Gave her breakthrough in Vikramarkudu. In Baahubali, extracted regal, powerful performance. Anushka's portrayal of Devasena's 25-year suffering and unbroken spirit is testament to Rajamouli's ability to write complex female roles.",
+        "chemistryWithHeroes": "In Vikramarkudu with Ravi Teja, provided commercial balance. In Baahubali with Prabhas, created epic romance where Devasena is equal partner, not accessory. Their chemistry drove emotional core of franchise.",
+        "mostMemorableRole": "Devasena in Baahubali franchise - warrior princess turned queen who maintains dignity through 25 years of imprisonment. Character became cultural icon, inspiring countless memes and discussions about strong female representation.",
+        "careerImpact": "Rajamouli gave Anushka breakthrough with Vikramarkudu and career-defining role with Baahubali. Devasena elevated her to pan-India recognition and cemented legacy as actress who can carry epic films.",
+        "significance": "Partnership showcases Rajamouli's growth as filmmaker who writes substantial female characters. Anushka's Devasena proved commercial cinema can have strong, complex women without compromising box office."
+      },
+      {
+        "heroineName": "Samantha Ruth Prabhu",
+        "heroineSlug": "samantha-ruth-prabhu",
+        "filmsTogether": 1,
+        "films": [
+          {
+            "title": "Eega",
+            "year": 2012,
+            "roleType": "Balanced performance and commercial",
+            "characterName": "Bindu",
+            "characterDescription": "Microartist who becomes target of obsessive villain, later instrumental in housefly's revenge",
+            "performanceReception": "Praised for natural performance, carried emotional weight of unique story"
+          }
+        ],
+        "partnershipStyle": "Rajamouli gave Samantha crucial role in experimental film. Bindu required balancing vulnerability with determination as she aids housefly protagonist. Role showcased Samantha's versatility in unconventional narrative.",
+        "characterWritingQuality": "Bindu is active participant in revenge, not passive victim. Rajamouli wrote her with agency - she recognizes the fly is her dead lover and helps execute revenge. Character drives second half emotionally.",
+        "performanceExtraction": "Rajamouli extracted natural, believable performance in fantastical premise. Samantha's emotional reactions to CGI fly were crucial for audience investment. Her performance grounded the fantasy elements.",
+        "chemistryWithHeroes": "Created believable romance with Nani before his death, then emotional connection with CGI fly. Challenging to create chemistry with non-human entity, but Rajamouli's direction made it work.",
+        "mostMemorableRole": "Bindu in Eega - only time actress had to create emotional connection with CGI fly protagonist. Unique challenge that Samantha handled with grace and conviction.",
+        "careerImpact": "Eega's critical and commercial success added credibility to Samantha's filmography. Being part of Rajamouli's experimental film enhanced her reputation for choosing diverse projects.",
+        "significance": "Single collaboration but significant as it proved Samantha could anchor experimental high-concept film under visionary director's guidance."
+      },
+      {
+        "heroineName": "Kajal Aggarwal",
+        "heroineSlug": "kajal-aggarwal",
+        "filmsTogether": 1,
+        "films": [
+          {
+            "title": "Magadheera",
+            "year": 2009,
+            "roleType": "Balanced performance and glamour",
+            "characterName": "Mitravinda/Indu",
+            "characterDescription": "Dual roles - ancient warrior princess and modern girl, connected through reincarnation",
+            "performanceReception": "Career-breakthrough performance, praised for distinction between dual characters"
+          }
+        ],
+        "partnershipStyle": "Rajamouli gave Kajal dual roles showcasing different eras and personalities. Mitravinda was regal, skilled warrior princess, while Indu was modern, independent girl. Required range and distinction.",
+        "characterWritingQuality": "Mitravinda was trained warrior, not damsel in distress. Rajamouli wrote her with combat skills and agency. Modern character Indu also had independence and strong personality.",
+        "performanceExtraction": "Magadheera launched Kajal to stardom. Rajamouli extracted nuanced performance distinguishing two characters connected by soul. Her chemistry with Ram Charan and ability to handle action sequences was career-defining.",
+        "chemistryWithHeroes": "Created epic romance with Ram Charan across lifetimes. Their chemistry drove emotional core of fantasy narrative. Flashback sequences particularly showcased their pairing's strength.",
+        "mostMemorableRole": "Mitravinda/Indu in Magadheera - dual roles in highest-grossing Telugu film at the time, career-defining performance that established Kajal as top heroine.",
+        "careerImpact": "Magadheera's success catapulted Kajal to top league of Telugu and Tamil heroines. Being female lead in Rajamouli's blockbuster opened doors across industries. Career trajectory changed completely post-Magadheera.",
+        "significance": "Single collaboration but immensely significant as it launched Kajal's successful career and proved Rajamouli's ability to present heroines in strong, memorable roles even in male-dominated narratives."
+      },
+      {
+        "heroineName": "Ramya Krishna",
+        "heroineSlug": "ramya-krishna",
+        "filmsTogether": 2,
+        "films": [
+          {
+            "title": "Baahubali: The Beginning",
+            "year": 2015,
+            "roleType": "Performance-oriented",
+            "characterName": "Sivagami",
+            "characterDescription": "Queen Mother who rules kingdom with iron fist, complex character with shades of grey",
+            "performanceReception": "Career-resurrection performance, universally acclaimed as one of greatest female characters in Indian cinema"
+          },
+          {
+            "title": "Baahubali 2: The Conclusion",
+            "year": 2017,
+            "roleType": "Performance-oriented",
+            "characterName": "Sivagami",
+            "characterDescription": "Queen Mother whose decisions drive the tragedy, powerful climax sacrifice scene",
+            "performanceReception": "Towering performance, particularly in death sequence carrying baby Mahendra up stairs - iconic moment in Indian cinema"
+          }
+        ],
+        "partnershipStyle": "Rajamouli resurrected Ramya Krishna's career with most powerful female character in his filmography. Sivagami is not romantic interest but the power center of the kingdom. Performance-driven role with immense screen presence.",
+        "characterWritingQuality": "Sivagami is Rajamouli's strongest female character - rules kingdom, makes life-death decisions, has complex moral code, drives entire plot. Character has shades - loving mother yet ruthless ruler. Multi-dimensional writing rarely seen for women in commercial cinema.",
+        "performanceExtraction": "Rajamouli extracted career-best performance from Ramya Krishna. Her commanding screen presence, dialogue delivery with authority, and emotional vulnerability in mother moments created unforgettable character. Climax scene carrying baby upstairs is iconic.",
+        "chemistryWithHeroes": "Not romantic chemistry but powerful mother-son dynamics with both Prabhas and Rana. Her equations with male characters are based on power, duty, and love - not romance. Refreshing portrayal of woman's relationships beyond romance.",
+        "mostMemorableRole": "Sivagami in Baahubali franchise - most powerful female character in Indian commercial cinema, ruling queen whose decisions drive entire narrative. Character became cultural phenomenon.",
+        "careerImpact": "Rajamouli resurrected Ramya Krishna's career after years of character roles. Sivagami made her relevant to new generation, earned critical acclaim, and established her as actress who can carry massive films. Career-defining comeback.",
+        "significance": "Collaboration proved Rajamouli can write complex, powerful female characters who are central to narrative, not decorative. Sivagami set new standard for female representation in Indian commercial cinema."
+      }
+    ],
+
+    "cinematographers": [
+      {
+        "name": "K. K. Senthil Kumar",
+        "slug": "kk-senthil-kumar",
+        "filmsTogether": 7,
+        "films": [
+          {"title": "Sye", "year": 2004},
+          {"title": "Chatrapathi", "year": 2005},
+          {"title": "Magadheera", "year": 2009},
+          {"title": "Eega", "year": 2012},
+          {"title": "Baahubali: The Beginning", "year": 2015},
+          {"title": "Baahubali 2: The Conclusion", "year": 2017},
+          {"title": "RRR", "year": 2022}
+        ],
+        "visualSignature": "Epic scale with grand frames, vibrant color palette, sweeping camera movements for action sequences. Mastery in integrating CGI with live action, creating seamless visual spectacle. Excels in capturing larger-than-life hero moments with low angles and dramatic lighting.",
+        "technicalHighlights": "Pioneer in VFX-heavy cinematography in Telugu cinema. Mastered transition from practical effects in Sye to sophisticated CGI integration in Baahubali and RRR. Waterfall climbing sequence in Baahubali, interval bike-tiger chase in RRR showcase technical brilliance. Experimentation with Arri Alexa cameras for Baahubali onwards.",
+        "mostIconicVisuals": "Baahubali waterfall climbing sequence with dramatic lighting and scale. RRR's fire-water introduction sequence for lead characters. Magadheera's horse-chariot action choreography. Eega's fly-POV shots creating unique perspective. Each film has visually stunning interval bang sequence.",
+        "partnershipStrength": "20+ year collaboration spanning from Sye (2004) to RRR (2022). Senthil Kumar is Rajamouli's go-to cinematographer for ambitious projects. Their creative sync allows pushing technical boundaries. Senthil gives Rajamouli complete freedom to dream wild, then figures out how to execute. Note: Reports suggest they may not collaborate on upcoming SSMB29."
+      }
+    ],
+
+    "musicDirectors": [
+      {
+        "name": "M. M. Keeravani",
+        "slug": "mm-keeravani",
+        "filmsTogether": 12,
+        "films": [
+          {"title": "Student No. 1", "year": 2001},
+          {"title": "Simhadri", "year": 2003},
+          {"title": "Sye", "year": 2004},
+          {"title": "Chatrapathi", "year": 2005},
+          {"title": "Vikramarkudu", "year": 2006},
+          {"title": "Yamadonga", "year": 2007},
+          {"title": "Magadheera", "year": 2009},
+          {"title": "Maryada Ramanna", "year": 2010},
+          {"title": "Eega", "year": 2012},
+          {"title": "Baahubali: The Beginning", "year": 2015},
+          {"title": "Baahubali 2: The Conclusion", "year": 2017},
+          {"title": "RRR", "year": 2022}
+        ],
+        "blockbusters": ["Simhadri", "Magadheera", "Baahubali: The Beginning", "Baahubali 2: The Conclusion", "RRR"],
+        "chartbusterSongs": ["Dheevara - Baahubali", "Naatu Naatu - RRR", "Saahore Baahubali - Baahubali 2", "Dandalayya - Baahubali", "Panchadara Bomma - Magadheera", "Komma Uyyalo - RRR"],
+                "musicalStyle": "Versatile - masters mass beats for elevation songs, soulful melodies for romance, folk influences for cultural authenticity, and western orchestration for epic moments. Background scores are instrumental in creating theatrical mass moments with thunderous percussion and orchestral arrangements that elevate hero entrances and action sequences.",
+        "backgroundScoreImpact": "Keeravani's background scores are crucial to Rajamouli's commercial appeal. Interval bang sequences rely heavily on BGM buildup. RRR's fire-water theme, Baahubali's war sequences, and Magadheera's action choreography all gain impact through powerful orchestration. BGM creates emotional depth and mass hysteria in equal measure.",
+        "mostIconicAlbum": "RRR - Won Academy Award and Golden Globe for Naatu Naatu. Album combined folk authenticity with global appeal. Naatu Naatu became first Indian song to win Oscar, international viral sensation with over 500 million views.",
+        "partnershipChemistry": "Cousins who share creative wavelength. Keeravani is Rajamouli's only music director across all 12 films. Their collaboration begins at script stage - music is integrated into narrative rather than added later. Rajamouli gives Keeravani complete freedom while Keeravani understands exactly what emotional beats each scene requires. Their partnership is longest-running director-composer collaboration in Indian cinema with 100% hit rate."
+      }
+    ],
+
+    "producers": [
+      {
+        "name": "Shobu Yarlagadda",
+        "slug": "shobu-yarlagadda",
+        "productionHouse": "Arka Media Works",
+        "filmsTogether": 3,
+        "films": [
+          {"title": "Baahubali: The Beginning", "year": 2015, "budget": "₹180 Crore"},
+          {"title": "Baahubali 2: The Conclusion", "year": 2017, "budget": "₹250 Crore"},
+          {"title": "RRR", "year": 2022, "budget": "₹550 Crore"}
+        ],
+        "relationship": "Complete trust and creative freedom. Shobu never interfered with creative decisions despite massive budgets. Backed Rajamouli's vision for five years on Baahubali without releasing second film, unprecedented in Indian cinema.",
+        "commercialSuccess": "3 out of 3 films were massive blockbusters with combined collections over ₹3800 crore. Most successful director-producer partnership in Indian cinema history in terms of box office returns.",
+        "budgetScale": "Consistently backs Rajamouli with record budgets. RRR at ₹550 crore was most expensive Indian film. Shobu believes in giving Rajamouli resources to execute vision without compromise, understanding high investment yields higher returns with this director."
+      },
+      {
+        "name": "DVV Danayya",
+        "slug": "dvv-danayya",
+        "productionHouse": "DVV Entertainment",
+        "filmsTogether": 1,
+        "films": [
+          {"title": "RRR", "year": 2022, "budget": "₹550 Crore"}
+        ],
+        "relationship": "Trusted Rajamouli with ₹550 crore, biggest budget in Indian cinema. Never questioned creative decisions despite COVID delays and budget increases.",
+        "commercialSuccess": "RRR collected ₹1387.26 crore worldwide, becoming highly profitable despite massive budget. Won Academy Award, enhancing producer's reputation globally.",
+        "budgetScale": "Willing to invest record budgets for Rajamouli's vision. RRR's ₹550 crore budget shows complete faith in director's box office pull and creative abilities."
+      }
+    ],
+
+    "actionDirectors": [
+      {
+        "name": "Peter Hein",
+        "slug": "peter-hein",
+        "filmsTogether": 4,
+        "actionStyle": "Combination of realistic stunts with stylized wirework. Specializes in large-scale battle sequences with hundreds of fighters. Choreographs action to serve narrative emotion rather than pure spectacle.",
+        "iconicSequences": ["Magadheera interval horse-chariot sequence", "Baahubali war sequences with coordinated army movements", "RRR interval bike chase with tiger"]
+      },
+      {
+        "name": "King Solomon",
+        "slug": "king-solomon",
+        "filmsTogether": 2,
+        "actionStyle": "Brutal, grounded action mixed with over-the-top hero moments. Effective at creating mass appeal through physically demanding stunts.",
+        "iconicSequences": ["Simhadri action sequences that established Jr NTR as mass hero"]
+      }
+    ],
+
+    "editors": [
+      {
+        "name": "A. Sreekar Prasad",
+        "slug": "a-sreekar-prasad",
+        "filmsTogether": 3,
+        "editingStyle": "Master editor who maintains emotional flow despite complex narratives. Expertly handles flashback structures in Magadheera and Baahubali. Pacing balances commercial requirements with story depth. National Award winner known for sophisticated editing that serves story.",
+        "films": [
+          {"title": "Magadheera", "year": 2009},
+          {"title": "Baahubali: The Beginning", "year": 2015},
+          {"title": "Baahubali 2: The Conclusion", "year": 2017}
+        ]
+      }
+    ]
+  },
+
+  "upcomingProjects": [
+    {
+      "film": "SSMB29 (Tentative Title)",
+      "hero": "Mahesh Babu",
+      "heroSlug": "mahesh-babu",
+      "heroine": null,
+      "heroineSlug": null,
+      "productionHouse": "KL Damodar Prasad",
+      "expectedRelease": "2027",
+      "status": "Pre-production",
+      "genre": "Adventure thriller with African jungle backdrop",
+      "significance": "First collaboration with Mahesh Babu, most anticipated director-star combination in Telugu cinema. Reportedly made on ₹900-1000 crore budget, set to be most expensive Indian film. Global release planned. Rajamouli's first non-period/fantasy contemporary adventure.",
+      "fanAnticipation": "Very High"
+    }
+  ],
+
+  "socialMediaPresence": {
+    "instagram": {
+      "platform": "Instagram",
+      "handle": "@ssrajamouli",
+      "url": "https://instagram.com/ssrajamouli",
+      "followers": 7800000,
+      "verified": true,
+      "accountType": "Official Personal",
+      "active": true,
+      "lastPostDate": "2025-11-06",
+      "postFrequency": "Regular",
+      "engagementRate": "High",
+      "contentType": ["Film Updates", "Behind-the-scenes", "Personal milestones", "Industry events"]
+    },
+    "twitter": {
+      "platform": "Twitter/X",
+      "handle": "@ssrajamouli",
+      "url": "https://twitter.com/ssrajamouli",
+      "followers": 4500000,
+      "verified": true,
+      "active": true,
+      "lastPostDate": "2025-11-05"
+    },
+    "facebook": {
+      "platform": "Facebook",
+      "page": "SS Rajamouli Official",
+      "followers": 3200000,
+      "verified": true
+    },
+    "digitalInfluence": "Massive global digital presence post-RRR Oscar win. His tweets about film updates trend immediately. Behind-the-scenes posts receive millions of engagements. Influential voice in Indian cinema discussions worldwide. CAA Hollywood representation expanded his global reach.",
+    "fanInteraction": "Regularly interacts with fans, responds to appreciation tweets, shares fan art. Humble and accessible despite superstar director status. Acknowledges fan support frequently. Posts family moments creating personal connection beyond professional achievements."
+  },
+
+  "awards": [
+    {
+      "awardName": "Academy Award",
+      "givenBy": "Academy of Motion Picture Arts and Sciences",
+      "category": "Best Original Song (Naatu Naatu)",
+      "film": "RRR",
+      "year": 2023,
+      "won": true
+    },
+    {
+      "awardName": "Golden Globe Award",
+      "givenBy": "Hollywood Foreign Press Association",
+      "category": "Best Original Song (Naatu Naatu)",
+      "film": "RRR",
+      "year": 2023,
+      "won": true
+    },
+    {
+      "awardName": "Saturn Award",
+      "givenBy": "Academy of Science Fiction, Fantasy & Horror Films",
+      "category": "Best International Film",
+      "film": "Baahubali 2: The Conclusion",
+      "year": 2018,
+      "won": true
+    },
+    {
+      "awardName": "New York Film Critics Circle Award",
+      "givenBy": "New York Film Critics Circle",
+      "category": "Best Director",
+      "film": "RRR",
+      "year": 2022,
+      "won": true
+    },
+    {
+      "awardName": "Critics Choice Award",
+      "givenBy": "Critics Choice Association",
+      "category": "Best Foreign Language Film",
+      "film": "RRR",
+      "year": 2023,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award",
+      "givenBy": "Government of India",
+      "category": "Best Feature Film",
+      "film": "Baahubali: The Beginning",
+      "year": 2016,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award",
+      "givenBy": "Government of India",
+      "category": "Best Popular Film Providing Wholesome Entertainment",
+      "film": "Baahubali 2: The Conclusion",
+      "year": 2018,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award",
+      "givenBy": "Government of India",
+      "category": "Best Feature Film in Telugu",
+      "film": "Eega",
+      "year": 2013,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare Award South",
+      "givenBy": "Filmfare",
+      "category": "Best Director - Telugu",
+      "film": "Magadheera",
+      "year": 2010,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare Award South",
+      "givenBy": "Filmfare",
+      "category": "Best Director - Telugu",
+      "film": "Eega",
+      "year": 2013,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare Award South",
+      "givenBy": "Filmfare",
+      "category": "Best Director - Telugu",
+      "film": "Baahubali: The Beginning",
+      "year": 2016,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare Award South",
+      "givenBy": "Filmfare",
+      "category": "Best Director - Telugu",
+      "film": "Baahubali 2: The Conclusion",
+      "year": 2018,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare Award South",
+      "givenBy": "Filmfare",
+      "category": "Best Director - Telugu",
+      "film": "RRR",
+      "year": 2023,
+      "won": true
+    },
+    {
+      "awardName": "Nandi Award",
+      "givenBy": "Government of Andhra Pradesh",
+      "category": "Best Director",
+      "film": "Magadheera",
+      "year": 2009,
+      "won": true
+    },
+    {
+      "awardName": "Nandi Award",
+      "givenBy": "Government of Andhra Pradesh",
+      "category": "Best Director",
+      "film": "Eega",
+      "year": 2012,
+      "won": true
+    },
+    {
+      "awardName": "Nandi Award",
+      "givenBy": "Government of Andhra Pradesh",
+      "category": "Best Director",
+      "film": "Baahubali: The Beginning",
+      "year": 2015,
+      "won": true
+    },
+    {
+      "awardName": "SIIMA",
+      "givenBy": "South Indian International Movie Awards",
+      "category": "Best Director - Telugu",
+      "film": "Baahubali 2: The Conclusion",
+      "year": 2017,
+      "won": true
+    },
+    {
+      "awardName": "SIIMA",
+      "givenBy": "South Indian International Movie Awards",
+      "category": "Best Director - Telugu",
+      "film": "RRR",
+      "year": 2022,
+      "won": true
+    }
+  ],
+
+  "brandValue": {
+    "endorsements": null,
+    "brandAmbassador": null,
+    "estimatedFeePerFilm": "₹80-100 Crore range",
+    "marketValue": "Highest-paid Indian director. Commands premium due to 100% hit rate and pan-India appeal. His name alone can secure record budgets and theatrical deals. Post-Oscar win, his global market value increased exponentially. Signed with CAA Hollywood, indicating international brand value."
+  },
+
+  "industryStanding": {
+    "currentRank": "Top 1 among Indian commercial directors",
+    "peerRespect": "Universally respected across Indian film industries. Directors cite him as inspiration. Known for meticulous planning, respecting technicians, and maintaining disciplined sets. Industry veterans praise his ability to balance commerce with creativity.",
+    "producerConfidence": "Highest in industry. Producers willing to invest record budgets based solely on his vision. Never delivered flop, making him safest commercial bet. Five-year commitment for Baahubali showed unprecedented producer faith that was rewarded with blockbuster returns.",
+    "starPreference": "Every top star wants to work with Rajamouli. Mahesh Babu waited years for collaboration. Stars willing to dedicate multiple years to his projects. His direction is considered career-defining opportunity. Even established superstars accept his demanding schedules and creative control."
+  },
+
+  "quotes": [
+    {
+      "quote": "I don't think of it as Telugu cinema or Hindi cinema. I think of it as Indian cinema that should work across the world.",
+      "year": 2022,
+      "context": "Interview",
+      "source": "Variety Magazine",
+      "significance": "Reveals his pan-Indian vision that materialized with Baahubali and RRR breaking language barriers and achieving national success."
+    },
+    {
+      "quote": "If you don't take the emotion of the character seriously, the audience will not take your film seriously, no matter how great your technical values are.",
+      "year": 2017,
+      "context": "Interview",
+      "source": "Film Companion",
+      "significance": "Encapsulates his filmmaking philosophy of prioritizing emotional core over spectacle, explaining why his grand films resonate deeply with audiences."
+    },
+    {
+      "quote": "Visual effects should support the story, not overshadow it. The story always comes first.",
+      "year": 2015,
+      "context": "Press Conference",
+      "source": "Baahubali Press Meet",
+      "significance": "Defines his approach to VFX-heavy filmmaking, emphasizing story primacy despite working with cutting-edge technology."
+    },
+    {
+      "quote": "I believe physically impossible feats become believable when the emotional investment is high. Emotion justifies action.",
+      "year": 2012,
+      "context": "Award Speech",
+      "source": "National Film Awards",
+      "significance": "Explains his signature style of emotionally-driven action sequences that audiences accept despite physics-defying nature."
+    },
+    {
+      "quote": "Patience is the biggest virtue in filmmaking. You cannot rush creativity or compromise on quality for deadlines.",
+      "year": 2020,
+      "context": "Interview",
+      "source": "The Hindu",
+      "significance": "Reflects his meticulous approach that led to spending five years on Baahubali and multiple years on RRR, prioritizing quality over speed."
+    }
+  ],
+
+  "trivia": [
+    "Rajamouli is called 'Jakkanna' (man with vision) by his crew and fans. The title reflects his reputation for envisioning grand scenes that seem impossible until executed.",
+    "He personally drew over 5,000 storyboard sketches for Baahubali films, planning every shot meticulously before filming began. This pre-visualization is key to his success with complex VFX sequences.",
+    "RRR's interval sequence - Ram Charan on bike chasing Jr NTR on horse while tiger chases them - was conceived, storyboarded, and choreographed over 18 months before shooting a single frame.",
+    "Music director MM Keeravani is his cousin, and this family collaboration has produced every film soundtrack across 24-year career. Their creative wavelength is considered telepathic by industry insiders.",
+    "Rajamouli's father Vijayendra Prasad writes or co-writes most of his blockbusters including Baahubali and RRR. This father-son creative partnership is unique in Indian cinema's history.",
+    "He does extensive research for films - spent two years researching Alluri Sitarama Raju and Komaram Bheem's lives for RRR, visiting their native places and meeting descendants.",
+    "First Indian filmmaker to be signed by CAA (Creative Artists Agency) Hollywood talent agency after RRR's global success, opening doors for international collaborations.",
+    "Known for maintaining extremely disciplined sets with punctuality. If call time is 9 AM, shooting starts at 9:00:01 AM without exception, earning him reputation as strictest director.",
+    "Eega (fly) film required 2,000+ VFX shots making it most VFX-heavy Indian film at the time. Each fly movement was hand-animated, taking 18 months of post-production.",
+    "Never delivered a flop across 12 films spanning 24 years - a 100% success rate unmatched by any commercial director in Indian cinema history."
+  ],
+
+  "knownFor": [
+    "First Indian director to deliver ₹1000+ crore blockbuster (Baahubali 2)",
+    "Only Indian filmmaker to win Academy Award for film he directed (RRR - Naatu Naatu)",
+    "Pioneer of pan-Indian cinema movement breaking language barriers",
+    "100% hit rate across 12 films - only commercial director with perfect record",
+    "Highest-grossing Indian director with ₹4500+ crore total collections",
+    "Master of interval bang sequences creating theatrical mass hysteria",
+    "Elevated Telugu cinema to global recognition and box office scale",
+    "Star-maker who transformed regional actors into pan-India superstars"
+  ]
+}
+

@@ -1,0 +1,1826 @@
+'use client';
+
+import { useEffect, useMemo, useRef, useState } from 'react';
+import Link from 'next/link';
+import { useParams, useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
+
+import { 
+  FaInstagram, FaTwitter, FaFacebook, FaStar, FaAward, FaHeart, 
+  FaRegHeart, FaSpinner, FaArrowLeft, FaTrophy, FaGamepad, FaUser,
+  FaLightbulb, FaCar, FaHandHoldingHeart, FaTheaterMasks, FaUsers, 
+  FaExclamationTriangle, FaGlobe, FaHashtag, FaFilm, FaQuoteLeft,
+  FaNewspaper, FaMicrophone, FaDumbbell, FaPalette, FaChartLine,
+  FaYoutube, FaPlay, FaCalendarAlt, FaMapMarkerAlt, FaMoneyBillWave,
+  FaTv, FaChevronRight, FaChild
+} from 'react-icons/fa';
+
+import { toggleHeroFollow, getHeroFollowStatus, getHeroFollowerCount } from '@/app/actions/heroes';
+
+const TMDB_API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY || '4e532670adbc327a53938993187e8fba';
+const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
+
+function getImageUrl(imageObj: any, tmdbId?: number): string {
+  if (!imageObj) return '/images/no-poster.png';
+  
+  if (typeof imageObj === 'string') {
+    if (imageObj.startsWith('/') && !imageObj.startsWith('//')) {
+      return `${TMDB_IMAGE_BASE}${imageObj}`;
+    }
+    return imageObj;
+  }
+  
+  if (imageObj.source === 'supabase' && imageObj.fallback) {
+    return imageObj.fallback;
+  }
+  
+  if (imageObj.url) {
+    if (imageObj.url.startsWith('/') && !imageObj.url.startsWith('//')) {
+      return `${TMDB_IMAGE_BASE}${imageObj.url}`;
+    }
+    return imageObj.url;
+  }
+  
+  return imageObj.fallback || '/images/no-poster.png';
+}
+
+export default function HeroDetailPage({ heroData: initialHeroData }: { heroData: any }) {
+  const { data: session } = useSession();
+  const router = useRouter();
+  
+  const [heroData, setHeroData] = useState<any>(initialHeroData);
+  const [loading, setLoading] = useState(false);
+  const [isFollowing, setIsFollowing] = useState(false);
+  const [followerCount, setFollowerCount] = useState(0);
+  const [activeTab, setActiveTab] = useState('overview');
+
+  useEffect(() => {
+    const loadFollowData = async () => {
+      if (!heroData) return;
+      
+      try {
+        if (session?.user) {
+          const followStatus = await getHeroFollowStatus(heroData.slug);
+          setIsFollowing(followStatus);
+        }
+        
+        const count = await getHeroFollowerCount(heroData.slug);
+        setFollowerCount(count);
+      } catch (error) {
+        console.error('Error loading follow data:', error);
+      }
+    };
+
+    loadFollowData();
+  }, [heroData, session]);
+
+  const handleFollow = async () => {
+    if (!session?.user) {
+      router.push('/auth/signin');
+      return;
+    }
+
+    try {
+      await toggleHeroFollow(heroData.slug, heroData.name);
+      setIsFollowing(!isFollowing);
+      setFollowerCount(prev => isFollowing ? prev - 1 : prev + 1);
+    } catch (error) {
+      console.error('Error toggling follow:', error);
+    }
+  };
+
+  if (!heroData) return <div className="min-h-screen bg-black flex items-center justify-center"><p className="text-white">Hero not found</p></div>;
+
+
+  return (
+    <div className="min-h-screen bg-black">
+      <nav className="sticky top-0 z-50 bg-black/95 backdrop-blur-xl border-b border-white/[0.06]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <Link href="/" className="text-white/60 hover:text-white transition">
+              <FaArrowLeft className="text-xl" />
+            </Link>
+            <Link href="/" className="text-2xl font-black text-[#E50914]">TFiverse</Link>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link href="/heroes" className="px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition">Heroes</Link>
+            <Link href="/movies" className="px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition">Movies</Link>
+            {session?.user ? (
+              <Link href="/profile" className="w-8 h-8 rounded-full overflow-hidden border-2 border-white/10 hover:border-[#E50914] transition">
+                {session.user.image ? (
+                  <img src={session.user.image} alt="Profile" className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full bg-[#E50914] flex items-center justify-center text-white font-bold text-xs">
+                    {session.user.name?.charAt(0) || 'U'}
+                  </div>
+                )}
+              </Link>
+            ) : (
+              <Link href="/auth/signin" className="px-4 py-2 text-sm bg-[#E50914] hover:bg-[#F40612] text-white font-semibold rounded-lg transition">
+                Sign In
+              </Link>
+            )}
+          </div>
+        </div>
+      </nav>
+
+      <HeroBanner hero={heroData} isFollowing={isFollowing} followerCount={followerCount} onFollow={handleFollow} />
+      <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} hero={heroData} />
+
+      <div className="px-6 md:px-12 py-8">
+        <div className="max-w-7xl mx-auto">
+          {activeTab === 'overview' && <OverviewTab hero={heroData} />}
+          {activeTab === 'movies' && <MoviesTab movies={heroData.movies} hero={heroData} />}
+          {activeTab === 'upcoming' && <UpcomingTab upcoming={heroData.upcomingProjects} />}
+          {activeTab === 'lifestyle' && <LifestyleTab hero={heroData} />}
+          {activeTab === 'philanthropy' && <PhilanthropyTab hero={heroData} />}
+          {activeTab === 'brands' && <BrandsTab hero={heroData} />}
+          {activeTab === 'info' && <InfoTab hero={heroData} />}
+          {activeTab === 'career' && <CareerTab hero={heroData} />}
+          {activeTab === 'awards' && <AwardsTab awards={heroData.awards} />}
+          {activeTab === 'news' && <NewsTab news={heroData.recentNews} />}
+          {activeTab === 'trivia' && <TriviaTab trivia={heroData.trivia} quotes={heroData.quotes} />}
+          {activeTab === 'gallery' && <GalleryTab images={heroData.images?.gallery} />}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function LoadingState() {
+  return (
+    <div className="min-h-screen bg-black flex items-center justify-center">
+      <FaSpinner className="text-5xl text-[#E50914] animate-spin" />
+    </div>
+  );
+}
+
+function HeroBanner({ hero, isFollowing, followerCount, onFollow }: any) {
+  const bannerImage = getImageUrl(hero.images.banner) || getImageUrl(hero.images.featured) || getImageUrl(hero.images.portrait);
+
+  return (
+    <section className="relative h-[75vh] overflow-hidden">
+      <img src={bannerImage} alt={hero.name} className="w-full h-full object-cover object-top" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+      
+      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-end gap-6">
+            <div className="hidden md:block w-72 h-96 rounded-xl overflow-hidden border-4 border-white/20 shadow-2xl flex-shrink-0">
+              <img src={getImageUrl(hero.images.portrait)} alt={hero.name} className="w-full h-full object-cover" />
+            </div>
+
+            <div className="flex-1">
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-3 leading-none">{hero.name}</h1>
+              <p className="text-2xl md:text-3xl text-[#E50914] font-bold mb-4">{hero.title}</p>
+
+              <div className="flex flex-wrap gap-4 mb-6">
+                <div className="flex items-center gap-2 text-white/80">
+                  <FaFilm className="text-[#E50914]" />
+                  <span className="font-semibold">{hero.movies?.length || 0} Movies</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <FaTrophy className="text-[#E50914]" />
+                  <span className="font-semibold">{hero.awards?.length || 0} Awards</span>
+                </div>
+                <div className="flex items-center gap-2 text-white/80">
+                  <FaHeart className="text-[#E50914]" />
+                  <span className="font-semibold">{followerCount.toLocaleString()} Followers</span>
+                </div>
+                {hero.personalInfo?.birthDate && (
+                  <div className="flex items-center gap-2 text-white/80">
+                    <FaCalendarAlt className="text-[#E50914]" />
+                    <span className="font-semibold">Age {new Date().getFullYear() - new Date(hero.personalInfo.birthDate).getFullYear()}</span>
+                  </div>
+                )}
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <button onClick={onFollow} className={`px-6 py-3 rounded-lg font-bold transition shadow-lg flex items-center gap-2 ${
+                    isFollowing ? 'bg-white/10 text-white hover:bg-white/20' : 'bg-[#E50914] text-white hover:bg-[#F40612]'
+                  }`}>
+                  {isFollowing ? <FaHeart /> : <FaRegHeart />}
+                  {isFollowing ? 'Following' : 'Follow'}
+                </button>
+
+                {hero.socialMedia?.instagram && (
+                  <a href={hero.socialMedia.instagram.url} target="_blank" rel="noopener noreferrer"
+                     className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-bold transition flex items-center gap-2">
+                    <FaInstagram /> Instagram
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TabNavigation({ activeTab, setActiveTab, hero }: any) {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  
+  // ✅ Tab definitions with proper counts
+  const tabs = [
+    { id: 'info', label: 'Info', icon: FaGlobe },
+    { id: 'overview', label: 'Overview', icon: FaUser },
+    { id: 'movies', label: 'Movies', count: hero.movies?.length || 0, icon: FaFilm },
+    { id: 'upcoming', label: 'Upcoming', count: (hero.upcomingProjects?.length || hero.upcoming?.length || 0), icon: FaCalendarAlt },
+    { id: 'lifestyle', label: 'Lifestyle', count: hero.lifestyle ? (hero.lifestyle.carCollection?.length || 0) + (hero.lifestyle.properties?.length || 0) : 0, icon: FaCar },
+    { id: 'philanthropy', label: 'Philanthropy', icon: FaHandHoldingHeart },
+    { id: 'brands', label: 'Brands', count: hero.brandEndorsements?.length || 0, icon: FaHashtag },
+    { id: 'career', label: 'Career', icon: FaChartLine },
+    { id: 'awards', label: 'Awards', count: hero.awards?.length || 0, icon: FaAward },
+    { id: 'news', label: 'News', count: hero.recentNews?.length || 0, icon: FaNewspaper },
+    { id: 'trivia', label: 'Trivia', icon: FaLightbulb },
+    { id: 'gallery', label: 'Gallery', count: hero.images?.gallery?.length || 0, icon: FaPalette }
+  ];
+
+  // ✅ Auto-scroll to active tab
+  useEffect(() => {
+    const activeTabElement = scrollContainerRef.current?.querySelector(`[data-tab="${activeTab}"]`);
+    if (activeTabElement) {
+      activeTabElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  }, [activeTab]);
+
+  // ✅ Keyboard navigation (Arrow keys)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const currentIndex = tabs.findIndex(t => t.id === activeTab);
+      
+      if (e.key === 'ArrowLeft' && currentIndex > 0) {
+        setActiveTab(tabs[currentIndex - 1].id);
+      } else if (e.key === 'ArrowRight' && currentIndex < tabs.length - 1) {
+        setActiveTab(tabs[currentIndex + 1].id);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeTab, tabs, setActiveTab]);
+
+  // ✅ Manual scroll function for arrow buttons
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'left' ? -300 : 300,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  return (
+    <div className="sticky top-[72px] z-40 bg-black/95 backdrop-blur-xl border-b border-white/[0.06]">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative">
+        {/* Left Arrow Button */}
+        <button
+          onClick={() => scroll('left')}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-full bg-gradient-to-r from-black via-black to-transparent flex items-center justify-center text-white hover:text-[#E50914] transition"
+          aria-label="Scroll left"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+
+        {/* Tabs Container with Horizontal Scroll */}
+        <div 
+          ref={scrollContainerRef}
+          className="flex gap-2 overflow-x-auto scrollbar-hide py-4 pb-2 px-10 scroll-smooth"
+        >
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <button 
+                key={tab.id}
+                data-tab={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-lg font-semibold transition whitespace-nowrap ${
+                  activeTab === tab.id ? 'bg-[#E50914] text-white' : 'text-white/60 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {Icon && <Icon className="text-sm" />}
+                {tab.label}
+                {tab.count !== undefined && tab.count > 0 && (
+                  <span className="px-2 py-0.5 bg-white/20 rounded-full text-xs font-bold">{tab.count}</span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Right Arrow Button */}
+        <button
+          onClick={() => scroll('right')}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-full bg-gradient-to-l from-black via-black to-transparent flex items-center justify-center text-white hover:text-[#E50914] transition"
+          aria-label="Scroll right"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+
+        {/* Keyboard Navigation Hint */}
+        <div className="absolute bottom-1 right-12 text-white/20 text-[10px] pointer-events-none hidden md:block">
+          Use ← → keys
+        </div>
+      </div>
+
+      {/* Hide Scrollbar CSS */}
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
+    </div>
+  );
+}
+
+// ====================================================================
+// 🎯 PART 2/3 - TAB COMPONENTS
+// ====================================================================
+
+function OverviewTab({ hero }: any) {
+  return (
+    <div className="space-y-8">
+      <section>
+        <h2 className="text-3xl font-black text-white mb-4">Biography</h2>
+        <p className="text-white/70 text-lg leading-relaxed">{hero.bio}</p>
+      </section>
+
+      {hero.heroAura && (
+        <section className="rounded-xl p-8 bg-gradient-to-br from-[#E50914]/10 to-transparent border border-[#E50914]/20">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 rounded-full bg-[#E50914] flex items-center justify-center">
+              <FaStar className="text-2xl text-white" />
+            </div>
+            <h2 className="text-3xl font-black text-white">Hero Aura</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {hero.heroAura.screenPresence && <AuraCard icon={FaTheaterMasks} title="Screen Presence" value={hero.heroAura.screenPresence} />}
+            {hero.heroAura.boxOfficeAppeal && <AuraCard icon={FaMoneyBillWave} title="Box Office Appeal" value={hero.heroAura.boxOfficeAppeal} />}
+            {hero.heroAura.signature && <AuraCard icon={FaFilm} title="Signature" value={hero.heroAura.signature} />}
+            {hero.heroAura.fanbase && <AuraCard icon={FaUsers} title="Fanbase" value={hero.heroAura.fanbase} />}
+            {hero.heroAura.trademarkStyle && <AuraCard icon={FaPalette} title="Trademark Style" value={hero.heroAura.trademarkStyle} />}
+          </div>
+        </section>
+      )}
+
+      {hero.genreStrength && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Genre Mastery</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {Object.entries(hero.genreStrength).map(([genre, rating]: any) => (
+              <GenreBar key={genre} genre={genre} rating={rating} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {hero.physicalTransformations && hero.physicalTransformations.length > 0 && (
+        <section>
+          <div className="flex items-center gap-3 mb-6">
+            <FaDumbbell className="text-3xl text-[#E50914]" />
+            <h2 className="text-3xl font-black text-white">Physical Transformations</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {hero.physicalTransformations.map((transformation: any, index: number) => (
+              <TransformationCard key={index} transformation={transformation} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Voice Profile - Universal Handler */}
+{hero.voiceProfile && (
+  <section>
+    <h2 className="text-3xl font-black text-white mb-6">Voice Profile</h2>
+    <div className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06] space-y-4">
+      {/* Voice Type */}
+      {hero.voiceProfile.voiceType && (
+        <div>
+          <h4 className="text-white/60 text-sm mb-1">Voice Type</h4>
+          <p className="text-white font-semibold text-lg">{hero.voiceProfile.voiceType}</p>
+        </div>
+      )}
+      
+      {/* Description (Jr NTR/Prabhas format) */}
+      {hero.voiceProfile.description && (
+        <p className="text-white/80">{hero.voiceProfile.description}</p>
+      )}
+      
+      {/* Tone (Prabhas format) */}
+      {hero.voiceProfile.tone && (
+        <div>
+          <h4 className="text-white/60 text-sm mb-1">Tone</h4>
+          <p className="text-white">{hero.voiceProfile.tone}</p>
+        </div>
+      )}
+      
+      {/* Characteristics / Notable Characteristics */}
+      {(hero.voiceProfile.characteristics || hero.voiceProfile.notableCharacteristics) && (
+        <div>
+          <h4 className="text-white/60 text-sm mb-2">Characteristics</h4>
+          <div className="flex flex-wrap gap-2">
+            {(hero.voiceProfile.characteristics || hero.voiceProfile.notableCharacteristics).map((char: string, i: number) => (
+              <span key={i} className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">
+                {char}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+      
+      {/* Languages Fluent / Languages */}
+      {(hero.voiceProfile.languagesFluent || hero.voiceProfile.languages) && (
+        <div>
+          <h4 className="text-white/60 text-sm mb-2">Languages</h4>
+          <div className="flex flex-wrap gap-2">
+            {(hero.voiceProfile.languagesFluent || hero.voiceProfile.languages).map((lang: string, i: number) => (
+              <span key={i} className="px-3 py-1 bg-[#E50914]/20 text-[#E50914] rounded-full text-sm font-semibold">
+                {lang}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+      
+      {/* Iconic Dialogues */}
+      {hero.voiceProfile.iconicDialogues && hero.voiceProfile.iconicDialogues.length > 0 && (
+        <div>
+          <h4 className="text-white/60 text-sm mb-3">Iconic Dialogues</h4>
+          <div className="space-y-3">
+            {hero.voiceProfile.iconicDialogues.map((dialogue: any, i: number) => (
+              <div key={i} className="p-4 bg-black/30 rounded-lg border border-white/[0.06]">
+                <p className="text-white italic mb-2">"{dialogue.dialogue || dialogue}"</p>
+                {dialogue.movie && (
+                  <p className="text-white/40 text-xs">— {dialogue.movie}</p>
+                )}
+                {dialogue.impact && (
+                  <p className="text-white/60 text-xs mt-1">{dialogue.impact}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+)}
+
+
+{/* Known For - New Section */}
+{hero.knownFor && hero.knownFor.length > 0 && (
+  <section>
+    <h2 className="text-3xl font-black text-white mb-6">Known For</h2>
+    <div className="flex flex-wrap gap-3">
+      {hero.knownFor.map((item: string, index: number) => (
+        <span 
+          key={index} 
+          className="px-4 py-2 bg-[#E50914]/20 text-white border border-[#E50914]/30 rounded-full font-semibold"
+        >
+          {item}
+        </span>
+      ))}
+    </div>
+  </section>
+)}
+
+
+{/* Collaborations - Universal Handler */}
+{hero.collaborations && (
+  <section>
+    <h2 className="text-3xl font-black text-white mb-6">Frequent Collaborations</h2>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {Object.entries(hero.collaborations).map(([categoryKey, categoryData]: any) => {
+        // Skip non-collaborator fields
+        if (!categoryData || typeof categoryData !== 'object') return null;
+        
+        // Extract collaborators array from different formats
+        let collaborators = [];
+        
+        // Format 1: Prabhas (nested with multipleFilms)
+        if (categoryData.multipleFilms && Array.isArray(categoryData.multipleFilms)) {
+          collaborators = categoryData.multipleFilms;
+        }
+        // Format 2 & 3: Others (direct arrays)
+        else if (Array.isArray(categoryData)) {
+          collaborators = categoryData;
+        }
+        // Skip if nested object without multipleFilms (like producers section)
+        else {
+          return null;
+        }
+        
+        // Skip if no valid collaborators
+        if (collaborators.length === 0) return null;
+
+        // Generate readable title
+        const title = categoryKey
+          .replace(/([A-Z])/g, ' $1')
+          .replace(/^./, str => str.toUpperCase())
+          .replace(/Directors/i, 'Directors')
+          .replace(/Music Directors/i, 'Music Directors')
+          .replace(/Heroines/i, 'Heroines/Actresses')
+          .replace(/Synergy/i, '')
+          .replace(/Frequent/i, '')
+          .trim();
+
+        return (
+          <div key={categoryKey} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+            <h3 className="text-white font-bold text-lg mb-4">{title}</h3>
+            <div className="space-y-3">
+              {collaborators.slice(0, 6).map((person: any, index: number) => {
+                // Extract name (handles all formats)
+                const personName = person.name || person.director || person.composer || person.actress || 'Unknown';
+                
+                // Extract count (handles all formats)
+                let filmCount = 0;
+                if (typeof person.count === 'number') {
+                  filmCount = person.count;
+                } else if (typeof person.films === 'number') {
+                  filmCount = person.films;
+                } else if (Array.isArray(person.films)) {
+                  filmCount = person.films.length;
+                } else {
+                  filmCount = 1;
+                }
+                
+                // Extract bonus info
+                const bonusInfo = person.chemistry || person.relation || person.note || person.boxOffice || person.style || person.memorable;
+
+                return (
+                  <div key={index} className="p-3 rounded-lg bg-black/30 border border-white/[0.06] hover:border-white/10 transition">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-white font-semibold text-sm line-clamp-1">{personName}</span>
+                      <span className="px-2 py-1 bg-[#E50914]/20 text-[#E50914] rounded-full font-bold text-xs whitespace-nowrap">
+                        {filmCount} {filmCount === 1 ? 'film' : 'films'}
+                      </span>
+                    </div>
+                    
+                    {/* Show films if array */}
+                    {Array.isArray(person.films) && person.films.length > 0 && (
+                      <div className="text-white/40 text-xs mb-1 line-clamp-2">
+                        {person.films.slice(0, 3).join(', ')}
+                        {person.films.length > 3 && '...'}
+                      </div>
+                    )}
+                    
+                    {/* Show hits if available */}
+                    {Array.isArray(person.hits) && person.hits.length > 0 && (
+                      <div className="text-white/40 text-xs mb-1">
+                        Hits: {person.hits.slice(0, 2).join(', ')}
+                      </div>
+                    )}
+                    
+                    {/* Show bonus info if available */}
+                    {bonusInfo && (
+                      <div className="text-white/30 text-xs italic line-clamp-2">
+                        {bonusInfo}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+)}
+
+    </div>
+  );
+}
+
+function AuraCard({ icon: Icon, title, value }: any) {
+  return (
+    <div className="rounded-lg p-4 bg-black/30 border border-white/[0.06]">
+      <div className="flex items-center gap-3 mb-3">
+        <Icon className="text-xl text-[#E50914]" />
+        <h3 className="text-white font-bold">{title}</h3>
+      </div>
+      <p className="text-white/60 text-sm leading-relaxed">{value}</p>
+    </div>
+  );
+}
+
+function GenreBar({ genre, rating }: any) {
+  // Handle both formats: number or object with rating
+  const ratingValue = typeof rating === 'number' ? rating : rating?.rating || 0;
+  
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-white font-semibold capitalize">{genre}</span>
+        <span className="text-[#E50914] font-bold">{ratingValue}/10</span>
+      </div>
+      <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+        <div 
+          className="h-full bg-gradient-to-r from-[#E50914] to-red-600 rounded-full transition-all duration-500"
+          style={{ width: `${ratingValue * 10}%` }} 
+        />
+      </div>
+      
+      {/* Show additional info if object format */}
+      {typeof rating === 'object' && rating?.strengths && (
+        <div className="mt-2 text-xs text-white/40">
+          {rating.strengths.slice(0, 2).join(' • ')}
+        </div>
+      )}
+      
+      {/* Show iconic films if available */}
+      {typeof rating === 'object' && rating?.iconicFilms && (
+        <div className="mt-1 text-xs text-white/30">
+          {rating.iconicFilms.slice(0, 3).join(', ')}
+        </div>
+      )}
+    </div>
+  );
+}
+
+
+
+function TransformationCard({ transformation }: any) {
+  return (
+    <div className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06] hover:border-white/[0.12] transition">
+      <h3 className="text-white font-bold text-lg mb-3">{transformation.movie}</h3>
+      
+      <div className="space-y-3 mb-4">
+        {transformation.transformation && (
+          <div>
+            <span className="text-white/40 text-xs uppercase tracking-wide">Transformation</span>
+            <p className="text-white font-semibold text-sm mt-1">{transformation.transformation}</p>
+          </div>
+        )}
+        
+        {transformation.duration && (
+          <div className="flex items-center gap-2 text-sm">
+            <span className="text-white/40">Duration:</span>
+            <span className="text-white font-semibold">{transformation.duration}</span>
+          </div>
+        )}
+        
+        {transformation.trainer && (
+          <div className="flex items-center gap-2 text-sm">
+            <span className="text-white/40">Trainer:</span>
+            <span className="text-white font-semibold">{transformation.trainer}</span>
+          </div>
+        )}
+        
+        {transformation.diet && (
+          <div>
+            <span className="text-white/40 text-xs uppercase tracking-wide">Diet</span>
+            <p className="text-white/70 text-sm mt-1">{transformation.diet}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function InfoRow({ label, value }: any) {
+  if (!value) return null;
+  return (
+    <div>
+      <div className="text-white/40 text-sm mb-1">{label}</div>
+      <div className="text-white font-semibold">{value}</div>
+    </div>
+  );
+}
+
+function MoviesTab({ movies, hero }: any) {
+  const [filter, setFilter] = useState('all');
+  const [sortBy, setSortBy] = useState('year');
+
+  const { allMovies, leadCount, cameoCount, voiceoverCount, childCount } = useMemo(() => {
+    const all = movies || [];
+    const lead = all.filter((m: any) => m.movieType?.toLowerCase() === 'lead' || m.role?.toLowerCase() === 'lead' || !m.movieType);
+    const cameo = hero?.cameoAppearances || [];
+    const voiceover = hero?.voiceOverAppearances || [];
+    const child = hero?.childArtistMovies || [];
+
+    return {
+      allMovies: all,
+      leadCount: lead.length,
+      cameoCount: cameo.length,
+      voiceoverCount: voiceover.length,
+      childCount: child.length
+    };
+  }, [movies, hero]);
+
+  const filteredMovies = useMemo(() => {
+    let filtered = [];
+    
+    if (filter === 'all') {
+      filtered = [...allMovies, ...(hero?.cameoAppearances || []), ...(hero?.voiceOverAppearances || []), ...(hero?.childArtistMovies || [])];
+    } else if (filter === 'lead') {
+      filtered = allMovies.filter((m: any) => m.movieType?.toLowerCase() === 'lead' || m.role?.toLowerCase() === 'lead' || !m.movieType);
+    } else if (filter === 'cameo') {
+      filtered = hero?.cameoAppearances || [];
+    } else if (filter === 'voiceover') {
+      filtered = hero?.voiceOverAppearances || [];
+    } else if (filter === 'child') {
+      filtered = hero?.childArtistMovies || [];
+    }
+
+    return filtered.sort((a: any, b: any) => {
+      if (sortBy === 'year') return (b.year || 0) - (a.year || 0);
+      if (sortBy === 'rating') return (b.ratings?.imdb || 0) - (a.ratings?.imdb || 0);
+      return 0;
+    });
+  }, [allMovies, hero, filter, sortBy]);
+
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
+        <div className="flex gap-2 flex-wrap">
+          <FilterButton active={filter === 'all'} onClick={() => setFilter('all')}>
+            All ({allMovies.length + cameoCount + voiceoverCount + childCount})
+          </FilterButton>
+          <FilterButton active={filter === 'lead'} onClick={() => setFilter('lead')}>
+            Lead ({leadCount})
+          </FilterButton>
+          {childCount > 0 && (
+            <FilterButton active={filter === 'child'} onClick={() => setFilter('child')}>
+              Child Artist ({childCount})
+            </FilterButton>
+          )}
+          {cameoCount > 0 && (
+            <FilterButton active={filter === 'cameo'} onClick={() => setFilter('cameo')}>
+              Cameo ({cameoCount})
+            </FilterButton>
+          )}
+          {voiceoverCount > 0 && (
+            <FilterButton active={filter === 'voiceover'} onClick={() => setFilter('voiceover')}>
+              Voice-Over ({voiceoverCount})
+            </FilterButton>
+          )}
+        </div>
+        <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}
+          className="px-4 py-2 bg-zinc-900 text-white rounded-lg border border-white/10 outline-none">
+          <option value="year">Sort by Year</option>
+          <option value="rating">Sort by Rating</option>
+        </select>
+      </div>
+
+      {filteredMovies.length === 0 ? (
+        <div className="text-white/40 text-center py-20">No movies found</div>
+      ) : (
+        <div className="grid md:grid-cols-4 lg:grid-cols-5 gap-6">
+          {filteredMovies.map((movie: any, index: number) => (
+            <MovieCard key={movie.slug || movie.id || index} movie={movie} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function MovieCard({ movie }: any) {
+  const [posterUrl, setPosterUrl] = useState<string>('');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadPoster = async () => {
+      setLoading(true);
+      
+      if (typeof movie.poster === 'string') {
+        if (movie.poster.startsWith('/')) {
+          setPosterUrl(`${TMDB_IMAGE_BASE}${movie.poster}`);
+        } else if (movie.poster.startsWith('http')) {
+          setPosterUrl(movie.poster);
+        } else {
+          setPosterUrl('/images/no-poster.png');
+        }
+        setLoading(false);
+        return;
+      }
+
+      if (movie.poster?.source === 'local' && movie.tmdbId && movie.tmdbId > 0) {
+        try {
+          const res = await fetch(`https://api.themoviedb.org/3/movie/${movie.tmdbId}?api_key=${TMDB_API_KEY}`);
+          const data = await res.json();
+          if (data.poster_path) {
+            setPosterUrl(`${TMDB_IMAGE_BASE}${data.poster_path}`);
+          } else {
+            setPosterUrl('/images/no-poster.png');
+          }
+        } catch {
+          setPosterUrl('/images/no-poster.png');
+        }
+        setLoading(false);
+        return;
+      }
+
+      if (movie.poster?.url) {
+        if (movie.poster.url.startsWith('/')) {
+          setPosterUrl(`${TMDB_IMAGE_BASE}${movie.poster.url}`);
+        } else {
+          setPosterUrl(movie.poster.url);
+        }
+        setLoading(false);
+        return;
+      }
+
+      if (movie.tmdbId && movie.tmdbId > 0) {
+        try {
+          const res = await fetch(`https://api.themoviedb.org/3/movie/${movie.tmdbId}?api_key=${TMDB_API_KEY}`);
+          const data = await res.json();
+          if (data.poster_path) {
+            setPosterUrl(`${TMDB_IMAGE_BASE}${data.poster_path}`);
+          } else {
+            setPosterUrl('/images/no-poster.png');
+          }
+        } catch {
+          setPosterUrl('/images/no-poster.png');
+        }
+        setLoading(false);
+        return;
+      }
+
+      setPosterUrl('/images/no-poster.png');
+      setLoading(false);
+    };
+
+    loadPoster();
+  }, [movie.poster, movie.tmdbId]);
+
+  return (
+    <Link href={`/movie/${movie.slug}`} className="group block">
+      <div className="relative rounded-lg overflow-hidden mb-3 shadow-xl border border-white/[0.05] hover:border-white/20 transition-all">
+        {loading ? (
+          <div className="w-full h-[320px] bg-zinc-900 flex items-center justify-center">
+            <FaSpinner className="text-white animate-spin text-2xl" />
+          </div>
+        ) : (
+          <img 
+            src={posterUrl} 
+            alt={movie.title}
+            className="w-full h-[320px] object-cover group-hover:scale-105 transition-transform duration-500"
+            onError={(e) => {
+              e.currentTarget.src = '/images/no-poster.png';
+            }}
+          />
+        )}
+        
+        <div className="absolute top-2 left-2 px-2 py-1 rounded-md bg-black/80 text-white text-xs font-bold">
+          {movie.year}
+        </div>
+
+        {movie.ratings?.imdb && (
+          <div className="absolute top-2 right-2 px-2 py-1 rounded-md bg-yellow-500/90 text-black text-xs font-bold flex items-center gap-1">
+            <FaStar className="text-xs" />
+            {movie.ratings.imdb}
+          </div>
+        )}
+      </div>
+
+      <h3 className="text-white font-bold text-sm line-clamp-2 mb-1 group-hover:text-[#E50914] transition">
+        {movie.title}
+      </h3>
+      
+      {movie.role && <span className="text-white/40 text-xs">{movie.role}</span>}
+    </Link>
+  );
+}
+
+function FilterButton({ active, onClick, children }: any) {
+  return (
+    <button onClick={onClick}
+      className={`px-4 py-2 rounded-lg font-semibold transition ${
+        active ? 'bg-[#E50914] text-white' : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10'
+      }`}>
+      {children}
+    </button>
+  );
+}
+
+function UpcomingTab({ upcoming, hero }: { upcoming?: any[]; hero?: any }) {
+  // Check multiple possible data sources
+  const upcomingData = upcoming || hero?.upcomingProjects || hero?.upcoming || [];
+  
+  if (!upcomingData || upcomingData.length === 0) {
+    return (
+      <div className="text-center py-20">
+        <p className="text-white/40">No upcoming projects announced yet</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6">
+      {upcomingData.map((project: any, index: number) => (
+        <div key={index} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06] hover:border-white/10 transition">
+          <div className="flex flex-col md:flex-row gap-6">
+            {/* Poster */}
+            {project.poster && (
+              <div className="w-full md:w-48 flex-shrink-0">
+                <img
+                  src={getImageUrl(project.poster)}
+                  alt={project.title || 'Upcoming Project'}
+                  className="w-full h-72 md:h-64 object-cover rounded-lg"
+                  onError={(e) => { (e.target as HTMLImageElement).src = DEFAULT_POSTER; }}
+                />
+              </div>
+            )}
+            
+            {/* Details */}
+            <div className="flex-1 space-y-3">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="text-white font-bold text-2xl mb-1">
+                    {project.title || project.id || 'Untitled Project'}
+                  </h3>
+                  {project.status && (
+                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold ${
+                      project.status === 'Production' || project.status === 'Filming' 
+                        ? 'bg-green-500/20 text-green-400' 
+                        : project.status === 'Pre-Production'
+                          ? 'bg-yellow-500/20 text-yellow-400'
+                          : 'bg-blue-500/20 text-blue-400'
+                    }`}>
+                      {project.status}
+                    </span>
+                  )}
+                </div>
+                {project.year && (
+                  <span className="px-4 py-2 bg-[#E50914]/20 text-[#E50914] rounded-lg font-bold">
+                    {project.year}
+                  </span>
+                )}
+              </div>
+              
+              {project.genre && (
+                <p className="text-white/60 text-sm">
+                  <span className="font-semibold">Genre:</span> {project.genre}
+                </p>
+              )}
+              
+              {project.director && (
+                <p className="text-white/80">
+                  <span className="text-white/60">Director:</span> <span className="font-semibold">{project.director}</span>
+                </p>
+              )}
+              
+              {project.producer && (
+                <p className="text-white/80">
+                  <span className="text-white/60">Producer:</span> {project.producer}
+                </p>
+              )}
+              
+              {project.productionHouse && (
+                <p className="text-white/80">
+                  <span className="text-white/60">Production:</span> {project.productionHouse}
+                </p>
+              )}
+              
+              {project.language && (
+                <p className="text-white/80">
+                  <span className="text-white/60">Language:</span> {project.language}
+                  {project.plannedRelease && ` | ${project.plannedRelease}`}
+                </p>
+              )}
+              
+              {project.budget && (
+                <p className="text-white/80">
+                  <span className="text-white/60">Budget:</span> <span className="text-[#E50914] font-bold">{project.budget}</span>
+                </p>
+              )}
+              
+              {project.note && (
+                <div className="mt-3 p-4 bg-black/30 rounded-lg border border-white/[0.06]">
+                  <p className="text-white/80 text-sm">{project.note}</p>
+                </div>
+              )}
+              
+              {project.announcement && (
+                <p className="text-white/60 text-xs mt-2">
+                  📢 {project.announcement}
+                </p>
+              )}
+              
+              {project.expectedRelease && (
+                <p className="text-white/60 text-xs">
+                  📅 Expected: {project.expectedRelease}
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+
+// ✅ NEW: Lifestyle Tab (Cars + Properties)
+function LifestyleTab({ hero }: { hero: any }) {
+  if (!hero.lifestyle) {
+    return (
+      <div className="text-center py-20">
+        <p className="text-white/40">Lifestyle data not available</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-8">
+      {/* Car Collection */}
+      {hero.lifestyle.carCollection && hero.lifestyle.carCollection.length > 0 && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Car Collection</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {hero.lifestyle.carCollection.map((car: any, index: number) => (
+              <div key={index} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06] hover:border-white/10 transition">
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 className="text-white font-bold text-lg">{car.brand}</h3>
+                    <p className="text-white/60 text-sm">{car.model}</p>
+                  </div>
+                  <span className="px-3 py-1 bg-[#E50914]/20 text-[#E50914] rounded-full text-xs font-bold">
+                    {car.year}
+                  </span>
+                </div>
+                <div className="space-y-2 text-sm">
+                  {car.color && <p className="text-white/60">Color: <span className="text-white">{car.color}</span></p>}
+                  {car.estimatedValue && <p className="text-white/60">Value: <span className="text-[#E50914] font-bold">{car.estimatedValue}</span></p>}
+                  {car.source && <p className="text-white/40 text-xs mt-2">Source: {car.source}</p>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Properties */}
+      {hero.lifestyle.properties && hero.lifestyle.properties.length > 0 && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Properties</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {hero.lifestyle.properties.map((property: any, index: number) => (
+              <div key={index} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 className="text-white font-bold text-lg">{property.type}</h3>
+                    <p className="text-white/60 text-sm">{property.location}</p>
+                  </div>
+                  {property.acquired && (
+                    <span className="px-3 py-1 bg-white/10 text-white rounded-full text-xs">
+                      {property.acquired}
+                    </span>
+                  )}
+                </div>
+                <div className="space-y-2 text-sm">
+                  {property.size && <p className="text-white/60">Size: <span className="text-white">{property.size}</span></p>}
+                  {property.estimatedValue && <p className="text-white/60">Value: <span className="text-[#E50914] font-bold">{property.estimatedValue}</span></p>}
+                  {property.features && property.features.length > 0 && (
+                    <div className="mt-3">
+                      <p className="text-white/40 text-xs mb-1">Features:</p>
+                      <div className="flex flex-wrap gap-2">
+                        {property.features.map((feature: string, i: number) => (
+                          <span key={i} className="px-2 py-1 bg-white/5 text-white/60 rounded text-xs">
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Fashion Style */}
+      {hero.lifestyle.fashion && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Fashion & Style</h2>
+          <div className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+            {hero.lifestyle.fashion.style && (
+              <p className="text-white/80 mb-4">{hero.lifestyle.fashion.style}</p>
+            )}
+            <div className="grid md:grid-cols-2 gap-4">
+              {hero.lifestyle.fashion.favoriteDesigners && hero.lifestyle.fashion.favoriteDesigners.length > 0 && (
+                <div>
+                  <h4 className="text-white font-semibold mb-2">Favorite Designers</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {hero.lifestyle.fashion.favoriteDesigners.map((designer: string, i: number) => (
+                      <span key={i} className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">
+                        {designer}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {hero.lifestyle.fashion.watches && hero.lifestyle.fashion.watches.length > 0 && (
+                <div>
+                  <h4 className="text-white font-semibold mb-2">Watch Collection</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {hero.lifestyle.fashion.watches.map((watch: string, i: number) => (
+                      <span key={i} className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">
+                        {watch}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+// ====================================================================
+// 🎯 PART 3/3 - REMAINING TAB COMPONENTS
+// ====================================================================
+
+// ✅ NEW: Philanthropy Tab
+function PhilanthropyTab({ hero }: { hero: any }) {
+  const philanthropyData = hero.philanthropy;
+
+  if (!philanthropyData) {
+    return (
+      <div className="text-center py-20">
+        <p className="text-white/40">Philanthropy data not available</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-8">
+      {/* Foundations */}
+      {philanthropyData.foundations && philanthropyData.foundations.length > 0 && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Foundations & Organizations</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {philanthropyData.foundations.map((foundation: any, index: number) => (
+              <div key={index} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+                <h3 className="text-white font-bold text-xl mb-2">
+                  {typeof foundation === 'string' ? foundation : foundation.name}
+                </h3>
+                {typeof foundation === 'object' && foundation.established && (
+                  <p className="text-white/60 text-sm mb-3">Established: {foundation.established}</p>
+                )}
+                {typeof foundation === 'object' && foundation.focus && (
+                  <p className="text-white/80 mb-3">{foundation.focus}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Single foundation format (Allu Arjun) */}
+      {philanthropyData.foundationName && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Foundation</h2>
+          <div className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+            <h3 className="text-white font-bold text-xl mb-2">{philanthropyData.foundationName}</h3>
+            {philanthropyData.establishedYear && (
+              <p className="text-white/60 text-sm mb-3">Established: {philanthropyData.establishedYear}</p>
+            )}
+            {philanthropyData.focusAreas && philanthropyData.focusAreas.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-3">
+                {philanthropyData.focusAreas.map((area: string, i: number) => (
+                  <span key={i} className="px-3 py-1 bg-[#E50914]/20 text-[#E50914] rounded-full text-sm">
+                    {area}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Organizations (Jr NTR format) */}
+      {philanthropyData.organizations && philanthropyData.organizations.length > 0 && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Organizations</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {philanthropyData.organizations.map((org: any, index: number) => (
+              <div key={index} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+                <h3 className="text-white font-bold text-lg">
+                  {typeof org === 'string' ? org : org.name}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Initiatives - Handle both STRING and OBJECT formats */}
+      {philanthropyData.initiatives && philanthropyData.initiatives.length > 0 && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">
+            {philanthropyData.initiatives.some((item: any) => typeof item === 'object' && item.name && item.location) 
+              ? 'Adopted Villages & Initiatives' 
+              : 'Charitable Initiatives'}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {philanthropyData.initiatives.map((initiative: any, index: number) => {
+              // Handle OBJECT format (Mahesh Babu's adopted villages)
+              if (typeof initiative === 'object' && initiative.name) {
+                return (
+                  <div key={index} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h3 className="text-white font-bold text-lg">{initiative.name}</h3>
+                        {initiative.location && (
+                          <p className="text-white/60 text-sm mt-1">📍 {initiative.location}</p>
+                        )}
+                      </div>
+                      {initiative.year && (
+                        <span className="px-3 py-1 bg-[#E50914]/20 text-[#E50914] rounded-full text-xs font-bold">
+                          {initiative.year}
+                        </span>
+                      )}
+                    </div>
+                    
+                    {initiative.description && (
+                      <p className="text-white/80 text-sm mb-3">{initiative.description}</p>
+                    )}
+                    
+                    {initiative.investment && (
+                      <div className="mb-3">
+                        <span className="text-white/60 text-xs">Investment: </span>
+                        <span className="text-[#E50914] font-bold">{initiative.investment}</span>
+                      </div>
+                    )}
+                    
+                    {initiative.activities && Array.isArray(initiative.activities) && (
+                      <div className="mb-3">
+                        <p className="text-white/60 text-xs mb-2">Activities:</p>
+                        <div className="space-y-1">
+                          {initiative.activities.map((activity: string, i: number) => (
+                            <div key={i} className="text-white/70 text-xs flex items-start gap-2">
+                              <span className="text-[#E50914]">•</span>
+                              <span>{activity}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    
+                    {initiative.impact && (
+                      <div className="mt-3 p-3 bg-black/30 rounded-lg border border-white/[0.06]">
+                        <p className="text-white/60 text-xs mb-1">Impact:</p>
+                        <p className="text-white/80 text-sm">{initiative.impact}</p>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+              
+              // Handle STRING format (simple initiatives)
+              return (
+                <div key={index} className="rounded-xl p-4 bg-zinc-900/30 border border-white/[0.06]">
+                  <p className="text-white/80">{initiative}</p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {/* Adopted Villages (separate field) */}
+      {philanthropyData.adoptedVillages && philanthropyData.adoptedVillages.length > 0 && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Adopted Villages</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {philanthropyData.adoptedVillages.map((village: any, index: number) => (
+              <div key={index} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+                <h3 className="text-white font-bold text-lg mb-2">
+                  {typeof village === 'string' ? village : village.name}
+                </h3>
+                {typeof village === 'object' && village.year && (
+                  <p className="text-white/60 text-sm mb-2">Since: {village.year}</p>
+                )}
+                {typeof village === 'object' && village.impact && (
+                  <p className="text-white/80 text-sm">{village.impact}</p>
+                )}
+                {typeof village === 'object' && village.investment && (
+                  <p className="text-[#E50914] font-bold mt-2">{village.investment}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Total Contribution */}
+      {philanthropyData.totalEstimatedContribution && (
+        <section>
+          <div className="rounded-xl p-6 bg-gradient-to-r from-[#E50914]/20 to-red-600/20 border border-[#E50914]/30">
+            <h3 className="text-white font-bold text-xl mb-2">Total Estimated Contribution</h3>
+            <p className="text-[#E50914] font-black text-3xl">{philanthropyData.totalEstimatedContribution}</p>
+          </div>
+        </section>
+      )}
+
+      {/* Recognitions */}
+      {philanthropyData.recognitions && philanthropyData.recognitions.length > 0 && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Recognitions</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {philanthropyData.recognitions.map((recognition: string, index: number) => (
+              <div key={index} className="rounded-xl p-4 bg-zinc-900/30 border border-white/[0.06]">
+                <p className="text-white/80">🏆 {recognition}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+
+// ✅ NEW: Brands Tab
+function BrandsTab({ hero }: any) {
+  const brands = hero.brandEndorsements;
+  
+  if (!brands || brands.length === 0) {
+    return <div className="text-white/40 text-center py-20">No brand endorsements yet</div>;
+  }
+
+  return (
+    <div>
+      <div className="flex items-center gap-3 mb-6">
+        <FaHashtag className="text-3xl text-[#E50914]" />
+        <h2 className="text-3xl font-black text-white">Brand Endorsements ({brands.length})</h2>
+      </div>
+      
+      <div className="grid md:grid-cols-3 gap-6">
+        {brands.map((brand: any, index: number) => (
+          <div key={index} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06] hover:border-white/[0.12] transition">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full bg-[#E50914] flex items-center justify-center flex-shrink-0">
+                <FaHashtag className="text-white text-xl" />
+              </div>
+              <h3 className="text-white font-bold text-lg">{brand.brand}</h3>
+            </div>
+            {brand.category && (
+              <p className="text-white/40 text-sm mb-2 capitalize">{brand.category}</p>
+            )}
+            {brand.duration && (
+              <p className="text-white/60 text-sm mb-2">{brand.duration}</p>
+            )}
+            {brand.estimatedDeal && (
+              <p className="text-[#E50914] font-bold mt-3">{brand.estimatedDeal}</p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function InfoTab({ hero }: any) {
+  return (
+    <div className="grid md:grid-cols-2 gap-8">
+      <section className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+        <h3 className="text-2xl font-black text-white mb-6">Personal Details</h3>
+        <div className="space-y-4">
+          <InfoRow label="Full Name" value={hero.personalInfo?.fullName} />
+          <InfoRow label="Birth Date" value={hero.personalInfo?.birthDate && new Date(hero.personalInfo.birthDate).toLocaleDateString()} />
+          <InfoRow label="Birth Place" value={hero.personalInfo?.birthPlace} />
+          <InfoRow label="Current Residence" value={hero.personalInfo?.currentResidence} />
+          <InfoRow label="Height" value={hero.personalInfo?.height} />
+          <InfoRow label="Zodiac Sign" value={hero.personalInfo?.zodiacSign} />
+          <InfoRow label="Blood Group" value={hero.personalInfo?.bloodGroup} />
+          <InfoRow label="Marital Status" value={hero.personalInfo?.maritalStatus} />
+          <InfoRow label="Education" value={hero.personalInfo?.education} />
+        </div>
+      </section>
+
+      {hero.personalInfo?.family && (
+        <section className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+          <h3 className="text-2xl font-black text-white mb-6">Family</h3>
+          <div className="space-y-4">
+            <InfoRow label="Father" value={hero.personalInfo.family.father} />
+            <InfoRow label="Mother" value={hero.personalInfo.family.mother} />
+            <InfoRow label="Spouse" value={hero.personalInfo.family.spouse} />
+            <InfoRow label="Siblings" value={hero.personalInfo.family.siblings?.join(', ')} />
+            <InfoRow label="Children" value={hero.personalInfo.family.children?.join(', ')} />
+          </div>
+        </section>
+      )}
+
+      {hero.socialMedia && (
+        <section className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+          <h3 className="text-2xl font-black text-white mb-6">Social Media</h3>
+          <div className="space-y-3">
+            {hero.socialMedia.instagram && (
+              <a href={hero.socialMedia.instagram.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-lg bg-white/5 hover:bg-white/10 transition">
+                <div className="flex items-center gap-3">
+                  <FaInstagram className="text-2xl text-pink-500" />
+                  <div>
+                    <div className="text-white font-bold">Instagram</div>
+                    <div className="text-white/40 text-sm">{hero.socialMedia.instagram.followers.toLocaleString()} followers</div>
+                  </div>
+                </div>
+                <FaChevronRight className="text-white/40" />
+              </a>
+            )}
+            {hero.socialMedia.twitter && (
+              <a href={hero.socialMedia.twitter.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-lg bg-white/5 hover:bg-white/10 transition">
+                <div className="flex items-center gap-3">
+                  <FaTwitter className="text-2xl text-blue-400" />
+                  <div>
+                    <div className="text-white font-bold">Twitter</div>
+                    <div className="text-white/40 text-sm">{hero.socialMedia.twitter.followers.toLocaleString()} followers</div>
+                  </div>
+                </div>
+                <FaChevronRight className="text-white/40" />
+              </a>
+            )}
+            {hero.socialMedia.facebook && (
+              <a href={hero.socialMedia.facebook.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-lg bg-white/5 hover:bg-white/10 transition">
+                <div className="flex items-center gap-3">
+                  <FaFacebook className="text-2xl text-blue-600" />
+                  <div>
+                    <div className="text-white font-bold">Facebook</div>
+                    <div className="text-white/40 text-sm">{hero.socialMedia.facebook.followers.toLocaleString()} followers</div>
+                  </div>
+                </div>
+                <FaChevronRight className="text-white/40" />
+              </a>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Net Worth Section */}
+      {(hero.netWorth || hero.financials) && (
+        <section className="rounded-xl p-6 bg-gradient-to-br from-[#E50914]/10 to-transparent border border-[#E50914]/20">
+          <h3 className="text-2xl font-black text-white mb-6">Financial Highlights</h3>
+          <div className="space-y-4">
+            {hero.netWorth?.estimatedValue && (
+              <div>
+                <div className="text-white/40 text-sm mb-1">Net Worth</div>
+                <div className="text-[#E50914] font-bold text-2xl">{hero.netWorth.estimatedValue}</div>
+                {hero.netWorth.usdEquivalent && (
+                  <div className="text-white/40 text-xs mt-1">{hero.netWorth.usdEquivalent}</div>
+                )}
+              </div>
+            )}
+            {hero.financials?.perFilmFee && (
+              <div>
+                <div className="text-white/40 text-sm mb-1">Per Film Fee</div>
+                <div className="text-white font-bold text-xl">{hero.financials.perFilmFee}</div>
+              </div>
+            )}
+            {hero.netWorth?.ranking && (
+              <div>
+                <div className="text-white/40 text-sm mb-1">Industry Ranking</div>
+                <div className="text-white font-semibold">{hero.netWorth.ranking}</div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+function CareerTab({ hero }: { hero: any }) {
+  if (!hero.careerHighlights && !hero.careerMilestones && !hero.collaborations) {
+    return (
+      <div className="text-center py-20">
+        <p className="text-white/40">Career information not available</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-8">
+      {/* Career Highlights */}
+      {hero.careerHighlights && hero.careerHighlights.length > 0 && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Career Highlights</h2>
+          <div className="space-y-4">
+            {hero.careerHighlights.map((highlight: string, index: number) => (
+              <div key={index} className="rounded-xl p-5 bg-zinc-900/30 border border-white/[0.06] hover:border-white/10 transition">
+                <p className="text-white/80 leading-relaxed">{highlight}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Career Milestones */}
+      {hero.careerMilestones && hero.careerMilestones.length > 0 && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Career Milestones</h2>
+          <div className="relative border-l-2 border-[#E50914]/30 ml-4 space-y-8">
+            {hero.careerMilestones.map((milestone: any, index: number) => (
+              <div key={index} className="relative pl-8">
+                {/* Timeline dot */}
+                <div className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-[#E50914] border-4 border-black" />
+                
+                <div className="rounded-xl p-5 bg-zinc-900/30 border border-white/[0.06]">
+                  {milestone.year && (
+                    <span className="inline-block px-3 py-1 bg-[#E50914]/20 text-[#E50914] rounded-full text-xs font-bold mb-3">
+                      {milestone.year}
+                    </span>
+                  )}
+                  
+                  <h3 className="text-white font-bold text-lg mb-2">{milestone.achievement}</h3>
+                  
+                  {milestone.description && (
+                    <p className="text-white/80 text-sm mb-3">{milestone.description}</p>
+                  )}
+                  
+                  {milestone.significance && (
+                    <div className="mt-3 p-3 bg-black/30 rounded-lg border border-white/[0.06]">
+                      <p className="text-white/60 text-xs mb-1">Significance:</p>
+                      <p className="text-white/80 text-sm">{milestone.significance}</p>
+                    </div>
+                  )}
+                  
+                  {milestone.films && Array.isArray(milestone.films) && (
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {milestone.films.map((film: string, i: number) => (
+                        <span key={i} className="px-2 py-1 bg-white/10 text-white/70 rounded text-xs">
+                          {film}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Collaborations - FIXED TO HANDLE OBJECT FORMAT */}
+      {hero.collaborations && typeof hero.collaborations === 'object' && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Notable Collaborations</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {Object.entries(hero.collaborations).map(([category, people]: any) => {
+              // Skip if not an array or is empty
+              if (!Array.isArray(people) || people.length === 0) return null;
+              
+              // Format category name
+              const categoryName = category
+                .replace(/([A-Z])/g, ' $1')
+                .replace(/^./, str => str.toUpperCase())
+                .trim();
+              
+              return (
+                <div key={category} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+                  <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
+                    {category === 'directors' && '🎬'}
+                    {category === 'musicDirectors' && '🎵'}
+                    {category === 'actresses' && '👩'}
+                    {category === 'actors' && '👨'}
+                    {categoryName}
+                  </h3>
+                  <div className="space-y-2">
+                    {people.slice(0, 10).map((person: any, i: number) => {
+  // Extract name - handle ALL possible field names
+  const name = typeof person === 'string' 
+    ? person 
+    : person.name || person.director || person.composer || person.actress || person.actor || 'Unknown';
+  
+  const count = typeof person === 'object' ? person.count || person.films?.length || 1 : 1;
+  
+  return (
+    <div key={i} className="flex items-center justify-between p-2 rounded-lg bg-black/30 hover:bg-black/40 transition">
+      <span className="text-white/80 text-sm">{name}</span>
+      <span className="px-2 py-0.5 bg-[#E50914]/20 text-[#E50914] rounded-full text-xs font-bold">
+        {count}
+      </span>
+    </div>
+  );
+})}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {/* Industry Recognition */}
+      {hero.industryRecognition && hero.industryRecognition.length > 0 && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Industry Recognition</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {hero.industryRecognition.map((recognition: string, index: number) => (
+              <div key={index} className="rounded-xl p-4 bg-zinc-900/30 border border-white/[0.06]">
+                <p className="text-white/80">🏆 {recognition}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Box Office Stats */}
+      {hero.boxOfficeStats && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Box Office Performance</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {hero.boxOfficeStats.totalGross && (
+              <div className="rounded-xl p-6 bg-gradient-to-br from-[#E50914]/20 to-red-600/20 border border-[#E50914]/30">
+                <p className="text-white/60 text-sm mb-2">Total Gross</p>
+                <p className="text-white font-black text-3xl">{hero.boxOfficeStats.totalGross}</p>
+              </div>
+            )}
+            {hero.boxOfficeStats.averagePerFilm && (
+              <div className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+                <p className="text-white/60 text-sm mb-2">Average Per Film</p>
+                <p className="text-white font-black text-2xl">{hero.boxOfficeStats.averagePerFilm}</p>
+              </div>
+            )}
+            {hero.boxOfficeStats.highestGrosser && (
+              <div className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+                <p className="text-white/60 text-sm mb-2">Highest Grosser</p>
+                <p className="text-white font-bold text-lg">{hero.boxOfficeStats.highestGrosser.title}</p>
+                <p className="text-[#E50914] font-bold">{hero.boxOfficeStats.highestGrosser.gross}</p>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Debut Information */}
+      {hero.personalInfo?.debut && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Career Debut</h2>
+          <div className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06]">
+            <h3 className="text-white font-bold text-xl mb-2">{hero.personalInfo.debut.film}</h3>
+            <div className="flex items-center gap-4 text-white/60 text-sm mb-3">
+              {hero.personalInfo.debut.year && <span>📅 {hero.personalInfo.debut.year}</span>}
+              {hero.personalInfo.debut.role && <span>🎭 {hero.personalInfo.debut.role}</span>}
+            </div>
+            {hero.personalInfo.debut.director && (
+              <p className="text-white/80">
+                <span className="text-white/60">Directed by:</span> {hero.personalInfo.debut.director}
+              </p>
+            )}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+
+function AwardsTab({ awards }: any) {
+  if (!awards || awards.length === 0) {
+    return (
+      <div className="text-center py-20">
+        <FaTrophy className="text-6xl text-[#E50914] mx-auto mb-4" />
+        <h3 className="text-2xl font-bold text-white mb-2">No Awards Yet</h3>
+        <p className="text-white/40">Award details coming soon!</p>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <div className="flex items-center gap-3 mb-6">
+        <FaTrophy className="text-3xl text-[#E50914]" />
+        <h2 className="text-3xl font-black text-white">Awards & Recognition ({awards.length})</h2>
+      </div>
+      
+      <div className="space-y-4">
+        {awards.map((award: any, index: number) => (
+          <div key={index} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06] hover:border-white/[0.12] transition">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-[#E50914] flex items-center justify-center flex-shrink-0">
+                <FaTrophy className="text-white text-xl" />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-white font-bold text-lg">{award.award}</span>
+                  <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                    award.status === 'Won' || award.won === true
+                      ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
+                      : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
+                  }`}>
+                    {award.status || (award.won ? 'Won' : 'Nominated')}
+                  </span>
+                </div>
+                <div className="text-white/60 text-sm mb-2">
+                  <span className="font-semibold">{award.category}</span>
+                  {award.movie && <> • {award.movie}</>}
+                  {award.year && <> ({award.year})</>}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function NewsTab({ news }: any) {
+  if (!news || news.length === 0) {
+    return <div className="text-white/40 text-center py-20">No recent news</div>;
+  }
+
+  return (
+    <div className="space-y-6">
+      {news.map((item: any, index: number) => (
+        <div key={index} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06] hover:border-white/[0.12] transition">
+          <div className="flex items-start gap-4">
+            {item.image && (
+              <img src={item.image} alt={item.title} className="w-32 h-32 rounded-lg object-cover flex-shrink-0" />
+            )}
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="px-3 py-1 bg-[#E50914]/20 text-[#E50914] rounded-full text-xs font-bold uppercase">
+                  {item.category || 'News'}
+                </span>
+                <span className="text-white/40 text-sm">{new Date(item.date).toLocaleDateString()}</span>
+              </div>
+              <h3 className="text-white font-bold text-xl mb-3">{item.title}</h3>
+              <p className="text-white/60 text-sm leading-relaxed mb-4">{item.content || item.summary}</p>
+              {item.source && (
+                <a href={item.source} target="_blank" rel="noopener noreferrer" className="text-[#E50914] text-sm font-semibold hover:underline flex items-center gap-2">
+                  Read More <FaChevronRight className="text-xs" />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function TriviaTab({ trivia, quotes }: any) {
+  return (
+    <div className="space-y-8">
+      {quotes && quotes.length > 0 && (
+        <section>
+          <div className="flex items-center gap-3 mb-6">
+            <FaQuoteLeft className="text-3xl text-[#E50914]" />
+            <h2 className="text-3xl font-black text-white">Inspirational Quotes</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {quotes.map((quote: any, index: number) => (
+              <div key={index} className="rounded-xl p-6 bg-gradient-to-br from-[#E50914]/10 to-transparent border border-[#E50914]/20">
+                <FaQuoteLeft className="text-2xl text-[#E50914] mb-4" />
+                <p className="text-white text-lg leading-relaxed italic mb-4">"{quote.quote}"</p>
+                <p className="text-white/40 text-sm">— {quote.context}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {trivia && trivia.length > 0 && (
+        <section>
+          <h2 className="text-3xl font-black text-white mb-6">Did You Know?</h2>
+          <div className="space-y-4">
+            {trivia.map((item: any, index: number) => (
+              <div key={index} className="rounded-xl p-6 bg-zinc-900/30 border border-white/[0.06] hover:border-white/[0.12] transition">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-[#E50914] flex items-center justify-center flex-shrink-0 font-bold text-white">
+                    {index + 1}
+                  </div>
+                  <p className="text-white/70 leading-relaxed flex-1">{item}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+function GalleryTab({ images }: any) {
+  if (!images || images.length === 0) {
+    return <div className="text-white/40 text-center py-20">No gallery images yet</div>;
+  }
+
+  return (
+    <div className="grid md:grid-cols-4 gap-4">
+      {images.map((image: any, index: number) => (
+        <div key={index} className="aspect-square rounded-lg overflow-hidden group cursor-pointer border border-white/[0.05] hover:border-white/20 transition">
+          <img src={getImageUrl(image)} alt={image.caption || `Gallery ${index + 1}`}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+        </div>
+      ))}
+    </div>
+  );
+}

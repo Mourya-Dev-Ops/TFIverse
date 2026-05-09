@@ -1,0 +1,1939 @@
+'use client';
+
+import { useEffect, useMemo, useState, useRef } from 'react';
+import Link from 'next/link';
+import { useParams, useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
+import { buildImageUrl } from '@/lib/image-utils';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import {
+  FaInstagram,
+  FaTwitter,
+  FaFacebook,
+  FaStar,
+  FaAward,
+  FaHeart,
+  FaRegHeart,
+  FaSpinner,
+  FaArrowLeft,
+  FaTrophy,
+  FaGamepad,
+  FaUser,
+  FaLightbulb,
+  FaCar,
+  FaHandHoldingHeart,
+  FaTheaterMasks,
+  FaUsers,
+  FaExclamationTriangle,
+  FaGlobe,
+  FaHashtag,
+  FaFilm,
+  FaQuoteLeft,
+  FaNewspaper,
+  FaMicrophone,
+  FaDumbbell,
+  FaPalette,
+  FaChartLine,
+  FaYoutube,
+  FaPlay,
+  FaCalendarAlt,
+  FaMapMarkerAlt,
+  FaMoneyBillWave,
+  FaTv,
+  FaChevronRight,
+  FaChild,
+} from 'react-icons/fa';
+
+import { toggleHeroFollow, getHeroFollowStatus, getHeroFollowerCount } from '@/app/actions/heroes';
+
+const TMDB_API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY || '4e532670adbc327a53938993187e8fba';
+const B2_PUBLIC_URL = process.env.NEXT_PUBLIC_B2_URL || '';
+const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
+const DEFAULT_POSTER = '/images/no-poster.png';
+
+// ============================================
+// MAIN COMPONENT
+// ============================================
+
+export default function HeroDetailClient({ heroData: initialHeroData }: { heroData: any }) {
+  const { data: session } = useSession();
+  const router = useRouter();
+
+  const [heroData] = useState<any>(initialHeroData);
+  const [isFollowing, setIsFollowing] = useState(false);
+  const [followerCount, setFollowerCount] = useState(0);
+  const [activeTab, setActiveTab] = useState('overview');
+  const [mounted, setMounted] = useState(false); // ⬅️ ADD THIS
+
+  // ⬅️ ADD THIS - Wait for client mount
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const loadFollowData = async () => {
+      if (!heroData || !mounted) return; // ⬅️ Check mounted
+
+      try {
+        if (session?.user) {
+          const followStatus = await getHeroFollowStatus(heroData.slug);
+          setIsFollowing(followStatus);
+        }
+
+        const count = await getHeroFollowerCount(heroData.slug);
+        setFollowerCount(count);
+      } catch (error) {
+        console.error('Error loading follow data:', error);
+      }
+    };
+
+    loadFollowData();
+  }, [heroData, session, mounted]); // ⬅️ Add mounted dependency
+
+  const handleFollow = async () => {
+    if (!session?.user) {
+      router.push('/auth/signin');
+      return;
+    }
+
+    try {
+      await toggleHeroFollow(heroData.slug, heroData.name);
+      setIsFollowing(!isFollowing);
+      setFollowerCount((prev) => (isFollowing ? prev - 1 : prev + 1));
+    } catch (error) {
+      console.error('Error toggling follow:', error);
+    }
+  };
+
+  if (!heroData) {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <p className="text-white text-lg">Hero not found</p>
+      </div>
+    );
+  }
+
+  // ⬅️ SAME CONTENT FOR BOTH SERVER & CLIENT
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-black">
+      {/* NAVBAR */}
+      <Navbar session={session} router={router} />
+
+      {/* BANNER */}
+      <HeroBanner hero={heroData} isFollowing={isFollowing} followerCount={followerCount} onFollow={handleFollow} />
+
+      {/* TAB NAVIGATION */}
+      <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} hero={heroData} />
+
+      {/* TAB CONTENT */}
+      <div className="px-4 sm:px-6 md:px-12 py-8 md:py-12">
+        <div className="max-w-7xl mx-auto">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+            >
+              {activeTab === 'overview' && <OverviewTab hero={heroData} />}
+              {activeTab === 'info' && <InfoTab hero={heroData} />}
+              {activeTab === 'movies' && <MoviesTab hero={heroData} />}
+              {activeTab === 'upcoming' && <UpcomingTab hero={heroData} />}
+              {activeTab === 'lifestyle' && <LifestyleTab hero={heroData} />}
+              {activeTab === 'philanthropy' && <PhilanthropyTab hero={heroData} />}
+              {activeTab === 'brands' && <BrandsTab hero={heroData} />}
+              {activeTab === 'career' && <CareerTab hero={heroData} />}
+              {activeTab === 'awards' && <AwardsTab hero={heroData} />}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
+// NAVBAR COMPONENT
+// ============================================
+
+function Navbar({ session, router }: any) {
+  return (
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="sticky top-0 z-50 bg-black/95 backdrop-blur-xl border-b border-white/10"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-3 md:py-4 flex items-center justify-between gap-4">
+        {/* Left Section */}
+        <div className="flex items-center gap-2 md:gap-4">
+          <motion.button
+            onClick={() => router.back()}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="p-2 hover:bg-white/10 rounded-lg transition"
+          >
+            <FaArrowLeft size={18} className="text-white" />
+          </motion.button>
+          <Link href="/heroes" className="text-base md:text-lg font-black hidden sm:block text-white">
+            🎬 Heroes
+          </Link>
+        </div>
+
+        {/* Right Section */}
+        <div className="flex items-center gap-2 md:gap-4 flex-wrap justify-end">
+          <Link
+            href="/heroes"
+            className="px-2 md:px-3 py-1.5 md:py-2 text-xs md:text-sm text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition hidden md:block"
+          >
+            Heroes
+          </Link>
+          <Link
+            href="/movies"
+            className="px-2 md:px-3 py-1.5 md:py-2 text-xs md:text-sm text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition hidden md:block"
+          >
+            Movies
+          </Link>
+
+          {session?.user ? (
+            <Link
+              href="/profile"
+              className="w-8 h-8 rounded-full overflow-hidden border-2 border-white/20 hover:border-white/40 transition flex-shrink-0"
+            >
+              {session.user.image ? (
+                <img src={session.user.image} alt="Profile" className="w-full h-full object-cover" />
+              ) : (
+                <div className="w-full h-full bg-white/20 flex items-center justify-center text-white font-bold text-xs">
+                  {session.user.name?.charAt(0) || 'U'}
+                </div>
+              )}
+            </Link>
+          ) : (
+            <Link
+              href="/auth/signin"
+              className="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm bg-white text-black font-bold rounded-lg hover:bg-white/90 transition"
+            >
+              Sign In
+            </Link>
+          )}
+        </div>
+      </div>
+    </motion.nav>
+  );
+}
+
+// ============================================
+// HERO BANNER COMPONENT
+// ============================================
+
+function HeroBanner({ hero, isFollowing, followerCount, onFollow }: any) {
+  const bannerImage = buildImageUrl(hero.images?.banner) || buildImageUrl(hero.images?.featured) || buildImageUrl(hero.images?.portrait);
+  const portraitImage = buildImageUrl(hero.images?.portrait);
+
+  return (
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="relative h-[50vh] md:h-[60vh] lg:h-[75vh] overflow-hidden"
+    >
+      {/* Banner Image */}
+      <img src={bannerImage} alt={hero.name} className="w-full h-full object-cover object-top" />
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+
+      {/* Content */}
+      <div className="absolute bottom-0 left-0 right-0 px-4 sm:px-6 md:px-12 pb-6 md:pb-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-end gap-4 md:gap-6">
+            {/* Portrait Image - Hidden on mobile */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.1 }}
+              className="hidden md:block w-48 lg:w-64 h-64 lg:h-80 rounded-xl overflow-hidden border-4 border-white/20 shadow-2xl flex-shrink-0"
+            >
+              <img src={portraitImage} alt={hero.name} className="w-full h-full object-cover" />
+            </motion.div>
+
+            {/* Hero Info */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="flex-1 w-full"
+            >
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-2 md:mb-4 leading-tight">
+                {hero.name}
+              </h1>
+
+              {hero.title && (
+                <p className="text-lg sm:text-xl md:text-2xl font-bold text-white/80 mb-4 md:mb-6">
+                  {hero.title}
+                </p>
+              )}
+
+              {/* Stats Row */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="flex flex-wrap gap-2 md:gap-4 mb-6 text-xs md:text-sm"
+              >
+                {hero.movies && hero.movies.length > 0 && (
+                  <div className="flex items-center gap-2 text-white/80 bg-white/5 px-3 py-2 rounded-lg">
+                    <FaFilm className="text-white" />
+                    <span className="font-semibold">{hero.movies.length} Movies</span>
+                  </div>
+                )}
+
+                {hero.awards && hero.awards.length > 0 && (
+                  <div className="flex items-center gap-2 text-white/80 bg-white/5 px-3 py-2 rounded-lg">
+                    <FaTrophy className="text-white" />
+                    <span className="font-semibold">{hero.awards.length} Awards</span>
+                  </div>
+                )}
+
+                <div className="flex items-center gap-2 text-white/80 bg-white/5 px-3 py-2 rounded-lg">
+                  <FaHeart className="text-white" />
+                  <span className="font-semibold">{followerCount.toLocaleString()} Followers</span>
+                </div>
+
+                {hero.personalInfo?.birthDate && (
+                  <div className="flex items-center gap-2 text-white/80 bg-white/5 px-3 py-2 rounded-lg">
+                    <FaCalendarAlt className="text-white" />
+                    <span className="font-semibold">
+                      Age {new Date().getFullYear() - new Date(hero.personalInfo.birthDate).getFullYear()}
+                    </span>
+                  </div>
+                )}
+              </motion.div>
+
+              {/* Action Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="flex flex-wrap gap-2 md:gap-3"
+              >
+                <motion.button
+                  onClick={onFollow}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`px-4 md:px-6 py-2 md:py-3 rounded-lg font-bold transition text-xs md:text-sm flex items-center gap-2 ${
+                    isFollowing
+                      ? 'bg-white/10 text-white hover:bg-white/20'
+                      : 'bg-white text-black hover:bg-white/90'
+                  }`}
+                >
+                  {isFollowing ? <FaHeart /> : <FaRegHeart />}
+                  {isFollowing ? 'Following' : 'Follow'}
+                </motion.button>
+
+                {hero.socialMedia?.instagram?.url && (
+                  <motion.a
+                    href={hero.socialMedia.instagram.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-bold text-xs md:text-sm transition flex items-center gap-2"
+                  >
+                    <FaInstagram /> Instagram
+                  </motion.a>
+                )}
+
+                {hero.socialMedia?.twitter?.url && (
+                  <motion.a
+                    href={hero.socialMedia.twitter.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-bold text-xs md:text-sm transition flex items-center gap-2"
+                  >
+                    <FaTwitter /> Twitter
+                  </motion.a>
+                )}
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </motion.section>
+  );
+}
+
+// ============================================
+// TAB NAVIGATION COMPONENT
+// ============================================
+
+function TabNavigation({ activeTab, setActiveTab, hero }: any) {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Tab definitions with counts
+  const tabs = [
+    { id: 'overview', label: 'Overview', icon: FaUser },
+    { id: 'info', label: 'Info', icon: FaGlobe },
+    { id: 'movies', label: 'Movies', count: hero.movies?.length || 0, icon: FaFilm },
+    {
+      id: 'upcoming',
+      label: 'Upcoming',
+      count: hero.upcomingProjects?.length || hero.upcoming?.length || 0,
+      icon: FaCalendarAlt,
+    },
+    {
+      id: 'lifestyle',
+      label: 'Lifestyle',
+      count: (hero.lifestyle?.carCollection?.length || 0) + (hero.lifestyle?.properties?.length || 0),
+      icon: FaCar,
+    },
+    { id: 'philanthropy', label: 'Philanthropy', icon: FaHandHoldingHeart },
+    { id: 'brands', label: 'Brands', count: hero.brandEndorsements?.length || 0, icon: FaHashtag },
+    { id: 'career', label: 'Career', icon: FaChartLine },
+    { id: 'awards', label: 'Awards', count: hero.awards?.length || 0, icon: FaAward },
+    { id: 'news', label: 'News', count: hero.recentNews?.length || 0, icon: FaNewspaper },
+    { id: 'trivia', label: 'Trivia', icon: FaLightbulb },
+    { id: 'gallery', label: 'Gallery', count: hero.images?.gallery?.length || 0, icon: FaPalette },
+  ];
+
+  // Auto-scroll to active tab
+  useEffect(() => {
+    const activeTabElement = scrollContainerRef.current?.querySelector(`[data-tab="${activeTab}"]`);
+    if (activeTabElement) {
+      activeTabElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  }, [activeTab]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const currentIndex = tabs.findIndex((t) => t.id === activeTab);
+
+      if (e.key === 'ArrowLeft' && currentIndex > 0) {
+        setActiveTab(tabs[currentIndex - 1].id);
+      } else if (e.key === 'ArrowRight' && currentIndex < tabs.length - 1) {
+        setActiveTab(tabs[currentIndex + 1].id);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeTab, tabs, setActiveTab]);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'left' ? -300 : 300,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="sticky top-[70px] z-40 bg-black/95 backdrop-blur-xl border-b border-white/10"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative">
+        {/* Left Scroll Button */}
+        <button
+          onClick={() => scroll('left')}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-full bg-gradient-to-r from-black via-black to-transparent flex items-center justify-center text-white hover:text-white/80 transition hidden md:flex"
+        >
+          <FaChevronRight className="rotate-180" />
+        </button>
+
+        {/* Tabs Container */}
+        <div ref={scrollContainerRef} className="flex gap-1 md:gap-2 overflow-x-auto scrollbar-hide py-3 px-0 md:px-10 scroll-smooth">
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <motion.button
+                key={tab.id}
+                data-tab={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`flex items-center gap-1 md:gap-2 px-3 md:px-4 py-2 md:py-2.5 rounded-lg font-bold text-xs md:text-sm transition whitespace-nowrap ${
+                  activeTab === tab.id
+                    ? 'bg-white text-black'
+                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                {Icon && <Icon className="text-xs md:text-sm" />}
+                {tab.label}
+                {tab.count !== undefined && tab.count > 0 && (
+                  <span className="px-2 py-0.5 bg-white/20 rounded-full text-xs font-bold">{tab.count}</span>
+                )}
+              </motion.button>
+            );
+          })}
+        </div>
+
+        {/* Right Scroll Button */}
+        <button
+          onClick={() => scroll('right')}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-full bg-gradient-to-l from-black via-black to-transparent flex items-center justify-center text-white hover:text-white/80 transition hidden md:flex"
+        >
+          <FaChevronRight />
+        </button>
+
+        {/* Keyboard Hint */}
+        <div className="absolute bottom-1 right-4 text-white/20 text-[10px] pointer-events-none hidden lg:block">
+          ← → Keys
+        </div>
+
+        <style jsx>{`
+          .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+          }
+          .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+        `}</style>
+      </div>
+    </motion.div>
+  );
+}
+// ============================================
+// CHUNK 2: Overview + Movies + Upcoming + Lifestyle Tabs
+// ============================================
+
+function OverviewTab({ hero }: any) {
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8 md:space-y-12">
+      {/* Biography */}
+      {hero.bio && (
+        <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4">📖 Biography</h2>
+          <p className="text-white/70 text-sm md:text-base leading-relaxed">{hero.bio}</p>
+        </motion.section>
+      )}
+
+      {/* Hero Aura */}
+      {hero.heroAura && (
+        <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">⭐ Hero Aura</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {hero.heroAura.screenPresence && (
+              <AuraCard icon={FaTheaterMasks} title="🎭 Screen Presence" value={hero.heroAura.screenPresence} />
+            )}
+            {hero.heroAura.boxOfficeAppeal && (
+              <AuraCard icon={FaMoneyBillWave} title="💰 Box Office" value={hero.heroAura.boxOfficeAppeal} />
+            )}
+            {hero.heroAura.signature && (
+              <AuraCard icon={FaFilm} title="🎬 Signature" value={hero.heroAura.signature} />
+            )}
+            {hero.heroAura.fanbase && (
+              <AuraCard icon={FaUsers} title="👥 Fanbase" value={hero.heroAura.fanbase} />
+            )}
+            {hero.heroAura.trademarkStyle && (
+              <AuraCard icon={FaPalette} title="🎨 Style" value={hero.heroAura.trademarkStyle} />
+            )}
+          </div>
+        </motion.section>
+      )}
+
+      {/* Genre Mastery */}
+      {hero.genreStrength && Object.keys(hero.genreStrength).length > 0 && (
+        <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">🎭 Genre Mastery</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {Object.entries(hero.genreStrength).map(([genre, rating]: any, idx: number) => (
+              <motion.div
+                key={genre}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+              >
+                <GenreBar genre={genre} rating={rating} />
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {/* Physical Transformations */}
+      {hero.physicalTransformations && hero.physicalTransformations.length > 0 && (
+        <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6 flex items-center gap-2">
+            <FaDumbbell /> Physical Transformations
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {hero.physicalTransformations.map((transformation: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+              >
+                <TransformationCard transformation={transformation} />
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {/* Voice Profile */}
+      {hero.voiceProfile && (
+        <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">🎤 Voice Profile</h2>
+          <div className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10 space-y-4">
+            {hero.voiceProfile.voiceType && (
+              <div>
+                <h4 className="text-white/50 text-xs md:text-sm mb-1 font-bold">Voice Type</h4>
+                <p className="text-white font-bold text-base md:text-lg">{hero.voiceProfile.voiceType}</p>
+              </div>
+            )}
+
+            {hero.voiceProfile.description && (
+              <p className="text-white/70 text-sm md:text-base">{hero.voiceProfile.description}</p>
+            )}
+
+            {hero.voiceProfile.tone && (
+              <div>
+                <h4 className="text-white/50 text-xs md:text-sm mb-1 font-bold">Tone</h4>
+                <p className="text-white text-sm md:text-base">{hero.voiceProfile.tone}</p>
+              </div>
+            )}
+
+            {(hero.voiceProfile.characteristics || hero.voiceProfile.notableCharacteristics) && (
+              <div>
+                <h4 className="text-white/50 text-xs md:text-sm mb-2 font-bold">Characteristics</h4>
+                <div className="flex flex-wrap gap-2">
+                  {(hero.voiceProfile.characteristics || hero.voiceProfile.notableCharacteristics).map(
+                    (char: string, i: number) => (
+                      <span key={i} className="px-2 md:px-3 py-1 bg-white/10 text-white rounded-full text-xs">
+                        {char}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
+            )}
+
+            {(hero.voiceProfile.languagesFluent || hero.voiceProfile.languages) && (
+              <div>
+                <h4 className="text-white/50 text-xs md:text-sm mb-2 font-bold">Languages</h4>
+                <div className="flex flex-wrap gap-2">
+                  {(hero.voiceProfile.languagesFluent || hero.voiceProfile.languages).map((lang: string, i: number) => (
+                    <span key={i} className="px-2 md:px-3 py-1 bg-white/20 text-white rounded-full text-xs font-bold">
+                      {lang}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {hero.voiceProfile.iconicDialogues && hero.voiceProfile.iconicDialogues.length > 0 && (
+              <div>
+                <h4 className="text-white/50 text-xs md:text-sm mb-3 font-bold">Iconic Dialogues</h4>
+                <div className="space-y-2">
+                  {hero.voiceProfile.iconicDialogues.slice(0, 3).map((dialogue: any, i: number) => (
+                    <div key={i} className="p-3 md:p-4 bg-black/30 rounded-lg border border-white/10">
+                      <p className="text-white italic text-xs md:text-sm mb-1">
+                        "{dialogue.dialogue || dialogue}"
+                      </p>
+                      {dialogue.movie && <p className="text-white/40 text-xs">— {dialogue.movie}</p>}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </motion.section>
+      )}
+
+      {/* Known For */}
+      {hero.knownFor && hero.knownFor.length > 0 && (
+        <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">🏆 Known For</h2>
+          <div className="flex flex-wrap gap-2 md:gap-3">
+            {hero.knownFor.map((item: string, i: number) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.05 }}
+                className="px-3 md:px-4 py-1.5 md:py-2 bg-white/10 text-white border border-white/20 rounded-full font-semibold text-xs md:text-sm hover:bg-white/20 transition"
+              >
+                {item}
+              </motion.span>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {/* Collaborations */}
+      {hero.collaborations && Object.keys(hero.collaborations).length > 0 && (
+        <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">🤝 Frequent Collaborations</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {Object.entries(hero.collaborations).map(([categoryKey, categoryData]: any) => {
+              if (!categoryData || typeof categoryData !== 'object') return null;
+
+              let collaborators = [];
+              if (categoryData.multipleFilms && Array.isArray(categoryData.multipleFilms)) {
+                collaborators = categoryData.multipleFilms;
+              } else if (Array.isArray(categoryData)) {
+                collaborators = categoryData;
+              } else {
+                return null;
+              }
+
+              if (collaborators.length === 0) return null;
+
+              const title = categoryKey
+                .replace(/([A-Z])/g, ' $1')
+                .replace(/^./, (str) => str.toUpperCase())
+                .replace(/Directors/i, 'Directors')
+                .replace(/Music Directors/i, 'Music Directors')
+                .replace(/Heroines/i, 'Heroines')
+                .trim();
+
+              return (
+                <motion.div
+                  key={categoryKey}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10"
+                >
+                  <h3 className="text-white font-bold text-base md:text-lg mb-3 md:mb-4">{title}</h3>
+                  <div className="space-y-2 md:space-y-3">
+                    {collaborators.slice(0, 5).map((person: any, idx: number) => {
+                      const personName = person.name || person.director || person.composer || person.actress || 'Unknown';
+                      let filmCount = 0;
+                      if (typeof person.count === 'number') filmCount = person.count;
+                      else if (typeof person.films === 'number') filmCount = person.films;
+                      else if (Array.isArray(person.films)) filmCount = person.films.length;
+                      else filmCount = 1;
+
+                      return (
+                        <div
+                          key={idx}
+                          className="p-2 md:p-3 rounded-lg bg-black/30 border border-white/10 hover:border-white/20 transition"
+                        >
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-white font-semibold text-xs md:text-sm line-clamp-1">{personName}</span>
+                            <span className="px-2 py-0.5 bg-white/20 text-white rounded text-xs font-bold whitespace-nowrap">
+                              {filmCount}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.section>
+      )}
+    </motion.div>
+  );
+}
+
+// ============================================
+// HELPER COMPONENTS
+// ============================================
+
+function AuraCard({ icon: Icon, title, value }: any) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      className="rounded-lg p-4 md:p-5 bg-white/5 border border-white/10 hover:border-white/20 transition"
+    >
+      <div className="flex items-center gap-2 md:gap-3 mb-3">
+        {Icon && <Icon className="text-lg md:text-xl text-white/60" />}
+        <h3 className="text-white font-bold text-sm md:text-base">{title}</h3>
+      </div>
+      <p className="text-white/60 text-xs md:text-sm leading-relaxed">{value}</p>
+    </motion.div>
+  );
+}
+
+function GenreBar({ genre, rating }: any) {
+  const ratingValue = typeof rating === 'number' ? rating : rating?.rating || 0;
+
+  return (
+    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-white font-bold text-xs md:text-sm capitalize line-clamp-1">{genre}</span>
+        <span className="text-white/60 text-xs md:text-sm">{ratingValue}/10</span>
+      </div>
+      <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: `${ratingValue * 10}%` }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="h-full bg-gradient-to-r from-white to-white/60 rounded-full"
+        />
+      </div>
+    </motion.div>
+  );
+}
+
+function TransformationCard({ transformation }: any) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10 hover:border-white/20 transition"
+    >
+      <h3 className="text-white font-bold text-base md:text-lg mb-3 md:mb-4">{transformation.movie}</h3>
+
+      <div className="space-y-2 md:space-y-3 text-xs md:text-sm">
+        {transformation.transformation && (
+          <div>
+            <p className="text-white/50 font-bold mb-1">Transformation</p>
+            <p className="text-white/80">{transformation.transformation}</p>
+          </div>
+        )}
+
+        {transformation.duration && (
+          <div className="flex items-center gap-2">
+            <span className="text-white/50">⏱️ Duration:</span>
+            <span className="text-white font-bold">{transformation.duration}</span>
+          </div>
+        )}
+
+        {transformation.trainer && (
+          <div className="flex items-center gap-2">
+            <span className="text-white/50">👤 Trainer:</span>
+            <span className="text-white font-bold">{transformation.trainer}</span>
+          </div>
+        )}
+
+        {transformation.diet && (
+          <div>
+            <p className="text-white/50 font-bold mb-1">Diet</p>
+            <p className="text-white/80">{transformation.diet}</p>
+          </div>
+        )}
+      </div>
+    </motion.div>
+  );
+}
+
+function InfoRow({ label, value }: any) {
+  if (!value) return null;
+  return (
+    <div>
+      <div className="text-white/50 text-xs md:text-sm font-bold mb-1">{label}</div>
+      <div className="text-white font-bold text-sm md:text-base">{value}</div>
+    </div>
+  );
+}
+
+// ============================================
+// MOVIES TAB
+// ============================================
+
+function MoviesTab({ movies, hero }: any) {
+  const [filter, setFilter] = useState('all');
+  const [sortBy, setSortBy] = useState('year');
+
+  const { allMovies, leadCount, cameoCount, voiceoverCount, childCount } = useMemo(() => {
+    const all = movies || [];
+    const lead = all.filter((m: any) => m.movieType?.toLowerCase() === 'lead' || !m.movieType);
+    const cameo = hero?.cameoAppearances || [];
+    const voiceover = hero?.voiceOverAppearances || [];
+    const child = hero?.childArtistMovies || [];
+
+    return { allMovies: all, leadCount: lead.length, cameoCount: cameo.length, voiceoverCount: voiceover.length, childCount: child.length };
+  }, [movies, hero]);
+
+  const filteredMovies = useMemo(() => {
+    let filtered = [];
+
+    if (filter === 'all') {
+      filtered = [...allMovies, ...(hero?.cameoAppearances || []), ...(hero?.voiceOverAppearances || []), ...(hero?.childArtistMovies || [])];
+    } else if (filter === 'lead') {
+      filtered = allMovies.filter((m: any) => m.movieType?.toLowerCase() === 'lead' || !m.movieType);
+    } else if (filter === 'cameo') {
+      filtered = hero?.cameoAppearances || [];
+    } else if (filter === 'voiceover') {
+      filtered = hero?.voiceOverAppearances || [];
+    } else if (filter === 'child') {
+      filtered = hero?.childArtistMovies || [];
+    }
+
+    return filtered.sort((a: any, b: any) => {
+      if (sortBy === 'year') return (b.year || 0) - (a.year || 0);
+      if (sortBy === 'rating') return (b.ratings?.imdb || 0) - (a.ratings?.imdb || 0);
+      return 0;
+    });
+  }, [allMovies, hero, filter, sortBy]);
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      {/* Filters */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 md:gap-4 mb-6 md:mb-8 flex-wrap">
+        <div className="flex gap-1 md:gap-2 flex-wrap">
+          {[
+            { id: 'all', label: `All (${allMovies.length + cameoCount + voiceoverCount + childCount})` },
+            { id: 'lead', label: `Lead (${leadCount})` },
+            childCount > 0 && { id: 'child', label: `Child (${childCount})` },
+            cameoCount > 0 && { id: 'cameo', label: `Cameo (${cameoCount})` },
+            voiceoverCount > 0 && { id: 'voiceover', label: `Voice (${voiceoverCount})` },
+          ]
+            .filter(Boolean)
+            .map((btn: any) => (
+              <motion.button
+                key={btn.id}
+                onClick={() => setFilter(btn.id)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`px-2 md:px-4 py-1.5 md:py-2 rounded-lg font-bold text-xs md:text-sm transition ${
+                  filter === btn.id ? 'bg-white text-black' : 'bg-white/10 text-white/70 hover:bg-white/20'
+                }`}
+              >
+                {btn.label}
+              </motion.button>
+            ))}
+        </div>
+        <select
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+          className="px-3 md:px-4 py-1.5 md:py-2 bg-white/10 text-white rounded-lg border border-white/10 outline-none text-xs md:text-sm"
+        >
+          <option value="year">Year ↓</option>
+          <option value="rating">Rating ↓</option>
+        </select>
+      </div>
+
+      {/* Movies Grid */}
+      {filteredMovies.length === 0 ? (
+        <div className="text-white/40 text-center py-12 md:py-20">No movies found</div>
+      ) : (
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-6">
+          {filteredMovies.map((movie: any, idx: number) => (
+            <motion.div
+              key={movie.slug || movie.id || idx}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: idx * 0.02 }}
+            >
+              <MovieCard movie={movie} />
+            </motion.div>
+          ))}
+        </motion.div>
+      )}
+    </motion.div>
+  );
+}
+
+function MovieCard({ movie }: any) {
+  // ⬅️ CHANGE #1: Replace getImageUrl with buildImageUrl
+  const [posterUrl, setPosterUrl] = useState(buildImageUrl(movie.poster) || DEFAULT_POSTER);
+
+  useEffect(() => {
+    const loadPoster = async () => {
+      if (movie.tmdbId && movie.tmdbId > 0 && !posterUrl.includes('tmdb')) {
+        try {
+          const res = await fetch(`https://api.themoviedb.org/3/movie/${movie.tmdbId}?api_key=${TMDB_API_KEY}`);
+          const data = await res.json();
+          if (data.poster_path) {
+            // ⬅️ CHANGE #2: This already uses TMDB_IMAGE_BASE directly (GOOD!)
+            setPosterUrl(`${TMDB_IMAGE_BASE}${data.poster_path}`);
+          }
+        } catch {
+          // Use default
+        }
+      }
+    };
+    loadPoster();
+  }, [movie.tmdbId, posterUrl]);
+
+  return (
+    <Link href={`/movie/${movie.slug}`} className="group block">
+      <div className="relative rounded-lg overflow-hidden mb-2 md:mb-3 border border-white/10 group-hover:border-white/30 transition">
+        <img
+          src={posterUrl}
+          alt={movie.title}
+          className="w-full aspect-[2/3] object-cover group-hover:scale-110 transition-transform duration-300"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = DEFAULT_POSTER;
+          }}
+        />
+
+        {/* Year Badge */}
+        {movie.year && (
+          <div className="absolute top-2 left-2 px-2 py-1 rounded bg-black/70 text-white text-xs font-bold">
+            {movie.year}
+          </div>
+        )}
+
+        {/* Rating Badge */}
+        {movie.ratings?.imdb && (
+          <div className="absolute top-2 right-2 px-2 py-1 rounded bg-yellow-500/80 text-black text-xs font-bold flex items-center gap-1">
+            <FaStar size={10} />
+            {movie.ratings.imdb}
+          </div>
+        )}
+      </div>
+
+      <h3 className="text-white font-bold text-xs md:text-sm line-clamp-2 group-hover:text-white/80 transition">
+        {movie.title}
+      </h3>
+      {movie.role && <p className="text-white/40 text-xs mt-1">{movie.role}</p>}
+    </Link>
+  );
+}
+
+
+
+// ============================================
+// UPCOMING TAB
+// ============================================
+
+function UpcomingTab({ upcoming, hero }: { upcoming?: any[]; hero?: any }) {
+  const upcomingData = upcoming || hero?.upcomingProjects || hero?.upcoming || [];
+
+  if (!upcomingData || upcomingData.length === 0) {
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12 md:py-20">
+        <p className="text-white/40">No upcoming projects announced</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4 md:space-y-6">
+      {upcomingData.map((project: any, idx: number) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: idx * 0.05 }}
+          className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10 hover:border-white/20 transition"
+        >
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+            {/* Poster */}
+            {project.poster && (
+              <div className="w-full md:w-40 lg:w-48 flex-shrink-0">
+                <img
+  src={buildImageUrl(project.poster)}
+  alt={project.title}
+                  className="w-full h-48 md:h-56 object-cover rounded-lg"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = DEFAULT_POSTER;
+                  }}
+                />
+              </div>
+            )}
+
+            {/* Details */}
+            <div className="flex-1 space-y-2 md:space-y-3 text-xs md:text-sm">
+              <div>
+                <h3 className="text-white font-bold text-base md:text-lg">{project.title || 'Untitled'}</h3>
+                {project.status && (
+                  <span
+                    className={`inline-block mt-1 px-2 md:px-3 py-1 rounded-full text-xs font-bold ${
+                      project.status === 'Production'
+                        ? 'bg-green-500/20 text-green-300'
+                        : project.status === 'Pre-Production'
+                          ? 'bg-yellow-500/20 text-yellow-300'
+                          : 'bg-blue-500/20 text-blue-300'
+                    }`}
+                  >
+                    {project.status}
+                  </span>
+                )}
+              </div>
+
+              {project.year && <p className="text-white/60">📅 {project.year}</p>}
+              {project.genre && <p className="text-white/60">🎬 {project.genre}</p>}
+              {project.director && <p className="text-white/60">🎥 Dir: {project.director}</p>}
+              {project.producer && <p className="text-white/60">📽️ Prod: {project.producer}</p>}
+              {project.budget && <p className="text-white font-bold">💰 {project.budget}</p>}
+              {project.note && <p className="text-white/70 italic">{project.note}</p>}
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+}
+
+// ============================================
+// LIFESTYLE TAB
+// ============================================
+
+function LifestyleTab({ hero }: { hero: any }) {
+  if (!hero.lifestyle) {
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12 md:py-20">
+        <p className="text-white/40">Lifestyle data not available</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8 md:space-y-12">
+      {/* Cars */}
+      {hero.lifestyle.carCollection && hero.lifestyle.carCollection.length > 0 && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">🚗 Car Collection</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {hero.lifestyle.carCollection.map((car: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10 hover:border-white/20 transition"
+              >
+                <div className="flex items-start justify-between gap-2 mb-3">
+                  <div>
+                    <h3 className="text-white font-bold text-base md:text-lg">{car.brand}</h3>
+                    <p className="text-white/60 text-xs md:text-sm">{car.model}</p>
+                  </div>
+                  <span className="px-2 py-1 bg-white/20 text-white rounded text-xs font-bold whitespace-nowrap">
+                    {car.year}
+                  </span>
+                </div>
+                <div className="space-y-1 text-xs md:text-sm">
+                  {car.color && <p className="text-white/60">🎨 {car.color}</p>}
+                  {car.estimatedValue && <p className="text-white font-bold">💰 {car.estimatedValue}</p>}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Properties */}
+      {hero.lifestyle.properties && hero.lifestyle.properties.length > 0 && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">🏠 Properties</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {hero.lifestyle.properties.map((property: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10"
+              >
+                <h3 className="text-white font-bold text-base md:text-lg mb-1">{property.type}</h3>
+                <p className="text-white/60 text-xs md:text-sm mb-3">📍 {property.location}</p>
+                <div className="space-y-1 text-xs md:text-sm">
+                  {property.size && <p className="text-white/60">📏 {property.size}</p>}
+                  {property.estimatedValue && <p className="text-white font-bold">💰 {property.estimatedValue}</p>}
+                  {property.features && property.features.length > 0 && (
+                    <div className="flex flex-wrap gap-1 mt-2">
+                      {property.features.map((f: string, i: number) => (
+                        <span key={i} className="px-2 py-0.5 bg-white/10 text-white/70 rounded text-xs">
+                          {f}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Fashion */}
+      {hero.lifestyle.fashion && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">👗 Fashion & Style</h2>
+          <div className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10 space-y-4">
+            {hero.lifestyle.fashion.style && (
+              <p className="text-white/80 text-sm md:text-base">{hero.lifestyle.fashion.style}</p>
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {hero.lifestyle.fashion.favoriteDesigners && hero.lifestyle.fashion.favoriteDesigners.length > 0 && (
+                <div>
+                  <h4 className="text-white font-bold text-sm md:text-base mb-2">👔 Designers</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {hero.lifestyle.fashion.favoriteDesigners.map((designer: string, i: number) => (
+                      <span key={i} className="px-2 md:px-3 py-1 bg-white/10 text-white rounded-full text-xs md:text-sm">
+                        {designer}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {hero.lifestyle.fashion.watches && hero.lifestyle.fashion.watches.length > 0 && (
+                <div>
+                  <h4 className="text-white font-bold text-sm md:text-base mb-2">⌚ Watches</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {hero.lifestyle.fashion.watches.map((watch: string, i: number) => (
+                      <span key={i} className="px-2 md:px-3 py-1 bg-white/10 text-white rounded-full text-xs md:text-sm">
+                        {watch}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+    </motion.div>
+  );
+}
+// ============================================
+// CHUNK 3: Philanthropy + Brands + Info + Career + Awards + News + Trivia + Gallery
+// ============================================
+
+function PhilanthropyTab({ hero }: { hero: any }) {
+  const philanthropyData = hero.philanthropy;
+
+  if (!philanthropyData) {
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12 md:py-20">
+        <p className="text-white/40">Philanthropy data not available</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8 md:space-y-12">
+      {/* Foundations */}
+      {philanthropyData.foundations && philanthropyData.foundations.length > 0 && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">🏢 Foundations</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {philanthropyData.foundations.map((foundation: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10 hover:border-white/20 transition"
+              >
+                <h3 className="text-white font-bold text-base md:text-lg mb-2">
+                  {typeof foundation === 'string' ? foundation : foundation.name}
+                </h3>
+                {typeof foundation === 'object' && foundation.established && (
+                  <p className="text-white/50 text-xs md:text-sm mb-2">📅 {foundation.established}</p>
+                )}
+                {typeof foundation === 'object' && foundation.focus && (
+                  <p className="text-white/70 text-xs md:text-sm">{foundation.focus}</p>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Single Foundation */}
+      {philanthropyData.foundationName && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">🏢 Foundation</h2>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10"
+          >
+            <h3 className="text-white font-bold text-lg md:text-xl mb-3">{philanthropyData.foundationName}</h3>
+            {philanthropyData.establishedYear && <p className="text-white/60 text-sm mb-3">📅 {philanthropyData.establishedYear}</p>}
+            {philanthropyData.focusAreas && philanthropyData.focusAreas.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {philanthropyData.focusAreas.map((area: string, i: number) => (
+                  <span key={i} className="px-2 md:px-3 py-1 bg-white/10 text-white rounded-full text-xs md:text-sm">
+                    {area}
+                  </span>
+                ))}
+              </div>
+            )}
+          </motion.div>
+        </section>
+      )}
+
+      {/* Initiatives */}
+      {philanthropyData.initiatives && philanthropyData.initiatives.length > 0 && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">🤝 Initiatives</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {philanthropyData.initiatives.map((initiative: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10"
+              >
+                {typeof initiative === 'object' && initiative.name ? (
+                  <>
+                    <div className="flex items-start justify-between gap-2 mb-3">
+                      <h3 className="text-white font-bold text-base md:text-lg">{initiative.name}</h3>
+                      {initiative.year && <span className="px-2 py-1 bg-white/20 text-white rounded text-xs font-bold whitespace-nowrap">{initiative.year}</span>}
+                    </div>
+                    {initiative.location && <p className="text-white/60 text-xs md:text-sm mb-2">📍 {initiative.location}</p>}
+                    {initiative.description && <p className="text-white/70 text-xs md:text-sm mb-3">{initiative.description}</p>}
+                    {initiative.investment && <p className="text-white font-bold text-xs md:text-sm">💰 {initiative.investment}</p>}
+                  </>
+                ) : (
+                  <p className="text-white/80 text-xs md:text-sm">{initiative}</p>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Total Contribution */}
+      {philanthropyData.totalEstimatedContribution && (
+        <motion.section initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="rounded-lg p-4 md:p-6 bg-gradient-to-r from-white/10 to-white/5 border border-white/20">
+            <h3 className="text-white font-bold text-lg md:text-xl mb-2">💚 Total Contribution</h3>
+            <p className="text-white font-black text-2xl md:text-3xl">{philanthropyData.totalEstimatedContribution}</p>
+          </div>
+        </motion.section>
+      )}
+
+      {/* Recognitions */}
+      {philanthropyData.recognitions && philanthropyData.recognitions.length > 0 && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">🏆 Recognitions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+            {philanthropyData.recognitions.map((recognition: string, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: idx * 0.05 }}
+                className="rounded-lg p-3 md:p-4 bg-white/5 border border-white/10"
+              >
+                <p className="text-white/80 text-xs md:text-sm">🏅 {recognition}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      )}
+    </motion.div>
+  );
+}
+
+// ============================================
+// BRANDS TAB
+// ============================================
+
+function BrandsTab({ hero }: any) {
+  const brands = hero.brandEndorsements;
+
+  if (!brands || brands.length === 0) {
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12 md:py-20">
+        <p className="text-white/40">No brand endorsements yet</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6 flex items-center gap-2">
+        🏢 Endorsements <span className="text-white/50 text-lg">({brands.length})</span>
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {brands.map((brand: any, idx: number) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: idx * 0.05 }}
+            className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10 hover:border-white/20 transition"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                <FaHashtag className="text-white" />
+              </div>
+              <h3 className="text-white font-bold text-base md:text-lg line-clamp-1">{brand.brand}</h3>
+            </div>
+            {brand.category && <p className="text-white/50 text-xs md:text-sm mb-2 capitalize">{brand.category}</p>}
+            {brand.duration && <p className="text-white/60 text-xs md:text-sm mb-3">{brand.duration}</p>}
+            {brand.estimatedDeal && <p className="text-white font-bold text-sm md:text-base">💰 {brand.estimatedDeal}</p>}
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
+// INFO TAB
+// ============================================
+
+function InfoTab({ hero }: any) {
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      {/* Personal */}
+      <section className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10">
+        <h3 className="text-xl md:text-2xl font-black text-white mb-4 md:mb-6">👤 Personal</h3>
+        <div className="space-y-3 md:space-y-4 text-xs md:text-sm">
+          {hero.personalInfo?.fullName && <InfoRow label="Full Name" value={hero.personalInfo.fullName} />}
+          {hero.personalInfo?.birthDate && (
+            <InfoRow label="Birth Date" value={new Date(hero.personalInfo.birthDate).toLocaleDateString()} />
+          )}
+          {hero.personalInfo?.birthPlace && <InfoRow label="Birthplace" value={hero.personalInfo.birthPlace} />}
+          {hero.personalInfo?.height && <InfoRow label="Height" value={hero.personalInfo.height} />}
+          {hero.personalInfo?.zodiacSign && <InfoRow label="Zodiac" value={hero.personalInfo.zodiacSign} />}
+          {hero.personalInfo?.bloodGroup && <InfoRow label="Blood Type" value={hero.personalInfo.bloodGroup} />}
+          {hero.personalInfo?.maritalStatus && <InfoRow label="Marital Status" value={hero.personalInfo.maritalStatus} />}
+        </div>
+      </section>
+
+      {/* Family */}
+      {hero.personalInfo?.family && (
+        <motion.section
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10"
+        >
+          <h3 className="text-xl md:text-2xl font-black text-white mb-4 md:mb-6">👨‍👩‍👧‍👦 Family</h3>
+          <div className="space-y-3 md:space-y-4 text-xs md:text-sm">
+            {hero.personalInfo.family.father && <InfoRow label="Father" value={hero.personalInfo.family.father} />}
+            {hero.personalInfo.family.mother && <InfoRow label="Mother" value={hero.personalInfo.family.mother} />}
+            {hero.personalInfo.family.spouse && <InfoRow label="Spouse" value={hero.personalInfo.family.spouse} />}
+            {hero.personalInfo.family.siblings && (
+              <InfoRow label="Siblings" value={hero.personalInfo.family.siblings.join(', ')} />
+            )}
+          </div>
+        </motion.section>
+      )}
+
+      {/* Social Media */}
+      {hero.socialMedia && (
+        <motion.section
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10"
+        >
+          <h3 className="text-xl md:text-2xl font-black text-white mb-4 md:mb-6">📱 Social</h3>
+          <div className="space-y-2 md:space-y-3">
+            {hero.socialMedia.instagram && (
+              <a
+                href={hero.socialMedia.instagram.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between p-2 md:p-3 rounded-lg bg-white/10 hover:bg-white/20 transition text-xs md:text-sm"
+              >
+                <div className="flex items-center gap-2">
+                  <FaInstagram className="text-pink-500" />
+                  <span className="text-white">Instagram</span>
+                </div>
+                <span className="text-white/60">{(hero.socialMedia.instagram.followers / 1000).toFixed(1)}K</span>
+              </a>
+            )}
+            {hero.socialMedia.twitter && (
+              <a
+                href={hero.socialMedia.twitter.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between p-2 md:p-3 rounded-lg bg-white/10 hover:bg-white/20 transition text-xs md:text-sm"
+              >
+                <div className="flex items-center gap-2">
+                  <FaTwitter className="text-blue-400" />
+                  <span className="text-white">Twitter</span>
+                </div>
+                <span className="text-white/60">{(hero.socialMedia.twitter.followers / 1000).toFixed(1)}K</span>
+              </a>
+            )}
+          </div>
+        </motion.section>
+      )}
+
+      {/* Financial */}
+      {(hero.netWorth || hero.financials) && (
+        <motion.section
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="rounded-lg p-4 md:p-6 bg-gradient-to-br from-white/10 to-white/5 border border-white/20"
+        >
+          <h3 className="text-xl md:text-2xl font-black text-white mb-4 md:mb-6">💰 Financial</h3>
+          <div className="space-y-3 md:space-y-4 text-xs md:text-sm">
+            {hero.netWorth?.estimatedValue && (
+              <>
+                <div>
+                  <p className="text-white/50 mb-1">Net Worth</p>
+                  <p className="text-white font-black text-lg md:text-xl">{hero.netWorth.estimatedValue}</p>
+                </div>
+              </>
+            )}
+            {hero.financials?.perFilmFee && <InfoRow label="Per Film Fee" value={hero.financials.perFilmFee} />}
+          </div>
+        </motion.section>
+      )}
+    </motion.div>
+  );
+}
+
+// ============================================
+// CAREER TAB
+// ============================================
+
+function CareerTab({ hero }: { hero: any }) {
+  if (!hero.careerHighlights && !hero.careerMilestones && !hero.collaborations) {
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12 md:py-20">
+        <p className="text-white/40">Career information not available</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8 md:space-y-12">
+      {/* Highlights */}
+      {hero.careerHighlights && hero.careerHighlights.length > 0 && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">🌟 Highlights</h2>
+          <div className="space-y-3 md:space-y-4">
+            {hero.careerHighlights.map((highlight: string, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                className="rounded-lg p-3 md:p-4 bg-white/5 border border-white/10 text-white/80 text-xs md:text-sm leading-relaxed"
+              >
+                ✓ {highlight}
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Milestones */}
+      {hero.careerMilestones && hero.careerMilestones.length > 0 && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">📍 Milestones</h2>
+          <div className="relative border-l-2 border-white/20 ml-3 md:ml-4 space-y-6 md:space-y-8">
+            {hero.careerMilestones.map((milestone: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                className="relative pl-6 md:pl-8"
+              >
+                <div className="absolute -left-[11px] md:-left-[13px] top-2 w-4 md:w-5 h-4 md:h-5 rounded-full bg-white border-4 border-black" />
+                <div className="rounded-lg p-3 md:p-4 bg-white/5 border border-white/10">
+                  {milestone.year && <span className="px-2 py-1 bg-white/20 text-white rounded text-xs font-bold">{milestone.year}</span>}
+                  <h3 className="text-white font-bold text-base md:text-lg mt-2 md:mt-3 mb-1">{milestone.achievement}</h3>
+                  {milestone.description && <p className="text-white/70 text-xs md:text-sm">{milestone.description}</p>}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Collaborations */}
+      {hero.collaborations && Object.keys(hero.collaborations).length > 0 && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">🤝 Collaborations</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {Object.entries(hero.collaborations)
+              .map(([category, people]: any) => {
+                if (!Array.isArray(people) || people.length === 0) return null;
+                const categoryName = category
+                  .replace(/([A-Z])/g, ' $1')
+                  .replace(/^./, (str) => str.toUpperCase())
+                  .trim();
+
+                return (
+                  <motion.div
+                    key={category}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10"
+                  >
+                    <h3 className="text-white font-bold text-base md:text-lg mb-3 md:mb-4">{categoryName}</h3>
+                    <div className="space-y-2">
+                      {people.slice(0, 5).map((person: any, i: number) => {
+                        const personName = person.name || person.director || person.composer || person.actress || person.actor || 'Unknown';
+                        const count = typeof person === 'object' ? person.count || person.films?.length || 1 : 1;
+                        return (
+                          <div key={i} className="flex items-center justify-between text-xs md:text-sm p-2 rounded bg-black/30">
+                            <span className="text-white/80 truncate">{personName}</span>
+                            <span className="px-2 py-0.5 bg-white/20 text-white rounded text-xs font-bold whitespace-nowrap">
+                              {count}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                );
+              })
+              .filter(Boolean)}
+          </div>
+        </section>
+      )}
+
+      {/* Box Office */}
+      {hero.boxOfficeStats && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">📊 Box Office</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
+            {hero.boxOfficeStats.totalGross && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="rounded-lg p-4 md:p-6 bg-gradient-to-br from-white/10 to-white/5 border border-white/20"
+              >
+                <p className="text-white/60 text-xs md:text-sm mb-1">Total Gross</p>
+                <p className="text-white font-black text-xl md:text-2xl">{hero.boxOfficeStats.totalGross}</p>
+              </motion.div>
+            )}
+            {hero.boxOfficeStats.averagePerFilm && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10"
+              >
+                <p className="text-white/60 text-xs md:text-sm mb-1">Average</p>
+                <p className="text-white font-black text-xl md:text-2xl">{hero.boxOfficeStats.averagePerFilm}</p>
+              </motion.div>
+            )}
+            {hero.boxOfficeStats.highestGrosser && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10"
+              >
+                <p className="text-white/60 text-xs md:text-sm mb-1">Highest</p>
+                <p className="text-white font-bold text-xs md:text-sm line-clamp-1">{hero.boxOfficeStats.highestGrosser.title}</p>
+                <p className="text-white font-black text-base md:text-lg">{hero.boxOfficeStats.highestGrosser.gross}</p>
+              </motion.div>
+            )}
+          </div>
+        </section>
+      )}
+    </motion.div>
+  );
+}
+
+// ============================================
+// AWARDS TAB
+// ============================================
+
+function AwardsTab({ awards }: any) {
+  if (!awards || awards.length === 0) {
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12 md:py-20">
+        <p className="text-4xl md:text-5xl mb-3">🏆</p>
+        <p className="text-white/40">No awards yet</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-3 md:space-y-4">
+      {awards.map((award: any, idx: number) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: idx * 0.03 }}
+          className="rounded-lg p-3 md:p-5 bg-white/5 border border-white/10 hover:border-white/20 transition"
+        >
+          <div className="flex items-start gap-3">
+            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+              <FaTrophy className="text-white text-sm md:text-base" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-1 flex-wrap">
+                <h3 className="text-white font-bold text-sm md:text-base">{award.award}</h3>
+                <span
+                  className={`px-2 py-0.5 rounded text-xs font-bold whitespace-nowrap ${
+                    award.status === 'Won' || award.won === true
+                      ? 'bg-green-500/20 text-green-300'
+                      : 'bg-blue-500/20 text-blue-300'
+                  }`}
+                >
+                  {award.status || (award.won ? '✅ Won' : '⭐ Nominated')}
+                </span>
+              </div>
+              <p className="text-white/60 text-xs md:text-sm">
+                {award.category} {award.movie && `• ${award.movie}`} {award.year && `(${award.year})`}
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+}
+
+// ============================================
+// NEWS TAB
+// ============================================
+
+function NewsTab({ news }: any) {
+  if (!news || news.length === 0) {
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12 md:py-20">
+        <p className="text-white/40">No recent news</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4 md:space-y-6">
+      {news.slice(0, 10).map((item: any, idx: number) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: idx * 0.03 }}
+          className="rounded-lg p-4 md:p-5 bg-white/5 border border-white/10 hover:border-white/20 transition"
+        >
+          {item.image && (
+  <img src={buildImageUrl(item.image)} alt={item.title} className="w-full h-40 md:h-48 rounded-lg object-cover mb-3 md:mb-4" />
+          )}
+          <div className="flex items-center gap-2 mb-2 flex-wrap">
+            <span className="px-2 py-1 bg-white/20 text-white rounded text-xs font-bold">{item.category || 'News'}</span>
+            <span className="text-white/40 text-xs">{new Date(item.date).toLocaleDateString()}</span>
+          </div>
+          <h3 className="text-white font-bold text-base md:text-lg mb-2 line-clamp-2">{item.title}</h3>
+          <p className="text-white/70 text-xs md:text-sm line-clamp-2">{item.content || item.summary}</p>
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+}
+
+// ============================================
+// TRIVIA TAB
+// ============================================
+
+function TriviaTab({ trivia, quotes }: any) {
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8 md:space-y-12">
+      {/* Quotes */}
+      {quotes && quotes.length > 0 && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6 flex items-center gap-2">
+            <FaQuoteLeft /> Quotes
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {quotes.slice(0, 4).map((quote: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: idx * 0.05 }}
+                className="rounded-lg p-4 md:p-6 bg-gradient-to-br from-white/10 to-white/5 border border-white/20"
+              >
+                <p className="text-white italic text-xs md:text-sm leading-relaxed mb-3">"{quote.quote}"</p>
+                <p className="text-white/40 text-xs">— {quote.context}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Trivia */}
+      {trivia && trivia.length > 0 && (
+        <section>
+          <h2 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6">💡 Did You Know?</h2>
+          <div className="space-y-2 md:space-y-3">
+            {trivia.slice(0, 8).map((item: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: idx * 0.03 }}
+                className="rounded-lg p-3 md:p-4 bg-white/5 border border-white/10 flex items-start gap-3"
+              >
+                <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 text-xs md:text-sm font-bold text-white">
+                  {idx + 1}
+                </div>
+                <p className="text-white/80 text-xs md:text-sm leading-relaxed flex-1">{item}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      )}
+    </motion.div>
+  );
+}
+
+// ============================================
+// GALLERY TAB
+// ============================================
+
+function GalleryTab({ images }: any) {
+  if (!images || images.length === 0) {
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12 md:py-20">
+        <p className="text-white/40">No gallery images</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-4">
+      {images.slice(0, 20).map((image: any, idx: number) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: idx * 0.02 }}
+          className="aspect-square rounded-lg overflow-hidden group border border-white/10 hover:border-white/30 transition"
+        >
+          <img
+            src={buildImageUrl(image)}  // ⬅️ CHANGE THIS LINE FROM getImageUrl(image)
+            alt={`Gallery ${idx}`}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = DEFAULT_POSTER;
+            }}
+          />
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function GalleryTab({ hero }: any) {
+  const images = hero.images?.gallery || [];
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  if (!images || images.length === 0) {
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12 md:py-20">
+        <FaPalette size={48} className="mx-auto mb-4 opacity-20" />
+        <p className="text-white/40">No gallery images</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6 md:space-y-8">
+      {/* Image Grid */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-4"
+      >
+        {images.slice(0, 20).map((image: any, idx: number) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: idx * 0.02 }}
+            viewport={{ once: true }}
+            onClick={() => setSelectedImage(idx)}
+            className="group cursor-pointer aspect-square rounded-lg overflow-hidden border border-white/10 hover:border-white/30 transition relative"
+          >
+            <img
+              src={buildImageUrl(image)}
+              alt={`Gallery ${idx + 1}`}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = DEFAULT_POSTER;
+              }}
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition flex items-center justify-center">
+              <FaPlay className="text-white opacity-0 group-hover:opacity-100 transition text-xl" />
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {selectedImage !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 md:p-8"
+          >
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-4xl w-full"
+            >
+              {/* Main Image */}
+              <img
+                src={buildImageUrl(images[selectedImage])}
+                alt={`Gallery ${selectedImage + 1}`}
+                className="w-full rounded-lg shadow-2xl"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = DEFAULT_POSTER;
+                }}
+              />
+
+              {/* Left Navigation */}
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  setSelectedImage((p) =>
+                    p === 0 ? images.length - 1 : (p ?? 0) - 1
+                  );
+                }}
+                className="absolute left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-white/20 hover:bg-white/40 transition text-white text-lg md:text-xl"
+              >
+                <FaChevronRight className="rotate-180" />
+              </motion.button>
+
+              {/* Right Navigation */}
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  setSelectedImage((p) =>
+                    p === images.length - 1 ? 0 : (p ?? 0) + 1
+                  );
+                }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-white/20 hover:bg-white/40 transition text-white text-lg md:text-xl"
+              >
+                <FaChevronRight />
+              </motion.button>
+
+              {/* Close Button */}
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setSelectedImage(null)}
+                className="absolute -top-10 md:-top-12 right-0 text-white/60 hover:text-white transition text-xl"
+              >
+                ✕
+              </motion.button>
+
+              {/* Image Counter */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/70 rounded-full text-white text-sm font-bold">
+                {(selectedImage ?? 0) + 1} / {images.length}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+}

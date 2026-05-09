@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "name": "Prabhas",
+    "slug": "prabhas",
+    "alternateNames": ["Uppalapati Venkata Suryanarayana Prabhas Raju", "Darling Prabhas", "Rebel Star"],
+    "title": "Rebel Star",
+    "category": "Superstar",
+    "subcategory": "Male Lead Actor",
+    "gender": "Male",
+    "bio": "Known for his powerful screen presence and pan-Indian blockbusters like Baahubali, Prabhas has carved a niche as one of Tollywood's most celebrated stars.",
+    "portraitUrl": "https://gjonhhhxamhvcfvkctth.supabase.co/storage/v1/object/sign/hero-images/prabhas-portrait.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84NDgwODE1ZC0xNjE5LTRkMTAtYmZiNi02YTQyNzZmNjI1YjYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJoZXJvLWltYWdlcy9wcmFiaGFzLXBvcnRyYWl0LmpwZyIsImlhdCI6MTc1OTg5ODUzMCwiZXhwIjoxNzkxNDM0NTMwfQ.hQOobi-Hb7MCtmkigDeaBMgFOmzolK6ZpYgxFWJHEoI",
+    "bannerUrl": "https://gjonhhhxamhvcfvkctth.supabase.co/storage/v1/object/sign/hero-images/prabhas-banner.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84NDgwODE1ZC0xNjE5LTRkMTAtYmZiNi02YTQyNzZmNjI1YjYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJoZXJvLWltYWdlcy9wcmFiaGFzLWJhbm5lci5qcGciLCJpYXQiOjE3NTk4OTg1OTAsImV4cCI6MTc5MTQzNDU5MH0.dmQybIXlNC7JGa3kWcfnpBW8vn_H-CHxQlxyX6oTHkA",
+    "featuredUrl": "https://gjonhhhxamhvcfvkctth.supabase.co/storage/v1/object/sign/hero-images/prabhas-banner.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84NDgwODE1ZC0xNjE5LTRkMTAtYmZiNi02YTQyNzZmNjI1YjYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJoZXJvLWltYWdlcy9wcmFiaGFzLWJhbm5lci5qcGciLCJpYXQiOjE3NTk4OTg1OTAsImV4cCI6MTc5MTQzNDU5MH0.dmQybIXlNC7JGa3kWcfnpBW8vn_H-CHxQlxyX6oTHkA",
+    "debutYear": 2002,
+    "debutMovie": "Eeswar",
+    "birthDate": "1979-10-23",
+    "birthPlace": "Chennai, Tamil Nadu",
+    "age": 46,
+    "height": "6'2\"",
+    "rating": 9.2,
+    "popularity": "Pan-Indian Superstar",
+    "active": true,
+    "status": "Active",
+    "generation": "4th Generation",
+    "knownFor": ["Baahubali Series", "Kalki 2898 AD", "Salaar", "Mirchi"],
+    "nicknames": ["Darling", "Rebel Star", "Pan-India Star"],
+    "awards": 18,
+    "nominations": 25,
+    "totalMovies": 24,
+    "hits": 15,
+    "blockbusters": 6,
+    "followers": 2500000,
+    "movies": [
+      { "slug": "baahubali", "title": "Baahubali: The Beginning", "year": 2015 },
+      { "slug": "baahubali-2", "title": "Baahubali: The Conclusion", "year": 2017 },
+      { "slug": "saaho", "title": "Saaho", "year": 2019 },
+      { "slug": "radhe-shyam", "title": "Radhe Shyam", "year": 2022 },
+      { "slug": "adipurush", "title": "Adipurush", "year": 2023 },
+      { "slug": "salaar", "title": "Salaar", "year": 2023 },
+      { "slug": "kalki-2898-ad", "title": "Kalki 2898 AD", "year": 2024 }
+    ],
+    "socialMedia": {
+      "instagram": "https://instagram.com/actorprabhas",
+      "instagramFollowers": "50M+",
+      "twitter": "https://twitter.com/actorprabhas",
+      "twitterFollowers": "8M+",
+      "facebook": "https://facebook.com/actorprabhas",
+      "facebookFollowers": "15M+",
+      "imdb": "https://www.imdb.com/name/nm1659141/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Prabhas"
+    },
+    "verified": true,
+    "featured": true,
+    "trending": true,
+    "searchKeywords": ["prabhas", "rebel star", "baahubali", "darling", "kalki 2898 ad"],
+    "metadata": {
+      "lastUpdated": "2025-10-14",
+      "dataQuality": "Complete",
+      "sources": ["IMDB", "Wikipedia", "Official Sources"]
+    }
+  },
+   {
+    "id": 2,
+    "slug": "mahesh-babu",
+    "name": "Mahesh Babu",
+    "title": "Superstar",
+    "portraitUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=600&fit=crop",
+    "bannerUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1200&h=600&fit=crop",
+    "debutYear": 1999,
+    "rating": 9.0,
+    "followers": 0,
+    "movies": [
+      { "slug": "pokiri", "title": "Pokiri", "year": 2006 },
+      { "slug": "dookudu", "title": "Dookudu", "year": 2011 }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "allu-arjun",
+    "name": "Allu Arjun",
+    "title": "Stylish Star",
+    "portraitUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=600&fit=crop",
+    "bannerUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1200&h=600&fit=crop",
+    "debutYear": 2003,
+    "rating": 9.1,
+    "followers": 0,
+    "movies": [
+      { "slug": "pushpa", "title": "Pushpa", "year": 2021 },
+      { "slug": "ala-vaikunthapurramuloo", "title": "Ala Vaikunthapurramuloo", "year": 2020 }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Jr NTR",
+    "slug": "jr-ntr",
+    "title": "Young Tiger",
+    "portraitUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop",
+    "bannerUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=1200&h=600&fit=crop",
+    "debutYear": 2001,
+    "rating": 9.0,
+    "followers": 2200000,
+    "movies": [
+      { "slug": "simhadri", "title": "Simhadri", "year": 2003 },
+      { "slug": "yamadonga", "title": "Yamadonga", "year": 2007 },
+      { "slug": "temper", "title": "Temper", "year": 2015 },
+      { "slug": "aravinda-sametha", "title": "Aravinda Sametha", "year": 2018 },
+      { "slug": "rrr", "title": "RRR", "year": 2022 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Ram Charan",
+    "slug": "ram-charan",
+    "title": "Mega Power Star",
+    "portraitUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=600&fit=crop",
+    "bannerUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1200&h=600&fit=crop",
+    "debutYear": 2007,
+    "rating": 8.9,
+    "followers": 2100000,
+    "movies": [
+      { "slug": "magadheera", "title": "Magadheera", "year": 2009 },
+      { "slug": "racha", "title": "Racha", "year": 2012 },
+      { "slug": "yevadu", "title": "Yevadu", "year": 2014 },
+      { "slug": "rangasthalam", "title": "Rangasthalam", "year": 2018 },
+      { "slug": "rrr", "title": "RRR", "year": 2022 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Vijay Deverakonda",
+    "slug": "vijay-deverakonda",
+    "title": "Rowdy Star",
+    "portraitUrl": "https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&h=600&fit=crop",
+    "bannerUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1200&h=600&fit=crop",
+    "debutYear": 2011,
+    "rating": 8.7,
+    "followers": 1800000,
+    "movies": [
+      { "slug": "pelli-choopulu", "title": "Pelli Choopulu", "year": 2016 },
+      { "slug": "arjun-reddy", "title": "Arjun Reddy", "year": 2017 },
+      { "slug": "geetha-govindam", "title": "Geetha Govindam", "year": 2018 },
+      { "slug": "dear-comrade", "title": "Dear Comrade", "year": 2019 }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Nani",
+    "slug": "nani",
+    "title": "Natural Star",
+    "portraitUrl": "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=400&h=600&fit=crop",
+    "bannerUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=1200&h=600&fit=crop",
+    "debutYear": 2008,
+    "rating": 8.8,
+    "followers": 1500000,
+    "movies": [
+      { "slug": "eega", "title": "Eega", "year": 2012 },
+      { "slug": "bhale-bhale-magadivoy", "title": "Bhale Bhale Magadivoy", "year": 2015 },
+      { "slug": "jersey", "title": "Jersey", "year": 2019 },
+      { "slug": "shyam-singha-roy", "title": "Shyam Singha Roy", "year": 2021 }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Pawan Kalyan",
+    "slug": "pawan-kalyan",
+    "title": "Power Star",
+    "portraitUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=600&fit=crop",
+    "bannerUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1200&h=600&fit=crop",
+    "debutYear": 1996,
+    "rating": 9.3,
+    "followers": 2700000,
+    "movies": [
+      { "slug": "gabbar-singh", "title": "Gabbar Singh", "year": 2012 },
+      { "slug": "attarintiki-daredi", "title": "Attarintiki Daredi", "year": 2013 },
+      { "slug": "jalsa", "title": "Jalsa", "year": 2008 }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Chiranjeevi",
+    "slug": "chiranjeevi",
+    "title": "Megastar",
+    "portraitUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop",
+    "bannerUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1200&h=600&fit=crop",
+    "debutYear": 1978,
+    "rating": 9.5,
+    "followers": 3000000,
+    "movies": [
+      { "slug": "khaidi-no-150", "title": "Khaidi No. 150", "year": 2017 },
+      { "slug": "sye-raa", "title": "Sye Raa Narasimha Reddy", "year": 2019 },
+      { "slug": "godfather", "title": "GodFather", "year": 2022 }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Ravi Teja",
+    "slug": "ravi-teja",
+    "title": "Mass Maharaja",
+    "portraitUrl": "https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&h=600&fit=crop",
+    "bannerUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1200&h=600&fit=crop",
+    "debutYear": 1999,
+    "rating": 8.6,
+    "followers": 1400000,
+    "movies": [
+      { "slug": "kick", "title": "Kick", "year": 2009 },
+      { "slug": "power", "title": "Power", "year": 2014 },
+      { "slug": "krack", "title": "Krack", "year": 2021 }
+    ]
+  }
+]

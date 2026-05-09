@@ -1,0 +1,1 @@
+ALTER TABLE "meme_views" DROP COLUMN "ip_address";

@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>🎬 TMDB Ultimate Fetcher — Pure Data</title>
+<style>
+  :root{--bg:#0f172a;--card:#1e293b;--muted:#cbd5e1;--accent:#3b82f6;--success:#10b981;--warn:#f59e0b;--err:#ef4444}
+  body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:#f1f5f9;margin:0;padding:20px}
+  .container{max-width:1200px;margin:0 auto}
+  .card{background:var(--card);padding:16px;border-radius:10px;margin-bottom:16px;border:1px solid #2b3950}
+  .btn{background:var(--accent);color:white;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
+  .btn:disabled{opacity:.5;cursor:not-allowed}
+  .console{background:#000;padding:12px;border-radius:8px;height:260px;overflow:auto;font-family:monospace;color:#0f0}
+  .files{max-height:220px;overflow:auto}
+  .layer-btn{display:inline-block;padding:10px;border-radius:8px;border:1px solid #374151;margin-right:8px;cursor:pointer}
+  .layer-btn.active{background:var(--accent);color:#fff}
+  .stat{display:inline-block;margin-right:16px}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>🎬 TMDB Ultimate Fetcher — Pure Data</h2>
+      <div style="margin-top:8px;color:var(--muted)">No extra fields, no role categorization, just original TMDB API data.</div>
+    </div>
+
+    <div class="card">
+      <label>TMDB API Key</label><br/>
+      <input id="api-key" style="width:100%;padding:10px;margin-top:8px;background:#0b1220;border:1px solid #233044;color:#fff" value="" placeholder="Enter your TMDB API key"/>
+      <div style="margin-top:12px">
+        <span class="layer-btn active" id="layer-telugu-btn" onclick="toggleLayer('telugu')">📺 Original Telugu</span>
+        <span class="layer-btn" id="layer-dubbed-btn" onclick="toggleLayer('dubbed')">🎭 Dubbed Indian</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="btn" onclick="startFullFetch()">▶️ Start Full Fetch</button>
+      <button class="btn" onclick="startTestFetch()">🧪 Test (5)</button>
+      <button class="btn" onclick="exportCSV()">📄 Export CSV</button>
+      <div style="margin-top:12px">
+        <span class="stat">Movies Found: <b id="stat-movies">0</b></span>
+        <span class="stat">Files Saved: <b id="stat-fetched">0</b></span>
+        <span class="stat">Pages: <b id="stat-pages">0</b></span>
+        <span class="stat">Time: <b id="stat-time">0s</b></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Discovery Progress</h4>
+      <div style="background:#111;border-radius:8px;height:28px;overflow:hidden">
+        <div id="discovery-bar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--success));text-align:center;color:#000"></div>
+      </div>
+      <div style="height:10px"></div>
+      <h4>Fetching Progress</h4>
+      <div style="background:#111;border-radius:8px;height:28px;overflow:hidden">
+        <div id="fetching-bar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--success));text-align:center;color:#000"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Downloaded Files</h4>
+      <div id="files-list" class="files"><div style="color:var(--muted)">No files yet</div></div>
+    </div>
+
+    <div class="card">
+      <h4>Console</h4>
+      <div id="console" class="console">[Ready]</div>
+    </div>
+  </div>
+
+<script>
+const CONFIG = {
+  BASE_URL: 'https://api.themoviedb.org/3',
+  RATE_LIMIT_MS: 250,
+  RETRY_ATTEMPTS: 3,
+  RETRY_DELAY: 1000,
+  TEST_MOVIES: [1403735, 579974, 811941, 78581, 360133]
+};
+
+const STATE = {
+  isRunning: false,
+  isPaused: false,
+  moviesList: [],
+  fetchedMovies: [],
+  currentPage: 0,
+  startTime: null,
+  layers: { telugu: true, dubbed: false }
+};
+
+/* ================ UTILITIES ================ */
+function log(msg, type='info') {
+  const el = document.getElementById('console');
+  const ts = new Date().toLocaleTimeString();
+  const prefix = `[${ts}] `;
+  const wrap = document.createElement('div');
+  wrap.textContent = prefix + msg;
+  el.appendChild(wrap);
+  el.scrollTop = el.scrollHeight;
+}
+
+function updateStats() {
+  document.getElementById('stat-movies').textContent = STATE.moviesList.length;
+  document.getElementById('stat-fetched').textContent = STATE.fetchedMovies.length;
+  document.getElementById('stat-pages').textContent = STATE.currentPage;
+  if (STATE.startTime) {
+    const seconds = Math.floor((Date.now()-STATE.startTime)/1000);
+    document.getElementById('stat-time').textContent = seconds > 60 ? (Math.floor(seconds/60)+'m '+(seconds%60)+'s') : (seconds+'s');
+  }
+}
+
+function setBar(id, pct, text) {
+  const el = document.getElementById(id);
+  el.style.width = pct + '%';
+  el.textContent = text || Math.floor(pct)+'%';
+}
+async function sleep(ms){ return new Promise(r=>setTimeout(r,ms)); }
+
+/* ================ API HELPER ================ */
+async function fetchWithRetry(url, attempts = CONFIG.RETRY_ATTEMPTS) {
+  for (let i=0;i<attempts;i++){
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('HTTP '+res.status);
+      return await res.json();
+    } catch (err) {
+      log(`Retry ${i+1}/${attempts} for ${url} — ${err.message}`, 'warn');
+      if (i === attempts-1) throw err;
+      await sleep(CONFIG.RETRY_DELAY*(i+1));
+    }
+  }
+}
+
+/* ===== PURE TMDB FETCH (NO ROLE CATEGORY, NO DATA CHANGE) ===== */
+async function getMovieDetailsOriginal(movieId) {
+  const key = document.getElementById('api-key').value.trim();
+  const url = `${CONFIG.BASE_URL}/movie/${movieId}?api_key=${key}&append_to_response=credits,videos,images,keywords,external_ids,release_dates`;
+  const data = await fetchWithRetry(url);
+  // Don't mutate, don't sort, just return JSON as-is
+  return data;
+}
+
+async function runDiscoveryPhase() {
+  log('🔍 Discovery started');
+  const key = document.getElementById('api-key').value.trim();
+  if (!key) throw new Error('Missing API key');
+
+  if (STATE.mode === 'test') {
+    STATE.moviesList = CONFIG.TEST_MOVIES.map(id => ({ id, title:'(test)', type:'test' }));
+    setBar('discovery-bar',100,'100% (test)');
+    updateStats();
+    log('✅ Test mode: preloaded test movies');
+    return;
+  }
+
+  const discovered = new Set();
+  if (STATE.layers.telugu) {
+    log('Layer 1: original Telugu — fetching page 1');
+    const page1 = await fetchWithRetry(`${CONFIG.BASE_URL}/discover/movie?api_key=${key}&with_original_language=te&page=1&sort_by=popularity.desc`);
+    const totalPages = STATE.mode === 'small' ? 1 : page1.total_pages;
+    log(`TMDB reports ${page1.total_results} Telugu movies — pages: ${totalPages}`);
+    for (let p=1; p<= (STATE.mode==='small'?1:totalPages); p++){
+      if (!STATE.isRunning) break;
+      while (STATE.isPaused) await sleep(500);
+      const data = (p===1) ? page1 : await fetchWithRetry(`${CONFIG.BASE_URL}/discover/movie?api_key=${key}&with_original_language=te&page=${p}&sort_by=popularity.desc`);
+      data.results.forEach(m=>{
+        if (!discovered.has(m.id)) { discovered.add(m.id); STATE.moviesList.push({id:m.id, title:m.title||m.original_title, type:'original'}); }
+      });
+      STATE.currentPage = p;
+      setBar('discovery-bar', Math.round((p/totalPages)*50), `${p}/${totalPages}`);
+      updateStats();
+      await sleep(CONFIG.RATE_LIMIT_MS);
+    }
+    log(`Layer1 done — total now ${STATE.moviesList.length}`);
+  }
+
+  if (STATE.layers.dubbed) {
+    log('Layer 2: dubbed Indian — fetching page 1');
+    const page1 = await fetchWithRetry(`${CONFIG.BASE_URL}/discover/movie?api_key=${key}&with_spoken_languages=te&with_origin_country=IN&vote_count.gte=50&page=1&sort_by=popularity.desc`);
+    const totalPages = STATE.mode === 'small' ? 1 : Math.min(page1.total_pages, 100);
+    for (let p=1; p<=totalPages; p++){
+      if (!STATE.isRunning) break;
+      while (STATE.isPaused) await sleep(500);
+      const data = (p===1) ? page1 : await fetchWithRetry(`${CONFIG.BASE_URL}/discover/movie?api_key=${key}&with_spoken_languages=te&with_origin_country=IN&vote_count.gte=50&page=${p}&sort_by=popularity.desc`);
+      let added=0;
+      data.results.forEach(m=>{
+        if (!discovered.has(m.id)) { discovered.add(m.id); STATE.moviesList.push({id:m.id, title:m.title||m.original_title, type:'dubbed'}); added++; }
+      });
+      setBar('discovery-bar', 50 + Math.round((p/totalPages)*50), `L2 ${p}/${totalPages}`);
+      updateStats();
+      await sleep(CONFIG.RATE_LIMIT_MS);
+    }
+    log(`Layer2 done — total now ${STATE.moviesList.length}`);
+  }
+
+  log(`✅ Discovery complete — found ${STATE.moviesList.length} movies`);
+  STATE.totalMovies = STATE.moviesList.length;
+}
+
+async function runFetchingPhase() {
+  log('🎬 Fetching details for discovered movies');
+  STATE.startTime = Date.now();
+  for (let i=0;i<STATE.moviesList.length;i++) {
+    if (!STATE.isRunning) break;
+    while (STATE.isPaused) await sleep(500);
+
+    const movie = STATE.moviesList[i];
+    try {
+      log(`Fetching (${i+1}/${STATE.moviesList.length}) id=${movie.id}`);
+      const data = await getMovieDetailsOriginal(movie.id);
+
+      const slug = ((data.title || data.original_title || 'movie') + '-' + data.id).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+      const filename = `${slug}.json`;
+      const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(a.href);
+
+      STATE.fetchedMovies.push({id: movie.id, title: data.title || data.original_title, filename, size: blob.size});
+      addFileToList(filename, blob.size, movie.type);
+
+      setBar('fetching-bar', Math.round(((i+1)/STATE.moviesList.length)*100), `${i+1}/${STATE.moviesList.length}`);
+      updateStats();
+      await sleep(CONFIG.RATE_LIMIT_MS);
+    } catch (err) {
+      log(`❌ Error fetching ${movie.id}: ${err.message}`, 'err');
+    }
+  }
+  log(`🎉 Fetching finished — saved ${STATE.fetchedMovies.length} files`);
+}
+
+function addFileToList(name,size,type){
+  const c = document.getElementById('files-list');
+  if (c.querySelector('div') && c.querySelector('div').textContent.includes('No files')) c.innerHTML='';
+  const row = document.createElement('div');
+  row.style.padding='8px';
+  row.style.borderBottom='1px solid #16202b';
+  row.innerHTML = `<span style="font-family:monospace">📄 ${name}</span> <span style="float:right;color:#9aa3b2">${type} • ${(size/1024).toFixed(1)} KB</span>`;
+  c.appendChild(row);
+}
+
+function toggleLayer(key){
+  STATE.layers[key] = !STATE.layers[key];
+  document.getElementById(`layer-${key}-btn`).classList.toggle('active');
+  log(`${key} layer ${STATE.layers[key] ? 'enabled' : 'disabled'}`);
+}
+
+function startFullFetch(){
+  STATE.mode = 'full';
+  startFetching();
+}
+function startTestFetch(){
+  STATE.mode = 'test';
+  startFetching();
+}
+
+async function startFetching(){
+  try {
+    const key = document.getElementById('api-key').value.trim();
+    if (!key) { alert('Please enter TMDB API key'); return; }
+    STATE.isRunning = true;
+    STATE.isPaused = false;
+    STATE.moviesList = [];
+    STATE.fetchedMovies = [];
+    document.getElementById('files-list').innerHTML = '<div style="color:var(--muted)">No files yet</div>';
+    setBar('discovery-bar',0,'0%'); setBar('fetching-bar',0,'0%');
+    log('🚀 Starting discovery + fetch');
+    await runDiscoveryPhase();
+    if (STATE.moviesList.length > 0) {
+      await runFetchingPhase();
+    }
+    updateStats();
+  } catch (err) {
+    log('Fatal: '+err.message,'err');
+  } finally {
+    STATE.isRunning = false;
+  }
+}
+
+function exportCSV(){
+  if (STATE.fetchedMovies.length===0){ alert('No files to export'); return; }
+  const rows = [['ID','Title','Filename','SizeKB']];
+  for (const m of STATE.fetchedMovies) rows.push([m.id, `"${m.title}"`, m.filename, (m.size/1024).toFixed(2)]);
+  const blob = new Blob([rows.map(r=>r.join(',')).join('\n')], {type:'text/csv'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `tmdb-movies-${Date.now()}.csv`; a.click(); URL.revokeObjectURL(a.href);
+  log('CSV exported');
+}
+
+/* ================ INIT ================ */
+document.getElementById('layer-telugu-btn').classList.add('active');
+document.getElementById('layer-dubbed-btn').classList.remove('active');
+setInterval(updateStats,1000);
+log('TMDB Fetcher ready — pure JSON mode');
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "pushpa-2",
+    "title": "Pushpa 2: The Rule",
+    "status": "post",
+    "date": "2025-08-15",
+    "director": "Sukumar",
+    "music": "Devi Sri Prasad",
+    "poster": "https://image.tmdb.org/t/p/w500/qrGtVFxaD8c7et0jUtaYhyTzzPg.jpg",
+    "tmdbId": "1160018"
+  },
+  {
+    "slug": "devara",
+    "title": "Devara",
+    "status": "filming",
+    "date": "2025-04-05",
+    "director": "Koratala Siva",
+    "music": "Anirudh Ravichander"
+  },
+  {
+    "slug": "game-changer",
+    "title": "Game Changer",
+    "status": "post",
+    "date": "2025-12-20",
+    "director": "S. Shankar",
+    "music": "Thaman S"
+  }
+]

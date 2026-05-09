@@ -1,0 +1,2564 @@
+
+
+'use client';
+
+import { useEffect, useMemo, useState, useRef } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import {
+  FaInstagram,
+  FaTwitter,
+  FaFacebook,
+  FaStar,
+  FaAward,
+  FaHeart,
+  FaRegHeart,
+  FaSpinner,
+  FaArrowLeft,
+  FaTrophy,
+  FaGamepad,
+  FaUser,
+  FaLightbulb,
+  FaCar,
+  FaHandHoldingHeart,
+  FaTheaterMasks,
+  FaUsers,
+  FaExclamationTriangle,
+  FaGlobe,
+  FaHashtag,
+  FaFilm,
+  FaQuoteLeft,
+  FaNewspaper,
+  FaMicrophone,
+  FaDumbbell,
+  FaPalette,
+  FaChartLine,
+  FaYoutube,
+  FaPlay,
+  FaCalendarAlt,
+  FaMapMarkerAlt,
+  FaMoneyBillWave,
+  FaTv,
+  FaChevronRight,
+  FaChild,
+  FaLinkedin,
+  FaPinterest,
+  FaRss,
+  FaBriefcase,
+  FaGraduationCap,
+  FaHome,
+  FaHeartbeat,
+  FaBook,
+  FaCertificate,
+  FaMask,
+  FaRing,
+  FaGlasses,
+  FaCamera,
+  FaMusic,
+  FaVolumeUp,
+  FaVolumeMute,
+  FaVideo,
+} from 'react-icons/fa';
+
+import { toggleHeroFollow, getHeroFollowStatus, getHeroFollowerCount } from '@/app/actions/heroes';
+
+// ⚙️ CONFIG
+const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
+const DEFAULT_POSTER = '/images/no-poster.png';
+const DEFAULT_AVATAR = '/images/default-avatar.png';
+const DEFAULT_BANNER = '/images/default-banner.jpg';
+
+// ============================================
+// HELPER: Extract image URL from JSONB data
+// ============================================
+
+function getImageUrl(imageObj: any): string {
+  if (!imageObj) return DEFAULT_POSTER;
+
+  if (typeof imageObj === 'string') {
+    if (imageObj.startsWith('/') && !imageObj.startsWith('//')) {
+      return `${TMDB_IMAGE_BASE}${imageObj}`;
+    }
+    if (imageObj.startsWith('http')) return imageObj;
+    return imageObj;
+  }
+
+  if (imageObj.url) {
+    if (imageObj.url.startsWith('/') && !imageObj.url.startsWith('//')) {
+      return `${TMDB_IMAGE_BASE}${imageObj.url}`;
+    }
+    return imageObj.url;
+  }
+
+  if (imageObj.fallback) return imageObj.fallback;
+
+  return DEFAULT_POSTER;
+}
+
+// ============================================
+// DATA CACHE LAYER - Pre-load everything!
+// ============================================
+
+const dataCache = new Map<string, any>();
+
+function getCachedData(key: string, defaultValue: any = null) {
+  return dataCache.has(key) ? dataCache.get(key) : defaultValue;
+}
+
+function setCachedData(key: string, value: any) {
+  dataCache.set(key, value);
+}
+
+// ============================================
+// MAIN HERO DETAIL CLIENT COMPONENT
+// ============================================
+
+export default function HeroDetailClient({ heroData: initialHeroData }: { heroData: any }) {
+  const { data: session } = useSession();
+  const router = useRouter();
+
+  // ✅ v15: Hero data now comes from JSONB
+  const [heroData] = useState<any>(initialHeroData);
+  const [isFollowing, setIsFollowing] = useState(false);
+  const [followerCount, setFollowerCount] = useState(0);
+  const [activeTab, setActiveTab] = useState('overview');
+  const [mounted, setMounted] = useState(false);
+  const [isPreloading, setIsPreloading] = useState(true);
+
+  // ✅ Hydration fix
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // ✅ Load follow data
+  useEffect(() => {
+    const loadFollowData = async () => {
+      if (!heroData || !mounted) return;
+
+      try {
+        if (session?.user) {
+          const followStatus = await getHeroFollowStatus(heroData.slug);
+          setIsFollowing(followStatus);
+        }
+        const count = await getHeroFollowerCount(heroData.slug);
+        setFollowerCount(count);
+      } catch (error) {
+        console.error('❌ Error loading follow data:', error);
+      }
+    };
+
+    loadFollowData();
+  }, [heroData, session, mounted]);
+
+  // ✅ PRELOAD ALL TAB DATA ON MOUNT - Extract from v15 JSONB!
+  useEffect(() => {
+    if (!mounted || !heroData) return;
+
+    const preloadData = async () => {
+      setIsPreloading(true);
+      try {
+        const cacheKey = `hero_${heroData.slug}_all_data`;
+        if (getCachedData(cacheKey)) {
+          console.log('✅ Data already cached!');
+          setIsPreloading(false);
+          return;
+        }
+
+        console.log('🔄 Pre-loading all hero data from v15 JSONB...');
+
+        // ✅ v15: Extract data from JSONB
+        await Promise.all([
+          // Movies from JSONB data
+          (async () => {
+            const movies = heroData.movies || [];
+            if (movies.length > 0) {
+              setCachedData('movies_data', movies);
+              setCachedData('movies_loaded', true);
+              console.log('✅ Movies loaded:', movies.length);
+            }
+          })(),
+
+          // Upcoming movies from JSONB data
+          (async () => {
+            const upcoming = heroData.upcoming || [];
+            if (upcoming.length > 0) {
+              setCachedData('upcoming_data', upcoming);
+              setCachedData('upcoming_loaded', true);
+              console.log('✅ Upcoming loaded:', upcoming.length);
+            }
+          })(),
+
+          // Awards from JSONB data
+          (async () => {
+            const awards = heroData.awards || [];
+            if (awards.length > 0) {
+              setCachedData('awards_data', awards);
+              setCachedData('awards_loaded', true);
+              console.log('✅ Awards loaded:', awards.length);
+            }
+          })(),
+
+          // Gallery from JSONB images
+          (async () => {
+            const gallery = heroData.images?.gallery || [];
+            if (gallery.length > 0) {
+              setCachedData('gallery_data', gallery);
+              setCachedData('gallery_loaded', true);
+              console.log('✅ Gallery loaded:', gallery.length);
+            }
+          })(),
+
+          // Lifestyle from JSONB data
+          (async () => {
+            const lifestyle = heroData.lifestyle || {};
+            if (Object.keys(lifestyle).length > 0) {
+              setCachedData('lifestyle_data', lifestyle);
+              setCachedData('lifestyle_loaded', true);
+              console.log('✅ Lifestyle loaded');
+            }
+          })(),
+
+          // Personal + Career Info from JSONB
+          (async () => {
+            const personal = heroData.personalInfo || {};
+            const career = heroData.careerInfo || {};
+            if (Object.keys(personal).length > 0 || Object.keys(career).length > 0) {
+              setCachedData('info_data', { personal, career });
+              setCachedData('info_loaded', true);
+              console.log('✅ Info loaded');
+            }
+          })(),
+        ]);
+
+        setCachedData(cacheKey, true);
+        console.log('✅ ALL v15 DATA PRE-LOADED FROM JSONB!');
+        setIsPreloading(false);
+      } catch (error) {
+        console.error('❌ Error preloading data:', error);
+        setIsPreloading(false);
+      }
+    };
+
+    preloadData();
+  }, [mounted, heroData]);
+
+  // ✅ Handle follow toggle
+  const handleFollow = async () => {
+    if (!session?.user) {
+      router.push('/signin?redirect=/hero/' + heroData.slug);
+      return;
+    }
+
+    try {
+      await toggleHeroFollow(heroData.slug, heroData.name);
+      setIsFollowing(!isFollowing);
+      setFollowerCount((prev) => (isFollowing ? prev - 1 : prev + 1));
+    } catch (error) {
+      console.error('❌ Error toggling follow:', error);
+    }
+  };
+
+  if (!heroData) {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <p className="text-white text-lg">❌ Hero not found</p>
+      </div>
+    );
+  }
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-black">
+      {/* ✅ PRELOAD PROGRESS INDICATOR */}
+      {isPreloading && (
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 2, ease: 'easeInOut' }}
+          className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 z-50 origin-left"
+        />
+      )}
+
+      {/* NAVBAR */}
+      <PremiumNavbar session={session} router={router} heroName={heroData.name} />
+
+      {/* TAB NAVIGATION */}
+      <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} hero={heroData} />
+
+      {/* TAB CONTENT */}
+      <div className="px-4 sm:px-6 md:px-12 py-8 md:py-12 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+            >
+              {activeTab === 'overview' && <OverviewTab hero={heroData} />}
+              {activeTab === 'info' && <InfoTab hero={heroData} />}
+              {activeTab === 'movies' && <MoviesTab hero={heroData} />}
+              {activeTab === 'upcoming' && <UpcomingTab hero={heroData} />}
+              {activeTab === 'lifestyle' && <LifestyleTab hero={heroData} />}
+              {activeTab === 'awards' && <AwardsTab hero={heroData} />}
+              {activeTab === 'gallery' && <GalleryTab hero={heroData} />}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
+// PREMIUM NAVBAR - WITH USER PROFILE
+// ============================================
+
+function PremiumNavbar({ session, router, heroName }: any) {
+  return (
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="sticky top-0 z-50 bg-black/50 backdrop-blur-2xl border-b border-white/5"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-3 md:py-4 flex items-center justify-between gap-4">
+        {/* LEFT: Back + Logo */}
+        <div className="flex items-center gap-2 md:gap-4 min-w-0">
+          <motion.button
+            onClick={() => router.back()}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="p-2 hover:bg-white/5 rounded-lg transition flex-shrink-0"
+            title="Go back"
+          >
+            <FaArrowLeft size={18} className="text-white" />
+          </motion.button>
+
+          <Link href="/heroes" className="text-base md:text-lg font-black hidden sm:block text-white hover:text-white/80 transition">
+            🎬
+          </Link>
+
+          {/* Current Hero Name */}
+          <div className="hidden md:flex items-center gap-2 pl-4 border-l border-white/10">
+            <span className="text-white/40 text-xs">Viewing:</span>
+            <span className="text-white font-bold text-sm truncate max-w-xs">{heroName}</span>
+          </div>
+        </div>
+
+        {/* RIGHT: Nav Links + User Profile */}
+        <div className="flex items-center gap-2 md:gap-4 flex-wrap justify-end min-w-0">
+          <Link href="/heroes" className="px-2 md:px-3 py-1.5 md:py-2 text-xs md:text-sm text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition hidden md:block">
+            Heroes
+          </Link>
+
+          {/* USER PROFILE SECTION */}
+          {session?.user ? (
+            <Link
+              href="/profile"
+              className="group flex items-center gap-2 px-2 md:px-3 py-1.5 md:py-2 rounded-lg hover:bg-white/5 transition flex-shrink-0"
+              title={session.user.name || 'Profile'}
+            >
+              <div className="w-7 h-7 md:w-8 md:h-8 rounded-full overflow-hidden border border-white/20 group-hover:border-white/40 transition">
+                {session.user.image ? (
+                  <img
+                    src={session.user.image}
+                    alt={session.user.name || 'Profile'}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-white/20 flex items-center justify-center text-white font-bold text-xs">
+                    {session.user.name?.charAt(0) || 'U'}
+                  </div>
+                )}
+              </div>
+              <span className="text-white/70 text-xs hidden md:inline group-hover:text-white transition">
+                {session.user.name?.split(' ')[0] || 'User'}
+              </span>
+            </Link>
+          ) : (
+            <Link
+              href="/signin"
+              className="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm bg-white text-black font-bold rounded-lg hover:bg-white/90 transition flex-shrink-0"
+            >
+              Sign In
+            </Link>
+          )}
+        </div>
+      </div>
+    </motion.nav>
+  );
+}
+
+// ============================================
+// SOCIAL BUTTON COMPONENT
+// ============================================
+
+function SocialButtonGlass({ icon: Icon, url }: any) {
+  return (
+    <motion.a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.05, y: -2 }}
+      whileTap={{ scale: 0.95 }}
+      className="px-4 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-semibold transition text-sm flex items-center gap-2 border border-white/20 hover:border-white/30 backdrop-blur-sm"
+    >
+      <Icon size={14} />
+    </motion.a>
+  );
+}
+
+function PremiumHeroBannerV4({ hero, isFollowing, followerCount, onFollow }: any) {
+  const [bannerType, setBannerType] = useState<'video' | 'image'>('image');
+  const [videoMuted, setVideoMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const getImageUrl = (imageObj: any): string => {
+    if (!imageObj) return '';
+    if (typeof imageObj === 'string') return imageObj;
+    if (typeof imageObj === 'object') {
+      if (imageObj.fallback) return imageObj.fallback;
+      if (imageObj.url) return imageObj.url;
+    }
+    return '';
+  };
+
+  // ✅ v15: Extract from JSONB
+  let bannerUrl = getImageUrl(hero.images?.banner) || getImageUrl(hero.images?.featured) || DEFAULT_BANNER;
+  let avatarUrl = getImageUrl(hero.images?.avatar) || getImageUrl(hero.images?.portrait) || getImageUrl(hero.images?.gallery?.[0]) || DEFAULT_AVATAR;
+  const videoUrl = hero.images?.banner?.videoUrl || null;
+
+  useEffect(() => {
+    if (videoUrl && (videoUrl.endsWith('.mp4') || videoUrl.endsWith('.webm'))) {
+      setBannerType('video');
+    } else {
+      setBannerType('image');
+    }
+  }, [videoUrl]);
+
+  return (
+    <motion.section className="relative h-[75vh] overflow-hidden bg-black">
+      {bannerType === 'video' && videoUrl ? (
+        <motion.video
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          ref={videoRef}
+          src={videoUrl}
+          autoPlay
+          loop
+          muted={videoMuted}
+          className="w-full h-full object-cover object-top"
+        />
+      ) : (
+        <motion.img
+          key={bannerUrl}
+          initial={{ opacity: 0, scale: 1.02 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5 }}
+          src={bannerUrl}
+          alt={hero.name}
+          className="w-full h-full object-cover object-top"
+          onError={(e) => {
+            (e.currentTarget as HTMLImageElement).src = DEFAULT_BANNER;
+          }}
+        />
+      )}
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+
+      {bannerType === 'video' && videoUrl && (
+        <motion.button
+          onClick={() => setVideoMuted(!videoMuted)}
+          className="absolute top-6 right-6 p-3 rounded-full bg-white/20 text-white hover:bg-white/30 transition backdrop-blur-md shadow-lg z-20"
+        >
+          {videoMuted ? <FaVolumeMute size={18} /> : <FaVolumeUp size={18} />}
+        </motion.button>
+      )}
+
+      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 z-10">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="flex items-end gap-6 w-full">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="hidden md:block flex-shrink-0"
+            >
+              <div className="w-60 h-80 rounded-xl overflow-hidden border-4 border-white/20 shadow-2xl bg-black/40">
+                <img
+                  key={avatarUrl}
+                  src={avatarUrl}
+                  alt={hero.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = DEFAULT_AVATAR;
+                  }}
+                  loading="lazy"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.7 }}
+              className="flex-1 min-w-0"
+            >
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-3 leading-none drop-shadow-2xl">
+                {hero.name}
+              </h1>
+
+              {hero.title && (
+                <p className="text-2xl md:text-3xl text-white/80 font-bold mb-4 drop-shadow-lg">{hero.title}</p>
+              )}
+
+              <div className="flex flex-wrap gap-4 mb-6">
+                {hero.movies && hero.movies.length > 0 && (
+                  <div className="flex items-center gap-2 text-white/80">
+                    <FaFilm className="text-white/60 flex-shrink-0" size={18} />
+                    <span className="font-semibold">{hero.movies.length} Movies</span>
+                  </div>
+                )}
+
+                {hero.awards && hero.awards.length > 0 && (
+                  <div className="flex items-center gap-2 text-white/80">
+                    <FaTrophy className="text-white/60 flex-shrink-0" size={18} />
+                    <span className="font-semibold">{hero.awards.length} Awards</span>
+                  </div>
+                )}
+
+                <div className="flex items-center gap-2 text-white/80">
+                  <FaHeart className="text-white/60 flex-shrink-0" size={18} />
+                  <span className="font-semibold">{followerCount.toLocaleString()} Followers</span>
+                </div>
+
+                {hero.personalInfo?.birthDate && (
+                  <div className="flex items-center gap-2 text-white/80">
+                    <FaCalendarAlt className="text-white/60 flex-shrink-0" size={18} />
+                    <span className="font-semibold">
+                      Age {new Date().getFullYear() - new Date(hero.personalInfo.birthDate).getFullYear()}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <motion.button
+                  onClick={onFollow}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className={`px-6 py-3 rounded-lg font-bold transition shadow-lg flex items-center gap-2 ${
+                    isFollowing
+                      ? 'bg-white/10 text-white border border-white/30 hover:bg-white/20 backdrop-blur-sm'
+                      : 'bg-white text-black hover:bg-white/95'
+                  }`}
+                >
+                  {isFollowing ? <FaHeart /> : <FaRegHeart />}
+                  {isFollowing ? 'Following' : 'Follow'}
+                </motion.button>
+
+                {hero.socialMedia?.instagram && (
+                  <motion.a
+                    href={hero.socialMedia.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-bold transition flex items-center gap-2 backdrop-blur-sm"
+                  >
+                    <FaInstagram /> Instagram
+                  </motion.a>
+                )}
+
+                {hero.socialMedia?.twitter && (
+                  <motion.a
+                    href={hero.socialMedia.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-bold transition flex items-center gap-2 backdrop-blur-sm"
+                  >
+                    <FaTwitter /> Twitter
+                  </motion.a>
+                )}
+
+                {hero.socialMedia?.youtube && (
+                  <motion.a
+                    href={hero.socialMedia.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-bold transition flex items-center gap-2 backdrop-blur-sm"
+                  >
+                    <FaYoutube /> YouTube
+                  </motion.a>
+                )}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </motion.section>
+  );
+}
+
+function TabNavigation({ activeTab, setActiveTab, hero }: any) {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const tabs = [
+    { id: 'overview', label: 'Overview', icon: FaUser, count: 0 },
+    { id: 'info', label: 'Info', icon: FaGlobe, count: 0 },
+    { id: 'movies', label: 'Movies', icon: FaFilm, count: hero.movies?.length || 0 },
+    { id: 'upcoming', label: 'Upcoming', icon: FaCalendarAlt, count: hero.upcoming?.length || 0 },
+    { id: 'lifestyle', label: 'Lifestyle', icon: FaCar, count: (hero.lifestyle?.carCollection?.length || 0) + (hero.lifestyle?.properties?.length || 0) },
+    { id: 'awards', label: 'Awards', icon: FaTrophy, count: hero.awards?.length || 0 },
+    { id: 'gallery', label: 'Gallery', icon: FaPalette, count: hero.images?.gallery?.length || 0 },
+  ];
+
+  useEffect(() => {
+    const activeTabElement = scrollContainerRef.current?.querySelector(`[data-tab="${activeTab}"]`);
+    if (activeTabElement) {
+      activeTabElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  }, [activeTab]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const currentIndex = tabs.findIndex((t) => t.id === activeTab);
+      if (e.key === 'ArrowLeft' && currentIndex > 0) {
+        setActiveTab(tabs[currentIndex - 1].id);
+      } else if (e.key === 'ArrowRight' && currentIndex < tabs.length - 1) {
+        setActiveTab(tabs[currentIndex + 1].id);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeTab, tabs, setActiveTab]);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'left' ? -300 : 300,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="sticky top-[68px] md:top-[76px] z-40 bg-black/50 backdrop-blur-xl border-b border-white/5"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative">
+        <button
+          onClick={() => scroll('left')}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-full bg-gradient-to-r from-black via-black to-transparent flex items-center justify-center text-white hover:text-white/80 transition hidden md:flex"
+          aria-label="Scroll left"
+        >
+          <FaChevronRight className="rotate-180" size={14} />
+        </button>
+
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-1 md:gap-2 overflow-x-auto scrollbar-hide py-3 px-0 md:px-10 scroll-smooth"
+        >
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <motion.button
+                key={tab.id}
+                data-tab={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`flex items-center gap-1.5 px-3 md:px-4 py-2 md:py-2.5 rounded-lg font-medium text-xs md:text-sm transition whitespace-nowrap flex-shrink-0 border ${
+                  activeTab === tab.id
+                    ? 'bg-white text-black border-white shadow-lg'
+                    : 'bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20'
+                }`}
+              >
+                {Icon && <Icon size={12} className="md:text-sm" />}
+                <span className="hidden sm:inline">{tab.label}</span>
+                <span className="sm:hidden text-xs">{tab.label.slice(0, 3)}</span>
+                {tab.count > 0 && (
+                  <span className="ml-1 px-2 py-0.5 bg-white/20 rounded-full text-xs font-bold">
+                    {tab.count}
+                  </span>
+                )}
+              </motion.button>
+            );
+          })}
+        </div>
+
+        <button
+          onClick={() => scroll('right')}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-full bg-gradient-to-l from-black via-black to-transparent flex items-center justify-center text-white hover:text-white/80 transition hidden md:flex"
+          aria-label="Scroll right"
+        >
+          <FaChevronRight size={14} />
+        </button>
+
+        <div className="absolute bottom-1 right-4 text-white/20 text-[10px] pointer-events-none hidden lg:block">
+          ← → Navigation
+        </div>
+
+        <style jsx>{`
+          .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+          }
+          .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+        `}</style>
+      </div>
+    </motion.div>
+  );
+}
+function InfoCard({ label, value, icon: Icon }: any) {
+  if (!value) return null;
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="flex items-start gap-3 p-3 md:p-4 rounded-lg bg-white/5 border border-white/10 hover:border-white/20 transition"
+    >
+      {Icon && <Icon className="text-white/60 mt-1 flex-shrink-0" size={16} />}
+      <div>
+        <p className="text-white/50 text-xs md:text-sm font-medium mb-1">{label}</p>
+        <p className="text-white font-semibold text-sm md:text-base line-clamp-2">{value}</p>
+      </div>
+    </motion.div>
+  );
+}
+
+function GenreBar({ genre, rating }: any) {
+  const ratingValue = typeof rating === 'number' ? rating : rating?.rating || 0;
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+    >
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-white font-medium text-xs md:text-sm capitalize">{genre}</span>
+        <span className="text-white/60 text-xs font-semibold">{ratingValue.toFixed(1)}/10</span>
+      </div>
+      <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: `${Math.min(ratingValue * 10, 100)}%` }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="h-full bg-white"
+        />
+      </div>
+    </motion.div>
+  );
+}
+
+function SectionTitle({ emoji, title }: any) {
+  return (
+    <motion.h2
+      initial={{ opacity: 0, x: -10 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="text-2xl md:text-3xl font-black text-white mb-6 md:mb-8 flex items-center gap-2"
+    >
+      <span className="text-2xl md:text-3xl">{emoji}</span> {title}
+    </motion.h2>
+  );
+}
+
+function AuraCard({ icon: Icon, title, value }: any) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      className="rounded-lg p-4 md:p-5 bg-white/5 border border-white/10 hover:border-white/20 transition group"
+    >
+      <div className="flex items-center gap-3 mb-3">
+        {Icon && <Icon className="text-white/60 group-hover:text-white/80 transition" size={16} />}
+        <h3 className="text-white font-bold text-sm md:text-base">{title}</h3>
+      </div>
+      <p className="text-white/60 text-xs md:text-sm leading-relaxed line-clamp-3">{value}</p>
+    </motion.div>
+  );
+}
+
+function OverviewTab({ hero }: any) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="space-y-10 md:space-y-14"
+    >
+      {hero.bio && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="📖" title="Biography" />
+          <div className="rounded-lg p-5 md:p-6 bg-white/5 border border-white/10">
+            <p className="text-white/80 text-sm md:text-base leading-relaxed mb-3">
+              {hero.bio}
+            </p>
+            <p className="text-white/40 text-xs">
+              {hero.bio.split(' ').length} words · ~{Math.ceil(hero.bio.split(' ').length / 200)} min read
+            </p>
+          </div>
+        </motion.section>
+      )}
+
+      {hero.heroAura && Object.keys(hero.heroAura).length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="⭐" title="Hero Aura" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {Object.entries(hero.heroAura).map(([key, value]: any) => (
+              <AuraCard
+                key={key}
+                title={key.replace(/([A-Z])/g, ' $1').trim()}
+                value={value}
+              />
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {hero.genreStrength && Object.keys(hero.genreStrength).length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="🎭" title="Genre Mastery" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {Object.entries(hero.genreStrength).map(([genre, ratingData]: any, idx: number) => (
+              <motion.div
+                key={genre}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                className="p-4 md:p-6 rounded-lg bg-white/5 border border-white/10"
+              >
+                <GenreBar genre={genre} rating={ratingData} />
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {hero.physicalTransformations && hero.physicalTransformations.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="🏋️" title="Physical Transformations" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {hero.physicalTransformations.map((transformation: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10 hover:border-white/20 transition"
+              >
+                <h3 className="text-white font-bold text-base md:text-lg mb-3">
+                  {transformation.movie}
+                </h3>
+                <div className="space-y-2 text-white/70 text-xs md:text-sm">
+                  {transformation.transformation && (
+                    <p><span className="text-white/50 font-medium">Transform:</span> {transformation.transformation}</p>
+                  )}
+                  {transformation.duration && (
+                    <p><span className="text-white/50 font-medium">Duration:</span> {transformation.duration}</p>
+                  )}
+                  {transformation.trainer && (
+                    <p><span className="text-white/50 font-medium">Trainer:</span> {transformation.trainer}</p>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {hero.voiceProfile && Object.keys(hero.voiceProfile).length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="🎤" title="Voice Profile" />
+          <div className="rounded-lg p-5 md:p-6 bg-white/5 border border-white/10 space-y-4 md:space-y-6">
+            {hero.voiceProfile.voiceType && (
+              <div>
+                <p className="text-white/50 text-xs md:text-sm font-bold mb-2 uppercase tracking-wider">Voice Type</p>
+                <p className="text-white font-bold text-base md:text-lg">{hero.voiceProfile.voiceType}</p>
+              </div>
+            )}
+
+            {hero.voiceProfile.description && (
+              <div>
+                <p className="text-white/50 text-xs md:text-sm font-bold mb-2 uppercase tracking-wider">Description</p>
+                <p className="text-white/80 text-sm md:text-base leading-relaxed">{hero.voiceProfile.description}</p>
+              </div>
+            )}
+
+            {(hero.voiceProfile.characteristics || hero.voiceProfile.notableCharacteristics) && (
+              <div>
+                <p className="text-white/50 text-xs md:text-sm font-bold mb-3 uppercase tracking-wider">Characteristics</p>
+                <div className="flex flex-wrap gap-2">
+                  {(hero.voiceProfile.characteristics || hero.voiceProfile.notableCharacteristics).map((char: string, i: number) => (
+                    <span key={i} className="px-3 py-1 bg-white/10 text-white text-xs rounded-full font-medium border border-white/20">
+                      {char}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {(hero.voiceProfile.languagesFluent || hero.voiceProfile.languages) && (
+              <div>
+                <p className="text-white/50 text-xs md:text-sm font-bold mb-3 uppercase tracking-wider">Languages</p>
+                <div className="flex flex-wrap gap-2">
+                  {(hero.voiceProfile.languagesFluent || hero.voiceProfile.languages).map((lang: string, i: number) => (
+                    <span key={i} className="px-3 py-1 bg-white/10 text-white text-xs rounded-full font-bold">
+                      {lang}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {hero.voiceProfile.iconicDialogues && hero.voiceProfile.iconicDialogues.length > 0 && (
+              <div>
+                <p className="text-white/50 text-xs md:text-sm font-bold mb-3 uppercase tracking-wider">Iconic Dialogues</p>
+                <div className="space-y-2">
+                  {hero.voiceProfile.iconicDialogues.slice(0, 3).map((dialogue: any, i: number) => (
+                    <div key={i} className="p-3 md:p-4 bg-black/30 rounded-lg border border-white/10">
+                      <p className="text-white italic text-xs md:text-sm mb-1">
+                        "{dialogue.dialogue || dialogue}"
+                      </p>
+                      {dialogue.movie && (
+                        <p className="text-white/40 text-xs"><FaQuoteLeft size={10} className="inline mr-1" /> {dialogue.movie}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </motion.section>
+      )}
+
+      {hero.knownFor && hero.knownFor.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="🏆" title="Known For" />
+          <div className="flex flex-wrap gap-2 md:gap-3">
+            {hero.knownFor.map((item: string, i: number) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.05 }}
+                viewport={{ once: true }}
+                className="px-3 md:px-4 py-1.5 md:py-2 bg-white/5 text-white border border-white/10 rounded-full font-medium text-xs md:text-sm hover:bg-white/10 transition"
+              >
+                ✨ {item}
+              </motion.span>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {hero.collaborations && Object.keys(hero.collaborations).length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="🤝" title="Frequent Collaborations" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {Object.entries(hero.collaborations).map(([categoryKey, categoryData]: any, catIdx: number) => {
+              if (!categoryData || typeof categoryData !== 'object') return null;
+
+              let collaborators: any[] = [];
+              if (Array.isArray(categoryData)) {
+                collaborators = categoryData;
+              } else if (categoryData.multipleFilms && Array.isArray(categoryData.multipleFilms)) {
+                collaborators = categoryData.multipleFilms;
+              } else {
+                return null;
+              }
+
+              if (collaborators.length === 0) return null;
+
+              const categoryLabel = categoryKey.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase()).trim();
+
+              return (
+                <motion.div
+                  key={categoryKey}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: catIdx * 0.05 }}
+                  viewport={{ once: true }}
+                  className="rounded-lg p-4 md:p-6 bg-white/5 border border-white/10 hover:border-white/20 transition"
+                >
+                  <h3 className="text-white font-bold text-base md:text-lg mb-3 md:mb-4">{categoryLabel}</h3>
+                  <div className="space-y-2 md:space-y-3">
+                    {collaborators.slice(0, 5).map((person: any, idx: number) => {
+                      const personName = person.name || person.director || person.composer || 'Unknown';
+                      let filmCount = typeof person.count === 'number' ? person.count : 0;
+
+                      return (
+                        <div key={idx} className="p-2 md:p-3 rounded-lg bg-black/30 border border-white/10 hover:border-white/20 transition flex items-center justify-between gap-2">
+                          <span className="text-white font-medium text-xs md:text-sm line-clamp-1">{personName}</span>
+                          {filmCount > 0 && (
+                            <span className="px-2 py-0.5 bg-white/20 text-white rounded text-xs font-bold whitespace-nowrap">
+                              {filmCount}
+                            </span>
+                          )}
+                        </div>
+                      );
+                    })}
+                    {collaborators.length > 5 && (
+                      <p className="text-white/40 text-xs italic pt-2">+{collaborators.length - 5} more...</p>
+                    )}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.section>
+      )}
+    </motion.div>
+  );
+}
+function InfoTab({ hero }: any) {
+  const info = hero.personalInfo || {};
+  const physical = hero.physicalStats || {};
+  const favorites = hero.favorites || {};
+  const socialMedia = hero.socialMedia || {};
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="space-y-10 md:space-y-14"
+    >
+      {info && Object.keys(info).length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="👤" title="Personal Information" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+            {info.fullName && <InfoCard label="Full Name" value={info.fullName} icon={FaUser} />}
+            {info.birthDate && (
+              <InfoCard
+                label="Birth Date"
+                value={new Date(info.birthDate).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+                icon={FaCalendarAlt}
+              />
+            )}
+            {info.birthPlace && <InfoCard label="Birth Place" value={info.birthPlace} icon={FaMapMarkerAlt} />}
+            {info.nationality && <InfoCard label="Nationality" value={info.nationality} icon={FaGlobe} />}
+            {info.maritalStatus && <InfoCard label="Marital Status" value={info.maritalStatus} icon={FaRing} />}
+            {info.zodiacSign && <InfoCard label="Zodiac Sign" value={info.zodiacSign} icon={FaStar} />}
+            {info.bloodGroup && <InfoCard label="Blood Group" value={info.bloodGroup} icon={FaHeartbeat} />}
+            {info.education && <InfoCard label="Education" value={info.education} icon={FaGraduationCap} />}
+            {info.debutYear && <InfoCard label="Debut Year" value={info.debutYear.toString()} icon={FaFilm} />}
+            {info.debutMovie && <InfoCard label="Debut Movie" value={info.debutMovie} icon={FaTv} />}
+          </div>
+        </motion.section>
+      )}
+
+      {info?.family && Object.keys(info.family || {}).filter((k) => info.family[k]).length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="👨‍👩‍👧‍👦" title="Family" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+            {info.family?.father && <InfoCard label="Father" value={info.family.father} icon={FaUser} />}
+            {info.family?.mother && <InfoCard label="Mother" value={info.family.mother} icon={FaUser} />}
+            {info.family?.spouse && <InfoCard label="Spouse" value={info.family.spouse} icon={FaRing} />}
+            {info.family?.siblings && info.family.siblings.length > 0 && (
+              <InfoCard label="Siblings" value={info.family.siblings.join(', ')} icon={FaUsers} />
+            )}
+            {info.family?.children && info.family.children.length > 0 && (
+              <InfoCard label="Children" value={info.family.children.join(', ')} icon={FaUser} />
+            )}
+          </div>
+        </motion.section>
+      )}
+
+      {Object.keys(physical).length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="💪" title="Physical Statistics" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+            {physical.height && <InfoCard label="Height" value={physical.height} icon={FaUser} />}
+            {physical.weight && <InfoCard label="Weight" value={physical.weight} icon={FaDumbbell} />}
+            {physical.chest && <InfoCard label="Chest" value={physical.chest} icon={FaDumbbell} />}
+            {physical.waist && <InfoCard label="Waist" value={physical.waist} icon={FaDumbbell} />}
+            {physical.biceps && <InfoCard label="Biceps" value={physical.biceps} icon={FaDumbbell} />}
+            {physical.hairColor && <InfoCard label="Hair Color" value={physical.hairColor} icon={FaUser} />}
+            {physical.eyeColor && <InfoCard label="Eye Color" value={physical.eyeColor} icon={FaGlasses} />}
+            {physical.bodyType && <InfoCard label="Body Type" value={physical.bodyType} icon={FaUser} />}
+            {physical.shoeSize && <InfoCard label="Shoe Size" value={physical.shoeSize} icon={FaUser} />}
+          </div>
+        </motion.section>
+      )}
+
+      {Object.keys(favorites).length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="⭐" title="Favorites" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+            {favorites.actor && <InfoCard label="Favorite Actor" value={favorites.actor} icon={FaUser} />}
+            {favorites.actress && <InfoCard label="Favorite Actress" value={favorites.actress} icon={FaUser} />}
+            {favorites.director && <InfoCard label="Favorite Director" value={favorites.director} icon={FaTheaterMasks} />}
+            {favorites.film && <InfoCard label="Favorite Film" value={favorites.film} icon={FaFilm} />}
+            {favorites.food && <InfoCard label="Favorite Food" value={favorites.food} icon={FaUser} />}
+            {favorites.cuisine && <InfoCard label="Favorite Cuisine" value={favorites.cuisine} icon={FaUser} />}
+            {favorites.color && <InfoCard label="Favorite Color" value={favorites.color} icon={FaPalette} />}
+            {favorites.destination && <InfoCard label="Favorite Destination" value={favorites.destination} icon={FaMapMarkerAlt} />}
+            {favorites.sport && <InfoCard label="Favorite Sport" value={favorites.sport} icon={FaGamepad} />}
+            {favorites.book && <InfoCard label="Favorite Book" value={favorites.book} icon={FaBook} />}
+            {favorites.music && <InfoCard label="Favorite Music" value={favorites.music} icon={FaMusic} />}
+          </div>
+        </motion.section>
+      )}
+
+      {Object.keys(socialMedia).length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="📱" title="Social Media" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+            {socialMedia.instagram && (
+              <a
+                href={socialMedia.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 md:p-5 rounded-lg bg-white/5 border border-white/10 hover:border-pink-500/30 hover:bg-pink-500/5 transition group"
+              >
+                <FaInstagram size={24} className="text-pink-500 group-hover:scale-110 transition" />
+                <div>
+                  <p className="text-white/50 text-xs font-medium">Instagram</p>
+                  <p className="text-white font-bold text-sm">Follow</p>
+                </div>
+              </a>
+            )}
+
+            {socialMedia.twitter && (
+              <a
+                href={socialMedia.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 md:p-5 rounded-lg bg-white/5 border border-white/10 hover:border-blue-500/30 hover:bg-blue-500/5 transition group"
+              >
+                <FaTwitter size={24} className="text-blue-400 group-hover:scale-110 transition" />
+                <div>
+                  <p className="text-white/50 text-xs font-medium">Twitter</p>
+                  <p className="text-white font-bold text-sm">Follow</p>
+                </div>
+              </a>
+            )}
+
+            {socialMedia.youtube && (
+              <a
+                href={socialMedia.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 md:p-5 rounded-lg bg-white/5 border border-white/10 hover:border-red-500/30 hover:bg-red-500/5 transition group"
+              >
+                <FaYoutube size={24} className="text-red-500 group-hover:scale-110 transition" />
+                <div>
+                  <p className="text-white/50 text-xs font-medium">YouTube</p>
+                  <p className="text-white font-bold text-sm">Subscribe</p>
+                </div>
+              </a>
+            )}
+
+            {socialMedia.facebook && (
+              <a
+                href={socialMedia.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 md:p-5 rounded-lg bg-white/5 border border-white/10 hover:border-blue-600/30 hover:bg-blue-600/5 transition group"
+              >
+                <FaFacebook size={24} className="text-blue-600 group-hover:scale-110 transition" />
+                <div>
+                  <p className="text-white/50 text-xs font-medium">Facebook</p>
+                  <p className="text-white font-bold text-sm">Follow</p>
+                </div>
+              </a>
+            )}
+          </div>
+        </motion.section>
+      )}
+    </motion.div>
+  );
+}
+
+function MoviesTab({ hero }: any) {
+  const [filter, setFilter] = useState('all');
+  const [sortBy, setSortBy] = useState('year');
+
+  const movieStats = useMemo(() => {
+    const all = hero.movies || [];
+    const lead = all.filter((m: any) => !m.movieType || m.movieType.toLowerCase() === 'lead');
+    const cameo = hero.cameoAppearances || [];
+    const voiceover = hero.voiceOverAppearances || [];
+    const child = hero.childArtistMovies || [];
+
+    return { all, lead, cameo, voiceover, child, total: all.length + cameo.length + voiceover.length + child.length };
+  }, [hero]);
+
+  const filteredMovies = useMemo(() => {
+    let filtered: any[] = [];
+
+    if (filter === 'all') {
+      filtered = [...movieStats.all, ...movieStats.cameo, ...movieStats.voiceover, ...movieStats.child];
+    } else if (filter === 'lead') {
+      filtered = movieStats.lead;
+    } else if (filter === 'cameo') {
+      filtered = movieStats.cameo;
+    } else if (filter === 'voiceover') {
+      filtered = movieStats.voiceover;
+    } else if (filter === 'child') {
+      filtered = movieStats.child;
+    }
+
+    return filtered.sort((a: any, b: any) => {
+      if (sortBy === 'year') return (b.year || 0) - (a.year || 0);
+      if (sortBy === 'rating') return (b.ratings?.imdb || 0) - (a.ratings?.imdb || 0);
+      return 0;
+    });
+  }, [movieStats, filter, sortBy]);
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6 md:space-y-8">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 md:gap-4 flex-wrap">
+        <div className="flex gap-1 md:gap-2 flex-wrap">
+          <motion.button
+            onClick={() => setFilter('all')}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-medium text-xs md:text-sm transition border ${
+              filter === 'all' ? 'bg-white text-black border-white' : 'bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white'
+            }`}
+          >
+            All ({movieStats.total})
+          </motion.button>
+
+          <motion.button
+            onClick={() => setFilter('lead')}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-medium text-xs md:text-sm transition border ${
+              filter === 'lead' ? 'bg-white text-black border-white' : 'bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white'
+            }`}
+          >
+            Lead ({movieStats.lead.length})
+          </motion.button>
+
+          {movieStats.child.length > 0 && (
+            <motion.button
+              onClick={() => setFilter('child')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-medium text-xs md:text-sm transition border flex items-center gap-1 ${
+                filter === 'child' ? 'bg-white text-black border-white' : 'bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white'
+              }`}
+            >
+              <FaChild size={12} /> Child ({movieStats.child.length})
+            </motion.button>
+          )}
+
+          {movieStats.cameo.length > 0 && (
+            <motion.button
+              onClick={() => setFilter('cameo')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-medium text-xs md:text-sm transition border ${
+                filter === 'cameo' ? 'bg-white text-black border-white' : 'bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white'
+              }`}
+            >
+              Cameo ({movieStats.cameo.length})
+            </motion.button>
+          )}
+
+          {movieStats.voiceover.length > 0 && (
+            <motion.button
+              onClick={() => setFilter('voiceover')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-medium text-xs md:text-sm transition border flex items-center gap-1 ${
+                filter === 'voiceover' ? 'bg-white text-black border-white' : 'bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white'
+              }`}
+            >
+              <FaMicrophone size={12} /> Voice ({movieStats.voiceover.length})
+            </motion.button>
+          )}
+        </div>
+
+        <select
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+          className="px-3 md:px-4 py-1.5 md:py-2 bg-white/5 text-white rounded-lg border border-white/10 outline-none text-xs md:text-sm hover:bg-white/10 transition"
+        >
+          <option value="year">Latest First</option>
+          <option value="rating">Highest Rated</option>
+        </select>
+      </div>
+
+      {filteredMovies.length === 0 ? (
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12 md:py-20">
+          <FaFilm size={48} className="mx-auto mb-4 text-white/20" />
+          <p className="text-white/40 text-base md:text-lg">No movies found</p>
+        </motion.div>
+      ) : (
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-6">
+          {filteredMovies.map((movie: any, idx: number) => (
+            <motion.div
+              key={movie.slug || movie.id || idx}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: Math.min(idx * 0.02, 0.3) }}
+              viewport={{ once: true }}
+            >
+              <MovieCard movie={movie} />
+            </motion.div>
+          ))}
+        </motion.div>
+      )}
+    </motion.div>
+  );
+}
+
+function MovieCard({ movie }: any) {
+  const [posterUrl, setPosterUrl] = useState(movie.poster || DEFAULT_POSTER);
+  const [loading, setLoading] = useState(true);
+
+  return (
+    <Link href={`/movie/${movie.slug}`} className="group block h-full">
+      <div className="relative rounded-lg overflow-hidden mb-2 md:mb-3 border border-white/10 group-hover:border-white/30 transition bg-white/5 aspect-[2/3]">
+        {loading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-white/5">
+            <FaSpinner className="animate-spin text-white/20" size={24} />
+          </div>
+        )}
+
+        <img
+          src={posterUrl}
+          alt={movie.title}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = DEFAULT_POSTER;
+          }}
+          onLoad={() => setLoading(false)}
+        />
+
+        {movie.year && (
+          <div className="absolute top-2 left-2 px-2 py-1 rounded bg-black/70 text-white text-xs font-bold">
+            {movie.year}
+          </div>
+        )}
+
+        {movie.ratings?.imdb && (
+          <div className="absolute top-2 right-2 px-2 py-1 rounded bg-yellow-500/80 text-black text-xs font-bold flex items-center gap-1">
+            <FaStar size={10} />
+            {movie.ratings.imdb}
+          </div>
+        )}
+
+        {movie.movieType && movie.movieType.toLowerCase() !== 'lead' && (
+          <div className="absolute bottom-2 left-2 px-2 py-1 rounded bg-blue-500/80 text-white text-xs font-bold capitalize">
+            {movie.movieType}
+          </div>
+        )}
+      </div>
+
+      <h3 className="text-white font-bold text-xs md:text-sm line-clamp-2 group-hover:text-white/80 transition">
+        {movie.title}
+      </h3>
+      {movie.role && (
+        <p className="text-white/40 text-xs mt-1 line-clamp-1 flex items-center gap-1">
+          <FaUser size={10} /> {movie.role}
+        </p>
+      )}
+    </Link>
+  );
+}
+function UpcomingTab({ hero }: any) {
+  const upcoming = hero.upcoming || [];
+
+  if (upcoming.length === 0) {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="text-center py-20 md:py-32"
+      >
+        <FaCalendarAlt size={48} className="mx-auto mb-4 text-white/20" />
+        <p className="text-white/40 text-base md:text-lg">No upcoming projects announced</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="space-y-6 md:space-y-8"
+    >
+      <SectionTitle emoji="📅" title="Upcoming Projects" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        {upcoming.map((project: any, idx: number) => (
+          <motion.div
+            key={project.slug || idx}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: idx * 0.05 }}
+            viewport={{ once: true }}
+            className="rounded-lg p-5 md:p-6 bg-white/5 border border-white/10 hover:border-white/20 transition"
+          >
+            <h3 className="text-xl md:text-2xl font-black text-white mb-3 md:mb-4">
+              {project.title}
+            </h3>
+
+            {project.expectedRelease && (
+              <div className="flex items-center gap-2 text-white/70 mb-2 text-sm md:text-base">
+                <FaCalendarAlt size={14} />
+                <span>Release: <strong className="text-white">{project.expectedRelease}</strong></span>
+              </div>
+            )}
+
+            {project.director && (
+              <div className="flex items-center gap-2 text-white/70 mb-2 text-sm md:text-base">
+                <FaTheaterMasks size={14} />
+                <span>Director: <strong className="text-white">{project.director}</strong></span>
+              </div>
+            )}
+
+            {project.status && (
+              <div className="flex items-center gap-2 mb-3 text-sm md:text-base">
+                <FaChartLine size={14} className="text-white/70" />
+                <span className="px-2 py-1 bg-white/10 text-white rounded text-xs font-bold capitalize">
+                  {project.status}
+                </span>
+              </div>
+            )}
+
+            {project.genre && (
+              <div className="flex flex-wrap gap-2 mb-4">
+                {(Array.isArray(project.genre) ? project.genre : [project.genre]).map((g: string, i: number) => (
+                  <span key={i} className="px-2 py-1 bg-white/10 text-white text-xs rounded-full font-medium">
+                    {g}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {project.plotSynopsis && (
+              <p className="text-white/70 text-xs md:text-sm leading-relaxed p-3 bg-black/30 rounded-lg border border-white/10">
+                {project.plotSynopsis}
+              </p>
+            )}
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
+function LifestyleTab({ hero }: any) {
+  const lifestyle = hero.lifestyle || {};
+  const netWorth = hero.netWorth || {};
+
+  if (Object.keys(lifestyle).length === 0 && Object.keys(netWorth).length === 0) {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="text-center py-20 md:py-32"
+      >
+        <FaCar size={48} className="mx-auto mb-4 text-white/20" />
+        <p className="text-white/40 text-base md:text-lg">No lifestyle information available</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="space-y-10 md:space-y-14"
+    >
+      {Object.keys(netWorth).length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="💰" title="Net Worth" />
+          <div className="rounded-lg p-5 md:p-6 bg-white/5 border border-white/10 space-y-3 md:space-y-4">
+            {netWorth.estimatedValue && (
+              <div>
+                <p className="text-white/50 text-xs md:text-sm font-bold mb-1">Estimated Net Worth</p>
+                <p className="text-white font-black text-2xl md:text-3xl">{netWorth.estimatedValue}</p>
+              </div>
+            )}
+            {netWorth.usdEquivalent && (
+              <div>
+                <p className="text-white/50 text-xs md:text-sm font-bold mb-1">USD Equivalent</p>
+                <p className="text-white font-bold text-lg md:text-xl">{netWorth.usdEquivalent}</p>
+              </div>
+            )}
+            {netWorth.annualIncome && (
+              <div>
+                <p className="text-white/50 text-xs md:text-sm font-bold mb-1">Annual Income</p>
+                <p className="text-white font-bold text-lg md:text-xl">{netWorth.annualIncome}</p>
+              </div>
+            )}
+            {netWorth.perFilmFee && (
+              <div>
+                <p className="text-white/50 text-xs md:text-sm font-bold mb-1">Per Film Fee</p>
+                <p className="text-white font-bold text-lg md:text-xl">{netWorth.perFilmFee}</p>
+              </div>
+            )}
+          </div>
+        </motion.section>
+      )}
+
+      {lifestyle.carCollection && lifestyle.carCollection.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="🚗" title={`Car Collection (${lifestyle.carCollection.length})`} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {lifestyle.carCollection.map((car: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                className="rounded-lg p-4 md:p-5 bg-white/5 border border-white/10 hover:border-white/20 transition"
+              >
+                <h3 className="text-lg md:text-xl font-black text-white mb-3">
+                  {car.brand} {car.model}
+                </h3>
+                <div className="space-y-2 text-white/70 text-xs md:text-sm">
+                  {car.year && <p>📅 <span className="text-white font-medium">{car.year}</span></p>}
+                  {car.color && <p>🎨 <span className="text-white font-medium">{car.color}</span></p>}
+                  {car.estimatedValue && <p>💰 <span className="text-white font-medium">{car.estimatedValue}</span></p>}
+                  {car.registrationNumber && <p>📝 <span className="text-white font-medium">{car.registrationNumber}</span></p>}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {lifestyle.properties && lifestyle.properties.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="🏠" title={`Real Estate (${lifestyle.properties.length})`} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {lifestyle.properties.map((property: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                className="rounded-lg p-4 md:p-5 bg-white/5 border border-white/10 hover:border-white/20 transition"
+              >
+                <h3 className="text-lg md:text-xl font-black text-white mb-3">
+                  {property.type}
+                </h3>
+                <div className="space-y-2 text-white/70 text-xs md:text-sm">
+                  {property.location && <p>📍 <span className="text-white font-medium">{property.location}</span></p>}
+                  {property.size && <p>📐 <span className="text-white font-medium">{property.size}</span></p>}
+                  {property.estimatedValue && <p>💰 <span className="text-white font-medium">{property.estimatedValue}</span></p>}
+                  {property.acquired && <p>📅 <span className="text-white font-medium">{property.acquired}</span></p>}
+                </div>
+                {property.features && property.features.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {property.features.map((feature: string, i: number) => (
+                      <span key={i} className="px-2 py-1 bg-white/10 text-white text-xs rounded-full">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {lifestyle.fashion && Object.keys(lifestyle.fashion).length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="👕" title="Fashion & Style" />
+          <div className="rounded-lg p-5 md:p-6 bg-white/5 border border-white/10 space-y-4 md:space-y-6">
+            {lifestyle.fashion.style && (
+              <p className="text-white/80 text-sm md:text-base leading-relaxed">
+                {lifestyle.fashion.style}
+              </p>
+            )}
+
+            {lifestyle.fashion.favoriteDesigners && lifestyle.fashion.favoriteDesigners.length > 0 && (
+              <div>
+                <p className="text-white font-bold text-base md:text-lg mb-3 flex items-center gap-2">
+                  <FaPalette size={16} /> Favorite Designers
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {lifestyle.fashion.favoriteDesigners.map((designer: string, i: number) => (
+                    <span key={i} className="px-3 py-1 bg-white/10 text-white text-xs rounded-full font-medium border border-white/20">
+                      {designer}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {lifestyle.fashion.watches && lifestyle.fashion.watches.length > 0 && (
+              <div>
+                <p className="text-white font-bold text-base md:text-lg mb-3">⌚ Watches</p>
+                <div className="flex flex-wrap gap-2">
+                  {lifestyle.fashion.watches.map((watch: string, i: number) => (
+                    <span key={i} className="px-3 py-1 bg-white/10 text-white text-xs rounded-full font-medium border border-white/20">
+                      {watch}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </motion.section>
+      )}
+    </motion.div>
+  );
+}
+
+function PhilanthropyTab({ hero }: any) {
+  const philanthropy = hero.philanthropy || {};
+
+  if (Object.keys(philanthropy).length === 0) {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="text-center py-20 md:py-32"
+      >
+        <FaHandHoldingHeart size={48} className="mx-auto mb-4 text-white/20" />
+        <p className="text-white/40 text-base md:text-lg">No philanthropy information available</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="space-y-10 md:space-y-14"
+    >
+      {philanthropy.foundations && philanthropy.foundations.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="🏢" title="Foundations" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {philanthropy.foundations.map((foundation: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                className="rounded-lg p-4 md:p-5 bg-white/5 border border-white/10 hover:border-white/20 transition"
+              >
+                <h3 className="text-lg md:text-xl font-black text-white mb-2">
+                  {typeof foundation === 'string' ? foundation : foundation.name}
+                </h3>
+                {typeof foundation === 'object' && foundation.established && (
+                  <p className="text-white/50 text-xs md:text-sm mb-2">📅 Est. {foundation.established}</p>
+                )}
+                {typeof foundation === 'object' && foundation.focus && (
+                  <p className="text-white/70 text-xs md:text-sm">{foundation.focus}</p>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {philanthropy.initiatives && philanthropy.initiatives.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="🤝" title="Initiatives" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {philanthropy.initiatives.map((initiative: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                className="rounded-lg p-4 md:p-5 bg-white/5 border border-white/10 hover:border-white/20 transition"
+              >
+                {typeof initiative === 'object' ? (
+                  <>
+                    <div className="flex items-start justify-between gap-2 mb-3">
+                      <h3 className="text-lg md:text-xl font-black text-white flex-1">
+                        {initiative.name}
+                      </h3>
+                      {initiative.year && (
+                        <span className="px-2 py-1 bg-white/10 text-white rounded text-xs font-bold whitespace-nowrap">
+                          {initiative.year}
+                        </span>
+                      )}
+                    </div>
+                    {initiative.location && (
+                      <p className="text-white/50 text-xs md:text-sm mb-2">📍 {initiative.location}</p>
+                    )}
+                    {initiative.description && (
+                      <p className="text-white/70 text-xs md:text-sm mb-3">{initiative.description}</p>
+                    )}
+                    {initiative.investment && (
+                      <p className="text-white font-bold text-sm">💰 {initiative.investment}</p>
+                    )}
+                  </>
+                ) : (
+                  <p className="text-white/80 text-xs md:text-sm">{initiative}</p>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {philanthropy.totalEstimatedContribution && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <div className="rounded-lg p-6 md:p-8 bg-white/5 border border-white/10 text-center">
+            <p className="text-white/50 text-sm md:text-base font-bold mb-2">Total Estimated Contribution</p>
+            <p className="text-white font-black text-3xl md:text-4xl">
+              {philanthropy.totalEstimatedContribution}
+            </p>
+          </div>
+        </motion.section>
+      )}
+
+      {philanthropy.recognitions && philanthropy.recognitions.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="🏆" title="Recognitions" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+            {philanthropy.recognitions.map((recognition: string, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                className="rounded-lg p-3 md:p-4 bg-white/5 border border-white/10"
+              >
+                <p className="text-white/80 text-xs md:text-sm flex items-start gap-2">
+                  <span className="text-white font-black text-lg flex-shrink-0">🏅</span>
+                  {recognition}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+    </motion.div>
+  );
+}
+function BrandsTab({ hero }: any) {
+  const brands = hero.brandEndorsements || [];
+
+  if (brands.length === 0) {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="text-center py-20 md:py-32"
+      >
+        <FaHashtag size={48} className="mx-auto mb-4 text-white/20" />
+        <p className="text-white/40 text-base md:text-lg">No brand endorsements</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8 md:space-y-10">
+      <SectionTitle emoji="🏢" title={`Brand Endorsements (${brands.length})`} />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {brands.map((brand: any, idx: number) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: idx * 0.05 }}
+            viewport={{ once: true }}
+            className="rounded-lg p-4 md:p-5 bg-white/5 border border-white/10 hover:border-white/20 transition"
+          >
+            <div className="flex items-start gap-3 mb-3">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+                <FaHashtag size={16} className="text-white/60" />
+              </div>
+              <h3 className="text-lg md:text-xl font-black text-white flex-1 line-clamp-2">
+                {brand.brand}
+              </h3>
+            </div>
+
+            <div className="space-y-2 text-white/70 text-xs md:text-sm">
+              {brand.category && (
+                <p>
+                  <span className="text-white/50 font-medium">Category:</span>{' '}
+                  <span className="text-white capitalize">{brand.category}</span>
+                </p>
+              )}
+              {brand.duration && (
+                <p>
+                  <span className="text-white/50 font-medium">Duration:</span> <span className="text-white">{brand.duration}</span>
+                </p>
+              )}
+              {brand.estimatedDeal && (
+                <p>
+                  <span className="text-white/50 font-medium">Deal Value:</span> <span className="text-white font-bold">{brand.estimatedDeal}</span>
+                </p>
+              )}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
+function CareerTab({ hero }: any) {
+  const careerStats = hero.careerStats || {};
+  const records = careerStats.records || [];
+  const blockbusters = careerStats.blockbusters || [];
+
+  const hasData = Object.keys(careerStats).length > 0;
+
+  if (!hasData) {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="text-center py-20 md:py-32"
+      >
+        <FaChartLine size={48} className="mx-auto mb-4 text-white/20" />
+        <p className="text-white/40 text-base md:text-lg">No career information available</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="space-y-10 md:space-y-14"
+    >
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <SectionTitle emoji="📊" title="Career Statistics" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {careerStats.totalMovies && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="rounded-lg p-4 md:p-6 bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-500/20"
+            >
+              <p className="text-blue-400/70 text-xs md:text-sm font-bold mb-2">Total Movies</p>
+              <p className="text-white font-black text-3xl md:text-4xl">{careerStats.totalMovies}</p>
+              {careerStats.leadRoles && (
+                <p className="text-white/50 text-xs mt-2">{careerStats.leadRoles} lead roles</p>
+              )}
+            </motion.div>
+          )}
+
+          {careerStats.totalHits && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.05 }}
+              viewport={{ once: true }}
+              className="rounded-lg p-4 md:p-6 bg-gradient-to-br from-green-500/10 to-green-600/5 border border-green-500/20"
+            >
+              <p className="text-green-400/70 text-xs md:text-sm font-bold mb-2">Hits</p>
+              <p className="text-white font-black text-3xl md:text-4xl">{careerStats.totalHits}</p>
+              {careerStats.hitPercentage && (
+                <p className="text-white/50 text-xs mt-2">{careerStats.hitPercentage} success rate</p>
+              )}
+            </motion.div>
+          )}
+
+          {careerStats.yearsActive && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              viewport={{ once: true }}
+              className="rounded-lg p-4 md:p-6 bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/20"
+            >
+              <p className="text-purple-400/70 text-xs md:text-sm font-bold mb-2">Years Active</p>
+              <p className="text-white font-black text-3xl md:text-4xl">{careerStats.yearsActive}</p>
+              {careerStats.debutYear && (
+                <p className="text-white/50 text-xs mt-2">Since {careerStats.debutYear}</p>
+              )}
+            </motion.div>
+          )}
+
+          {careerStats.averageRating && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+              viewport={{ once: true }}
+              className="rounded-lg p-4 md:p-6 bg-gradient-to-br from-yellow-500/10 to-yellow-600/5 border border-yellow-500/20"
+            >
+              <p className="text-yellow-400/70 text-xs md:text-sm font-bold mb-2">Avg Rating</p>
+              <p className="text-white font-black text-3xl md:text-4xl">
+                {careerStats.averageRating}
+                <span className="text-xl text-white/50">/10</span>
+              </p>
+            </motion.div>
+          )}
+        </div>
+      </motion.section>
+
+      {(careerStats.totalBoxOffice || careerStats.highestGrosser || careerStats.highestSoloGrosser) && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="💰" title="Box Office Performance" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            {careerStats.totalBoxOffice && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="rounded-lg p-5 md:p-6 bg-white/5 border border-white/10"
+              >
+                <p className="text-white/50 text-xs md:text-sm font-bold mb-2">Total Gross</p>
+                <p className="text-white font-black text-xl md:text-2xl">
+                  {careerStats.totalBoxOffice}
+                </p>
+              </motion.div>
+            )}
+
+            {careerStats.highestGrosser && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                viewport={{ once: true }}
+                className="rounded-lg p-5 md:p-6 bg-white/5 border border-white/10"
+              >
+                <p className="text-white/50 text-xs md:text-sm font-bold mb-2">Highest Grosser</p>
+                <p className="text-white font-bold text-sm md:text-base mb-2">
+                  {careerStats.highestGrosser.split('(')[0].trim()}
+                </p>
+                <p className="text-white font-black text-lg md:text-xl">
+                  {careerStats.highestGrosser.match(/\(([^)]+)\)/)?.[1] || ''}
+                </p>
+              </motion.div>
+            )}
+
+            {careerStats.highestSoloGrosser && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                viewport={{ once: true }}
+                className="rounded-lg p-5 md:p-6 bg-white/5 border border-white/10"
+              >
+                <p className="text-white/50 text-xs md:text-sm font-bold mb-2">Highest Solo Grosser</p>
+                <p className="text-white font-bold text-sm md:text-base mb-2">
+                  {careerStats.highestSoloGrosser.split('(')[0].trim()}
+                </p>
+                <p className="text-white font-black text-lg md:text-xl">
+                  {careerStats.highestSoloGrosser.match(/\(([^)]+)\)/)?.[1] || ''}
+                </p>
+              </motion.div>
+            )}
+          </div>
+        </motion.section>
+      )}
+
+      {blockbusters.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="🏆" title="Blockbuster Films" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {blockbusters.map((movie: string, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="rounded-lg p-4 md:p-5 bg-gradient-to-br from-white/10 to-white/5 border border-white/20 cursor-pointer"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
+                    <FaTrophy className="text-yellow-500" size={18} />
+                  </div>
+                  <p className="text-white font-bold text-base md:text-lg">{movie}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {records.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="🌟" title="Records & Achievements" />
+          <div className="space-y-3 md:space-y-4">
+            {records.map((record: string, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                className="rounded-lg p-4 md:p-5 bg-gradient-to-r from-white/10 to-white/5 border border-white/10 flex items-start gap-3 md:gap-4"
+              >
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mt-1">
+                  <span className="text-white font-bold text-sm">{idx + 1}</span>
+                </div>
+                <p className="text-white/80 text-sm md:text-base leading-relaxed flex-1">{record}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {(careerStats.totalHits || careerStats.totalFlops) && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="📈" title="Career Breakdown" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {careerStats.totalHits && (
+              <div className="rounded-lg p-5 bg-green-500/10 border border-green-500/20">
+                <p className="text-green-400 text-sm font-bold mb-2">Hits</p>
+                <p className="text-white font-black text-3xl">{careerStats.totalHits}</p>
+              </div>
+            )}
+
+            {careerStats.totalFlops && (
+              <div className="rounded-lg p-5 bg-red-500/10 border border-red-500/20">
+                <p className="text-red-400 text-sm font-bold mb-2">Flops</p>
+                <p className="text-white font-black text-3xl">{careerStats.totalFlops}</p>
+              </div>
+            )}
+
+            {careerStats.leadRoles && (
+              <div className="rounded-lg p-5 bg-blue-500/10 border border-blue-500/20">
+                <p className="text-blue-400 text-sm font-bold mb-2">Lead Roles</p>
+                <p className="text-white font-black text-3xl">{careerStats.leadRoles}</p>
+              </div>
+            )}
+
+            {careerStats.cameos && (
+              <div className="rounded-lg p-5 bg-purple-500/10 border border-purple-500/20">
+                <p className="text-purple-400 text-sm font-bold mb-2">Cameos</p>
+                <p className="text-white font-black text-3xl">{careerStats.cameos}</p>
+              </div>
+            )}
+          </div>
+        </motion.section>
+      )}
+    </motion.div>
+  );
+}
+function AwardsTab({ hero }: any) {
+  const awards = hero.awards || [];
+  const [filterBy, setFilterBy] = useState('all');
+
+  if (awards.length === 0) {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="text-center py-20 md:py-32"
+      >
+        <FaTrophy size={48} className="mx-auto mb-4 text-white/20" />
+        <p className="text-white/40 text-base md:text-lg">No awards information</p>
+      </motion.div>
+    );
+  }
+
+  const won = awards.filter((a: any) => a.won === true || a.status === 'Won');
+  const nominated = awards.filter((a: any) => a.won === false || a.status === 'Nominated');
+  const displayed = filterBy === 'won' ? won : filterBy === 'nominated' ? nominated : awards;
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6 md:space-y-8">
+      <div className="flex gap-2 md:gap-3 flex-wrap">
+        <motion.button
+          onClick={() => setFilterBy('all')}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-medium text-xs md:text-sm transition border ${
+            filterBy === 'all'
+              ? 'bg-white text-black border-white'
+              : 'bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white'
+          }`}
+        >
+          All ({awards.length})
+        </motion.button>
+
+        <motion.button
+          onClick={() => setFilterBy('won')}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-medium text-xs md:text-sm transition border flex items-center gap-1 ${
+            filterBy === 'won'
+              ? 'bg-yellow-500/20 text-yellow-300 border-yellow-500/30'
+              : 'bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white'
+          }`}
+        >
+          <FaTrophy size={12} /> Won ({won.length})
+        </motion.button>
+
+        {nominated.length > 0 && (
+          <motion.button
+            onClick={() => setFilterBy('nominated')}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-medium text-xs md:text-sm transition border ${
+              filterBy === 'nominated'
+                ? 'bg-blue-500/20 text-blue-300 border-blue-500/30'
+                : 'bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white'
+            }`}
+          >
+            Nominated ({nominated.length})
+          </motion.button>
+        )}
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="space-y-3 md:space-y-4"
+      >
+        {displayed.map((award: any, idx: number) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: idx * 0.03 }}
+            viewport={{ once: true }}
+            className={`rounded-lg p-4 md:p-5 border transition flex items-start gap-3 ${
+              award.won || award.status === 'Won'
+                ? 'bg-yellow-500/5 border-yellow-500/20 hover:border-yellow-500/40'
+                : 'bg-white/5 border-white/10 hover:border-white/20'
+            }`}
+          >
+            <div
+              className={`w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                award.won || award.status === 'Won' ? 'bg-yellow-500/20' : 'bg-white/10'
+              }`}
+            >
+              <FaTrophy
+                size={14}
+                className={award.won || award.status === 'Won' ? 'text-yellow-400' : 'text-white/60'}
+              />
+            </div>
+
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-1 flex-wrap">
+                <h3 className="text-white font-bold text-sm md:text-base line-clamp-1">
+                  {award.award}
+                </h3>
+                <span
+                  className={`px-2 py-0.5 rounded text-xs font-bold whitespace-nowrap ${
+                    award.won || award.status === 'Won'
+                      ? 'bg-green-500/20 text-green-300'
+                      : 'bg-blue-500/20 text-blue-300'
+                  }`}
+                >
+                  {award.status || (award.won ? '✅ Won' : '⭐ Nominated')}
+                </span>
+              </div>
+              <p className="text-white/60 text-xs md:text-sm line-clamp-1">
+                {award.category} {award.movie && `• ${award.movie}`} {award.year && `(${award.year})`}
+              </p>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+    </motion.div>
+  );
+}
+
+function NewsTab({ hero }: any) {
+  const news = hero.recentNews || [];
+
+  if (news.length === 0) {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="text-center py-20 md:py-32"
+      >
+        <FaNewspaper size={48} className="mx-auto mb-4 text-white/20" />
+        <p className="text-white/40 text-base md:text-lg">No recent news</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="space-y-4 md:space-y-6"
+    >
+      <SectionTitle emoji="📰" title={`Recent News (${news.length})`} />
+
+      {news.slice(0, 12).map((item: any, idx: number) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: idx * 0.03 }}
+          viewport={{ once: true }}
+          className="rounded-lg p-4 md:p-5 bg-white/5 border border-white/10 hover:border-white/20 transition overflow-hidden"
+        >
+          {item.image && (
+            <img
+              src={item.image}
+              alt={item.title || item.headline}
+              className="w-full h-40 md:h-48 rounded-lg object-cover mb-3 md:mb-4 hover:scale-105 transition-transform duration-300"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = DEFAULT_POSTER;
+              }}
+            />
+          )}
+
+          <div className="flex items-center gap-2 mb-2 flex-wrap">
+            {item.category && (
+              <span className="px-2 py-1 bg-white/10 text-white rounded text-xs font-bold">
+                {item.category}
+              </span>
+            )}
+            {item.date && (
+              <span className="text-white/40 text-xs">
+                📅 {new Date(item.date).toLocaleDateString()}
+              </span>
+            )}
+          </div>
+
+          <h3 className="text-white font-bold text-base md:text-lg mb-2 line-clamp-2">
+            {item.title || item.headline}
+          </h3>
+
+          <p className="text-white/70 text-xs md:text-sm line-clamp-2 mb-3">
+            {item.content || item.summary}
+          </p>
+
+          {item.url && (
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-xs md:text-sm font-bold transition"
+            >
+              Read more <FaChevronRight size={10} />
+            </a>
+          )}
+
+          {item.source && (
+            <p className="text-white/40 text-xs mt-2">📰 {item.source}</p>
+          )}
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+}
+
+function TriviaTab({ hero }: any) {
+  const trivia = hero.trivia || [];
+  const quotes = hero.quotes || [];
+
+  if (trivia.length === 0 && quotes.length === 0) {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="text-center py-20 md:py-32"
+      >
+        <FaLightbulb size={48} className="mx-auto mb-4 text-white/20" />
+        <p className="text-white/40 text-base md:text-lg">No trivia available</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="space-y-10 md:space-y-14"
+    >
+      {quotes.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="💬" title={`Quotes (${quotes.length})`} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {quotes.slice(0, 6).map((quote: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                className="rounded-lg p-4 md:p-5 bg-white/5 border border-white/10 hover:border-white/20 transition"
+              >
+                <FaQuoteLeft className="text-white/30 mb-2" size={20} />
+                <p className="text-white italic text-xs md:text-sm leading-relaxed mb-3">
+                  "{typeof quote === 'string' ? quote : quote.quote}"
+                </p>
+                {typeof quote === 'object' && quote.context && (
+                  <p className="text-white/40 text-xs">— {quote.context}</p>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+
+      {trivia.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionTitle emoji="💡" title={`Did You Know? (${trivia.length})`} />
+          <div className="space-y-2 md:space-y-3">
+            {trivia.slice(0, 10).map((item: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: idx * 0.03 }}
+                viewport={{ once: true }}
+                className="rounded-lg p-3 md:p-4 bg-white/5 border border-white/10 hover:border-white/20 transition flex items-start gap-3"
+              >
+                <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 text-xs md:text-sm font-bold text-white">
+                  {idx + 1}
+                </div>
+                <p className="text-white/80 text-xs md:text-sm leading-relaxed flex-1">
+                  {typeof item === 'string' ? item : item.fact || item}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+      )}
+    </motion.div>
+  );
+}
+
+function GalleryTab({ hero }: any) {
+  const images = hero.images?.gallery || [];
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  if (!images || images.length === 0) {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="text-center py-20 md:py-32"
+      >
+        <FaPalette size={48} className="mx-auto mb-4 text-white/20" />
+        <p className="text-white/40 text-base md:text-lg">No gallery images</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6 md:space-y-8">
+      <div>
+        <SectionTitle emoji="🖼️" title={`Gallery (${images.length})`} />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4"
+        >
+          {images.slice(0, 20).map((image: any, idx: number) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: idx * 0.02 }}
+              viewport={{ once: true }}
+              onClick={() => setSelectedImage(idx)}
+              className="group cursor-pointer aspect-square rounded-lg overflow-hidden border border-white/10 hover:border-white/30 transition relative"
+            >
+              <img
+                src={image}
+                alt={`Gallery ${idx + 1}`}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = DEFAULT_POSTER;
+                }}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition flex items-center justify-center">
+                <FaPlay className="text-white opacity-0 group-hover:opacity-100 transition text-xl" />
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      <AnimatePresence>
+        {selectedImage !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 md:p-8"
+          >
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-4xl w-full"
+            >
+              <img
+                src={images[selectedImage]}
+                alt={`Gallery ${selectedImage + 1}`}
+                className="w-full rounded-lg shadow-2xl"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = DEFAULT_POSTER;
+                }}
+              />
+
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  setSelectedImage((p) => (p === 0 ? images.length - 1 : (p ?? 0) - 1));
+                }}
+                className="absolute left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-white/20 hover:bg-white/40 transition text-white text-lg md:text-xl"
+              >
+                <FaChevronRight className="rotate-180" />
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  setSelectedImage((p) => (p === images.length - 1 ? 0 : (p ?? 0) + 1));
+                }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-white/20 hover:bg-white/40 transition text-white text-lg md:text-xl"
+              >
+                <FaChevronRight />
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setSelectedImage(null)}
+                className="absolute -top-10 md:-top-12 right-0 text-white/60 hover:text-white transition text-xl"
+              >
+                ✕
+              </motion.button>
+
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/70 rounded-full text-white text-sm font-bold">
+                {(selectedImage ?? 0) + 1} / {images.length}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+}

@@ -1,0 +1,4047 @@
+{
+  "metadata": {
+    "category": "heroes",
+    "actor_name": "prabhas",
+    "total_movies": 35,
+    "successful_fetches": 35,
+    "failed_fetches": 0,
+    "created_at": "2025-11-05 22:29:37",
+    "note": "All movie data combined in one file. Ready to merge to main JSON"
+  },
+  "movies": [
+    {
+      "id": 881903,
+      "title": "Spirit",
+      "original_title": "స్పిరిట్",
+      "release_date": "",
+      "runtime": 0,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 0.0,
+      "votes": 0,
+      "overview": "",
+      "status": "In Production",
+      "tagline": "",
+      "genres": [
+        "Action",
+        "Drama",
+        "Crime",
+        "Thriller"
+      ],
+      "production_companies": [
+        "T-Series",
+        "Bhadrakali Pictures"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Triptii Dimri",
+          "character": "",
+          "profile_path": "/bAwn2jF0X67qUzmO27X34THLJ4w.jpg"
+        },
+        {
+          "name": "Kanchana",
+          "character": "",
+          "profile_path": "/3jTcZqiiTDyPMPrYubbVmvNkEkx.jpg"
+        },
+        {
+          "name": "Prakash Raj",
+          "character": "",
+          "profile_path": "/dJvFZOXmZdkYCOUcKTXQAhBcAoH.jpg"
+        },
+        {
+          "name": "Vivek Oberoi",
+          "character": "",
+          "profile_path": "/60T3Q8CsxF4kF6RIHZ1yis2Q0wA.jpg"
+        }
+      ],
+      "crew": {
+        "Producer": [
+          {
+            "name": "Bhushan Kumar",
+            "profile_path": "/luUFnGoGwjwZ5CHAePRIQpAwT5b.jpg"
+          },
+          {
+            "name": "Pranay Reddy Vanga",
+            "profile_path": null
+          },
+          {
+            "name": "Krishan Kumar",
+            "profile_path": "/gw2jzzkdRyIHglwieCiFSQ9cLZZ.jpg"
+          }
+        ],
+        "Director": [
+          {
+            "name": "Sandeep Reddy Vanga",
+            "profile_path": "/z8r0OaemVOQCOP2h3DeWYdVkD8G.jpg"
+          }
+        ],
+        "Writer": [
+          {
+            "name": "Sandeep Reddy Vanga",
+            "profile_path": "/z8r0OaemVOQCOP2h3DeWYdVkD8G.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Harshavardhan Rameshwar",
+            "profile_path": null
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Sandeep Reddy Vanga",
+            "profile_path": "/z8r0OaemVOQCOP2h3DeWYdVkD8G.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 23766,
+      "title": "Billa",
+      "original_title": "బిల్లా",
+      "release_date": "2009-04-03",
+      "runtime": 149,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 5.048,
+      "votes": 21,
+      "overview": "A police inspector sends a gangster-lookalike to uncover the gang's secrets.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "production_companies": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Billa / Ranga",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Krishnam Raju",
+          "character": "Krishnamurthy",
+          "profile_path": "/bvZLQkr6U1kNNWmHZsRnPXOpg4J.jpg"
+        },
+        {
+          "name": "Anushka Shetty",
+          "character": "Maya",
+          "profile_path": "/zpe6Es8kdNOXuPdXiJvqxzsmN6z.jpg"
+        },
+        {
+          "name": "Namitha",
+          "character": "Lisa",
+          "profile_path": "/gq7dmXf49nuSG80NYMNdQydMwmF.jpg"
+        },
+        {
+          "name": "Kelly Dorji",
+          "character": "Rashid Bhai",
+          "profile_path": "/bOHbApxFuSczyq8Bt1ozmTTmJ4H.jpg"
+        },
+        {
+          "name": "Rahman",
+          "character": "Dharmendhra",
+          "profile_path": "/3heEOBLha0ImREOUmzWm5nVKUt.jpg"
+        },
+        {
+          "name": "Supreet",
+          "character": "Ranjith",
+          "profile_path": "/3HZopNIG3zeaSpbGjEvsdmoXjaR.jpg"
+        },
+        {
+          "name": "Ali Basha",
+          "character": "Shankaram",
+          "profile_path": "/1z0YbDqP81BD6VxeghJG7vo9Mny.jpg"
+        },
+        {
+          "name": "Hansika Motwani",
+          "character": "Priya",
+          "profile_path": "/3xCuu8Wwj8TCCtYjVTiXt1nGTtn.jpg"
+        },
+        {
+          "name": "Subbaraju",
+          "character": "Vikram",
+          "profile_path": "/upq4ba9D8GgejWkI5tRVzze2yZV.jpg"
+        },
+        {
+          "name": "Jayasudha",
+          "character": "Janaki",
+          "profile_path": "/xOP3pYlrqyBw5x9CDEMkYXPzpNu.jpg"
+        }
+      ],
+      "crew": {
+        "Original Music Composer": [
+          {
+            "name": "Mani Sharma",
+            "profile_path": "/99QZjwoHVgDxH6FJ5apNNaS0aAP.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Marthand K Venkatesh",
+            "profile_path": "/5t3F2VGVmTLXMLumejZ8SqPCskW.jpg"
+          }
+        ],
+        "Writer": [
+          {
+            "name": "Thota Prasad",
+            "profile_path": null
+          }
+        ],
+        "Director": [
+          {
+            "name": "Meher Ramesh",
+            "profile_path": null
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "Meher Ramesh",
+            "profile_path": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 38220,
+      "title": "Ek Niranjan",
+      "original_title": "ఏక్ నిరంజన్",
+      "release_date": "2009-10-29",
+      "runtime": 150,
+      "language": "te",
+      "budget": 3800000,
+      "revenue": 6900000,
+      "rating": 5.071,
+      "votes": 14,
+      "overview": "A bounty hunter searches for the family he was separated from as a child, and falls in love with the sister of a gang member.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Romance",
+        "Action",
+        "Drama"
+      ],
+      "production_companies": [
+        "Aditya Ram Movies"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Niranjan / Chotu",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Kangana Ranaut",
+          "character": "Sameera",
+          "profile_path": "/oTApEkvktswhQOyfsAglJEEJBFW.jpg"
+        },
+        {
+          "name": "Sonu Sood",
+          "character": "Johnny Bhai",
+          "profile_path": "/rkgASPKqB0PGYfTkfjFOL6fb1RL.jpg"
+        },
+        {
+          "name": "Mukul Dev",
+          "character": "Kailash",
+          "profile_path": "/lCi90n8qUz0TsHVtfZkX4DRLDA5.jpg"
+        },
+        {
+          "name": "Venu Madhav",
+          "character": "Chitti",
+          "profile_path": "/oHuaEIJV4KVkyqjBTOxQ1ECoxgP.jpg"
+        },
+        {
+          "name": "Brahmanandam",
+          "character": "Guru",
+          "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg"
+        },
+        {
+          "name": "Ali Basha",
+          "character": "Mantra",
+          "profile_path": "/1z0YbDqP81BD6VxeghJG7vo9Mny.jpg"
+        },
+        {
+          "name": "Brahmaji",
+          "character": "Brahmaji",
+          "profile_path": "/xDTE7POq1bkyjLINxdy7rW4wQlg.jpg"
+        },
+        {
+          "name": "Tanikella Bharani",
+          "character": "Veeraiah",
+          "profile_path": "/zRjr0F64Eznbliz1RvN9icj3Lq1.jpg"
+        },
+        {
+          "name": "Posani Krishna Murali",
+          "character": "Narendra Kumar",
+          "profile_path": "/mJHo1EvOORv2FAK12zpFESDQfM.jpg"
+        },
+        {
+          "name": "Makrand Deshpande",
+          "character": "Chidambaram",
+          "profile_path": "/aGA9mjohVWWTeTmutXikSSCYq9x.jpg"
+        },
+        {
+          "name": "Sunil Varma",
+          "character": "Chanti Babu",
+          "profile_path": "/2ueRNLlbB8jaivO6yb7zfIlFhh7.jpg"
+        },
+        {
+          "name": "Chalapathi Rao",
+          "character": "Police Commissioner",
+          "profile_path": "/51zzAobEchxSwHI1b4tUxrVpQaz.jpg"
+        },
+        {
+          "name": "Gautam Raju",
+          "character": "Police Constable",
+          "profile_path": null
+        },
+        {
+          "name": "Prudhviraj",
+          "character": "Minister",
+          "profile_path": "/fF5zEdi65qeyClLhjIuCmT5LdFb.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Puri Jagannadh",
+            "profile_path": "/xPOjxS9r0rdLPbP14lHi27qwlTU.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Mani Sharma",
+            "profile_path": "/99QZjwoHVgDxH6FJ5apNNaS0aAP.jpg"
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Aditya Ram",
+            "profile_path": null
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "Puri Jagannadh",
+            "profile_path": "/xPOjxS9r0rdLPbP14lHi27qwlTU.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "M. R. Varmaa",
+            "profile_path": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 63376,
+      "title": "Mr. Perfect",
+      "original_title": "Mr. పర్‌ఫెక్ట్",
+      "release_date": "2011-04-21",
+      "runtime": 146,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 6.515,
+      "votes": 34,
+      "overview": "Vicky breaks his engagement with Priya, his childhood friend, after he learns that she is making many compromises for his sake. However, time makes him realise the need for compromises in life.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "production_companies": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Vicky",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Kajal Aggarwal",
+          "character": "Priya",
+          "profile_path": "/hIV5HeHM9xUxhbDdhtM8q56AuXE.jpg"
+        },
+        {
+          "name": "Taapsee Pannu",
+          "character": "Maggy",
+          "profile_path": "/micyQ84KdF7rVu05SYkMxk8VGq4.jpg"
+        },
+        {
+          "name": "Murali Mohan",
+          "character": "Priya's Father",
+          "profile_path": "/otex9PxT1wXvvR4ATVG5lZH5UDV.jpg"
+        },
+        {
+          "name": "Prakash Raj",
+          "character": "Maggi's Father",
+          "profile_path": "/dJvFZOXmZdkYCOUcKTXQAhBcAoH.jpg"
+        },
+        {
+          "name": "Sayaji Shinde",
+          "character": "Maggi's Uncle",
+          "profile_path": "/r4VBYop4XktGuSZ0wozRqJbEzMH.jpg"
+        },
+        {
+          "name": "Brahmanandam",
+          "character": "",
+          "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg"
+        },
+        {
+          "name": "Master Bharath",
+          "character": "",
+          "profile_path": "/nKsOmyYVY0miS1siMqsMxOK1OpN.jpg"
+        },
+        {
+          "name": "Satyadev Kancharana",
+          "character": "",
+          "profile_path": "/uIf1HM99iDVf9vdJwXPMgggOHkA.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Dasaradh",
+            "profile_path": null
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Dil Raju",
+            "profile_path": "/rKATd51tomVLWw7EjjNgM7uAQCW.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 63414,
+      "title": "Darling",
+      "original_title": "డార్లింగ్",
+      "release_date": "2010-04-23",
+      "runtime": 152,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 6.483,
+      "votes": 30,
+      "overview": "Prabha prepares to meet Nandini, his childhood friend, at a reunion party organised by his father. However, things take a turn when Nisha, a gangster's daughter, falls in love with him.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "production_companies": [
+        "Sri Venkateswara Cine Chitra",
+        "Reliance Entertainment"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Prabhas \"Prabha\"",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Kajal Aggarwal",
+          "character": "Nandini",
+          "profile_path": "/hIV5HeHM9xUxhbDdhtM8q56AuXE.jpg"
+        },
+        {
+          "name": "Prabhu",
+          "character": "Hanumantha Rao",
+          "profile_path": "/1ZG65sdJaLrHjTAme5ETZMyqgnM.jpg"
+        },
+        {
+          "name": "Tulasi",
+          "character": "Rajeswari",
+          "profile_path": "/oETAXn9y9YZ6yvCZFvzOcHBImr0.jpg"
+        },
+        {
+          "name": "Ahuti Prasad",
+          "character": "Vishwanath",
+          "profile_path": "/z0Al1VOH1O45uDQCXt6kadn9psR.jpg"
+        },
+        {
+          "name": "Chandramohan",
+          "character": "Bhadram",
+          "profile_path": "/pXkbPFie2pOGgc9cd84BUz0OP4A.jpg"
+        },
+        {
+          "name": "M. S. Narayana",
+          "character": "Appala Raju/Church Father",
+          "profile_path": "/1XRTmhRSOtHBVmoPfz45WxbLfFQ.jpg"
+        },
+        {
+          "name": "Dharmavarupu Subramanyam",
+          "character": "Buchchaiah Mama/ Booch Thomas",
+          "profile_path": "/hIFs97t4snTwfnXqxZ61F3sC7I5.jpg"
+        },
+        {
+          "name": "Mukesh Rishi",
+          "character": "Nisha's father",
+          "profile_path": "/iNLleMqHTHrbAlVRCFyye4NZxxb.jpg"
+        },
+        {
+          "name": "Shraddha Das",
+          "character": "Nisha",
+          "profile_path": "/zt3UYBlohKs8arf1JJaahWZUwwb.jpg"
+        },
+        {
+          "name": "Vamsi Krishna",
+          "character": "Rishi Varma",
+          "profile_path": "/zilAgIIQdNJ4fdsmzcze7KCX6B0.jpg"
+        },
+        {
+          "name": "Srinivasa Reddy",
+          "character": "Prabha's Friend",
+          "profile_path": "/aUMNaDeskPGyDoEGwqvBxZPnzYR.jpg"
+        },
+        {
+          "name": "Prabhas Sreenu",
+          "character": "Prabha's Friend",
+          "profile_path": "/nggCOeeye2bNm1tTodz0cgJPL2W.jpg"
+        },
+        {
+          "name": "Narasimha Raju",
+          "character": "Gopal",
+          "profile_path": null
+        },
+        {
+          "name": "Raja Sridhar",
+          "character": "Prabha's Friend",
+          "profile_path": null
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "A. Karunakaran",
+            "profile_path": null
+          }
+        ],
+        "Producer": [
+          {
+            "name": "B. V. S. N. Prasad",
+            "profile_path": null
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "A. Karunakaran",
+            "profile_path": null
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "G. V. Prakash Kumar",
+            "profile_path": "/ArX3l6CdNo0sGI8b6PFYveR9Azm.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Kotagiri Venkateswara Rao",
+            "profile_path": "/3oTREXmvPlgnEO9vvMxRLIItSbn.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 82322,
+      "title": "Varsham",
+      "original_title": "వర్షం",
+      "release_date": "2004-01-14",
+      "runtime": 150,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 6.147,
+      "votes": 17,
+      "overview": "Venkat and Sailaja meet on a train and fall in love. But Sailaja's father disapproves of their relationship and decides to marry her off to Bhadranna, a ruthless landlord, who is obsessed with her.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Romance"
+      ],
+      "production_companies": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Venkat",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Trisha Krishnan",
+          "character": "Sailaja",
+          "profile_path": "/jfeAV0VeAQhKONzIv1UEYbklJGn.jpg"
+        },
+        {
+          "name": "Gopichand",
+          "character": "Bhadranna",
+          "profile_path": "/faFnhPCmtdL6qKhroiyHjgS8lqN.jpg"
+        },
+        {
+          "name": "Prakash Raj",
+          "character": "Ranga Rao",
+          "profile_path": "/dJvFZOXmZdkYCOUcKTXQAhBcAoH.jpg"
+        },
+        {
+          "name": "Sunil Varma",
+          "character": "Jagan",
+          "profile_path": "/2ueRNLlbB8jaivO6yb7zfIlFhh7.jpg"
+        },
+        {
+          "name": "Raghu Babu",
+          "character": "",
+          "profile_path": "/9aE6s9wqHgRcBY7wiUfkEZMgJNK.jpg"
+        },
+        {
+          "name": "Ajay",
+          "character": "",
+          "profile_path": "/uByCHJa3eaCL0SgFGDYYLlsVggC.jpg"
+        },
+        {
+          "name": "M. S. Narayana",
+          "character": "",
+          "profile_path": "/1XRTmhRSOtHBVmoPfz45WxbLfFQ.jpg"
+        },
+        {
+          "name": "Chandramohan",
+          "character": "",
+          "profile_path": "/pXkbPFie2pOGgc9cd84BUz0OP4A.jpg"
+        }
+      ],
+      "crew": {
+        "Screenplay": [
+          {
+            "name": "M. S. Raju",
+            "profile_path": null
+          }
+        ],
+        "Editor": [
+          {
+            "name": "K V Krishna Reddy",
+            "profile_path": null
+          }
+        ],
+        "Director": [
+          {
+            "name": "Sobhan",
+            "profile_path": null
+          }
+        ],
+        "Producer": [
+          {
+            "name": "M. S. Raju",
+            "profile_path": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 79210,
+      "title": "Chatrapathi",
+      "original_title": "ఛత్రపతి",
+      "release_date": "2005-09-30",
+      "runtime": 158,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 6.759,
+      "votes": 27,
+      "overview": "Sivaji and his family are uprooted from their community in Sri Lanka and wind up as bonded labourers in Vishakhapatnam. Like his legendary namesake, he rises up to become the saviour of the oppressed.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Drama",
+        "Action"
+      ],
+      "production_companies": [
+        "Sri Venkateswara Cine Chitra"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Sivaji",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Bhanupriya",
+          "character": "Sivaji's mother",
+          "profile_path": "/hINls6s66YNvYrJNV98qPFDrXil.jpg"
+        },
+        {
+          "name": "Shafi",
+          "character": "Ashok / Akash",
+          "profile_path": "/dQs2gnlMMmx6lJi0xZftaD3TXlV.jpg"
+        },
+        {
+          "name": "Pradeep Ram Singh Rawat",
+          "character": "Raj Bihari",
+          "profile_path": "/6lsSDOU7Iz9OrmUWZbwvcyCdOB0.jpg"
+        },
+        {
+          "name": "Shriya Saran",
+          "character": "Neelu",
+          "profile_path": "/ioOgKBSCJhOdKoZpg86ld7zANbf.jpg"
+        },
+        {
+          "name": "Chatrapathi Sekhar",
+          "character": "Bhadram",
+          "profile_path": "/sLP6V1McdVPwp3smHzEzuXs8ubM.jpg"
+        },
+        {
+          "name": "Kamal Kamaraju",
+          "character": "Sivaji's Friend",
+          "profile_path": "/dzRe0pHRcBHTKJCGcMFjPJ0K8Fp.jpg"
+        },
+        {
+          "name": "Ajay",
+          "character": "Ajay",
+          "profile_path": "/uByCHJa3eaCL0SgFGDYYLlsVggC.jpg"
+        },
+        {
+          "name": "Kota Srinivasa Rao",
+          "character": "Appala Naidu",
+          "profile_path": "/iEJprOPpeLhnyxBu2KdiJtw5Adb.jpg"
+        },
+        {
+          "name": "Narendra Jha",
+          "character": "Baji Rao",
+          "profile_path": null
+        },
+        {
+          "name": "Supreet",
+          "character": "Katraju",
+          "profile_path": "/3HZopNIG3zeaSpbGjEvsdmoXjaR.jpg"
+        },
+        {
+          "name": "Venu Madhav",
+          "character": "Mahesh Nanda",
+          "profile_path": "/oHuaEIJV4KVkyqjBTOxQ1ECoxgP.jpg"
+        },
+        {
+          "name": "Jeeva",
+          "character": "Boat Agent",
+          "profile_path": "/kDXx8HrAuWNtjOnUp1jlGeDvq8b.jpg"
+        },
+        {
+          "name": "Jayaprakash Reddy",
+          "character": "Commissioner",
+          "profile_path": "/m0djrw7flYPrE77uV5ufOmywTnb.jpg"
+        },
+        {
+          "name": "Srinivasa Reddy",
+          "character": "Appal naidu's assistant",
+          "profile_path": "/aUMNaDeskPGyDoEGwqvBxZPnzYR.jpg"
+        }
+      ],
+      "crew": {
+        "Producer": [
+          {
+            "name": "B. V. S. N. Prasad",
+            "profile_path": null
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "M.M. Keeravaani",
+            "profile_path": "/r0f7RTGIkG0ZBaQViIKrE1g82Ec.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Kotagiri Venkateswara Rao",
+            "profile_path": "/3oTREXmvPlgnEO9vvMxRLIItSbn.jpg"
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "S. S. Rajamouli",
+            "profile_path": "/g7jXGAVT8T5vq81fO5JWDleDc75.jpg"
+          }
+        ],
+        "Director": [
+          {
+            "name": "S. S. Rajamouli",
+            "profile_path": "/g7jXGAVT8T5vq81fO5JWDleDc75.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 132437,
+      "title": "Chakram",
+      "original_title": "Chakram",
+      "release_date": "2005-03-25",
+      "runtime": 145,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 5.636,
+      "votes": 11,
+      "overview": "Chakram (Prabhas) is a foreign returnee and has a dream of building a hospital at Pulivendula. He is in love with his colleague, Lakshmi (Asin Thottumkal) who studied with him abroad. But leaves her half-way through after he realizes that he was struck with cancer. Not wanting to tell her, he moves to Hyderabad and stays in place called ‘Sahara Colony’. There, he tries to solve people problem's in the colony. Seeing all this, another girl who is also named Lakshmi (Charmy) falls in love with Chakram. The rest is a heart-rending saga of the cancer-struck patient's love station.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "production_companies": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Chakram",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Asin Thottumkal",
+          "character": "",
+          "profile_path": "/ivPtSclQiVN28NrAxaPMJTyR2Al.jpg"
+        },
+        {
+          "name": "Charmy Kaur",
+          "character": "(as Charmy)",
+          "profile_path": "/5BIGQIuyylSpKrQVhYEEY6GfaUw.jpg"
+        },
+        {
+          "name": "Prakash Raj",
+          "character": "",
+          "profile_path": "/dJvFZOXmZdkYCOUcKTXQAhBcAoH.jpg"
+        },
+        {
+          "name": "Padmanabham",
+          "character": "",
+          "profile_path": "/70nBjTiHtMIKn48cUkg3NPjP9rV.jpg"
+        },
+        {
+          "name": "Tanikella Bharani",
+          "character": "",
+          "profile_path": "/zRjr0F64Eznbliz1RvN9icj3Lq1.jpg"
+        },
+        {
+          "name": "Venu Madhav",
+          "character": "",
+          "profile_path": "/oHuaEIJV4KVkyqjBTOxQ1ECoxgP.jpg"
+        },
+        {
+          "name": "M. S. Narayana",
+          "character": "",
+          "profile_path": "/1XRTmhRSOtHBVmoPfz45WxbLfFQ.jpg"
+        },
+        {
+          "name": "Jeeva",
+          "character": "",
+          "profile_path": "/kDXx8HrAuWNtjOnUp1jlGeDvq8b.jpg"
+        },
+        {
+          "name": "Raghu Babu",
+          "character": "",
+          "profile_path": "/9aE6s9wqHgRcBY7wiUfkEZMgJNK.jpg"
+        },
+        {
+          "name": "Srinivasa Reddy",
+          "character": "",
+          "profile_path": "/aUMNaDeskPGyDoEGwqvBxZPnzYR.jpg"
+        },
+        {
+          "name": "Brahmanandam",
+          "character": "",
+          "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg"
+        },
+        {
+          "name": "Urvashi",
+          "character": "",
+          "profile_path": "/s5q8iDWeZ8lVBtr87kBXS0S326H.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Pasupuleti Krishna Vamsi",
+            "profile_path": "/2yYVLXYFaoFzRtPaKga0mqamHU6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 117029,
+      "title": "Bujjigaadu: Made in Chennai",
+      "original_title": "బుజ్జిగాడు",
+      "release_date": "2008-05-23",
+      "runtime": 160,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 5.4,
+      "votes": 19,
+      "overview": "Bujji runs away from his home in his childhood because of a dispute with his girlfriend Chitti. He ends up in Chennai for 12 years, and the rest of the story is about how they meet now to make their love successful.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Action"
+      ],
+      "production_companies": [
+        "Creative Commercials"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "'Bujji'  Lingaraju",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Trisha Krishnan",
+          "character": "'Chitti' Meghana",
+          "profile_path": "/jfeAV0VeAQhKONzIv1UEYbklJGn.jpg"
+        },
+        {
+          "name": "Sanjjanaa Galrani",
+          "character": "Kangana",
+          "profile_path": "/5rmQMy5BqfqK0LICwQIlQrZkTui.jpg"
+        },
+        {
+          "name": "Mohan Babu",
+          "character": "Sivanna",
+          "profile_path": "/zwqcXtnk0ju0nhuhvZXSLL2nLIy.jpg"
+        },
+        {
+          "name": "M. S. Narayana",
+          "character": "Prabhas Raju",
+          "profile_path": "/1XRTmhRSOtHBVmoPfz45WxbLfFQ.jpg"
+        },
+        {
+          "name": "Mumaith Khan",
+          "character": "Chitti from Chilakalur",
+          "profile_path": "/nacJyCi8jJzlUlOSGAU1mUyQsHm.jpg"
+        },
+        {
+          "name": "Sunil Varma",
+          "character": "",
+          "profile_path": "/2ueRNLlbB8jaivO6yb7zfIlFhh7.jpg"
+        },
+        {
+          "name": "Brahmaji",
+          "character": "",
+          "profile_path": "/xDTE7POq1bkyjLINxdy7rW4wQlg.jpg"
+        },
+        {
+          "name": "Ajay",
+          "character": "",
+          "profile_path": "/uByCHJa3eaCL0SgFGDYYLlsVggC.jpg"
+        },
+        {
+          "name": "Ali Basha",
+          "character": "",
+          "profile_path": "/1z0YbDqP81BD6VxeghJG7vo9Mny.jpg"
+        },
+        {
+          "name": "Akash Puri",
+          "character": "",
+          "profile_path": "/8qjY6DRrDqfV8AFPrly5dN3aRhD.jpg"
+        },
+        {
+          "name": "Kota Srinivasa Rao",
+          "character": "Machi Reddy",
+          "profile_path": "/iEJprOPpeLhnyxBu2KdiJtw5Adb.jpg"
+        },
+        {
+          "name": "Satyam Rajesh",
+          "character": "Bujji's friend",
+          "profile_path": "/jpOrcCfCCTcsZLnsPQi7OjN9eWJ.jpg"
+        },
+        {
+          "name": "Hema",
+          "character": "Bujji's stepmother",
+          "profile_path": "/4s1Kiq09KI4p7RFjmclEelLnyV8.jpg"
+        },
+        {
+          "name": "Ahuti Prasad",
+          "character": "Real Estate Venkat Rao",
+          "profile_path": "/z0Al1VOH1O45uDQCXt6kadn9psR.jpg"
+        }
+      ],
+      "crew": {
+        "Producer": [
+          {
+            "name": "K. S. Rama Rao",
+            "profile_path": null
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Marthand K Venkatesh",
+            "profile_path": "/5t3F2VGVmTLXMLumejZ8SqPCskW.jpg"
+          }
+        ],
+        "Director": [
+          {
+            "name": "Puri Jagannadh",
+            "profile_path": "/xPOjxS9r0rdLPbP14lHi27qwlTU.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Sandeep Chowta",
+            "profile_path": null
+          }
+        ],
+        "Writer": [
+          {
+            "name": "Puri Jagannadh",
+            "profile_path": "/xPOjxS9r0rdLPbP14lHi27qwlTU.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 117085,
+      "title": "Eeshwar",
+      "original_title": "Eeshwar",
+      "release_date": "2002-11-11",
+      "runtime": 150,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 5.7,
+      "votes": 7,
+      "overview": "Eeshwar (Telugu: ఈశ్వర్) is a 2002 Telugu film directed by Jayanth C. Paranjee and starring Prabhas[1] and Sridevi Vijaykumar. Siva Krishna and Revathi played supporting roles.Eeswar (Prabhas) is a motherless child and brat living in Dhoolpet, a slum area in Old City. Eeswar's father (Siva Krishna) manufactures Gudumba (arrack) with the help of neighborhood people. Eeswar falls in love at first sight when he sees a college going beauty Indu (Sridevi). In the meantime, Eeswar's father marries Sujatha (Revathi), who has been waiting for him for the past 20 years so that she can be a good mother to Eeswar. Eeswar hates his stepmother thinking that his father married her to enjoy worldly pleasures. Meanwhile, Indu's father turns out to be a local MLA (Ashok Kumar) who hates poor. The local MLA sends goons to finish him off Eeswar. What follows next forms the second half of the film.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Drama",
+        "Action"
+      ],
+      "production_companies": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Eeswar",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Sridevi Vijayakumar",
+          "character": "Indu",
+          "profile_path": "/wQkZdWgHAchEue6aNBwggqeYEaD.jpg"
+        },
+        {
+          "name": "Brahmanandam",
+          "character": "Comedy",
+          "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg"
+        },
+        {
+          "name": "Revathi",
+          "character": "",
+          "profile_path": "/sXS4erG255VJlP7XYAduNBNPyDL.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Jayant Paranji",
+            "profile_path": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 135870,
+      "title": "Rebel",
+      "original_title": "రెబెల్",
+      "release_date": "2012-09-28",
+      "runtime": 176,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 4.17,
+      "votes": 53,
+      "overview": "After his parents are brutally murdered, a man goes on a quest to find his parents' killers. He finds that his own uncle is involved in the killings.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Action"
+      ],
+      "production_companies": [
+        "Sri Balaji Cine Media"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Rishi / Rebel",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Tamannaah Bhatia",
+          "character": "Nandini",
+          "profile_path": "/t4WYoKiFAyO1Rhjv7O03EKmJHp4.jpg"
+        },
+        {
+          "name": "Deeksha Seth",
+          "character": "Deepali",
+          "profile_path": "/fgnztpGlmb7XFwga1eplAbNppz5.jpg"
+        },
+        {
+          "name": "Brahmanandam",
+          "character": "Narasa Raju",
+          "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg"
+        },
+        {
+          "name": "Mukesh Rishi",
+          "character": "Jairam",
+          "profile_path": "/iNLleMqHTHrbAlVRCFyye4NZxxb.jpg"
+        },
+        {
+          "name": "Chalapathi Rao",
+          "character": "",
+          "profile_path": "/51zzAobEchxSwHI1b4tUxrVpQaz.jpg"
+        },
+        {
+          "name": "Sayaji Shinde",
+          "character": "",
+          "profile_path": "/r4VBYop4XktGuSZ0wozRqJbEzMH.jpg"
+        },
+        {
+          "name": "Ali Basha",
+          "character": "Kamal Haasan Shiv Shankar",
+          "profile_path": "/1z0YbDqP81BD6VxeghJG7vo9Mny.jpg"
+        },
+        {
+          "name": "M. S. Narayana",
+          "character": "",
+          "profile_path": "/1XRTmhRSOtHBVmoPfz45WxbLfFQ.jpg"
+        },
+        {
+          "name": "Pradeep Ram Singh Rawat",
+          "character": "Simhadri",
+          "profile_path": "/6lsSDOU7Iz9OrmUWZbwvcyCdOB0.jpg"
+        },
+        {
+          "name": "Krishnam Raju",
+          "character": "Bhupathi",
+          "profile_path": "/bvZLQkr6U1kNNWmHZsRnPXOpg4J.jpg"
+        },
+        {
+          "name": "Jayaprakash Reddy",
+          "character": "",
+          "profile_path": "/m0djrw7flYPrE77uV5ufOmywTnb.jpg"
+        },
+        {
+          "name": "Bharath Reddy",
+          "character": "Jairam's Son",
+          "profile_path": "/JR3nxp9Uwba2bAYvUO9vPf4Fo8.jpg"
+        },
+        {
+          "name": "Hema",
+          "character": "",
+          "profile_path": "/4s1Kiq09KI4p7RFjmclEelLnyV8.jpg"
+        },
+        {
+          "name": "Koti Surya Prabha",
+          "character": "Lakshmi",
+          "profile_path": "/24gGUsM9npMCYcX0ZsyAr7Gxnnj.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Raghava Lawrence",
+            "profile_path": "/eEY77s1tI9U4b3UCH7T3AZ4EI5K.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Raghava Lawrence",
+            "profile_path": "/eEY77s1tI9U4b3UCH7T3AZ4EI5K.jpg"
+          },
+          {
+            "name": "S. Chinna",
+            "profile_path": null
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "Raghava Lawrence",
+            "profile_path": "/eEY77s1tI9U4b3UCH7T3AZ4EI5K.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Marthand K Venkatesh",
+            "profile_path": "/5t3F2VGVmTLXMLumejZ8SqPCskW.jpg"
+          }
+        ],
+        "Producer": [
+          {
+            "name": "J. Pulla Rao",
+            "profile_path": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 202080,
+      "title": "Raghavendra",
+      "original_title": "Raghavendra",
+      "release_date": "2003-03-28",
+      "runtime": 151,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 4.1,
+      "votes": 8,
+      "overview": "Raghava (Prabhas) is a hot-blooded and restless youth who cannot tolerate injustice that is being done in the society. In the process, he picks up fight with local mafia leader Ankineedu (Anandraj). Ankineedu stabs Sirisha (Anshu) - the ladylove of Raghava - to death. He also issues an ultimatum to Raghava's parents to leave the city in few hours. The vexed parents ask Raghava to accompany them only if he agrees to listen to their words. They take Raghava to Mantralayam - a relatives place - and make him become a devotee of Lord Raghavendra Swamy.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Action",
+        "Drama",
+        "Romance"
+      ],
+      "production_companies": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Raghava",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Shweta Agarwal",
+          "character": "Maha Lakshmi",
+          "profile_path": null
+        },
+        {
+          "name": "Anshu",
+          "character": "Sirisha",
+          "profile_path": null
+        },
+        {
+          "name": "Brahmanandam",
+          "character": "",
+          "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg"
+        },
+        {
+          "name": "Murali Mohan",
+          "character": "",
+          "profile_path": "/otex9PxT1wXvvR4ATVG5lZH5UDV.jpg"
+        },
+        {
+          "name": "Simran",
+          "character": "",
+          "profile_path": "/BRsVC78sFbFy0NQhaUkGkuUUOL.jpg"
+        },
+        {
+          "name": "Raghu Babu",
+          "character": "",
+          "profile_path": "/9aE6s9wqHgRcBY7wiUfkEZMgJNK.jpg"
+        },
+        {
+          "name": "Kota Srinivasa Rao",
+          "character": "",
+          "profile_path": "/iEJprOPpeLhnyxBu2KdiJtw5Adb.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Suresh Krishna",
+            "profile_path": "/bXCNqiD39dBcCAmtuf7IZTKzMG2.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 176590,
+      "title": "Mirchi",
+      "original_title": "మిర్చి",
+      "release_date": "2013-02-08",
+      "runtime": 154,
+      "language": "te",
+      "budget": 0,
+      "revenue": 13081410,
+      "rating": 6.271,
+      "votes": 35,
+      "overview": "A man returns to his country in order, ostensibly, to reform his girlfriend's violent family, but he seems to have a strange connection and a rather dark past.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "production_companies": [
+        "UV Creations"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Jai",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Anushka Shetty",
+          "character": "Vennela",
+          "profile_path": "/zpe6Es8kdNOXuPdXiJvqxzsmN6z.jpg"
+        },
+        {
+          "name": "Richa Gangopadhyay",
+          "character": "Manasa",
+          "profile_path": "/lqEH1QuzjqwMQTxFvHSdf3czHQi.jpg"
+        },
+        {
+          "name": "Sathyaraj",
+          "character": "Deva",
+          "profile_path": "/lnlBZ7V3K3Z3OIsjCd0zkKx26L3.jpg"
+        },
+        {
+          "name": "Brahmanandam",
+          "character": "Veera Pratap",
+          "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg"
+        },
+        {
+          "name": "Subbaraju",
+          "character": "Poorna",
+          "profile_path": "/upq4ba9D8GgejWkI5tRVzze2yZV.jpg"
+        },
+        {
+          "name": "Nadhiya",
+          "character": "Latha",
+          "profile_path": "/znVhIjakVyBBOhMQ3hOviwQR2kq.jpg"
+        },
+        {
+          "name": "Ajay",
+          "character": "Uma's Henchman",
+          "profile_path": "/uByCHJa3eaCL0SgFGDYYLlsVggC.jpg"
+        },
+        {
+          "name": "Raghu Babu",
+          "character": "Deva's Aide",
+          "profile_path": "/9aE6s9wqHgRcBY7wiUfkEZMgJNK.jpg"
+        },
+        {
+          "name": "Hamsa Nandini",
+          "character": "Special Appearance in \"Mirchi\" Song",
+          "profile_path": "/oUIUJb8H5KVQk080zncuTFcznbT.jpg"
+        },
+        {
+          "name": "Sampath Raj",
+          "character": "Uma",
+          "profile_path": "/oQgoihP26Hyg6gMFVpACRAygZli.jpg"
+        },
+        {
+          "name": "Adithya Menon",
+          "character": "Babai",
+          "profile_path": "/5cmnhtj6npxjKQ8SwqopNfnHBYD.jpg"
+        },
+        {
+          "name": "Satyam Rajesh",
+          "character": "'Nalla' Nagulu",
+          "profile_path": "/jpOrcCfCCTcsZLnsPQi7OjN9eWJ.jpg"
+        },
+        {
+          "name": "Nagineedu Vellanki",
+          "character": "Uma's Elder Brother",
+          "profile_path": "/bqB6ri0ZPKUmzQJNcBIAjOwITu9.jpg"
+        },
+        {
+          "name": "Mamilla Shailaja Priya",
+          "character": "Manasa's Mother",
+          "profile_path": "/Ae9I3yBoUZusGlJiFIKZtQFZyFz.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Koratala Siva",
+            "profile_path": "/uSvFpc0b6jbpFRrkAnXmVgKOzdA.jpg"
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "Koratala Siva",
+            "profile_path": "/uSvFpc0b6jbpFRrkAnXmVgKOzdA.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Devi Sri Prasad",
+            "profile_path": "/4Be4HLS7qqbVPfKyA3yHvtpObFc.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Kotagiri Venkateswara Rao",
+            "profile_path": "/3oTREXmvPlgnEO9vvMxRLIItSbn.jpg"
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Pramod Uppalapati",
+            "profile_path": null
+          },
+          {
+            "name": "Vamsi Krishna Reddy",
+            "profile_path": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 199229,
+      "title": "Munna",
+      "original_title": "మున్నా",
+      "release_date": "2007-05-02",
+      "runtime": 167,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 4.605,
+      "votes": 19,
+      "overview": "Munna (Prabhas) is a college student. His aim is to finish off mafia don Kakha (Prakash Raj) who keeps the entire city under his grip. Munna has personal vengeance to take on Kakha. An honest politician Srinivasa Rao (Kota Srinivasa Rao) relentlessly works to expose Kakha but gets killed. Meanwhile, Munna’s classmate Nidhi (Ileana D'Cruz) falls in love with him. The twist in the tale is that Kakha is none other than his estranged father who tries to sell off his mother and was responsible for the death of his mother and his kid sister. Another don in the city named Aatma, who is the opposition of Kakha (Rahul Dev) asks Munna to join him. But Munna refuses his proposal. Munna starts to beat Kakha and the mind game begins. Kakha's second wife and son-daughter left him and join Munna. After some incidents including the death of his best friend, Munna finds out that Aatma was working for Kakha all along.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Action",
+        "Romance"
+      ],
+      "production_companies": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Munna",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Ileana D'Cruz",
+          "character": "Nidhi",
+          "profile_path": "/zJJerCDPfIrZZW3vdUSuHMazdBj.jpg"
+        },
+        {
+          "name": "Prakash Raj",
+          "character": "Kakha",
+          "profile_path": "/dJvFZOXmZdkYCOUcKTXQAhBcAoH.jpg"
+        },
+        {
+          "name": "Rahul Dev",
+          "character": "Aatma",
+          "profile_path": "/wjADAt1yCyQML0qQIQiGLP9xNUm.jpg"
+        },
+        {
+          "name": "Kota Srinivasa Rao",
+          "character": "",
+          "profile_path": "/iEJprOPpeLhnyxBu2KdiJtw5Adb.jpg"
+        },
+        {
+          "name": "Brahmaji",
+          "character": "",
+          "profile_path": "/xDTE7POq1bkyjLINxdy7rW4wQlg.jpg"
+        },
+        {
+          "name": "Tanikella Bharani",
+          "character": "",
+          "profile_path": "/zRjr0F64Eznbliz1RvN9icj3Lq1.jpg"
+        },
+        {
+          "name": "Surya Bhagawan Das",
+          "character": "",
+          "profile_path": "/fflRAfFuyvM4QIGkS3EVcqIjVm1.jpg"
+        },
+        {
+          "name": "Venu Madhav",
+          "character": "",
+          "profile_path": "/oHuaEIJV4KVkyqjBTOxQ1ECoxgP.jpg"
+        },
+        {
+          "name": "Uttej",
+          "character": "",
+          "profile_path": "/ntwumxdq3aYSi4fJln1kPa1JlD2.jpg"
+        },
+        {
+          "name": "Shriya Saran",
+          "character": "",
+          "profile_path": "/ioOgKBSCJhOdKoZpg86ld7zANbf.jpg"
+        },
+        {
+          "name": "Posani Krishna Murali",
+          "character": "",
+          "profile_path": "/mJHo1EvOORv2FAK12zpFESDQfM.jpg"
+        },
+        {
+          "name": "Venu",
+          "character": "",
+          "profile_path": "/m367s4YmY92g3Woi3LpU6ahbOtm.jpg"
+        },
+        {
+          "name": "Sudha",
+          "character": "",
+          "profile_path": "/eod26HfPLe95cxTk2ieT1YzNaSl.jpg"
+        },
+        {
+          "name": "Harshavardhan",
+          "character": "",
+          "profile_path": "/A6mdUVQBu565oz20DzlxjGUWIZr.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Vamsi Paidipally",
+            "profile_path": null
+          }
+        ],
+        "Writer": [
+          {
+            "name": "Vamsi Paidipally",
+            "profile_path": null
+          },
+          {
+            "name": "Koratala Siva",
+            "profile_path": "/uSvFpc0b6jbpFRrkAnXmVgKOzdA.jpg"
+          },
+          {
+            "name": "BVS Ravi",
+            "profile_path": "/4DWsT19kDA5QbQuj9fWSuflBpq6.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 226200,
+      "title": "Pournami",
+      "original_title": "పౌర్ణమి",
+      "release_date": "2006-04-20",
+      "runtime": 167,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 5.4,
+      "votes": 15,
+      "overview": "A dancer trains for an event where she has to perform a special dance in Lord Shiva's temple. But when she suddenly disappears, her younger sister Chandrakala decides to learn the dance.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Drama",
+        "Action",
+        "Romance",
+        "Music"
+      ],
+      "production_companies": [
+        "Sumanth Art Productions"
+      ],
+      "cast": [
+        {
+          "name": "Trisha Krishnan",
+          "character": "Pournami",
+          "profile_path": "/jfeAV0VeAQhKONzIv1UEYbklJGn.jpg"
+        },
+        {
+          "name": "Prabhas",
+          "character": "Shiva Kesava",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Charmy Kaur",
+          "character": "Chandra Kala",
+          "profile_path": "/5BIGQIuyylSpKrQVhYEEY6GfaUw.jpg"
+        },
+        {
+          "name": "Rahul Dev",
+          "character": "Zamindar",
+          "profile_path": "/wjADAt1yCyQML0qQIQiGLP9xNUm.jpg"
+        },
+        {
+          "name": "Ajay",
+          "character": "",
+          "profile_path": "/uByCHJa3eaCL0SgFGDYYLlsVggC.jpg"
+        },
+        {
+          "name": "Sindhu Tolani",
+          "character": "Mallika",
+          "profile_path": null
+        },
+        {
+          "name": "Mukesh Rishi",
+          "character": "Narasimha Naidu",
+          "profile_path": "/iNLleMqHTHrbAlVRCFyye4NZxxb.jpg"
+        },
+        {
+          "name": "Geetha",
+          "character": "Kesava's mother",
+          "profile_path": "/lSLF837hWXPWAvMAmO157113r4j.jpg"
+        },
+        {
+          "name": "Madhu Sharma",
+          "character": "Mohini",
+          "profile_path": null
+        },
+        {
+          "name": "Kota Srinivasa Rao",
+          "character": "Nagendra Naidu",
+          "profile_path": "/iEJprOPpeLhnyxBu2KdiJtw5Adb.jpg"
+        },
+        {
+          "name": "Chandramohan",
+          "character": "Pournami's father",
+          "profile_path": "/pXkbPFie2pOGgc9cd84BUz0OP4A.jpg"
+        },
+        {
+          "name": "Manju Bhargavi",
+          "character": "Pournami's stepmother",
+          "profile_path": "/2hWAF3kJHKhcXGdpcfDhihLl3ql.jpg"
+        },
+        {
+          "name": "Sunil Varma",
+          "character": "Pournami's brother",
+          "profile_path": "/2ueRNLlbB8jaivO6yb7zfIlFhh7.jpg"
+        },
+        {
+          "name": "Tanikella Bharani",
+          "character": "Mallika's father",
+          "profile_path": "/zRjr0F64Eznbliz1RvN9icj3Lq1.jpg"
+        },
+        {
+          "name": "Archana",
+          "character": "",
+          "profile_path": "/yD6PQ2jJ9KAObSP4LJFpxovkexS.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Prabhu Deva",
+            "profile_path": "/lfVxoyweEPkIu6zFa44ajPuSJA1.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Devi Sri Prasad",
+            "profile_path": "/4Be4HLS7qqbVPfKyA3yHvtpObFc.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "K V Krishna Reddy",
+            "profile_path": null
+          }
+        ],
+        "Producer": [
+          {
+            "name": "M. S. Raju",
+            "profile_path": null
+          }
+        ],
+        "Writer": [
+          {
+            "name": "M. S. Raju",
+            "profile_path": null
+          },
+          {
+            "name": "Venkateswara Rao Paruchuri",
+            "profile_path": "/beZ0WB3lN4KUANKmfZkmgP2wgp8.jpg"
+          },
+          {
+            "name": "Gopalakrishna Paruchuri",
+            "profile_path": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 770906,
+      "title": "Salaar: Part 1 - Ceasefire",
+      "original_title": "సలార్: పార్ట్‌ 1 – సీజ్‌ఫైర్‌",
+      "release_date": "2023-12-21",
+      "runtime": 175,
+      "language": "te",
+      "budget": 34000000,
+      "revenue": 87229100,
+      "rating": 6.7,
+      "votes": 97,
+      "overview": "Set in the fictional dystopian city-state of Khansaar, the film follows the friendship between Deva, a tribesman, and Varadha, the prince of Khansaar. When a coup d'état is planned by his father's ministers and his relatives, Varadha enlists Deva's help to become Khansaar's undisputed ruler.",
+      "status": "Released",
+      "tagline": "THE MOST VIOLENT MEN... CALLED ONE MAN... THE MOST VIOLENT",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "production_companies": [
+        "Hombale Films"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Devaratha \"Deva\" Raisaar",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Prithviraj Sukumaran",
+          "character": "Vardharaja Mannar / Siva Mannar",
+          "profile_path": "/1xhG42QU8tMQRTDdP1Ed3y9GRvm.jpg"
+        },
+        {
+          "name": "Shruti Haasan",
+          "character": "Aadya Krishnakanth",
+          "profile_path": "/1zYJuSccSA45VVBdgozpRcL99Rd.jpg"
+        },
+        {
+          "name": "Easwari Rao",
+          "character": "Deva's Mother",
+          "profile_path": "/fjyvQ45YZcovy2Egj2eux8UiuHU.jpg"
+        },
+        {
+          "name": "Jagapati Babu",
+          "character": "Raja Mannar",
+          "profile_path": "/bm72k6FmDxhxtZsl1xvxoz88Hkm.jpg"
+        },
+        {
+          "name": "Bobby Simha",
+          "character": "Bhaarava",
+          "profile_path": "/4luN7NwlKvenAkSDwjzZeWpWuoP.jpg"
+        },
+        {
+          "name": "Sriya Reddy",
+          "character": "Radha Rama Mannar",
+          "profile_path": "/6AwGUf0uj7Dr6cwZkC53KNihPdj.jpg"
+        },
+        {
+          "name": "Ramachandra Raju",
+          "character": "Rudra Raja Mannar",
+          "profile_path": "/kU1a4H8o1IQA25Lyq3cW70aufhT.jpg"
+        },
+        {
+          "name": "Mime Gopi",
+          "character": "Bilal",
+          "profile_path": "/gglNAjJMlCb0p7ig3OVpgsXMkMD.jpg"
+        },
+        {
+          "name": "Tinnu Anand",
+          "character": "Gaikwad \"Baba\"",
+          "profile_path": "/6fkEiZKNp6jnOQmfQKEjVinhUeL.jpg"
+        },
+        {
+          "name": "Pramod Panju",
+          "character": "Baachi Raja Mannar",
+          "profile_path": "/2URHh4gn72VYlgrrZrNaEyXjpPh.jpg"
+        },
+        {
+          "name": "Ramana",
+          "character": "Rinda",
+          "profile_path": "/fQcMvPYyCr2FwAP4YwhElUsbgrZ.jpg"
+        },
+        {
+          "name": "John Vijay",
+          "character": "Ranga",
+          "profile_path": "/1H4uUEI32DmZWfTGmWnXyu0BrU7.jpg"
+        },
+        {
+          "name": "M. S. Chowdhary",
+          "character": "Narang",
+          "profile_path": null
+        },
+        {
+          "name": "Vajrang Shetty",
+          "character": "Vishnu",
+          "profile_path": null
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Prashanth Neel",
+            "profile_path": "/oq6ydaurgC4NueXuo64R5QoFnfp.jpg"
+          }
+        ],
+        "Writer": [
+          {
+            "name": "Prashanth Neel",
+            "profile_path": "/oq6ydaurgC4NueXuo64R5QoFnfp.jpg"
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Vijay Kiragandur",
+            "profile_path": "/pg7DHf5WArf8YIIIOLd3qObOEDa.jpg"
+          }
+        ],
+        "Cinematography": [
+          {
+            "name": "Bhuvan Gowda",
+            "profile_path": null
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Ujwal Kulkarni",
+            "profile_path": null
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Ravi Basrur",
+            "profile_path": "/mlHRC8r4J3ZND7w80B59x3WeX1I.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 228092,
+      "title": "Yogi",
+      "original_title": "యోగి",
+      "release_date": "2007-01-14",
+      "runtime": 155,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 3.75,
+      "votes": 14,
+      "overview": "Eeshwar Chandra Prasad (Prabhas) is the son of Ram Murthy (Chalapathi Rao) and Shantamma (Sharada Urvashi). Ram Murthy wants his son to do some job. However, Shantamma pampers Eeshwar very much and hence he doesn't want to leave the village. Ram Murthy dies and in order to fulfil his last wish, Eeshwar goes to the city to earn money on the advice of his friend Basha (Ali), who was a pickpocket. Eeshwar could not meet Basha. On the other hand Kotaiah (Kota Srinivasa Rao) runs big land mafia in Hyderabad city and a bitter rival of Narsing Pahilwan (Pradeep Rawat). Saidulu (Subbaraju) is Narsing's brother. Once Saidulu hacks Kotaiah and his assistant, when Eeshwar accidentally saves him. Eeshwar gets a job in a tea stall run by Chandranna (Chandra Mohan). He earns good money and purchases two gold bangles for his mother and plans to leave the city.",
+      "status": "Released",
+      "tagline": "A feel that never ends",
+      "genres": [],
+      "production_companies": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Eeshwar Chandra Prasad",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Nayanthara",
+          "character": "Nandini",
+          "profile_path": "/5KubBeb2DkNXoU4lzzBdWzqzzlM.jpg"
+        },
+        {
+          "name": "Kota Srinivasa Rao",
+          "character": "",
+          "profile_path": "/iEJprOPpeLhnyxBu2KdiJtw5Adb.jpg"
+        },
+        {
+          "name": "Ali Basha",
+          "character": "",
+          "profile_path": "/1z0YbDqP81BD6VxeghJG7vo9Mny.jpg"
+        },
+        {
+          "name": "Pradeep Ram Singh Rawat",
+          "character": "",
+          "profile_path": "/6lsSDOU7Iz9OrmUWZbwvcyCdOB0.jpg"
+        },
+        {
+          "name": "Chalapathi Rao",
+          "character": "",
+          "profile_path": "/51zzAobEchxSwHI1b4tUxrVpQaz.jpg"
+        },
+        {
+          "name": "Venu Madhav",
+          "character": "",
+          "profile_path": "/oHuaEIJV4KVkyqjBTOxQ1ECoxgP.jpg"
+        },
+        {
+          "name": "Subbaraju",
+          "character": "",
+          "profile_path": "/upq4ba9D8GgejWkI5tRVzze2yZV.jpg"
+        },
+        {
+          "name": "Chandramohan",
+          "character": "",
+          "profile_path": "/pXkbPFie2pOGgc9cd84BUz0OP4A.jpg"
+        },
+        {
+          "name": "Ahuti Prasad",
+          "character": "",
+          "profile_path": "/z0Al1VOH1O45uDQCXt6kadn9psR.jpg"
+        },
+        {
+          "name": "Mumaith Khan",
+          "character": "",
+          "profile_path": "/nacJyCi8jJzlUlOSGAU1mUyQsHm.jpg"
+        },
+        {
+          "name": "Rajan P Dev",
+          "character": "",
+          "profile_path": "/AnxJVFT3LnEOMzNhnR90zzASWVW.jpg"
+        },
+        {
+          "name": "Bandla Ganesh",
+          "character": "",
+          "profile_path": null
+        },
+        {
+          "name": "Sharada",
+          "character": "",
+          "profile_path": "/qaC7niVbch3Tz912TuHHEUkBoVb.jpg"
+        },
+        {
+          "name": "Uttej",
+          "character": "",
+          "profile_path": "/ntwumxdq3aYSi4fJln1kPa1JlD2.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "V. V. Vinayak",
+            "profile_path": "/qe4F94qkelNx4ZOlybbLyxoB00v.jpg"
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "V. V. Vinayak",
+            "profile_path": "/qe4F94qkelNx4ZOlybbLyxoB00v.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 228096,
+      "title": "Adavi Ramudu",
+      "original_title": "అడవి రాముడు",
+      "release_date": "2004-05-21",
+      "runtime": 0,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 5.2,
+      "votes": 5,
+      "overview": "Madhu comes to a village in childhood here she taught a boy and tells him to be educated person.10 years later the boy Ramadu(Prabhas) returns to the college,here he meets college most wanted sexiest woman Madhu(Aarthi Aggarwal).Madhu gots into love with him.Later she reveals in her birthday party that she was the childhood girl who told him to be educated person.However Madhu mother Tribhuvna(Telangana Shakuntala) insults him and through out of her party and house.Tribhuvna is a hot minded woman who can do whatever she wants either Mafia or Politics.She want kill ramadu.What happens then is rest of movie",
+      "status": "Released",
+      "tagline": "",
+      "genres": [],
+      "production_companies": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Ramudu",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Aarthi Agarwal",
+          "character": "Madhu",
+          "profile_path": "/1CfRQgbE4uSG6vNKGGYTCIylgDj.jpg"
+        },
+        {
+          "name": "Brahmanandam",
+          "character": "Puli Raju",
+          "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg"
+        },
+        {
+          "name": "Venu Madhav",
+          "character": "",
+          "profile_path": "/oHuaEIJV4KVkyqjBTOxQ1ECoxgP.jpg"
+        },
+        {
+          "name": "Ramya Krishnan",
+          "character": "",
+          "profile_path": "/7Ex7OHhtotLXOAza1VOcUplPb7O.jpg"
+        },
+        {
+          "name": "Nassar",
+          "character": "",
+          "profile_path": "/p3I0tSQY3C5qZW3NzFfbpjKPNL6.jpg"
+        },
+        {
+          "name": "Rajiv Kanakala",
+          "character": "",
+          "profile_path": "/29Czs1esSU744TOe3ddDzCuCa0g.jpg"
+        },
+        {
+          "name": "Telangana Sakuntala",
+          "character": "",
+          "profile_path": "/yOAdaJf5q231iiNLvJEEDXWRnE5.jpg"
+        },
+        {
+          "name": "Teja Sajja",
+          "character": "Young Ramudu",
+          "profile_path": "/ahHqj4ADMjwzoj6lNAv7D9sP8nM.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "B. Gopal",
+            "profile_path": "/c0lIwqgWn5pIfU4tz86HYnL0cb9.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Mani Sharma",
+            "profile_path": "/99QZjwoHVgDxH6FJ5apNNaS0aAP.jpg"
+          }
+        ],
+        "Writer": [
+          {
+            "name": "B. Gopal",
+            "profile_path": "/c0lIwqgWn5pIfU4tz86HYnL0cb9.jpg"
+          },
+          {
+            "name": "Gopalakrishna Paruchuri",
+            "profile_path": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 256040,
+      "title": "Bāhubali: The Beginning",
+      "original_title": "బాహుబలి:ద బిగినింగ్",
+      "release_date": "2015-07-10",
+      "runtime": 159,
+      "language": "te",
+      "budget": 25130430,
+      "revenue": 90747520,
+      "rating": 7.528,
+      "votes": 873,
+      "overview": "The young Shivudu is left as a foundling in a small village by his mother. By the time he’s grown up, it has become apparent that he possesses exceptional gifts. He meets the beautiful warrior princess Avanthika and learns that her queen has been held captive for the last 25 years. Shividu sets off to rescue her, discovering his own origins in the process.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "production_companies": [
+        "Arka Media Works"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Mahendra \"Sivudu\" Bāhubali / Amarendra Bāhubali",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Rana Daggubati",
+          "character": "Bhallaladeva",
+          "profile_path": "/dCQE1CoWWc6RoXUTxOKjAXO8KDr.jpg"
+        },
+        {
+          "name": "Tamannaah Bhatia",
+          "character": "Avanthika",
+          "profile_path": "/t4WYoKiFAyO1Rhjv7O03EKmJHp4.jpg"
+        },
+        {
+          "name": "Anushka Shetty",
+          "character": "Devasena",
+          "profile_path": "/zpe6Es8kdNOXuPdXiJvqxzsmN6z.jpg"
+        },
+        {
+          "name": "Ramya Krishnan",
+          "character": "Sivagami",
+          "profile_path": "/7Ex7OHhtotLXOAza1VOcUplPb7O.jpg"
+        },
+        {
+          "name": "Nassar",
+          "character": "Bijjaladeva",
+          "profile_path": "/p3I0tSQY3C5qZW3NzFfbpjKPNL6.jpg"
+        },
+        {
+          "name": "Sathyaraj",
+          "character": "Karikala Kattappa Nadar",
+          "profile_path": "/lnlBZ7V3K3Z3OIsjCd0zkKx26L3.jpg"
+        },
+        {
+          "name": "Prabhakar",
+          "character": "King Kalakeya",
+          "profile_path": "/82ZArziu8gJ1gVamzlcXjedeOFq.jpg"
+        },
+        {
+          "name": "Adivi Sesh",
+          "character": "Bhadra",
+          "profile_path": "/vWvU1qlpGGrCsdox0pAJ6Gns4Bp.jpg"
+        },
+        {
+          "name": "Sudeep",
+          "character": "Aslam Khan",
+          "profile_path": "/sh6ZORBLt63dFkmjExEYopETIpj.jpg"
+        },
+        {
+          "name": "Rohini",
+          "character": "Sanga",
+          "profile_path": "/oeT5DXeqsTY17DtJLTGpQec91fr.jpg"
+        },
+        {
+          "name": "Ramakrishna Meka",
+          "character": "Jaya Varma",
+          "profile_path": null
+        },
+        {
+          "name": "Tanikella Bharani",
+          "character": "Swamiji",
+          "profile_path": "/zRjr0F64Eznbliz1RvN9icj3Lq1.jpg"
+        },
+        {
+          "name": "Charandeep",
+          "character": "King Kalakeya's Brother",
+          "profile_path": "/aV18GfEmzYp278Al3WARDRxNYje.jpg"
+        },
+        {
+          "name": "Rakesh Varre",
+          "character": "Bhallaladeva's Friend",
+          "profile_path": "/erutHeuAaIMBJ2ILrnjQhInjgjp.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "S. S. Rajamouli",
+            "profile_path": "/g7jXGAVT8T5vq81fO5JWDleDc75.jpg"
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Prasad Devineni",
+            "profile_path": null
+          },
+          {
+            "name": "Shobu Yarlagadda",
+            "profile_path": null
+          },
+          {
+            "name": "Iliya Sotirov",
+            "profile_path": null
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "S. S. Rajamouli",
+            "profile_path": "/g7jXGAVT8T5vq81fO5JWDleDc75.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Kotagiri Venkateswara Rao",
+            "profile_path": "/3oTREXmvPlgnEO9vvMxRLIItSbn.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "M.M. Keeravaani",
+            "profile_path": "/r0f7RTGIkG0ZBaQViIKrE1g82Ec.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1212402,
+      "title": "Salaar: Part 2 - Shouryaanga Parvam",
+      "original_title": "సలార్: పార్ట్ 2 - శౌర్యాంగ పర్వం",
+      "release_date": "",
+      "runtime": 0,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 0.0,
+      "votes": 0,
+      "overview": "",
+      "status": "Planned",
+      "tagline": "",
+      "genres": [
+        "Action"
+      ],
+      "production_companies": [
+        "Hombale Films"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Salaar Devaratha \"Deva\" Raisaar",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Prithviraj Sukumaran",
+          "character": "Vardharaja Mannar",
+          "profile_path": "/1xhG42QU8tMQRTDdP1Ed3y9GRvm.jpg"
+        },
+        {
+          "name": "Shruti Haasan",
+          "character": "Aadya Krishnakanth",
+          "profile_path": "/1zYJuSccSA45VVBdgozpRcL99Rd.jpg"
+        },
+        {
+          "name": "Easwari Rao",
+          "character": "Deva's Mother",
+          "profile_path": "/fjyvQ45YZcovy2Egj2eux8UiuHU.jpg"
+        },
+        {
+          "name": "Jagapati Babu",
+          "character": "Raja Mannar",
+          "profile_path": "/bm72k6FmDxhxtZsl1xvxoz88Hkm.jpg"
+        },
+        {
+          "name": "Bobby Simha",
+          "character": "Bhaarava",
+          "profile_path": "/4luN7NwlKvenAkSDwjzZeWpWuoP.jpg"
+        },
+        {
+          "name": "Sriya Reddy",
+          "character": "Radha Rama Mannar",
+          "profile_path": "/6AwGUf0uj7Dr6cwZkC53KNihPdj.jpg"
+        },
+        {
+          "name": "Ramachandra Raju",
+          "character": "Rudra Mannar",
+          "profile_path": "/kU1a4H8o1IQA25Lyq3cW70aufhT.jpg"
+        },
+        {
+          "name": "Mime Gopi",
+          "character": "Bilal",
+          "profile_path": "/gglNAjJMlCb0p7ig3OVpgsXMkMD.jpg"
+        },
+        {
+          "name": "Tinnu Anand",
+          "character": "Gaikwad \"Baba\"",
+          "profile_path": "/6fkEiZKNp6jnOQmfQKEjVinhUeL.jpg"
+        },
+        {
+          "name": "Pramod Panju",
+          "character": "Baachi Raja Mannar",
+          "profile_path": "/2URHh4gn72VYlgrrZrNaEyXjpPh.jpg"
+        },
+        {
+          "name": "Ramana",
+          "character": "Rinda",
+          "profile_path": "/fQcMvPYyCr2FwAP4YwhElUsbgrZ.jpg"
+        },
+        {
+          "name": "Devaraj",
+          "character": "Om",
+          "profile_path": "/nUvDzDVZ5q0Hnze8iQwOJe3QiS9.jpg"
+        },
+        {
+          "name": "Naveen Shankar",
+          "character": "Pandit",
+          "profile_path": "/6ITQ3nk9XdP6NQXnP8RE7VxoXpz.jpg"
+        },
+        {
+          "name": "Brahmaji",
+          "character": "Baali",
+          "profile_path": "/xDTE7POq1bkyjLINxdy7rW4wQlg.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Prashanth Neel",
+            "profile_path": "/oq6ydaurgC4NueXuo64R5QoFnfp.jpg"
+          }
+        ],
+        "Writer": [
+          {
+            "name": "Prashanth Neel",
+            "profile_path": "/oq6ydaurgC4NueXuo64R5QoFnfp.jpg"
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Vijay Kiragandur",
+            "profile_path": "/pg7DHf5WArf8YIIIOLd3qObOEDa.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Ravi Basrur",
+            "profile_path": "/mlHRC8r4J3ZND7w80B59x3WeX1I.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1232232,
+      "title": "Kannappa",
+      "original_title": "కన్నప్ప",
+      "release_date": "2025-06-26",
+      "runtime": 182,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 4.8,
+      "votes": 8,
+      "overview": "After witnessing the cruel sacrifice of his childhood friend, an atheist warrior rejects religion until love forces him to find his own faith.",
+      "status": "Released",
+      "tagline": "The Bravest Warrior. The Ultimate Devotee.",
+      "genres": [
+        "Fantasy",
+        "History",
+        "Drama"
+      ],
+      "production_companies": [
+        "24 Frames Factory",
+        "AVA Entertainment"
+      ],
+      "cast": [
+        {
+          "name": "Vishnu Manchu",
+          "character": "Kannappa",
+          "profile_path": "/g0wi6kP54JK2B1312pwiEexihFB.jpg"
+        },
+        {
+          "name": "Preity Mukhundhan",
+          "character": "Nemali",
+          "profile_path": "/m3qGm6zD2MIye4PB0OaeaS6wc9v.jpg"
+        },
+        {
+          "name": "Akshay Kumar",
+          "character": "Shiva",
+          "profile_path": "/1d77rFiN8h2JXE6vS8VCuc2k20J.jpg"
+        },
+        {
+          "name": "Mohan Babu",
+          "character": "",
+          "profile_path": "/zwqcXtnk0ju0nhuhvZXSLL2nLIy.jpg"
+        },
+        {
+          "name": "Mohanlal",
+          "character": "Kirata",
+          "profile_path": "/wvoBULQimwguAGPOHZ8TDoy7jBJ.jpg"
+        },
+        {
+          "name": "Prabhas",
+          "character": "Rudra",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Kajal Aggarwal",
+          "character": "Parvathy",
+          "profile_path": "/hIV5HeHM9xUxhbDdhtM8q56AuXE.jpg"
+        },
+        {
+          "name": "R. Sarathkumar",
+          "character": "",
+          "profile_path": "/x2Bx2mxOvgvRzaLFlpKNGmKYkK2.jpg"
+        },
+        {
+          "name": "Brahmanandam",
+          "character": "",
+          "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg"
+        },
+        {
+          "name": "Madhoo",
+          "character": "",
+          "profile_path": "/bBRTCNgnpNrcZQPC5jodkGPvx5W.jpg"
+        },
+        {
+          "name": "Mukesh Rishi",
+          "character": "",
+          "profile_path": "/iNLleMqHTHrbAlVRCFyye4NZxxb.jpg"
+        },
+        {
+          "name": "Brahmaji",
+          "character": "",
+          "profile_path": "/xDTE7POq1bkyjLINxdy7rW4wQlg.jpg"
+        },
+        {
+          "name": "Aishwarya Bhaskar",
+          "character": "",
+          "profile_path": "/u6fnO7WBtfD8DV3bNaMJoPku4x.jpg"
+        },
+        {
+          "name": "Josita Anola Rodrigues",
+          "character": "Josita Rodrigues",
+          "profile_path": null
+        }
+      ],
+      "crew": {
+        "Producer": [
+          {
+            "name": "Mohan Babu",
+            "profile_path": "/zwqcXtnk0ju0nhuhvZXSLL2nLIy.jpg"
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "Vishnu Manchu",
+            "profile_path": "/g0wi6kP54JK2B1312pwiEexihFB.jpg"
+          }
+        ],
+        "Director": [
+          {
+            "name": "Mukesh Kumar Singh",
+            "profile_path": null
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Stephen Devassy",
+            "profile_path": null
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Anthony",
+            "profile_path": "/zNKpopeEnQUqmHBdqqAYRfkcBhZ.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 308165,
+      "title": "Action Jackson",
+      "original_title": "एक्शन जैकसन",
+      "release_date": "2014-12-05",
+      "runtime": 144,
+      "language": "hi",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 4.095,
+      "votes": 37,
+      "overview": "A man meets his lookalike, who's not just a killer of evil, but also a kind hearted man. Together, they team up to fight against a dreaded gangster.",
+      "status": "Released",
+      "tagline": "Naa Commitment, Naa Appointment, Only Punishment!",
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "production_companies": [
+        "Eros International"
+      ],
+      "cast": [
+        {
+          "name": "Ajay Devgn",
+          "character": "Vishi / Jay",
+          "profile_path": "/vnHQQFzTjJ0sv14DGMIoKa3qTxN.jpg"
+        },
+        {
+          "name": "Manasvi Mamgai",
+          "character": "Marina",
+          "profile_path": "/l4cRHx0HRCvELVyawUPbMasUeoz.jpg"
+        },
+        {
+          "name": "Byron Gibson",
+          "character": "Russian Mafia Boss",
+          "profile_path": "/7UAnn1flkkcFtSCUnHj7TATueJ5.jpg"
+        },
+        {
+          "name": "Sonakshi Sinha",
+          "character": "Khushi",
+          "profile_path": "/7HaI5owaKzOb6Qdtwifp29uhHk2.jpg"
+        },
+        {
+          "name": "Yami Gautam",
+          "character": "Anusha",
+          "profile_path": "/u4LFwi4mA0qyK0zTuqHoPL5LPi9.jpg"
+        },
+        {
+          "name": "Kunaal Roy Kapur",
+          "character": "Moosa",
+          "profile_path": "/l8EbUNJUbfyKuHIQiXWK91FGyea.jpg"
+        },
+        {
+          "name": "Prabhas",
+          "character": "Special Appearance",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Shahid Kapoor",
+          "character": "Special Appearance",
+          "profile_path": "/q5jqLRioZgIVjXpKS8XHx27ScDQ.jpg"
+        },
+        {
+          "name": "Rocky Verma",
+          "character": "Riya's Father",
+          "profile_path": null
+        }
+      ],
+      "crew": {
+        "Producer": [
+          {
+            "name": "Sunil Lulla",
+            "profile_path": null
+          }
+        ],
+        "Writer": [
+          {
+            "name": "Prabhu Deva",
+            "profile_path": "/lfVxoyweEPkIu6zFa44ajPuSJA1.jpg"
+          },
+          {
+            "name": "A. C. Mugil",
+            "profile_path": null
+          }
+        ],
+        "Director": [
+          {
+            "name": "Prabhu Deva",
+            "profile_path": "/lfVxoyweEPkIu6zFa44ajPuSJA1.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Bunty Nagi",
+            "profile_path": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 1257973,
+      "title": "Fauzi",
+      "original_title": "ఫౌజి",
+      "release_date": "",
+      "runtime": 0,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 0.0,
+      "votes": 0,
+      "overview": "",
+      "status": "In Production",
+      "tagline": "A BATTALION WHO STANDS ALONE",
+      "genres": [
+        "War",
+        "History",
+        "Drama",
+        "Romance",
+        "Action"
+      ],
+      "production_companies": [
+        "Mythri Movie Makers",
+        "T-Series"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Fauzi",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Iman Esmail",
+          "character": "",
+          "profile_path": "/5aizDjOp3KJNvLcMLMRacX6j0AV.jpg"
+        },
+        {
+          "name": "Mithun Chakraborty",
+          "character": "",
+          "profile_path": "/vR8LFfMsIFWnsLqLtgig2tbhBrZ.jpg"
+        },
+        {
+          "name": "Jaya Prada",
+          "character": "",
+          "profile_path": "/annu4gnsyB8uGC7ipgNfXQVCbK6.jpg"
+        },
+        {
+          "name": "Anupam Kher",
+          "character": "",
+          "profile_path": "/kgU5Ap1Kf9RnicB5DMcXEZqed2f.jpg"
+        },
+        {
+          "name": "Chaithra J Achar",
+          "character": "",
+          "profile_path": "/mCpqijk7HhguNYcffPhprGVHts5.jpg"
+        },
+        {
+          "name": "Rahul Ravindran",
+          "character": "",
+          "profile_path": "/ejAiUB2QUhiOaGfDPgAM505R5uY.jpg"
+        },
+        {
+          "name": "Master Dharshan",
+          "character": "Young Fauzi",
+          "profile_path": null
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Hanu Raghavapudi",
+            "profile_path": "/7tizD44Jp35OLykxEQlMxKOjuTz.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Vishal Chandrasekhar",
+            "profile_path": "/f5wr51cQIiEpktLdPhI5wAo23Uc.jpg"
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Naveen Yerneni",
+            "profile_path": null
+          },
+          {
+            "name": "Y. Ravi Shankar",
+            "profile_path": "/stZ6Fzi96nUlWyomx7hhXcqBQiX.jpg"
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "Hanu Raghavapudi",
+            "profile_path": "/7tizD44Jp35OLykxEQlMxKOjuTz.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Kotagiri Venkateswara Rao",
+            "profile_path": "/3oTREXmvPlgnEO9vvMxRLIItSbn.jpg"
+          }
+        ],
+        "Writer": [
+          {
+            "name": "Hanu Raghavapudi",
+            "profile_path": "/7tizD44Jp35OLykxEQlMxKOjuTz.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 350312,
+      "title": "Bāhubali 2: The Conclusion",
+      "original_title": "బాహుబలి 2: ది కన్ క్లూజన్",
+      "release_date": "2017-04-27",
+      "runtime": 166,
+      "language": "te",
+      "budget": 31000000,
+      "revenue": 280700000,
+      "rating": 7.452,
+      "votes": 803,
+      "overview": "When Mahendra, the son of Bāhubali, learns about his heritage, he begins to look for answers. His story is juxtaposed with past events that unfolded in the Mahishmati Kingdom.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "production_companies": [
+        "Arka Media Works"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Amarendra Bāhubali / Mahendra Bāhubali 'Shivudu'",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Rana Daggubati",
+          "character": "Bhallaladeva",
+          "profile_path": "/dCQE1CoWWc6RoXUTxOKjAXO8KDr.jpg"
+        },
+        {
+          "name": "Anushka Shetty",
+          "character": "Devasena",
+          "profile_path": "/zpe6Es8kdNOXuPdXiJvqxzsmN6z.jpg"
+        },
+        {
+          "name": "Sathyaraj",
+          "character": "Karikala Kattappa Nadar",
+          "profile_path": "/lnlBZ7V3K3Z3OIsjCd0zkKx26L3.jpg"
+        },
+        {
+          "name": "Nassar",
+          "character": "Bijjaladeva",
+          "profile_path": "/p3I0tSQY3C5qZW3NzFfbpjKPNL6.jpg"
+        },
+        {
+          "name": "Ramya Krishnan",
+          "character": "Sivagami",
+          "profile_path": "/7Ex7OHhtotLXOAza1VOcUplPb7O.jpg"
+        },
+        {
+          "name": "Subbaraju",
+          "character": "Kumara Varma",
+          "profile_path": "/upq4ba9D8GgejWkI5tRVzze2yZV.jpg"
+        },
+        {
+          "name": "Tamannaah Bhatia",
+          "character": "Avanthika",
+          "profile_path": "/t4WYoKiFAyO1Rhjv7O03EKmJHp4.jpg"
+        },
+        {
+          "name": "Prudhviraj",
+          "character": "Official in Kunthala Kingdom",
+          "profile_path": "/fF5zEdi65qeyClLhjIuCmT5LdFb.jpg"
+        },
+        {
+          "name": "Rohini",
+          "character": "Sanga",
+          "profile_path": "/oeT5DXeqsTY17DtJLTGpQec91fr.jpg"
+        },
+        {
+          "name": "Kalpalatha",
+          "character": "",
+          "profile_path": "/j3sKWeC05kHdnpOmCgbv1XBaQt8.jpg"
+        },
+        {
+          "name": "Ashrita Vemuganti",
+          "character": "(uncredited)",
+          "profile_path": "/2LXm1JzNNgJhDFPUYHdwnxi2DIO.jpg"
+        },
+        {
+          "name": "Tanikella Bharani",
+          "character": "Swami (voice) (uncredited)",
+          "profile_path": "/zRjr0F64Eznbliz1RvN9icj3Lq1.jpg"
+        },
+        {
+          "name": "Bharani Shankar",
+          "character": "(uncredited)",
+          "profile_path": null
+        },
+        {
+          "name": "P. Ravi Shankar",
+          "character": "Karikala Kattappa Nadar (Voice)",
+          "profile_path": "/cPaj3QhSmVtxeY8QF4oQVSGb5co.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "S. S. Rajamouli",
+            "profile_path": "/g7jXGAVT8T5vq81fO5JWDleDc75.jpg"
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "S. S. Rajamouli",
+            "profile_path": "/g7jXGAVT8T5vq81fO5JWDleDc75.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Kotagiri Venkateswara Rao",
+            "profile_path": "/3oTREXmvPlgnEO9vvMxRLIItSbn.jpg"
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Prasad Devineni",
+            "profile_path": null
+          },
+          {
+            "name": "Iliya Sotirov",
+            "profile_path": null
+          },
+          {
+            "name": "K Raghavendra Rao",
+            "profile_path": "/aXUNYnHOFs7GTJPKkscsFjtbUgo.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "M.M. Keeravaani",
+            "profile_path": "/r0f7RTGIkG0ZBaQViIKrE1g82Ec.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1310969,
+      "title": "Kalki 2898 AD: Part 2",
+      "original_title": "Kalki 2898 AD: Part 2",
+      "release_date": "",
+      "runtime": 0,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 0.0,
+      "votes": 0,
+      "overview": "Sequel to Kalki 2898 AD",
+      "status": "Planned",
+      "tagline": "",
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Science Fiction"
+      ],
+      "production_companies": [
+        "Vyjayanthi Movies"
+      ],
+      "cast": [
+        {
+          "name": "Amitabh Bachchan",
+          "character": "Ashwatthama",
+          "profile_path": "/u69PvpWqGkywSm0YjFiw77j9eqS.jpg"
+        },
+        {
+          "name": "Kamal Haasan",
+          "character": "Supreme Yaskin",
+          "profile_path": "/17zscZgz4wOlGDd3Gziw4YbI3G.jpg"
+        },
+        {
+          "name": "Prabhas",
+          "character": "Bhairava",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Disha Patani",
+          "character": "Roxie",
+          "profile_path": "/oWfHKrvbk3Ak6UnrzDlAoZu7nlh.jpg"
+        },
+        {
+          "name": "Keya Nair",
+          "character": "Raia",
+          "profile_path": null
+        },
+        {
+          "name": "Pasupathy",
+          "character": "Veeran",
+          "profile_path": "/5acprpMj9trXNd8QOoKwssjkXkb.jpg"
+        },
+        {
+          "name": "Kavya Ramachandran",
+          "character": "Lilly",
+          "profile_path": null
+        },
+        {
+          "name": "Ayaz Pasha",
+          "character": "Ajju",
+          "profile_path": null
+        },
+        {
+          "name": "Harshith Malgireddy",
+          "character": "Luke",
+          "profile_path": null
+        },
+        {
+          "name": "Humhu",
+          "character": "Krane",
+          "profile_path": null
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Nag Ashwin",
+            "profile_path": "/497odnRihLzESOdShcXZkNg3UaX.jpg"
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Swapna Dutt",
+            "profile_path": "/7L8M2G11CjIS7DC9hBuoDepcdh9.jpg"
+          },
+          {
+            "name": "C. Ashwini Dutt",
+            "profile_path": "/9WAIxfz9hvFWYD7VZeUdQ800e7X.jpg"
+          },
+          {
+            "name": "Priyanka Dutt",
+            "profile_path": "/g1ywPat0gvNXDKcWGKUDKcQMhgT.jpg"
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "Nag Ashwin",
+            "profile_path": "/497odnRihLzESOdShcXZkNg3UaX.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1313130,
+      "title": "Modern Masters: SS Rajamouli",
+      "original_title": "Modern Masters: SS Rajamouli",
+      "release_date": "2024-08-02",
+      "runtime": 74,
+      "language": "en",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 8.0,
+      "votes": 4,
+      "overview": "Highlights Rajamouli’s influence on Indian and international cinema, with interviews and behind-the-scenes footage.",
+      "status": "Released",
+      "tagline": "One Man. Numerous Blockbusters. Endless Ambition.",
+      "genres": [
+        "Documentary"
+      ],
+      "production_companies": [
+        "Applause Entertainment",
+        "Film Companion Studios"
+      ],
+      "cast": [
+        {
+          "name": "S. S. Rajamouli",
+          "character": "Self",
+          "profile_path": "/g7jXGAVT8T5vq81fO5JWDleDc75.jpg"
+        },
+        {
+          "name": "James Cameron",
+          "character": "Self",
+          "profile_path": "/9NAZnTjBQ9WcXAQEzZpKy4vdQto.jpg"
+        },
+        {
+          "name": "Joe Russo",
+          "character": "Self",
+          "profile_path": "/o0OXjFzL10jCy89iAs7UzzSbyoK.jpg"
+        },
+        {
+          "name": "N.T. Rama Rao Jr.",
+          "character": "Self",
+          "profile_path": "/5ycQgZ3SPUa12bq0yn1jpToBq9X.jpg"
+        },
+        {
+          "name": "Prabhas",
+          "character": "Self",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Karan Johar",
+          "character": "Self",
+          "profile_path": "/zip1x7OXOBxXxcdYvKOgw6MnAWm.jpg"
+        },
+        {
+          "name": "Rana Daggubati",
+          "character": "Self",
+          "profile_path": "/dCQE1CoWWc6RoXUTxOKjAXO8KDr.jpg"
+        },
+        {
+          "name": "Ram Charan",
+          "character": "Self",
+          "profile_path": "/twGqYUCR0Yh33j3TcgRTZRBRhTd.jpg"
+        },
+        {
+          "name": "M.M. Keeravaani",
+          "character": "Self",
+          "profile_path": "/r0f7RTGIkG0ZBaQViIKrE1g82Ec.jpg"
+        },
+        {
+          "name": "Rama Rajamouli",
+          "character": "Self",
+          "profile_path": null
+        },
+        {
+          "name": "Anupama Chopra",
+          "character": "Interviewer / Host",
+          "profile_path": null
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Raghav Khanna",
+            "profile_path": null
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Sameer Nair",
+            "profile_path": null
+          },
+          {
+            "name": "Anupama Chopra",
+            "profile_path": null
+          },
+          {
+            "name": "Deepak Segal",
+            "profile_path": null
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Sanyukta Kaza",
+            "profile_path": "/4jZBYj70jIYX5fywbseJ6CwA7H9.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 454292,
+      "title": "Saaho",
+      "original_title": "సాహో",
+      "release_date": "2019-08-29",
+      "runtime": 171,
+      "language": "te",
+      "budget": 51000000,
+      "revenue": 55000000,
+      "rating": 5.832,
+      "votes": 104,
+      "overview": "A battle for power ensues as warring gangters thrive to gain possession of a \"black box\" that can make them richer than they already are, and an undercover cop intervenes with the help of his sharp intellect and an instinct to kill.",
+      "status": "Released",
+      "tagline": "",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Thriller"
+      ],
+      "production_companies": [
+        "UV Creations"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Ashok",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Shraddha Kapoor",
+          "character": "Amritha Nair",
+          "profile_path": "/zimQFv5XDBK7MxQrQsUABONO71L.jpg"
+        },
+        {
+          "name": "Neil Nitin Mukesh",
+          "character": "Jai",
+          "profile_path": "/7lfd8WfMc2hOXYpCRFwhjiVZ7fl.jpg"
+        },
+        {
+          "name": "Chunky Pandey",
+          "character": "Devraj",
+          "profile_path": "/2dG7abdDNs3MVmrAa6HEBFKhch4.jpg"
+        },
+        {
+          "name": "Mandira Bedi",
+          "character": "Kalki",
+          "profile_path": "/l50tq0OwzIxE4Z5JXDUSQvqCltN.jpg"
+        },
+        {
+          "name": "Arun Vijay",
+          "character": "Vishwank",
+          "profile_path": "/hoZ99Ay5bsxSnzC1UE3Uw3ak7bh.jpg"
+        },
+        {
+          "name": "Murali Sharma",
+          "character": "David",
+          "profile_path": "/8m4L7L9lK4Z2YK4Jg97pMbA0Le5.jpg"
+        },
+        {
+          "name": "Jackie Shroff",
+          "character": "Roy",
+          "profile_path": "/1UNJypgEyuihUW2avLLVYj76jie.jpg"
+        },
+        {
+          "name": "Vennela Kishore",
+          "character": "Goswami",
+          "profile_path": "/8a0mcxMPjD4KR15gyE5QmbDeTub.jpg"
+        },
+        {
+          "name": "Prakash Belawadi",
+          "character": "",
+          "profile_path": "/bECb7W5XUSFVOgN0z9Ob1ludIha.jpg"
+        },
+        {
+          "name": "Evelyn Sharma",
+          "character": "Jennifer",
+          "profile_path": "/355Vn9M6BfZlDSRsgPDnbRsvFyo.jpg"
+        },
+        {
+          "name": "Supreet",
+          "character": "",
+          "profile_path": "/3HZopNIG3zeaSpbGjEvsdmoXjaR.jpg"
+        },
+        {
+          "name": "Lal",
+          "character": "Ibrahim",
+          "profile_path": "/ds3eeWA56YFeeuWP6WUs1ok58FK.jpg"
+        },
+        {
+          "name": "Mahesh Manjrekar",
+          "character": "Prince",
+          "profile_path": "/rAAlncxpCKpXjUHsd6pfaSaTl96.jpg"
+        },
+        {
+          "name": "Tinnu Anand",
+          "character": "Prithvi Raj",
+          "profile_path": "/6fkEiZKNp6jnOQmfQKEjVinhUeL.jpg"
+        }
+      ],
+      "crew": {
+        "Producer": [
+          {
+            "name": "Vamsi Krishna Reddy",
+            "profile_path": null
+          },
+          {
+            "name": "Pramod Uppalapati",
+            "profile_path": null
+          }
+        ],
+        "Director": [
+          {
+            "name": "Sujeeth",
+            "profile_path": "/slt6inyEMcSddd7DKcfrf9VaUkc.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Sreekar Prasad",
+            "profile_path": "/cHpDtVlleMlplodhKmjPCGqaAFS.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Ehsaan Noorani",
+            "profile_path": "/eA0FcyxLwXww30zuzHHU4gOAyNL.jpg"
+          },
+          {
+            "name": "Loy Mendonsa",
+            "profile_path": "/fQEfwBOVl4HfgByAKeJOAtdpqlT.jpg"
+          },
+          {
+            "name": "Shankar Mahadevan",
+            "profile_path": "/dUzAQPFi8t1EOA3XVM5d0ftJCjN.jpg"
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "Sujeeth",
+            "profile_path": "/slt6inyEMcSddd7DKcfrf9VaUkc.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 673392,
+      "title": "Radhe Shyam",
+      "original_title": "రాధే శ్యామ్",
+      "release_date": "2022-03-10",
+      "runtime": 138,
+      "language": "te",
+      "budget": 0,
+      "revenue": 25820598,
+      "rating": 5.045,
+      "votes": 33,
+      "overview": "Vikramaditya, a world-renowned palmist, believes love does not exist in his stars, until he meets Prerana. But when destiny tries to pull them apart, will love prevail?",
+      "status": "Released",
+      "tagline": "It's all written in the stars.",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "production_companies": [
+        "UV Creations",
+        "T-Series",
+        "MSK Films"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Vikramaditya",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Pooja Hegde",
+          "character": "Prerana",
+          "profile_path": "/t09lf8vem5MRk3KaALcdgehreXg.jpg"
+        },
+        {
+          "name": "Sachin Khedekar",
+          "character": "",
+          "profile_path": "/jRSgXFTDAbAb4RsW9nvNYsdhxWo.jpg"
+        },
+        {
+          "name": "Krishnam Raju",
+          "character": "Paramahamsa",
+          "profile_path": "/bvZLQkr6U1kNNWmHZsRnPXOpg4J.jpg"
+        },
+        {
+          "name": "Sathyaraj",
+          "character": "Paramahamsa",
+          "profile_path": "/lnlBZ7V3K3Z3OIsjCd0zkKx26L3.jpg"
+        },
+        {
+          "name": "Jayaram",
+          "character": "Ship Captain",
+          "profile_path": "/9o9aqZ2oTnXhgWaHg9XNrXISUk.jpg"
+        },
+        {
+          "name": "Bhagyashree",
+          "character": "Jhullam",
+          "profile_path": "/x1JU9HYF6CSm9G92js53EmA00lS.jpg"
+        },
+        {
+          "name": "Jagapati Babu",
+          "character": "Anand Rajput",
+          "profile_path": "/bm72k6FmDxhxtZsl1xvxoz88Hkm.jpg"
+        },
+        {
+          "name": "Priyadarshi Pullikonda",
+          "character": "Subbarao",
+          "profile_path": "/tVsqnESLdGJSua54qZ47wtoLjCI.jpg"
+        },
+        {
+          "name": "Murali Sharma",
+          "character": "",
+          "profile_path": "/8m4L7L9lK4Z2YK4Jg97pMbA0Le5.jpg"
+        },
+        {
+          "name": "Kunaal Roy Kapur",
+          "character": "",
+          "profile_path": "/l8EbUNJUbfyKuHIQiXWK91FGyea.jpg"
+        },
+        {
+          "name": "Riddhi Kumar",
+          "character": "",
+          "profile_path": "/kHFRGsX0HS3Viblm7Htns4lyJYn.jpg"
+        },
+        {
+          "name": "Sathyan Sivakumar",
+          "character": "",
+          "profile_path": "/11dbFufMpNyhPsZc6X8NYjMqe9X.jpg"
+        },
+        {
+          "name": "Thalaivasal Vijay",
+          "character": "",
+          "profile_path": "/2mlbBSwHF2nzlPpVnjXpTKLaoxQ.jpg"
+        },
+        {
+          "name": "Sasha Chettri",
+          "character": "",
+          "profile_path": null
+        }
+      ],
+      "crew": {
+        "Original Music Composer": [
+          {
+            "name": "Manan Bhardwaj",
+            "profile_path": "/fIdWXoU0JO8Iv7E6EY6kdhKoWrp.jpg"
+          },
+          {
+            "name": "Mithoon Sharma",
+            "profile_path": "/dKcejV0tiolRCQP5YgTtH8aVzc4.jpg"
+          },
+          {
+            "name": "Justin Prabhakaran",
+            "profile_path": null
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Vamsi Krishna Reddy",
+            "profile_path": null
+          },
+          {
+            "name": "Pramod Uppalapati",
+            "profile_path": null
+          },
+          {
+            "name": "Bhushan Kumar",
+            "profile_path": "/luUFnGoGwjwZ5CHAePRIQpAwT5b.jpg"
+          }
+        ],
+        "Director": [
+          {
+            "name": "Radha Krishna Kumar",
+            "profile_path": "/znpuraqSIwGmOn5dixNAlZ97bJS.jpg"
+          }
+        ],
+        "Writer": [
+          {
+            "name": "Radha Krishna Kumar",
+            "profile_path": "/znpuraqSIwGmOn5dixNAlZ97bJS.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Kotagiri Venkateswara Rao",
+            "profile_path": "/3oTREXmvPlgnEO9vvMxRLIItSbn.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 734253,
+      "title": "Adipurush",
+      "original_title": "आदिपुरुष",
+      "release_date": "2023-06-16",
+      "runtime": 179,
+      "language": "hi",
+      "budget": 63000000,
+      "revenue": 54300000,
+      "rating": 4.8,
+      "votes": 100,
+      "overview": "7000 years ago, Ayodhya's Prince Raghava and Prince Sesh along with the Mighty Vanar Warriors travels to the island of Lanka with an aim to rescue Raghava's wife Janaki, who has been abducted by Lankesh, the king of Lanka.",
+      "status": "Released",
+      "tagline": "Celebrating Victory Of Good Over Evil",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "production_companies": [
+        "Retrophiles",
+        "T-Series",
+        "AA Films",
+        "UV Creations",
+        "People Media Factory"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Raghava",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Saif Ali Khan",
+          "character": "Ravan \"Lankesh\"",
+          "profile_path": "/85uKiFDEcIqzLh0GwqYvecXw4uA.jpg"
+        },
+        {
+          "name": "Kriti Sanon",
+          "character": "Janaki",
+          "profile_path": "/go8GUz7poytTvm9P9HNHQ3T84N1.jpg"
+        },
+        {
+          "name": "Sunny Singh",
+          "character": "Sesh",
+          "profile_path": "/4twDvnGB7lGUevvYDyAuBmOleCl.jpg"
+        },
+        {
+          "name": "Devdatta Nage",
+          "character": "Bajarang",
+          "profile_path": null
+        },
+        {
+          "name": "Vatsal Sheth",
+          "character": "Meghanadha \"Indrajit\"",
+          "profile_path": "/50kldCcqZd1ihT0SPILc52LCUnb.jpg"
+        },
+        {
+          "name": "Siddhant Karnick",
+          "character": "Vibhishana",
+          "profile_path": "/vt5hYW4Lvn60cmnX6SNUIdpT1Gp.jpg"
+        },
+        {
+          "name": "Gaurrav Walia",
+          "character": "Sugriva",
+          "profile_path": null
+        },
+        {
+          "name": "Roopesh Jadhav",
+          "character": "Jambavan",
+          "profile_path": null
+        },
+        {
+          "name": "Manohar Pandey",
+          "character": "Angad",
+          "profile_path": null
+        },
+        {
+          "name": "Trupti Toradmal",
+          "character": "Sarama",
+          "profile_path": null
+        },
+        {
+          "name": "Tejaswini Pandit",
+          "character": "Soorpanaka",
+          "profile_path": "/7vVNb8kdaxaj36IPFSyHACB7TRC.jpg"
+        },
+        {
+          "name": "Sonal Chauhan",
+          "character": "Mandodari",
+          "profile_path": "/a6AXLhQ75gA2Z0BjHXPOfTifMlP.jpg"
+        },
+        {
+          "name": "Lavi Pajni",
+          "character": "Kumbhakarna",
+          "profile_path": null
+        },
+        {
+          "name": "Asha Sharma",
+          "character": "Sabari",
+          "profile_path": "/2ErzHelePxxQXGj8AqeOYywbTKH.jpg"
+        }
+      ],
+      "crew": {
+        "Original Music Composer": [
+          {
+            "name": "Atul Gogavale",
+            "profile_path": null
+          },
+          {
+            "name": "Ankit Balhara",
+            "profile_path": null
+          },
+          {
+            "name": "Sanchit Balhara",
+            "profile_path": "/uoT1EOft58kNXQCChW083XDvFSy.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Ashish Mhatre",
+            "profile_path": null
+          },
+          {
+            "name": "Apurva Motiwale",
+            "profile_path": null
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "Om Raut",
+            "profile_path": null
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Prasad Sutar",
+            "profile_path": null
+          },
+          {
+            "name": "Rajesh Nair",
+            "profile_path": null
+          },
+          {
+            "name": "Krishan Kumar",
+            "profile_path": "/gw2jzzkdRyIHglwieCiFSQ9cLZZ.jpg"
+          }
+        ],
+        "Director": [
+          {
+            "name": "Om Raut",
+            "profile_path": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 801688,
+      "title": "Kalki 2898-AD",
+      "original_title": "కల్కి 2898-ఎ.డి",
+      "release_date": "2024-06-26",
+      "runtime": 176,
+      "language": "te",
+      "budget": 75000000,
+      "revenue": 141000000,
+      "rating": 6.5,
+      "votes": 147,
+      "overview": "In the year 2898 AD, around 6000 years after Kurukshetra war, Ashwatthama gears up for his final battle of redemption at the sign of hope in a dystopian world and Bhairava, a wisecracking and self-interested bounty hunter, tired of the perilous life becomes the hurdle in the process.",
+      "status": "Released",
+      "tagline": "When the world is taken over by darkness, a new force will arise.",
+      "genres": [
+        "Drama",
+        "Action",
+        "Fantasy",
+        "Science Fiction"
+      ],
+      "production_companies": [
+        "Vyjayanthi Movies",
+        "Annapurna Studios"
+      ],
+      "cast": [
+        {
+          "name": "Amitabh Bachchan",
+          "character": "Ashwatthama",
+          "profile_path": "/u69PvpWqGkywSm0YjFiw77j9eqS.jpg"
+        },
+        {
+          "name": "Prabhas",
+          "character": "Bhairava",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Deepika Padukone",
+          "character": "SUM-80 \"Sumathi\"",
+          "profile_path": "/sXgEh0z6NzyvmEeBeLPK1ON7NBY.jpg"
+        },
+        {
+          "name": "Kamal Haasan",
+          "character": "Supreme Yaskin",
+          "profile_path": "/17zscZgz4wOlGDd3Gziw4YbI3G.jpg"
+        },
+        {
+          "name": "Saswata Chatterjee",
+          "character": "Manas",
+          "profile_path": "/cVJVLDy7BNzIbFMcJBPOWeN0Kb.jpg"
+        },
+        {
+          "name": "Shobana",
+          "character": "Mariam",
+          "profile_path": "/t6niRFC3xCV6hJSuyC9ACWLSVXu.jpg"
+        },
+        {
+          "name": "Rajendra Prasad",
+          "character": "Rumi",
+          "profile_path": "/zh6QJ85g5KbpkjL5fgqlOGddn5C.jpg"
+        },
+        {
+          "name": "Pasupathy",
+          "character": "Veeran",
+          "profile_path": "/5acprpMj9trXNd8QOoKwssjkXkb.jpg"
+        },
+        {
+          "name": "Anna Ben",
+          "character": "Kyra",
+          "profile_path": "/d0vvDEO6MWeRnc6lj1d11TnIt5i.jpg"
+        },
+        {
+          "name": "Keya Nair",
+          "character": "Raia",
+          "profile_path": null
+        },
+        {
+          "name": "Harshith Malgireddy",
+          "character": "Luke",
+          "profile_path": null
+        },
+        {
+          "name": "Ayaz Pasha",
+          "character": "Ajju",
+          "profile_path": null
+        },
+        {
+          "name": "Humhu",
+          "character": "Krane",
+          "profile_path": null
+        },
+        {
+          "name": "Kavya Ramachandran",
+          "character": "Lilly",
+          "profile_path": null
+        },
+        {
+          "name": "Anil George",
+          "character": "Bani",
+          "profile_path": "/2eSMoiNtzoJtQJuHyZIADojag4M.jpg"
+        }
+      ],
+      "crew": {
+        "Editor": [
+          {
+            "name": "Kotagiri Venkateswara Rao",
+            "profile_path": "/3oTREXmvPlgnEO9vvMxRLIItSbn.jpg"
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Priyanka Dutt",
+            "profile_path": "/g1ywPat0gvNXDKcWGKUDKcQMhgT.jpg"
+          },
+          {
+            "name": "Swapna Dutt",
+            "profile_path": "/7L8M2G11CjIS7DC9hBuoDepcdh9.jpg"
+          },
+          {
+            "name": "C. Ashwini Dutt",
+            "profile_path": "/9WAIxfz9hvFWYD7VZeUdQ800e7X.jpg"
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "Nag Ashwin",
+            "profile_path": "/497odnRihLzESOdShcXZkNg3UaX.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Santhosh Narayanan",
+            "profile_path": "/z8A2tjQFOLjUg17uWroc2TcEviN.jpg"
+          }
+        ],
+        "Director": [
+          {
+            "name": "Nag Ashwin",
+            "profile_path": "/497odnRihLzESOdShcXZkNg3UaX.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1022453,
+      "title": "The Raja Saab",
+      "original_title": "ది రాజా సాబ్",
+      "release_date": "2026-01-09",
+      "runtime": 0,
+      "language": "te",
+      "budget": 45300000,
+      "revenue": 0,
+      "rating": 0.0,
+      "votes": 0,
+      "overview": "A young heir embraces both his royal heritage and rebellious spirit as he rises to power, establishing unprecedented rules during his reign as Raja Saab.",
+      "status": "In Production",
+      "tagline": "",
+      "genres": [
+        "Horror",
+        "Comedy",
+        "Romance"
+      ],
+      "production_companies": [
+        "People Media Factory",
+        "IVY Entertainment"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Malavika Mohanan",
+          "character": "Rhea",
+          "profile_path": "/1dsMnVObyxAQrhopMCXpHUOYWKk.jpg"
+        },
+        {
+          "name": "Nidhhi Agerwal",
+          "character": "Meera",
+          "profile_path": "/yJrAB5HCJcXgSN0D3npVVMmYZQT.jpg"
+        },
+        {
+          "name": "Riddhi Kumar",
+          "character": "Priya",
+          "profile_path": "/kHFRGsX0HS3Viblm7Htns4lyJYn.jpg"
+        },
+        {
+          "name": "Brahmanandam",
+          "character": "Narasimha",
+          "profile_path": "/zh6nWEIy3l1dsZA9EDuDezq867b.jpg"
+        },
+        {
+          "name": "Sanjay Dutt",
+          "character": "",
+          "profile_path": "/oq4pnvWhl1HxKpp0KVlSfAr3Tiu.jpg"
+        },
+        {
+          "name": "Yogi Babu",
+          "character": "Chandu",
+          "profile_path": "/lTNb5POaftGHXzgN9aIegcehh89.jpg"
+        },
+        {
+          "name": "Anupam Kher",
+          "character": "Panditji",
+          "profile_path": "/kgU5Ap1Kf9RnicB5DMcXEZqed2f.jpg"
+        },
+        {
+          "name": "Nassar",
+          "character": "Inspector Rajesh",
+          "profile_path": "/p3I0tSQY3C5qZW3NzFfbpjKPNL6.jpg"
+        },
+        {
+          "name": "Murali Sharma",
+          "character": "Gopal",
+          "profile_path": "/8m4L7L9lK4Z2YK4Jg97pMbA0Le5.jpg"
+        },
+        {
+          "name": "Vennela Kishore",
+          "character": "Suresh",
+          "profile_path": "/8a0mcxMPjD4KR15gyE5QmbDeTub.jpg"
+        },
+        {
+          "name": "Srinivasa Reddy",
+          "character": "Shyam",
+          "profile_path": "/aUMNaDeskPGyDoEGwqvBxZPnzYR.jpg"
+        },
+        {
+          "name": "VTV Ganesh",
+          "character": "",
+          "profile_path": "/5JomvpPx6PrExYcZAbHM1MoHjoZ.jpg"
+        },
+        {
+          "name": "Nayanthara",
+          "character": "Special Appearance",
+          "profile_path": "/5KubBeb2DkNXoU4lzzBdWzqzzlM.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Maruthi Dasari",
+            "profile_path": "/lTMtTzNxi6U9kouoJDbEARsHoVJ.jpg"
+          }
+        ],
+        "Producer": [
+          {
+            "name": "T G Vishwa Prasad",
+            "profile_path": null
+          }
+        ],
+        "Writer": [
+          {
+            "name": "Maruthi Dasari",
+            "profile_path": "/lTMtTzNxi6U9kouoJDbEARsHoVJ.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Kotagiri Venkateswara Rao",
+            "profile_path": "/3oTREXmvPlgnEO9vvMxRLIItSbn.jpg"
+          },
+          {
+            "name": "Satya Giduturi",
+            "profile_path": null
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "S. Thaman",
+            "profile_path": "/y2VYUPTSWr580Fx8hxUNcUTViUa.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1511417,
+      "title": "Bāhubali: The Epic",
+      "original_title": "బాహుబలి: ది ఎపిక్",
+      "release_date": "2025-10-29",
+      "runtime": 224,
+      "language": "te",
+      "budget": 65000000,
+      "revenue": 3500000,
+      "rating": 9.0,
+      "votes": 3,
+      "overview": "When a mysterious child is found by a tribal couple near a roaring waterfall, they raise him as their own. As he grows, Sivudu is drawn to the world beyond the cliffs, where he discovers the ancient kingdom of Mahishmati, ruled by a cruel tyrant, haunted by rebellion, and bound to his past. What begins as a quest for love soon unravels a legacy of betrayal, sacrifice, and a forgotten prince.",
+      "status": "Released",
+      "tagline": "Remastered & Re-Cut of Baahubali: The Beginning (2015) & Baahubali 2: The Conclusion (2017) into One Film",
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "production_companies": [
+        "Arka Media Works"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Mahendra Bahubali / Amarendra Bahubali / Maharaja Veerendra Vikramadeva",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Rana Daggubati",
+          "character": "Bhallaladeva",
+          "profile_path": "/dCQE1CoWWc6RoXUTxOKjAXO8KDr.jpg"
+        },
+        {
+          "name": "Anushka Shetty",
+          "character": "Devasena",
+          "profile_path": "/zpe6Es8kdNOXuPdXiJvqxzsmN6z.jpg"
+        },
+        {
+          "name": "Ramya Krishnan",
+          "character": "Sivagami",
+          "profile_path": "/7Ex7OHhtotLXOAza1VOcUplPb7O.jpg"
+        },
+        {
+          "name": "Sathyaraj",
+          "character": "Karikala Kattappa Nadar",
+          "profile_path": "/lnlBZ7V3K3Z3OIsjCd0zkKx26L3.jpg"
+        },
+        {
+          "name": "Nassar",
+          "character": "Bijjaladeva",
+          "profile_path": "/p3I0tSQY3C5qZW3NzFfbpjKPNL6.jpg"
+        },
+        {
+          "name": "Subbaraju",
+          "character": "Kumara varma",
+          "profile_path": "/upq4ba9D8GgejWkI5tRVzze2yZV.jpg"
+        },
+        {
+          "name": "Tamannaah Bhatia",
+          "character": "Avanthika",
+          "profile_path": "/t4WYoKiFAyO1Rhjv7O03EKmJHp4.jpg"
+        },
+        {
+          "name": "Rohini",
+          "character": "Sanga",
+          "profile_path": "/oeT5DXeqsTY17DtJLTGpQec91fr.jpg"
+        },
+        {
+          "name": "Tanikella Bharani",
+          "character": "Swami",
+          "profile_path": "/zRjr0F64Eznbliz1RvN9icj3Lq1.jpg"
+        },
+        {
+          "name": "Prabhakar",
+          "character": "King Kalakeya",
+          "profile_path": "/82ZArziu8gJ1gVamzlcXjedeOFq.jpg"
+        },
+        {
+          "name": "Sudeep",
+          "character": "Aslam Khan",
+          "profile_path": "/sh6ZORBLt63dFkmjExEYopETIpj.jpg"
+        },
+        {
+          "name": "Adivi Sesh",
+          "character": "Bhadra",
+          "profile_path": "/vWvU1qlpGGrCsdox0pAJ6Gns4Bp.jpg"
+        },
+        {
+          "name": "Ramakrishna Meka",
+          "character": "Jaya Varma",
+          "profile_path": null
+        },
+        {
+          "name": "Charandeep",
+          "character": "Kalakeya' Brother",
+          "profile_path": "/aV18GfEmzYp278Al3WARDRxNYje.jpg"
+        }
+      ],
+      "crew": {
+        "Writer": [
+          {
+            "name": "S. S. Rajamouli",
+            "profile_path": "/g7jXGAVT8T5vq81fO5JWDleDc75.jpg"
+          },
+          {
+            "name": "Madhan Karky",
+            "profile_path": "/6zwJAtDi6ScjmsL8qwnTwJto70I.jpg"
+          },
+          {
+            "name": "Deva Katta",
+            "profile_path": null
+          }
+        ],
+        "Director": [
+          {
+            "name": "S. S. Rajamouli",
+            "profile_path": "/g7jXGAVT8T5vq81fO5JWDleDc75.jpg"
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Kotagiri Venkateswara Rao",
+            "profile_path": "/3oTREXmvPlgnEO9vvMxRLIItSbn.jpg"
+          }
+        ],
+        "Cinematography": [
+          {
+            "name": "K.K. Senthil Kumar",
+            "profile_path": "/q8OngLi4xFoWFnMG6zkM2lR5glJ.jpg"
+          }
+        ],
+        "Producer": [
+          {
+            "name": "Prasad Devineni",
+            "profile_path": null
+          },
+          {
+            "name": "Shobu Yarlagadda",
+            "profile_path": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 1222479,
+      "title": "Mirai",
+      "original_title": "మిరాయి",
+      "release_date": "2025-09-12",
+      "runtime": 166,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 6.25,
+      "votes": 10,
+      "overview": "Following the historic Kalinga battle, where King Ashoka of the Maurya dynasty emerged as the winner, he chose to walk the path of peace instead of continuing warfare. Yet, the kingdom appointed nine warriors to protect some ancient scriptures rumored to have the ability to make someone divine or godlike.",
+      "status": "Released",
+      "tagline": "SUPER YODHA",
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "production_companies": [
+        "People Media Factory"
+      ],
+      "cast": [
+        {
+          "name": "Teja Sajja",
+          "character": "Vedha Prajapati",
+          "profile_path": "/ahHqj4ADMjwzoj6lNAv7D9sP8nM.jpg"
+        },
+        {
+          "name": "Manchu Manoj",
+          "character": "Mahabhir Lama",
+          "profile_path": "/eNIxi8fVrv97VAhwPFiw6iSU2Y1.jpg"
+        },
+        {
+          "name": "Ritika Nayak",
+          "character": "Vibha",
+          "profile_path": "/6KyRbryxk9Od1goIDGlK3GodKlp.jpg"
+        },
+        {
+          "name": "Raj Zutshi",
+          "character": "Banshi",
+          "profile_path": "/aJmWL08uj2oVGd2cJmBuzNSO2LY.jpg"
+        },
+        {
+          "name": "Rana Daggubati",
+          "character": "Jaithraya",
+          "profile_path": "/dCQE1CoWWc6RoXUTxOKjAXO8KDr.jpg"
+        },
+        {
+          "name": "Shriya Saran",
+          "character": "Ambika",
+          "profile_path": "/ioOgKBSCJhOdKoZpg86ld7zANbf.jpg"
+        },
+        {
+          "name": "Jayaram",
+          "character": "Agasthya Muni",
+          "profile_path": "/9o9aqZ2oTnXhgWaHg9XNrXISUk.jpg"
+        },
+        {
+          "name": "Jagapati Babu",
+          "character": "Angama Bali",
+          "profile_path": "/bm72k6FmDxhxtZsl1xvxoz88Hkm.jpg"
+        },
+        {
+          "name": "Pawan Chopra",
+          "character": "K N Bagchi",
+          "profile_path": "/8XorAVIS7hiGuJx775vNUZl6Ms5.jpg"
+        },
+        {
+          "name": "Getup Srinu",
+          "character": "Memesh",
+          "profile_path": "/xb2lJ213oU3DS6kMkDuqlf7EFeG.jpg"
+        },
+        {
+          "name": "Raghu Ram",
+          "character": "Yesu Daddy",
+          "profile_path": "/bNWLAvxWSmibXtQu2bwmzbdW6WA.jpg"
+        },
+        {
+          "name": "Kishore Tirumala",
+          "character": "C I Ashok",
+          "profile_path": null
+        },
+        {
+          "name": "Tanja Keller",
+          "character": "Yuca",
+          "profile_path": null
+        },
+        {
+          "name": "Prabhas",
+          "character": "Voice",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Karthik Ghattamaneni",
+            "profile_path": null
+          }
+        ],
+        "Writer": [
+          {
+            "name": "Karthik Ghattamaneni",
+            "profile_path": null
+          },
+          {
+            "name": "Manibabu Karanam",
+            "profile_path": null
+          }
+        ],
+        "Producer": [
+          {
+            "name": "T G Vishwa Prasad",
+            "profile_path": null
+          }
+        ],
+        "Editor": [
+          {
+            "name": "Sreekar Prasad",
+            "profile_path": "/cHpDtVlleMlplodhKmjPCGqaAFS.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "Hari Gowra",
+            "profile_path": "/9ivrA1bHNbgg7VQ9fU6w0udmYKy.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1559934,
+      "title": "Untitled Sukumar/Prabhas Film",
+      "original_title": "Untitled Sukumar/Prabhas Film",
+      "release_date": "",
+      "runtime": 0,
+      "language": "te",
+      "budget": 0,
+      "revenue": 0,
+      "rating": 0.0,
+      "votes": 0,
+      "overview": "",
+      "status": "Rumored",
+      "tagline": "",
+      "genres": [
+        "Action"
+      ],
+      "production_companies": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        }
+      ],
+      "crew": {
+        "Director": [
+          {
+            "name": "Sukumar",
+            "profile_path": "/jUnBwmEjf82UxUDQpJI0CwscfHC.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1570976,
+      "title": "Baahubali: The Eternal War — Part 1",
+      "original_title": "Baahubali: The Eternal War — Part 1",
+      "release_date": "2027-06-10",
+      "runtime": 0,
+      "language": "te",
+      "budget": 14000000,
+      "revenue": 0,
+      "rating": 0.0,
+      "votes": 0,
+      "overview": "The murdered Prince Baahubali enters the afterlife and joins an eternal war between gods and demons across 14 realms.",
+      "status": "In Production",
+      "tagline": "",
+      "genres": [
+        "Animation",
+        "Action",
+        "Drama"
+      ],
+      "production_companies": [
+        "Arka Media Works",
+        "Aniventure Studios",
+        "Zaratan Studios"
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "character": "Amarendra Baahubali (voice)",
+          "profile_path": "/6naZ3oybdCtfggc5pTrcBDxOXrP.jpg"
+        },
+        {
+          "name": "Ramya Krishnan",
+          "character": "Sivagami (voice)",
+          "profile_path": "/7Ex7OHhtotLXOAza1VOcUplPb7O.jpg"
+        }
+      ],
+      "crew": {
+        "Producer": [
+          {
+            "name": "Shobu Yarlagadda",
+            "profile_path": null
+          },
+          {
+            "name": "Prasad Devineni",
+            "profile_path": null
+          },
+          {
+            "name": "Kaustubh Govind Borwankar",
+            "profile_path": null
+          }
+        ],
+        "Director": [
+          {
+            "name": "Ishan Shukla",
+            "profile_path": "/bDtBhhz0R1JT0ZfBpFRcu4S6dVg.jpg"
+          }
+        ],
+        "Original Music Composer": [
+          {
+            "name": "M.M. Keeravaani",
+            "profile_path": "/r0f7RTGIkG0ZBaQViIKrE1g82Ec.jpg"
+          }
+        ],
+        "Screenplay": [
+          {
+            "name": "Scott Mosier",
+            "profile_path": "/tuRQwgHYG4iAQXxU3R1CLPnto0w.jpg"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,543 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useSession } from 'next-auth/react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  FaStar,
+  FaSearch,
+  FaClock,
+  FaFire,
+  FaArrowLeft,
+  FaChevronDown,
+  FaArrowRight,
+  FaFilm,
+} from 'react-icons/fa';
+import { getMovieDetails, getTMDbPosterUrl } from '@/lib/tmdb';
+
+export default function MoviesPage({ heroesData }: { heroesData: any[] }) {
+  const { data: session } = useSession();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [allMovies, setAllMovies] = useState<any[]>([]);
+  const [allUpcoming, setAllUpcoming] = useState<any[]>([]);
+  const [filteredMovies, setFilteredMovies] = useState<any[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedHero, setSelectedHero] = useState<string>('all');
+  const [selectedYear, setSelectedYear] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('year-desc');
+  const [activeTab, setActiveTab] = useState<'released' | 'upcoming'>('released');
+  const [loading, setLoading] = useState(true);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+  useEffect(() => {
+    loadAllMoviesFromHeroFiles();
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    applyFilters();
+  }, [searchQuery, selectedHero, selectedYear, sortBy, allMovies, activeTab]);
+
+  const loadAllMoviesFromHeroFiles = async () => {
+    setLoading(true);
+    const movies: any[] = [];
+    const upcoming: any[] = [];
+
+    console.log('🔍 Loading movies from heroes:', heroesData.length);
+
+    for (const hero of heroesData) {
+      try {
+        const heroData = hero.data;
+
+        console.log(`📦 Hero: ${heroData.name}`, {
+          movies: heroData.movies?.length || 0,
+          upcoming: heroData.upcoming?.length || 0,
+        });
+
+        // Released movies
+        if (heroData.movies && Array.isArray(heroData.movies)) {
+          heroData.movies.forEach((movie: any) => {
+            let posterUrl = null;
+            if (movie.poster) {
+              if (typeof movie.poster === 'string') {
+                posterUrl = movie.poster;
+              } else if (typeof movie.poster === 'object') {
+                posterUrl = movie.poster.url || movie.poster.fallback || null;
+              }
+            }
+
+            movies.push({
+              ...movie,
+              poster: posterUrl,
+              heroName: heroData.name,
+              heroSlug: hero.slug,
+              heroPortrait: heroData.images?.portrait?.url || heroData.images?.portrait,
+            });
+          });
+        }
+
+        // Upcoming movies
+        if (heroData.upcoming && Array.isArray(heroData.upcoming)) {
+          heroData.upcoming.forEach((movie: any) => {
+            let posterUrl = null;
+            if (movie.poster) {
+              if (typeof movie.poster === 'string') {
+                posterUrl = movie.poster;
+              } else if (typeof movie.poster === 'object') {
+                posterUrl = movie.poster.url || movie.poster.fallback || null;
+              }
+            }
+
+            upcoming.push({
+              ...movie,
+              poster: posterUrl || `https://placehold.co/400x600/1a1a1a/ffffff?text=${encodeURIComponent(movie.title)}`,
+              heroName: heroData.name,
+              heroSlug: hero.slug,
+              heroPortrait: heroData.images?.portrait?.url || heroData.images?.portrait,
+              isUpcoming: true,
+            });
+          });
+        }
+      } catch (error) {
+        console.error(`❌ Error loading ${hero.slug}:`, error);
+      }
+    }
+
+    console.log('✅ Total movies loaded:', movies.length);
+    console.log('✅ Total upcoming:', upcoming.length);
+
+    // Fetch TMDb posters if needed
+    const moviesWithPosters = await Promise.all(
+      movies.map(async (movie) => {
+        if (movie.poster && typeof movie.poster === 'string') {
+          return movie;
+        }
+
+        if (movie.tmdbId) {
+          try {
+            const tmdbData = await getMovieDetails(movie.tmdbId);
+            if (tmdbData?.poster_path) {
+              return {
+                ...movie,
+                poster: getTMDbPosterUrl(tmdbData.poster_path, 'large'),
+              };
+            }
+          } catch (error) {
+            // Silently fail
+          }
+        }
+
+        return {
+          ...movie,
+          poster: `https://placehold.co/400x600/1a1a1a/ffffff?text=${encodeURIComponent(movie.title)}`,
+        };
+      })
+    );
+
+    setAllMovies(moviesWithPosters);
+    setAllUpcoming(upcoming);
+    setLoading(false);
+  };
+
+  const applyFilters = () => {
+    const sourceMovies = activeTab === 'released' ? allMovies : allUpcoming;
+    let filtered = [...sourceMovies];
+
+    if (searchQuery) {
+      filtered = filtered.filter(
+        (movie) =>
+          movie.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          movie.director?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          movie.heroName.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+
+    if (selectedHero !== 'all') {
+      filtered = filtered.filter((movie) => movie.heroSlug === selectedHero);
+    }
+
+    if (selectedYear !== 'all' && activeTab === 'released') {
+      filtered = filtered.filter((movie) => movie.year?.toString() === selectedYear);
+    }
+
+    switch (sortBy) {
+      case 'year-desc':
+        filtered.sort((a, b) => (b.year || 0) - (a.year || 0));
+        break;
+      case 'year-asc':
+        filtered.sort((a, b) => (a.year || 0) - (b.year || 0));
+        break;
+      case 'rating-desc':
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        break;
+      case 'rating-asc':
+        filtered.sort((a, b) => (a.rating || 0) - (b.rating || 0));
+        break;
+      case 'title-asc':
+        filtered.sort((a, b) => a.title.localeCompare(b.title));
+        break;
+    }
+
+    setFilteredMovies(filtered);
+  };
+
+  const getUniqueYears = () => {
+    const years = allMovies.map((m) => m.year).filter(Boolean);
+    return [...new Set(years)].sort((a, b) => b - a);
+  };
+
+  return (
+    <main className="bg-black min-h-screen">
+      {/* NAVBAR */}
+      <motion.nav
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-black/80 backdrop-blur-xl border-b border-white/10 shadow-lg'
+            : 'bg-black/50 backdrop-blur-md'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-4 flex items-center justify-between gap-4">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 min-w-fit">
+            <FaArrowLeft className="text-white" size={20} />
+            <span className="text-xl md:text-2xl font-black text-white hidden sm:block">
+              TFiverse
+            </span>
+          </Link>
+
+          {/* Nav Items */}
+          <div className="flex items-center gap-2 md:gap-6 ml-auto">
+            <Link
+              href="/heroes"
+              className="text-white/70 hover:text-white text-sm transition hidden md:block"
+            >
+              Heroes
+            </Link>
+            <span className="text-white/60 font-bold text-sm">🎬 Movies</span>
+
+            {/* User Profile */}
+            {session?.user ? (
+              <Link href="/profile" className="flex items-center gap-2 hover:opacity-80 transition">
+                <div className="w-8 h-8 rounded-full overflow-hidden border border-white/20">
+                  {session.user.image ? (
+                    <img src={session.user.image} alt="Profile" className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="w-full h-full bg-white/20 flex items-center justify-center text-white text-xs font-bold">
+                      {session.user.name?.charAt(0) || 'U'}
+                    </div>
+                  )}
+                </div>
+              </Link>
+            ) : (
+              <Link
+                href="/auth/signin"
+                className="px-4 py-2 bg-white text-black font-bold rounded-lg hover:bg-white/90 transition text-sm"
+              >
+                Sign In
+              </Link>
+            )}
+          </div>
+        </div>
+      </motion.nav>
+
+      {/* HERO SECTION */}
+      <section className="relative pt-32 pb-12 px-4 sm:px-6 md:px-12 bg-gradient-to-b from-black via-black to-black/80">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <FaFilm className="text-3xl text-white" />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white">Movies</h1>
+            </div>
+
+            <p className="text-white/60 text-base md:text-lg mb-8">
+              {loading
+                ? 'Loading...'
+                : `${allMovies.length} released • ${allUpcoming.length} upcoming`}
+            </p>
+
+            {/* Tab Switcher */}
+            <div className="flex gap-3 md:gap-4 mb-8 flex-wrap">
+              <motion.button
+                onClick={() => setActiveTab('released')}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 rounded-lg font-bold transition-all ${
+                  activeTab === 'released'
+                    ? 'bg-white text-black shadow-lg'
+                    : 'bg-white/10 text-white hover:bg-white/20 border border-white/10'
+                }`}
+              >
+                <FaFire size={16} />
+                <span>Released ({allMovies.length})</span>
+              </motion.button>
+
+              <motion.button
+                onClick={() => setActiveTab('upcoming')}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 rounded-lg font-bold transition-all ${
+                  activeTab === 'upcoming'
+                    ? 'bg-white text-black shadow-lg'
+                    : 'bg-white/10 text-white hover:bg-white/20 border border-white/10'
+                }`}
+              >
+                <FaClock size={16} />
+                <span>Upcoming ({allUpcoming.length})</span>
+              </motion.button>
+            </div>
+
+            {/* Search Bar */}
+            <div className="relative max-w-2xl mb-8">
+              <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" size={18} />
+              <input
+                type="text"
+                placeholder="Search movies, actors, directors..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 md:py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-white/30 transition"
+              />
+            </div>
+
+            {/* Filters */}
+            <div className="flex flex-wrap gap-3 md:gap-4">
+              {/* Hero Filter */}
+              <select
+                value={selectedHero}
+                onChange={(e) => setSelectedHero(e.target.value)}
+                className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-white/30 cursor-pointer transition"
+                style={{ colorScheme: 'dark' }}
+              >
+                <option value="all" className="bg-black">
+                  👥 All Heroes
+                </option>
+                {heroesData.map((hero: any) => (
+                  <option key={hero.slug} value={hero.slug} className="bg-black">
+                    {hero.name}
+                  </option>
+                ))}
+              </select>
+
+              {/* Year Filter */}
+              {activeTab === 'released' && (
+                <select
+                  value={selectedYear}
+                  onChange={(e) => setSelectedYear(e.target.value)}
+                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-white/30 cursor-pointer transition"
+                  style={{ colorScheme: 'dark' }}
+                >
+                  <option value="all" className="bg-black">
+                    📅 All Years
+                  </option>
+                  {getUniqueYears().map((year) => (
+                    <option key={year} value={year} className="bg-black">
+                      {year}
+                    </option>
+                  ))}
+                </select>
+              )}
+
+              {/* Sort */}
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-white/30 cursor-pointer transition"
+                style={{ colorScheme: 'dark' }}
+              >
+                <option value="year-desc" className="bg-black">
+                  📊 Newest
+                </option>
+                <option value="year-asc" className="bg-black">
+                  Oldest
+                </option>
+                <option value="rating-desc" className="bg-black">
+                  ⭐ Highest Rated
+                </option>
+                <option value="rating-asc" className="bg-black">
+                  Lowest Rated
+                </option>
+                <option value="title-asc" className="bg-black">
+                  A to Z
+                </option>
+              </select>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* MOVIES GRID */}
+      <section className="py-12 px-4 sm:px-6 md:px-12 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-white/60 mb-8 text-sm"
+          >
+            {loading ? 'Loading...' : `Showing ${filteredMovies.length} ${activeTab === 'upcoming' ? 'upcoming' : 'released'} movies`}
+          </motion.p>
+
+          {loading ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-20"
+            >
+              <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white mb-4"></div>
+              <p className="text-white/60 text-lg">Loading movies...</p>
+            </motion.div>
+          ) : filteredMovies.length > 0 ? (
+            <motion.div
+              layout
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6"
+            >
+              <AnimatePresence>
+                {filteredMovies.map((movie, i) => (
+                  <motion.div
+                    key={`${movie.heroSlug}-${movie.slug || movie.title}-${i}`}
+                    layout
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ delay: i * 0.02 }}
+                    whileHover={{ y: -10 }}
+                  >
+                    <Link href={activeTab === 'upcoming' ? '#' : `/movie/${movie.slug}`}>
+                      <div className="group relative rounded-lg overflow-hidden bg-white/5 border border-white/10 hover:border-white/30 transition cursor-pointer h-full flex flex-col">
+                        {/* Poster */}
+                        <div className="aspect-[2/3] relative bg-white/10 overflow-hidden flex-1">
+                          {movie.poster ? (
+                            <motion.img
+                              initial={{ scale: 1 }}
+                              whileHover={{ scale: 1.05 }}
+                              src={movie.poster}
+                              alt={movie.title}
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                const target = e.currentTarget;
+                                if (target.dataset.errorHandled) return;
+                                target.dataset.errorHandled = 'true';
+
+                                if (movie.tmdbId && !target.dataset.triedTmdb) {
+                                  target.dataset.triedTmdb = 'true';
+                                  getMovieDetails(movie.tmdbId)
+                                    .then((data) => {
+                                      if (target && target.parentNode) {
+                                        target.src = data?.poster_path
+                                          ? getTMDbPosterUrl(data.poster_path, 'large')
+                                          : `https://placehold.co/400x600/1a1a1a/ffffff?text=${encodeURIComponent(movie.title)}`;
+                                      }
+                                    })
+                                    .catch(() => {
+                                      if (target && target.parentNode) {
+                                        target.src = `https://placehold.co/400x600/1a1a1a/ffffff?text=${encodeURIComponent(movie.title)}`;
+                                      }
+                                    });
+                                } else {
+                                  target.src = `https://placehold.co/400x600/1a1a1a/ffffff?text=${encodeURIComponent(movie.title)}`;
+                                }
+                              }}
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center text-white/30 text-xs p-4 text-center">
+                              <FaFilm size={32} className="text-white/20" />
+                            </div>
+                          )}
+
+                          {/* Badges */}
+                          <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
+                            {movie.year && (
+                              <motion.span
+                                whileHover={{ scale: 1.05 }}
+                                className="px-2 py-1 bg-white text-black text-xs font-bold rounded"
+                              >
+                                {movie.year}
+                              </motion.span>
+                            )}
+
+                            {activeTab === 'upcoming' && (
+                              <div className="flex items-center gap-1 px-2 py-1 bg-yellow-500/90 backdrop-blur-sm rounded text-black text-xs font-bold">
+                                <FaClock size={12} />
+                                Coming
+                              </div>
+                            )}
+
+                            {activeTab === 'released' && movie.rating && (
+                              <div className="flex items-center gap-1 px-2 py-1 bg-black/80 backdrop-blur-sm rounded">
+                                <FaStar className="text-yellow-400" size={12} />
+                                <span className="text-white text-xs font-bold">{movie.rating}</span>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* Hover Overlay */}
+                          <motion.div
+                            initial={{ opacity: 0 }}
+                            whileHover={{ opacity: 1 }}
+                            className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"
+                          >
+                            <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+                              <p className="text-white/80 text-xs md:text-sm mb-2 line-clamp-2">
+                                <span className="font-semibold">Hero:</span> {movie.heroName}
+                              </p>
+                              {movie.director && (
+                                <p className="text-white/70 text-xs mb-2 line-clamp-1">
+                                  <span className="font-semibold">Dir:</span> {movie.director}
+                                </p>
+                              )}
+                              {movie.boxOffice && activeTab === 'released' && (
+                                <p className="text-green-400 font-bold text-xs">
+                                  {movie.boxOffice.verdict || movie.boxOffice}
+                                </p>
+                              )}
+                            </div>
+                          </motion.div>
+                        </div>
+
+                        {/* Info */}
+                        <div className="p-3 md:p-4 border-t border-white/10">
+                          <h3 className="text-white font-black text-sm md:text-base line-clamp-1 group-hover:text-white/80 transition">
+                            {movie.title}
+                          </h3>
+                          <p className="text-white/60 text-xs md:text-sm line-clamp-1">
+                            {movie.heroName}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          ) : (
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-20">
+              <FaFilm size={48} className="mx-auto mb-4 text-white/20" />
+              <p className="text-white/60 text-lg mb-6">No movies found</p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                onClick={() => {
+                  setSearchQuery('');
+                  setSelectedHero('all');
+                  setSelectedYear('all');
+                }}
+                className="px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-white/90 transition"
+              >
+                Clear Filters
+              </motion.button>
+            </motion.div>
+          )}
+        </div>
+      </section>
+    </main>
+  );
+}

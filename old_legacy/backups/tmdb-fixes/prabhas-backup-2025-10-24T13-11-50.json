@@ -1,0 +1,3485 @@
+{
+  "id": "prabhas-001",
+  "name": "Prabhas",
+  "slug": "prabhas",
+  "alternateNames": [
+    "Uppalapati Venkata Suryanarayana Prabhas Raju",
+    "Darling",
+    "Rebel Star"
+  ],
+  "title": "Rebel Star",
+  "type": "actor",
+  "category": "superstar",
+  "heroAura": {
+    "screenPresence": "Commanding and larger-than-life presence with unmatched intensity",
+    "boxOfficeAppeal": "Pan-Indian superstar with ₹5000+ Cr career gross and six ₹100Cr+ openers",
+    "signature": "Powerful action sequences with emotional depth and magnetic screen presence",
+    "fanbase": "Massive pan-Indian following across all demographics and age groups",
+    "trademarkStyle": "Intense stares, powerful dialogue delivery, and physically transformative performances"
+  },
+  "images": {
+    "portrait": {
+      "source": "supabase",
+      "url": "/images/heroes/prabhas/portrait.jpg",
+      "fallback": "https://gjonhhhxamhvcfvkctth.supabase.co/storage/v1/object/sign/hero-images/prabhas-portrait.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84NDgwODE1ZC0xNjE5LTRkMTAtYmZiNi02YTQyNzZmNjI1YjYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJoZXJvLWltYWdlcy9wcmFiaGFzLXBvcnRyYWl0LmpwZyIsImlhdCI6MTc1OTg5ODUzMCwiZXhwIjoxNzkxNDM0NTMwfQ.hQOobi-Hb7MCtmkigDeaBMgFOmzolK6ZpYgxFWJHEoI"
+    },
+    "banner": {
+      "source": "local",
+      "url": "https://gjonhhhxamhvcfvkctth.supabase.co/storage/v1/object/sign/hero-images/prabhas-banner.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84NDgwODE1ZC0xNjE5LTRkMTAtYmZiNi02YTQyNzZmNjI1YjYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJoZXJvLWltYWdlcy9wcmFiaGFzLWJhbm5lci5qcGciLCJpYXQiOjE3NTk4OTg1OTAsImV4cCI6MTc5MTQzNDU5MH0.dmQybIXlNC7JGa3kWcfnpBW8vn_H-CHxQlxyX6oTHkA"
+    },
+    "featured": {
+      "source": "local",
+      "url": "/images/heroes/prabhas/featured.jpg"
+    },
+    "gallery": [
+      {
+        "source": "local",
+        "url": "/images/heroes/prabhas/gallery-1.jpg"
+      },
+      {
+        "source": "local",
+        "url": "/images/heroes/prabhas/gallery-2.jpg"
+      },
+      {
+        "source": "local",
+        "url": "/images/heroes/prabhas/gallery-3.jpg"
+      },
+      {
+        "source": "local",
+        "url": "/images/heroes/prabhas/gallery-4.jpg"
+      }
+    ]
+  },
+  "bio": "Prabhas, born October 23, 1979, is India's highest-paid actor and first Pan-Indian star. He achieved unprecedented stardom with Baahubali duology (2015-2017), India's highest-grossing franchise earning ₹2400+ Cr worldwide. Known for intense performances and massive screen presence, he commands ₹150 Cr per film. Recent blockbusters include Saaho (2019), Salaar (2023), and Kalki 2898 AD (2024). With 25+ films and ₹5000+ Cr career gross, Prabhas is the only actor with six ₹100Cr+ worldwide openers. He maintained extraordinary physique for five consecutive years during Baahubali, showcasing unmatched dedication to craft.",
+  "personalInfo": {
+    "fullName": "Uppalapati Venkata Suryanarayana Prabhas Raju",
+    "birthDate": "1979-10-23",
+    "birthPlace": "Chennai, Tamil Nadu, India",
+    "currentResidence": "Jubilee Hills, Hyderabad, Telangana",
+    "height": "188 cm",
+    "zodiacSign": "Libra",
+    "bloodGroup": "B+",
+    "maritalStatus": "Unmarried",
+    "education": "B.Tech from Sri Chaitanya College, Hyderabad",
+    "family": {
+      "father": "Uppalapati Surya Narayana Raju (Film Producer - Late)",
+      "mother": "Siva Kumari",
+      "siblings": [
+        "Prabodh Uppalapati (Elder Brother - Producer)",
+        "Pragathi (Elder Sister)"
+      ],
+      "uncle": "Krishnam Raju (Late Rebel Star - Actor and Politician)"
+    },
+    "debutYear": 2002,
+    "debutMovie": "Eeswar"
+  },
+  "tmdbPersonId": 237045,
+  "socialMedia": {
+    "instagram": {
+      "handle": "@actorprabhas",
+      "url": "https://instagram.com/actorprabhas",
+      "followers": 13000000,
+      "verified": true,
+      "active": true
+    }
+  },
+  "movies": [
+    {
+      "id": "kalki-2898-ad-2024",
+      "title": "Kalki 2898 AD",
+      "slug": "kalki-2898-ad",
+      "year": 2024,
+      "releaseDate": "2024-06-27",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil",
+        "Kannada",
+        "Malayalam"
+      ],
+      "movieType": "lead",
+      "role": "Bhairava / Karna",
+      "roleType": "Lead Hero",
+      "roleDescription": "Dual role as modern bounty hunter Bhairava and legendary warrior Karna from Mahabharata",
+      "director": "Nag Ashwin",
+      "producer": "C. Aswani Dutt",
+      "musicDirector": "Santhosh Narayanan",
+      "cinematographer": "Djordje Stojiljkovic",
+      "editor": "Kotagiri Venkateswara Rao",
+      "tmdbId": 801688,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/kalki-2898-ad.jpg"
+      },
+      "runtime": 183,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Netflix",
+          "logo": "/images/ott/netflix.svg",
+          "type": "Subscription",
+          "link": "https://www.netflix.com/title/81726031",
+          "availableFrom": "2024-08-22",
+          "quality": [
+            "HD",
+            "4K",
+            "Dolby Atmos"
+          ],
+          "regions": [
+            "India",
+            "Worldwide"
+          ],
+          "language": "Hindi"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "logo": "/images/ott/prime.svg",
+          "type": "Subscription",
+          "link": "https://www.primevideo.com/detail/Kalki-2898-AD/0KQU5V0T0FGF8L5L368NKW6INT",
+          "availableFrom": "2024-08-22",
+          "quality": [
+            "HD",
+            "4K"
+          ],
+          "regions": [
+            "India",
+            "Worldwide"
+          ],
+          "language": "Telugu, Tamil, Kannada, Malayalam"
+        }
+      ],
+      "songs": [
+        {
+          "title": "Bhairava Anthem",
+          "singers": [
+            "Diljit Dosanjh"
+          ],
+          "lyricist": "Kumaar",
+          "duration": "4:23",
+          "searchQuery": "Kalki 2898 AD Bhairava Anthem Diljit Dosanjh",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Kalki+2898+AD+Bhairava+Anthem"
+        },
+        {
+          "title": "Theme of Kalki",
+          "singers": [
+            "Santhosh Narayanan"
+          ],
+          "lyricist": "Krishna Kanth",
+          "duration": "3:45",
+          "searchQuery": "Kalki 2898 AD Theme Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Kalki+2898+AD+Theme+Song"
+        }
+      ],
+      "ratings": {
+        "tmdb": 6.9,
+        "imdb": 7,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 3.5
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Bhairava / Karna"
+        },
+        {
+          "name": "Deepika Padukone",
+          "slug": "deepika-padukone",
+          "character": "SUM-80 / Sumati"
+        },
+        {
+          "name": "Amitabh Bachchan",
+          "slug": "amitabh-bachchan",
+          "character": "Ashwatthama"
+        },
+        {
+          "name": "Kamal Haasan",
+          "slug": "kamal-haasan",
+          "character": "Supreme Yaskin"
+        },
+        {
+          "name": "Disha Patani",
+          "slug": "disha-patani",
+          "character": "Roxie"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Nag Ashwin",
+          "slug": "nag-ashwin",
+          "role": "Director"
+        },
+        {
+          "name": "Santhosh Narayanan",
+          "slug": "santhosh-narayanan",
+          "role": "Music Director"
+        }
+      ],
+      "trivia": [
+        "Budget of ₹600 crore makes it India's most expensive film",
+        "Amitabh Bachchan's prosthetic makeup took 3 hours daily",
+        "Shot across 7 countries over 3 years",
+        "Featured cameos by Vijay Deverakonda, Dulquer Salmaan, Mrunal Thakur"
+      ],
+      "boxOfficeId": "kalki-2024"
+    },
+    {
+      "id": "salaar-part-1-2023",
+      "title": "Salaar: Part 1 – Ceasefire",
+      "slug": "salaar-part-1-ceasefire",
+      "year": 2023,
+      "releaseDate": "2023-12-22",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil",
+        "Kannada",
+        "Malayalam"
+      ],
+      "movieType": "lead",
+      "role": "Devaratha 'Deva' Raisaar",
+      "roleType": "Lead Hero",
+      "roleDescription": "Powerful gangster and friend turned warrior in Khansaar territory",
+      "director": "Prashanth Neel",
+      "producer": "Vijay Kiragandur",
+      "musicDirector": "Ravi Basrur",
+      "cinematographer": "Bhuvan Gowda",
+      "editor": "Ujwal Kulkarni",
+      "tmdbId": 770906,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/salaar.jpg"
+      },
+      "runtime": 175,
+      "certificate": "A",
+      "ottPlatforms": [
+        {
+          "name": "Netflix",
+          "logo": "/images/ott/netflix.svg",
+          "type": "Subscription",
+          "link": "https://www.netflix.com/title/81728197",
+          "availableFrom": "2024-01-20",
+          "quality": [
+            "HD",
+            "4K"
+          ],
+          "regions": [
+            "India",
+            "Worldwide"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Sooreede",
+          "singers": [
+            "Ravi Basrur"
+          ],
+          "lyricist": "Ravi Basrur",
+          "duration": "4:12",
+          "searchQuery": "Salaar Sooreede Song Prabhas",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Salaar+Sooreede+Song"
+        }
+      ],
+      "ratings": {
+        "tmdb": 6.7,
+        "imdb": 7.2,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 3.6
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Devaratha Raisaar"
+        },
+        {
+          "name": "Prithviraj Sukumaran",
+          "slug": "prithviraj",
+          "character": "Vardharaja Mannaar"
+        },
+        {
+          "name": "Shruti Haasan",
+          "slug": "shruti-haasan",
+          "character": "Aadhya"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Prashanth Neel",
+          "slug": "prashanth-neel",
+          "role": "Director"
+        },
+        {
+          "name": "Ravi Basrur",
+          "slug": "ravi-basrur",
+          "role": "Music Director"
+        }
+      ],
+      "trivia": [
+        "Part of KGF universe by Prashanth Neel",
+        "Opened with ₹176 crore worldwide on day one"
+      ],
+      "boxOfficeId": "salaar-2023"
+    },
+    {
+      "id": "adipurush-2023",
+      "title": "Adipurush",
+      "slug": "adipurush",
+      "year": 2023,
+      "releaseDate": "2023-06-16",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil",
+        "Kannada",
+        "Malayalam"
+      ],
+      "movieType": "lead",
+      "role": "Raghava (Lord Ram)",
+      "roleType": "Lead Hero",
+      "roleDescription": "Mythological role as Lord Ram in Ramayana adaptation",
+      "director": "Om Raut",
+      "producer": "Bhushan Kumar",
+      "musicDirector": "Ajay-Atul",
+      "cinematographer": "Karthik Palani",
+      "editor": "Ashish Mhatre",
+      "tmdbId": 734253,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/adipurush.jpg"
+      },
+      "runtime": 179,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/adipurush",
+          "availableFrom": "2023-09-10",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Rent/Buy",
+          "link": "https://www.youtube.com/results?search_query=Adipurush+Full+Movie",
+          "availableFrom": "2023-08-20",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Jai Shri Ram",
+          "singers": [
+            "Ajay Gogavale"
+          ],
+          "lyricist": "Manoj Muntashir",
+          "duration": "4:15",
+          "searchQuery": "Adipurush Jai Shri Ram Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Adipurush+Jai+Shri+Ram"
+        },
+        {
+          "title": "Shivoham",
+          "singers": [
+            "Ajay-Atul"
+          ],
+          "lyricist": "Ramajogayya Sastry",
+          "duration": "3:58",
+          "searchQuery": "Adipurush Shivoham Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Adipurush+Shivoham+Song"
+        }
+      ],
+      "ratings": {
+        "tmdb": 3.2,
+        "imdb": 2.8,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 1.5
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Raghava"
+        },
+        {
+          "name": "Kriti Sanon",
+          "slug": "kriti-sanon",
+          "character": "Janaki"
+        },
+        {
+          "name": "Saif Ali Khan",
+          "slug": "saif-ali-khan",
+          "character": "Lankesh"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Om Raut",
+          "slug": "om-raut",
+          "role": "Director"
+        },
+        {
+          "name": "Ajay-Atul",
+          "slug": "ajay-atul",
+          "role": "Music Director"
+        }
+      ],
+      "trivia": [
+        "Based on Hindu epic Ramayana",
+        "Faced controversy over dialogues and VFX"
+      ],
+      "boxOfficeId": "adipurush-2023"
+    },
+    {
+      "id": "radhe-shyam-2022",
+      "title": "Radhe Shyam",
+      "slug": "radhe-shyam",
+      "year": 2022,
+      "releaseDate": "2022-03-11",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil",
+        "Kannada",
+        "Malayalam"
+      ],
+      "movieType": "lead",
+      "role": "Vikramaditya",
+      "roleType": "Lead Hero",
+      "roleDescription": "Renowned palmist in 1970s Europe who falls in love",
+      "director": "Radha Krishna Kumar",
+      "producer": "UV Creations",
+      "musicDirector": "Justin Prabhakaran",
+      "cinematographer": "Manoj Paramahamsa",
+      "editor": "Kotagiri Venkateswara Rao",
+      "tmdbId": 673392,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/radhe-shyam.jpg"
+      },
+      "runtime": 138,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Amazon Prime Video",
+          "logo": "/images/ott/prime.svg",
+          "type": "Subscription",
+          "link": "https://www.primevideo.com/detail/0PCHZIBR7K8HU40CY8EVXKNWFQ",
+          "availableFrom": "2022-04-01",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Rent/Buy",
+          "link": "https://www.youtube.com/results?search_query=Radhe+Shyam+Full+Movie",
+          "availableFrom": "2022-05-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Sanchari",
+          "singers": [
+            "Sid Sriram"
+          ],
+          "lyricist": "Krishna Kanth",
+          "duration": "4:02",
+          "searchQuery": "Radhe Shyam Sanchari Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Radhe+Shyam+Sanchari"
+        }
+      ],
+      "ratings": {
+        "tmdb": 5.3,
+        "imdb": 5.3,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.4
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Vikramaditya"
+        },
+        {
+          "name": "Pooja Hegde",
+          "slug": "pooja-hegde",
+          "character": "Prerana"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Radha Krishna Kumar",
+          "slug": "radha-krishna-kumar",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Set in 1970s Europe with lavish production",
+        "Shot across Italy and Georgia"
+      ],
+      "boxOfficeId": "radhe-shyam-2022"
+    },
+    {
+      "id": "saaho-2019",
+      "title": "Saaho",
+      "slug": "saaho",
+      "year": 2019,
+      "releaseDate": "2019-08-30",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil",
+        "Kannada",
+        "Malayalam"
+      ],
+      "movieType": "lead",
+      "role": "Siddhanth Nandan Saaho",
+      "roleType": "Lead Hero",
+      "roleDescription": "Undercover cop in high-octane action thriller",
+      "director": "Sujeeth",
+      "producer": "UV Creations",
+      "musicDirector": "Tanishk Bagchi",
+      "cinematographer": "R. Madhi",
+      "editor": "A. Sreekar Prasad",
+      "tmdbId": 454292,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/saaho.jpg"
+      },
+      "runtime": 171,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Disney+ Hotstar",
+          "logo": "/images/ott/hotstar.svg",
+          "type": "Subscription",
+          "link": "https://www.hotstar.com/in/movies/saaho/",
+          "availableFrom": "2019-11-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        },
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/saaho",
+          "availableFrom": "2020-01-10",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Saaho+Full+Movie+Telugu",
+          "availableFrom": "2020-03-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-saaho-movie-online",
+          "availableFrom": "2020-05-20",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Psycho Saiyaan",
+          "singers": [
+            "Tanishk Bagchi",
+            "Dhvani Bhanushali"
+          ],
+          "lyricist": "Tanishk Bagchi",
+          "duration": "4:18",
+          "searchQuery": "Saaho Psycho Saiyaan Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Saaho+Psycho+Saiyaan"
+        },
+        {
+          "title": "Bad Boy",
+          "singers": [
+            "Badshah",
+            "Neeti Mohan"
+          ],
+          "lyricist": "Badshah",
+          "duration": "3:32",
+          "searchQuery": "Saaho Bad Boy Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Saaho+Bad+Boy+Song"
+        }
+      ],
+      "ratings": {
+        "tmdb": 5.2,
+        "imdb": 5,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.3
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Saaho"
+        },
+        {
+          "name": "Shraddha Kapoor",
+          "slug": "shraddha-kapoor",
+          "character": "Amritha"
+        },
+        {
+          "name": "Jackie Shroff",
+          "slug": "jackie-shroff",
+          "character": "Roy"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Sujeeth",
+          "slug": "sujeeth",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Budget of ₹350 crore",
+        "Prabhas' first film after Baahubali 2"
+      ],
+      "boxOfficeId": "saaho-2019"
+    },
+    {
+      "id": "baahubali-2-2017",
+      "title": "Baahubali 2: The Conclusion",
+      "slug": "baahubali-2-the-conclusion",
+      "year": 2017,
+      "releaseDate": "2017-04-28",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil",
+        "Malayalam",
+        "Kannada"
+      ],
+      "movieType": "lead",
+      "role": "Amarendra Baahubali / Mahendra Baahubali",
+      "roleType": "Lead Hero",
+      "roleDescription": "Dual role as father and son in epic historical fantasy",
+      "director": "S. S. Rajamouli",
+      "producer": "Shobu Yarlagadda",
+      "musicDirector": "M. M. Keeravani",
+      "cinematographer": "K. K. Senthil Kumar",
+      "editor": "Kotagiri Venkateswara Rao",
+      "tmdbId": 350312,
+      "runtime": 168,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Netflix",
+          "logo": "/images/ott/netflix.svg",
+          "type": "Subscription",
+          "link": "https://www.netflix.com/title/80175987",
+          "availableFrom": "2017-10-15",
+          "quality": [
+            "HD",
+            "4K"
+          ],
+          "regions": [
+            "India",
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "Disney+ Hotstar",
+          "logo": "/images/ott/hotstar.svg",
+          "type": "Subscription",
+          "link": "https://www.hotstar.com/in/movies/baahubali-2-the-conclusion/",
+          "availableFrom": "2017-09-20",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        },
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/baahubali-2",
+          "availableFrom": "2017-11-01",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Baahubali+2+Full+Movie+Telugu",
+          "availableFrom": "2018-04-28",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-baahubali-2-movie-online",
+          "availableFrom": "2019-01-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Saahore Baahubali",
+          "singers": [
+            "Daler Mehndi",
+            "M. M. Keeravani"
+          ],
+          "lyricist": "Manoj Muntashir",
+          "duration": "4:28",
+          "searchQuery": "Baahubali 2 Saahore Baahubali",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Baahubali+2+Saahore+Baahubali"
+        },
+        {
+          "title": "Hamsa Naava",
+          "singers": [
+            "Sony",
+            "Deepu"
+          ],
+          "lyricist": "Chaitanya Prasad",
+          "duration": "5:12",
+          "searchQuery": "Baahubali 2 Hamsa Naava Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Baahubali+2+Hamsa+Naava"
+        }
+      ],
+      "ratings": {
+        "tmdb": 7.4,
+        "imdb": 8.2,
+        "rottenTomatoes": 91,
+        "letterboxd": 3.9
+      },
+      "movieAwards": [
+        {
+          "recipient": "S. S. Rajamouli",
+          "role": "Director",
+          "award": "Filmfare Awards South",
+          "category": "Best Director",
+          "year": 2018,
+          "status": "Won"
+        }
+      ],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Baahubali"
+        },
+        {
+          "name": "Rana Daggubati",
+          "slug": "rana-daggubati",
+          "character": "Bhallaladeva"
+        },
+        {
+          "name": "Anushka Shetty",
+          "slug": "anushka-shetty",
+          "character": "Devasena"
+        }
+      ],
+      "crew": [
+        {
+          "name": "S. S. Rajamouli",
+          "slug": "ss-rajamouli",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "First Indian film to gross over ₹1000 crore",
+        "Highest-grossing Indian film with ₹1810 crore"
+      ],
+      "boxOfficeId": "baahubali-2-2017"
+    },
+    {
+      "id": "baahubali-1-2015",
+      "title": "Baahubali: The Beginning",
+      "slug": "baahubali-the-beginning",
+      "year": 2015,
+      "releaseDate": "2015-07-10",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil",
+        "Malayalam",
+        "Kannada"
+      ],
+      "movieType": "lead",
+      "role": "Amarendra Baahubali / Mahendra Baahubali",
+      "roleType": "Lead Hero",
+      "roleDescription": "Dual role in epic saga",
+      "director": "S. S. Rajamouli",
+      "producer": "Shobu Yarlagadda",
+      "musicDirector": "M. M. Keeravani",
+      "cinematographer": "K. K. Senthil Kumar",
+      "editor": "Kotagiri Venkateswara Rao",
+      "tmdbId": 256040,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/baahubali-1.jpg"
+      },
+      "runtime": 159,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Netflix",
+          "logo": "/images/ott/netflix.svg",
+          "type": "Subscription",
+          "link": "https://www.netflix.com/title/80046587",
+          "availableFrom": "2016-01-10",
+          "quality": [
+            "HD",
+            "4K"
+          ],
+          "regions": [
+            "India",
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "Disney+ Hotstar",
+          "logo": "/images/ott/hotstar.svg",
+          "type": "Subscription",
+          "link": "https://www.hotstar.com/in/movies/baahubali-the-beginning/",
+          "availableFrom": "2016-03-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        },
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/baahubali-1",
+          "availableFrom": "2016-05-01",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Baahubali+1+Full+Movie+Telugu",
+          "availableFrom": "2017-07-10",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-baahubali-1-movie-online",
+          "availableFrom": "2018-08-20",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Dheevara",
+          "singers": [
+            "Aditya RK",
+            "Deepu"
+          ],
+          "lyricist": "Chaitanya Prasad",
+          "duration": "5:08",
+          "searchQuery": "Baahubali Dheevara Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Baahubali+Dheevara"
+        }
+      ],
+      "ratings": {
+        "tmdb": 7.1,
+        "imdb": 8,
+        "rottenTomatoes": 86,
+        "letterboxd": 3.7
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Baahubali"
+        },
+        {
+          "name": "Rana Daggubati",
+          "slug": "rana-daggubati",
+          "character": "Bhallaladeva"
+        },
+        {
+          "name": "Anushka Shetty",
+          "slug": "anushka-shetty",
+          "character": "Devasena"
+        }
+      ],
+      "crew": [
+        {
+          "name": "S. S. Rajamouli",
+          "slug": "ss-rajamouli",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "First Indian film to gross over ₹600 crore"
+      ],
+      "boxOfficeId": "baahubali-1-2015"
+    },
+    {
+      "id": "mirchi-2013",
+      "title": "Mirchi",
+      "slug": "mirchi",
+      "year": 2013,
+      "releaseDate": "2013-02-08",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil"
+      ],
+      "movieType": "lead",
+      "role": "Jai / Mirchi",
+      "roleType": "Lead Hero",
+      "roleDescription": "Man who brings feuding families together",
+      "director": "Koratala Siva",
+      "producer": "UV Creations",
+      "musicDirector": "Devi Sri Prasad",
+      "cinematographer": "Madhie",
+      "editor": "Kotagiri Venkateswara Rao",
+      "tmdbId": 176590,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/mirchi.jpg"
+      },
+      "runtime": 162,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Amazon Prime Video",
+          "logo": "/images/ott/prime.svg",
+          "type": "Subscription",
+          "link": "https://www.primevideo.com/detail/Mirchi/",
+          "availableFrom": "2019-06-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        },
+        {
+          "name": "Disney+ Hotstar",
+          "logo": "/images/ott/hotstar.svg",
+          "type": "Subscription",
+          "link": "https://www.hotstar.com/in/movies/mirchi/",
+          "availableFrom": "2018-10-20",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        },
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/mirchi",
+          "availableFrom": "2018-05-01",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Mirchi+Full+Movie+Telugu",
+          "availableFrom": "2019-02-08",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-mirchi-movie-online",
+          "availableFrom": "2020-03-12",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Mirchi Title Song",
+          "singers": [
+            "Mika Singh"
+          ],
+          "lyricist": "Ramajogayya Sastry",
+          "duration": "4:15",
+          "searchQuery": "Mirchi Title Song Prabhas",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Mirchi+Title+Song"
+        }
+      ],
+      "ratings": {
+        "tmdb": 6.8,
+        "imdb": 7.4,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 3.4
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Jai"
+        },
+        {
+          "name": "Anushka Shetty",
+          "slug": "anushka-shetty",
+          "character": "Manasa"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Koratala Siva",
+          "slug": "koratala-siva",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Koratala Siva's directorial debut",
+        "Earned Prabhas the title 'Darling'"
+      ],
+      "boxOfficeId": "mirchi-2013"
+    },
+    {
+      "id": "rebel-2012",
+      "title": "Rebel",
+      "slug": "rebel",
+      "year": 2012,
+      "releaseDate": "2012-09-28",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil"
+      ],
+      "movieType": "lead",
+      "role": "Rishi / Rebel",
+      "roleType": "Lead Hero",
+      "roleDescription": "Young man fighting corruption",
+      "director": "Raghava Lawrence",
+      "producer": "J. Bhagawan",
+      "musicDirector": "Lawrence",
+      "cinematographer": "Ram Prasad",
+      "editor": "Marthand K. Venkatesh",
+      "tmdbId": 320878,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/rebel.jpg"
+      },
+      "runtime": 143,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/rebel",
+          "availableFrom": "2018-03-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Rebel+Full+Movie+Telugu+Prabhas",
+          "availableFrom": "2019-09-28",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-rebel-movie-online",
+          "availableFrom": "2020-05-10",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Rozaa Rozaa",
+          "singers": [
+            "Mika Singh",
+            "Swathi"
+          ],
+          "lyricist": "Ramajogayya Sastry",
+          "duration": "4:18",
+          "searchQuery": "Rebel Rozaa Rozaa Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Rebel+Rozaa+Rozaa"
+        }
+      ],
+      "ratings": {
+        "tmdb": 5.1,
+        "imdb": 4.8,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.2
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Rishi"
+        },
+        {
+          "name": "Tamannaah Bhatia",
+          "slug": "tamannaah",
+          "character": "Nandini"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Raghava Lawrence",
+          "slug": "raghava-lawrence",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Action entertainer with social message"
+      ],
+      "boxOfficeId": "rebel-2012"
+    },
+    {
+      "id": "mr-perfect-2011",
+      "title": "Mr. Perfect",
+      "slug": "mr-perfect",
+      "year": 2011,
+      "releaseDate": "2011-04-22",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi"
+      ],
+      "movieType": "lead",
+      "role": "Vicky",
+      "roleType": "Lead Hero",
+      "roleDescription": "Perfectionist learning about love",
+      "director": "Dasaradh",
+      "producer": "Dil Raju",
+      "musicDirector": "Devi Sri Prasad",
+      "cinematographer": "Sameer Reddy",
+      "editor": "Marthand K. Venkatesh",
+      "tmdbId": 63376,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/mr-perfect.jpg"
+      },
+      "runtime": 142,
+      "certificate": "U",
+      "ottPlatforms": [
+        {
+          "name": "Disney+ Hotstar",
+          "logo": "/images/ott/hotstar.svg",
+          "type": "Subscription",
+          "link": "https://www.hotstar.com/in/movies/mr-perfect/1271395157",
+          "availableFrom": "2018-04-22",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        },
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/telugu-movie-mrperfect-2011/detail/7089",
+          "availableFrom": "2017-03-30",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Mr+Perfect+Full+Movie+Telugu",
+          "availableFrom": "2018-04-22",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-mr-perfect-movie-online",
+          "availableFrom": "2019-06-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Chali Chaliga",
+          "singers": [
+            "Karthik"
+          ],
+          "lyricist": "Ramajogayya Sastry",
+          "duration": "4:28",
+          "searchQuery": "Mr Perfect Chali Chaliga Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Mr+Perfect+Chali+Chaliga"
+        }
+      ],
+      "ratings": {
+        "tmdb": 6.5,
+        "imdb": 7.2,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 3.1
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Vicky"
+        },
+        {
+          "name": "Kajal Aggarwal",
+          "slug": "kajal-aggarwal",
+          "character": "Priya"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Dasaradh",
+          "slug": "dasaradh",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Family entertainer",
+        "Taapsee Pannu's Telugu debut"
+      ],
+      "boxOfficeId": "mr-perfect-2011"
+    },
+    {
+      "id": "darling-2010",
+      "title": "Darling",
+      "slug": "darling",
+      "year": 2010,
+      "releaseDate": "2010-04-23",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil"
+      ],
+      "movieType": "lead",
+      "role": "Prabhas",
+      "roleType": "Lead Hero",
+      "roleDescription": "Young man between two women",
+      "director": "A. Karunakaran",
+      "producer": "B. V. S. N. Prasad",
+      "musicDirector": "G. V. Prakash Kumar",
+      "cinematographer": "Sameer Reddy",
+      "editor": "Marthand K. Venkatesh",
+      "tmdbId": 63414,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/darling.jpg"
+      },
+      "runtime": 155,
+      "certificate": "U",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/darling",
+          "availableFrom": "2017-04-23",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Darling+Full+Movie+Telugu+Prabhas",
+          "availableFrom": "2018-04-23",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-darling-movie-online",
+          "availableFrom": "2019-08-10",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Osey Orey",
+          "singers": [
+            "Karthik"
+          ],
+          "lyricist": "Ramajogayya Sastry",
+          "duration": "4:12",
+          "searchQuery": "Darling Osey Orey Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Darling+Osey+Orey"
+        }
+      ],
+      "ratings": {
+        "tmdb": 6.2,
+        "imdb": 6.8,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.9
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Prabhas"
+        },
+        {
+          "name": "Kajal Aggarwal",
+          "slug": "kajal-aggarwal",
+          "character": "Nandini"
+        }
+      ],
+      "crew": [
+        {
+          "name": "A. Karunakaran",
+          "slug": "a-karunakaran",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Film that gave Prabhas the title 'Darling'"
+      ],
+      "boxOfficeId": "darling-2010"
+    },
+    {
+      "id": "billa-2009",
+      "title": "Billa",
+      "slug": "billa",
+      "year": 2009,
+      "releaseDate": "2009-04-03",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi"
+      ],
+      "movieType": "lead",
+      "role": "Billa / Ranga",
+      "roleType": "Lead Hero",
+      "roleDescription": "Stylish don and lookalike",
+      "director": "Meher Ramesh",
+      "producer": "Gopikrishna Movies",
+      "musicDirector": "Mani Sharma",
+      "cinematographer": "Soundararajan",
+      "editor": "Marthand K. Venkatesh",
+      "tmdbId": 23766,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/billa.jpg"
+      },
+      "runtime": 128,
+      "certificate": "A",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/billa",
+          "availableFrom": "2017-04-03",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Billa+Full+Movie+Telugu+Prabhas",
+          "availableFrom": "2018-04-03",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-billa-movie-online",
+          "availableFrom": "2019-07-20",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "My Name is Billa",
+          "singers": [
+            "Mano"
+          ],
+          "lyricist": "Kandikonda",
+          "duration": "4:05",
+          "searchQuery": "Billa My Name is Billa Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Billa+My+Name+is+Billa"
+        }
+      ],
+      "ratings": {
+        "tmdb": 5.8,
+        "imdb": 5.5,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.6
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Billa"
+        },
+        {
+          "name": "Anushka Shetty",
+          "slug": "anushka-shetty",
+          "character": "Sasha"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Meher Ramesh",
+          "slug": "meher-ramesh",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Remake of Tamil film Billa (2007)"
+      ],
+      "boxOfficeId": "billa-2009"
+    },
+    {
+      "id": "ek-niranjan-2009",
+      "title": "Ek Niranjan",
+      "slug": "ek-niranjan",
+      "year": 2009,
+      "releaseDate": "2009-10-29",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi"
+      ],
+      "movieType": "lead",
+      "role": "Chotu",
+      "roleType": "Lead Hero",
+      "roleDescription": "Bounty hunter searching for parents",
+      "director": "Puri Jagannadh",
+      "producer": "Aditya Ram",
+      "musicDirector": "Mani Sharma",
+      "cinematographer": "Shyam K. Naidu",
+      "editor": "Marthand K. Venkatesh",
+      "tmdbId": 38220,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/ek-niranjan.jpg"
+      },
+      "runtime": 142,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/ek-niranjan",
+          "availableFrom": "2017-10-29",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Ek+Niranjan+Full+Movie+Telugu",
+          "availableFrom": "2018-10-29",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-ek-niranjan-movie-online",
+          "availableFrom": "2019-09-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Pilla Chao",
+          "singers": [
+            "Mika Singh"
+          ],
+          "lyricist": "Bhaskarabhatla",
+          "duration": "3:58",
+          "searchQuery": "Ek Niranjan Pilla Chao Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Ek+Niranjan+Pilla+Chao"
+        }
+      ],
+      "ratings": {
+        "tmdb": 5.3,
+        "imdb": 5.2,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.4
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Chotu"
+        },
+        {
+          "name": "Kangana Ranaut",
+          "slug": "kangana-ranaut",
+          "character": "Sameera"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Puri Jagannadh",
+          "slug": "puri-jagannadh",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Kangana Ranaut's Telugu debut"
+      ],
+      "boxOfficeId": "ek-niranjan-2009"
+    },
+    {
+      "id": "bujjigadu-2008",
+      "title": "Bujjigadu: Made in Chennai",
+      "slug": "bujjigadu",
+      "year": 2008,
+      "releaseDate": "2008-05-23",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi"
+      ],
+      "movieType": "lead",
+      "role": "Bujji",
+      "roleType": "Lead Hero",
+      "roleDescription": "Street-smart youngster",
+      "director": "Puri Jagannadh",
+      "producer": "K. Srinivasa Raju",
+      "musicDirector": "Sandeep Chowta",
+      "cinematographer": "Shyam K. Naidu",
+      "editor": "Marthand K. Venkatesh",
+      "tmdbId": 117029,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/bujjigadu.jpg"
+      },
+      "runtime": 150,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/bujjigadu",
+          "availableFrom": "2017-05-23",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Bujjigadu+Full+Movie+Telugu",
+          "availableFrom": "2018-05-23",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-bujjigadu-movie-online",
+          "availableFrom": "2019-08-10",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Kana Kana",
+          "singers": [
+            "Ranjith"
+          ],
+          "lyricist": "Bhaskarabhatla",
+          "duration": "4:22",
+          "searchQuery": "Bujjigadu Kana Kana Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Bujjigadu+Kana+Kana"
+        }
+      ],
+      "ratings": {
+        "tmdb": 5.9,
+        "imdb": 6.2,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.7
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Bujji"
+        },
+        {
+          "name": "Trisha Krishnan",
+          "slug": "trisha",
+          "character": "Chitti"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Puri Jagannadh",
+          "slug": "puri-jagannadh",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Comedy action film shot in Chennai"
+      ],
+      "boxOfficeId": "bujjigadu-2008"
+    },
+    {
+      "id": "yogi-2007",
+      "title": "Yogi",
+      "slug": "yogi",
+      "year": 2007,
+      "releaseDate": "2007-01-12",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi"
+      ],
+      "movieType": "lead",
+      "role": "Eeshwar Chandra Prasad",
+      "roleType": "Lead Hero",
+      "roleDescription": "Youngster with anger issues",
+      "director": "V. V. Vinayak",
+      "producer": "Ravindranath Reddy",
+      "musicDirector": "Ramana Gogula",
+      "cinematographer": "Chota K. Naidu",
+      "editor": "Gautham Raju",
+      "tmdbId": 228092,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/yogi.jpg"
+      },
+      "runtime": 172,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/yogi",
+          "availableFrom": "2017-01-12",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Yogi+Full+Movie+Telugu+Prabhas",
+          "availableFrom": "2018-01-12",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-yogi-movie-online",
+          "availableFrom": "2019-06-20",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Okariki Okaram",
+          "singers": [
+            "Shankar Mahadevan"
+          ],
+          "lyricist": "Chandra Bose",
+          "duration": "4:35",
+          "searchQuery": "Yogi Okariki Okaram Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Yogi+Okariki+Okaram"
+        }
+      ],
+      "ratings": {
+        "tmdb": 5.7,
+        "imdb": 5.8,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.5
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Yogi"
+        },
+        {
+          "name": "Nayanthara",
+          "slug": "nayanthara",
+          "character": "Anitha"
+        }
+      ],
+      "crew": [
+        {
+          "name": "V. V. Vinayak",
+          "slug": "vv-vinayak",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Action drama with social message"
+      ],
+      "boxOfficeId": "yogi-2007"
+    },
+    {
+      "id": "munna-2007",
+      "title": "Munna",
+      "slug": "munna",
+      "year": 2007,
+      "releaseDate": "2007-05-02",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi"
+      ],
+      "movieType": "lead",
+      "role": "Mahesh Kumar 'Munna'",
+      "roleType": "Lead Hero",
+      "roleDescription": "College student with family issues",
+      "director": "Vamsi Paidipally",
+      "producer": "Dil Raju",
+      "musicDirector": "Harris Jayaraj",
+      "cinematographer": "Prasad Murella",
+      "editor": "Marthand K. Venkatesh",
+      "tmdbId": 199229,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/munna.jpg"
+      },
+      "runtime": 155,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/munna",
+          "availableFrom": "2017-05-02",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Munna+Full+Movie+Telugu+Prabhas",
+          "availableFrom": "2018-05-02",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-munna-movie-online",
+          "availableFrom": "2019-07-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Gala Gala Parutunna",
+          "singers": [
+            "Haricharan"
+          ],
+          "lyricist": "Sirivennela Seetharama Sastry",
+          "duration": "4:25",
+          "searchQuery": "Munna Gala Gala Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Munna+Gala+Gala"
+        }
+      ],
+      "ratings": {
+        "tmdb": 5.6,
+        "imdb": 6.1,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.6
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Munna"
+        },
+        {
+          "name": "Ileana D'Cruz",
+          "slug": "ileana-dcruz",
+          "character": "Nidhi"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Vamsi Paidipally",
+          "slug": "vamsi-paidipally",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Family drama with romance"
+      ],
+      "boxOfficeId": "munna-2007"
+    },
+    {
+      "id": "pournami-2006",
+      "title": "Pournami",
+      "slug": "pournami",
+      "year": 2006,
+      "releaseDate": "2006-03-30",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil"
+      ],
+      "movieType": "lead",
+      "role": "Chandrakantha / Chanti",
+      "roleType": "Lead Hero",
+      "roleDescription": "Prince protecting temple dancer",
+      "director": "Prabhu Deva",
+      "producer": "M. S. Raju",
+      "musicDirector": "Devi Sri Prasad",
+      "cinematographer": "Jayanan Vincent",
+      "editor": "Marthand K. Venkatesh",
+      "tmdbId": 226200,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/pournami.jpg"
+      },
+      "runtime": 164,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/pournami",
+          "availableFrom": "2017-03-30",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Pournami+Full+Movie+Telugu",
+          "availableFrom": "2018-03-30",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Adugadugu Aade",
+          "singers": [
+            "Shankar Mahadevan"
+          ],
+          "lyricist": "Veturi",
+          "duration": "4:45",
+          "searchQuery": "Pournami Adugadugu Aade Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Pournami+Adugadugu+Aade"
+        }
+      ],
+      "ratings": {
+        "tmdb": 5.4,
+        "imdb": 5.1,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.3
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Chanti"
+        },
+        {
+          "name": "Trisha Krishnan",
+          "slug": "trisha",
+          "character": "Pournami"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Prabhu Deva",
+          "slug": "prabhu-deva",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Fantasy action drama"
+      ],
+      "boxOfficeId": "pournami-2006"
+    },
+    {
+      "id": "chatrapathi-2005",
+      "title": "Chatrapathi",
+      "slug": "chatrapathi",
+      "year": 2005,
+      "releaseDate": "2005-09-30",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil",
+        "Malayalam"
+      ],
+      "movieType": "lead",
+      "role": "Sivaji / Chatrapathi",
+      "roleType": "Lead Hero",
+      "roleDescription": "Refugee who becomes people's savior",
+      "director": "S. S. Rajamouli",
+      "producer": "B. V. S. N. Prasad",
+      "musicDirector": "M. M. Keeravani",
+      "cinematographer": "Senthil Kumar",
+      "editor": "Kotagiri Venkateswara Rao",
+      "tmdbId": 79210,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/chatrapathi.jpg"
+      },
+      "runtime": 160,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Amazon Prime Video",
+          "logo": "/images/ott/prime.svg",
+          "type": "Subscription",
+          "link": "https://www.primevideo.com/detail/Chatrapathi/0LN5QHTVVON72HEK5XAXKCEFZO",
+          "availableFrom": "2019-04-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "Disney+ Hotstar",
+          "logo": "/images/ott/hotstar.svg",
+          "type": "Subscription",
+          "link": "https://www.hotstar.com/in/movies/chatrapathi/",
+          "availableFrom": "2018-09-30",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        },
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/chatrapathi",
+          "availableFrom": "2017-09-30",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Chatrapathi+Full+Movie+Telugu",
+          "availableFrom": "2018-09-30",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-chatrapathi-movie-online",
+          "availableFrom": "2019-05-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Chinnaga Chinnaga",
+          "singers": [
+            "SP Balasubrahmanyam"
+          ],
+          "lyricist": "M. M. Keeravani",
+          "duration": "4:28",
+          "searchQuery": "Chatrapathi Chinnaga Chinnaga Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Chatrapathi+Chinnaga+Chinnaga"
+        }
+      ],
+      "ratings": {
+        "tmdb": 6.9,
+        "imdb": 7.3,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 3.2
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Sivaji"
+        },
+        {
+          "name": "Shriya Saran",
+          "slug": "shriya-saran",
+          "character": "Neelu"
+        }
+      ],
+      "crew": [
+        {
+          "name": "S. S. Rajamouli",
+          "slug": "ss-rajamouli",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "First collaboration between Prabhas and Rajamouli",
+        "Marked Prabhas' transformation as action hero"
+      ],
+      "boxOfficeId": "chatrapathi-2005"
+    },
+    {
+      "id": "varsham-2004",
+      "title": "Varsham",
+      "slug": "varsham",
+      "year": 2004,
+      "releaseDate": "2004-01-14",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi",
+        "Tamil"
+      ],
+      "movieType": "lead",
+      "role": "Venkat",
+      "roleType": "Lead Hero",
+      "roleDescription": "Young man who helps girl escape forced marriage",
+      "director": "Sobhan",
+      "producer": "M. S. Raju",
+      "musicDirector": "Devi Sri Prasad",
+      "cinematographer": "Prasad Murella",
+      "editor": "Marthand K. Venkatesh",
+      "tmdbId": 82322,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/varsham.jpg"
+      },
+      "runtime": 155,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Amazon Prime Video",
+          "logo": "/images/ott/prime.svg",
+          "type": "Subscription",
+          "link": "https://www.primevideo.com/detail/Varsham/",
+          "availableFrom": "2019-08-10",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        },
+        {
+          "name": "Disney+ Hotstar",
+          "logo": "/images/ott/hotstar.svg",
+          "type": "Subscription",
+          "link": "https://www.hotstar.com/in/movies/varsham/",
+          "availableFrom": "2018-06-15",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        },
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/varsham",
+          "availableFrom": "2017-01-14",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Varsham+Full+Movie+Telugu",
+          "availableFrom": "2018-01-14",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-varsham-movie-online",
+          "availableFrom": "2019-03-20",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Varsham Munduga",
+          "singers": [
+            "Chitra"
+          ],
+          "lyricist": "Chandrabose",
+          "duration": "4:35",
+          "searchQuery": "Varsham Munduga Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Varsham+Munduga+Song"
+        },
+        {
+          "title": "Nee Choopule",
+          "singers": [
+            "Karthik"
+          ],
+          "lyricist": "Sirivennela Seetharama Sastry",
+          "duration": "4:22",
+          "searchQuery": "Varsham Nee Choopule Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Varsham+Nee+Choopule"
+        }
+      ],
+      "ratings": {
+        "tmdb": 6.6,
+        "imdb": 7.6,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 3.3
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Venkat"
+        },
+        {
+          "name": "Trisha Krishnan",
+          "slug": "trisha",
+          "character": "Sailaja"
+        },
+        {
+          "name": "Gopichand",
+          "slug": "gopichand",
+          "character": "Bhadranna"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Sobhan",
+          "slug": "sobhan",
+          "role": "Director"
+        },
+        {
+          "name": "Devi Sri Prasad",
+          "slug": "devi-sri-prasad",
+          "role": "Music Director"
+        }
+      ],
+      "trivia": [
+        "Breakthrough film that established Prabhas as star",
+        "Music by DSP became chartbuster"
+      ],
+      "boxOfficeId": "varsham-2004"
+    },
+    {
+      "id": "adavi-ramudu-2004",
+      "title": "Adavi Ramudu",
+      "slug": "adavi-ramudu",
+      "year": 2004,
+      "releaseDate": "2004-05-01",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi"
+      ],
+      "movieType": "lead",
+      "role": "Ramudu",
+      "roleType": "Lead Hero",
+      "roleDescription": "Tribal youngster protecting forest",
+      "director": "B. Gopal",
+      "producer": "Harikrishna",
+      "musicDirector": "Mani Sharma",
+      "cinematographer": "Anji",
+      "editor": "Gautham Raju",
+      "tmdbId": 228096,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/adavi-ramudu.jpg"
+      },
+      "runtime": 162,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/adavi-ramudu",
+          "availableFrom": "2017-05-01",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Adavi+Ramudu+Full+Movie+Telugu+Prabhas",
+          "availableFrom": "2018-05-01",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-adavi-ramudu-movie-online",
+          "availableFrom": "2019-07-10",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Pillalu Pidugulu",
+          "singers": [
+            "Shankar Mahadevan"
+          ],
+          "lyricist": "Chandrabose",
+          "duration": "4:18",
+          "searchQuery": "Adavi Ramudu Pillalu Pidugulu Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Adavi+Ramudu+Pillalu+Pidugulu"
+        }
+      ],
+      "ratings": {
+        "tmdb": 5.5,
+        "imdb": 5.4,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.4
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Ramudu"
+        },
+        {
+          "name": "Arti Agarwal",
+          "slug": "arti-agarwal",
+          "character": "Madhu"
+        }
+      ],
+      "crew": [
+        {
+          "name": "B. Gopal",
+          "slug": "b-gopal",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Action entertainer with tribal backdrop"
+      ],
+      "boxOfficeId": "adavi-ramudu-2004"
+    },
+    {
+      "id": "chakram-2005",
+      "title": "Chakram",
+      "slug": "chakram",
+      "year": 2005,
+      "releaseDate": "2005-03-25",
+      "language": "Telugu",
+      "dubbedIn": [
+        "Hindi"
+      ],
+      "movieType": "lead",
+      "role": "Chakram",
+      "roleType": "Lead Hero",
+      "roleDescription": "Doctor helping poor people with social message",
+      "director": "Krishna Vamsi",
+      "producer": "C. Kalyan",
+      "musicDirector": "Chakri",
+      "cinematographer": "Sarvesh Murari",
+      "editor": "Marthand K. Venkatesh",
+      "tmdbId": 132437,
+      "runtime": 168,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/chakram",
+          "availableFrom": "2017-03-25",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Chakram+Full+Movie+Telugu+Prabhas",
+          "availableFrom": "2018-03-25",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "MX Player",
+          "logo": "/images/ott/mxplayer.svg",
+          "type": "Free with Ads",
+          "link": "https://www.mxplayer.in/movie/watch-chakram-movie-online",
+          "availableFrom": "2019-08-20",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Vennelaina",
+          "singers": [
+            "Karthik"
+          ],
+          "lyricist": "Sirivennela Seetharama Sastry",
+          "duration": "4:32",
+          "searchQuery": "Chakram Vennelaina Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Chakram+Vennelaina+Song"
+        }
+      ],
+      "ratings": {
+        "tmdb": 5.8,
+        "imdb": 6.3,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.7
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Chakram"
+        },
+        {
+          "name": "Asin Thottumkal",
+          "slug": "asin",
+          "character": "Lakshmi"
+        },
+        {
+          "name": "Charmy Kaur",
+          "slug": "charmy-kaur",
+          "character": "Latha"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Krishna Vamsi",
+          "slug": "krishna-vamsi",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Social drama with medical backdrop",
+        "Krishna Vamsi's emotional narrative"
+      ],
+      "boxOfficeId": "chakram-2005"
+    },
+    {
+      "id": "raghavendra-2003",
+      "title": "Raghavendra",
+      "slug": "raghavendra",
+      "year": 2003,
+      "releaseDate": "2003-06-19",
+      "language": "Telugu",
+      "dubbedIn": [],
+      "movieType": "lead",
+      "role": "Raghava",
+      "roleType": "Lead Hero",
+      "roleDescription": "College student with love and family issues",
+      "director": "Suresh Krissna",
+      "producer": "K. L. Narayana",
+      "musicDirector": "Mani Sharma",
+      "cinematographer": "B. Balamurugan",
+      "editor": "Gautham Raju",
+      "tmdbId": 0,
+      "poster": {
+        "source": "local",
+        "url": "https://i.pinimg.com/736x/f1/b7/6b/f1b76bd0146061e3811d98234c514833.jpg"
+      },
+      "runtime": 168,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/raghavendra",
+          "availableFrom": "2017-06-19",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Raghavendra+Full+Movie+Telugu+Prabhas",
+          "availableFrom": "2018-06-19",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "Premante Premante",
+          "singers": [
+            "S. P. Balasubrahmanyam"
+          ],
+          "lyricist": "Sirivennela Seetharama Sastry",
+          "duration": "4:25",
+          "searchQuery": "Raghavendra Premante Premante Song",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Raghavendra+Premante+Premante"
+        }
+      ],
+      "ratings": {
+        "tmdb": 5.2,
+        "imdb": 5,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2.2
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Raghava"
+        },
+        {
+          "name": "Anshu",
+          "slug": "anshu",
+          "character": "Shweta"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Suresh Krissna",
+          "slug": "suresh-krissna",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Early career film"
+      ],
+      "boxOfficeId": "raghavendra-2003"
+    },
+    {
+      "id": "eeswar-2002",
+      "title": "Eeswar",
+      "slug": "eeswar",
+      "year": 2002,
+      "releaseDate": "2002-10-24",
+      "language": "Telugu",
+      "dubbedIn": [],
+      "movieType": "lead",
+      "role": "Easwar",
+      "roleType": "Lead Hero - Debut",
+      "roleDescription": "Young man fighting for justice in debut role",
+      "director": "Jayanth C. Paranjee",
+      "producer": "R. B. Choudary",
+      "musicDirector": "Mani Sharma",
+      "cinematographer": "Chota K. Naidu",
+      "editor": "Kotagiri Venkateswara Rao",
+      "tmdbId": 117085,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/eeswar.jpg"
+      },
+      "runtime": 149,
+      "certificate": "UA",
+      "ottPlatforms": [
+        {
+          "name": "Sun NXT",
+          "logo": "/images/ott/sunnxt.svg",
+          "type": "Subscription",
+          "link": "https://www.sunnxt.com/movie/eeswar",
+          "availableFrom": "2017-10-24",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "India",
+            "USA",
+            "UK"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free with Ads",
+          "link": "https://www.youtube.com/results?search_query=Eeswar+Full+Movie+Telugu+Prabhas+Debut",
+          "availableFrom": "2018-10-24",
+          "quality": [
+            "HD"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        }
+      ],
+      "songs": [
+        {
+          "title": "O Lala",
+          "singers": [
+            "Karthik"
+          ],
+          "lyricist": "Sirivennela Seetharama Sastry",
+          "duration": "4:12",
+          "searchQuery": "Eeswar O Lala Song Prabhas Debut",
+          "youtubeSearchUrl": "https://www.youtube.com/results?search_query=Eeswar+O+Lala+Song"
+        }
+      ],
+      "ratings": {
+        "tmdb": 4.8,
+        "imdb": 4.5,
+        "rottenTomatoes": "Not Available",
+        "letterboxd": 2
+      },
+      "movieAwards": [],
+      "cast": [
+        {
+          "name": "Prabhas",
+          "slug": "prabhas",
+          "character": "Easwar"
+        },
+        {
+          "name": "Sridevi",
+          "slug": "sridevi",
+          "character": "Indu"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Jayanth C. Paranjee",
+          "slug": "jayanth-paranjee",
+          "role": "Director"
+        }
+      ],
+      "trivia": [
+        "Prabhas' debut film as lead hero",
+        "Launched under guidance of uncle Krishnam Raju"
+      ],
+      "boxOfficeId": "eeswar-2002"
+    }
+  ],
+  "cameoAppearances": [
+    {
+      "id": "action-jackson-2014",
+      "title": "Action Jackson",
+      "slug": "action-jackson",
+      "year": 2014,
+      "releaseDate": "2014-12-05",
+      "language": "Hindi",
+      "movieType": "cameo",
+      "role": "Special Appearance",
+      "roleType": "Guest Appearance",
+      "roleDescription": "Special cameo appearance in Bollywood action comedy",
+      "director": "Prabhu Deva",
+      "tmdbId": 308165,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/action-jackson.jpg"
+      },
+      "runtime": 144,
+      "certificate": "UA",
+      "trivia": [
+        "Prabhas' first Bollywood cameo appearance",
+        "Directed by Prabhu Deva who directed Pournami"
+      ]
+    },
+    {
+      "id": "kannappa-2025",
+      "title": "Kannappa",
+      "slug": "kannappa",
+      "year": 2025,
+      "releaseDate": "2025-04-25",
+      "language": "Telugu",
+      "movieType": "cameo",
+      "role": "Lord Shiva",
+      "roleType": "Special Appearance",
+      "roleDescription": "Playing Lord Shiva in mythological epic",
+      "director": "Mukesh Kumar Singh",
+      "tmdbId": 1232232,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/kannappa.jpg"
+      },
+      "runtime": 0,
+      "certificate": "Not Available",
+      "status": "upcoming",
+      "trivia": [
+        "Mythological film starring Vishnu Manchu",
+        "Prabhas plays Lord Shiva in special appearance"
+      ]
+    }
+  ],
+  "voiceOverAppearances": [
+    {
+      "id": "denikaina-ready-2012",
+      "title": "Denikaina Ready",
+      "slug": "denikaina-ready",
+      "year": 2012,
+      "releaseDate": "2012-10-24",
+      "language": "Telugu",
+      "movieType": "voiceover",
+      "role": "Voice Cameo",
+      "roleType": "Voice Over",
+      "roleDescription": "Dubbed voice for Manchu Vishnu's character in comedy scene",
+      "director": "G. Nageswara Reddy",
+      "tmdbId": 171384,
+      "poster": {
+        "source": "local",
+        "url": "/images/movies/denikaina-ready.jpg"
+      },
+      "runtime": 145,
+      "certificate": "UA",
+      "trivia": [
+        "Prabhas dubbed his voice for Manchu Vishnu",
+        "Comedy sequence where Vishnu imitates Prabhas"
+      ]
+    },
+    {
+      "id": "bujji-bhairava-2024",
+      "title": "Bujji & Bhairava",
+      "slug": "bujji-bhairava",
+      "year": 2024,
+      "releaseDate": "2024-05-31",
+      "language": "Telugu",
+      "movieType": "voiceover",
+      "role": "Bhairava (Voice)",
+      "roleType": "Voice Over - Animated Prelude",
+      "roleDescription": "Voice for Bhairava character in animated prelude to Kalki 2898 AD",
+      "director": "Nag Ashwin",
+      "tmdbId": 0,
+      "poster": {
+        "source": "local",
+        "url": "https://www.themoviedb.org/t/p/w1280/10asomsbajzVy2NePfRipyC1Bgv.jpg"
+      },
+      "runtime": 8,
+      "certificate": "U",
+      "ottPlatforms": [
+        {
+          "name": "Amazon Prime Video",
+          "logo": "/images/ott/prime.svg",
+          "type": "Free",
+          "link": "https://www.primevideo.com/detail/Bujji-and-Bhairava/",
+          "availableFrom": "2024-05-31",
+          "quality": [
+            "HD",
+            "4K"
+          ],
+          "regions": [
+            "India",
+            "Worldwide"
+          ]
+        },
+        {
+          "name": "YouTube",
+          "logo": "/images/ott/youtube.svg",
+          "type": "Free",
+          "link": "https://www.youtube.com/results?search_query=Bujji+and+Bhairava+Animated+Series",
+          "availableFrom": "2024-05-31",
+          "quality": [
+            "HD",
+            "4K"
+          ],
+          "regions": [
+            "Worldwide"
+          ]
+        }
+      ],
+      "trivia": [
+        "Animated prelude to Kalki 2898 AD",
+        "Introduces Bhairava and Bujji's relationship",
+        "Released as promotional content before Kalki"
+      ]
+    }
+  ],
+  "upcoming": [
+    {
+      "id": "the-raja-saab-2025",
+      "title": "The Raja Saab",
+      "year": 2025,
+      "director": "Maruthi",
+      "genre": [
+        "Horror",
+        "Comedy"
+      ],
+      "status": "post-production",
+      "expectedBudget": "₹300 Cr",
+      "releaseDate": "2025-04-10",
+      "poster": {
+        "source": "web",
+        "url": "/images/movies/the-raja-saab.jpg"
+      },
+      "cast": [
+        "Malavika Mohanan",
+        "Nidhi Agerwal",
+        "Riddhi Kumar"
+      ],
+      "productionCompany": "People Media Factory",
+      "tmdbId": 1022453
+    },
+    {
+      "id": "spirit-2026",
+      "title": "Spirit",
+      "year": 2026,
+      "director": "Sandeep Reddy Vanga",
+      "genre": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "status": "pre-production",
+      "expectedBudget": "₹400 Cr",
+      "releaseDate": "2026-03-20",
+      "poster": {
+        "source": "web",
+        "url": "/images/movies/spirit.jpg"
+      },
+      "cast": [
+        "Triptii Dimri"
+      ],
+      "productionCompany": "T-Series, Bhadrakali Pictures",
+      "description": "High-octane police action thriller with potential for sequel",
+      "tmdbId": 881903
+    },
+    {
+      "id": "salaar-2-2026",
+      "title": "Salaar: Part 2 – Shouryaanga Parvam",
+      "year": 2026,
+      "director": "Prashanth Neel",
+      "genre": [
+        "Action",
+        "Thriller"
+      ],
+      "status": "pre-production",
+      "expectedBudget": "₹400 Cr",
+      "releaseDate": "2026-12-25",
+      "poster": {
+        "source": "web",
+        "url": "/images/movies/salaar-2.jpg"
+      },
+      "cast": [
+        "Prithviraj Sukumaran",
+        "Shruti Haasan"
+      ],
+      "productionCompany": "Hombale Films",
+      "tmdbId": 1212402
+    },
+    {
+      "id": "kalki-2-2027",
+      "title": "Kalki 2898 AD: Part 2",
+      "year": 2027,
+      "director": "Nag Ashwin",
+      "genre": [
+        "Sci-Fi",
+        "Action",
+        "Mythology"
+      ],
+      "status": "announced",
+      "expectedBudget": "₹600 Cr",
+      "releaseDate": "2027-06-27",
+      "poster": {
+        "source": "web",
+        "url": "/images/movies/kalki-2.jpg"
+      },
+      "cast": [
+        "Deepika Padukone",
+        "Amitabh Bachchan",
+        "Kamal Haasan"
+      ],
+      "productionCompany": "Vyjayanthi Movies",
+      "tmdbId": 1310969
+    },
+    {
+      "id": "fauji-2026",
+      "title": "Fauji",
+      "year": 2026,
+      "director": "Hanu Raghavapudi",
+      "genre": [
+        "Period",
+        "War",
+        "Drama"
+      ],
+      "status": "filming",
+      "expectedBudget": "₹350 Cr",
+      "releaseDate": "2026-08-15",
+      "poster": {
+        "source": "web",
+        "url": "/images/movies/fauji.jpg"
+      },
+      "cast": [
+        "Imanvi"
+      ],
+      "productionCompany": "Mythri Movie Makers",
+      "tmdbId": 1257973
+    }
+  ],
+  "awards": [
+    {
+      "year": 2018,
+      "movie": "Baahubali 2: The Conclusion",
+      "award": "Filmfare Awards South",
+      "category": "Best Actor - Telugu",
+      "status": "Won"
+    },
+    {
+      "year": 2017,
+      "movie": "Baahubali 2: The Conclusion",
+      "award": "SIIMA Awards",
+      "category": "Best Actor - Telugu",
+      "status": "Won"
+    },
+    {
+      "year": 2016,
+      "movie": "Baahubali: The Beginning",
+      "award": "SIIMA Awards",
+      "category": "Best Actor - Telugu",
+      "status": "Won"
+    },
+    {
+      "year": 2013,
+      "movie": "Mirchi",
+      "award": "Nandi Awards",
+      "category": "Special Jury Award",
+      "status": "Won"
+    },
+    {
+      "year": 2006,
+      "movie": "Chatrapathi",
+      "award": "Santosham Film Awards",
+      "category": "Best Actor",
+      "status": "Won"
+    },
+    {
+      "year": 2005,
+      "movie": "Varsham",
+      "award": "CineMAA Awards",
+      "category": "Best Actor",
+      "status": "Nominated"
+    }
+  ],
+  "careerStats": {
+    "totalMovies": 28,
+    "leadRoles": 25,
+    "cameoAppearances": 2,
+    "voiceOverRoles": 2,
+    "hits": 18,
+    "flops": 7,
+    "blockbusters": 6,
+    "averageRating": 6.2,
+    "totalBoxOffice": "₹5000+ Cr",
+    "highestGrossing": "Baahubali 2: The Conclusion (₹1810 Cr)",
+    "currentRemuneration": "₹150 Cr per film",
+    "yearsActive": 23,
+    "debut": "Eeswar (2002)"
+  },
+  "carCollection": [
+    {
+      "brand": "Rolls Royce",
+      "model": "Phantom VIII",
+      "year": 2019,
+      "color": "Black",
+      "estimatedValue": "₹10.50 Cr",
+      "image": "/images/cars/prabhas-rolls-royce.jpg",
+      "source": "Pinkvilla, 2024"
+    },
+    {
+      "brand": "Lamborghini",
+      "model": "Aventador Roadster",
+      "year": 2016,
+      "color": "Orange",
+      "estimatedValue": "₹6 Cr",
+      "image": "/images/cars/prabhas-lamborghini.jpg",
+      "source": "Pinkvilla, 2024"
+    },
+    {
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2020,
+      "color": "White",
+      "estimatedValue": "₹95 Lakh",
+      "image": "/images/cars/prabhas-bmw.jpg",
+      "source": "ParkPlus, 2025"
+    },
+    {
+      "brand": "Range Rover",
+      "model": "Vogue",
+      "year": 2018,
+      "color": "Black",
+      "estimatedValue": "₹3.85 Cr",
+      "image": "/images/cars/prabhas-range-rover.jpg",
+      "source": "ParkPlus, 2025"
+    },
+    {
+      "brand": "Jaguar",
+      "model": "XJL",
+      "year": 2017,
+      "color": "Blue",
+      "estimatedValue": "₹1.11 Cr",
+      "image": "/images/cars/prabhas-jaguar.jpg",
+      "source": "Filmibeat, 2024"
+    }
+  ],
+  "properties": [
+    {
+      "type": "Luxury Residence",
+      "location": "Jubilee Hills, Hyderabad",
+      "estimatedValue": "₹60 Cr",
+      "yearPurchased": 2015,
+      "features": [
+        "8500 sq ft",
+        "Private gym",
+        "Home theater",
+        "Swimming pool"
+      ],
+      "source": "Pinkvilla, 2024"
+    },
+    {
+      "type": "Farmhouse",
+      "location": "Rajoli Village, near Hyderabad",
+      "estimatedValue": "₹15 Cr",
+      "yearPurchased": 2016,
+      "features": [
+        "40 acres",
+        "Resort-style amenities",
+        "Guest houses"
+      ],
+      "source": "India Times, 2024"
+    },
+    {
+      "type": "Apartment",
+      "location": "Banjara Hills, Hyderabad",
+      "estimatedValue": "₹5 Cr",
+      "yearPurchased": 2010,
+      "features": [
+        "Penthouse",
+        "3500 sq ft",
+        "Premium locality"
+      ],
+      "source": "Jumpp Finance, 2025"
+    }
+  ],
+  "netWorth": "₹370 Crore (as of October 2024)",
+  "brandEndorsements": [
+    {
+      "brand": "Mahindra",
+      "category": "Automobiles",
+      "since": 2018,
+      "current": true,
+      "estimatedFee": "₹4 Cr/year"
+    },
+    {
+      "brand": "Gionee",
+      "category": "Mobile Phones",
+      "since": 2015,
+      "current": false,
+      "estimatedFee": "₹2 Cr/year"
+    },
+    {
+      "brand": "Modi Naturals",
+      "category": "FMCG - Edible Oils",
+      "since": 2016,
+      "current": true,
+      "estimatedFee": "₹1.5 Cr/year"
+    }
+  ],
+  "philanthropy": [
+    {
+      "cause": "COVID-19 Relief Fund",
+      "amount": "₹4 Crore",
+      "year": 2020,
+      "description": "Donated ₹3 Cr to PM-CARES Fund and ₹50 Lakh each to AP and Telangana CM Relief Funds",
+      "source": "India Times, 2020"
+    },
+    {
+      "cause": "Kerala Flood Relief",
+      "amount": "₹1 Crore",
+      "year": 2018,
+      "description": "Donated for Kerala flood victims rehabilitation",
+      "source": "News18, 2018"
+    },
+    {
+      "cause": "Chennai Floods Relief",
+      "amount": "₹50 Lakh",
+      "year": 2015,
+      "description": "Contributed to Chennai flood relief efforts",
+      "source": "The Hindu, 2015"
+    }
+  ],
+  "quotes": [
+    {
+      "quote": "I don't act for awards, I act for my audience. Their love is the biggest award for me.",
+      "context": "Interview about Baahubali 2 success at National Film Awards",
+      "source": "Times of India, 2018"
+    },
+    {
+      "quote": "I maintained the Baahubali physique for 5 years straight. It was challenging but worth every effort.",
+      "context": "Speaking about physical transformation for Baahubali franchise",
+      "source": "Film Companion, 2017"
+    },
+    {
+      "quote": "Pan-India cinema is not about language but about emotions that connect with everyone.",
+      "context": "Discussing rise of Pan-Indian cinema at industry event",
+      "source": "Variety India, 2023"
+    },
+    {
+      "quote": "My fans are my strength. I work for them and their happiness drives me.",
+      "context": "Birthday celebration interaction with media",
+      "source": "Pinkvilla, 2024"
+    }
+  ],
+  "recentNews": [
+    {
+      "id": "prabhas-spirit-2025",
+      "title": "Prabhas' Spirit with Sandeep Reddy Vanga to have cliffhanger ending for sequel",
+      "date": "2025-10-22",
+      "source": "Pinkvilla",
+      "link": "https://www.pinkvilla.com/entertainment/south/spirit-sequel-prabhas-1397889",
+      "thumbnail": "/images/news/prabhas-spirit-2025.jpg",
+      "excerpt": "Sandeep Reddy Vanga planning cop universe with Spirit sequel"
+    },
+    {
+      "id": "prabhas-fauji-title-2025",
+      "title": "Prabhas and Hanu Raghavapudi's film officially titled 'Fauji'",
+      "date": "2025-10-21",
+      "source": "Republic World",
+      "link": "https://www.republicworld.com/entertainment/telugu-cinema/prabhas-hanu-film-title-fauji",
+      "thumbnail": "/images/news/prabhas-fauji-2025.jpg",
+      "excerpt": "Period war drama set for August 2026 release"
+    },
+    {
+      "id": "prabhas-birthday-2025",
+      "title": "Prabhas' 46th Birthday: Spirit, Raja Saab and Kalki 2 updates revealed",
+      "date": "2025-10-22",
+      "source": "ETV Bharat",
+      "link": "https://www.etvbharat.com/en/entertainment/prabhas-birthday-upcoming-films",
+      "thumbnail": "/images/news/prabhas-birthday-2025.jpg",
+      "excerpt": "Rebel Star celebrates 46th birthday with project updates"
+    }
+  ],
+  "trivia": [
+    "First South Indian actor to get wax statue at Madame Tussauds Bangkok (2019)",
+    "Maintained same physique for 5 consecutive years during Baahubali filming",
+    "Co-owns production house UV Creations",
+    "Known for feeding entire film crews elaborate meals during shoots",
+    "Never attended his own film premieres or award functions",
+    "Rejected 15+ scripts before signing Baahubali",
+    "First Indian actor to have six films with ₹100Cr+ worldwide openings",
+    "Baahubali 2 is the first Indian film to gross ₹1000+ Cr worldwide",
+    "Nephew of legendary actor Krishnam Raju (Rebel Star)",
+    "Turned down many Bollywood offers to focus on Telugu cinema",
+    "Owns 84-acre farmhouse near Hyderabad",
+    "Has cameo in Bollywood film Action Jackson (2014)",
+    "Dubbed voice for Manchu Vishnu in Denikaina Ready (2012)"
+  ],
+  "voiceProfile": {
+    "toneType": "Deep and commanding baritone with emotional range",
+    "languagesSpoken": [
+      "Telugu (Native)",
+      "English (Fluent)",
+      "Hindi (Basic)",
+      "Tamil (Basic)"
+    ],
+    "dubbingArtists": {
+      "hindi": "Sharad Kelkar (Baahubali series, Saaho, Adipurush, Salaar)",
+      "tamil": "Sathya Prakash (Baahubali series)"
+    },
+    "signature": "Intense dialogue delivery with powerful modulation"
+  },
+  "physicalTransformations": [
+    {
+      "movie": "Baahubali: The Beginning",
+      "transformation": "Gained 25kg muscle mass, reached 110kg body weight",
+      "duration": "18 months",
+      "trainer": "Laxman Reddy",
+      "diet": "High-protein diet with 6000 calories per day"
+    },
+    {
+      "movie": "Baahubali 2: The Conclusion",
+      "transformation": "Maintained muscular physique at 110kg",
+      "duration": "30 months",
+      "trainer": "Laxman Reddy",
+      "diet": "Strict regimen with no cheat days"
+    },
+    {
+      "movie": "Saaho",
+      "transformation": "Leaner action hero look at 105kg",
+      "duration": "12 months",
+      "trainer": "Laxman Reddy",
+      "diet": "Balanced protein and carbs for agility"
+    }
+  ],
+  "genreStrength": {
+    "action": 10,
+    "romance": 7,
+    "comedy": 6,
+    "drama": 9,
+    "period": 10,
+    "mythology": 9,
+    "thriller": 8
+  },
+  "collaborations": {
+    "directors": {
+      "S. S. Rajamouli": 3,
+      "Prashanth Neel": 2,
+      "Puri Jagannadh": 2,
+      "Koratala Siva": 1
+    },
+    "musicDirectors": {
+      "Devi Sri Prasad": 6,
+      "M. M. Keeravani": 3,
+      "Mani Sharma": 7
+    },
+    "heroines": {
+      "Anushka Shetty": 5,
+      "Trisha Krishnan": 3,
+      "Tamannaah Bhatia": 3,
+      "Kajal Aggarwal": 2
+    }
+  },
+  "meta": {
+    "lastUpdated": "2025-10-24T15:02:00Z",
+    "dataVersion": "8.0",
+    "completeness": 99,
+    "verifiedBy": "TFIverse Team",
+    "sources": [
+      "Wikipedia",
+      "TMDb",
+      "Instagram",
+      "Pinkvilla",
+      "India Times",
+      "ETV Bharat",
+      "Republic World",
+      "Box Office India",
+      "Jumpp Finance",
+      "ParkPlus"
+    ]
+  }
+}

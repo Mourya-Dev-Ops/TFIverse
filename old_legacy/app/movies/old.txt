@@ -1,0 +1,22 @@
+import { db } from '@/lib/db';
+import { heroes } from '@/lib/schema';
+import MoviesClient from './page-client';
+
+export const metadata = {
+  title: 'Movies - TFiverse',
+  description: 'Explore Telugu cinema movies',
+};
+
+export default async function MoviesPage() {
+  // ✅ Fetch all heroes from DATABASE
+  const allHeroes = await db.select().from(heroes);
+  
+  // Extract movies from heroes data
+  const heroesWithMovies = allHeroes.map(hero => ({
+    slug: hero.slug,
+    name: (hero.data as any).name,
+    data: hero.data
+  }));
+
+  return <MoviesClient heroesData={heroesWithMovies} />;
+}

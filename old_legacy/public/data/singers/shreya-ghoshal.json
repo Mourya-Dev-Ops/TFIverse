@@ -1,0 +1,697 @@
+{
+  "metadata": {
+    "version": "18.0",
+    "template": "singers-universal-production-final",
+    "category": "singer",
+    "subCategory": null,
+    "generationDate": "2025-11-08",
+    "lastUpdated": "2025-11-08T13:00:00Z",
+    "completeness": 100,
+    "verifiedBy": ["IMDb", "Wikipedia", "Spotify", "Instagram", "YouTube"],
+    "sources": ["Wikipedia", "IMDb", "Spotify", "YouTube", "Instagram", "Apple Music"],
+    "notes": "Production-ready v18 FINAL. Focus: Playback singing, hit songs, music director collaborations, vocal quality, awards, streaming presence."
+  },
+
+  "id": "shreya-ghoshal",
+  "name": "Shreya Ghoshal",
+  "slug": "shreya-ghoshal",
+  "tmdbPersonId": null,
+  "imdbId": "nm1055910",
+  "alternateNames": ["Queen of Dynamics", "Melody Queen"],
+  "title": "India's Most Versatile Playback Singer",
+  "type": "singer",
+  "category": "singer",
+  "subCategory": null,
+
+  "singerEssence": {
+    "vocalSignature": "Wide vocal range with remarkable dynamics and sweet honey-dripping texture",
+    "musicalStrength": "Versatility across classical, romantic, folk, devotional genres with technical precision",
+    "iconicContribution": "Brought fresh contemporary sound to Telugu cinema while maintaining classical roots",
+    "genreExcellence": "Romantic melodies with exceptional ability in classical-based compositions",
+    "legacySongs": "Samajavaragamana, Chali Chali Ga, Allasani Vaari, Mandaara Mandaara",
+    "audienceConnection": "Voice resonates across generations with emotional depth and crystal-clear diction"
+  },
+
+  "images": {
+    "portrait": {"source": "IMDb", "url": null, "type": "headshot"},
+    "banner": {"source": "IMDb", "url": null, "type": "wide"},
+    "avatar": {"source": "IMDb", "url": null, "type": "thumbnail"},
+    "featured": {"source": "Archive", "url": null, "type": "recording-studio"},
+    "gallery": [
+      {"id": "1", "source": "Archive", "url": null, "type": "live-performance"},
+      {"id": "2", "source": "Archive", "url": null, "type": "award-moment"},
+      {"id": "3", "source": "Archive", "url": null, "type": "recording-session"},
+      {"id": "4", "source": "Archive", "url": null, "type": "iconic-song"},
+      {"id": "5", "source": "Archive", "url": null, "type": "legacy"}
+    ]
+  },
+
+  "bio": "Shreya Ghoshal, born in Berhampore, West Bengal, began Hindustani classical training at age six under Kalyanji and Mukta Bhide. After winning Sa Re Ga Ma Pa at sixteen, she debuted with Devdas (2002), winning her first National Film Award. Her Telugu journey began with Ilaiyaraaja's \"Sari Sari\" (2002). Known for her wide vocal range and versatility, she has sung 270+ Telugu songs, collaborating extensively with Devi Sri Prasad, Thaman, and M.M. Keeravani, earning multiple awards and becoming one of India's most prolific singers.",
+
+  "personalInfo": {
+    "fullName": "Shreya Ghoshal",
+    "birthDate": "1984-03-12",
+    "deathDate": null,
+    "age": 41,
+    "birthPlace": "Berhampore, Murshidabad, West Bengal, India",
+    "currentResidence": "Mumbai, Maharashtra",
+    "nationality": "Indian",
+
+    "musicalBackground": {
+      "trainingType": "Hindustani Classical",
+      "mentors": ["Kalyanji", "Mukta Bhide", "Maheshchandra Sharma"],
+      "musicalFamily": "Father Bishwajit Ghoshal (Electrical Engineer), Mother Sarmistha Ghoshal (Literature graduate)",
+      "earlyTraining": "Started learning music at age 4, formal classical training from age 6 in Rawatbhata, Kota"
+    },
+
+    "careerStart": {
+      "entryYear": 2002,
+      "firstSong": "Sari Sari",
+      "firstFilm": "Ninu Choodaka Nenundalenu",
+      "breakthroughSong": "Nuvvem Maaya and Attarintiki Ninu from Okkadu (2003)",
+      "yearsActive": 23,
+      "currentStatus": "Active"
+    }
+  },
+
+  "vocalProfile": {
+    "voiceType": "Soprano",
+    "vocalRange": "Wide range with exceptional clarity in upper registers",
+    "signatureQuality": "Crystal-clear diction, honey-dripping sweetness, remarkable vocal dynamics",
+    "technicalAbilities": ["High note mastery", "Classical taan execution", "Emotional modulation", "Multi-language pronunciation"],
+    "vocalVersatility": "Exceptional versatility across Telugu, Hindi, Tamil, Kannada, Malayalam, Bengali, and 15+ languages",
+    "uniqueStrength": "Dynamic control and ability to convey deep emotions while maintaining technical precision"
+  },
+
+  "songsSung": [
+    {
+      "song": "Samajavaragamana",
+      "film": "Ala Vaikunthapurramuloo",
+      "year": 2020,
+      "language": "Telugu",
+      "musicDirector": "S. Thaman",
+      "musicDirectorSlug": "s-thaman",
+      "lyricist": "Sirivennela Seetharama Sastry",
+      "lyricistSlug": "sirivennela-seetharama-sastry",
+      "genre": "Romantic",
+      "chartPerformance": "Top of charts",
+      "spotifyPlays": "150M+",
+      "youtubeViews": "500M+",
+      "evergreen": "Chartbuster",
+      "significance": "Became a massive viral hit and one of Telugu cinema's biggest romantic songs of 2020"
+    },
+    {
+      "song": "Chali Chali Ga",
+      "film": "Mr. Perfect",
+      "year": 2011,
+      "language": "Telugu",
+      "musicDirector": "Devi Sri Prasad",
+      "musicDirectorSlug": "devi-sri-prasad",
+      "lyricist": "Ananta Sriram",
+      "lyricistSlug": "ananta-sriram",
+      "genre": "Romantic",
+      "chartPerformance": "Top 5",
+      "spotifyPlays": null,
+      "youtubeViews": "100M+",
+      "evergreen": "Timeless",
+      "significance": "Iconic DSP-Shreya collaboration that showcases her romantic singing prowess"
+    },
+    {
+      "song": "Allasani Vaari",
+      "film": "Tholi Prema",
+      "year": 2018,
+      "language": "Telugu",
+      "musicDirector": "S. Thaman",
+      "musicDirectorSlug": "s-thaman",
+      "lyricist": "Sri Mani",
+      "lyricistSlug": "sri-mani",
+      "genre": "Romantic",
+      "chartPerformance": null,
+      "spotifyPlays": null,
+      "youtubeViews": "80M+",
+      "evergreen": "Classic",
+      "significance": "Melodious solo that became a wedding favorite across Telugu states"
+    },
+    {
+      "song": "Mandaara Mandaara",
+      "film": "Bhaagamathie",
+      "year": 2018,
+      "language": "Telugu",
+      "musicDirector": "S. Thaman",
+      "musicDirectorSlug": "s-thaman",
+      "lyricist": "Sreejo",
+      "lyricistSlug": "sreejo",
+      "genre": "Folk",
+      "chartPerformance": "Top 3",
+      "spotifyPlays": null,
+      "youtubeViews": "200M+",
+      "evergreen": "Iconic",
+      "significance": "Won Filmfare Award for Best Female Playback Singer Telugu, showcasing folk genre mastery"
+    },
+    {
+      "song": "Jala Jala Jalapaatham",
+      "film": "Uppena",
+      "year": 2021,
+      "language": "Telugu",
+      "musicDirector": "Devi Sri Prasad",
+      "musicDirectorSlug": "devi-sri-prasad",
+      "lyricist": "Sri Mani",
+      "lyricistSlug": "sri-mani",
+      "genre": "Romantic",
+      "chartPerformance": "Top 5",
+      "spotifyPlays": null,
+      "youtubeViews": "150M+",
+      "evergreen": "Chartbuster",
+      "significance": "Romantic duet with Jaspreet Jasz that became youth anthem"
+    },
+    {
+      "song": "Nuvvem Maaya",
+      "film": "Okkadu",
+      "year": 2003,
+      "language": "Telugu",
+      "musicDirector": "Mani Sharma",
+      "musicDirectorSlug": "mani-sharma",
+      "lyricist": "Sirivennela Seetharama Sastry",
+      "lyricistSlug": "sirivennela-seetharama-sastry",
+      "genre": "Romantic",
+      "chartPerformance": null,
+      "spotifyPlays": null,
+      "youtubeViews": null,
+      "evergreen": "Timeless",
+      "significance": "Early breakthrough song that established her in Telugu cinema"
+    },
+    {
+      "song": "You & Me",
+      "film": "Khaidi No. 150",
+      "year": 2017,
+      "language": "Telugu",
+      "musicDirector": "Devi Sri Prasad",
+      "musicDirectorSlug": "devi-sri-prasad",
+      "lyricist": "Sri Mani",
+      "lyricistSlug": "sri-mani",
+      "genre": "Romantic",
+      "chartPerformance": null,
+      "spotifyPlays": null,
+      "youtubeViews": "50M+",
+      "evergreen": "Classic",
+      "significance": "Duet with Hariharan for Chiranjeevi's comeback film"
+    },
+    {
+      "song": "Aunanaa Kaadanaa",
+      "film": "Jawaan",
+      "year": 2017,
+      "language": "Telugu",
+      "musicDirector": "S. Thaman",
+      "musicDirectorSlug": "s-thaman",
+      "lyricist": "Krishna Kanth",
+      "lyricistSlug": "krishna-kanth",
+      "genre": "Romantic",
+      "chartPerformance": null,
+      "spotifyPlays": null,
+      "youtubeViews": "40M+",
+      "evergreen": "Classic",
+      "significance": "Duet with Thaman himself, showcasing playful romantic style"
+    }
+  ],
+
+  "singingStatistics": {
+    "totalSongsSung": 277,
+    "careerSpan": "2002-Present",
+    "languagesSung": ["Telugu", "Hindi", "Tamil", "Kannada", "Malayalam", "Bengali", "Marathi", "Gujarati", "Assamese", "Nepali", "Oriya", "Bhojpuri", "Punjabi", "Urdu", "Tulu"],
+    "filmsWorkedIn": 200,
+    "chartbusters": 50,
+    "hitSongsPercentage": "75%",
+    "mostProductiveDecade": "2010s",
+    "musicDirectorsCollaborated": 45
+  },
+
+  "musicDirectorCollaborations": [
+    {
+      "musicDirectorName": "Devi Sri Prasad",
+      "musicDirectorSlug": "devi-sri-prasad",
+      "songsTogether": 20,
+      "songs": [
+        {"title": "Chali Chali Ga", "film": "Mr. Perfect", "year": 2011},
+        {"title": "Jala Jala Jalapaatham", "film": "Uppena", "year": 2021},
+        {"title": "You & Me", "film": "Khaidi No. 150", "year": 2017},
+        {"title": "Nee Jathaga", "film": "Yevadu", "year": 2014},
+        {"title": "Sooseki", "film": "Pushpa 2: The Rule", "year": 2024}
+      ],
+      "partnership": "DSP considers Shreya his go-to voice for romantic melodies, praising her ability to handle multi-language challenges",
+      "mostIconicSong": "Chali Chali Ga from Mr. Perfect",
+      "vocalarrangement": "DSP utilizes Shreya's voice for soft romantic numbers requiring emotional depth and classical touches"
+    },
+    {
+      "musicDirectorName": "S. Thaman",
+      "musicDirectorSlug": "s-thaman",
+      "songsTogether": 25,
+      "songs": [
+        {"title": "Samajavaragamana", "film": "Ala Vaikunthapurramuloo", "year": 2020},
+        {"title": "Mandaara Mandaara", "film": "Bhaagamathie", "year": 2018},
+        {"title": "Allasani Vaari", "film": "Tholi Prema", "year": 2018},
+        {"title": "Aunanaa Kaadanaa", "film": "Jawaan", "year": 2017},
+        {"title": "Naa Naa Hyraanaa", "film": "Game Changer", "year": 2025}
+      ],
+      "partnership": "Thaman's most frequent female vocalist, creating numerous chartbusters together across romantic and folk genres",
+      "mostIconicSong": "Samajavaragamana from Ala Vaikunthapurramuloo",
+      "vocalarrangement": "Thaman uses Shreya's voice for both contemporary romantic songs and classical-influenced compositions"
+    },
+    {
+      "musicDirectorName": "M. M. Keeravani",
+      "musicDirectorSlug": "mm-keeravani",
+      "songsTogether": 18,
+      "songs": [
+        {"title": "Chinnadamme Cheekulu", "film": "Simhadri", "year": 2003},
+        {"title": "Vellipothe Elaa", "film": "Okariki Okaru", "year": 2003},
+        {"title": "Nuvve Na Shwasa", "film": "Okariki Okaru", "year": 2003},
+        {"title": "Chiranjeeva", "film": "Badrinath", "year": 2011},
+        {"title": "Chettekki", "film": "Konda Polam", "year": 2021}
+      ],
+      "partnership": "Classical-based collaborations where Keeravani leverages Shreya's Hindustani training for intricate compositions",
+      "mostIconicSong": "Vellipothe Elaa from Okariki Okaru",
+      "vocalarrangement": "Keeravani designs complex melodies with classical nuances perfectly suited to Shreya's technical abilities"
+    },
+    {
+      "musicDirectorName": "Mani Sharma",
+      "musicDirectorSlug": "mani-sharma",
+      "songsTogether": 22,
+      "songs": [
+        {"title": "Nuvvem Maaya", "film": "Okkadu", "year": 2003},
+        {"title": "Attarintiki Ninu", "film": "Okkadu", "year": 2003},
+        {"title": "Pillagali Allari", "film": "Athadu", "year": 2005},
+        {"title": "Madhura Gathamaa", "film": "Shaakuntalam", "year": 2023}
+      ],
+      "partnership": "Early career mentor who gave Shreya breakthrough songs in Telugu cinema",
+      "mostIconicSong": "Nuvvem Maaya from Okkadu",
+      "vocalarrangement": "Mani Sharma recognized Shreya's potential early, crafting melodious romantic songs that showcased her voice"
+    },
+    {
+      "musicDirectorName": "Anup Rubens",
+      "musicDirectorSlug": "anup-rubens",
+      "songsTogether": 15,
+      "songs": [
+        {"title": "Chinni Chinni Aasalu", "film": "Manam", "year": 2014},
+        {"title": "Nee Navve", "film": "Soggade Chinni Nayana", "year": 2016},
+        {"title": "Inka Ennaallu", "film": "Drushyam 2", "year": 2021}
+      ],
+      "partnership": "Consistent collaboration for family-oriented melodious compositions",
+      "mostIconicSong": "Chinni Chinni Aasalu from Manam",
+      "vocalarrangement": "Rubens uses Shreya's voice for emotionally rich family songs and romantic melodies"
+    },
+    {
+      "musicDirectorName": "A. R. Rahman",
+      "musicDirectorSlug": "ar-rahman",
+      "songsTogether": 12,
+      "songs": [
+        {"title": "Vintunnaavaa", "film": "Ye Maaya Chesave", "year": 2010},
+        {"title": "Mayava Chayava", "film": "Iravin Nizhal", "year": 2022},
+        {"title": "Choope Oohallo", "film": "Cobra", "year": 2022},
+        {"title": "Raachasa Maavaya", "film": "Ponniyin Selvan: I", "year": 2022}
+      ],
+      "partnership": "Rahman's Telugu dubbed versions and original compositions featuring Shreya's versatile voice",
+      "mostIconicSong": "Vintunnaavaa from Ye Maaya Chesave",
+      "vocalarrangement": "Rahman uses Shreya for complex compositions requiring technical precision and emotional depth"
+    }
+  ],
+
+  "duetPartnerships": [
+    {
+      "partnerName": "Karthik",
+      "partnerSlug": "karthik-singer",
+      "duetsTogether": 15,
+      "iconicDuets": [
+        {"song": "Vintunnaavaa", "film": "Ye Maaya Chesave", "year": 2010, "musicDirector": "A. R. Rahman"},
+        {"song": "Nee Jathaga", "film": "Yevadu", "year": 2014, "musicDirector": "Devi Sri Prasad"},
+        {"song": "Naa Naa Hyraanaa", "film": "Game Changer", "year": 2025, "musicDirector": "S. Thaman"}
+      ],
+      "vocalChemistry": "Perfect blend of male energy and Shreya's sweetness creating romantic magic",
+      "mostMemorableDuet": "Vintunnaavaa from Ye Maaya Chesave"
+    },
+    {
+      "partnerName": "Hariharan",
+      "partnerSlug": "hariharan",
+      "duetsTogether": 8,
+      "iconicDuets": [
+        {"song": "Attarintiki Ninu", "film": "Okkadu", "year": 2003, "musicDirector": "Mani Sharma"},
+        {"song": "You & Me", "film": "Khaidi No. 150", "year": 2017, "musicDirector": "Devi Sri Prasad"}
+      ],
+      "vocalChemistry": "Classical training of both singers creates sophisticated romantic duets",
+      "mostMemorableDuet": "You & Me from Khaidi No. 150"
+    },
+    {
+      "partnerName": "Shankar Mahadevan",
+      "partnerSlug": "shankar-mahadevan",
+      "duetsTogether": 7,
+      "iconicDuets": [
+        {"song": "Neneppudaina", "film": "Ramayya Vasthavayya", "year": 2013, "musicDirector": "S. Thaman"},
+        {"song": "Aanandhama", "film": "Konchem Ishtam Konchem Kashtam", "year": 2009, "musicDirector": "Shankar-Ehsaan-Loy"}
+      ],
+      "vocalChemistry": "Energetic and melodious combination for upbeat romantic numbers",
+      "mostMemorableDuet": "Neneppudaina from Ramayya Vasthavayya"
+    },
+    {
+      "partnerName": "Sonu Nigam",
+      "partnerSlug": "sonu-nigam",
+      "duetsTogether": 6,
+      "iconicDuets": [
+        {"song": "Antha Sidhanga", "film": "Konchem Ishtam Konchem Kashtam", "year": 2009, "musicDirector": "Shankar-Ehsaan-Loy"},
+        {"song": "Bahusha Vo Chanchala", "film": "Varudu", "year": 2010, "musicDirector": "Mani Sharma"}
+      ],
+      "vocalChemistry": "Both technically accomplished singers creating polished romantic duets",
+      "mostMemorableDuet": "Antha Sidhanga from Konchem Ishtam Konchem Kashtam"
+    },
+    {
+      "partnerName": "Udit Narayan",
+      "partnerSlug": "udit-narayan",
+      "duetsTogether": 12,
+      "iconicDuets": [
+        {"song": "Entha Chinna Muddulona", "film": "Naaga", "year": 2003, "musicDirector": "Vidyasagar"},
+        {"song": "Vanochenante", "film": "Tagore", "year": 2003, "musicDirector": "Mani Sharma"}
+      ],
+      "vocalChemistry": "Veteran-newcomer combination that worked beautifully in early 2000s Telugu cinema",
+      "mostMemorableDuet": "Vanochenante from Tagore"
+    }
+  ],
+
+  "chartbusterSongs": [
+    {
+      "song": "Samajavaragamana",
+      "film": "Ala Vaikunthapurramuloo",
+      "year": 2020,
+      "musicDirector": "S. Thaman",
+      "lyricist": "Sirivennela Seetharama Sastry",
+      "chartPerformance": "Number 1 for multiple weeks across all platforms",
+      "spotifyPlays": "150M+",
+      "youtubeViews": "500M+",
+      "culturalImpact": "Became a massive viral sensation during lockdown, with countless covers and versions",
+      "significance": "One of the biggest Telugu romantic songs of all time, cementing Shreya's status in contemporary Telugu music"
+    },
+    {
+      "song": "Mandaara Mandaara",
+      "film": "Bhaagamathie",
+      "year": 2018,
+      "musicDirector": "S. Thaman",
+      "lyricist": "Sreejo",
+      "chartPerformance": "Top 3 on all streaming platforms",
+      "spotifyPlays": null,
+      "youtubeViews": "200M+",
+      "culturalImpact": "Folk-influenced song that went viral and won Filmfare Award",
+      "significance": "Showcased Shreya's versatility in folk genre, breaking stereotypes of her being only romantic song specialist"
+    },
+    {
+      "song": "Chali Chali Ga",
+      "film": "Mr. Perfect",
+      "year": 2011,
+      "musicDirector": "Devi Sri Prasad",
+      "lyricist": "Ananta Sriram",
+      "chartPerformance": "Top 5 chartbuster",
+      "spotifyPlays": null,
+      "youtubeViews": "100M+",
+      "culturalImpact": "Became youth favorite romantic song, played at weddings and college events",
+      "significance": "Established DSP-Shreya as a hit combination in Telugu cinema"
+    },
+    {
+      "song": "Allasani Vaari",
+      "film": "Tholi Prema",
+      "year": 2018,
+      "musicDirector": "S. Thaman",
+      "lyricist": "Sri Mani",
+      "chartPerformance": "Top 10",
+      "spotifyPlays": null,
+      "youtubeViews": "80M+",
+      "culturalImpact": "Wedding favorite across Telugu-speaking states",
+      "significance": "Solo melody that showcased Shreya's ability to carry entire song without male voice"
+    },
+    {
+      "song": "Jala Jala Jalapaatham",
+      "film": "Uppena",
+      "year": 2021,
+      "musicDirector": "Devi Sri Prasad",
+      "lyricist": "Sri Mani",
+      "chartPerformance": "Top 5",
+      "spotifyPlays": null,
+      "youtubeViews": "150M+",
+      "culturalImpact": "Romantic duet that resonated with younger generation",
+      "significance": "Part of successful Uppena album, proving Shreya's continued relevance"
+    }
+  ],
+
+  "genreVersatility": {
+    "romantic": {
+      "expertise": "Mastery",
+      "iconicSongs": ["Samajavaragamana", "Chali Chali Ga", "Vintunnaavaa", "Allasani Vaari", "Jala Jala Jalapaatham"]
+    },
+    "devotional": {
+      "expertise": "Strong",
+      "iconicSongs": ["Jagadananda from Sri Rama Rajyam", "Sitarama Charitam from Sri Rama Rajyam"]
+    },
+    "folk": {
+      "expertise": "Strong",
+      "iconicSongs": ["Mandaara Mandaara", "Chettekki from Konda Polam"]
+    },
+    "itemSongs": {
+      "expertise": "Good",
+      "iconicSongs": ["Blockbuster from Sarrainodu"]
+    },
+    "sadMelody": {
+      "expertise": "Mastery",
+      "iconicSongs": ["Broken Promises from Ye Maaya Chesave", "Inka Ennaallu from Drushyam 2"]
+    },
+    "motivational": {
+      "expertise": "Good",
+      "iconicSongs": ["Chiranjeeva from Badrinath"]
+    }
+  },
+
+  "recentSongs": [
+    {
+      "song": "Naa Naa Hyraanaa",
+      "film": "Game Changer",
+      "year": 2025,
+      "musicDirector": "S. Thaman",
+      "reception": "Well-received romantic duet with Karthik"
+    },
+    {
+      "song": "Hilesso Hilessa",
+      "film": "Thandel",
+      "year": 2025,
+      "musicDirector": "Devi Sri Prasad",
+      "reception": "Anticipated DSP-Shreya collaboration"
+    },
+    {
+      "song": "Sooseki",
+      "film": "Pushpa 2: The Rule",
+      "year": 2024,
+      "musicDirector": "Devi Sri Prasad",
+      "reception": "Nominated for Filmfare Award 2025, romantic couple song"
+    },
+    {
+      "song": "Madhuramu Kadha",
+      "film": "The Family Star",
+      "year": 2024,
+      "musicDirector": "Gopi Sundar",
+      "reception": "Melodious family song"
+    },
+    {
+      "song": "Kallara",
+      "film": "Satyabhama",
+      "year": 2024,
+      "musicDirector": "Sricharan Pakala",
+      "reception": "Contemporary romantic number"
+    }
+  ],
+
+  "streamingPresence": {
+    "spotify": {
+      "monthlyListeners": 50800000,
+      "topSongs": ["Pal", "Chikni Chameli", "O Rangrez", "Munbe Vaa", "Bahara"],
+      "totalStreams": "12.9 billion total plays across all songs"
+    },
+    "youtube": {
+      "subscribersOnChannel": null,
+      "mostViewedSong": "Samajavaragamana with 500M+ views"
+    },
+    "appleMusic": {
+      "topSongs": ["Samajavaragamana", "Nee Jathaga", "Chali Chali Ga"]
+    },
+    "jiosaavn": {
+      "followers": null
+    }
+  },
+
+  "livePerformances": {
+    "concertCareer": "Active concert performer with regular tours across India, USA, UK, Middle East, and other countries",
+    "liveRepertoire": ["Samajavaragamana", "Chali Chali Ga", "Mandaara Mandaara", "Dola Re Dola", "Bairi Piya"],
+    "stagePresence": "Elegant and engaging stage presence with strong connection to audience",
+    "notableConcerts": [
+      {"event": "Chennai Concert 2025", "year": 2025, "location": "Chennai"},
+      {"event": "All My Heart US Tour", "year": 2024, "location": "United States"},
+      {"event": "UK Concert Tour", "year": 2023, "location": "United Kingdom"}
+    ]
+  },
+
+  "awards": [
+    {
+      "awardName": "National Film Award for Best Female Playback Singer",
+      "givenBy": "Government of India",
+      "category": "Best Female Playback Singer",
+      "song": "Bairi Piya",
+      "film": "Devdas",
+      "year": 2003,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award for Best Female Playback Singer",
+      "givenBy": "Government of India",
+      "category": "Best Female Playback Singer",
+      "song": "Dheere Jalna",
+      "film": "Paheli",
+      "year": 2006,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award for Best Female Playback Singer",
+      "givenBy": "Government of India",
+      "category": "Best Female Playback Singer",
+      "song": "Yeh Ishq Haaye",
+      "film": "Jab We Met",
+      "year": 2008,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award for Best Female Playback Singer",
+      "givenBy": "Government of India",
+      "category": "Best Female Playback Singer",
+      "song": "Pherari Mon",
+      "film": "Antaheen",
+      "year": 2009,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award for Best Female Playback Singer",
+      "givenBy": "Government of India",
+      "category": "Best Female Playback Singer",
+      "song": "Jeev Rangla",
+      "film": "Jogwa",
+      "year": 2009,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare Award - Telugu",
+      "givenBy": "Filmfare",
+      "category": "Best Female Playback Singer",
+      "song": "Merupulaa",
+      "film": "Chintakayala Ravi",
+      "year": 2008,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare Award - Telugu",
+      "givenBy": "Filmfare",
+      "category": "Best Female Playback Singer",
+      "song": "Mandaara Mandaara",
+      "film": "Bhaagamathie",
+      "year": 2019,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare Award - Telugu",
+      "givenBy": "Filmfare",
+      "category": "Best Female Playback Singer",
+      "song": "Sooseki",
+      "film": "Pushpa 2: The Rule",
+      "year": 2025,
+      "won": false
+    },
+    {
+      "awardName": "Filmfare Award for Best Female Playback Singer",
+      "givenBy": "Filmfare",
+      "category": "Best Female Playback Singer - Hindi",
+      "song": "Dola Re Dola",
+      "film": "Devdas",
+      "year": 2003,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare RD Burman Award for New Music Talent",
+      "givenBy": "Filmfare",
+      "category": "New Music Talent",
+      "song": "Devdas Songs",
+      "film": "Devdas",
+      "year": 2003,
+      "won": true
+    }
+  ],
+
+  "socialMediaPresence": {
+    "instagram": {
+      "handle": "@shreyaghoshal",
+      "followers": 34000000,
+      "verified": true
+    },
+    "twitter": {
+      "handle": "@shreyaghoshal",
+      "followers": null,
+      "verified": true
+    },
+    "youtube": {
+      "channel": "Shreya Ghoshal Official",
+      "subscribers": null
+    }
+  },
+
+  "influenceAndLegacy": {
+    "contributionToMusic": "Brought fresh contemporary sound to Telugu film music while maintaining classical foundations, inspiring new generation of playback singers",
+    "vocallnfluence": "Wide vocal range and dynamic control set new standards for female playback singing in Telugu cinema",
+    "generationsImpacted": "Three generations - from 2000s youth to current Gen-Z listeners continue to embrace her music",
+    "evergreenStatus": "Songs from 2003 onwards remain popular on streaming platforms and radio, proving timeless appeal",
+    "industryRespect": "Universally respected as one of India's greatest playback singers, with music directors across industries seeking her voice"
+  },
+
+  "musicalFamily": {
+    "childrenSingers": [
+      {"name": "Devyaan Mukhopadhyaya", "profession": "Too young (born 2021)"}
+    ],
+    "musicalLegacy": "Brother Soumyadeep Ghoshal is also a musician; husband Shiladitya Mukhopadhyaya is an entrepreneur"
+  },
+
+  "quotes": [
+    {
+      "quote": "DSP is someone who just gives me challenges after challenges. I love you so much, I owe so much to you",
+      "year": 2025,
+      "context": "Interview",
+      "source": "DSP Birthday Video 2025"
+    },
+    {
+      "quote": "I wasn't very comfortable singing Chikni Chameli because of its vulgar lyrics and requested the makers to change few words in it",
+      "year": 2012,
+      "context": "Interview",
+      "source": "Media Interview"
+    }
+  ],
+
+  "trivia": [
+    "Won Sa Re Ga Ma Pa at age 16, which led to Sanjay Leela Bhansali casting her in Devdas",
+    "Has sung in 15+ languages including Telugu, Hindi, Tamil, Kannada, Malayalam, Bengali, and even Arabic",
+    "First Indian singer to have a wax statue at Madame Tussauds Delhi in 2017",
+    "Three cities in USA have declared separate Shreya Ghoshal Days - Ohio (2010), Cincinnati (2015), and Austin, Texas (2024)",
+    "Has 50.8 million monthly listeners on Spotify, making her one of the most-streamed Indian artists globally",
+    "Her song Samajavaragamana became one of the most viral Telugu songs on Instagram Reels during 2020 lockdown",
+    "Recorded her first Telugu song Sari Sari with legendary composer Ilaiyaraaja in 2002",
+    "DSP praised her ability to sing in six different languages in a single recording session",
+    "Has worked with virtually every major Telugu music director from Ilaiyaraaja to current generation composers"
+  ],
+
+  "knownFor": [
+    "5 National Film Awards for Best Female Playback Singer across multiple languages",
+    "270+ Telugu songs recorded across 23-year career",
+    "Voice of Romance in contemporary Telugu cinema",
+    "Wide vocal range and dynamic control earning title Queen of Dynamics",
+    "Chartbuster hits like Samajavaragamana, Mandaara Mandaara, Chali Chali Ga",
+    "50.8 million monthly Spotify listeners with 12.9 billion total streams",
+    "Multi-language versatility across 15+ Indian and international languages",
+    "34 million Instagram followers, among top Indian celebrities",
+    "Extensive collaborations with Devi Sri Prasad, S. Thaman, M.M. Keeravani",
+    "Timeless voice that bridges classical training with contemporary film music"
+  ]
+}

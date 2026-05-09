@@ -1,0 +1,918 @@
+{
+  "metadata": {
+    "version": "18.0",
+    "template": "editors-universal-production-final",
+    "category": "editor",
+    "subCategory": null,
+    "generationDate": "2025-11-09",
+    "lastUpdated": "2025-11-09T15:10:00Z",
+    "completeness": 100,
+    "verifiedBy": ["IMDb", "Wikipedia", "Film Credits", "Industry Sources"],
+    "sources": ["IMDb", "Wikipedia", "Film Credits", "Awards Records", "National Film Archives", "Industry Publications"],
+    "notes": "Production-ready v18 FINAL. Record-holder with 9 National Film Awards (7 for Best Editing). Over 600 films edited across 17 languages in 35+ year career."
+  },
+
+  "id": "a-sreekar-prasad",
+  "name": "A. Sreekar Prasad",
+  "slug": "a-sreekar-prasad",
+  "tmdbPersonId": null,
+  "imdbId": "nm0696456",
+  "alternateNames": ["Akkineni Sreekar Prasad", "Sreekar Prasad"],
+  "title": "Master Editor & 9-Time National Award Winner",
+  "type": "editor",
+  "category": "editor",
+  "subCategory": null,
+
+  "editingEssence": {
+    "editingSignature": "Invisible editing style emphasizing seamless narrative flow, where audiences remain unaware of cuts while experiencing smooth storytelling across diverse genres and languages",
+    "narrativeApproach": "Structure-driven editing that reshapes screenplay during post-production, creating 17-18 different versions to find optimal narrative flow, particularly in non-linear storytelling",
+    "pacingMastery": "Maintains tight pacing even in period films to counter audience expectations of slowness, infusing realism regardless of genre while controlling rhythm through 10-30 shots per sequence",
+    "technicalExcellence": "Pioneer in digital editing systems, mastered transitions from film to computer-based editing, utilizing slow-motion effects and color changes to differentiate narrative episodes",
+    "seamlessFlow": "Creates sequences where 10-30 individual shots blend imperceptibly, making editing unnoticeable—a hallmark of superior craftsmanship in his view",
+    "contributionToCinema": "Revolutionized Indian film editing across 17 languages with record 9 National Awards, elevated post-production standards, and influenced generation of editors through invisible editing philosophy"
+  },
+
+  "images": {
+    "portrait": {"source": "IMDb", "url": "https://m.media-amazon.com/images/M/MV5BMTYzMzQ0MjI5M15BMl5BanBnXkFtZTcwNzQ3MjkyMw@@._V1_.jpg", "type": "headshot"},
+    "banner": {"source": "IMDb", "url": "https://m.media-amazon.com/images/M/MV5BMTYzMzQ0MjI5M15BMl5BanBnXkFtZTcwNzQ3MjkyMw@@._V1_.jpg", "type": "wide"},
+    "avatar": {"source": "IMDb", "url": "https://m.media-amazon.com/images/M/MV5BMTYzMzQ0MjI5M15BMl5BanBnXkFtZTcwNzQ3MjkyMw@@._V1_UY317_CR51,0,214,317_AL_.jpg", "type": "thumbnail"},
+    "featured": {"source": "Archive", "url": null, "type": "editing-suite"},
+    "gallery": [
+      {"id": "1", "source": "Archive", "url": null, "type": "editing-work"},
+      {"id": "2", "source": "Archive", "url": null, "type": "award-moment"},
+      {"id": "3", "source": "Archive", "url": null, "type": "with-director"},
+      {"id": "4", "source": "Archive", "url": null, "type": "editing-excellence"},
+      {"id": "5", "source": "Archive", "url": null, "type": "legacy"}
+    ]
+  },
+
+  "bio": "Akkineni Sreekar Prasad, born into Telugu cinema lineage in Chennai, learned editing from his father Akkineni Sanjeevi. A literature graduate from University of Madras, he debuted with Swati (1986) and won his first National Award for Raakh (1989). Renowned for invisible editing across 17 languages, he has edited over 600 films including Dil Chahta Hai, Okkadu, RRR, and Ponniyin Selvan. His record nine National Film Awards and seamless narrative mastery established him as India's most decorated editor.",
+
+  "personalInfo": {
+    "fullName": "Akkineni Sreekar Prasad",
+    "birthDate": "1963-03-12",
+    "age": 62,
+    "birthPlace": "Chennai, Tamil Nadu, India",
+    "currentResidence": "Chennai, Tamil Nadu",
+    "nationality": "Indian",
+
+    "technicalTraining": {
+      "filmSchool": "University of Madras (Literature Graduate)",
+      "editingTraining": "Learned film editing from father in Telugu cinema",
+      "mentors": ["Akkineni Sanjeevi (father, film editor and director)"],
+      "assistantship": "Trained under father Akkineni Sanjeevi in Telugu films"
+    },
+
+    "careerStart": {
+      "entryYear": 1986,
+      "firstFilm": "Swati (1986) as co-editor",
+      "breakthroughFilm": "Raakh (1989) - First independent editing work, won National Award",
+      "yearsActive": 39,
+      "currentStatus": "Active"
+    }
+  },
+
+  "editingStyle": {
+    "signatureStyle": "Invisible editing philosophy where audiences don't notice cuts, emphasizing smoothness and seamless flow over stylistic flourishes, working towards making scenes as imperceptible as possible",
+    "pacingPreference": "Tight, controlled pacing that maintains realism even in commercial films; keeps period films tight to counter slowness expectations; rhythmic control through shot density",
+    "cutStyle": "Seamless invisible editing with 10-30 shots per sequence blended imperceptibly; uses match cuts, slow-motion effects, and color changes for narrative differentiation",
+    "narrativeFlow": "Structure-oriented approach creating multiple versions (17-18 for Alaipayuthey) during editing; reshapes screenplay in post-production for optimal narrative impact",
+    "actionSequenceEditing": "High-energy editing with fast cuts maintaining coherence; infused Dil Chahta Hai with electrifying youth energy; balances exaggeration with acceptability in commercial content",
+    "emotionalSceneTiming": "Delicate timing for emotional beats demonstrated in Kannathil Muthamittal's war narrative; brings realism to genre regardless of commercial scale",
+    "visualMotifs": ["Slow-motion transitions for time shifts", "Color grading changes for episode differentiation", "Juxtaposition sequences for enhanced storytelling"]
+  },
+
+  "filmsEdited": [
+    {
+      "film": "Raakh",
+      "year": 1989,
+      "language": "Hindi",
+      "director": "Aditya Bhattacharya",
+      "directorSlug": "aditya-bhattacharya",
+      "genre": "Thriller",
+      "editingStyle": "Intense, revenge-driven narrative editing",
+      "runtime": null,
+      "technicalAchievements": ["First independent editing work", "Established editing signature"],
+      "boxOffice": null,
+      "awards": ["National Film Award for Best Editing (1989)"],
+      "significance": "Debut independent editing work that won National Award, establishing Prasad as emerging editing talent"
+    },
+    {
+      "film": "Yodha",
+      "year": 1992,
+      "language": "Malayalam",
+      "director": "Sangeeth Sivan",
+      "directorSlug": "sangeeth-sivan",
+      "genre": "Action/Fantasy",
+      "editingStyle": "Fantasy action sequences with seamless flow",
+      "runtime": null,
+      "technicalAchievements": ["Complex action choreography editing"],
+      "boxOffice": null,
+      "awards": ["Kerala State Film Award for Best Editing (1992)"],
+      "significance": "Established Malayalam cinema credentials with state award recognition"
+    },
+    {
+      "film": "Vaanaprastham",
+      "year": 1999,
+      "language": "Malayalam",
+      "director": "Shaji N. Karun",
+      "directorSlug": "shaji-n-karun",
+      "genre": "Drama",
+      "editingStyle": "Contemplative art cinema editing",
+      "runtime": null,
+      "technicalAchievements": ["Art cinema narrative mastery"],
+      "boxOffice": null,
+      "awards": ["National Film Award for Best Editing (2000)", "Kerala State Film Award"],
+      "significance": "Demonstrated versatility in art cinema with National Award win"
+    },
+    {
+      "film": "Alaipayuthey",
+      "year": 2000,
+      "language": "Tamil",
+      "director": "Mani Ratnam",
+      "directorSlug": "mani-ratnam",
+      "genre": "Romantic Drama",
+      "editingStyle": "Non-linear narrative with 17-18 different versions created; slow-motion and color changes for episode differentiation",
+      "runtime": "2 hours 36 minutes",
+      "technicalAchievements": ["First Mani Ratnam collaboration", "Non-linear narrative innovation", "Multiple version experimentation"],
+      "boxOffice": null,
+      "awards": null,
+      "significance": "Began historic 25-year collaboration with Mani Ratnam; pioneered non-linear storytelling editing in Tamil cinema"
+    },
+    {
+      "film": "Dil Chahta Hai",
+      "year": 2001,
+      "language": "Hindi",
+      "director": "Farhan Akhtar",
+      "directorSlug": "farhan-akhtar",
+      "genre": "Drama/Coming-of-age",
+      "editingStyle": "Electrifying youth-oriented editing infusing film with contemporary energy and pace",
+      "runtime": "3 hours 3 minutes",
+      "technicalAchievements": ["Youth cinema editing revolution", "Contemporary pacing mastery"],
+      "boxOffice": "₹38.5 Crore",
+      "awards": ["Filmfare Award for Best Editing (2002)"],
+      "significance": "Landmark film revolutionizing Bollywood youth cinema editing with contemporary style and energy"
+    },
+    {
+      "film": "Kannathil Muthamittal",
+      "year": 2002,
+      "language": "Tamil",
+      "director": "Mani Ratnam",
+      "directorSlug": "mani-ratnam",
+      "genre": "War Drama",
+      "editingStyle": "Delicate war narrative editing balancing emotion with conflict backdrop",
+      "runtime": "2 hours 16 minutes",
+      "technicalAchievements": ["War backdrop emotional editing", "Child protagonist narrative control"],
+      "boxOffice": null,
+      "awards": ["National Film Award for Best Editing (2002)"],
+      "significance": "Prasad's favorite collaboration with Ratnam; delicate storytelling amidst war won National Award"
+    },
+    {
+      "film": "Okkadu",
+      "year": 2003,
+      "language": "Telugu",
+      "director": "Gunasekhar",
+      "directorSlug": "gunasekhar",
+      "genre": "Action/Romance",
+      "editingStyle": "Fast-paced action sequences with romantic interludes",
+      "runtime": "2 hours 51 minutes",
+      "technicalAchievements": ["Commercial action editing mastery"],
+      "boxOffice": "₹48 Crore",
+      "awards": ["Nandi Award for Best Editing (2003)"],
+      "significance": "Blockbuster Telugu film establishing Prasad's commercial action editing prowess"
+    },
+    {
+      "film": "Yuva/Aayutha Ezhuthu",
+      "year": 2004,
+      "language": "Hindi/Tamil",
+      "director": "Mani Ratnam",
+      "directorSlug": "mani-ratnam",
+      "genre": "Political Drama",
+      "editingStyle": "Multi-narrative parallel storytelling editing",
+      "runtime": "2 hours 45 minutes",
+      "technicalAchievements": ["Simultaneous Hindi-Tamil versions", "Multi-protagonist narrative weaving"],
+      "boxOffice": null,
+      "awards": null,
+      "significance": "Complex multi-narrative political drama showcasing parallel storytelling editing expertise"
+    },
+    {
+      "film": "Guru",
+      "year": 2007,
+      "language": "Hindi",
+      "director": "Mani Ratnam",
+      "directorSlug": "mani-ratnam",
+      "genre": "Biographical Drama",
+      "editingStyle": "Epic biographical narrative spanning decades",
+      "runtime": "2 hours 46 minutes",
+      "technicalAchievements": ["Period narrative coherence", "Biographical timeline editing"],
+      "boxOffice": "₹78 Crore",
+      "awards": null,
+      "significance": "Major Bollywood biographical drama demonstrating period film editing mastery"
+    },
+    {
+      "film": "Firaaq",
+      "year": 2008,
+      "language": "Hindi",
+      "director": "Nandita Das",
+      "directorSlug": "nandita-das",
+      "genre": "Drama",
+      "editingStyle": "Sensitive communal tension narrative editing",
+      "runtime": "1 hour 41 minutes",
+      "technicalAchievements": ["Multiple storyline integration", "Sensitive subject handling"],
+      "boxOffice": null,
+      "awards": ["National Film Award for Best Editing (2008)", "Filmfare Award (2010)", "Dubai International Film Festival Award"],
+      "significance": "Seventh National Award for Best Editing; sensitive multi-narrative communal drama"
+    },
+    {
+      "film": "Kaminey",
+      "year": 2009,
+      "language": "Hindi",
+      "director": "Vishal Bhardwaj",
+      "directorSlug": "vishal-bhardwaj",
+      "genre": "Thriller/Crime",
+      "editingStyle": "Fast-paced crime thriller editing with twin protagonist narrative",
+      "runtime": "2 hours 10 minutes",
+      "technicalAchievements": ["Twin character differentiation", "Crime thriller pacing mastery"],
+      "boxOffice": "₹71 Crore",
+      "awards": ["National Film Award Special Jury Award (2010) - shared with Pazhassi Raja and Kutty Srank"],
+      "significance": "Part of historic triple Special Jury Award recognition at National Awards"
+    },
+    {
+      "film": "Kerala Varma Pazhassi Raja",
+      "year": 2009,
+      "language": "Malayalam",
+      "director": "Hariharan",
+      "directorSlug": "hariharan",
+      "genre": "Historical/War",
+      "editingStyle": "Epic period war drama editing maintaining tight pacing",
+      "runtime": "3 hours 5 minutes",
+      "technicalAchievements": ["Epic battle sequence editing", "Period film coherence"],
+      "boxOffice": "₹51 Crore",
+      "awards": ["National Film Award Special Jury Award (2010)", "Kerala State Film Award"],
+      "significance": "Epic Malayalam historical film; part of triple National Award recognition"
+    },
+    {
+      "film": "Thuppakki",
+      "year": 2012,
+      "language": "Tamil",
+      "director": "A.R. Murugadoss",
+      "directorSlug": "ar-murugadoss",
+      "genre": "Action/Thriller",
+      "editingStyle": "High-octane action thriller editing",
+      "runtime": "2 hours 45 minutes",
+      "technicalAchievements": ["Military action sequences", "Thriller pacing"],
+      "boxOffice": "₹180 Crore",
+      "awards": null,
+      "significance": "Major Tamil blockbuster showcasing commercial action editing mastery"
+    },
+    {
+      "film": "Kaththi",
+      "year": 2014,
+      "language": "Tamil",
+      "director": "A.R. Murugadoss",
+      "directorSlug": "ar-murugadoss",
+      "genre": "Action/Drama",
+      "editingStyle": "Social action drama editing with dual role protagonist",
+      "runtime": "2 hours 46 minutes",
+      "technicalAchievements": ["Dual role character editing", "Social message integration"],
+      "boxOffice": "₹125 Crore",
+      "awards": null,
+      "significance": "Blockbuster social action drama with dual protagonist narrative complexity"
+    },
+    {
+      "film": "Talvar",
+      "year": 2015,
+      "language": "Hindi",
+      "director": "Meghna Gulzar",
+      "directorSlug": "meghna-gulzar",
+      "genre": "Crime/Thriller",
+      "editingStyle": "Multiple perspective investigative thriller editing",
+      "runtime": "2 hours 12 minutes",
+      "technicalAchievements": ["Multi-perspective narrative", "Investigation timeline editing"],
+      "boxOffice": "₹38.5 Crore",
+      "awards": ["Filmfare Award for Best Editing (2016)", "IIFA Award"],
+      "significance": "Critically acclaimed investigative thriller with multiple perspective narrative mastery"
+    },
+    {
+      "film": "Chekka Chivantha Vaanam",
+      "year": 2018,
+      "language": "Tamil",
+      "director": "Mani Ratnam",
+      "directorSlug": "mani-ratnam",
+      "genre": "Crime/Thriller",
+      "editingStyle": "Multi-protagonist gangster narrative editing",
+      "runtime": "2 hours 26 minutes",
+      "technicalAchievements": ["Multiple protagonist storylines", "Gang warfare pacing"],
+      "boxOffice": "₹95 Crore",
+      "awards": null,
+      "significance": "Contemporary Mani Ratnam collaboration showcasing multi-protagonist editing expertise"
+    },
+    {
+      "film": "Sye Raa Narasimha Reddy",
+      "year": 2019,
+      "language": "Telugu",
+      "director": "Surender Reddy",
+      "directorSlug": "surender-reddy",
+      "genre": "Historical/War",
+      "editingStyle": "Epic period war drama editing with large-scale battle sequences",
+      "runtime": "2 hours 50 minutes",
+      "technicalAchievements": ["Epic battle choreography editing", "Historical narrative scope"],
+      "boxOffice": "₹240 Crore",
+      "awards": null,
+      "significance": "Mega-budget Telugu historical epic demonstrating large-scale period film editing"
+    },
+    {
+      "film": "Sivaranjiniyum Innum Sila Pengalum",
+      "year": 2020,
+      "language": "Tamil",
+      "director": "Vasanth Sai",
+      "directorSlug": "vasanth-sai",
+      "genre": "Drama",
+      "editingStyle": "Sensitive women-centric narrative editing",
+      "runtime": null,
+      "technicalAchievements": ["Female-centric storytelling", "Emotional narrative control"],
+      "boxOffice": null,
+      "awards": ["National Film Award for Best Editing (2020)"],
+      "significance": "Ninth National Film Award cementing record as most awarded editor"
+    },
+    {
+      "film": "Shershaah",
+      "year": 2021,
+      "language": "Hindi",
+      "director": "Vishnuvardhan",
+      "directorSlug": "vishnuvardhan",
+      "genre": "Biographical/War",
+      "editingStyle": "Military biographical narrative with war sequences",
+      "runtime": "2 hours 15 minutes",
+      "technicalAchievements": ["Biographical timeline editing", "Kargil War battle sequences"],
+      "boxOffice": "OTT Release",
+      "awards": ["Filmfare Award for Best Editing (2022)"],
+      "significance": "Major OTT biographical war drama earning fourth Filmfare Award"
+    },
+    {
+      "film": "RRR",
+      "year": 2022,
+      "language": "Telugu",
+      "director": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "genre": "Action/Period",
+      "editingStyle": "Epic period action editing with VFX-heavy sequences; edited in 17 different language versions",
+      "runtime": "3 hours 7 minutes",
+      "technicalAchievements": ["17 language versions editing", "VFX integration mastery", "Epic action sequences"],
+      "boxOffice": "₹1,230 Crore",
+      "awards": ["Multiple international award nominations including COFCA, HCA"],
+      "significance": "Global blockbuster requiring editing 17 language versions; VFX-heavy period action epic"
+    },
+    {
+      "film": "Ponniyin Selvan: I",
+      "year": 2022,
+      "language": "Tamil",
+      "director": "Mani Ratnam",
+      "directorSlug": "mani-ratnam",
+      "genre": "Historical/Epic",
+      "editingStyle": "Multi-character historical epic narrative editing",
+      "runtime": "2 hours 47 minutes",
+      "technicalAchievements": ["Multiple storyline integration", "Chola dynasty period authenticity"],
+      "boxOffice": "₹500 Crore",
+      "awards": null,
+      "significance": "Mani Ratnam's magnum opus showcasing epic period multi-narrative editing"
+    },
+    {
+      "film": "The Goat Life (Aadujeevitham)",
+      "year": 2024,
+      "language": "Malayalam",
+      "director": "Blessy",
+      "directorSlug": "blessy",
+      "genre": "Survival Drama",
+      "editingStyle": "Survival narrative editing maintaining intensity across extended timeline",
+      "runtime": "2 hours 53 minutes",
+      "technicalAchievements": ["Survival adventure editing", "Desert sequences pacing"],
+      "boxOffice": "₹150+ Crore",
+      "awards": null,
+      "significance": "Major 2024 Malayalam survival drama grossing 150+ crore with decade-long production"
+    },
+    {
+      "film": "Devara: Part 1",
+      "year": 2024,
+      "language": "Telugu",
+      "director": "Koratala Siva",
+      "directorSlug": "koratala-siva",
+      "genre": "Action",
+      "editingStyle": "Mass action editing with dual timeline narrative",
+      "runtime": "3 hours 6 minutes",
+      "technicalAchievements": ["Dual timeline editing", "Large-scale action sequences"],
+      "boxOffice": "₹400+ Crore",
+      "awards": null,
+      "significance": "Recent 2024 Telugu blockbuster demonstrating continued commercial editing mastery"
+    }
+  ],
+
+  "editingStatistics": {
+    "totalFilmsEdited": 600,
+    "careerSpan": "1986-Present",
+    "languagesWorked": ["Telugu", "Tamil", "Hindi", "Malayalam", "Kannada", "Assamese", "Bengali", "English", "Odia", "Sinhala", "Marathi", "Gujarati", "Punjabi", "Konkani", "Tulu", "Bhojpuri", "Maithili"],
+    "genresEdited": ["Action", "Drama", "Romance", "Thriller", "Historical", "War", "Crime", "Biographical", "Fantasy", "Political"],
+    "mostProductiveDecade": "2000s-2010s",
+    "averageFilmsPerYear": "17 films per year average across 35+ years",
+    "averageRuntime": "2 hours 30 minutes typical for major features"
+  },
+
+  "technicalExpertise": {
+    "editingSoftware": [
+      "Avid Media Composer",
+      "Digital editing systems (pioneer in transition from film)",
+      "Traditional film editing (early career)"
+    ],
+    "technicalInnovations": [
+      "Among first editors to transition Telugu cinema to digital editing",
+      "Developed 17-18 version editing approach for non-linear narratives",
+      "Slow-motion and color grading integration for narrative differentiation",
+      "Multi-language version editing mastery (17 languages for RRR)"
+    ],
+    "soundEditingIntegration": "Finds music useful during editing process; integrates sound design seamlessly into narrative rhythm",
+    "vfxEditingCoordination": "Extensive VFX-heavy film experience with RRR, Sye Raa; constant VFX turnover coordination mastery",
+    "colorGradingCollaboration": "Uses color changes as narrative tool demonstrated in Alaipayuthey; collaborates with colorists for episode differentiation"
+  },
+
+  "iconicEditedFilms": [
+    {
+      "film": "Dil Chahta Hai",
+      "year": 2001,
+      "director": "Farhan Akhtar",
+      "editingAchievement": "Revolutionized Bollywood youth cinema editing with electrifying contemporary energy and modern pacing",
+      "narrativeSuccess": "Three-protagonist friendship narrative woven seamlessly with 3-hour runtime maintaining engagement",
+      "pacingMastery": "Infused film with youth energy while maintaining emotional depth across extended runtime",
+      "iconicSequences": ["Goa montage sequences", "Split-screen friendship moments", "Climax resolution editing"],
+      "industryImpact": "Set new standard for Bollywood youth film editing; influenced generation of contemporary Hindi cinema editors",
+      "awards": ["Filmfare Award for Best Editing (2002)"]
+    },
+    {
+      "film": "Kannathil Muthamittal",
+      "year": 2002,
+      "director": "Mani Ratnam",
+      "editingAchievement": "Delicate war backdrop editing balancing child protagonist emotional journey with Sri Lankan civil war intensity",
+      "narrativeSuccess": "Prasad's personal favorite collaboration; genuine and difficult story requiring sensitive editing approach",
+      "pacingMastery": "Controlled emotional timing for child actress performance while maintaining war tension backdrop",
+      "iconicSequences": ["Child realization scenes", "War zone sequences", "Emotional reunion editing"],
+      "industryImpact": "Demonstrated how war films can be emotionally intimate through precise editing; won National Award",
+      "awards": ["National Film Award for Best Editing (2002)"]
+    },
+    {
+      "film": "RRR",
+      "year": 2022,
+      "director": "S.S. Rajamouli",
+      "editingAchievement": "Edited film in 17 different language versions with extensive VFX coordination; global blockbuster editing",
+      "narrativeSuccess": "3-hour epic period action narrative maintaining international audience engagement across cultures",
+      "pacingMastery": "Balanced VFX-heavy action sequences with character development; controlled rhythm across extended runtime",
+      "iconicSequences": ["Naatu Naatu dance sequence editing", "Climax bridge battle", "Interval block action"],
+      "industryImpact": "Showcased Indian cinema editing capabilities globally; international award recognition including Oscar campaign",
+      "awards": ["Multiple international nominations including Critics Choice, HCA, Columbus Film Critics"]
+    },
+    {
+      "film": "Alaipayuthey",
+      "year": 2000,
+      "director": "Mani Ratnam",
+      "editingAchievement": "First non-linear narrative collaboration with Mani Ratnam creating 17-18 different versions to perfect structure",
+      "narrativeSuccess": "Simplified complex non-linear romance through slow-motion effects and color grading for episode differentiation",
+      "pacingMastery": "Controlled time-shifted narrative maintaining clarity while experimenting with structural innovation",
+      "iconicSequences": ["Non-linear romance progression", "Color-differentiated timelines", "Slow-motion transitions"],
+      "industryImpact": "Pioneered non-linear editing in Tamil romantic cinema; began historic 25-year Ratnam collaboration",
+      "awards": null
+    }
+  ],
+
+  "directorCollaborations": [
+    {
+      "directorName": "Mani Ratnam",
+      "directorSlug": "mani-ratnam",
+      "filmsTogether": 15,
+      "films": [
+        {"title": "Alaipayuthey", "year": 2000, "editingStyle": "Non-linear romance"},
+        {"title": "Kannathil Muthamittal", "year": 2002, "editingStyle": "War drama"},
+        {"title": "Yuva/Aayutha Ezhuthu", "year": 2004, "editingStyle": "Multi-narrative political"},
+        {"title": "Guru", "year": 2007, "editingStyle": "Biographical epic"},
+        {"title": "Raavanan/Raavan", "year": 2010, "editingStyle": "Epic mythology adaptation"},
+        {"title": "Kadal", "year": 2013, "editingStyle": "Coastal drama"},
+        {"title": "O Kadhal Kanmani", "year": 2015, "editingStyle": "Contemporary romance"},
+        {"title": "Chekka Chivantha Vaanam", "year": 2018, "editingStyle": "Multi-protagonist crime"},
+        {"title": "Ponniyin Selvan: I", "year": 2022, "editingStyle": "Historical epic"},
+        {"title": "Ponniyin Selvan: II", "year": 2023, "editingStyle": "Historical epic conclusion"},
+        {"title": "Thug Life", "year": 2025, "editingStyle": "Upcoming collaboration"}
+      ],
+      "editingChemistry": "25-year collaboration defined by structural experimentation; Ratnam pushes envelope while Prasad translates vision into seamless editing; mutual respect and creative challenge",
+      "mostSuccessfulFilm": "Kannathil Muthamittal (Prasad's personal favorite)",
+      "creativeProcess": "Ratnam described as enigma who cannot be predicted; constantly surprises and challenges Prasad; taskmaster who values technicians and extracts best work; creates 17-18 versions to find optimal structure",
+      "ongoingPartnership": "Active"
+    },
+    {
+      "directorName": "A.R. Murugadoss",
+      "directorSlug": "ar-murugadoss",
+      "filmsTogether": 4,
+      "films": [
+        {"title": "Thuppakki", "year": 2012, "editingStyle": "Action thriller"},
+        {"title": "Kaththi", "year": 2014, "editingStyle": "Social action"},
+        {"title": "Sarkar", "year": 2018, "editingStyle": "Political action"},
+        {"title": "Spyder", "year": 2017, "editingStyle": "Action thriller"}
+      ],
+      "editingChemistry": "Commercial action mastery collaboration; fast-paced editing for mass blockbusters with social messaging",
+      "mostSuccessfulFilm": "Thuppakki (₹180 Crore blockbuster)",
+      "creativeProcess": "Tight action sequence editing maintaining coherence in high-octane commercial cinema",
+      "ongoingPartnership": "Active"
+    },
+    {
+      "directorName": "Vishal Bhardwaj",
+      "directorSlug": "vishal-bhardwaj",
+      "filmsTogether": 3,
+      "films": [
+        {"title": "Kaminey", "year": 2009, "editingStyle": "Crime thriller"},
+        {"title": "Matru Ki Bijlee Ka Mandola", "year": 2013, "editingStyle": "Political satire"},
+        {"title": "Haider", "year": 2014, "editingStyle": "Tragedy adaptation"}
+      ],
+      "editingChemistry": "Intense thriller editing collaboration; complex narratives requiring precision editing",
+      "mostSuccessfulFilm": "Kaminey (National Special Jury Award)",
+      "creativeProcess": "Thriller pacing mastery with character differentiation and narrative complexity",
+      "ongoingPartnership": "Concluded"
+    },
+    {
+      "directorName": "S.S. Rajamouli",
+      "directorSlug": "ss-rajamouli",
+      "filmsTogether": 1,
+      "films": [
+        {"title": "RRR", "year": 2022, "editingStyle": "Epic period action with 17 language versions"}
+      ],
+      "editingChemistry": "Epic scale VFX-heavy action editing; coordination of massive production with international appeal",
+      "mostSuccessfulFilm": "RRR (₹1,230 Crore global blockbuster)",
+      "creativeProcess": "Constant VFX turnover coordination; keeping target audience in mind across 17 language versions; quick editing when required",
+      "ongoingPartnership": "Concluded"
+    }
+  ],
+
+  "genreVersatility": {
+    "action": {
+      "expertise": "Mastery",
+      "notableFilms": ["RRR", "Thuppakki", "Kaththi", "Okkadu", "Sye Raa Narasimha Reddy"],
+      "editingApproach": "Fast-paced coherent action editing; maintains clarity in complex sequences while infusing electrifying energy; VFX-heavy sequence coordination mastery"
+    },
+    "drama": {
+      "expertise": "Mastery",
+      "notableFilms": ["Kannathil Muthamittal", "Firaaq", "Sivaranjiniyum Innum Sila Pengalum", "Vaanaprastham"],
+      "editingApproach": "Measured emotional pacing; sensitive timing for dramatic beats; realism emphasis regardless of subject matter"
+    },
+    "romantic": {
+      "expertise": "Mastery",
+      "notableFilms": ["Alaipayuthey", "Dil Chahta Hai", "O Kadhal Kanmani"]
+    },
+    "thriller": {
+      "expertise": "Mastery",
+      "notableFilms": ["Kaminey", "Talvar", "Raakh", "The Terrorist"],
+      "editingApproach": "Tension building through precise cut timing; multi-perspective narrative integration; investigative timeline control"
+    },
+    "historical": {
+      "expertise": "Mastery",
+      "notableFilms": ["Ponniyin Selvan", "Pazhassi Raja", "Guru", "Sye Raa"],
+      "editingApproach": "Keeps period films tight to counter slowness expectations; maintains coherence across epic timelines while preserving period authenticity"
+    },
+    "war": {
+      "expertise": "Strong",
+      "notableFilms": ["Kannathil Muthamittal", "Shershaah", "Pazhassi Raja"],
+      "editingApproach": "Balances war intensity with emotional narrative; battle sequence choreography editing with character development integration"
+    }
+  },
+
+  "pacingAndRhythm": {
+    "pacingControl": "Maintains tight control even in 3+ hour epics; consciously keeps period films tight to counter audience expectation of slowness; 10-30 shots per sequence for rhythm control",
+    "rhythmMastery": "Creates rhythm through shot density and transition timing; music integration during editing process for rhythmic flow",
+    "actionSequencePacing": "Fast-paced coherent action editing demonstrated in RRR, Thuppakki, Okkadu; electrifying energy while maintaining spatial clarity",
+    "emotionalSceneTiming": "Delicate emotional beat timing in Kannathil Muthamittal, Firaaq; sensitive subject handling with precise pacing",
+    "comedyTiming": "Can handle comedy timing in multi-genre films like Dil Chahta Hai, O Kadhal Kanmani",
+    "seamlessTransitions": "Invisible editing mastery where audiences don't notice cuts; 10-30 shots blended imperceptibly per sequence"
+  },
+
+  "recentFilms": [
+    {
+      "film": "Ponniyin Selvan: II",
+      "year": 2023,
+      "director": "Mani Ratnam",
+      "editingApproach": "Epic historical conclusion maintaining multi-character narrative complexity",
+      "reception": "Critically praised for maintaining coherence in massive ensemble period epic"
+    },
+    {
+      "film": "The Goat Life",
+      "year": 2024,
+      "director": "Blessy",
+      "editingApproach": "Survival narrative editing across extended desert timeline; maintaining intensity throughout 2hr 53min runtime",
+      "reception": "Box office success grossing ₹150+ crore; survival editing praised for maintaining tension"
+    },
+    {
+      "film": "Devara: Part 1",
+      "year": 2024,
+      "director": "Koratala Siva",
+      "editingApproach": "Dual timeline mass action editing with 3hr+ runtime control",
+      "reception": "Major Telugu blockbuster grossing ₹400+ crore; commercial editing mastery demonstrated"
+    },
+    {
+      "film": "Paradise",
+      "year": 2024,
+      "director": "Prasanna Vithanage",
+      "editingApproach": "Art cinema narrative editing",
+      "reception": "Critics Choice Film Awards nomination for Best Editing (2025)"
+    }
+  ],
+
+  "upcomingProjects": [
+    {
+      "film": "Thug Life",
+      "director": "Mani Ratnam",
+      "expectedRelease": "2025",
+      "status": "Post-production"
+    },
+    {
+      "film": "Deva",
+      "director": "Rosshan Andrrews",
+      "expectedRelease": "2025",
+      "status": "Post-production"
+    },
+    {
+      "film": "KH234 (Kamal Haasan-Mani Ratnam collaboration)",
+      "director": "Mani Ratnam",
+      "expectedRelease": "2025-2026",
+      "status": "Production"
+    }
+  ],
+
+  "awards": [
+    {
+      "awardName": "National Film Award for Best Editing",
+      "givenBy": "Government of India",
+      "category": "Best Editing",
+      "film": "Raakh",
+      "year": 1989,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award for Best Editing",
+      "givenBy": "Government of India",
+      "category": "Best Editing",
+      "film": "Rag Birag",
+      "year": 1997,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award for Best Non-Feature Film Editing",
+      "givenBy": "Government of India",
+      "category": "Best Non-Feature Film Editing",
+      "film": "Nauka Caritramu",
+      "year": 1997,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award for Best Editing",
+      "givenBy": "Government of India",
+      "category": "Best Editing",
+      "film": "The Terrorist",
+      "year": 1998,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award for Best Editing",
+      "givenBy": "Government of India",
+      "category": "Best Editing",
+      "film": "Vaanaprastham",
+      "year": 2000,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award for Best Editing",
+      "givenBy": "Government of India",
+      "category": "Best Editing",
+      "film": "Kannathil Muthamittal",
+      "year": 2002,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award for Best Editing",
+      "givenBy": "Government of India",
+      "category": "Best Editing",
+      "film": "A Peck on the Cheek",
+      "year": 2003,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award for Best Editing",
+      "givenBy": "Government of India",
+      "category": "Best Editing",
+      "film": "Firaaq",
+      "year": 2008,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award Special Jury Award",
+      "givenBy": "Government of India",
+      "category": "Special Jury Award",
+      "film": "Kutty Srank, Kaminey, Kerala Varma Pazhassi Raja",
+      "year": 2010,
+      "won": true
+    },
+    {
+      "awardName": "National Film Award for Best Editing",
+      "givenBy": "Government of India",
+      "category": "Best Editing",
+      "film": "Sivaranjiniyum Innum Sila Pengalum",
+      "year": 2020,
+      "won": true
+    },
+    {
+      "awardName": "Kerala State Film Award for Best Editing",
+      "givenBy": "Government of Kerala",
+      "category": "Best Editing",
+      "film": "Yodha",
+      "year": 1992,
+      "won": true
+    },
+    {
+      "awardName": "Kerala State Film Award for Best Editing",
+      "givenBy": "Government of Kerala",
+      "category": "Best Editing",
+      "film": "Karunam, Vaanaprastham, Jalamarmaram",
+      "year": 1999,
+      "won": true
+    },
+    {
+      "awardName": "Kerala State Film Award for Best Editing",
+      "givenBy": "Government of Kerala",
+      "category": "Best Editing",
+      "film": "Sesham",
+      "year": 2001,
+      "won": true
+    },
+    {
+      "awardName": "Kerala State Film Award for Best Editing",
+      "givenBy": "Government of Kerala",
+      "category": "Best Editing",
+      "film": "Anandabhadram",
+      "year": 2005,
+      "won": true
+    },
+    {
+      "awardName": "Kerala State Film Award for Best Editing",
+      "givenBy": "Government of Kerala",
+      "category": "Best Editing",
+      "film": "Pazhassi Raja",
+      "year": 2009,
+      "won": true
+    },
+    {
+      "awardName": "Nandi Award for Best Editing",
+      "givenBy": "Government of Andhra Pradesh",
+      "category": "Best Editing",
+      "film": "Manoharam",
+      "year": 2000,
+      "won": true
+    },
+    {
+      "awardName": "Nandi Award for Best Editing",
+      "givenBy": "Government of Andhra Pradesh",
+      "category": "Best Editing",
+      "film": "Okkadu",
+      "year": 2003,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare Award for Best Editing",
+      "givenBy": "Filmfare",
+      "category": "Best Editing",
+      "film": "Dil Chahta Hai",
+      "year": 2002,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare Award for Best Editing",
+      "givenBy": "Filmfare",
+      "category": "Best Editing",
+      "film": "Firaaq",
+      "year": 2010,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare Award for Best Editing",
+      "givenBy": "Filmfare",
+      "category": "Best Editing",
+      "film": "Talvar",
+      "year": 2016,
+      "won": true
+    },
+    {
+      "awardName": "Filmfare Award for Best Editing",
+      "givenBy": "Filmfare",
+      "category": "Best Editing",
+      "film": "Shershaah",
+      "year": 2022,
+      "won": true
+    },
+    {
+      "awardName": "IIFA Award for Best Editing",
+      "givenBy": "International Indian Film Academy",
+      "category": "Best Editing",
+      "film": "Talvar",
+      "year": 2016,
+      "won": true
+    },
+    {
+      "awardName": "Vijay Award for Best Editing",
+      "givenBy": "Vijay Awards",
+      "category": "Best Editing",
+      "film": "Kattradhu Thamizh",
+      "year": 2007,
+      "won": true
+    },
+    {
+      "awardName": "Vijay Award for Best Editing",
+      "givenBy": "Vijay Awards",
+      "category": "Best Editing",
+      "film": "Yavarum Nalam",
+      "year": 2009,
+      "won": true
+    },
+    {
+      "awardName": "Dubai International Film Festival Award for Best Editing",
+      "givenBy": "Dubai International Film Festival",
+      "category": "Best Editing",
+      "film": "Firaaq",
+      "year": 2008,
+      "won": true
+    },
+    {
+      "awardName": "Sarasaviya Award for Best Editor",
+      "givenBy": "Sarasaviya Awards",
+      "category": "Best Editor",
+      "film": "Ira Madiyama",
+      "year": 2005,
+      "won": true
+    }
+  ],
+
+  "influenceAndLegacy": {
+    "editingRevolution": "Pioneered invisible editing philosophy in Indian cinema; transitioned industry from film to digital editing; introduced structural experimentation in non-linear narratives across languages",
+    "narrativeStandards": "Elevated post-production standards emphasizing seamless flow over stylistic flourishes; established multi-version editing approach for finding optimal narrative structure; brought realism to commercial cinema editing",
+    "influencedEditors": ["Contemporary generation of Indian editors following invisible editing philosophy", "Tamil and Telugu editors adopting tight pacing approach", "Multi-language editors inspired by 17-language versatility"],
+    "technicalStandards": "Set benchmark with 9 National Awards (7 for Best Editing - record); established multi-language editing standards; pioneered VFX-heavy film editing coordination in Indian cinema",
+    "industryRespect": "Most awarded editor in National Film Award history conferred by five different Presidents; Limca Book of Records recognition as 'People of the Year 2013'; regarded as master craftsman across industries",
+    "legacy": "600+ films across 17 languages establishing unparalleled versatility; 35+ year career maintaining excellence from art cinema to commercial blockbusters; invisible editing philosophy influencing Indian cinema post-production globally"
+  },
+
+  "quotes": [
+    {
+      "quote": "If you don't notice the edits, it is probably good editing. When you are watching a scene, you normally don't realise that there could be anything between 10 and 30 shots that are strung together to make one sequence.",
+      "year": 2018,
+      "context": "Interview",
+      "source": "Times of India"
+    },
+    {
+      "quote": "I try to bring in a sense of realism in the genre of the film I am working in. That has been my biggest takeaway. Even if it is a very commercial and slightly exaggerated form of content, how real can you keep it? The exaggeration is to the level where you can accept it.",
+      "year": 2018,
+      "context": "Interview on editing philosophy",
+      "source": "Times of India"
+    },
+    {
+      "quote": "Mani Ratnam is an enigma as you cannot predict him. He always continues to surprise and that is the factor which excites me to work with him. Working with him for two decades has been a learning and 'unlearning' experience.",
+      "year": 2018,
+      "context": "Interview about collaboration with Mani Ratnam",
+      "source": "The New Indian Express"
+    },
+    {
+      "quote": "I like 'Kannathil Muthamittal' more because it was a very delicate story to tell amidst a war-like situation. I thought it was a very genuine and difficult film to do.",
+      "year": 2018,
+      "context": "Interview about favorite film edited",
+      "source": "The New Indian Express"
+    },
+    {
+      "quote": "Invariably, for around 90 per cent of the films, the screenplay changes a little during editing. It may not change in many films drastically, but you realise that some things are not necessary.",
+      "year": 2018,
+      "context": "Interview on editing process",
+      "source": "Times of India"
+    }
+  ],
+
+  "trivia": [
+    "Holds Limca Book of Records recognition for 'films edited in most number of languages' with 17 languages - Telugu, Tamil, Hindi, Malayalam, Kannada, Assamese, Bengali, English, Odia, Sinhala, Marathi, Gujarati, Punjabi, Konkani, Tulu, Bhojpuri, and Maithili",
+    "Nine National Film Awards conferred by five different Presidents of India throughout career - unprecedented recognition",
+    "Created 17-18 different versions of Alaipayuthey with Mani Ratnam to find optimal non-linear narrative structure",
+    "Edited RRR in 17 different language versions with constant VFX coordination for S.S. Rajamouli's global blockbuster",
+    "First Special Jury Award ever given for editing at National Film Awards recognized triple achievement - Kutty Srank, Kaminey, and Pazhassi Raja in single year (2010)",
+    "Father Akkineni Sanjeevi was film editor and director; uncle L.V. Prasad was Telugu cinema doyen; editing legacy family",
+    "Son Akshay Akkineni is director of Pizza; daughter-in-law P.S. Keerthana won National Award as child artist in Kannathil Muthamittal edited by Prasad",
+    "Literature graduate from University of Madras who learned editing from father rather than formal film school",
+    "25-year ongoing collaboration with Mani Ratnam since Alaipayuthey (2000) including upcoming Thug Life and KH234",
+    "Featured in Limca Book of Records 'People of the Year - 2013' list for contribution to Indian cinema",
+    "Started with Telugu films but rose to national acclaim through Tamil, Malayalam, and Hindi cinema before returning to Telugu blockbusters",
+    "Edited both smallest art films and biggest blockbusters - from The Terrorist to RRR (₹1,230 Crore) demonstrating complete versatility"
+  ],
+
+  "knownFor": [
+    "Record 9 National Film Awards (7 for Best Editing) - most awarded editor in Indian cinema history",
+    "600+ films edited across 17 languages in 35+ year career - unparalleled versatility",
+    "Invisible editing philosophy where seamless cuts enhance storytelling without drawing attention",
+    "Historic collaborations with Mani Ratnam (25 years, 15+ films) pioneering non-linear narratives",
+    "Blockbuster editing mastery from Dil Chahta Hai to RRR establishing commercial and critical excellence"
+  ]
+}
