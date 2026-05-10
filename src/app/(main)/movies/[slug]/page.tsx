@@ -1,8 +1,9 @@
 import { getMovieDetails } from '@/app/actions/movies';
-import { Film, Star, Clock, PlayCircle, Calendar, Plus, Check, MoreHorizontal, Trophy, MessageSquare, Edit3, Image as ImageIcon, Globe, Camera, MessageCircle, ChevronRight, Bookmark, Heart, ThumbsUp } from 'lucide-react';
+import { Film, Star, Clock, PlayCircle, Calendar, Plus, Check, MoreHorizontal, Trophy, MessageSquare, Edit3, Image as ImageIcon, Globe, Camera, MessageCircle, ChevronRight, Bookmark, Heart, ThumbsUp, Sparkles, ExternalLink, Link2, Users, Music, Video, LayoutGrid } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { CastModal } from './components/CastModal';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
@@ -15,18 +16,45 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
 }
 
-// Map platform names to branded colors/initials since we don't have official logo images hosted
+// Map platform names to real TMDB provider logo URLs (verified from /watch/providers/movie API)
 const getPlatformBrand = (platform: string) => {
     const p = platform.toLowerCase();
-    if (p.includes('netflix')) return { bg: 'bg-gradient-to-br from-[#E50914] to-[#B8000A]', color: 'text-white', initial: 'N' };
-    if (p.includes('prime')) return { bg: 'bg-gradient-to-br from-[#00A8E1] to-[#007EA8]', color: 'text-white', initial: 'P' };
-    if (p.includes('hotstar')) return { bg: 'bg-gradient-to-br from-[#021A5D] to-[#0433BA]', color: 'text-white', initial: 'H' };
-    if (p.includes('aha')) return { bg: 'bg-gradient-to-br from-[#FF4D00] to-[#CC3D00]', color: 'text-white', initial: 'aha' };
-    if (p.includes('zee5')) return { bg: 'bg-gradient-to-br from-[#8230C6] to-[#5D1F91]', color: 'text-white', initial: 'Z5' };
-    if (p.includes('sun')) return { bg: 'bg-gradient-to-br from-[#FFB800] to-[#CC9300]', color: 'text-black', initial: 'S' };
-    if (p.includes('sony')) return { bg: 'bg-gradient-to-br from-[#FF0000] to-[#B30000]', color: 'text-white', initial: 'LIV' };
-    if (p.includes('bookmy')) return { bg: 'bg-gradient-to-br from-[#F84464] to-[#C93350]', color: 'text-white', initial: 'BMS' };
-    return { bg: 'bg-gradient-to-br from-zinc-700 to-zinc-900', color: 'text-white', initial: platform.substring(0, 2).toUpperCase() };
+    const tmdb = (path: string) => `https://image.tmdb.org/t/p/w185${path}`;
+    if (p.includes('netflix')) return { logo: tmdb('/pbpMk2JmcoNnQwx5JGpXngfoWtp.jpg'), name: 'Netflix' };
+    if (p.includes('prime') || p.includes('amazon')) return { logo: tmdb('/pvske1MyAoymrs5bguRfVqYiM9a.jpg'), name: 'Prime Video' };
+    if (p.includes('hotstar') || p.includes('jiohotstar') || p.includes('disney')) return { logo: tmdb('/kVqjgpcwvDJOhCupjcLzwwtOp52.jpg'), name: 'JioHotstar' };
+    if (p === 'aha' || p.includes('aha')) return { logo: tmdb('/8WerMI8XcZXqPpkHTZNtzMzousF.jpg'), name: 'Aha' };
+    if (p.includes('zee5')) return { logo: tmdb('/gP67NRy1ShUJilrzMsbOmEmdmcv.jpg'), name: 'ZEE5' };
+    if (p.includes('sun')) return { logo: tmdb('/6KEQzITx2RrCAQt5Nw9WrL1OI8z.jpg'), name: 'Sun NXT' };
+    if (p.includes('sony')) return { logo: tmdb('/3973zlBbBXdXxaWqRWzGG2GYxbT.jpg'), name: 'Sony LIV' };
+    if (p.includes('jio') && !p.includes('hotstar')) return { logo: tmdb('/kVqjgpcwvDJOhCupjcLzwwtOp52.jpg'), name: 'JioCinema' };
+    if (p.includes('apple')) return { logo: tmdb('/mcbz1LgtErU9p4UdbZ0rG6RTWHX.jpg'), name: 'Apple TV' };
+    if (p.includes('youtube')) return { logo: tmdb('/pTnn5JwWr4p3pG8H6VrpiQo7Vs0.jpg'), name: 'YouTube' };
+    if (p.includes('google play')) return { logo: tmdb('/8z7rC8uIDaTM91X0ZfkRf04ydj2.jpg'), name: 'Google Play' };
+    if (p.includes('mx player') || p === 'mx player') return { logo: tmdb('/ayHY6wKxvCKj2PU8eRPFxnPc6B0.jpg'), name: 'MX Player' };
+    if (p.includes('voot')) return { logo: tmdb('/kVqjgpcwvDJOhCupjcLzwwtOp52.jpg'), name: 'Voot' };
+    if (p.includes('bookmy') || p.includes('bookmyshow')) return { logo: tmdb('/hAKPOEwWdjE9evzxByVdF8QUMH3.jpg'), name: 'BookMyShow' };
+    if (p.includes('hoichoi')) return { logo: tmdb('/u7dwMceEbjxd1N3TLEUBILSK2x6.jpg'), name: 'Hoichoi' };
+    if (p.includes('vi movies')) return { logo: tmdb('/9YJY5OwsIPMoX3xC3TdtZVbKBpE.jpg'), name: 'Vi Movies' };
+    if (p.includes('mubi')) return { logo: tmdb('/x570VpH2C9EKDf1riP83rYc5dnL.jpg'), name: 'MUBI' };
+    if (p.includes('discovery')) return { logo: tmdb('/eMTnWwNVtThkjvQA6zwxaoJG9NE.jpg'), name: 'Discovery+' };
+    if (p.includes('lionsgate')) return { logo: tmdb('/e2hCUg2Z3sJ6yWF9NLU24SIKeWa.jpg'), name: 'Lionsgate Play' };
+    if (p.includes('tubi')) return { logo: tmdb('/zLYr7OPvpskMA4S79E3vlCi71iC.jpg'), name: 'Tubi TV' };
+    if (p.includes('hungama')) return { logo: tmdb('/pMTVKAUyjMb0xdMnHqfNj73MGH6.jpg'), name: 'Hungama Play' };
+    if (p.includes('crunchyroll')) return { logo: tmdb('/fzN5Jok5Ig1eJ7gyNGoMhnLSCfh.jpg'), name: 'Crunchyroll' };
+    if (p.includes('plex')) return { logo: tmdb('/vLZKlXUNDcZR7ilvfY9Wr9k80FZ.jpg'), name: 'Plex' };
+    if (p.includes('shemaroo')) return { logo: tmdb('/ec3kgfQ6YXbT3AFRh8bkQZQFLb2.jpg'), name: 'ShemarooMe' };
+    if (p.includes('epic')) return { logo: tmdb('/ymlo2k6RlX0zF5Te1AYwXRQ7Pra.jpg'), name: 'EPIC ON' };
+    if (p.includes('tata')) return { logo: tmdb('/5VLMQDq6LWfftQCl7sYrtTseXRA.jpg'), name: 'Tata Play' };
+    if (p.includes('manorama')) return { logo: tmdb('/tFkqZYsDhNe6hJCx50Aw6oma24w.jpg'), name: 'ManoramaMax' };
+    if (p.includes('curiosity')) return { logo: tmdb('/oR1aNm1Qu9jQBkW4VrGPWhqbC3P.jpg'), name: 'Curiosity Stream' };
+    if (p.includes('docsville')) return { logo: tmdb('/5zqbck5mo8PuVbGu2ngBUdn5Yga.jpg'), name: 'DocuBay' };
+    if (p.includes('ticketnew') || p.includes('ticket new')) return { logo: tmdb('/hAKPOEwWdjE9evzxByVdF8QUMH3.jpg'), name: 'TicketNew' };
+    if (p.includes('district')) return { logo: '', name: 'District', fallbackBg: 'bg-[#E23744]', fallbackText: 'DIS' };
+    if (p.includes('cinépolis') || p.includes('cinepolis')) return { logo: '', name: 'Cinépolis', fallbackBg: 'bg-[#1a1a6c]', fallbackText: 'CIN' };
+    if (p.includes('pvr')) return { logo: '', name: 'PVR INOX', fallbackBg: 'bg-[#FFD700]', fallbackText: 'PVR' };
+    // Fallback
+    return { logo: '', name: platform, fallbackBg: 'bg-zinc-800', fallbackText: platform.substring(0, 3).toUpperCase() };
 };
 
 export default async function MovieDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -37,6 +65,7 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
         return notFound();
     }
 
+    // --- DATA EXTRACTION & DEDUPLICATION ---
     const deduplicateCredits = (creditsArray: any[]) => {
         const seen = new Set();
         return creditsArray.filter(item => {
@@ -47,11 +76,23 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
     };
 
     const rawCast = movie.credits.filter(c => c.roleType === 'cast').sort((a, b) => (a.orderIndex || 99) - (b.orderIndex || 99));
-    const cast = deduplicateCredits(rawCast).slice(0, 10);
+    const cast = deduplicateCredits(rawCast);
     
     const crew = movie.credits.filter(c => c.roleType === 'crew');
     const director = crew.find(c => c.job === 'Director');
-    const writers = deduplicateCredits(crew.filter(c => ['Writer', 'Screenplay', 'Story', 'Dialogue'].includes(c.job || '')));
+    const writers = deduplicateCredits(crew.filter(c => ['Writer', 'Screenplay', 'Story', 'Dialogue', 'Lyricist'].includes(c.job || '')));
+    const musicDirectors = deduplicateCredits(crew.filter(c => ['Original Music Composer', 'Music', 'Music Director'].includes(c.job || '')));
+    const cinematographers = deduplicateCredits(crew.filter(c => ['Director of Photography', 'Cinematography'].includes(c.job || '')));
+    const editors = deduplicateCredits(crew.filter(c => c.job === 'Editor'));
+    const producers = deduplicateCredits(crew.filter(c => ['Producer', 'Executive Producer', 'Co-Producer', 'Line Producer'].includes(c.job || '')));
+
+    // Extended crew from raw metadata (these roles aren't stored in DB)
+    const rawCrew = (movie.metadata as any)?.credits?.crew || [];
+    const dedupeRaw = (arr: any[]) => { const seen = new Set(); return arr.filter(c => { if (seen.has(c.id)) return false; seen.add(c.id); return true; }); };
+    const artDept = dedupeRaw(rawCrew.filter((c: any) => ['Production Design', 'Art Direction'].includes(c.job)));
+    const stunts = dedupeRaw(rawCrew.filter((c: any) => ['Stunt Coordinator', 'Fight Choreographer'].includes(c.job)));
+    const costumes = dedupeRaw(rawCrew.filter((c: any) => c.job === 'Costume Design'));
+    const choreographers = dedupeRaw(rawCrew.filter((c: any) => c.job === 'Choreographer'));
 
     const ottLinks = movie.ottLinks || [];
     const streaming = ottLinks.filter(l => !['BookMyShow', 'District by Zomato', 'Cinépolis India', 'PVR Cinemas'].includes(l.platform));
@@ -59,182 +100,173 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
 
     const metadata = movie.metadata as any || {};
     const genres = metadata.genres || [];
-    const companies = metadata.production_companies || [];
-    const languages = metadata.spoken_languages || [];
     const keywords = metadata.keywords?.keywords || metadata.keywords?.results || [];
     const externalIds = metadata.external_ids || {};
+    
     const collection = metadata.belongs_to_collection;
     const productionCountries = metadata.production_countries || [];
+    const companies = metadata.production_companies || [];
+    const isIndian = productionCountries.some((c: any) => c.iso_3166_1 === 'IN');
+    const homepage = metadata.homepage;
+    const voteCount = movie.voteCount || metadata.vote_count || 0;
+    const popularityScore = movie.popularity || metadata.popularity || 0;
     
+    // Media Extraction
     const videos = metadata.videos?.results || [];
     const officialTrailer = videos.find((v: any) => v.type === 'Trailer' && v.site === 'YouTube') || videos.find((v: any) => v.site === 'YouTube');
+    const allTrailers = videos.filter((v: any) => v.site === 'YouTube');
+    
+    const posters = metadata.images?.posters || [];
+    const backdrops = metadata.images?.backdrops || [];
+    const logos = metadata.images?.logos || [];
+    
+    // Release Dates & Certification
+    const releaseDates = metadata.release_dates?.results || [];
+    const indiaRelease = releaseDates.find((r: any) => r.iso_3166_1 === 'IN');
+    const certification = indiaRelease?.release_dates?.[0]?.certification || releaseDates.find((r: any) => r.iso_3166_1 === 'US')?.release_dates?.[0]?.certification || '';
+    
+    // Alternative Titles
+    const altTitles = metadata.alternative_titles?.titles || [];
 
+    // Original title from JSONB metadata (preserves UTF-8 encoding)
+    const correctOriginalTitle = metadata.original_title || movie.originalTitle || movie.title;
+
+    // Smart Currency Formatter — TMDB always stores in USD
     const formatCurrency = (amount?: number) => {
-        if (!amount) return '-';
-        if (amount >= 10000000) return `₹${(amount / 10000000).toFixed(2)} Cr`;
-        return `$${(amount / 1000000).toFixed(1)}M`;
+        if (!amount || amount === 0) return '-';
+        if (amount >= 1000000000) return `$${(amount / 1000000000).toFixed(2)}B`;
+        if (amount >= 1000000) return `$${(amount / 1000000).toFixed(1)}M`;
+        if (amount >= 1000) return `$${(amount / 1000).toFixed(0)}K`;
+        return `$${amount.toLocaleString()}`;
     };
 
     return (
-        <div className="min-h-screen bg-black text-white pb-32 font-sans selection:bg-amber-500 selection:text-black overflow-x-hidden">
-            {/* Cinematic Hero Section - Edge-to-Edge with Deep Blur */}
-            <div className="relative w-full h-[85vh] md:h-[95vh] flex items-end justify-center">
-                <div className="absolute inset-0 overflow-hidden">
-                    {movie.backdropUrl ? (
-                        <Image 
-                            src={`https://image.tmdb.org/t/p/original${movie.backdropUrl}`}
-                            alt={movie.title}
-                            fill
-                            className="object-cover object-top opacity-50 transform scale-105 blur-[2px]"
-                            priority
-                        />
-                    ) : (
-                        <div className="absolute inset-0 bg-zinc-900" />
+        <div className="min-h-screen bg-black text-white pb-32 font-sans selection:bg-blue-500 selection:text-white overflow-x-hidden">
+            
+            {/* ═══════════════════════════════════════════════════ */}
+            {/* HERO SECTION — Full Cinematic Backdrop              */}
+            {/* ═══════════════════════════════════════════════════ */}
+            <div className="relative w-full h-[60vh] md:h-[70vh] mb-0">
+                {movie.backdropUrl ? (
+                    <Image 
+                        src={`https://image.tmdb.org/t/p/original${movie.backdropUrl}`}
+                        alt={movie.title}
+                        fill
+                        className="object-cover object-top"
+                        priority
+                    />
+                ) : (
+                    <div className="absolute inset-0 bg-zinc-950" />
+                )}
+                
+                {/* Soft bottom fade into black page */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
+            </div>
+
+            {/* ═══════════════════════════════════════════════════ */}
+            {/* TITLE & ACTIONS — Below Hero                       */}
+            {/* ═══════════════════════════════════════════════════ */}
+            <div className="w-full max-w-[1600px] mx-auto px-6 md:px-16 -mt-20 md:-mt-28 relative z-20 mb-16">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-4 leading-none text-white drop-shadow-2xl">
+                    {movie.title}
+                </h1>
+                
+                <div className="flex flex-wrap gap-2 mb-6 items-center text-xs font-bold text-zinc-300 uppercase tracking-widest">
+                    <span>{movie.year}</span>
+                    {movie.runtime > 0 && (
+                        <>
+                            <span className="text-zinc-600">•</span>
+                            <span>{Math.floor(movie.runtime / 60)}h {movie.runtime % 60}m</span>
+                        </>
+                    )}
+                    {certification && (
+                        <>
+                            <span className="text-zinc-600">•</span>
+                            <span className="px-2 py-0.5 border border-zinc-600 rounded text-[10px]">{certification}</span>
+                        </>
+                    )}
+                    <span className="text-zinc-600">•</span>
+                    {genres.slice(0, 3).map((g: any, i: number) => (
+                        <span key={g.id}>
+                            {g.name}{i !== Math.min(genres.length, 3) - 1 ? ',' : ''}
+                        </span>
+                    ))}
+                    {movie.status === 'Post Production' && (
+                        <>
+                            <span className="text-zinc-600">•</span>
+                            <span className="text-orange-500">Coming Soon</span>
+                        </>
                     )}
                 </div>
-                
-                {/* Multi-layered Vignette & Gradients */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
-                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent z-10" />
-                <div className="absolute inset-0 bg-black/20 mix-blend-overlay z-10" />
-                
-                <div className="relative z-20 w-full max-w-[1600px] px-6 md:px-12 lg:px-20 pb-16">
-                    <div className="flex flex-col md:flex-row gap-10 md:gap-20 items-end w-full">
-                        
-                        {/* Ultra-Premium Glass Poster Overlapping */}
-                        <div className="shrink-0 w-48 md:w-[340px] aspect-[2/3] relative rounded-3xl overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,1)] border border-white/10 bg-zinc-900 group transform md:translate-y-12">
-                            {movie.posterUrl ? (
-                                <Image 
-                                    src={`https://image.tmdb.org/t/p/w780${movie.posterUrl}`}
-                                    alt={movie.title}
-                                    fill
-                                    className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
-                                    priority
-                                />
-                            ) : (
-                                <div className="flex items-center justify-center h-full opacity-20">
-                                    <Film className="w-16 h-16" />
-                                </div>
-                            )}
-                            
-                            {/* Seamless Trailer Play Overlay */}
-                            {officialTrailer && (
-                                <a 
-                                    href={`https://youtube.com/watch?v=${officialTrailer.key}`} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-md"
-                                >
-                                    <div className="w-24 h-24 rounded-full bg-white/10 border border-white/30 flex items-center justify-center backdrop-blur-xl hover:bg-white hover:text-black transition-all transform group-hover:scale-110 duration-500 shadow-[0_0_40px_rgba(255,255,255,0.2)]">
-                                        <PlayCircle className="w-10 h-10 ml-1" />
-                                    </div>
-                                </a>
-                            )}
-                        </div>
 
-                        {/* Title & Action Engine */}
-                        <div className="flex-1 pb-4 md:pb-8 w-full">
-                            <div className="flex flex-wrap gap-3 mb-6">
-                                {genres.map((g: any) => (
-                                    <span key={g.id} className="text-[10px] font-black text-white uppercase tracking-[0.25em] border border-white/20 rounded-full px-5 py-2 bg-white/5 backdrop-blur-xl shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-                                        {g.name}
-                                    </span>
-                                ))}
-                                {movie.status === 'Post Production' && (
-                                    <span className="text-[10px] font-black text-amber-500 uppercase tracking-[0.25em] border border-amber-500/30 rounded-full px-5 py-2 bg-amber-500/10 backdrop-blur-xl shadow-[0_0_15px_rgba(245,158,11,0.1)]">
-                                        Coming Soon
-                                    </span>
-                                )}
-                            </div>
-                            
-                            {/* Epic Title Treatment */}
-                            <h1 className="text-6xl md:text-[8rem] font-black tracking-tighter uppercase mb-2 leading-[0.85] text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-200 to-zinc-500 drop-shadow-[0_0_40px_rgba(0,0,0,0.8)] pb-2">
-                                {movie.title}
-                            </h1>
-                            
-                            {movie.tagline && (
-                                <p className="text-zinc-300 font-medium text-2xl md:text-4xl mb-8 drop-shadow-2xl max-w-4xl tracking-tight leading-tight italic opacity-90">
-                                    "{movie.tagline}"
-                                </p>
-                            )}
-                            
-                            <div className="flex flex-wrap items-center gap-8 text-sm font-bold text-zinc-300 uppercase tracking-[0.15em] mb-12">
-                                {movie.voteAverage > 0 && (
-                                    <div className="flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-yellow-500/5 px-4 py-2 rounded-xl border border-yellow-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(234,179,8,0.1)]">
-                                        <Star className="w-5 h-5 text-yellow-500 fill-yellow-500 drop-shadow-[0_0_10px_rgba(234,179,8,0.8)]" />
-                                        <span className="text-xl text-yellow-500">{movie.voteAverage.toFixed(1)}</span>
-                                        <span className="text-xs text-yellow-500/60">/ 10</span>
-                                    </div>
-                                )}
-                                {movie.year && (
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-1 h-1 rounded-full bg-zinc-500" />
-                                        <Calendar className="w-5 h-5 text-zinc-400" />
-                                        <span className="text-lg text-zinc-200">{movie.year}</span>
-                                    </div>
-                                )}
-                                {movie.runtime ? (
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-1 h-1 rounded-full bg-zinc-500" />
-                                        <Clock className="w-5 h-5 text-zinc-400" />
-                                        <span className="text-lg text-zinc-200">{Math.floor(movie.runtime / 60)}h {movie.runtime % 60}m</span>
-                                    </div>
-                                ) : null}
-                            </div>
-
-                            {/* Ultra Premium Glass Action Bar */}
-                            <div className="flex items-center gap-5 flex-wrap">
-                                <button className="group flex items-center justify-center gap-3 h-16 px-10 rounded-2xl font-black uppercase tracking-[0.2em] text-sm transition-all bg-white text-black hover:bg-zinc-200 shadow-[0_0_40px_rgba(255,255,255,0.15)] hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] hover:scale-105 active:scale-95">
-                                    <Bookmark className="w-5 h-5 group-hover:fill-black transition-colors" />
-                                    Watchlist
-                                </button>
-                                
-                                <div className="flex bg-zinc-900/60 border border-white/10 rounded-2xl p-1.5 backdrop-blur-2xl shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-                                    <button className="flex items-center justify-center w-16 h-14 rounded-xl transition-all text-zinc-400 hover:text-white hover:bg-white/10 active:scale-95 group relative" title="Watched">
-                                        <Check className="w-6 h-6 group-hover:text-green-500 transition-colors" />
-                                        <span className="absolute -bottom-10 opacity-0 group-hover:opacity-100 transition-opacity text-[10px] font-black uppercase tracking-widest text-green-500">Seen</span>
-                                    </button>
-                                    <div className="w-px h-8 bg-white/10 my-auto mx-1" />
-                                    <button className="flex items-center justify-center w-16 h-14 rounded-xl transition-all text-zinc-400 hover:text-white hover:bg-white/10 active:scale-95 group relative" title="Rate">
-                                        <Star className="w-6 h-6 group-hover:text-yellow-500 group-hover:fill-yellow-500 transition-colors" />
-                                        <span className="absolute -bottom-10 opacity-0 group-hover:opacity-100 transition-opacity text-[10px] font-black uppercase tracking-widest text-yellow-500">Rate</span>
-                                    </button>
-                                    <div className="w-px h-8 bg-white/10 my-auto mx-1" />
-                                    <button className="flex items-center justify-center w-16 h-14 rounded-xl transition-all text-zinc-400 hover:text-white hover:bg-white/10 active:scale-95 group relative" title="Write Review">
-                                        <Edit3 className="w-6 h-6 group-hover:text-purple-400 transition-colors" />
-                                        <span className="absolute -bottom-10 opacity-0 group-hover:opacity-100 transition-opacity text-[10px] font-black uppercase tracking-widest text-purple-400">Review</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                {/* Apple Style Action Bar */}
+                <div className="flex items-center gap-3 flex-wrap">
+                    {officialTrailer && (
+                        <a 
+                            href={`https://youtube.com/watch?v=${officialTrailer.key}`} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2 h-11 px-5 rounded-xl font-bold text-sm transition-all bg-white text-black hover:scale-105 shadow-lg"
+                        >
+                            🎬 Trailer
+                        </a>
+                    )}
+                    <button className="flex items-center justify-center gap-2 h-11 px-5 rounded-xl font-bold text-sm transition-all bg-zinc-900/80 backdrop-blur text-white hover:bg-zinc-800 border border-white/10">
+                        🔖 Watchlist
+                    </button>
+                    <button className="flex items-center justify-center gap-2 h-11 px-5 rounded-xl font-bold text-sm transition-all bg-zinc-900/80 backdrop-blur text-white hover:bg-zinc-800 border border-white/10">
+                        ✅ Seen
+                    </button>
+                    <button className="flex items-center justify-center gap-2 h-11 px-5 rounded-xl font-bold text-sm transition-all bg-zinc-900/80 backdrop-blur text-white hover:bg-zinc-800 border border-white/10">
+                        ⭐️ Rate
+                    </button>
+                    <button className="flex items-center justify-center gap-2 h-11 px-5 rounded-xl font-bold text-sm transition-all bg-zinc-900/80 backdrop-blur text-white hover:bg-zinc-800 border border-white/10">
+                        📝 Review
+                    </button>
                 </div>
             </div>
 
-            {/* Expansive Main Layout */}
-            <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20 mt-20 grid grid-cols-1 xl:grid-cols-12 gap-16 relative">
+            {/* ═══════════════════════════════════════════════════ */}
+            {/* MAIN CONTENT — 2 Column Layout                     */}
+            {/* ═══════════════════════════════════════════════════ */}
+            <div className="w-full max-w-[1600px] mx-auto px-6 md:px-16 grid grid-cols-1 lg:grid-cols-12 gap-16 xl:gap-20">
                 
-                {/* Left Column (Main Content) - Broader */}
-                <div className="xl:col-span-8 space-y-24">
+                {/* LEFT COLUMN: Editorial Content */}
+                <div className="lg:col-span-8 space-y-20">
                     
-                    {/* Premium App-Style OTT Hub */}
+                    {/* Synopsis Focus */}
+                    <section>
+                        {movie.tagline && (
+                            <p className="text-zinc-400 font-bold text-lg md:text-2xl mb-6 tracking-wide leading-relaxed italic border-l-4 border-zinc-800 pl-6">
+                                "{movie.tagline}"
+                            </p>
+                        )}
+                        <p className="text-zinc-100 leading-[1.8] text-lg md:text-xl font-medium max-w-4xl tracking-tight">
+                            {movie.overview || 'The plot is currently being kept under wraps. Be the first to contribute any leaks or official summaries!'}
+                        </p>
+                    </section>
+
+                    {/* Rich Color OTT Hub */}
                     {(streaming.length > 0 || theatrical.length > 0) && (
                         <section>
-                            <h2 className="text-[11px] font-black uppercase tracking-[0.3em] text-zinc-500 mb-8 flex items-center gap-6">
-                                Streaming On <div className="flex-1 h-px bg-gradient-to-r from-zinc-800 to-transparent" />
+                            <h2 className="text-sm font-black uppercase tracking-widest mb-6 text-zinc-500 border-b border-white/10 pb-4">
+                                Available On
                             </h2>
-                            <div className="flex flex-wrap gap-8">
+                            <div className="flex flex-wrap gap-4">
                                 {streaming.map(link => {
                                     const brand = getPlatformBrand(link.platform);
                                     return (
-                                        <a key={link.id} href={link.url || '#'} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-4 w-24">
-                                            <div className={`w-20 h-20 rounded-[1.5rem] ${brand.bg} flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:shadow-[0_0_40px_rgba(255,255,255,0.15)] transition-all duration-500 border border-white/5`}>
-                                                <span className={`font-black ${brand.color} tracking-tighter ${brand.initial.length > 2 ? 'text-sm' : 'text-3xl'}`}>
-                                                    {brand.initial}
-                                                </span>
+                                        <a key={link.id} href={link.url || '#'} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-1.5 w-[60px]">
+                                            <div className={`w-12 h-12 rounded-xl ${brand.logo ? 'bg-zinc-900' : (brand as any).fallbackBg || 'bg-zinc-800'} border border-white/10 overflow-hidden transition-transform hover:scale-110 shadow-lg flex items-center justify-center`}>
+                                                {brand.logo ? (
+                                                    <img src={brand.logo} alt={brand.name} className="w-full h-full object-cover" />
+                                                ) : (
+                                                    <span className="font-black text-white text-[9px]">{(brand as any).fallbackText || link.platform.substring(0, 3).toUpperCase()}</span>
+                                                )}
                                             </div>
-                                            <span className="text-[11px] font-bold text-zinc-400 uppercase text-center line-clamp-1 group-hover:text-white transition-colors tracking-widest w-full">
-                                                {link.platform}
+                                            <span className="text-[9px] font-bold text-zinc-400 uppercase tracking-widest text-center group-hover:text-white transition-colors truncate w-full">
+                                                {brand.name}
                                             </span>
                                         </a>
                                     );
@@ -242,14 +274,16 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
                                 {theatrical.map(link => {
                                     const brand = getPlatformBrand(link.platform);
                                     return (
-                                        <a key={link.id} href={link.url || '#'} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-4 w-24">
-                                            <div className={`w-20 h-20 rounded-[1.5rem] ${brand.bg} flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:shadow-[0_0_40px_rgba(248,68,100,0.4)] transition-all duration-500 border border-white/5`}>
-                                                <span className={`font-black ${brand.color} tracking-tighter text-sm`}>
-                                                    {brand.initial}
-                                                </span>
+                                        <a key={link.id} href={link.url || '#'} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-1.5 w-[60px]">
+                                            <div className={`w-12 h-12 rounded-xl ${brand.logo ? 'bg-zinc-900' : (brand as any).fallbackBg || 'bg-zinc-800'} border border-white/10 overflow-hidden transition-transform hover:scale-110 shadow-lg flex items-center justify-center`}>
+                                                {brand.logo ? (
+                                                    <img src={brand.logo} alt={brand.name} className="w-full h-full object-cover" />
+                                                ) : (
+                                                    <span className="font-black text-white text-[9px]">{(brand as any).fallbackText || link.platform.substring(0, 3).toUpperCase()}</span>
+                                                )}
                                             </div>
-                                            <span className="text-[11px] font-bold text-zinc-400 uppercase text-center line-clamp-1 group-hover:text-amber-500 transition-colors tracking-widest w-full">
-                                                Tickets
+                                            <span className="text-[9px] font-bold text-zinc-400 uppercase tracking-widest text-center group-hover:text-white transition-colors truncate w-full">
+                                                {brand.name}
                                             </span>
                                         </a>
                                     );
@@ -258,238 +292,244 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
                         </section>
                     )}
 
-                    {/* Premium Editorial Synopsis */}
-                    <section className="relative pl-8 md:pl-12">
-                        <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-amber-500 via-amber-700 to-transparent rounded-r-full" />
-                        <h2 className="text-[11px] font-black uppercase tracking-[0.3em] text-zinc-500 mb-6">The Story</h2>
-                        <p className="text-zinc-200 leading-[2] text-xl md:text-[1.75rem] font-medium max-w-4xl tracking-tight">
-                            {movie.overview || 'The plot is currently being kept under wraps. Be the first to contribute!'}
-                        </p>
-                    </section>
-
-                    {/* Cinematic Cast Cards */}
-                    <section className="relative">
-                        <div className="flex items-center justify-between mb-10">
-                            <h2 className="text-[11px] font-black uppercase tracking-[0.3em] text-zinc-500 flex items-center gap-6 w-full">
-                                Starring <div className="flex-1 h-px bg-gradient-to-r from-zinc-800 to-transparent" />
+                    {/* Round Avatar Cast (Apple TV Style) */}
+                    <section>
+                        <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+                            <h2 className="text-sm font-black uppercase tracking-widest text-zinc-500">
+                                Cast & Crew
                             </h2>
-                            <button className="shrink-0 flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.2em] text-white hover:text-amber-500 transition-colors ml-4 bg-zinc-900/80 px-4 py-2 rounded-full border border-white/10 hover:border-amber-500/50">
-                                Full Cast & Crew <ChevronRight className="w-4 h-4" />
-                            </button>
+                            <CastModal cast={cast} crew={crew} />
                         </div>
                         
-                        <div className="flex overflow-x-auto gap-6 pb-12 snap-x scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
-                            {cast.map(c => (
-                                <Link href={`/profile/${c.person.slug}`} key={c.person.id} className="shrink-0 w-[180px] group snap-start relative">
-                                    <div className="w-[180px] aspect-[2/3] rounded-[2rem] overflow-hidden bg-zinc-900 border border-white/5 mb-5 group-hover:border-white/30 group-hover:-translate-y-4 transition-all duration-500 relative shadow-xl group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
+                        <div className="flex overflow-x-auto gap-6 pb-4 snap-x scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
+                            {cast.slice(0, 10).map(c => (
+                                <Link href={`/profile/${c.person.slug}`} key={c.person.id} className="shrink-0 w-24 group snap-start flex flex-col items-center text-center">
+                                    <div className="w-24 h-24 rounded-full overflow-hidden bg-zinc-900 border border-white/5 mb-3 group-hover:border-blue-500 transition-colors relative shadow-lg">
                                         {(c.person.metadata as any)?.profile_path ? (
                                             <Image 
-                                                src={`https://image.tmdb.org/t/p/w500${(c.person.metadata as any).profile_path}`}
-                                                alt={c.person.name} fill className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                                src={`https://image.tmdb.org/t/p/w185${(c.person.metadata as any).profile_path}`}
+                                                alt={c.person.name} fill className="object-cover"
                                             />
                                         ) : (
-                                            <div className="absolute inset-0 flex items-center justify-center text-5xl font-black text-zinc-800 bg-zinc-900/50">
+                                            <div className="absolute inset-0 flex items-center justify-center text-2xl font-black text-zinc-800 bg-black">
                                                 {c.person.name.charAt(0)}
                                             </div>
                                         )}
-                                        {/* Epic Bottom Fade for Text */}
-                                        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/60 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
-                                        
-                                        <div className="absolute bottom-6 left-6 right-6">
-                                            <h3 className="font-black text-lg text-white uppercase tracking-wider line-clamp-2 leading-tight drop-shadow-md">
-                                                {c.person.name}
-                                            </h3>
-                                        </div>
                                     </div>
-                                    <p className="text-[11px] font-bold text-zinc-500 uppercase tracking-[0.15em] line-clamp-2 px-2">
+                                    <h3 className="font-bold text-xs text-white tracking-tight line-clamp-1 mb-1 group-hover:text-blue-500 transition-colors">
+                                        {c.person.name}
+                                    </h3>
+                                    <p className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest line-clamp-1">
                                         {c.character}
                                     </p>
                                 </Link>
                             ))}
-                            {/* Fade out edge effect */}
-                            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent pointer-events-none hidden md:block" />
                         </div>
                     </section>
 
-                    {/* Highly Polished TFIverse Community Sections */}
-                    <section className="bg-zinc-900/20 rounded-[3rem] p-8 md:p-14 border border-white/5 backdrop-blur-3xl relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-500/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-                        
-                        <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-16 flex items-center gap-4 relative z-10">
-                            The Hub <span className="text-zinc-600 text-sm font-bold tracking-[0.3em] uppercase">Community</span>
-                        </h2>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-                            
-                            {/* Member Reviews */}
-                            <div className="bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 rounded-[2rem] p-8 border border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer group flex flex-col justify-between h-[300px] shadow-2xl hover:shadow-[0_0_50px_rgba(255,255,255,0.05)] hover:-translate-y-2">
-                                <div>
-                                    <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8 border border-white/10 group-hover:bg-white group-hover:text-black transition-all">
-                                        <MessageSquare className="w-6 h-6 text-white group-hover:text-black transition-colors" />
+                    {/* Posters & Gallery (Missing Data Addition) */}
+                    {(posters.length > 0 || backdrops.length > 0) && (
+                        <section>
+                            <h2 className="text-sm font-black uppercase tracking-widest mb-6 text-zinc-500 border-b border-white/10 pb-4">
+                                Posters & Gallery
+                            </h2>
+                            <div className="flex overflow-x-auto gap-4 pb-4 snap-x scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
+                                {backdrops.slice(0, 5).map((img: any, i: number) => (
+                                    <div key={`backdrop-${i}`} className="shrink-0 w-80 aspect-video rounded-xl overflow-hidden bg-zinc-900 relative shadow-md snap-start">
+                                        <Image src={`https://image.tmdb.org/t/p/w780${img.file_path}`} alt="Gallery Backdrop" fill className="object-cover hover:scale-105 transition-transform duration-500" />
                                     </div>
-                                    <h3 className="font-black text-2xl uppercase tracking-widest mb-4">Fan Reviews</h3>
-                                    <p className="text-zinc-400 text-sm font-medium leading-[1.8]">Read raw, unfiltered thoughts from hardcore TFI fans.</p>
-                                </div>
-                                <div className="flex items-center gap-3 text-[11px] font-black text-white uppercase tracking-[0.2em] opacity-50 group-hover:opacity-100 transition-opacity">
-                                    0 Written <ChevronRight className="w-4 h-4" />
-                                </div>
+                                ))}
+                                {posters.slice(0, 5).map((img: any, i: number) => (
+                                    <div key={`poster-${i}`} className="shrink-0 w-40 aspect-[2/3] rounded-xl overflow-hidden bg-zinc-900 relative shadow-md snap-start">
+                                        <Image src={`https://image.tmdb.org/t/p/w342${img.file_path}`} alt="Gallery Poster" fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* Trailers & Clips (Missing Data Addition) */}
+                    {allTrailers.length > 0 && (
+                        <section>
+                            <h2 className="text-sm font-black uppercase tracking-widest mb-6 text-zinc-500 border-b border-white/10 pb-4">
+                                Trailers & Clips
+                            </h2>
+                            <div className="flex overflow-x-auto gap-4 pb-4 snap-x scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
+                                {allTrailers.map((vid: any) => (
+                                    <a key={vid.id} href={`https://youtube.com/watch?v=${vid.key}`} target="_blank" rel="noopener noreferrer" className="shrink-0 w-72 aspect-video rounded-xl overflow-hidden bg-zinc-900 relative shadow-md group snap-start">
+                                        <Image src={`https://img.youtube.com/vi/${vid.key}/mqdefault.jpg`} alt={vid.name} fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <div className="w-12 h-12 rounded-full bg-black/60 flex items-center justify-center backdrop-blur-md group-hover:scale-110 transition-transform">
+                                                <PlayCircle className="w-5 h-5 text-white" />
+                                            </div>
+                                        </div>
+                                        <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black to-transparent p-4">
+                                            <p className="text-xs font-bold text-white line-clamp-1">{vid.name}</p>
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* Community Hub Upgrade */}
+                    <section className="bg-[#111] rounded-[2rem] p-8 md:p-12 border border-white/5">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                            <div>
+                                <h2 className="text-2xl md:text-3xl font-black tracking-tight mb-1 text-white">
+                                    Community Hub
+                                </h2>
+                                <p className="text-zinc-500 font-bold text-sm">Discussions, Tier Lists, and Fan Art</p>
+                            </div>
+                            <Link href={`/movies/${movie.slug}/hub`} className="px-6 py-3 rounded-full bg-blue-600 text-white font-bold text-sm hover:bg-blue-500 transition-colors text-center">
+                                Enter Hub
+                            </Link>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div className="p-6 bg-zinc-900/50 rounded-2xl hover:bg-zinc-900 transition-colors cursor-pointer group border border-transparent hover:border-white/10">
+                                <div className="text-2xl mb-4">💬</div>
+                                <h3 className="font-bold text-lg mb-2 text-white">Reviews</h3>
+                                <p className="text-zinc-500 text-xs font-medium leading-relaxed mb-4">Read raw, unfiltered diaries from the TFIverse community.</p>
+                                <span className="text-xs font-bold text-blue-500 group-hover:text-blue-400">Read All &rarr;</span>
                             </div>
 
-                            {/* Awards Module */}
-                            <div className="bg-gradient-to-br from-yellow-900/40 to-zinc-900/80 rounded-[2rem] p-8 border border-yellow-500/20 hover:border-yellow-500/60 transition-all duration-500 cursor-pointer group flex flex-col justify-between h-[300px] shadow-2xl hover:shadow-[0_0_50px_rgba(234,179,8,0.1)] hover:-translate-y-2">
-                                <div>
-                                    <div className="w-14 h-14 bg-yellow-500/20 rounded-2xl flex items-center justify-center mb-8 border border-yellow-500/30 group-hover:bg-yellow-500 transition-all">
-                                        <Trophy className="w-6 h-6 text-yellow-500 group-hover:text-black transition-colors" />
-                                    </div>
-                                    <h3 className="font-black text-2xl uppercase tracking-widest mb-4 text-yellow-500">Awards</h3>
-                                    <p className="text-zinc-400 text-sm font-medium leading-[1.8]">View community-voted honors and industry recognitions.</p>
-                                </div>
-                                <div className="flex items-center gap-3 text-[11px] font-black text-yellow-500 uppercase tracking-[0.2em] opacity-70 group-hover:opacity-100 transition-opacity">
-                                    Nominations <ChevronRight className="w-4 h-4" />
-                                </div>
+                            <div className="p-6 bg-zinc-900/50 rounded-2xl hover:bg-zinc-900 transition-colors cursor-pointer group border border-transparent hover:border-white/10">
+                                <div className="text-2xl mb-4">🏆</div>
+                                <h3 className="font-bold text-lg mb-2 text-white">Awards</h3>
+                                <p className="text-zinc-500 text-xs font-medium leading-relaxed mb-4">Box office milestones and community-voted honors.</p>
+                                <span className="text-xs font-bold text-blue-500 group-hover:text-blue-400">View Stats &rarr;</span>
                             </div>
 
-                            {/* Memes & Edits */}
-                            <div className="bg-gradient-to-br from-purple-900/40 to-zinc-900/80 rounded-[2rem] p-8 border border-purple-500/20 hover:border-purple-500/60 transition-all duration-500 cursor-pointer group flex flex-col justify-between h-[300px] shadow-2xl hover:shadow-[0_0_50px_rgba(168,85,247,0.1)] hover:-translate-y-2">
-                                <div>
-                                    <div className="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-8 border border-purple-500/30 group-hover:bg-purple-500 transition-all">
-                                        <ImageIcon className="w-6 h-6 text-purple-400 group-hover:text-black transition-colors" />
-                                    </div>
-                                    <h3 className="font-black text-2xl uppercase tracking-widest mb-4 text-purple-400">Memes</h3>
-                                    <p className="text-zinc-400 text-sm font-medium leading-[1.8]">The ultimate collection of fan-made art and viral edits.</p>
-                                </div>
-                                <div className="flex items-center gap-3 text-[11px] font-black text-purple-400 uppercase tracking-[0.2em] opacity-70 group-hover:opacity-100 transition-opacity">
-                                    Gallery <ChevronRight className="w-4 h-4" />
-                                </div>
+                            <div className="p-6 bg-zinc-900/50 rounded-2xl hover:bg-zinc-900 transition-colors cursor-pointer group border border-transparent hover:border-white/10">
+                                <div className="text-2xl mb-4">🖼️</div>
+                                <h3 className="font-bold text-lg mb-2 text-white">Memes & Edits</h3>
+                                <p className="text-zinc-500 text-xs font-medium leading-relaxed mb-4">Explore high-fidelity fan art and viral movie edits.</p>
+                                <span className="text-xs font-bold text-blue-500 group-hover:text-blue-400">Explore &rarr;</span>
                             </div>
                         </div>
                     </section>
                 </div>
 
-                {/* Right Column (Data Sheet) */}
-                <div className="xl:col-span-4 space-y-8">
-                    <div className="bg-gradient-to-b from-zinc-900/80 to-zinc-900/30 rounded-[3rem] p-10 border border-white/10 backdrop-blur-3xl sticky top-8 shadow-[0_0_60px_rgba(0,0,0,0.5)]">
+                {/* ═══════════════════════════════════════════════════ */}
+                {/* RIGHT COLUMN: The Data Matrix                      */}
+                {/* ═══════════════════════════════════════════════════ */}
+                <div className="lg:col-span-4">
+                    <div className="sticky top-8 space-y-6">
                         
-                        {/* Links Row */}
-                        <div className="flex justify-between items-center pb-10 mb-10 border-b border-white/5">
-                            <h3 className="font-black uppercase tracking-[0.3em] text-white/40 text-[10px]">
-                                Official Links
-                            </h3>
-                            <div className="flex gap-4">
-                                {externalIds.imdb_id && (
-                                    <a href={`https://www.imdb.com/title/${externalIds.imdb_id}`} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-black hover:scale-110 transition-all duration-300" title="IMDB">
-                                        <Film className="w-5 h-5" />
-                                    </a>
-                                )}
-                                {externalIds.instagram_id && (
-                                    <a href={`https://instagram.com/${externalIds.instagram_id}`} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-black hover:scale-110 transition-all duration-300" title="Instagram">
-                                        <Camera className="w-5 h-5" />
-                                    </a>
-                                )}
-                                {externalIds.twitter_id && (
-                                    <a href={`https://twitter.com/${externalIds.twitter_id}`} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white hover:text-black hover:scale-110 transition-all duration-300" title="Twitter">
-                                        <MessageCircle className="w-5 h-5" />
-                                    </a>
-                                )}
+                        {/* Movie Poster — compact Apple TV style */}
+                        <div className="relative group w-3/4 mx-auto">
+                            <div className="absolute -inset-1.5 bg-gradient-to-b from-blue-500/10 via-purple-500/5 to-transparent rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity" />
+                            <div className="relative w-full aspect-[2/3] rounded-2xl overflow-hidden border border-white/10 bg-zinc-900 shadow-2xl">
+                            {movie.posterUrl ? (
+                                <Image src={`https://image.tmdb.org/t/p/w500${movie.posterUrl}`} alt={movie.title} fill className="object-cover" />
+                            ) : (
+                                <div className="absolute inset-0 flex items-center justify-center"><Film className="w-16 h-16 text-zinc-800" /></div>
+                            )}
                             </div>
                         </div>
+                        {/* Rich Color Social / External Links */}
+                        <div className="flex gap-3 flex-wrap">
+                            {homepage && (
+                                <a href={homepage} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors" title="Official Website"><Globe className="w-4 h-4 text-white" /></a>
+                            )}
+                            {externalIds.imdb_id && (
+                                <a href={`https://www.imdb.com/title/${externalIds.imdb_id}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#F5C518] flex items-center justify-center hover:brightness-110 transition-colors shadow-lg" title="IMDB"><span className="font-black text-black text-[10px] tracking-tighter">IMDb</span></a>
+                            )}
+                            {(externalIds.instagram_id || externalIds.instagram) && (
+                                <a href={`https://instagram.com/${externalIds.instagram_id || externalIds.instagram}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#e6683c] to-[#bc1888] flex items-center justify-center hover:brightness-110 transition-colors shadow-lg" title="Instagram"><Camera className="w-4 h-4 text-white" /></a>
+                            )}
+                            {(externalIds.twitter_id || externalIds.twitter) && (
+                                <a href={`https://twitter.com/${externalIds.twitter_id || externalIds.twitter}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-black border border-white/20 flex items-center justify-center hover:bg-zinc-900 transition-colors" title="X"><span className="font-black text-white text-[12px]">X</span></a>
+                            )}
+                            {externalIds.wikidata_id && (
+                                <a href={`https://www.wikidata.org/wiki/${externalIds.wikidata_id}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors" title="Wikidata"><span className="font-black text-white text-[9px]">Wiki</span></a>
+                            )}
+                        </div>
 
-                        <div className="space-y-10">
+                        {/* Info Card */}
+                        <div className="bg-[#111] border border-white/5 rounded-3xl p-6 space-y-5">
+                            <p className="text-[10px] font-black text-zinc-600 uppercase tracking-widest border-b border-white/5 pb-3">Film Details</p>
                             
-                            <div>
-                                <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em] mb-3">Original Title</p>
-                                <p className="text-white font-black text-lg tracking-widest">{movie.originalTitle || movie.title}</p>
-                            </div>
+                            {director && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">Director</p><Link href={`/profile/${director.person.slug}`} className="text-sm font-bold text-white hover:text-blue-500 transition-colors">{director.person.name}</Link></div>}
+                            
+                            {writers.length > 0 && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">Writers</p>{writers.map((w: any) => <div key={w.person.id} className="flex justify-between"><Link href={`/profile/${w.person.slug}`} className="text-sm font-bold text-zinc-300 hover:text-white">{w.person.name}</Link><span className="text-[9px] text-zinc-600 uppercase">{w.job}</span></div>)}</div>}
+                            
+                            {musicDirectors.length > 0 && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">🎵 Music</p>{musicDirectors.map((m: any) => <Link key={m.person.id} href={`/profile/${m.person.slug}`} className="text-sm font-bold text-zinc-300 hover:text-white block">{m.person.name}</Link>)}</div>}
+                            
+                            {cinematographers.length > 0 && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">📷 Cinematography</p>{cinematographers.map((c: any) => <Link key={c.person.id} href={`/profile/${c.person.slug}`} className="text-sm font-bold text-zinc-300 hover:text-white block">{c.person.name}</Link>)}</div>}
+                            
+                            {editors.length > 0 && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">✂️ Editing</p>{editors.map((e: any) => <span key={e.person.id} className="text-sm font-bold text-zinc-300 block">{e.person.name}</span>)}</div>}
+                            
+                            {producers.length > 0 && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">Producers</p><div className="flex flex-wrap gap-x-3 gap-y-1">{producers.slice(0, 5).map((p: any) => <Link key={p.person.id} href={`/profile/${p.person.slug}`} className="text-sm font-bold text-zinc-300 hover:text-white">{p.person.name}</Link>)}</div></div>}
 
-                            {director && (
-                                <div>
-                                    <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em] mb-3">Director</p>
-                                    <Link href={`/profile/${director.person.slug}`} className="inline-block text-amber-500 hover:text-amber-400 font-black text-lg tracking-widest transition-colors">
-                                        {director.person.name}
-                                    </Link>
-                                </div>
-                            )}
+                            {artDept.length > 0 && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">🎨 Art & Design</p>{artDept.map((a: any) => <span key={a.id} className="text-sm font-bold text-zinc-300 block">{a.name} <span className="text-[9px] text-zinc-600">({a.job})</span></span>)}</div>}
 
-                            {writers.length > 0 && (
-                                <div>
-                                    <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em] mb-3">Writers</p>
-                                    <div className="flex flex-col gap-3">
-                                        {writers.slice(0, 3).map((w: any) => (
-                                            <Link key={w.person.id} href={`/profile/${w.person.slug}`} className="group flex justify-between items-center text-white hover:text-amber-500 transition-colors">
-                                                <span className="font-bold text-sm tracking-widest">{w.person.name}</span>
-                                                <span className="text-zinc-600 text-[10px] uppercase font-black tracking-widest group-hover:text-amber-500/50">{w.job}</span>
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
+                            {costumes.length > 0 && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">👗 Costume</p>{costumes.map((c: any) => <span key={c.id} className="text-sm font-bold text-zinc-300 block">{c.name}</span>)}</div>}
 
-                            <div className="grid grid-cols-2 gap-8 p-6 bg-black/40 rounded-3xl border border-white/5">
-                                <div>
-                                    <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em] mb-2">Budget</p>
-                                    <p className="text-white font-black text-lg tracking-widest">
-                                        {formatCurrency(movie.budget || 0)}
-                                    </p>
-                                </div>
-                                
-                                <div>
-                                    <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em] mb-2">Revenue</p>
-                                    <p className="text-green-500 font-black text-lg tracking-widest drop-shadow-[0_0_10px_rgba(34,197,94,0.3)]">
-                                        {formatCurrency(movie.revenue || 0)}
-                                    </p>
-                                </div>
-                            </div>
+                            {choreographers.length > 0 && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">💃 Choreography</p>{choreographers.map((c: any) => <span key={c.id} className="text-sm font-bold text-zinc-300 block">{c.name}</span>)}</div>}
 
-                            {productionCountries.length > 0 && (
-                                <div>
-                                    <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em] mb-3">Origin</p>
-                                    <p className="text-zinc-300 font-bold text-sm tracking-[0.2em] uppercase">
-                                        {productionCountries.map((c: any) => c.name).join(', ')}
-                                    </p>
-                                </div>
-                            )}
-
-                            {languages.length > 0 && (
-                                <div>
-                                    <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em] mb-3">Audio</p>
-                                    <p className="text-zinc-300 font-bold text-sm tracking-[0.2em] uppercase">
-                                        {languages.map((l: any) => l.english_name || l.name).join(', ')}
-                                    </p>
-                                </div>
-                            )}
-
-                            {companies.length > 0 && (
-                                <div>
-                                    <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em] mb-3">Production</p>
-                                    <p className="text-zinc-400 font-medium text-sm leading-relaxed tracking-wide">
-                                        {companies.map((c: any) => c.name).join(' • ')}
-                                    </p>
-                                </div>
-                            )}
-
-                            {keywords.length > 0 && (
-                                <div className="pt-8 border-t border-white/5">
-                                    <p className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em] mb-5">Keywords</p>
-                                    <div className="flex flex-wrap gap-2.5">
-                                        {keywords.slice(0, 15).map((k: any) => (
-                                            <span key={k.id} className="text-[10px] font-bold text-zinc-400 bg-white/5 px-4 py-2 rounded-xl border border-white/5 uppercase tracking-widest hover:bg-white hover:text-black transition-colors cursor-pointer">
-                                                {k.name}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-
-                            <div className="pt-8 border-t border-white/5">
-                                <button className="w-full flex items-center justify-center gap-3 h-16 rounded-2xl font-black uppercase tracking-[0.2em] text-xs transition-all bg-white/5 text-zinc-300 border border-white/10 hover:bg-white hover:text-black hover:scale-[1.02] active:scale-[0.98] shadow-xl">
-                                    <Edit3 className="w-4 h-4" />
-                                    Suggest Edits
-                                </button>
-                                <p className="text-center text-[10px] font-black text-amber-500/70 mt-5 uppercase tracking-[0.3em]">
-                                    Earn +50 points
-                                </p>
-                            </div>
+                            {stunts.length > 0 && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">🥊 Stunts</p>{stunts.map((s: any) => <span key={s.id} className="text-sm font-bold text-zinc-300 block">{s.name}</span>)}</div>}
                         </div>
+
+                        {/* Financial & Metadata Card */}
+                        <div className="bg-[#111] border border-white/5 rounded-3xl p-6 space-y-5">
+                            <p className="text-[10px] font-black text-zinc-600 uppercase tracking-widest border-b border-white/5 pb-3">Information</p>
+                            
+                            <div className="grid grid-cols-2 gap-4">
+                                <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">💰 Budget</p><p className="text-sm font-bold text-white">{formatCurrency(movie.budget)}</p></div>
+                                <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">📊 Revenue</p><p className="text-sm font-bold text-white">{formatCurrency(movie.revenue)}</p></div>
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-4">
+                                <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">⭐ Rating</p><p className="text-sm font-bold text-white">{movie.voteAverage?.toFixed(1) || '-'} <span className="text-[9px] text-zinc-500">({voteCount.toLocaleString()} votes)</span></p></div>
+                                <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">🔥 Popularity</p><p className="text-sm font-bold text-white">{popularityScore > 0 ? popularityScore.toFixed(1) : '-'}</p></div>
+                            </div>
+
+                            {certification && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">🎬 Certification</p><p className="text-sm font-bold text-white">{certification}</p></div>}
+
+                            <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">Original Title</p><p className="text-sm font-bold text-zinc-300" style={{fontFamily: "'Noto Sans Telugu', 'Noto Sans Devanagari', 'Noto Sans Kannada', 'Noto Sans Tamil', 'Noto Sans Malayalam', system-ui, sans-serif"}}>{correctOriginalTitle}</p></div>
+                            
+                            {collection && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">📀 Collection</p><p className="text-sm font-bold text-zinc-300">{collection.name}</p></div>}
+                            
+                            <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">🌍 Origin</p><p className="text-sm font-bold text-zinc-300">{productionCountries.length > 0 ? productionCountries.map((c: any) => c.name).join(', ') : '-'}</p></div>
+                            
+                            {metadata.spoken_languages && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">🗣️ Audio</p><p className="text-sm font-bold text-zinc-300">{metadata.spoken_languages.map((l: any) => l.english_name || l.name).join(', ')}</p></div>}
+
+                            {companies.length > 0 && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-2">🏢 Studios</p>{companies.map((c: any) => <p key={c.id} className="text-sm font-bold text-zinc-300">{c.name}</p>)}</div>}
+                        </div>
+
+                        {/* Keywords / Tags */}
+                        {keywords.length > 0 && (
+                            <div className="bg-[#111] border border-white/5 rounded-3xl p-6">
+                                <p className="text-[10px] font-black text-zinc-600 uppercase tracking-widest border-b border-white/5 pb-3 mb-4">Tags</p>
+                                <div className="flex flex-wrap gap-2">
+                                    {keywords.slice(0, 20).map((k: any) => (
+                                        <span key={k.id} className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest px-3 py-1.5 border border-zinc-800 rounded-lg hover:text-white hover:border-zinc-600 cursor-pointer transition-colors">{k.name}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Alternative Titles */}
+                        {altTitles.length > 0 && (
+                            <div className="bg-[#111] border border-white/5 rounded-3xl p-6">
+                                <p className="text-[10px] font-black text-zinc-600 uppercase tracking-widest border-b border-white/5 pb-3 mb-4">Also Known As</p>
+                                <div className="space-y-2">
+                                    {altTitles.slice(0, 8).map((t: any, i: number) => (
+                                        <div key={i} className="flex justify-between items-center">
+                                            <span className="text-sm font-bold text-zinc-300">{t.title}</span>
+                                            <span className="text-[9px] font-bold text-zinc-600 uppercase">{t.iso_3166_1}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        <button className="w-full flex items-center justify-center gap-2 h-12 rounded-xl bg-zinc-900 border border-white/5 text-zinc-400 font-bold text-sm hover:bg-zinc-800 transition-colors">
+                            <Edit3 className="w-4 h-4" /> Suggest Edit
+                        </button>
+
                     </div>
                 </div>
             </div>
