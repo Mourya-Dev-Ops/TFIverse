@@ -174,7 +174,7 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
                 
                 <div className="flex flex-wrap gap-2 mb-6 items-center text-xs font-bold text-zinc-300 uppercase tracking-widest">
                     <span>{movie.year}</span>
-                    {movie.runtime > 0 && (
+                    {movie.runtime && movie.runtime > 0 && (
                         <>
                             <span className="text-zinc-600">•</span>
                             <span>{Math.floor(movie.runtime / 60)}h {movie.runtime % 60}m</span>
@@ -477,8 +477,8 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
                             <p className="text-[10px] font-black text-zinc-600 uppercase tracking-widest border-b border-white/5 pb-3">Information</p>
                             
                             <div className="grid grid-cols-2 gap-4">
-                                <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">💰 Budget</p><p className="text-sm font-bold text-white">{formatCurrency(movie.budget)}</p></div>
-                                <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">📊 Revenue</p><p className="text-sm font-bold text-white">{formatCurrency(movie.revenue)}</p></div>
+                                <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">💰 Budget</p><p className="text-sm font-bold text-white">{formatCurrency(movie.budget ?? undefined)}</p></div>
+                                <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">📊 Revenue</p><p className="text-sm font-bold text-white">{formatCurrency(movie.revenue ?? undefined)}</p></div>
                             </div>
 
                             <div className="grid grid-cols-2 gap-4">
