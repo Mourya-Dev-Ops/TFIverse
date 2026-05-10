@@ -5,7 +5,7 @@ import { FaInstagram, FaTwitter, FaImdb, FaCar, FaHome, FaStar, FaQuoteLeft, FaD
 import { Edit3 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import SuggestionModal from "../../components/suggestion-modal";
+import SuggestionModal from "../../../components/suggestion-modal";
 
 // Premium Thematic Engine
 const THEMES: Record<string, any> = {

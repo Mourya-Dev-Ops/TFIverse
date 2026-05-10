@@ -35,7 +35,7 @@ export const MovieCard = ({ movie }: { movie: any }) => (
                 </div>
             </div>
 
-            {movie.voteAverage > 0 && (
+            {movie.voteAverage !== null && movie.voteAverage > 0 && (
                 <div className="absolute top-3 right-3 px-2 py-1 rounded-lg bg-black/80 backdrop-blur-md border border-white/10 flex items-center gap-1 z-20">
                     <Star className="w-3 h-3 text-white fill-white" />
                     <span className="text-[10px] font-bold text-white">{movie.voteAverage.toFixed(1)}</span>

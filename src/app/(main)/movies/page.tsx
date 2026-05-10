@@ -26,7 +26,7 @@ export default async function MoviesPage({
     const isFiltering = query || year !== 'all' || platform !== 'all' || sortBy !== 'popularity';
 
     // If user is actively searching/filtering, show grid
-    let gridMovies = [];
+    let gridMovies: any[] = [];
     if (isFiltering) {
         gridMovies = await getMovies({ 
             page, 
@@ -96,7 +96,7 @@ export default async function MoviesPage({
                                         <span>{Math.floor(heroMovie.runtime / 60)}h {heroMovie.runtime % 60}m</span>
                                     </>
                                 )}
-                                {heroMovie.voteAverage > 0 && (
+                                {heroMovie.voteAverage !== null && heroMovie.voteAverage > 0 && (
                                     <>
                                         <span className="text-zinc-600">•</span>
                                         <span className="flex items-center gap-1 text-white">
