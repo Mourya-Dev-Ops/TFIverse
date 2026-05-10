@@ -167,7 +167,7 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
             {/* ═══════════════════════════════════════════════════ */}
             {/* TITLE & ACTIONS — Below Hero                       */}
             {/* ═══════════════════════════════════════════════════ */}
-            <div className="w-full max-w-[1600px] mx-auto px-6 md:px-16 -mt-20 md:-mt-28 relative z-20 mb-16">
+            <div className="w-full max-w-[1600px] mx-auto px-6 md:px-16 pt-12 md:pt-16 relative z-20 mb-16">
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-4 leading-none text-white drop-shadow-2xl">
                     {movie.title}
                 </h1>
