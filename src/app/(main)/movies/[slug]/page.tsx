@@ -1,9 +1,13 @@
 import { getMovieDetails } from '@/app/actions/movies';
+import { getEngagementData } from '@/app/actions/engagement';
 import { Film, Star, Clock, PlayCircle, Calendar, Plus, Check, MoreHorizontal, Trophy, MessageSquare, Edit3, Image as ImageIcon, Globe, Camera, MessageCircle, ChevronRight, Bookmark, Heart, ThumbsUp, Sparkles, ExternalLink, Link2, Users, Music, Video, LayoutGrid } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CastModal } from './components/CastModal';
+import { EngagementButtons } from './components/EngagementButtons';
+import { VideoModal } from './components/VideoModal';
+import { SimilarMovies } from './components/SimilarMovies';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
@@ -64,6 +68,8 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
     if (!movie) {
         return notFound();
     }
+
+    const engagementData = await getEngagementData(slug);
 
     // --- DATA EXTRACTION & DEDUPLICATION ---
     const deduplicateCredits = (creditsArray: any[]) => {
@@ -203,27 +209,9 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
                 {/* Apple Style Action Bar */}
                 <div className="flex items-center gap-3 flex-wrap">
                     {officialTrailer && (
-                        <a 
-                            href={`https://youtube.com/watch?v=${officialTrailer.key}`} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2 h-11 px-5 rounded-xl font-bold text-sm transition-all bg-white text-black hover:scale-105 shadow-lg"
-                        >
-                            🎬 Trailer
-                        </a>
+                        <VideoModal videoId={officialTrailer.key} title="Official Trailer" isHero={true} />
                     )}
-                    <button className="flex items-center justify-center gap-2 h-11 px-5 rounded-xl font-bold text-sm transition-all bg-zinc-900/80 backdrop-blur text-white hover:bg-zinc-800 border border-white/10">
-                        🔖 Watchlist
-                    </button>
-                    <button className="flex items-center justify-center gap-2 h-11 px-5 rounded-xl font-bold text-sm transition-all bg-zinc-900/80 backdrop-blur text-white hover:bg-zinc-800 border border-white/10">
-                        ✅ Seen
-                    </button>
-                    <button className="flex items-center justify-center gap-2 h-11 px-5 rounded-xl font-bold text-sm transition-all bg-zinc-900/80 backdrop-blur text-white hover:bg-zinc-800 border border-white/10">
-                        ⭐️ Rate
-                    </button>
-                    <button className="flex items-center justify-center gap-2 h-11 px-5 rounded-xl font-bold text-sm transition-all bg-zinc-900/80 backdrop-blur text-white hover:bg-zinc-800 border border-white/10">
-                        📝 Review
-                    </button>
+                    <EngagementButtons movieSlug={slug} initialData={engagementData} />
                 </div>
             </div>
 
@@ -356,17 +344,7 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
                             </h2>
                             <div className="flex overflow-x-auto gap-4 pb-4 snap-x scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
                                 {allTrailers.map((vid: any) => (
-                                    <a key={vid.id} href={`https://youtube.com/watch?v=${vid.key}`} target="_blank" rel="noopener noreferrer" className="shrink-0 w-72 aspect-video rounded-xl overflow-hidden bg-zinc-900 relative shadow-md group snap-start">
-                                        <Image src={`https://img.youtube.com/vi/${vid.key}/mqdefault.jpg`} alt={vid.name} fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
-                                        <div className="absolute inset-0 flex items-center justify-center">
-                                            <div className="w-12 h-12 rounded-full bg-black/60 flex items-center justify-center backdrop-blur-md group-hover:scale-110 transition-transform">
-                                                <PlayCircle className="w-5 h-5 text-white" />
-                                            </div>
-                                        </div>
-                                        <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black to-transparent p-4">
-                                            <p className="text-xs font-bold text-white line-clamp-1">{vid.name}</p>
-                                        </div>
-                                    </a>
+                                    <VideoModal key={vid.id} videoId={vid.key} title={vid.name} />
                                 ))}
                             </div>
                         </section>
@@ -409,6 +387,8 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
                             </div>
                         </div>
                     </section>
+
+                    <SimilarMovies recommendations={metadata.recommendations?.results || metadata.similar?.results} />
                 </div>
 
                 {/* ═══════════════════════════════════════════════════ */}

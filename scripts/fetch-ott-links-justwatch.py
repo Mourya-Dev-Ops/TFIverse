@@ -211,6 +211,12 @@ def process_movie(cursor, movie):
     # Fetch OTT data from JustWatch
     ott_links = fetch_ott_from_justwatch(title, year)
 
+    # Always update last_sync_at so we don't retry this movie immediately
+    try:
+        cursor.execute("UPDATE movies SET last_ott_sync_at = %s WHERE id = %s", (datetime.now(), movie_id))
+    except Exception as e:
+        print(f"   ⚠️  Failed to update last_ott_sync_at: {str(e)}")
+
     if not ott_links:
         print(f"   ⚠️  No OTT data available")
         stats['no_data'] += 1
@@ -254,14 +260,11 @@ def main():
         cursor.execute("""
             SELECT m.id, m.title, m.year
             FROM movies m
-            WHERE NOT EXISTS (
-                SELECT 1 FROM movie_ott_links ott 
-                WHERE ott.movie_id = m.id
-            )
+            WHERE m.last_ott_sync_at IS NULL
             AND m.year IS NOT NULL
             AND m.year <= EXTRACT(YEAR FROM CURRENT_DATE)
-            ORDER BY m.release_date ASC NULLS LAST
-            LIMIT 1000
+            ORDER BY m.release_date DESC NULLS LAST
+            LIMIT 4000
         """)
 
         movies = cursor.fetchall()
