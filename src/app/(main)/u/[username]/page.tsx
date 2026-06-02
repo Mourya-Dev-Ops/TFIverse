@@ -57,10 +57,12 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
     isFollowing = !!followRecord;
   }
 
-  // Fetch memes and tier lists
-  const [memes, tierLists] = await Promise.all([
+  // Fetch memes, tier lists, and engagement data
+  const [memes, tierLists, engagementStats, engagementData] = await Promise.all([
     getMemes({ userId: profileRecord.user.id }),
     getTierLists({ userId: profileRecord.user.id }),
+    getUserEngagementStats(profileRecord.user.id),
+    getUserEngagementData(profileRecord.user.id),
   ]);
 
   return (
@@ -73,6 +75,11 @@ export default async function PublicProfilePage({ params }: { params: Promise<{ 
       currentUserId={session?.user?.id}
       memes={memes}
       tierLists={tierLists}
+      engagementStats={engagementStats}
+      engagementData={engagementData}
     />
   );
 }
+
+import { getUserEngagementStats, getUserEngagementData } from "@/app/actions/engagement";
+

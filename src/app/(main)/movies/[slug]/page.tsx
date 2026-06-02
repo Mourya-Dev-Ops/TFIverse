@@ -81,7 +81,7 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
         });
     };
 
-    const rawCast = movie.credits.filter(c => c.roleType === 'cast').sort((a, b) => (a.orderIndex || 99) - (b.orderIndex || 99));
+    const rawCast = movie.credits.filter(c => c.roleType === 'cast').sort((a, b) => (a.orderIndex ?? 99) - (b.orderIndex ?? 99));
     const cast = deduplicateCredits(rawCast);
     
     const crew = movie.credits.filter(c => c.roleType === 'crew');
@@ -467,8 +467,6 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
                             </div>
 
                             {certification && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">🎬 Certification</p><p className="text-sm font-bold text-white">{certification}</p></div>}
-
-                            <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">Original Title</p><p className="text-sm font-bold text-zinc-300" style={{fontFamily: "'Noto Sans Telugu', 'Noto Sans Devanagari', 'Noto Sans Kannada', 'Noto Sans Tamil', 'Noto Sans Malayalam', system-ui, sans-serif"}}>{correctOriginalTitle}</p></div>
                             
                             {collection && <div><p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest mb-1">📀 Collection</p><p className="text-sm font-bold text-zinc-300">{collection.name}</p></div>}
                             

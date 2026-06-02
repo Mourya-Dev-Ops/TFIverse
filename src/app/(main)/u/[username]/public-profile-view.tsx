@@ -24,10 +24,18 @@ interface PublicProfileViewProps {
   currentUserId?: string;
   memes: any[];
   tierLists: any[];
+  engagementStats?: { watchlist: number; watched: number; reviews: number };
+  engagementData?: {
+    watchlist: any[];
+    watched: any[];
+    reviews: any[];
+  };
 }
 
 export default function PublicProfileView({ 
-  user, profile, followersCount: initialFollowers, followingCount, initialIsFollowing, currentUserId, memes, tierLists 
+  user, profile, followersCount: initialFollowers, followingCount, initialIsFollowing, currentUserId, memes, tierLists,
+  engagementStats = { watchlist: 0, watched: 0, reviews: 0 },
+  engagementData = { watchlist: [], watched: [], reviews: [] }
 }: PublicProfileViewProps) {
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState<"tierlists" | "memes">("tierlists");
@@ -109,11 +117,7 @@ export default function PublicProfileView({
     }
   };
 
-  const stats = { 
-    watched: profile.totalWatched || 0, 
-    watchlist: profile.totalWatchlist || 0, 
-    reviews: profile.totalReviews || 0 
-  };
+  const stats = engagementStats;
 
   const isOwnProfile = currentUserId === profile.userId;
 
@@ -371,6 +375,121 @@ export default function PublicProfileView({
             )}
           </motion.div>
         </AnimatePresence>
+
+        {/* WATCHED MOVIES */}
+        {(profile.showWatched ?? true) && (
+          <div className="mt-8">
+            <section className="bg-[#0a0a0a] border border-white/5 backdrop-blur-xl rounded-[2rem] p-8 md:p-12">
+              <h2 className="text-xl md:text-2xl font-black text-white mb-6 flex items-center gap-3">
+                 <span className="text-2xl md:text-3xl">✅</span> Watched Movies <span className="text-sm text-neutral-500 font-normal">{stats.watched}</span>
+              </h2>
+              {engagementData.watched.length > 0 ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                  {engagementData.watched.map((item) => (
+                    <Link key={item.id} href={`/movies/${item.movieSlug}`} className="group block">
+                      <div className="relative aspect-[2/3] rounded-xl overflow-hidden bg-neutral-900 border border-white/10 hover:border-white/30 transition-all">
+                        {item.posterUrl ? (
+                          <img src={`https://image.tmdb.org/t/p/w300${item.posterUrl}`} alt={item.title || item.movieSlug} className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center p-4 text-center text-xs font-bold text-neutral-500 capitalize">{item.title || item.movieSlug.replace(/-/g, ' ')}</div>
+                        )}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center py-10 text-center border border-dashed border-white/10 rounded-xl">
+                   <span className="text-neutral-500 mb-2 text-2xl">👀</span>
+                   <span className="text-sm text-neutral-400">No watched movies yet</span>
+                </div>
+              )}
+            </section>
+          </div>
+        )}
+
+        {/* WATCHLIST */}
+        {(profile.showWatchlist ?? true) && (
+          <div className="mt-8">
+            <section className="bg-[#0a0a0a] border border-white/5 backdrop-blur-xl rounded-[2rem] p-8 md:p-12">
+              <h2 className="text-xl md:text-2xl font-black text-white mb-6 flex items-center gap-3">
+                 <span className="text-2xl md:text-3xl">📚</span> Watchlist <span className="text-sm text-neutral-500 font-normal">{stats.watchlist}</span>
+              </h2>
+              {engagementData.watchlist.length > 0 ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                  {engagementData.watchlist.map((item) => (
+                    <Link key={item.id} href={`/movies/${item.movieSlug}`} className="group block">
+                      <div className="relative aspect-[2/3] rounded-xl overflow-hidden bg-neutral-900 border border-white/10 hover:border-white/30 transition-all">
+                        {item.posterUrl ? (
+                          <img src={`https://image.tmdb.org/t/p/w300${item.posterUrl}`} alt={item.title || item.movieSlug} className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center p-4 text-center text-xs font-bold text-neutral-500 capitalize">{item.title || item.movieSlug.replace(/-/g, ' ')}</div>
+                        )}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center py-10 text-center border border-dashed border-white/10 rounded-xl">
+                   <span className="text-neutral-500 mb-2 text-2xl">🔖</span>
+                   <span className="text-sm text-neutral-400">No movies in watchlist yet</span>
+                </div>
+              )}
+            </section>
+          </div>
+        )}
+
+        {/* REVIEWS */}
+        {(profile.showReviews ?? true) && (
+          <div className="mt-8">
+            <section className="bg-[#0a0a0a] border border-white/5 backdrop-blur-xl rounded-[2rem] p-8 md:p-12">
+              <h2 className="text-xl md:text-2xl font-black text-white mb-6 flex items-center gap-3">
+                 <span className="text-2xl md:text-3xl">✍️</span> Reviews <span className="text-sm text-neutral-500 font-normal">{stats.reviews}</span>
+              </h2>
+              {engagementData.reviews.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {engagementData.reviews.map((review) => (
+                    <div key={review.id} className="bg-white/5 border border-white/5 rounded-2xl p-6 flex gap-4">
+                      {review.posterUrl && (
+                        <div className="w-16 shrink-0 aspect-[2/3] relative rounded-lg overflow-hidden bg-neutral-900">
+                          <img src={`https://image.tmdb.org/t/p/w154${review.posterUrl}`} alt={review.title} className="object-cover w-full h-full" />
+                        </div>
+                      )}
+                      <div className="flex-1 flex flex-col justify-between">
+                        <div>
+                          <div className="flex items-center justify-between gap-2 mb-1">
+                            <Link href={`/movies/${review.movieSlug}`} className="text-base font-bold text-white hover:text-blue-400 transition-colors line-clamp-1">
+                              {review.title || review.movieSlug.replace(/-/g, ' ')}
+                            </Link>
+                            <span className="flex items-center gap-1 shrink-0 bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-xs px-2 py-0.5 rounded font-black">
+                              ★ {review.rating}
+                            </span>
+                          </div>
+                          <p className="text-xs text-neutral-500 mb-3">{new Date(review.updatedAt).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</p>
+                          {review.reviewText && (
+                            <p className="text-sm text-neutral-300 line-clamp-3">
+                              {review.spoilers ? (
+                                <span className="bg-neutral-800 text-neutral-800 hover:text-neutral-300 cursor-pointer select-none rounded px-1 transition-colors" title="Click to reveal spoiler">
+                                  [SPOILER] {review.reviewText}
+                                </span>
+                              ) : (
+                                review.reviewText
+                              )}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center py-10 text-center border border-dashed border-white/10 rounded-xl">
+                   <span className="text-neutral-500 mb-2 text-2xl">📝</span>
+                   <span className="text-sm text-neutral-400">No reviews written yet</span>
+                </div>
+              )}
+            </section>
+          </div>
+        )}
 
       </div>
     </main>

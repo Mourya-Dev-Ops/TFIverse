@@ -25,14 +25,14 @@ export async function toggleWatchlist(movieSlug: string) {
 
         if (existing.length > 0) {
             await db.delete(watchlist).where(eq(watchlist.id, existing[0].id));
-            revalidateTag(`engagement-${movieSlug}`);
+            revalidateTag(`engagement-${movieSlug}`, 'max');
             return { success: true, added: false };
         } else {
             await db.insert(watchlist).values({
                 userId: session.user.id,
                 movieSlug: movieSlug
             });
-            revalidateTag(`engagement-${movieSlug}`);
+            revalidateTag(`engagement-${movieSlug}`, 'max');
             return { success: true, added: true };
         }
     } catch (error) {
@@ -60,14 +60,14 @@ export async function toggleSeen(movieSlug: string) {
 
         if (existing.length > 0) {
             await db.delete(watchedMovies).where(eq(watchedMovies.id, existing[0].id));
-            revalidateTag(`engagement-${movieSlug}`);
+            revalidateTag(`engagement-${movieSlug}`, 'max');
             return { success: true, added: false };
         } else {
             await db.insert(watchedMovies).values({
                 userId: session.user.id,
                 movieSlug: movieSlug
             });
-            revalidateTag(`engagement-${movieSlug}`);
+            revalidateTag(`engagement-${movieSlug}`, 'max');
             return { success: true, added: true };
         }
     } catch (error) {
@@ -116,7 +116,7 @@ export async function submitReview(movieSlug: string, rating: number, text?: str
             });
         }
         
-        revalidateTag(`engagement-${movieSlug}`);
+        revalidateTag(`engagement-${movieSlug}`, 'max');
         return { success: true };
     } catch (error) {
         console.error('Error submitting review:', error);
@@ -156,3 +156,73 @@ export async function getEngagementData(movieSlug: string) {
         return { inWatchlist: false, isSeen: false, userReview: null };
     }
 }
+
+import { movies } from '@/lib/schema/content';
+import { count } from 'drizzle-orm';
+
+export async function getUserEngagementStats(userId: string) {
+    try {
+        const [watchlistCount, watchedCount, reviewsCount] = await Promise.all([
+            db.select({ count: count() }).from(watchlist).where(eq(watchlist.userId, userId)),
+            db.select({ count: count() }).from(watchedMovies).where(eq(watchedMovies.userId, userId)),
+            db.select({ count: count() }).from(reviews).where(eq(reviews.userId, userId)),
+        ]);
+        
+        return {
+            watchlist: watchlistCount[0]?.count ?? 0,
+            watched: watchedCount[0]?.count ?? 0,
+            reviews: reviewsCount[0]?.count ?? 0,
+        };
+    } catch (error) {
+        console.error('Error getting user engagement stats:', error);
+        return { watchlist: 0, watched: 0, reviews: 0 };
+    }
+}
+
+export async function getUserEngagementData(userId: string) {
+    try {
+        const userWatchlist = await db.select({
+            id: watchlist.id,
+            movieSlug: watchlist.movieSlug,
+            title: movies.title,
+            posterUrl: movies.posterUrl,
+        })
+        .from(watchlist)
+        .leftJoin(movies, eq(watchlist.movieSlug, movies.slug))
+        .where(eq(watchlist.userId, userId));
+
+        const userWatched = await db.select({
+            id: watchedMovies.id,
+            movieSlug: watchedMovies.movieSlug,
+            title: movies.title,
+            posterUrl: movies.posterUrl,
+        })
+        .from(watchedMovies)
+        .leftJoin(movies, eq(watchedMovies.movieSlug, movies.slug))
+        .where(eq(watchedMovies.userId, userId));
+
+        const userReviews = await db.select({
+            id: reviews.id,
+            movieSlug: reviews.movieSlug,
+            rating: reviews.rating,
+            reviewText: reviews.reviewText,
+            spoilers: reviews.spoilers,
+            updatedAt: reviews.updatedAt,
+            title: movies.title,
+            posterUrl: movies.posterUrl,
+        })
+        .from(reviews)
+        .leftJoin(movies, eq(reviews.movieSlug, movies.slug))
+        .where(eq(reviews.userId, userId));
+
+        return {
+            watchlist: userWatchlist,
+            watched: userWatched,
+            reviews: userReviews,
+        };
+    } catch (error) {
+        console.error('Error getting user engagement data:', error);
+        return { watchlist: [], watched: [], reviews: [] };
+    }
+}
+
