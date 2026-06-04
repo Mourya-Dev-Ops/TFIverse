@@ -137,13 +137,21 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
     // Original title from JSONB metadata (preserves UTF-8 encoding)
     const correctOriginalTitle = metadata.original_title || movie.originalTitle || movie.title;
 
-    // Smart Currency Formatter — TMDB always stores in USD
+    // Smart Currency Formatter — TMDB always stores in USD, but for Indian movies we want to show INR equivalent (Crores)
+    // Assuming 1 USD = 83 INR
     const formatCurrency = (amount?: number) => {
         if (!amount || amount === 0) return '-';
-        if (amount >= 1000000000) return `$${(amount / 1000000000).toFixed(2)}B`;
-        if (amount >= 1000000) return `$${(amount / 1000000).toFixed(1)}M`;
-        if (amount >= 1000) return `$${(amount / 1000).toFixed(0)}K`;
-        return `$${amount.toLocaleString()}`;
+        if (isIndian) {
+            const inr = amount * 83; // Convert USD to INR
+            if (inr >= 10000000) return `₹${(inr / 10000000).toFixed(1)} Cr`;
+            if (inr >= 100000) return `₹${(inr / 100000).toFixed(1)} Lakh`;
+            return `₹${inr.toLocaleString('en-IN')}`;
+        } else {
+            if (amount >= 1000000000) return `$${(amount / 1000000000).toFixed(2)}B`;
+            if (amount >= 1000000) return `$${(amount / 1000000).toFixed(1)}M`;
+            if (amount >= 1000) return `$${(amount / 1000).toFixed(0)}K`;
+            return `$${amount.toLocaleString()}`;
+        }
     };
 
     return (
@@ -350,44 +358,6 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
                         </section>
                     )}
 
-                    {/* Community Hub Upgrade */}
-                    <section className="bg-[#111] rounded-[2rem] p-8 md:p-12 border border-white/5">
-                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
-                            <div>
-                                <h2 className="text-2xl md:text-3xl font-black tracking-tight mb-1 text-white">
-                                    Community Hub
-                                </h2>
-                                <p className="text-zinc-500 font-bold text-sm">Discussions, Tier Lists, and Fan Art</p>
-                            </div>
-                            <Link href={`/movies/${movie.slug}/hub`} className="px-6 py-3 rounded-full bg-blue-600 text-white font-bold text-sm hover:bg-blue-500 transition-colors text-center">
-                                Enter Hub
-                            </Link>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div className="p-6 bg-zinc-900/50 rounded-2xl hover:bg-zinc-900 transition-colors cursor-pointer group border border-transparent hover:border-white/10">
-                                <div className="text-2xl mb-4">💬</div>
-                                <h3 className="font-bold text-lg mb-2 text-white">Reviews</h3>
-                                <p className="text-zinc-500 text-xs font-medium leading-relaxed mb-4">Read raw, unfiltered diaries from the TFIverse community.</p>
-                                <span className="text-xs font-bold text-blue-500 group-hover:text-blue-400">Read All &rarr;</span>
-                            </div>
-
-                            <div className="p-6 bg-zinc-900/50 rounded-2xl hover:bg-zinc-900 transition-colors cursor-pointer group border border-transparent hover:border-white/10">
-                                <div className="text-2xl mb-4">🏆</div>
-                                <h3 className="font-bold text-lg mb-2 text-white">Awards</h3>
-                                <p className="text-zinc-500 text-xs font-medium leading-relaxed mb-4">Box office milestones and community-voted honors.</p>
-                                <span className="text-xs font-bold text-blue-500 group-hover:text-blue-400">View Stats &rarr;</span>
-                            </div>
-
-                            <div className="p-6 bg-zinc-900/50 rounded-2xl hover:bg-zinc-900 transition-colors cursor-pointer group border border-transparent hover:border-white/10">
-                                <div className="text-2xl mb-4">🖼️</div>
-                                <h3 className="font-bold text-lg mb-2 text-white">Memes & Edits</h3>
-                                <p className="text-zinc-500 text-xs font-medium leading-relaxed mb-4">Explore high-fidelity fan art and viral movie edits.</p>
-                                <span className="text-xs font-bold text-blue-500 group-hover:text-blue-400">Explore &rarr;</span>
-                            </div>
-                        </div>
-                    </section>
-
                     <SimilarMovies recommendations={metadata.recommendations?.results || metadata.similar?.results} />
                 </div>
 
@@ -503,10 +473,6 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
                                 </div>
                             </div>
                         )}
-
-                        <button className="w-full flex items-center justify-center gap-2 h-12 rounded-xl bg-zinc-900 border border-white/5 text-zinc-400 font-bold text-sm hover:bg-zinc-800 transition-colors">
-                            <Edit3 className="w-4 h-4" /> Suggest Edit
-                        </button>
 
                     </div>
                 </div>
