@@ -1,6 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  webpack: (config, { isServer }) => {
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: [
+        '**/node_modules/**',
+        '**/scripts/**',
+        '**/data/**',
+        '**/.git/**'
+      ]
+    };
+    return config;
+  },
   experimental: {
     serverActions: {
       allowedOrigins: ['localhost:3000', '192.168.1.5:3000'],

@@ -246,31 +246,42 @@ def main():
     print("="*70)
     print("🎬 TFIVerse OTT Links Fetcher (JustWatch - DIRECT URLs)")
     print("="*70)
-    print(f"Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\\n")
+    print(f"Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+
+    import argparse
+    parser = argparse.ArgumentParser(description="Fetch OTT links from JustWatch")
+    parser.add_argument('--limit', type=int, default=4000, help="Limit the number of movies to process")
+    parser.add_argument('--recent', action='store_true', help="Only fetch OTT links for movies added in the last 7 days")
+    args = parser.parse_args()
 
     try:
         conn = psycopg2.connect(DATABASE_URL, cursor_factory=RealDictCursor)
         cursor = conn.cursor()
-        print("✅ Database connected\\n")
+        print("✅ Database connected\n")
     except Exception as e:
         print(f"❌ Database connection failed: {str(e)}")
         sys.exit(1)
 
     try:
-        cursor.execute("""
+        query = """
             SELECT m.id, m.title, m.year
             FROM movies m
             WHERE m.last_ott_sync_at IS NULL
             AND m.year IS NOT NULL
             AND m.year <= EXTRACT(YEAR FROM CURRENT_DATE)
-            ORDER BY m.release_date DESC NULLS LAST
-            LIMIT 4000
-        """)
+        """
+        
+        if args.recent:
+            query += " AND m.created_at > NOW() - INTERVAL '7 days'"
+            
+        query += " ORDER BY m.release_date DESC NULLS LAST LIMIT %s"
+
+        cursor.execute(query, (args.limit,))
 
         movies = cursor.fetchall()
         stats['total'] = len(movies)
 
-        print(f"📊 Found {stats['total']} movies to process\\n")
+        print(f"📊 Found {stats['total']} movies to process\n")
 
         if stats['total'] == 0:
             print("✨ All movies already have OTT data!")
