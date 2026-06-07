@@ -63,6 +63,16 @@ export default async function BoxOfficePage({
                 The definitive tracker for Telugu cinema collections. Every blockbuster, 
                 every flop — tracked with verdicts powered by the <span className="text-emerald-400 font-bold">TFI Verdict Engine</span>.
               </p>
+              <div className="mt-4">
+                <Link
+                  href="/box-office/live"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600/15 hover:bg-blue-600/25 border border-blue-500/30 text-blue-400 hover:text-blue-300 font-bold text-sm transition-all shadow-[0_0_15px_rgba(59,130,246,0.1)]"
+                >
+                  <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
+                  Live Box Office Dashboard
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
 
             <Suspense fallback={null}>

@@ -49,12 +49,18 @@ export default function DashboardClient({ initialData }: { initialData: Dashboar
             <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-10">
                 <div className="flex items-center gap-6">
                     <div className="relative w-24 h-36 rounded-lg overflow-hidden shadow-2xl border border-white/10">
-                        <Image 
-                            src={`https://image.tmdb.org/t/p/w200${data.movie.posterPath}`} 
-                            alt={data.movie.title}
-                            fill
-                            className="object-cover"
-                        />
+                        {data.movie.posterPath ? (
+                            <Image 
+                                src={`https://image.tmdb.org/t/p/w200${data.movie.posterPath}`} 
+                                alt={data.movie.title}
+                                fill
+                                className="object-cover"
+                            />
+                        ) : (
+                            <div className="w-full h-full bg-zinc-800 flex items-center justify-center text-zinc-500">
+                                No Poster
+                            </div>
+                        )}
                     </div>
                     <div>
                         <h1 className="text-4xl font-extrabold tracking-tight text-white mb-2">
