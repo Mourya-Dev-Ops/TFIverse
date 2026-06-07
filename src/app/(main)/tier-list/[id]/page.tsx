@@ -5,9 +5,10 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import { getTierList, toggleTierListLike, deleteTierList, getTierListComments, addTierListComment, deleteTierListComment } from '@/app/actions/tierlist';
+import { submitReport } from '@/app/actions/reports';
 import { toPng } from 'html-to-image';
 import { getHeroMoviesForTierList } from '@/app/actions/heroes';
-import { ArrowLeft, Heart, Share2, Download, Trash2, User, X, MessageCircle, Send, Reply } from 'lucide-react';
+import { ArrowLeft, Heart, Share2, Download, Trash2, User, X, MessageCircle, Send, Reply, Flag } from 'lucide-react';
 import { FaTwitter, FaWhatsapp, FaTelegram } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 
@@ -154,6 +155,21 @@ export default function ViewTierListPage() {
     } finally { setDownloading(false); }
   };
 
+  const handleReport = async () => {
+    if (!session?.user) {
+      router.push(`/login?callbackUrl=/tier-list/${id}`);
+      return;
+    }
+    const reason = window.prompt("Why are you reporting this tier list?");
+    if (!reason?.trim()) return;
+    try {
+      await submitReport({ entityType: 'tier_list', entityId: id, reason: reason.trim() });
+      toast.success("Report submitted to Admins");
+    } catch (e: any) {
+      toast.error(e.message || "Failed to report");
+    }
+  };
+
   const handleAddComment = async (parentId?: string) => {
     const text = parentId ? replyText : commentText;
     if (!text.trim()) return;
@@ -233,6 +249,11 @@ export default function ViewTierListPage() {
             {isOwner && (
               <button onClick={handleDelete} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 text-sm font-medium transition-all flex items-center gap-2 text-white/60 hover:text-red-400">
                 <Trash2 size={16} />
+              </button>
+            )}
+            {!isOwner && (
+              <button onClick={handleReport} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 text-sm font-medium transition-all flex items-center gap-2 text-white/60 hover:text-red-400" title="Report">
+                <Flag size={16} />
               </button>
             )}
           </div>

@@ -231,3 +231,55 @@ export async function deleteMeme(memeId: string) {
   revalidatePath("/profile");
   return { success: true };
 }
+
+export async function getPendingMemes() {
+  const session = await auth();
+  if (!session?.user?.id) throw new Error("Admin access required");
+
+  const items = await db.query.memes.findMany({
+    where: eq(memes.status, "pending"),
+    orderBy: [desc(memes.createdAt)],
+    with: {
+      user: {
+        with: { profile: true }
+      }
+    }
+  });
+
+  return items;
+}
+
+export async function approveMeme(memeId: string) {
+  const session = await auth();
+  if (!session?.user?.id) throw new Error("Admin access required");
+
+  await db.update(memes)
+    .set({ status: "approved", updatedAt: new Date() })
+    .where(eq(memes.id, memeId));
+
+  revalidatePath("/memes");
+  revalidatePath("/admin/moderation");
+  return { success: true };
+}
+
+export async function rejectMeme(memeId: string) {
+  const session = await auth();
+  if (!session?.user?.id) throw new Error("Admin access required");
+
+  // Re-use deleteMeme logic for rejection since it clears storage too
+  // Note: we can't directly call deleteMeme because it checks if user is owner
+  const [meme] = await db.select().from(memes).where(eq(memes.id, memeId));
+  if (!meme) throw new Error("Meme not found");
+
+  const { deleteFromB2 } = await import("@/lib/storage");
+  if (meme.imageUrl) await deleteFromB2(meme.imageUrl);
+
+  await db.delete(memes).where(eq(memes.id, memeId));
+  await db.update(userProfiles)
+    .set({ totalMemes: sql`${userProfiles.totalMemes} - 1` })
+    .where(eq(userProfiles.userId, meme.userId));
+
+  revalidatePath("/memes");
+  revalidatePath("/admin/moderation");
+  return { success: true };
+}

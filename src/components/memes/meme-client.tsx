@@ -5,10 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { 
   Search, Filter, Plus, Flame, Clock, Trophy, Heart, MessageCircle, 
   Share2, Download, User, X, Check, Image as ImageIcon, Loader2, 
-  ChevronRight, Sparkles, TrendingUp, Info
+  ChevronRight, Sparkles, TrendingUp, Info, Flag
 } from "lucide-react";
 import Link from "next/link";
 import { getMemes, toggleLikeMeme, trackMemeView, getMemeOfTheWeek, getUploadUrl } from "@/app/actions/memes";
+import { submitReport } from "@/app/actions/reports";
 import toast from "react-hot-toast";
 
 type Meme = {
@@ -285,6 +286,18 @@ function MemeDetailsModal({ meme, onClose, isAuthenticated, currentUser }: { mem
     }
   };
 
+  const handleReport = async () => {
+    if (!isAuthenticated) return toast.error("Authenticate to submit reports");
+    const reason = window.prompt("Why are you reporting this artifact?");
+    if (!reason?.trim()) return;
+    try {
+      await submitReport({ entityType: 'meme', entityId: meme.id, reason: reason.trim() });
+      toast.success("Report submitted to Admins");
+    } catch (e: any) {
+      toast.error(e.message || "Failed to report");
+    }
+  };
+
   const isOwner = currentUser?.id === meme.userId;
 
   return (
@@ -373,9 +386,19 @@ function MemeDetailsModal({ meme, onClose, isAuthenticated, currentUser }: { mem
                   }
                 }}
                 className="px-6 py-4 glass-premium hover:bg-white/10 rounded-2xl transition-all text-white/60"
+                title="Share"
               >
                 <Share2 size={18} />
               </button>
+              {!isOwner && (
+                <button 
+                  onClick={handleReport}
+                  className="px-6 py-4 glass-premium hover:bg-red-500/10 border-transparent hover:border-red-500/20 rounded-2xl transition-all text-white/60 hover:text-red-400"
+                  title="Report Artifact"
+                >
+                  <Flag size={18} />
+                </button>
+              )}
             </div>
           </div>
         </div>
