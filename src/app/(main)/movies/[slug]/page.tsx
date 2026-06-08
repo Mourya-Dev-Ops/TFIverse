@@ -8,6 +8,10 @@ import { CastModal } from './components/CastModal';
 import { EngagementButtons } from './components/EngagementButtons';
 import { VideoModal } from './components/VideoModal';
 import { SimilarMovies } from './components/SimilarMovies';
+import { BoxOfficeDashboard } from './components/BoxOfficeDashboard';
+import { db } from '@/lib/db';
+import { dailyBoxOffice, regionalBoxOffice, chainBoxOffice } from '@/lib/schema/tracking';
+import { eq, desc } from 'drizzle-orm';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
@@ -70,6 +74,22 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
     }
 
     const engagementData = await getEngagementData(slug);
+
+    // Fetch Box Office Data
+    const [daily, regional, chain] = await Promise.all([
+        db.query.dailyBoxOffice.findFirst({
+            where: eq(dailyBoxOffice.movieId, movie.id),
+            orderBy: [desc(dailyBoxOffice.date)]
+        }),
+        db.query.regionalBoxOffice.findMany({
+            where: eq(regionalBoxOffice.movieId, movie.id),
+            orderBy: [desc(regionalBoxOffice.gross)]
+        }),
+        db.query.chainBoxOffice.findMany({
+            where: eq(chainBoxOffice.movieId, movie.id),
+            orderBy: [desc(chainBoxOffice.gross)]
+        })
+    ]);
 
     // --- DATA EXTRACTION & DEDUPLICATION ---
     const deduplicateCredits = (creditsArray: any[]) => {
@@ -359,6 +379,8 @@ export default async function MovieDetailsPage({ params }: { params: Promise<{ s
                     )}
 
                     <SimilarMovies recommendations={metadata.recommendations?.results || metadata.similar?.results} />
+                    
+
                 </div>
 
                 {/* ═══════════════════════════════════════════════════ */}

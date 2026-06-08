@@ -195,7 +195,7 @@ async function importDetailedFile(filePath: string, dateStr: string) {
 
 async function importHourlyLogs() {
   console.log('\n📈 Starting hourly logs import...');
-  const logsDir = path.resolve(__dirname, '../../bfilmy-repos/assetz/daily/logs');
+  const logsDir = path.resolve(__dirname, '../../bfilmy-repos-temp/assetz/daily/logs');
   if (!fs.existsSync(logsDir)) {
     console.log('Logs directory not found at:', logsDir);
     return;
@@ -302,7 +302,7 @@ async function main() {
   }
 
   // 1. Import detailed sessions for the last 3 days
-  const dailyDataDir = path.resolve(__dirname, '../../bfilmy-repos/data2026/daily/data/2026');
+  const dailyDataDir = path.resolve(__dirname, '../../bfilmy-repos-temp/data2026/daily/data/2026');
   if (fs.existsSync(dailyDataDir)) {
     const files = fs.readdirSync(dailyDataDir)
       .filter(f => f.endsWith('_finaldetailed.json'))

@@ -188,7 +188,7 @@ async function syncDate(date: Date) {
   const compact = `${year}${monthStr}${dayStr}`;
   const dateStr = `${year}-${monthStr}-${dayStr}`;
   const localFileName = `${monthStr}-${dayStr}_finaldetailed.json`;
-  const localDir = path.resolve(__dirname, `../../bfilmy-repos/data2026/daily/data/${year}`);
+  const localDir = path.resolve(__dirname, `../../bfilmy-repos-temp/data2026/daily/data/${year}`);
   const localPath = path.join(localDir, localFileName);
 
   console.log(`\n📅 Syncing date: ${dateStr}...`);
