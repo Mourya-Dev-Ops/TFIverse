@@ -270,12 +270,15 @@ export async function getMovieBoxOfficeDetails(movieId: number, source?: 'BMS' |
         const sessionConditions = [eq(realtimeSessions.movieId, movieId)];
         if (filterSource) sessionConditions.push(eq(realtimeSessions.source, filterSource));
 
-        // Get aggregate totals
+        // Get aggregate totals + unique counts for hero KPIs
         const aggregate = await db.select({
             totalGross: sum(realtimeSessions.grossRevenue).mapWith(Number),
             totalSold: sum(realtimeSessions.soldSeats).mapWith(Number),
             totalSeats: sum(realtimeSessions.totalSeats).mapWith(Number),
             showsCount: count(),
+            uniqueVenues: sql<number>`count(distinct ${realtimeSessions.venueName})`.mapWith(Number),
+            uniqueCities: sql<number>`count(distinct ${realtimeSessions.city})`.mapWith(Number),
+            uniqueStates: sql<number>`count(distinct ${realtimeSessions.state})`.mapWith(Number),
         })
         .from(realtimeSessions)
         .where(and(...sessionConditions));
@@ -298,34 +301,68 @@ export async function getMovieBoxOfficeDetails(movieId: number, source?: 'BMS' |
             limit: 24,
         });
 
-        // City-wise split
-        const citySplit = await db.select({
-            city: realtimeSessions.city,
-            gross: sum(realtimeSessions.grossRevenue).mapWith(Number),
+        // ─── STATE-WISE SUMMARY ───
+        const stateSummary = await db.select({
+            state: realtimeSessions.state,
+            shows: count(),
             sold: sum(realtimeSessions.soldSeats).mapWith(Number),
             totalSeats: sum(realtimeSessions.totalSeats).mapWith(Number),
-            shows: count(),
+            gross: sum(realtimeSessions.grossRevenue).mapWith(Number),
+            ffCount: sql<number>`count(*) filter (where ${realtimeSessions.availableSeats} > 0 and cast(${realtimeSessions.availableSeats} as float) / nullif(cast(${realtimeSessions.totalSeats} as float), 0) < 0.10)`.mapWith(Number),
+            hfCount: sql<number>`count(*) filter (where ${realtimeSessions.availableSeats} = 0)`.mapWith(Number),
         })
         .from(realtimeSessions)
         .where(and(...sessionConditions))
-        .groupBy(realtimeSessions.city)
+        .groupBy(realtimeSessions.state)
         .orderBy(desc(sum(realtimeSessions.grossRevenue)));
 
-        // State → City → Chain tree breakdown
-        const stateBreakdown = await db.select({
-            state: realtimeSessions.state,
+        // ─── CITY-WISE SUMMARY (full with state, ff, hf) ───
+        const citySummary = await db.select({
             city: realtimeSessions.city,
-            chain: realtimeSessions.chainName,
-            gross: sum(realtimeSessions.grossRevenue).mapWith(Number),
+            state: realtimeSessions.state,
+            shows: count(),
             sold: sum(realtimeSessions.soldSeats).mapWith(Number),
             totalSeats: sum(realtimeSessions.totalSeats).mapWith(Number),
-            shows: count(),
-            hfCount: sql<number>`count(*) filter (where ${realtimeSessions.availableSeats} = 0)`.mapWith(Number),
+            gross: sum(realtimeSessions.grossRevenue).mapWith(Number),
             ffCount: sql<number>`count(*) filter (where ${realtimeSessions.availableSeats} > 0 and cast(${realtimeSessions.availableSeats} as float) / nullif(cast(${realtimeSessions.totalSeats} as float), 0) < 0.10)`.mapWith(Number),
+            hfCount: sql<number>`count(*) filter (where ${realtimeSessions.availableSeats} = 0)`.mapWith(Number),
         })
         .from(realtimeSessions)
         .where(and(...sessionConditions))
-        .groupBy(realtimeSessions.state, realtimeSessions.city, realtimeSessions.chainName)
+        .groupBy(realtimeSessions.city, realtimeSessions.state)
+        .orderBy(desc(sum(realtimeSessions.grossRevenue)));
+
+        // ─── CHAIN-WISE SUMMARY ───
+        const chainSummary = await db.select({
+            chain: realtimeSessions.chainName,
+            shows: count(),
+            sold: sum(realtimeSessions.soldSeats).mapWith(Number),
+            totalSeats: sum(realtimeSessions.totalSeats).mapWith(Number),
+            gross: sum(realtimeSessions.grossRevenue).mapWith(Number),
+            ffCount: sql<number>`count(*) filter (where ${realtimeSessions.availableSeats} > 0 and cast(${realtimeSessions.availableSeats} as float) / nullif(cast(${realtimeSessions.totalSeats} as float), 0) < 0.10)`.mapWith(Number),
+            hfCount: sql<number>`count(*) filter (where ${realtimeSessions.availableSeats} = 0)`.mapWith(Number),
+        })
+        .from(realtimeSessions)
+        .where(and(...sessionConditions))
+        .groupBy(realtimeSessions.chainName)
+        .orderBy(desc(sum(realtimeSessions.grossRevenue)));
+
+        // ─── VENUE SUMMARY (aggregated by venue) ───
+        const venueSummary = await db.select({
+            venueName: realtimeSessions.venueName,
+            city: realtimeSessions.city,
+            state: realtimeSessions.state,
+            chainName: realtimeSessions.chainName,
+            shows: count(),
+            sold: sum(realtimeSessions.soldSeats).mapWith(Number),
+            totalSeats: sum(realtimeSessions.totalSeats).mapWith(Number),
+            gross: sum(realtimeSessions.grossRevenue).mapWith(Number),
+            ffCount: sql<number>`count(*) filter (where ${realtimeSessions.availableSeats} > 0 and cast(${realtimeSessions.availableSeats} as float) / nullif(cast(${realtimeSessions.totalSeats} as float), 0) < 0.10)`.mapWith(Number),
+            hfCount: sql<number>`count(*) filter (where ${realtimeSessions.availableSeats} = 0)`.mapWith(Number),
+        })
+        .from(realtimeSessions)
+        .where(and(...sessionConditions))
+        .groupBy(realtimeSessions.venueName, realtimeSessions.city, realtimeSessions.state, realtimeSessions.chainName)
         .orderBy(desc(sum(realtimeSessions.grossRevenue)));
 
         // Source breakdown (BMS vs PAYTM counts)
@@ -338,22 +375,84 @@ export async function getMovieBoxOfficeDetails(movieId: number, source?: 'BMS' |
         .where(eq(realtimeSessions.movieId, movieId))
         .groupBy(realtimeSessions.source);
 
-        // Live Venues (Top 100 by gross)
-        const liveVenues = await db.select({
+        // ─── TIME SLOT SUMMARY ───
+        const timeSlotRaw = await db.select({
+            showTime: realtimeSessions.showTime,
+            shows: count(),
+            sold: sum(realtimeSessions.soldSeats).mapWith(Number),
+            totalSeats: sum(realtimeSessions.totalSeats).mapWith(Number),
+            gross: sum(realtimeSessions.grossRevenue).mapWith(Number),
+            ffCount: sql<number>`count(*) filter (where ${realtimeSessions.availableSeats} > 0 and cast(${realtimeSessions.availableSeats} as float) / nullif(cast(${realtimeSessions.totalSeats} as float), 0) < 0.10)`.mapWith(Number),
+            hfCount: sql<number>`count(*) filter (where ${realtimeSessions.availableSeats} = 0)`.mapWith(Number),
+        })
+        .from(realtimeSessions)
+        .where(and(...sessionConditions))
+        .groupBy(realtimeSessions.showTime);
+
+        // Bucket them in JS
+        const timeSlotSummary = {
+            'Morning (6AM - 12PM)': { shows: 0, sold: 0, totalSeats: 0, gross: 0, ffCount: 0, hfCount: 0 },
+            'Matinee (12PM - 4PM)': { shows: 0, sold: 0, totalSeats: 0, gross: 0, ffCount: 0, hfCount: 0 },
+            'Evening (4PM - 8PM)': { shows: 0, sold: 0, totalSeats: 0, gross: 0, ffCount: 0, hfCount: 0 },
+            'Night (8PM+)'      : { shows: 0, sold: 0, totalSeats: 0, gross: 0, ffCount: 0, hfCount: 0 },
+        };
+
+        timeSlotRaw.forEach(r => {
+            const timeStr = r.showTime; // e.g. "10:30 AM" or "02:15 PM"
+            let hour = 0;
+            const ampm = timeStr.slice(-2).toUpperCase();
+            const timeParts = timeStr.split(':');
+            if (timeParts.length > 0) {
+                hour = parseInt(timeParts[0]);
+                if (ampm === 'PM' && hour !== 12) hour += 12;
+                if (ampm === 'AM' && hour === 12) hour = 0;
+            }
+
+            let bucket = 'Night (8PM+)';
+            if (hour >= 6 && hour < 12) bucket = 'Morning (6AM - 12PM)';
+            else if (hour >= 12 && hour < 16) bucket = 'Matinee (12PM - 4PM)';
+            else if (hour >= 16 && hour < 20) bucket = 'Evening (4PM - 8PM)';
+
+            timeSlotSummary[bucket as keyof typeof timeSlotSummary].shows += r.shows;
+            timeSlotSummary[bucket as keyof typeof timeSlotSummary].sold += r.sold;
+            timeSlotSummary[bucket as keyof typeof timeSlotSummary].totalSeats += r.totalSeats;
+            timeSlotSummary[bucket as keyof typeof timeSlotSummary].gross += r.gross;
+            timeSlotSummary[bucket as keyof typeof timeSlotSummary].ffCount += r.ffCount;
+            timeSlotSummary[bucket as keyof typeof timeSlotSummary].hfCount += r.hfCount;
+        });
+
+        const timeSlotsArray = Object.keys(timeSlotSummary).map(k => ({
+            slot: k,
+            ...timeSlotSummary[k as keyof typeof timeSlotSummary]
+        }));
+
+        // ─── RAW INDIVIDUAL SHOWS (for show-level table) ───
+        const rawShows = await db.select({
             venueName: realtimeSessions.venueName,
             city: realtimeSessions.city,
             state: realtimeSessions.state,
             chainName: realtimeSessions.chainName,
-            totalSeats: sum(realtimeSessions.totalSeats).mapWith(Number),
-            soldSeats: sum(realtimeSessions.soldSeats).mapWith(Number),
-            gross: sum(realtimeSessions.grossRevenue).mapWith(Number),
-            shows: count(),
+            showTime: realtimeSessions.showTime,
+            totalSeats: realtimeSessions.totalSeats,
+            soldSeats: realtimeSessions.soldSeats,
+            availableSeats: realtimeSessions.availableSeats,
+            grossRevenue: realtimeSessions.grossRevenue,
+            source: realtimeSessions.source,
         })
         .from(realtimeSessions)
         .where(and(...sessionConditions))
-        .groupBy(realtimeSessions.venueName, realtimeSessions.city, realtimeSessions.state, realtimeSessions.chainName)
-        .orderBy(desc(sum(realtimeSessions.grossRevenue)))
-        .limit(100);
+        .orderBy(desc(realtimeSessions.grossRevenue))
+        .limit(500);
+
+        // ─── PIC (PVR+INOX+Cinepolis) aggregates ───
+        const picChains = ['PVR', 'INOX', 'Cinepolis', 'PVR INOX'];
+        const picConditions = [...sessionConditions, sql`upper(${realtimeSessions.chainName}) similar to '%(PVR|INOX|CINEPOLIS)%'`];
+        const picAggregate = await db.select({
+            totalGross: sum(realtimeSessions.grossRevenue).mapWith(Number),
+            totalSold: sum(realtimeSessions.soldSeats).mapWith(Number),
+        })
+        .from(realtimeSessions)
+        .where(and(...picConditions));
 
         return {
             movie,
@@ -362,13 +461,23 @@ export async function getMovieBoxOfficeDetails(movieId: number, source?: 'BMS' |
                 totalSold: stats.totalSold || 0,
                 totalSeats: stats.totalSeats || 0,
                 showsCount: stats.showsCount || 0,
+                uniqueVenues: stats.uniqueVenues || 0,
+                uniqueCities: stats.uniqueCities || 0,
+                uniqueStates: stats.uniqueStates || 0,
             },
             statusCounts: statusCounts[0] || { hfCount: 0, ffCount: 0, avCount: 0 },
             trends: trends.reverse(),
-            citySplit,
-            stateBreakdown,
+            stateSummary,
+            citySummary,
+            chainSummary,
+            venueSummary,
+            timeSlotSummary: timeSlotsArray,
             sourceSplit,
-            liveVenues,
+            rawShows,
+            picStats: {
+                gross: picAggregate[0]?.totalGross || 0,
+                sold: picAggregate[0]?.totalSold || 0,
+            },
             lastUpdated: new Date(),
         };
 
