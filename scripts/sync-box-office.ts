@@ -178,8 +178,82 @@ async function syncBoxOfficeData() {
         console.log(`✅ Synced ${moviesData.length} movies to local Database.`);
     }
 
-    // 2. Fetch Sessions
-    console.log("📥 Pulling latest scraping data from GitHub...");
+    // ══════════════════════════════════════════════════════════
+    // 1.5. SMART CATCH-UP: Check for missed days since last sync
+    // ══════════════════════════════════════════════════════════
+    console.log("🔍 Checking last sync timestamp...");
+    const lastSyncResult = await db
+        .select({ lastUpdate: sql`MAX(${realtimeSessions.lastUpdated})` })
+        .from(realtimeSessions);
+    
+    const lastSyncDate = lastSyncResult[0]?.lastUpdate 
+        ? new Date(lastSyncResult[0].lastUpdate as string)
+        : null;
+    
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    if (lastSyncDate) {
+        const lastDate = new Date(lastSyncDate);
+        lastDate.setHours(0, 0, 0, 0);
+        
+        const daysDiff = Math.floor((today.getTime() - lastDate.getTime()) / (1000 * 60 * 60 * 24));
+        
+        if (daysDiff > 1) {
+            console.log(`⚠️ Last sync was ${daysDiff} days ago (${lastDate.toISOString().split('T')[0]}). Catching up...`);
+            
+            // For each missed COMPLETE day, try to fetch the archive from B2
+            const ARCHIVE_TYPES = [
+                'bms_live', 'bms_advance', 'bms_deep_advance',
+                'paytm_live', 'paytm_advance', 'paytm_deep_advance'
+            ];
+            
+            let catchupSessions: any[] = [];
+            
+            for (let d = 1; d < daysDiff; d++) {
+                const missedDate = new Date(lastDate);
+                missedDate.setDate(missedDate.getDate() + d);
+                const dateStr = missedDate.toISOString().split('T')[0];
+                
+                console.log(`📂 Fetching archives for ${dateStr}...`);
+                
+                for (const type of ARCHIVE_TYPES) {
+                    const archiveUrl = `${B2_PUBLIC_URL}/archives/${dateStr}/FULL_DAY_${type}.json`;
+                    const archiveData = await fetchJSON(archiveUrl);
+                    
+                    if (archiveData.length > 0) {
+                        catchupSessions.push(...archiveData);
+                        console.log(`   ✅ ${type}: ${archiveData.length} sessions`);
+                    } else {
+                        // Fallback: try to get the last chunk of that day
+                        // The chunk naming pattern is: chunks/YYYY-MM-DD/{type}_YYYY-MM-DD_HHMM.json
+                        // We try the 23:00 chunk as the closest to final state
+                        const chunkUrl = `${B2_PUBLIC_URL}/chunks/${dateStr}/${type}_${dateStr}_2300.json`;
+                        const chunkData = await fetchJSON(chunkUrl);
+                        if (chunkData.length > 0) {
+                            catchupSessions.push(...chunkData);
+                            console.log(`   ✅ ${type}: ${chunkData.length} sessions (from last chunk)`);
+                        } else {
+                            console.log(`   ⚠️ ${type}: no archive or chunk found for ${dateStr}`);
+                        }
+                    }
+                }
+            }
+            
+            if (catchupSessions.length > 0) {
+                console.log(`📦 Total catch-up sessions: ${catchupSessions.length}. Processing...`);
+                // These will be processed alongside today's sessions below
+                // We'll add them to the main arrays after fetching today's data
+            }
+        } else {
+            console.log(`✅ Last sync was today or yesterday. No catch-up needed.`);
+        }
+    } else {
+        console.log(`🆕 First sync ever. Starting fresh with today's LATEST data.`);
+    }
+
+    // 2. Fetch Today's LATEST Sessions from B2
+    console.log("📥 Pulling latest scraping data from B2...");
     const bmsSessions = await fetchJSON(BMS_DATA_URL);
     const paytmSessions = await fetchJSON(PAYTM_DATA_URL);
     const bmsAdvance = await fetchJSON(BMS_ADVANCE_URL);
